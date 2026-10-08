@@ -5,6 +5,7 @@ require_once dirname(__DIR__) . '/site.php';
 render_head($page);
 ?>
 
+<?php if (($page['hero'] ?? '') === 'panorama'): include dirname(__DIR__) . '/heroes/panorama.php'; else: ?>
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="hub-icons" aria-hidden="true">
@@ -22,6 +23,7 @@ render_head($page);
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <?php
 require_once dirname(__DIR__) . '/showcase/engine.php';

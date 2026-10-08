@@ -10,21 +10,35 @@ RewriteEngine On
 # ------------------------------------------------
 # 2. ALLOW SYSTEM FILES (NO REWRITE)
 # ------------------------------------------------
-RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico)$ - [L]
+DirectoryIndex index.php
+RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
+
+# Header/footer partials are only included by PHP, never served directly
+RewriteRule ^includes/ - [F,L]
 
 # ------------------------------------------------
-# 3. REDIRECT .html → CLEAN URL (SEO)
+# 3. OLD .html AND DIRECT .php PAGE URLS -> CLEAN URL (301, SEO)
 # ------------------------------------------------
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
-RewriteRule ^ %1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+index(\.html|\.php)?[\s?]
+RewriteRule ^ / [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?]
+RewriteRule ^ /%1 [R=301,L]
+
+# Pages only (form handlers and API endpoints keep their .php URL)
+RewriteCond %{REQUEST_METHOD} =GET
+RewriteCond %{REQUEST_URI} !^/(contact-submit|webinar-count|webinar-register|sitemap)\.php$
+RewriteCond %{REQUEST_URI} !^/implementation/
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.php[\s?]
+RewriteRule ^ /%1 [R=301,L]
 
 # ------------------------------------------------
-# 4. INTERNAL CLEAN URL LOADER (.html fallback)
+# 4. INTERNAL CLEAN URL LOADER (.php)
 # ------------------------------------------------
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
 
 # ------------------------------------------------
 # 5. GZIP COMPRESSION & BROWSER CACHING

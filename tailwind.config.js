@@ -3,8 +3,9 @@ module.exports = {
   content: [
     "./pages/**/*.{html,js}",
     "./components/**/*.{html,js}",
-    "./index.html",
-    "./*.html"
+    "./*.php",
+    "./includes/*.php",
+    "./js/*.js"
   ],
   theme: {
     extend: {
@@ -23,17 +24,17 @@ module.exports = {
           900: '#001E30',
         },
         secondary: {
-          DEFAULT: '#00FEC0',
-          50: '#E6FFF9',
-          100: '#B3FFED',
-          200: '#80FFE1',
-          300: '#4DFFD5',
-          400: '#1AFFC9',
-          500: '#00FEC0',
-          600: '#00CB99',
-          700: '#009873',
-          800: '#00654D',
-          900: '#003226',
+          DEFAULT: '#0096EE',
+          50: '#E6F5FE',
+          100: '#B3E3FC',
+          200: '#80D1FA',
+          300: '#4DBFF8',
+          400: '#1AADF6',
+          500: '#0096EE',
+          600: '#0078BE',
+          700: '#005A8F',
+          800: '#003C5F',
+          900: '#001E30',
         },
         accent: {
           DEFAULT: '#E76500',
@@ -116,11 +117,11 @@ module.exports = {
         'none': 'none',
       },
       backgroundImage: {
-        'gradient-brand': 'linear-gradient(135deg, #0096EE 0%, #00FEC0 100%)',
-        'gradient-brand-hover': 'linear-gradient(135deg, #0078BE 0%, #00CB99 100%)',
+        'gradient-brand': 'linear-gradient(135deg, #0096EE 0%, #0096EE 100%)',
+        'gradient-brand-hover': 'linear-gradient(135deg, #0078BE 0%, #0078BE 100%)',
         'gradient-subtle': 'linear-gradient(180deg, #FFFFFF 0%, #F5F6F7 100%)',
         'gradient-sky-frost': 'linear-gradient(180deg, #0096EE 0%, #E6F5FE 100%)',
-        'gradient-mint-flow': 'linear-gradient(180deg, #00A86B 0%, #00FEC0 100%)',
+        'gradient-mint-flow': 'linear-gradient(180deg, #0078BE 0%, #4DBFF8 100%)',
       },
       transitionDuration: {
         '300': '300ms',

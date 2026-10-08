@@ -19,5 +19,5 @@ $stmt->bind_param("ssss", $name, $email, $phone, $company);
 $stmt->execute();
 $stmt->close();
 
-header("Location: /thank-you.html");
+header("Location: /thank-you");
 exit;

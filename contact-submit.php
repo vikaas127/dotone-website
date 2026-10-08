@@ -70,7 +70,8 @@ if (!is_array($solutions)) {
 }
 $solutionsStr = mb_substr(implode(', ', array_filter(array_map(function ($v) { return is_string($v) ? trim($v) : ''; }, $solutions))), 0, 1000);
 
-if (!$firstName || !$lastName || !$email || !$phone || !$jobTitle || !$inquiryType || !$companyName || !$industry || !$companySize || !$implementationTimeline) {
+// Name, email, phone and company are always needed; the rest is optional (the demo form keeps extra details optional)
+if (!$firstName || !$email || !$phone || !$companyName) {
     http_response_code(400);
     echo json_encode(['success' => false, 'error' => 'Please fill in all required fields.']);
     exit;

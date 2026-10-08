@@ -10242,3 +10242,21 @@ a.card:hover,
 /* Header logo: cropped image, sized by its visible height */
 .nav-logo-img { height: 1.85rem !important; width: auto; }
 @media (min-width: 1024px) { .nav-logo-img { height: 2.15rem !important; } }
+/* Book a demo: simpler layout */
+@media (min-width: 1024px) { .demo-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: center; } }
+.demo-points { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.7rem; }
+.demo-points li { display: flex; align-items: center; gap: 0.6rem; font-size: 1rem; color: #344054; }
+.demo-points svg { flex: none; width: 1.4rem; height: 1.4rem; padding: 0.2rem; border-radius: 50%; background: #E6F4FD; color: #0096EE; }
+.demo-card { max-width: 34rem; width: 100%; justify-self: end; }
+.demo-card-title { margin-bottom: 1.4rem; }
+.demo-row { gap: 0.85rem; margin-bottom: 0.85rem; }
+.fld label, .fld legend { font-size: 0.82rem; }
+.fld input, .fld select, .fld textarea { padding: 0.62rem 0.8rem; font-size: 0.92rem; }
+.demo-more { margin: 0.25rem 0 1.1rem; border-top: 1px solid #EEF1F5; padding-top: 0.9rem; }
+.demo-more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.88rem; font-weight: 600; color: #0077C0; }
+.demo-more summary::-webkit-details-marker { display: none; }
+.demo-more summary::before { content: "+"; display: inline-grid; place-items: center; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: #E6F4FD; font-size: 0.9rem; transition: transform 0.25s ease; }
+.demo-more[open] summary::before { content: "−"; }
+.demo-more summary span { font-weight: 400; color: #98A2B3; }
+.demo-more-body { padding-top: 1rem; display: flex; flex-direction: column; gap: 0.85rem; }
+.demo-more-body .demo-row { margin-bottom: 0; }

@@ -22,90 +22,76 @@ render_head($page);
     <div class="container-custom relative z-10">
         <div class="demo-grid">
             <div class="demo-copy">
-                <?php render_breadcrumbs($page); ?>
                 <span class="section-label">Book a demo</span>
                 <h1 class="text-4xl md:text-5xl font-display font-semibold text-text-primary leading-tight mb-5">See DotOne run <span class="text-primary-500">your business</span></h1>
-                <p class="text-lg text-text-secondary leading-relaxed mb-8">A free 30-minute walkthrough with a product specialist, built around one real process from your business.</p>
-
-                <ol class="demo-steps">
-<?php foreach ([
-    ['chat', 'Tell us about your business', 'Your industry, team size and the process you want to fix.'],
-    ['eye', 'See it working', 'We show DotOne running that process, from first step to report.'],
-    ['spark', 'Meet the AI agents', 'See how agents flag issues and prepare the next step for approval.'],
-    ['check', 'Get a clear plan', 'Which plan fits, what goes live first, and a realistic timeline.'],
-] as $i => [$ico, $t, $d]): ?>
-                    <li style="--i: <?= $i ?>"><span><?= icon($ico, 'w-5 h-5') ?></span><div><b><?= $t ?></b><?= $d ?></div></li>
-<?php endforeach; ?>
-                </ol>
-
-                <div class="demo-assure">
-                    <span><?= icon('check', 'w-4 h-4') ?>Free, no commitment</span>
-                    <span><?= icon('check', 'w-4 h-4') ?>Reply within one working day</span>
-                    <span><?= icon('check', 'w-4 h-4') ?>Your data stays private</span>
-                </div>
+                <p class="text-lg text-text-secondary leading-relaxed mb-7">A free 30-minute walkthrough with a product specialist, built around one real process from your business.</p>
+                <ul class="demo-points">
+                    <li><?= icon('check', 'w-4 h-4') ?>Free, no commitment</li>
+                    <li><?= icon('check', 'w-4 h-4') ?>We reply within one working day</li>
+                    <li><?= icon('check', 'w-4 h-4') ?>See the AI agents on your workflow</li>
+                </ul>
             </div>
 
             <div class="demo-card" id="book">
                 <form id="demoForm" novalidate>
                     <h2 class="demo-card-title">Book your free demo</h2>
-                    <p class="demo-card-sub">Takes under a minute. Fields marked <span aria-hidden="true">*</span> are required.</p>
 
                     <input type="hidden" name="inquiryType" value="Demo request">
+                    <input type="hidden" name="firstName"><input type="hidden" name="lastName">
                     <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
                     <div class="demo-row">
-                        <div class="fld"><label for="d-first">First name *</label><input id="d-first" name="firstName" type="text" autocomplete="given-name" required maxlength="100"></div>
-                        <div class="fld"><label for="d-last">Last name *</label><input id="d-last" name="lastName" type="text" autocomplete="family-name" required maxlength="100"></div>
+                        <div class="fld"><label for="d-name">Full name</label><input id="d-name" type="text" autocomplete="name" required maxlength="150"></div>
+                        <div class="fld"><label for="d-company">Company</label><input id="d-company" name="companyName" type="text" autocomplete="organization" required maxlength="255"></div>
                     </div>
                     <div class="demo-row">
-                        <div class="fld"><label for="d-email">Work email *</label><input id="d-email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@company.com"></div>
-                        <div class="fld"><label for="d-phone">Mobile number *</label><input id="d-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="+91 98765 43210" pattern="[+0-9 ()-]{8,20}"></div>
+                        <div class="fld"><label for="d-email">Work email</label><input id="d-email" name="email" type="email" autocomplete="email" required maxlength="255" placeholder="you@company.com"></div>
+                        <div class="fld"><label for="d-phone">Mobile</label><input id="d-phone" name="phone" type="tel" autocomplete="tel" required maxlength="20" placeholder="+91 98765 43210" pattern="[+0-9 ()-]{8,20}"></div>
                     </div>
                     <div class="demo-row">
-                        <div class="fld"><label for="d-company">Company *</label><input id="d-company" name="companyName" type="text" autocomplete="organization" required maxlength="255"></div>
-                        <div class="fld"><label for="d-role">Your role *</label><input id="d-role" name="jobTitle" type="text" autocomplete="organization-title" required maxlength="100" placeholder="Owner, Plant head, Accounts…"></div>
-                    </div>
-                    <div class="demo-row">
-                        <div class="fld"><label for="d-industry">Industry *</label>
+                        <div class="fld"><label for="d-industry">Industry</label>
                             <select id="d-industry" name="industry" required>
-                                <option value="">Select industry</option>
+                                <option value="">Select</option>
 <?php foreach ($industries as $n): ?>
                                 <option><?= e($n) ?></option>
 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="fld"><label for="d-size">Team size *</label>
+                        <div class="fld"><label for="d-size">Team size</label>
                             <select id="d-size" name="companySize" required>
-                                <option value="">Select size</option>
+                                <option value="">Select</option>
                                 <option>1–20</option><option>21–50</option><option>51–200</option><option>201–500</option><option>500+</option>
                             </select>
                         </div>
                     </div>
 
-                    <fieldset class="fld">
-                        <legend>What do you want to see?</legend>
-                        <div class="demo-chips">
+                    <details class="demo-more">
+                        <summary>Add details <span>(optional)</span></summary>
+                        <div class="demo-more-body">
+                            <fieldset class="fld">
+                                <legend>What do you want to see?</legend>
+                                <div class="demo-chips">
 <?php foreach ($interests as [$v, $label]): ?>
-                            <label class="demo-chip"><input type="checkbox" name="solutions[]" value="<?= e($label) ?>"><span><?= e($label) ?></span></label>
+                                    <label class="demo-chip"><input type="checkbox" name="solutions[]" value="<?= e($label) ?>"><span><?= e($label) ?></span></label>
 <?php endforeach; ?>
+                                </div>
+                            </fieldset>
+                            <div class="demo-row">
+                                <div class="fld"><label for="d-when">When do you want to start?</label>
+                                    <select id="d-when" name="implementationTimeline">
+                                        <option value="">Select</option>
+                                        <option>Right away</option><option>Within 1 month</option><option>1–3 months</option><option>Just exploring</option>
+                                    </select>
+                                </div>
+                                <div class="fld"><label for="d-date">Preferred date</label><input id="d-date" name="preferredDate" type="date"></div>
+                            </div>
+                            <div class="fld"><label for="d-msg">Anything we should know?</label><textarea id="d-msg" name="message" rows="3" maxlength="2000" placeholder="The process you want to improve, tools you use today…"></textarea></div>
                         </div>
-                    </fieldset>
-
-                    <div class="demo-row">
-                        <div class="fld"><label for="d-when">When do you want to start? *</label>
-                            <select id="d-when" name="implementationTimeline" required>
-                                <option value="">Select</option>
-                                <option>Right away</option><option>Within 1 month</option><option>1–3 months</option><option>Just exploring</option>
-                            </select>
-                        </div>
-                        <div class="fld"><label for="d-date">Preferred demo date</label><input id="d-date" name="preferredDate" type="date"></div>
-                    </div>
-
-                    <div class="fld"><label for="d-msg">Anything we should know?</label><textarea id="d-msg" name="message" rows="3" maxlength="2000" placeholder="The process you want to improve, tools you use today…"></textarea></div>
+                    </details>
 
                     <p class="demo-error" role="alert" hidden></p>
                     <button type="submit" class="demo-submit"><span class="demo-submit-text">Book my free demo</span><span class="demo-spinner" aria-hidden="true"></span></button>
-                    <p class="demo-legal">We use your details only to arrange the demo. No spam.</p>
+                    <p class="demo-legal">We use your details only to arrange the demo.</p>
                 </form>
 
                 <div class="demo-done" hidden tabindex="-1">
@@ -152,6 +138,9 @@ render_head($page);
     });
     if (firstBad) { firstBad.focus(); showError('Please fill in the highlighted fields.'); return; }
 
+    var full = form.querySelector('#d-name').value.trim().split(/\s+/);
+    form.querySelector('[name=firstName]').value = full.shift() || '';
+    form.querySelector('[name=lastName]').value = full.join(' ');
     var data = new FormData(form);
     var extra = [];
     if (data.get('preferredDate')) extra.push('Preferred date: ' + data.get('preferredDate'));

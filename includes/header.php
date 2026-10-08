@@ -30,7 +30,7 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="nav-bar-row relative flex items-center justify-between h-16 w-full min-w-0">
             <a href="/" class="nav-logo flex items-center flex-shrink-0 z-10">
-                <img src="/assets/dotone-wm-blue-tight.png" alt="DotOne" class="nav-logo-img w-auto object-contain" width="983" height="227">
+                <img src="/assets/dotone-wm-blue-tight.png" alt="DotOne" class="nav-logo-img object-contain" width="147" height="34" style="height:34px;width:auto;max-width:160px">
             </a>
 
             <div class="nav-links hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">

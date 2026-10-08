@@ -10240,5 +10240,5 @@ a.card:hover,
 .demo-done .btn-ghost { display: inline-flex; padding: 0.65rem 1.4rem; border: 1.5px solid #0096EE; border-radius: 0.65rem; color: #0077C0; font-weight: 600; }
 .demo-done .btn-ghost:hover { background: #0096EE; color: #fff; }
 /* Header logo: cropped image, sized by its visible height */
-.nav-logo-img { height: 1.85rem; width: auto; }
-@media (min-width: 1024px) { .nav-logo-img { height: 2.15rem; } }
+.nav-logo-img { height: 1.85rem !important; width: auto; }
+@media (min-width: 1024px) { .nav-logo-img { height: 2.15rem !important; } }

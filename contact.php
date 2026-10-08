@@ -30,119 +30,60 @@
 <body class="bg-background">
     <!-- Navigation Header -->
     <div id="header"><?php include __DIR__ . '/includes/header.php'; ?></div>
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
-        <!-- Animated Gradient Background -->
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-12 md:pt-40 md:pb-16 overflow-hidden">
         <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
+        <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+            <span class="section-label">Sales, support and partnerships</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6">Contact DotOne</h1>
+            <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
+                Talk to our team about how DotOne can optimise your manufacturing operations. Pick a topic below or fill in the form.
+            </p>
+        </div>
+    </section>
 
-        <div class="container-custom relative z-10">
-            <div class="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
-                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full">
-                    <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-                    <span class="text-sm font-medium text-primary-700">Expert Manufacturing AI Consultation</span>
-                </div>
-
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">Contact DotOne</h1>
-
-                <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                    Connect with our manufacturing AI experts to discover how DotOne's Vision AI platform can optimise your operations, increase efficiency, and drive measurable ROI.
-                </p>
-
-                <!-- Quick Stats -->
-                <div class="grid grid-cols-3 gap-6 pt-8 max-w-2xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-3xl font-display font-bold text-gradient">< 24h</div>
-                        <div class="text-sm text-text-secondary mt-1">Response Time</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-display font-bold text-gradient">500+</div>
-                        <div class="text-sm text-text-secondary mt-1">Implementations</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl font-display font-bold text-gradient">98%</div>
-                        <div class="text-sm text-text-secondary mt-1">Satisfaction Rate</div>
-                    </div>
-                </div>
+    <!-- Contact options: each card pre-fills the enquiry type and scrolls to the form -->
+    <section class="pb-12 bg-white">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-3 gap-6">
+                <button type="button" class="card p-6 hover-lift text-left w-full" onclick="showContactForm('executive')">
+                    <h2 class="text-lg font-display font-semibold mb-2">Executive briefing</h2>
+                    <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3">Discuss ROI, the implementation roadmap and your transformation strategy.</p>
+                    <span class="text-sm font-medium text-primary-600">Book an executive session &rarr;</span>
+                </button>
+                <button type="button" class="card p-6 hover-lift text-left w-full" onclick="showContactForm('technical')">
+                    <h2 class="text-lg font-display font-semibold mb-2">Technical consultation</h2>
+                    <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3">Review integration requirements, security compliance and infrastructure planning.</p>
+                    <span class="text-sm font-medium text-primary-600">Schedule a tech review &rarr;</span>
+                </button>
+                <button type="button" class="card p-6 hover-lift text-left w-full" onclick="showContactForm('sales')">
+                    <h2 class="text-lg font-display font-semibold mb-2">Sales enquiry</h2>
+                    <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3">Ask about pricing, packages, implementation timelines and configuration.</p>
+                    <span class="text-sm font-medium text-primary-600">Talk to sales &rarr;</span>
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Options Section -->
-    <section class="section-sm bg-surface">
+    <!-- Multi-step contact form -->
+    <section id="contact-form" class="section bg-surface">
         <div class="container-custom">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Executive Briefing -->
-                <div class="card p-8 hover-lift group cursor-pointer" onclick="showContactForm('executive')">
-                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Executive briefing</h3>
-                    <p class="text-text-secondary mb-4">Schedule a strategic consultation with our leadership team to discuss ROI, implementation roadmap, and transformation strategy.</p>
-                    <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
-                        <span>Book Executive Session</span>
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Technical Consultation -->
-                <div class="card p-8 hover-lift group cursor-pointer" onclick="showContactForm('technical')">
-                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Technical consultation</h3>
-                    <p class="text-text-secondary mb-4">Connect with our technical architects to discuss integration requirements, security compliance, and infrastructure planning.</p>
-                    <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
-                        <span>Schedule Tech Review</span>
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-
-                <!-- Sales Inquiry -->
-                <div class="card p-8 hover-lift group cursor-pointer" onclick="showContactForm('sales')">
-                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Sales inquiry</h3>
-                    <p class="text-text-secondary mb-4">Speak with our sales team about pricing, packages, implementation timelines, and custom solution configurations.</p>
-                    <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
-                        <span>Talk to Sales</span>
-                        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Multi-Step Contact Form Section -->
-    <section class="section">
-        <div class="container-custom">
-            <div class="max-w-5xl mx-auto">
-                <div class="card-elevated p-8 md:p-12">
-                    <!-- Form Progress Indicator -->
-                    <div class="mb-12">
-                        <div class="flex items-center justify-between mb-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="card p-6 md:p-10">
+                    <!-- Form progress indicator -->
+                    <div class="mb-10">
+                        <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-3">
                                 <div id="step1-indicator" class="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center text-white font-semibold">1</div>
-                                <span id="step1-label" class="hidden sm:inline font-medium text-text-primary">Contact Information</span>
+                                <span id="step1-label" class="hidden sm:inline font-medium text-text-primary">Contact details</span>
                             </div>
                             <div class="flex-1 h-1 bg-border mx-2 sm:mx-4">
                                 <div id="progress-bar-1" class="h-full bg-gradient-brand transition-all duration-500" style="width: 0%"></div>
                             </div>
                             <div class="flex items-center space-x-3">
                                 <div id="step2-indicator" class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-text-secondary font-semibold">2</div>
-                                <span id="step2-label" class="hidden sm:inline font-medium text-text-secondary">Company Details</span>
+                                <span id="step2-label" class="hidden sm:inline font-medium text-text-secondary">Company</span>
                             </div>
                             <div class="flex-1 h-1 bg-border mx-2 sm:mx-4">
                                 <div id="progress-bar-2" class="h-full bg-gradient-brand transition-all duration-500" style="width: 0%"></div>
@@ -157,73 +98,63 @@
                     <!-- Contact Form -->
                     <form id="contactForm" class="space-y-8">
                         <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-                        <!-- Step 1: Contact Information -->
+                        <!-- Step 1: Contact details -->
                         <div id="step1" class="space-y-6">
-                            <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Let's get started</h2>
-                                <p class="text-text-secondary">Tell us about yourself and how we can help transform your manufacturing operations.</p>
+                            <div>
+                                <h2 class="text-2xl md:text-3xl font-display font-semibold mb-2">Let's get started</h2>
+                                <p class="text-text-secondary">Tell us about yourself and how we can help.</p>
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="firstName" class="block text-sm font-medium text-text-primary mb-2">First Name *</label>
+                                    <label for="firstName" class="block text-sm font-medium text-text-primary mb-2">First name *</label>
                                     <input type="text" id="firstName" name="firstName" required class="input" placeholder="John">
                                 </div>
                                 <div>
-                                    <label for="lastName" class="block text-sm font-medium text-text-primary mb-2">Last Name *</label>
+                                    <label for="lastName" class="block text-sm font-medium text-text-primary mb-2">Last name *</label>
                                     <input type="text" id="lastName" name="lastName" required class="input" placeholder="Smith">
                                 </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-text-primary mb-2">Business Email *</label>
+                                    <label for="email" class="block text-sm font-medium text-text-primary mb-2">Business email *</label>
                                     <input type="email" id="email" name="email" required class="input" placeholder="name@company.com">
                                 </div>
                                 <div>
-                                    <label for="phone" class="block text-sm font-medium text-text-primary mb-2">Phone Number *</label>
+                                    <label for="phone" class="block text-sm font-medium text-text-primary mb-2">Phone number *</label>
                                     <input type="tel" id="phone" name="phone" required class="input" placeholder="+91 98765 43210">
+                                </div>
+                                <div>
+                                    <label for="jobTitle" class="block text-sm font-medium text-text-primary mb-2">Job title *</label>
+                                    <input type="text" id="jobTitle" name="jobTitle" required class="input" placeholder="Operations Manager">
+                                </div>
+                                <div>
+                                    <label for="inquiryType" class="block text-sm font-medium text-text-primary mb-2">Enquiry type *</label>
+                                    <select id="inquiryType" name="inquiryType" required class="input">
+                                        <option value="">Select enquiry type</option>
+                                        <option value="executive">Executive briefing</option>
+                                        <option value="technical">Technical consultation</option>
+                                        <option value="sales">Sales enquiry</option>
+                                        <option value="demo">Product demo</option>
+                                        <option value="trial">Free trial</option>
+                                        <option value="support">Support request</option>
+                                        <option value="partnership">Partnership opportunity</option>
+                                    </select>
                                 </div>
                             </div>
 
-                            <div>
-                                <label for="jobTitle" class="block text-sm font-medium text-text-primary mb-2">Job Title *</label>
-                                <input type="text" id="jobTitle" name="jobTitle" required class="input" placeholder="Operations Manager">
-                            </div>
-
-                            <div>
-                                <label for="inquiryType" class="block text-sm font-medium text-text-primary mb-2">Inquiry Type *</label>
-                                <select id="inquiryType" name="inquiryType" required class="input">
-                                    <option value="">Select inquiry type</option>
-                                    <option value="executive">Executive Briefing</option>
-                                    <option value="technical">Technical Consultation</option>
-                                    <option value="sales">Sales Inquiry</option>
-                                    <option value="demo">Product Demo</option>
-                                    <option value="trial">Free Trial</option>
-                                    <option value="support">Support Request</option>
-                                    <option value="partnership">Partnership Opportunity</option>
-                                </select>
-                            </div>
-
                             <div class="flex justify-end">
-                                <button type="button" onclick="nextStep(2)" class="btn-primary">
-                                    <span>Continue</span>
-                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                                    </svg>
-                                </button>
+                                <button type="button" onclick="nextStep(2)" class="btn-primary">Continue</button>
                             </div>
                         </div>
 
-                        <!-- Step 2: Company Details -->
+                        <!-- Step 2: Company -->
                         <div id="step2" class="space-y-6 hidden">
-                            <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Company information</h2>
-                                <p class="text-text-secondary">Help us understand your manufacturing environment and requirements.</p>
+                            <div>
+                                <h2 class="text-2xl md:text-3xl font-display font-semibold mb-2">Company information</h2>
+                                <p class="text-text-secondary">Help us understand your manufacturing environment.</p>
                             </div>
 
                             <div>
-                                <label for="companyName" class="block text-sm font-medium text-text-primary mb-2">Company Name *</label>
+                                <label for="companyName" class="block text-sm font-medium text-text-primary mb-2">Company name *</label>
                                 <input type="text" id="companyName" name="companyName" required class="input" placeholder="Acme Manufacturing Inc.">
                             </div>
 
@@ -232,19 +163,19 @@
                                     <label for="industry" class="block text-sm font-medium text-text-primary mb-2">Industry *</label>
                                     <select id="industry" name="industry" required class="input">
                                         <option value="">Select industry</option>
-                                        <option value="automotive">Automotive Manufacturing</option>
-                                        <option value="electronics">Electronics Manufacturing</option>
-                                        <option value="food">Food Processing</option>
+                                        <option value="automotive">Automotive manufacturing</option>
+                                        <option value="electronics">Electronics manufacturing</option>
+                                        <option value="food">Food processing</option>
                                         <option value="pharmaceutical">Pharmaceutical</option>
-                                        <option value="aerospace">Aerospace & Defense</option>
-                                        <option value="textile">Textile & Apparel</option>
-                                        <option value="metal">Metal Fabrication</option>
-                                        <option value="chemical">Chemical Processing</option>
-                                        <option value="other">Other Manufacturing</option>
+                                        <option value="aerospace">Aerospace &amp; defence</option>
+                                        <option value="textile">Textile &amp; apparel</option>
+                                        <option value="metal">Metal fabrication</option>
+                                        <option value="chemical">Chemical processing</option>
+                                        <option value="other">Other manufacturing</option>
                                     </select>
                                 </div>
                                 <div>
-                                    <label for="companySize" class="block text-sm font-medium text-text-primary mb-2">Company Size *</label>
+                                    <label for="companySize" class="block text-sm font-medium text-text-primary mb-2">Company size *</label>
                                     <select id="companySize" name="companySize" required class="input">
                                         <option value="">Select company size</option>
                                         <option value="1-50">1-50 employees</option>
@@ -255,189 +186,120 @@
                                         <option value="5000+">5,000+ employees</option>
                                     </select>
                                 </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label for="numberOfPlants" class="block text-sm font-medium text-text-primary mb-2">Number of Manufacturing Plants</label>
+                                    <label for="numberOfPlants" class="block text-sm font-medium text-text-primary mb-2">Number of manufacturing plants</label>
                                     <input type="number" id="numberOfPlants" name="numberOfPlants" class="input" placeholder="3" min="1">
                                 </div>
                                 <div>
-                                    <label for="numberOfWorkers" class="block text-sm font-medium text-text-primary mb-2">Total Manufacturing Workers</label>
+                                    <label for="numberOfWorkers" class="block text-sm font-medium text-text-primary mb-2">Total manufacturing workers</label>
                                     <input type="number" id="numberOfWorkers" name="numberOfWorkers" class="input" placeholder="250" min="1">
                                 </div>
                             </div>
 
                             <div>
-                                <label for="currentSystems" class="block text-sm font-medium text-text-primary mb-2">Current ERP/Manufacturing Systems</label>
-                                <input type="text" id="currentSystems" name="currentSystems" class="input" placeholder="SAP, Oracle, Custom Systems, etc.">
+                                <label for="currentSystems" class="block text-sm font-medium text-text-primary mb-2">Current ERP or manufacturing systems</label>
+                                <input type="text" id="currentSystems" name="currentSystems" class="input" placeholder="SAP, Oracle, custom systems, etc.">
                             </div>
 
                             <div class="flex justify-between">
-                                <button type="button" onclick="previousStep(1)" class="btn-secondary">
-                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-                                    </svg>
-                                    <span>Back</span>
-                                </button>
-                                <button type="button" onclick="nextStep(3)" class="btn-primary">
-                                    <span>Continue</span>
-                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                                    </svg>
-                                </button>
+                                <button type="button" onclick="previousStep(1)" class="btn-secondary">Back</button>
+                                <button type="button" onclick="nextStep(3)" class="btn-primary">Continue</button>
                             </div>
                         </div>
 
-                        <!-- Step 3: Requirements & Timeline -->
+                        <!-- Step 3: Requirements -->
                         <div id="step3" class="space-y-6 hidden">
-                            <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Your requirements</h2>
-                                <p class="text-text-secondary">Tell us about your specific needs and implementation timeline.</p>
+                            <div>
+                                <h2 class="text-2xl md:text-3xl font-display font-semibold mb-2">Your requirements</h2>
+                                <p class="text-text-secondary">Tell us what you need and when.</p>
                             </div>
 
-                            <div>
-                                <label class="block text-sm font-medium text-text-primary mb-3">Interested Solutions (Select all that apply)</label>
-                                <div class="grid md:grid-cols-2 gap-4">
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                            <fieldset>
+                                <legend class="block text-sm font-medium text-text-primary mb-3">Interested solutions (select all that apply)</legend>
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="vision-ai" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">Vision AI Platform</span>
+                                        <span class="text-text-primary">Vision AI platform</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="ai-agent" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">AI Agent</span>
+                                        <span class="text-text-primary">AI agent</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="salesman-tracker" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">Salesman Tracker</span>
+                                        <span class="text-text-primary">Salesman tracker</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="invoice-scanner" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">Invoice Scanner</span>
+                                        <span class="text-text-primary">Invoice scanner</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="business-card-scanner" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">Business Card Scanner</span>
+                                        <span class="text-text-primary">Business card scanner</span>
                                     </label>
-                                    <label class="flex items-center space-x-3 p-4 border border-border rounded-lg cursor-pointer hover:bg-surface transition-colors">
+                                    <label class="flex items-center space-x-3 p-3 border border-border rounded-lg cursor-pointer">
                                         <input type="checkbox" name="solutions[]" value="lead-finder" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500">
-                                        <span class="text-text-primary">Lead Finder</span>
+                                        <span class="text-text-primary">Lead finder</span>
                                     </label>
                                 </div>
-                            </div>
+                            </fieldset>
 
-                            <div>
-                                <label for="implementationTimeline" class="block text-sm font-medium text-text-primary mb-2">Desired Implementation Timeline *</label>
-                                <select id="implementationTimeline" name="implementationTimeline" required class="input">
-                                    <option value="">Select timeline</option>
-                                    <option value="immediate">Immediate (Within 1 month)</option>
-                                    <option value="1-3-months">1-3 months</option>
-                                    <option value="3-6-months">3-6 months</option>
-                                    <option value="6-12-months">6-12 months</option>
-                                    <option value="12+-months">12+ months</option>
-                                    <option value="exploring">Just exploring options</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="budget" class="block text-sm font-medium text-text-primary mb-2">Estimated Budget Range</label>
-                                <select id="budget" name="budget" class="input">
-                                    <option value="">Select budget range</option>
-                                    <option value="under-50k">Under $50,000</option>
-                                    <option value="50k-100k">$50,000 - $100,000</option>
-                                    <option value="100k-250k">$100,000 - $250,000</option>
-                                    <option value="250k-500k">$250,000 - $500,000</option>
-                                    <option value="500k-1m">$500,000 - $1,000,000</option>
-                                    <option value="1m+">$1,000,000+</option>
-                                    <option value="not-sure">Not sure yet</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-text-primary mb-2">Additional Information</label>
-                                <textarea id="message" name="message" rows="5" class="input" placeholder="Tell us about your specific challenges, goals, or any questions you have..."></textarea>
-                            </div>
-
-                            <div>
-                                <label class="flex items-start space-x-3">
-                                    <input type="checkbox" name="newsletter" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500 mt-1">
-                                    <span class="text-sm text-text-secondary">I'd like to receive updates about manufacturing AI trends, product updates, and exclusive resources from DotOne.</span>
-                                </label>
-                            </div>
-
-                            <div class="p-4 bg-primary-50 rounded-lg border border-primary-200">
-                                <div class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <p class="text-sm text-text-secondary">By submitting this form, you agree to our <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="text-primary-500 hover:text-primary-600 underline">Privacy Policy</a> and consent to be contacted by our team. We respect your privacy and will never share your information.</p>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="implementationTimeline" class="block text-sm font-medium text-text-primary mb-2">Desired implementation timeline *</label>
+                                    <select id="implementationTimeline" name="implementationTimeline" required class="input">
+                                        <option value="">Select timeline</option>
+                                        <option value="immediate">Immediate (within 1 month)</option>
+                                        <option value="1-3-months">1-3 months</option>
+                                        <option value="3-6-months">3-6 months</option>
+                                        <option value="6-12-months">6-12 months</option>
+                                        <option value="12+-months">12+ months</option>
+                                        <option value="exploring">Just exploring options</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="budget" class="block text-sm font-medium text-text-primary mb-2">Estimated budget range</label>
+                                    <select id="budget" name="budget" class="input">
+                                        <option value="">Select budget range</option>
+                                        <option value="under-50k">Under $50,000</option>
+                                        <option value="50k-100k">$50,000 - $100,000</option>
+                                        <option value="100k-250k">$100,000 - $250,000</option>
+                                        <option value="250k-500k">$250,000 - $500,000</option>
+                                        <option value="500k-1m">$500,000 - $1,000,000</option>
+                                        <option value="1m+">$1,000,000+</option>
+                                        <option value="not-sure">Not sure yet</option>
+                                    </select>
                                 </div>
                             </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-text-primary mb-2">Additional information</label>
+                                <textarea id="message" name="message" rows="4" class="input" placeholder="Your challenges, goals or questions"></textarea>
+                            </div>
+
+                            <label class="flex items-start space-x-3">
+                                <input type="checkbox" name="newsletter" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500 mt-1">
+                                <span class="text-sm text-text-secondary">Send me product updates and resources from DotOne.</span>
+                            </label>
+
+                            <p class="text-sm text-text-secondary">By submitting this form, you agree to our <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Privacy Policy</a> and consent to be contacted by our team.</p>
 
                             <div class="flex justify-between">
-                                <button type="button" onclick="previousStep(2)" class="btn-secondary">
-                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l-5-5m0 0l5-5m-5 5h12"/>
-                                    </svg>
-                                    <span>Back</span>
-                                </button>
-                                <button type="submit" class="btn-primary">
-                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                    <span>Submit Request</span>
-                                </button>
+                                <button type="button" onclick="previousStep(2)" class="btn-secondary">Back</button>
+                                <button type="submit" class="btn-primary">Submit request</button>
                             </div>
                         </div>
                     </form>
 
-                    <!-- Success Message (Hidden by default) -->
+                    <!-- Success message (hidden by default) -->
                     <div id="successMessage" class="hidden text-center space-y-6">
-                        <div class="w-20 h-20 bg-gradient-brand rounded-full flex items-center justify-center mx-auto">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-display font-bold">Thank you for reaching out!</h2>
-                        <p class="text-xl text-text-secondary max-w-2xl mx-auto">
-                            We've received your inquiry and our team will review your requirements. You'll hear from us within 24 hours to schedule your consultation.
+                        <h2 class="text-2xl md:text-3xl font-display font-semibold">Thank you for reaching out</h2>
+                        <p class="text-lg text-text-secondary max-w-xl mx-auto">
+                            We've received your enquiry and will be in touch within 24 hours to schedule your consultation.
                         </p>
-                        <div class="p-6 bg-surface rounded-xl max-w-md mx-auto">
-                            <h3 class="font-semibold text-text-primary mb-3">What happens next?</h3>
-                            <ul class="space-y-3 text-left text-text-secondary">
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Our team reviews your requirements and matches you with the right expert</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>You'll receive a confirmation email with next steps</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>We'll schedule your personalised consultation at your convenience</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/" class="btn-secondary">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
-                                </svg>
-                                <span>Return to Homepage</span>
-                            </a>
-                            <a href="/demo" class="btn-primary">
-                                <span>Explore Interactive Demo</span>
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                                </svg>
-                            </a>
+                        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                            <a href="/" class="btn-ghost-lg">Return to homepage</a>
+                            <a href="/demo" class="btn-hero-glow-lg">Book a demo</a>
                         </div>
                     </div>
                 </div>
@@ -445,187 +307,24 @@
         </div>
     </section>
 
-    <!-- Implementation Timeline Visualisation -->
-    <section class="section bg-surface">
+    <!-- Email -->
+    <section class="section bg-white">
         <div class="container-custom">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center space-y-4 mb-16">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold">Implementation <span class="text-gradient">Timeline</span></h2>
-                    <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                        From initial consultation to full deployment, here's what you can expect during your transformation journey
-                    </p>
-                </div>
-
-                <ol class="flow-steps">
-                    <li class="flow-step">
-                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">1</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 1-2</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Discovery & assessment</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Initial consultation, requirements gathering, facility assessment, and custom solution design.</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">2</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 3-4</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Infrastructure setup</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">CCTV integration, network configuration, security implementation, and system architecture deployment.</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">3</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 5-6</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">AI training & calibration</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Vision AI model training, workflow optimisation, accuracy calibration, and performance tuning.</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">4</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 7-8</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Team training & pilot</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Comprehensive team training, pilot program launch, feedback collection, and system refinement.</p>
-                    </li>
-                    <li class="flow-step">
-                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">5</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 9+</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Full deployment & optimisation</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Complete rollout, continuous monitoring, ongoing optimisation, and dedicated support.</p>
-                    </li>
-                </ol>
+            <div class="max-w-2xl mb-10">
+                <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Prefer email?</h2>
+                <p class="text-lg text-text-secondary">Write to the right team directly and we'll reply within one business day.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Direct Contact Information -->
-    <section class="section">
-        <div class="container-custom">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center space-y-4 mb-12">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold">Other Ways to <span class="text-gradient">Connect</span></h2>
-                    <p class="text-xl text-text-secondary">
-                        Prefer a different communication method? We're here to help.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Phone -->
-                    <div class="card p-8 text-center hover-lift">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Call us</h3>
-                        <p class="text-text-secondary mb-4">Speak directly with our team</p>
-                        <a href="tel:+18005551234" class="text-primary-500 font-semibold hover:text-primary-600">+918233081931</a>
-                        <p class="text-sm text-text-tertiary mt-2">Mon-Fri, 8am-6pm EST</p>
-                    </div>
-
-                    <!-- Email -->
-                    <div class="card p-8 text-center hover-lift">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Email us</h3>
-                        <p class="text-text-secondary mb-4">Send us a detailed inquiry</p>
-                        <a href="mailto:sales@techdotbit.com" class="text-primary-500 font-semibold hover:text-primary-600">sales@techdotbit.com</a>
-                        <p class="text-sm text-text-tertiary mt-2">Response within 24 hours</p>
-                    </div>
-
-                    <!-- Live Chat -->
-                    <div class="card p-8 text-center hover-lift">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Live chat</h3>
-                        <p class="text-text-secondary mb-4">Chat with our AI assistant</p>
-                        <button onclick="openLiveChat()" class="text-primary-500 font-semibold hover:text-primary-600">Start Chat</button>
-                        <p class="text-sm text-text-tertiary mt-2">Available 24/7</p>
-                    </div>
-                </div>
-
-                <!-- Office Locations -->
-                <div class="mt-16">
-                    <h3 class="text-2xl font-display font-semibold text-center mb-8">Our offices</h3>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="text-center">
-                            <div class="text-lg font-semibold text-text-primary mb-2"> HQ</div>
-                            <p class="text-text-secondary text-sm">
-                                Innov8 Coworking Space<br>
-                                Graphix Tower, A–13A, Sector 62<br>
-                                Noida
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-lg font-semibold text-text-primary mb-2">Sales Office</div>
-                            <p class="text-text-secondary text-sm">
-                             Pindi St, Sadar Bazar<br>
-                                 Chaura Bazar, Old Ludhiana, Ludhiana,141008<br>
-                                Punjab
-                            </p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-lg font-semibold text-text-primary mb-2">Sales Pacific</div>
-                            <p class="text-text-secondary text-sm">
-                                S-29, Pune - Satara Rd, Parvati Industrial Estate,<br>
-                                Parvati Paytha, Pune- 411009<br>
-                                Maharashtra
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resource Library Access CTA -->
-    <section class="section bg-surface">
-        <div class="container-custom">
-            <div class="max-w-4xl mx-auto">
-                <div class="card-elevated p-8 md:p-12">
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Access Our <span class="text-gradient">Resource Library</span></h2>
-                            <p class="text-text-secondary mb-6">
-                                Get instant access to whitepapers, implementation guides, ROI calculators, and industry insights while you wait for our team to contact you.
-                            </p>
-                            <ul class="space-y-3 mb-6">
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="text-text-secondary">Manufacturing AI implementation guides</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="text-text-secondary">ROI calculation templates</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="text-text-secondary">Industry trend reports</span>
-                                </li>
-                                <li class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span class="text-text-secondary">Technical documentation</span>
-                                </li>
-                            </ul>
-                            <button onclick="showResourceForm()" class="btn-primary">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                                <span>Access Resources</span>
-                            </button>
-                        </div>
-                        <div class="relative">
-                            <img decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop" 
-                                 alt="Manufacturing professional reviewing digital documents and analytics reports on tablet device showing implementation guides and ROI calculations" 
-                                 class="w-full h-auto rounded-xl shadow-lg"
-                                 loading="lazy"
-                                 onerror="this.src='https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
-                        </div>
-                    </div>
-                </div>
+            <div class="grid sm:grid-cols-2 gap-6 max-w-3xl">
+                <a href="mailto:sales@techdotbit.com" class="card p-6 hover-lift block">
+                    <h3 class="text-lg font-display font-semibold mb-2">Sales</h3>
+                    <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3">Pricing, packages and implementation timelines.</p>
+                    <span class="text-sm font-medium text-primary-600">sales@techdotbit.com</span>
+                </a>
+                <a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="card p-6 hover-lift block">
+                    <h3 class="text-lg font-display font-semibold mb-2">Support</h3>
+                    <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3">Help with setup or configuration.</p>
+                    <span class="text-sm font-medium text-primary-600">support@techdotbit.com</span>
+                </a>
             </div>
         </div>
     </section>

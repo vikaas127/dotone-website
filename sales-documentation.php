@@ -83,7 +83,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
 
-      <div class="card p-8 hover-lift">
+      <div class="card p-8">
         <h3 class="text-xl font-display font-semibold mb-3">
           Product Pitch Deck
         </h3>
@@ -96,7 +96,7 @@
         </a>
       </div>
 
-      <div class="card p-8 hover-lift">
+      <div class="card p-8">
         <h3 class="text-xl font-display font-semibold mb-3">
           ROI Calculator Guide
         </h3>
@@ -109,7 +109,7 @@
         </a>
       </div>
 
-      <div class="card p-8 hover-lift">
+      <div class="card p-8">
         <h3 class="text-xl font-display font-semibold mb-3">
           Industry Use Cases
         </h3>
@@ -168,7 +168,7 @@
 
     <div class="space-y-6">
 
-      <div class="card p-6 hover-lift">
+      <div class="card p-6">
         <strong>“AI is expensive”</strong>
         <p class="text-text-secondary mt-2">
           DotOne works on existing cameras and infrastructure, delivering ROI
@@ -176,7 +176,7 @@
         </p>
       </div>
 
-      <div class="card p-6 hover-lift">
+      <div class="card p-6">
         <strong>“Our processes are unique”</strong>
         <p class="text-text-secondary mt-2">
           Vision AI models are customised per line, product, and factory —
@@ -184,7 +184,7 @@
         </p>
       </div>
 
-      <div class="card p-6 hover-lift">
+      <div class="card p-6">
         <strong>“Implementation will be complex”</strong>
         <p class="text-text-secondary mt-2">
           Typical pilot deployments go live in 48–72 hours using existing CCTV.

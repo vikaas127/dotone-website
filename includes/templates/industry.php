@@ -36,7 +36,7 @@ $mods = array_values(array_filter($page['modules'], function ($s) { return isset
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 <?php foreach ($page['challenges'] as [$ico, $title, $text]): ?>
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <div class="w-11 h-11 rounded-lg flex items-center justify-center mb-4 bg-primary-50 text-primary-600"><?= icon($ico, 'w-5 h-5') ?></div>
                 <h3 class="text-lg font-display font-semibold mb-2"><?= e($title) ?></h3>
                 <p class="text-text-secondary text-[0.95rem] leading-relaxed"><?= e($text) ?></p>

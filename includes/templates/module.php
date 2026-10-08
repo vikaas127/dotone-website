@@ -93,24 +93,13 @@ showcase(ltrim($page['path'], '/'));
     </div>
 </section>
 
-<section class="section bg-white">
-    <div class="container-custom grid lg:grid-cols-2 gap-12">
-        <div>
-            <h2 class="text-2xl md:text-3xl font-display font-semibold mb-6">Reports you get out of the box</h2>
-            <ul class="space-y-3">
-<?php foreach ($page['reports'] as $r): ?>
-                <li class="flex gap-3 text-text-secondary"><span class="text-primary-600 mt-0.5"><?= icon('chart', 'w-5 h-5') ?></span><?= e($r) ?></li>
-<?php endforeach; ?>
-            </ul>
-        </div>
-        <div>
-            <h2 class="text-2xl md:text-3xl font-display font-semibold mb-6">Connected to the rest of your ERP</h2>
-            <p class="text-text-secondary mb-6"><?= e($page['connected_intro']) ?></p>
-            <div class="flex flex-wrap gap-3">
+<section class="py-14 bg-white border-t border-border">
+    <div class="container-custom flex flex-col lg:flex-row lg:items-center gap-6">
+        <h2 class="text-xl md:text-2xl font-display font-semibold lg:w-80 flex-none">Connected to the rest of your ERP</h2>
+        <div class="flex flex-wrap gap-3">
 <?php foreach ($page['connected'] as $slug): $m = MODULES[$slug]; ?>
-                <a href="/<?= e($slug) ?>" class="module-chip"><?= icon($m['icon'], 'w-4 h-4') ?><?= e($m['name']) ?></a>
+            <a href="/<?= e($slug) ?>" class="module-chip"><?= icon($m['icon'], 'w-4 h-4') ?><?= e($m['name']) ?></a>
 <?php endforeach; ?>
-            </div>
         </div>
     </div>
 </section>
@@ -126,7 +115,7 @@ showcase(ltrim($page['path'], '/'));
                 <a href="/ai-agents/<?= e($agent) ?>" class="btn-hero-glow">See what the agent does</a>
             </div>
             <div class="space-y-3">
-<?php foreach ($page['agent_questions'] as $q): ?>
+<?php foreach (array_slice($page['agent_questions'], 0, 3) as $q): ?>
                 <div class="chat-bubble"><span class="chat-bubble-you">You</span><?= e($q) ?></div>
 <?php endforeach; ?>
             </div>

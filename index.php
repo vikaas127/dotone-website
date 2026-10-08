@@ -241,7 +241,7 @@
         </div>
 
         <div class="brand-trust-cta">
-            <a href="#customer-stories" class="brand-trust-link">
+            <a href="#customers" class="brand-trust-link">
                 Customer stories <span aria-hidden="true">›</span>
             </a>
         </div>
@@ -873,14 +873,14 @@ $pipe = [
                                 <div class="approval-top"><span class="approval-agent">Inventory Agent</span><span class="approval-tag">Low stock</span></div>
                                 <p class="approval-title">PVC Resin Grade A is below reorder level</p>
                                 <dl class="approval-facts"><div><dt>Current stock</dt><dd>1,240 kg</dd></div><div><dt>Reorder level</dt><dd>2,000 kg</dd></div><div><dt>Recommendation</dt><dd>Create purchase request</dd></div></dl>
-                                <div class="approval-actions"><button type="button" class="approval-btn approval-btn--approve" data-action="approve">Approve</button><button type="button" class="approval-btn" data-action="reject">Reject</button><button type="button" class="approval-btn approval-btn--ghost">View details</button></div>
+                                <div class="approval-actions"><button type="button" class="approval-btn approval-btn--approve" data-action="approve">Approve</button><button type="button" class="approval-btn" data-action="reject">Reject</button><a href="/ai-agents/inventory" class="approval-btn approval-btn--ghost">View details</a></div>
                                 <div class="approval-result" aria-live="polite"></div>
                             </div>
                             <div class="approval" data-approval>
                                 <div class="approval-top"><span class="approval-agent">Purchase Agent</span><span class="approval-tag approval-tag--warn">Price variance</span></div>
                                 <p class="approval-title">ABC Industries raised the price of HDPE granules</p>
                                 <dl class="approval-facts"><div><dt>Previous</dt><dd>₹96 / kg</dd></div><div><dt>Current</dt><dd>₹104 / kg</dd></div><div><dt>Variance</dt><dd>+8.3%</dd></div></dl>
-                                <div class="approval-actions"><button type="button" class="approval-btn approval-btn--approve" data-action="approve">Approve</button><button type="button" class="approval-btn" data-action="reject">Reject</button><button type="button" class="approval-btn approval-btn--ghost">Review</button></div>
+                                <div class="approval-actions"><button type="button" class="approval-btn approval-btn--approve" data-action="approve">Approve</button><button type="button" class="approval-btn" data-action="reject">Reject</button><a href="/ai-agents/purchase" class="approval-btn approval-btn--ghost">Review</a></div>
                                 <div class="approval-result" aria-live="polite"></div>
                             </div>
                             <div class="approval approval--compact">

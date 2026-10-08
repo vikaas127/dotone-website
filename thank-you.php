@@ -104,7 +104,7 @@
 
         <div class="grid md:grid-cols-3 gap-8">
 
-            <div class="card p-8 hover-lift text-center">
+            <div class="card p-8 text-center">
                 <div class="text-3xl mb-4">📧</div>
                 <h4 class="font-display font-semibold mb-2">
                     Email Confirmation
@@ -115,7 +115,7 @@
                 </p>
             </div>
 
-            <div class="card p-8 hover-lift text-center">
+            <div class="card p-8 text-center">
                 <div class="text-3xl mb-4">📅</div>
                 <h4 class="font-display font-semibold mb-2">
                     Calendar Invite
@@ -135,7 +135,7 @@
                 </p>
             </div>
 
-            <div class="card p-8 hover-lift text-center">
+            <div class="card p-8 text-center">
                 <div class="text-3xl mb-4">📲</div>
                 <h4 class="font-display font-semibold mb-2">
                     WhatsApp Reminders

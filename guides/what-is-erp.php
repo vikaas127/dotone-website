@@ -89,7 +89,7 @@
 <section class="section">
     <div class="container-custom grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-        <div class="card p-6 hover-lift">
+        <div class="card p-6">
             <h4 class="font-semibold mb-2">Centralised Data</h4>
             <p class="text-sm text-text-secondary">
                 All departments work on the same real-time data, eliminating
@@ -97,7 +97,7 @@
             </p>
         </div>
 
-        <div class="card p-6 hover-lift">
+        <div class="card p-6">
             <h4 class="font-semibold mb-2">Process Automation</h4>
             <p class="text-sm text-text-secondary">
                 Automate billing, inventory updates, payroll, production planning,
@@ -105,7 +105,7 @@
             </p>
         </div>
 
-        <div class="card p-6 hover-lift">
+        <div class="card p-6">
             <h4 class="font-semibold mb-2">Better Decisions</h4>
             <p class="text-sm text-text-secondary">
                 ERP provides reports and analytics that help management make
@@ -182,7 +182,7 @@
                     <!-- Step 1 -->
                     <div class="relative flex items-start space-x-6">
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">1</div>
-                        <div class="flex-1 card p-6 hover-lift">
+                        <div class="flex-1 card p-6">
                             <h3 class="text-xl font-display font-semibold mb-3">
                                 Business process assessment
                             </h3>
@@ -201,7 +201,7 @@
                     <!-- Step 2 -->
                     <div class="relative flex items-start space-x-6">
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">2</div>
-                        <div class="flex-1 card p-6 hover-lift">
+                        <div class="flex-1 card p-6">
                             <h3 class="text-xl font-display font-semibold mb-3">
                                 ERP configuration & customisation
                             </h3>
@@ -220,7 +220,7 @@
                     <!-- Step 3 -->
                     <div class="relative flex items-start space-x-6">
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">3</div>
-                        <div class="flex-1 card p-6 hover-lift">
+                        <div class="flex-1 card p-6">
                             <h3 class="text-xl font-display font-semibold mb-3">
                                 Data migration & system integration
                             </h3>
@@ -239,7 +239,7 @@
                     <!-- Step 4 -->
                     <div class="relative flex items-start space-x-6">
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">4</div>
-                        <div class="flex-1 card p-6 hover-lift">
+                        <div class="flex-1 card p-6">
                             <h3 class="text-xl font-display font-semibold mb-3">
                                 User training & go-live
                             </h3>
@@ -258,7 +258,7 @@
                     <!-- Step 5 -->
                     <div class="relative flex items-start space-x-6">
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">5</div>
-                        <div class="flex-1 card p-6 hover-lift">
+                        <div class="flex-1 card p-6">
                             <h3 class="text-xl font-display font-semibold mb-3">
                                 Optimisation & continuous improvement
                             </h3>
@@ -340,7 +340,7 @@
         <div class="grid md:grid-cols-3 gap-8">
 
             <!-- Cloud ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Cloud ERP
                 </h3>
@@ -358,7 +358,7 @@
             </div>
 
             <!-- On-Premise ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     On-Premise ERP
                 </h3>
@@ -375,7 +375,7 @@
             </div>
 
             <!-- Hybrid ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Hybrid ERP
                 </h3>
@@ -414,7 +414,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <!-- Higher Productivity -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Higher productivity
                 </h3>
@@ -426,7 +426,7 @@
             </div>
 
             <!-- Deeper Insights -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Deeper business insights
                 </h3>
@@ -438,7 +438,7 @@
             </div>
 
             <!-- Accelerated Reporting -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Accelerated reporting
                 </h3>
@@ -450,7 +450,7 @@
             </div>
 
             <!-- Lower Risk -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Lower business risk
                 </h3>
@@ -462,7 +462,7 @@
             </div>
 
             <!-- Simpler IT -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Simpler IT infrastructure
                 </h3>
@@ -474,7 +474,7 @@
             </div>
 
             <!-- Improved Agility -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-3">
                     Improved business agility
                 </h3>
@@ -507,7 +507,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
 
             <!-- 1 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     1. A common database
                 </h3>
@@ -519,7 +519,7 @@
             </div>
 
             <!-- 2 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     2. Embedded analytics
                 </h3>
@@ -531,7 +531,7 @@
             </div>
 
             <!-- 3 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     3. Data visualisation
                 </h3>
@@ -543,7 +543,7 @@
             </div>
 
             <!-- 4 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     4. Automation
                 </h3>
@@ -555,7 +555,7 @@
             </div>
 
             <!-- 5 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     5. Consistent UI/UX
                 </h3>
@@ -567,7 +567,7 @@
             </div>
 
             <!-- 6 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     6. Seamless integration
                 </h3>
@@ -579,7 +579,7 @@
             </div>
 
             <!-- 7 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     7. Support for new technologies
                 </h3>
@@ -591,7 +591,7 @@
             </div>
 
             <!-- 8 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     8. Strong technology platform
                 </h3>
@@ -603,7 +603,7 @@
             </div>
 
             <!-- 9 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     9. Multinational support
                 </h3>
@@ -615,7 +615,7 @@
             </div>
 
             <!-- 10 -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-xl font-display font-semibold mb-2">
                     10. Choice of deployment
                 </h3>
@@ -648,7 +648,7 @@
         <div class="grid md:grid-cols-3 gap-8">
 
             <!-- Small Business ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-2xl font-display font-semibold mb-3">
                     Small business ERP
                 </h3>
@@ -665,7 +665,7 @@
             </div>
 
             <!-- Midmarket ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-2xl font-display font-semibold mb-3">
                     Midmarket ERP
                 </h3>
@@ -682,7 +682,7 @@
             </div>
 
             <!-- Enterprise ERP -->
-            <div class="card p-6 hover-lift">
+            <div class="card p-6">
                 <h3 class="text-2xl font-display font-semibold mb-3">
                     Enterprise ERP
                 </h3>

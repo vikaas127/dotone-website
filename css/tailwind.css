@@ -8164,6 +8164,8 @@ a.card:hover,
 .approval-btn--ghost {
   border-color: transparent;
   color: #0078BE;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .approval-result {

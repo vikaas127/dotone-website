@@ -13,6 +13,17 @@
           content="payroll software india, payroll management system, PF ESIC compliance, salary processing software, indian payroll software">
 
     <link rel="canonical" href="https://dotoneforbusiness.in/payroll-software-india">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Payroll Software in India | Statutory Compliance &amp; HR Payroll | Dotone">
+    <meta property="og:description" content="Payroll software for Indian businesses. Automate salary processing, PF, ESIC, TDS compliance, payslips, and payroll reports with Dotone.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/payroll-software-india">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Payroll Software in India | Statutory Compliance &amp; HR Payroll | Dotone">
+    <meta name="twitter:description" content="Payroll software for Indian businesses. Automate salary processing, PF, ESIC, TDS compliance, payslips, and payroll reports with Dotone.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

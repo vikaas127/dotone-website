@@ -6,6 +6,17 @@
     <meta name="description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
     <title>Guides &amp; Articles | Dotone</title>
     <link rel="canonical" href="https://dotoneforbusiness.in/guides">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Guides &amp; Articles | Dotone">
+    <meta property="og:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/guides">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Guides &amp; Articles | Dotone">
+    <meta name="twitter:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

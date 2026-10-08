@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/production-monitoring-software">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
+    <meta property="og:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/production-monitoring-software">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
+    <meta name="twitter:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
 </head>
 
 <body class="bg-background">

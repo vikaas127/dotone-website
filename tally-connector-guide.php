@@ -7,6 +7,17 @@
     <meta name="description" content="Connect Dotone Manufacturing ERP with Tally Prime. Sync sales invoices, purchase vouchers, payments, GST, ledgers, and stock journals — without double entry.">
     <meta name="keywords" content="tally integration, tally connector, erp tally sync, dotone tally, manufacturing erp accounting">
     <link rel="canonical" href="https://dotoneforbusiness.in/tally-connector-guide">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Dotone Tally Connector Guide | ERP to Tally Sync">
+    <meta property="og:description" content="Connect Dotone Manufacturing ERP with Tally Prime. Sync sales invoices, purchase vouchers, payments, GST, ledgers, and stock journals — without double entry.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/tally-connector-guide">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dotone Tally Connector Guide | ERP to Tally Sync">
+    <meta name="twitter:description" content="Connect Dotone Manufacturing ERP with Tally Prime. Sync sales invoices, purchase vouchers, payments, GST, ledgers, and stock journals — without double entry.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

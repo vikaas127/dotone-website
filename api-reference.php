@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/api-reference">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="API Reference | Dotone Manufacturing Automation Platform">
+    <meta property="og:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/api-reference">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="API Reference | Dotone Manufacturing Automation Platform">
+    <meta name="twitter:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
 </head>
 
 <body class="bg-background">

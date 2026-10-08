@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/crm">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
+    <meta property="og:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/crm">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
+    <meta name="twitter:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
 </head>
 
 <body class="bg-background">

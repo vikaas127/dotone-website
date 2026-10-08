@@ -13,6 +13,17 @@
           content="what is erp, erp system, enterprise resource planning erp, what are erp systems, erp software">
 
     <link rel="canonical" href="https://dotoneforbusiness.in/what-is-erp">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="What Is ERP? Enterprise Resource Planning Explained Simply">
+    <meta property="og:description" content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/what-is-erp">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="What Is ERP? Enterprise Resource Planning Explained Simply">
+    <meta name="twitter:description" content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/vision-ai-for-manufacturing">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Vision AI for Manufacturing | AI Camera Automation – Dotone">
+    <meta property="og:description" content="Dotone Vision AI for Manufacturing enables AI-powered quality inspection, attendance, safety monitoring, and real-time factory intelligence using computer vision.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/vision-ai-for-manufacturing">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Vision AI for Manufacturing | AI Camera Automation – Dotone">
+    <meta name="twitter:description" content="Dotone Vision AI for Manufacturing enables AI-powered quality inspection, attendance, safety monitoring, and real-time factory intelligence using computer vision.">
 </head>
 
 <body class="bg-background">

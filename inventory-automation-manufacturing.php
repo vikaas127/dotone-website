@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/inventory-automation-manufacturing">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Inventory Automation for Manufacturing | Smart Inventory by Dotone">
+    <meta property="og:description" content="Dotone Inventory Automation for Manufacturing helps factories automate raw material, WIP, and finished goods inventory with real-time tracking, ERP integration, and AI-driven insights.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/inventory-automation-manufacturing">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Inventory Automation for Manufacturing | Smart Inventory by Dotone">
+    <meta name="twitter:description" content="Dotone Inventory Automation for Manufacturing helps factories automate raw material, WIP, and finished goods inventory with real-time tracking, ERP integration, and AI-driven insights.">
 </head>
 
 <body class="bg-background">

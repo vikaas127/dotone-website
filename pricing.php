@@ -6,6 +6,17 @@
     <meta name="description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
     <title>Pricing | Dotone Business Platform</title>
     <link rel="canonical" href="https://dotoneforbusiness.in/pricing">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Pricing | Dotone Business Platform">
+    <meta property="og:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/pricing">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pricing | Dotone Business Platform">
+    <meta name="twitter:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

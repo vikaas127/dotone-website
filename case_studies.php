@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/case_studies">
+      <link rel="icon" href="/public/favicon.ico">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Dotone">
+      <meta property="og:title" content="Case Studies - Manufacturing Success Stories | Dotone Vision Platform">
+      <meta property="og:description" content="Real manufacturer transformations with Dotone Vision AI - Explore quantified case studies, efficiency improvements, and ROI success stories from industry leaders">
+      <meta property="og:url" content="https://dotoneforbusiness.in/case_studies">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:locale" content="en_IN">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Case Studies - Manufacturing Success Stories | Dotone Vision Platform">
+      <meta name="twitter:description" content="Real manufacturer transformations with Dotone Vision AI - Explore quantified case studies, efficiency improvements, and ROI success stories from industry leaders">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->

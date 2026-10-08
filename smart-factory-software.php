@@ -8,6 +8,17 @@
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/smart-factory-software">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Smart Factory Software | Industry 4.0 Manufacturing – Dotone">
+    <meta property="og:description" content="Dotone Smart Factory Software unifies AI, Vision AI, ERP, and automation into one Industry 4.0 platform for real-time factory intelligence.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/smart-factory-software">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Smart Factory Software | Industry 4.0 Manufacturing – Dotone">
+    <meta name="twitter:description" content="Dotone Smart Factory Software unifies AI, Vision AI, ERP, and automation into one Industry 4.0 platform for real-time factory intelligence.">
 </head>
 
 <body class="bg-background">

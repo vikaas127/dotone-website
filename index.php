@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone — See More. Do More. AI operating system for MSME business. Unify production, inventory, quality, and shopfloor AI in one platform.">
-    <title>Dotone — See More. Do More. | AI OS for MSME Business</title>
+    <meta name="description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
+    <title>Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India</title>
     <link rel="canonical" href="https://dotoneforbusiness.in/">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
+    <meta property="og:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
+    <meta name="twitter:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotoneforbusiness.in/#organization","name":"Dotone","url":"https://dotoneforbusiness.in/","logo":"https://dotoneforbusiness.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotoneforbusiness.in/#website","url":"https://dotoneforbusiness.in/","name":"Dotone","publisher":{"@id":"https://dotoneforbusiness.in/#organization"},"inLanguage":"en-IN"}]}</script>
     <link rel="stylesheet" href="css/main.css?v=20261008a">
 </head>
 <body class="bg-background">

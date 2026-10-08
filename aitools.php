@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/aitools">
+      <link rel="icon" href="/public/favicon.ico">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Dotone">
+      <meta property="og:title" content="AI Tools Suite - Dotone Vision Platform">
+      <meta property="og:description" content="Comprehensive AI Tools Suite for Manufacturing - Vision AI, AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, and Lead Finder">
+      <meta property="og:url" content="https://dotoneforbusiness.in/aitools">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:locale" content="en_IN">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="AI Tools Suite - Dotone Vision Platform">
+      <meta name="twitter:description" content="Comprehensive AI Tools Suite for Manufacturing - Vision AI, AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, and Lead Finder">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->

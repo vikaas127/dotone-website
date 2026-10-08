@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/contact">
+      <link rel="icon" href="/public/favicon.ico">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="Dotone">
+      <meta property="og:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
+      <meta property="og:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
+      <meta property="og:url" content="https://dotoneforbusiness.in/contact">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:locale" content="en_IN">
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
+      <meta name="twitter:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->

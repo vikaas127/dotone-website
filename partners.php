@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/partners">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Dotone Partner Program | Smart Factory &amp; Vision AI Partnerships">
+    <meta property="og:description" content="Join the Dotone Partner Program and deliver Smart Factory Software, Vision AI, and Manufacturing Automation solutions to factories worldwide.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/partners">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dotone Partner Program | Smart Factory &amp; Vision AI Partnerships">
+    <meta name="twitter:description" content="Join the Dotone Partner Program and deliver Smart Factory Software, Vision AI, and Manufacturing Automation solutions to factories worldwide.">
 </head>
 
 <body class="bg-background">

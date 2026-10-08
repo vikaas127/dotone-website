@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/sales-field-tracking">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Sales Field Tracking Software | Real-Time Sales Team Monitoring by Dotone">
+    <meta property="og:description" content="Dotone Sales Field Tracking software helps businesses track field sales teams in real-time with GPS, attendance, route tracking, lead activity, and performance analytics.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/sales-field-tracking">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sales Field Tracking Software | Real-Time Sales Team Monitoring by Dotone">
+    <meta name="twitter:description" content="Dotone Sales Field Tracking software helps businesses track field sales teams in real-time with GPS, attendance, route tracking, lead activity, and performance analytics.">
 </head>
 
 <body class="bg-background">

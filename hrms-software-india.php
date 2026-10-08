@@ -13,6 +13,17 @@
           content="hr software india, hrms software, payroll software india, attendance management system, hr management system">
 
     <link rel="canonical" href="https://dotoneforbusiness.in/hrms-software-india">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="India&#x27;s Simplest HR Software | HRMS for Payroll, Attendance &amp; HR">
+    <meta property="og:description" content="India&#x27;s simplest HR software (HRMS) to manage payroll, attendance, leave, compliance, and employees. Easy to use, cloud-based, and built for Indian businesses.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/hrms-software-india">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="India&#x27;s Simplest HR Software | HRMS for Payroll, Attendance &amp; HR">
+    <meta name="twitter:description" content="India&#x27;s simplest HR software (HRMS) to manage payroll, attendance, leave, compliance, and employees. Easy to use, cloud-based, and built for Indian businesses.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <style>

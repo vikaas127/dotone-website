@@ -6,6 +6,17 @@
     <meta name="description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
     <title>Support Center | Dotone</title>
     <link rel="canonical" href="https://dotoneforbusiness.in/support">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Support Center | Dotone">
+    <meta property="og:description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/support">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Support Center | Dotone">
+    <meta name="twitter:description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

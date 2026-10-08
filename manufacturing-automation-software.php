@@ -11,6 +11,17 @@
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/manufacturing-automation-software">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Manufacturing Automation Software | Dotone Automation Platform">
+    <meta property="og:description" content="Dotone Manufacturing Automation Software helps factories automate production, inventory, quality, and labor using AI &amp; Vision AI. Built for Indian manufacturers.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/manufacturing-automation-software">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Manufacturing Automation Software | Dotone Automation Platform">
+    <meta name="twitter:description" content="Dotone Manufacturing Automation Software helps factories automate production, inventory, quality, and labor using AI &amp; Vision AI. Built for Indian manufacturers.">
 </head>
 
 <body class="bg-background">

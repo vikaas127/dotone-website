@@ -10,7 +10,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 foreach ($files as $path) {
     $file = basename($path);
 
-    if (in_array($file, ['sitemap.php','contact-submit.php','webinar-count.php','webinar-register.php','config.php','db.php'])) continue;
+    if (in_array($file, ['sitemap.php','contact-submit.php','webinar-count.php','webinar-register.php','config.php','db.php','thank-you.php','apply.php'])) continue;
 
     $slug = basename($file, '.php');
     $loc = $slug === 'index' ? $base : $base . $slug;

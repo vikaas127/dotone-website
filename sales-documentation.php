@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/sales-documentation">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Sales Documentation | Dotone Manufacturing AI Platform">
+    <meta property="og:description" content="Dotone sales documentation for manufacturing AI, Vision AI, ERP automation. Access pitch decks, ROI calculators, use cases, and sales enablement resources.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/sales-documentation">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Sales Documentation | Dotone Manufacturing AI Platform">
+    <meta name="twitter:description" content="Dotone sales documentation for manufacturing AI, Vision AI, ERP automation. Access pitch decks, ROI calculators, use cases, and sales enablement resources.">
 </head>
 
 <body class="bg-background">

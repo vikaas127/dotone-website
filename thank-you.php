@@ -9,6 +9,18 @@
           content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
 
     <link rel="canonical" href="https://dotoneforbusiness.in/thank-you">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="You&#x27;re In! | DotOne Manufacturing Webinar">
+    <meta property="og:description" content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/thank-you">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="You&#x27;re In! | DotOne Manufacturing Webinar">
+    <meta name="twitter:description" content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

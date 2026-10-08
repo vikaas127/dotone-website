@@ -6,6 +6,17 @@
     <meta name="description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
     <title>Security & Trust Center | Dotone</title>
     <link rel="canonical" href="https://dotoneforbusiness.in/security">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Security &amp; Trust Center | Dotone">
+    <meta property="og:description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/security">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Security &amp; Trust Center | Dotone">
+    <meta name="twitter:description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
 </head>

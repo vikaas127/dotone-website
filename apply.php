@@ -3,11 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Apply at Dotone</title>
+    <meta name="description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/apply">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Apply at Dotone">
+    <meta property="og:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/apply">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Apply at Dotone">
+    <meta name="twitter:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
 </head>
 
 <body class="bg-background">

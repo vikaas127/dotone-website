@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/manufacturing-erp-software">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Manufacturing ERP Software | Smart Factory ERP by Dotone">
+    <meta property="og:description" content="Dotone Manufacturing ERP Software helps factories manage production, inventory, planning, quality, and operations with AI-powered Smart Factory integration.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/manufacturing-erp-software">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Manufacturing ERP Software | Smart Factory ERP by Dotone">
+    <meta name="twitter:description" content="Dotone Manufacturing ERP Software helps factories manage production, inventory, planning, quality, and operations with AI-powered Smart Factory integration.">
 </head>
 
 <body class="bg-background">

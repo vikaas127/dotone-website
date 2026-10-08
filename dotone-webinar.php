@@ -9,6 +9,17 @@
           content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
 
     <link rel="canonical" href="https://dotoneforbusiness.in/dotone-webinar">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="DotOne Free Webinar for Manufacturers | ERP Awareness Session">
+    <meta property="og:description" content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/dotone-webinar">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="DotOne Free Webinar for Manufacturers | ERP Awareness Session">
+    <meta name="twitter:description" content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/header-nav.js" defer></script>
 

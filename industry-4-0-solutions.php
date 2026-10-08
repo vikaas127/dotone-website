@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="/js/header-nav.js" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/industry-4-0-solutions">
+    <link rel="icon" href="/public/favicon.ico">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dotone">
+    <meta property="og:title" content="Industry 4.0 Solutions | Smart Manufacturing by Dotone">
+    <meta property="og:description" content="Dotone Industry 4.0 Solutions help manufacturers digitize, automate, and optimize factories using AI, Vision AI, ERP, IoT, and real-time production intelligence.">
+    <meta property="og:url" content="https://dotoneforbusiness.in/industry-4-0-solutions">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:locale" content="en_IN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Industry 4.0 Solutions | Smart Manufacturing by Dotone">
+    <meta name="twitter:description" content="Dotone Industry 4.0 Solutions help manufacturers digitize, automate, and optimize factories using AI, Vision AI, ERP, IoT, and real-time production intelligence.">
 </head>
 
 <body class="bg-background">

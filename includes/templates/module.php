@@ -52,9 +52,9 @@ $agent = $page['agent'] ?? null;
 </section>
 
 <?php
-// Optional page-specific visual story, e.g. includes/showcase/reports-analytics.php
-$showcase = dirname(__DIR__) . '/showcase/' . ltrim($page['path'], '/') . '.php';
-if (is_file($showcase)) include $showcase;
+// Page-specific visual story from includes/showcase/data/<page>.php
+require_once dirname(__DIR__) . '/showcase/engine.php';
+showcase(ltrim($page['path'], '/'));
 ?>
 
 <section class="section bg-white">

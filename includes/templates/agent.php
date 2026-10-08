@@ -33,6 +33,11 @@ $m = MODULES[$a['module']];
     </div>
 </section>
 
+<?php
+require_once dirname(__DIR__) . '/showcase/engine.php';
+showcase('ai-agents/' . $page['slug']);
+?>
+
 <section class="section bg-white">
     <div class="container-custom">
         <div class="max-w-2xl mb-12">

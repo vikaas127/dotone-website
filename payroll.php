@@ -31,8 +31,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261015">
-    <script src="/js/header-nav.js?v=20261015" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261016">
+    <script src="/js/header-nav.js?v=20261016" defer></script>
 </head>
 
 <body class="bg-background">
@@ -57,6 +57,8 @@
 
     </div>
 </section>
+
+<?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('payroll'); ?>
 <section class="section">
     <div class="container-custom max-w-5xl mx-auto">
 
@@ -216,7 +218,7 @@
 </section>
 <!-- FOOTER -->
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/metrics-animate.js?v=20261015" defer></script>
+<script src="/js/metrics-animate.js?v=20261016" defer></script>
 
 </body>
 

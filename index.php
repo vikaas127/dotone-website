@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261015">
+    <link rel="stylesheet" href="/css/main.css?v=20261016">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -1069,11 +1069,11 @@ $levels = [
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261015" defer></script>
-<script src="/js/command-centre.js?v=20261015" defer></script>
-<script src="/js/glance-cards.js?v=20261015" defer></script>
-<script src="/js/home-ai.js?v=20261015" defer></script>
-<script src="/js/roi-calculator.js?v=20261015" defer></script>
+<script src="/js/header-nav.js?v=20261016" defer></script>
+<script src="/js/command-centre.js?v=20261016" defer></script>
+<script src="/js/glance-cards.js?v=20261016" defer></script>
+<script src="/js/home-ai.js?v=20261016" defer></script>
+<script src="/js/roi-calculator.js?v=20261016" defer></script>
     <!-- Footer -->
   
 

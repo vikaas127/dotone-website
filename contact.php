@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
     <title>Contact Us - Dotone Vision Platform | Manufacturing AI Consultation</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/contact">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
       <meta property="og:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
       <meta property="og:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
       <meta property="og:url" content="https://dotoneforbusiness.in/contact">
-      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
       <meta property="og:locale" content="en_IN">
-      <meta name="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
       <meta name="twitter:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
+      <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -420,7 +427,7 @@
                             </ul>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                            <a href="/home" class="btn-secondary">
+                            <a href="/" class="btn-secondary">
                                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                                 </svg>
@@ -699,7 +706,7 @@
                             </button>
                         </div>
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop" 
+                            <img decoding="async" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2940&auto=format&fit=crop" 
                                  alt="Manufacturing professional reviewing digital documents and analytics reports on tablet device showing implementation guides and ROI calculations" 
                                  class="w-full h-auto rounded-xl shadow-lg"
                                  loading="lazy"
@@ -869,6 +876,5 @@
             });
         });
     </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

@@ -12,13 +12,20 @@
     <meta property="og:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
     <meta property="og:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
     <meta property="og:url" content="https://dotoneforbusiness.in/">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
     <meta name="twitter:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotoneforbusiness.in/#organization","name":"Dotone","url":"https://dotoneforbusiness.in/","logo":"https://dotoneforbusiness.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotoneforbusiness.in/#website","url":"https://dotoneforbusiness.in/","name":"Dotone","publisher":{"@id":"https://dotoneforbusiness.in/#organization"},"inLanguage":"en-IN"}]}</script>
-    <link rel="stylesheet" href="css/main.css?v=20261008a">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -103,68 +110,68 @@
                 <!-- SET 1 -->
                 <div class="brand-carousel-group">
                     <div class="brand-carousel-item">
-                        <img src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="images/clients/splice.png" alt="Splice" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="images/clients/savit.png" alt="Savit Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/anondita.png" alt="Anondita Medicare" loading="lazy">
+                        <img src="images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- SET 2 - DUPLICATE FOR SEAMLESS CONTINUOUS LOOP -->
                 <div class="brand-carousel-group" aria-hidden="true">
                     <div class="brand-carousel-item">
-                        <img src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="images/clients/splice.png" alt="Splice" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="images/clients/savit.png" alt="Savit Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/anondita.png" alt="Anondita Medicare" loading="lazy">
+                        <img src="images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -197,7 +204,7 @@
                     <div class="compare-row"><span class="compare-icon compare-icon--no">&times;</span>The owner personally chases every purchase, payment and delivery.</div>
                 </div>
                 <div class="compare-col compare-col--with">
-                    <div class="compare-head"><img src="assets/dotone-logo-blue.png" alt="" class="h-5 w-auto">With Dotone</div>
+                    <div class="compare-head"><img loading="lazy" decoding="async" src="assets/dotone-logo-blue.png" alt="" class="h-5 w-auto">With Dotone</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>Live stock across every store and warehouse, on one screen.</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>OEE, downtime and delays for each line, updated in real time.</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>Vision AI flags defects on the line and routes them to rework.</div>
@@ -591,7 +598,7 @@
 
                 <div class="chaos-clarity-reveal" aria-hidden="true">
                     <div class="chaos-clarity-glow" aria-hidden="true"></div>
-                    <img src="assets/dotone-wm-blue.png" alt="Dotone" class="chaos-brand-logo chaos-clarity-logo" width="220" height="66">
+                    <img loading="lazy" decoding="async" src="assets/dotone-wm-blue.png" alt="Dotone" class="chaos-brand-logo chaos-clarity-logo" width="220" height="104">
                     <h3 class="chaos-clarity-title">Endless clarity.</h3>
                 </div>
                     </div>
@@ -1159,37 +1166,37 @@
 
                 <div class="customer-stories-panel">
                     <div role="tabpanel" id="story-panel-0" aria-labelledby="story-tab-0" class="customer-story-panel is-active" data-story="0">
-                        <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Automotive manufacturing plant floor with assembly operations" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Automotive manufacturing plant floor with assembly operations" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">Auto Components Co.</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                     </div>
                     <div role="tabpanel" id="story-panel-1" aria-labelledby="story-tab-1" class="customer-story-panel" data-story="1" hidden>
-                        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" alt="Electronics manufacturing with precision assembly and quality control" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" alt="Electronics manufacturing with precision assembly and quality control" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">ElectroFab India</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                     </div>
                     <div role="tabpanel" id="story-panel-2" aria-labelledby="story-tab-2" class="customer-story-panel" data-story="2" hidden>
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2940&auto=format&fit=crop" alt="Warehouse inventory management with organised stock and logistics" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2940&auto=format&fit=crop" alt="Warehouse inventory management with organised stock and logistics" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">Precision Plastics</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                     </div>
                     <div role="tabpanel" id="story-panel-3" aria-labelledby="story-tab-3" class="customer-story-panel" data-story="3" hidden>
-                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2940&auto=format&fit=crop" alt="Multi-plant manufacturing facility with production lines" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2940&auto=format&fit=crop" alt="Multi-plant manufacturing facility with production lines" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">Bharat Forge MSME</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                     </div>
                     <div role="tabpanel" id="story-panel-4" aria-labelledby="story-tab-4" class="customer-story-panel" data-story="4" hidden>
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" alt="Engineer monitoring shopfloor IoT dashboard on tablet" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" alt="Engineer monitoring shopfloor IoT dashboard on tablet" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">SmartFab Works</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                     </div>
                     <div role="tabpanel" id="story-panel-5" aria-labelledby="story-tab-5" class="customer-story-panel" data-story="5" hidden>
-                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business team reviewing CRM and sales pipeline on screens" class="customer-story-image" loading="lazy">
+                        <img decoding="async" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Business team reviewing CRM and sales pipeline on screens" class="customer-story-image" loading="lazy">
                         <div class="customer-story-badge">Growth Metals</div>
                         <svg class="customer-story-spark customer-story-spark-1" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
                         <svg class="customer-story-spark customer-story-spark-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2z"/></svg>
@@ -1214,9 +1221,9 @@
     <section class="section-sm">
         <div class="container-custom">
             <div class="text-center space-y-4 mb-12">
-                <h2 class="text-3xl md:text-4xl font-display font-bold">Industry <span class="text-gradient">Recognition</span></h2>
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Security <span class="text-gradient">Built In</span></h2>
                 <p class="text-lg text-text-secondary">
-                    Certified and trusted by leading manufacturing organizations
+                    How Dotone protects your factory data. <a href="/security" class="text-primary-600 font-medium hover:underline">Read our security practices</a>
                 </p>
             </div>
 
@@ -1227,8 +1234,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <div class="text-sm font-semibold text-text-primary">ISO 27001</div>
-                    <div class="text-xs text-text-secondary mt-1">Security Certified</div>
+                    <div class="text-sm font-semibold text-text-primary">Encrypted data</div>
+                    <div class="text-xs text-text-secondary mt-1">TLS 1.2+ in transit, AES at rest</div>
                 </div>
 
                 <div class="card p-6 text-center hover-lift">
@@ -1237,18 +1244,18 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                         </svg>
                     </div>
-                    <div class="text-sm font-semibold text-text-primary">SOC 2 Type II</div>
-                    <div class="text-xs text-text-secondary mt-1">Compliance Verified</div>
+                    <div class="text-sm font-semibold text-text-primary">Role-based access</div>
+                    <div class="text-xs text-text-secondary mt-1">With admin audit logs</div>
                 </div>
 
                 <div class="card p-6 text-center hover-lift">
                     <div class="w-16 h-16 bg-gradient-brand rounded-lg mx-auto mb-3 flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
                         </svg>
                     </div>
-                    <div class="text-sm font-semibold text-text-primary">AI Excellence</div>
-                    <div class="text-xs text-text-secondary mt-1">Award Winner 2024</div>
+                    <div class="text-sm font-semibold text-text-primary">Automated backups</div>
+                    <div class="text-xs text-text-secondary mt-1">Encrypted and monitored</div>
                 </div>
 
                 <div class="card p-6 text-center hover-lift">
@@ -1257,8 +1264,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <div class="text-sm font-semibold text-text-primary">GDPR Compliant</div>
-                    <div class="text-xs text-text-secondary mt-1">Data Protection</div>
+                    <div class="text-sm font-semibold text-text-primary">Privacy by design</div>
+                    <div class="text-xs text-text-secondary mt-1">Indian IT Act &amp; GDPR principles</div>
                 </div>
             </div>
         </div>
@@ -1282,18 +1289,18 @@
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js"></script>
-<script src="/js/scroll-animate.js"></script>
-<script src="/js/metrics-animate.js"></script>
-<script src="/js/scroll-sequence.js"></script>
-<script src="/js/chaos-scroll.js"></script>
-<script src="/js/customer-stories.js"></script>
-<script src="/js/methodology-steps.js"></script>
-<script src="/js/workspace-cards.js"></script>
-<script src="/js/industries-scroll.js"></script>
-<script src="/js/hero-agent.js"></script>
-<script src="/js/index-visuals.js"></script>
-<script src="/js/platform-tabs.js"></script>
+<script src="/js/header-nav.js?v=20261009" defer></script>
+<script src="/js/scroll-animate.js?v=20261009" defer></script>
+<script src="/js/metrics-animate.js?v=20261009" defer></script>
+<script src="/js/scroll-sequence.js?v=20261009" defer></script>
+<script src="/js/chaos-scroll.js?v=20261009" defer></script>
+<script src="/js/customer-stories.js?v=20261009" defer></script>
+<script src="/js/methodology-steps.js?v=20261009" defer></script>
+<script src="/js/workspace-cards.js?v=20261009" defer></script>
+<script src="/js/industries-scroll.js?v=20261009" defer></script>
+<script src="/js/hero-agent.js?v=20261009" defer></script>
+<script src="/js/index-visuals.js?v=20261009" defer></script>
+<script src="/js/platform-tabs.js?v=20261009" defer></script>
     <!-- Footer -->
   
 
@@ -1373,6 +1380,5 @@
     
     
     
-    <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

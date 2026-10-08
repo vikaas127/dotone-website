@@ -13,13 +13,20 @@
     <meta property="og:title" content="Dotone Tally Connector Guide | ERP to Tally Sync">
     <meta property="og:description" content="Connect Dotone Manufacturing ERP with Tally Prime. Sync sales invoices, purchase vouchers, payments, GST, ledgers, and stock journals — without double entry.">
     <meta property="og:url" content="https://dotoneforbusiness.in/tally-connector-guide">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dotone Tally Connector Guide | ERP to Tally Sync">
     <meta name="twitter:description" content="Connect Dotone Manufacturing ERP with Tally Prime. Sync sales invoices, purchase vouchers, payments, GST, ledgers, and stock journals — without double entry.">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
 </head>
 
 <body class="bg-background">
@@ -394,8 +401,7 @@
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/scroll-animate.js" defer></script>
-<script src="/js/tally-guide.js" defer></script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+<script src="/js/scroll-animate.js?v=20261009" defer></script>
+<script src="/js/tally-guide.js?v=20261009" defer></script>
 </body>
 </html>

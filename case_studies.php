@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Real manufacturer transformations with Dotone Vision AI - Explore quantified case studies, efficiency improvements, and ROI success stories from industry leaders">
     <title>Case Studies - Manufacturing Success Stories | Dotone Vision Platform</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/case_studies">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
       <meta property="og:title" content="Case Studies - Manufacturing Success Stories | Dotone Vision Platform">
       <meta property="og:description" content="Real manufacturer transformations with Dotone Vision AI - Explore quantified case studies, efficiency improvements, and ROI success stories from industry leaders">
       <meta property="og:url" content="https://dotoneforbusiness.in/case_studies">
-      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
       <meta property="og:locale" content="en_IN">
-      <meta name="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Case Studies - Manufacturing Success Stories | Dotone Vision Platform">
       <meta name="twitter:description" content="Real manufacturer transformations with Dotone Vision AI - Explore quantified case studies, efficiency improvements, and ROI success stories from industry leaders">
+      <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -137,7 +144,7 @@
                 <div class="grid lg:grid-cols-2 gap-0">
                     <!-- Image -->
                     <div class="relative h-64 lg:h-auto overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                              alt="Modern automotive manufacturing plant floor showing assembly line with robotic systems and AI-powered quality control stations monitoring production efficiency" 
                              class="w-full h-full object-cover"
                              loading="eager"
@@ -224,7 +231,7 @@
                 <!-- Case Study Card 1 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="automotive" data-size="large" data-solution="vision-ai">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Automotive assembly line with workers and robotic arms performing precision manufacturing tasks under AI-powered monitoring systems" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -261,7 +268,7 @@
                 <!-- Case Study Card 2 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="electronics" data-size="medium" data-solution="full-suite">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" 
                              alt="Electronics manufacturing facility with precision assembly equipment and quality control stations performing component testing and inspection" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -298,7 +305,7 @@
                 <!-- Case Study Card 3 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="food" data-size="large" data-solution="vision-ai">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/4481258/pexels-photo-4481258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/4481258/pexels-photo-4481258.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Food processing plant with automated packaging lines and quality inspection systems monitoring production standards and safety compliance" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -335,7 +342,7 @@
                 <!-- Case Study Card 4 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="pharmaceutical" data-size="large" data-solution="full-suite">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2940&auto=format&fit=crop" 
                              alt="Pharmaceutical manufacturing cleanroom with automated production lines and precision quality control systems ensuring compliance and safety standards" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -372,7 +379,7 @@
                 <!-- Case Study Card 5 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="textile" data-size="medium" data-solution="vision-ai">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3738386/pexels-photo-3738386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/3738386/pexels-photo-3738386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Textile manufacturing facility with automated weaving machines and fabric inspection systems monitoring quality and production efficiency" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -409,7 +416,7 @@
                 <!-- Case Study Card 6 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="aerospace" data-size="large" data-solution="full-suite">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2940&auto=format&fit=crop" 
                              alt="Aerospace manufacturing facility with precision machining equipment and quality assurance systems for aircraft component production" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -446,7 +453,7 @@
                 <!-- Case Study Card 7 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="automotive" data-size="medium" data-solution="ai-agent">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/190574/pexels-photo-190574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Automotive parts manufacturing with robotic assembly systems and AI-powered workflow optimization monitoring production metrics" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -483,7 +490,7 @@
                 <!-- Case Study Card 8 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="electronics" data-size="small" data-solution="invoice-scanner">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Electronics component manufacturing with precision assembly equipment and automated inventory management systems" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -520,7 +527,7 @@
                 <!-- Case Study Card 9 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="food" data-size="medium" data-solution="salesman-tracker">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Food distribution center with warehouse management systems and logistics tracking for efficient supply chain operations" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -557,7 +564,7 @@
                 <!-- Case Study Card 10 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="pharmaceutical" data-size="medium" data-solution="vision-ai">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Pharmaceutical packaging line with automated quality inspection and serialization systems ensuring product safety and compliance" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -594,7 +601,7 @@
                 <!-- Case Study Card 11 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="textile" data-size="small" data-solution="full-suite">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/6169668/pexels-photo-6169668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Textile dyeing facility with automated color matching systems and quality control monitoring for consistent fabric production" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -631,7 +638,7 @@
                 <!-- Case Study Card 12 -->
                 <div class="card-elevated overflow-hidden hover-lift group case-study-card" data-industry="aerospace" data-size="medium" data-solution="vision-ai">
                     <div class="relative h-48 overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Aerospace precision machining center with CNC equipment and dimensional inspection systems for aircraft component manufacturing" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -704,7 +711,7 @@
                 <!-- Video Testimonial 1 -->
                 <div class="card-elevated overflow-hidden">
                     <div class="relative aspect-video bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2940&auto=format&fit=crop" 
                              alt="Michael Chen, CEO of TechManufacturing Inc., discussing operational improvements and ROI achievements in video testimonial" 
                              class="w-full h-full object-cover"
                              loading="lazy"
@@ -719,7 +726,7 @@
                     </div>
                     <div class="p-6">
                         <div class="flex items-start space-x-4">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2787&auto=format&fit=crop" 
+                            <img decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2787&auto=format&fit=crop" 
                                  alt="Portrait of Michael Chen, CEO wearing business attire" 
                                  class="w-12 h-12 rounded-full object-cover border-2 border-primary-500"
                                  loading="lazy"
@@ -738,7 +745,7 @@
                 <!-- Video Testimonial 2 -->
                 <div class="card-elevated overflow-hidden">
                     <div class="relative aspect-video bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2861&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2861&auto=format&fit=crop" 
                              alt="Sarah Martinez, Operations Director discussing efficiency improvements and worker productivity gains in video testimonial" 
                              class="w-full h-full object-cover"
                              loading="lazy"
@@ -753,7 +760,7 @@
                     </div>
                     <div class="p-6">
                         <div class="flex items-start space-x-4">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2787&auto=format&fit=crop" 
+                            <img decoding="async" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2787&auto=format&fit=crop" 
                                  alt="Portrait of Sarah Martinez, Operations Director wearing professional attire" 
                                  class="w-12 h-12 rounded-full object-cover border-2 border-primary-500"
                                  loading="lazy"
@@ -1224,6 +1231,5 @@
         // Initialize
         calculateCaseStudyROI();
     </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

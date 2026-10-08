@@ -12,13 +12,20 @@
     <meta property="og:title" content="Pricing | Dotone Business Platform">
     <meta property="og:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
     <meta property="og:url" content="https://dotoneforbusiness.in/pricing">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pricing | Dotone Business Platform">
     <meta name="twitter:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
 </head>
 <body class="bg-background">
 
@@ -45,8 +52,8 @@
                 <h2 class="text-xl font-display font-semibold mb-1">Starter</h2>
                 <p class="text-sm text-text-secondary mb-6">For small teams getting started</p>
                 <div class="mb-6">
-                    <span class="text-4xl font-display font-bold">Custom</span>
-                    <span class="text-text-secondary text-sm block mt-1">Per user / month · billed annually</span>
+                    <span class="text-3xl font-display font-semibold">Per user</span>
+                    <span class="text-text-secondary text-sm block mt-1">Monthly price, billed annually. Ask us for a quote.</span>
                 </div>
                 <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
                     <li class="flex gap-2"><span class="text-success-500">✓</span> Up to 50 employees</li>
@@ -64,8 +71,8 @@
                 <h2 class="text-xl font-display font-semibold mb-1">Professional</h2>
                 <p class="text-sm text-text-secondary mb-6">For growing manufacturers</p>
                 <div class="mb-6">
-                    <span class="text-4xl font-display font-bold">Custom</span>
-                    <span class="text-text-secondary text-sm block mt-1">Per plant · includes platform bundle</span>
+                    <span class="text-3xl font-display font-semibold">Per plant</span>
+                    <span class="text-text-secondary text-sm block mt-1">Includes the platform bundle. Ask us for a quote.</span>
                 </div>
                 <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
                     <li class="flex gap-2"><span class="text-success-500">✓</span> Up to 500 employees</li>
@@ -82,8 +89,8 @@
                 <h2 class="text-xl font-display font-semibold mb-1">Enterprise</h2>
                 <p class="text-sm text-text-secondary mb-6">For multi-plant &amp; large operations</p>
                 <div class="mb-6">
-                    <span class="text-4xl font-display font-bold">Talk to Us</span>
-                    <span class="text-text-secondary text-sm block mt-1">Volume pricing · SLA included</span>
+                    <span class="text-3xl font-display font-semibold">Custom quote</span>
+                    <span class="text-text-secondary text-sm block mt-1">Volume pricing with an SLA included.</span>
                 </div>
                 <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
                     <li class="flex gap-2"><span class="text-success-500">✓</span> Unlimited users &amp; plants</li>
@@ -223,6 +230,5 @@ function toggleFaq(index) {
     icon.style.transform = faqContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
 }
 </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

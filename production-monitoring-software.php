@@ -5,8 +5,11 @@
     <title>Production Monitoring Software | Real-Time Factory Monitoring by Dotone</title>
     <meta name="description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/production-monitoring-software">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
     <meta property="og:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
     <meta property="og:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
     <meta property="og:url" content="https://dotoneforbusiness.in/production-monitoring-software">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
     <meta name="twitter:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -40,92 +47,6 @@
         </div>
     </div>
 </section>
- <section class="section-sm bg-surface" id="metrics-section">
-    <div class="container-custom">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric1" data-type="plus" data-target="500">0+</div>
-                <div class="metric-label">Manufacturing Plants</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric2" data-type="percent" data-target="35">0%</div>
-                <div class="metric-label">Average Efficiency Gain</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric3" data-type="currency" data-target="2.4">₹0 Cr</div>
-                <div class="metric-label">Average Annual Savings</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric4" data-type="percent" data-target="99.8">0%</div>
-                <div class="metric-label">Customer Satisfaction</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<script>
-function animateMetric(el, duration = 1500) {
-    const target = parseFloat(el.dataset.target);
-    const type = el.dataset.type;
-
-    let start = 0;
-    const startTime = performance.now();
-
-    function format(value) {
-        switch (type) {
-            case "plus":
-                return `${Math.round(value)}+`;
-            case "percent":
-                return `${value.toFixed(Number.isInteger(target) ? 0 : 1)}%`;
-            case "currency":
-                return `₹${value.toFixed(1)} Cr`;
-            default:
-                return value;
-        }
-    }
-
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const value = start + progress * (target - start);
-
-        el.textContent = format(value);
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            el.textContent = format(target);
-        }
-    }
-
-    requestAnimationFrame(update);
-}
-
-// Run animation when section is visible
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                document.querySelectorAll(".metric[data-target]").forEach(el => {
-                    if (!el.classList.contains("animated")) {
-                        animateMetric(el);
-                        el.classList.add("animated");
-                    }
-                });
-                observer.disconnect();
-            }
-        });
-    },
-    { threshold: 0.4 }
-);
-
-observer.observe(document.getElementById("metrics-section"));
-</script>
 <!-- WHAT IS -->
 <section class="section bg-surface">
     <div class="container-custom">
@@ -574,108 +495,6 @@ observer.observe(document.getElementById("metrics-section"));
     </section>
 
     <!-- FAQ Section -->
-    <section class="section">
-        <div class="container-custom">
-            <div class="max-w-3xl mx-auto">
-                <div class="text-center space-y-4 mb-12">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold">Frequently Asked <span class="text-gradient">Questions</span></h2>
-                    <p class="text-xl text-text-secondary">
-                        Common questions about our demos and trials
-                    </p>
-                </div>
-
-                <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">How long does the interactive demo take?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-1" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">The self-guided interactive demos can be completed in 10-15 minutes each. You can explore at your own pace and revisit any section. For a comprehensive experience, we recommend trying all four demo scenarios, which takes about 45 minutes total.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 2 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">What's included in the 14-day free trial?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-2" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">The free trial includes full access to all Dotone features: Vision AI platform, all five AI tools (AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, Lead Finder), unlimited users, dedicated onboarding support, and technical documentation. No credit card is required to start.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 3 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">Can I schedule a demo for my entire team?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-3" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">Absolutely! We offer group demos for teams of any size. When scheduling your guided demo, simply indicate the number of attendees and their roles. We'll customize the presentation to address the specific concerns of operations managers, IT directors, executives, and other stakeholders.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 4 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">Do you offer on-site demonstrations?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-4" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">Yes, for qualified opportunities, we can arrange on-site demonstrations at your manufacturing facility. This allows us to assess your specific environment, discuss integration with your existing systems, and provide a customized proof of concept. Contact our sales team to discuss on-site demo availability.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 5 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(5)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">What happens after the trial period ends?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-5" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">At the end of your 14-day trial, you can choose to subscribe to a paid plan that fits your needs. If you decide not to continue, your trial will simply expire with no charges. All your data will be securely stored for 30 days in case you decide to return. We'll never automatically charge you without explicit consent.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 6 -->
-                    <div class="card">
-                        <button onclick="toggleFaq(6)" class="w-full p-6 text-left flex items-center justify-between">
-                            <span class="font-semibold text-text-primary">Can I test Dotone with my actual CCTV cameras?</span>
-                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </button>
-                        <div id="faq-6" class="hidden px-6 pb-6">
-                            <p class="text-text-secondary">Yes! During your trial or guided demo, we can connect to your existing CCTV infrastructure (with proper security protocols). This allows you to see Dotone's Vision AI working with your actual manufacturing floor footage. Our team will work with your IT department to ensure secure, compliant integration during the testing phase.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <p class="text-text-secondary mb-4">Still have questions?</p>
-                    <a href="/contact" class="btn-primary">
-                        Contact Our Team
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 <!-- CTA -->
 <!-- Production Monitoring CTA -->
 <section class="section">
@@ -717,6 +536,5 @@ observer.observe(document.getElementById("metrics-section"));
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

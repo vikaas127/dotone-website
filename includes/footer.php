@@ -4,7 +4,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
             <div class="space-y-4">
                 <a href="/" class="flex items-center">
-                    <img src="assets/dotone-wm-blue.png" alt="Dotone Logo" class="h-14 w-auto object-contain" width="168" height="50">
+                    <img loading="lazy" decoding="async" src="assets/dotone-wm-blue.png" alt="Dotone Logo" class="h-14 w-auto object-contain" width="119" height="56">
                 </a>
                 <p class="text-text-secondary text-sm leading-relaxed max-w-xs">
                     Transforming manufacturing operations with AI-powered vision intelligence and comprehensive ERP solutions.
@@ -77,4 +77,3 @@
     </div>
 </footer>
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

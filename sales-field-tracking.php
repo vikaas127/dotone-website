@@ -5,8 +5,11 @@
     <title>Sales Field Tracking Software | Real-Time Sales Team Monitoring by Dotone</title>
     <meta name="description" content="Dotone Sales Field Tracking software helps businesses track field sales teams in real-time with GPS, attendance, route tracking, lead activity, and performance analytics.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/sales-field-tracking">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
     <meta property="og:title" content="Sales Field Tracking Software | Real-Time Sales Team Monitoring by Dotone">
     <meta property="og:description" content="Dotone Sales Field Tracking software helps businesses track field sales teams in real-time with GPS, attendance, route tracking, lead activity, and performance analytics.">
     <meta property="og:url" content="https://dotoneforbusiness.in/sales-field-tracking">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sales Field Tracking Software | Real-Time Sales Team Monitoring by Dotone">
     <meta name="twitter:description" content="Dotone Sales Field Tracking software helps businesses track field sales teams in real-time with GPS, attendance, route tracking, lead activity, and performance analytics.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -126,11 +133,11 @@
                 <!-- STORE BUTTONS -->
                 <div class="flex flex-wrap gap-4 pt-4">
                     <a href="https://play.google.com/store/apps/details?id=com.techdotbit.dotone" class="store-btn">
-                        <img src="assets/play-store.png" alt="Download on Google Play">
+                        <img src="assets/play-store.webp" alt="Download on Google Play" width="480" height="157" loading="lazy" decoding="async">
                     </a>
 
                     <a href="https://apps.apple.com/in/app/com-techdotbit-dotone/id545519333" class="store-btn">
-                        <img src="assets/app-store.png" alt="Download on App Store">
+                        <img src="assets/app-store.webp" alt="Download on App Store" width="480" height="157" loading="lazy" decoding="async">
                     </a>
                 </div>
 
@@ -141,8 +148,8 @@
 
             <!-- RIGHT VISUAL -->
            <div class="relative">
-    <img src="assets/sales_tracking_dotone.png"
-         alt="Sales Field Tracking Mobile App"
+    <img loading="lazy" decoding="async" src="assets/sales-tracking-app.webp"
+         alt="Sales Field Tracking Mobile App" width="1200" height="800" fetchpriority="high"
          class="w-full max-w-lg md:max-w-xl lg:max-w-2xl mx-auto drop-shadow-2xl">
 </div>
 
@@ -533,6 +540,5 @@ function calculateSalesROI() {
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

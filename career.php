@@ -6,8 +6,11 @@
   <title>Careers at Dotone | Build the Future of Manufacturing AI</title>
   <meta name="description" content="Join Dotone and build next-generation Manufacturing AI & Vision AI products. Explore open roles in engineering, AI, product, and operations.">
 
-  <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
 
     <link rel="canonical" href="https://dotoneforbusiness.in/career">
     <link rel="icon" href="/public/favicon.ico">
@@ -16,11 +19,15 @@
     <meta property="og:title" content="Careers at Dotone | Build the Future of Manufacturing AI">
     <meta property="og:description" content="Join Dotone and build next-generation Manufacturing AI &amp; Vision AI products. Explore open roles in engineering, AI, product, and operations.">
     <meta property="og:url" content="https://dotoneforbusiness.in/career">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Careers at Dotone | Build the Future of Manufacturing AI">
     <meta name="twitter:description" content="Join Dotone and build next-generation Manufacturing AI &amp; Vision AI products. Explore open roles in engineering, AI, product, and operations.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -473,6 +480,5 @@ document.querySelectorAll('.apply-btn').forEach(btn => {
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

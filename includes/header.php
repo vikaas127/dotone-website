@@ -2,7 +2,7 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="nav-bar-row relative flex items-center justify-between h-16 w-full min-w-0">
             <a href="/" class="nav-logo flex items-center flex-shrink-0 z-10">
-                <img src="assets/dotone-wm-blue.png" alt="Dotone" class="nav-logo-img h-12 w-auto object-contain" width="160" height="48">
+                <img src="assets/dotone-wm-blue.png" alt="Dotone" class="nav-logo-img h-12 w-auto object-contain" width="102" height="48">
             </a>
 
             <div class="nav-links hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
@@ -163,4 +163,3 @@
         </div>
     </nav></header>
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

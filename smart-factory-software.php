@@ -5,8 +5,11 @@
   <title>Smart Factory Software | Industry 4.0 Manufacturing – Dotone</title>
   <meta name="description" content="Dotone Smart Factory Software unifies AI, Vision AI, ERP, and automation into one Industry 4.0 platform for real-time factory intelligence.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/smart-factory-software">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
     <meta property="og:title" content="Smart Factory Software | Industry 4.0 Manufacturing – Dotone">
     <meta property="og:description" content="Dotone Smart Factory Software unifies AI, Vision AI, ERP, and automation into one Industry 4.0 platform for real-time factory intelligence.">
     <meta property="og:url" content="https://dotoneforbusiness.in/smart-factory-software">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Smart Factory Software | Industry 4.0 Manufacturing – Dotone">
     <meta name="twitter:description" content="Dotone Smart Factory Software unifies AI, Vision AI, ERP, and automation into one Industry 4.0 platform for real-time factory intelligence.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -92,7 +99,7 @@
                 <!-- Tool 1: Vision AI Platform -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="operations automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                              alt="Manufacturing floor with AI-powered CCTV cameras monitoring worker efficiency and production line operations in real-time" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -158,7 +165,7 @@
                 <!-- Tool 2: AI Agent -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="operations automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2906&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2906&auto=format&fit=crop" 
                              alt="AI-powered virtual assistant interface displaying manufacturing operations dashboard with intelligent decision support and automated workflow management" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -223,7 +230,7 @@
                 <!-- Tool 3: Salesman Tracker -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales operations">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" 
                              alt="GPS tracking dashboard showing field sales team locations, routes, and performance metrics with real-time updates and analytics" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -289,7 +296,7 @@
                 <!-- Tool 4: Invoice Scanner -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="automation operations">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2940&auto=format&fit=crop" 
                              alt="Automated invoice processing system with OCR technology scanning and digitizing paper invoices for ERP integration" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -354,7 +361,7 @@
                 <!-- Tool 5: Business Card Scanner -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop" 
                              alt="Business card scanning application with OCR technology digitizing contact information for CRM integration and lead management" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -419,7 +426,7 @@
                 <!-- Tool 6: Lead Finder -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop" 
                              alt="AI-powered lead generation dashboard showing prospect identification, qualification scores, and automated outreach campaigns" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -620,7 +627,7 @@
 
                     <div class="relative">
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                            <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                                  alt="Modern automotive assembly line with robotic arms and workers collaborating on vehicle production with AI-powered quality control systems monitoring each station" 
                                  class="w-full h-auto object-cover"
                                  loading="lazy"
@@ -742,7 +749,7 @@
 
                     <div class="relative">
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-                            <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" 
+                            <img decoding="async" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop" 
                                  alt="Electronics manufacturing facility showing PCB assembly line with precision component placement machines and AI-powered quality inspection systems examining circuit boards" 
                                  class="w-full h-auto object-cover"
                                  loading="lazy"
@@ -864,7 +871,7 @@
 
                     <div class="relative">
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-                            <img src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                            <img decoding="async" src="https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                                  alt="Food processing facility with automated packaging lines, workers in hygiene gear, and AI-powered quality inspection systems monitoring product quality and safety compliance" 
                                  class="w-full h-auto object-cover"
                                  loading="lazy"
@@ -986,7 +993,7 @@
 
                     <div class="relative">
                         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-border">
-                            <img src="https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                            <img decoding="async" src="https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                                  alt="Pharmaceutical manufacturing cleanroom with workers in full protective gear operating tablet production equipment with AI-powered quality control and GMP compliance monitoring systems" 
                                  class="w-full h-auto object-cover"
                                  loading="lazy"
@@ -1357,6 +1364,5 @@
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Experience Dotone's AI-powered manufacturing intelligence platform through interactive demos. Test Vision AI, worker efficiency tracking, and comprehensive ERP tools in simulated environments.">
     <title>Interactive Demo Center - Dotone Vision Platform</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/demo_center">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
       <meta property="og:title" content="Interactive Demo Center - Dotone Vision Platform">
       <meta property="og:description" content="Experience Dotone&#x27;s AI-powered manufacturing intelligence platform through interactive demos. Test Vision AI, worker efficiency tracking, and comprehensive ERP tools in simulated environments.">
       <meta property="og:url" content="https://dotoneforbusiness.in/demo_center">
-      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
       <meta property="og:locale" content="en_IN">
-      <meta name="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Interactive Demo Center - Dotone Vision Platform">
       <meta name="twitter:description" content="Experience Dotone&#x27;s AI-powered manufacturing intelligence platform through interactive demos. Test Vision AI, worker efficiency tracking, and comprehensive ERP tools in simulated environments.">
+      <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -188,7 +195,7 @@
                     <div class="relative">
                         <div class="card-elevated overflow-hidden rounded-2xl">
                             <div class="relative aspect-video bg-slate-900">
-                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                                <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                                      alt="Manufacturing floor with AI-powered camera system showing real-time worker tracking overlays and efficiency heat maps" 
                                      class="w-full h-full object-cover"
                                      loading="lazy"
@@ -745,7 +752,7 @@
                     <div class="relative">
                         <div class="card-elevated overflow-hidden rounded-2xl">
                             <div class="relative aspect-video bg-slate-900">
-                                <img src="https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                <img decoding="async" src="https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                                      alt="Quality control inspection station with AI-powered defect detection system analyzing manufactured components on conveyor belt" 
                                      class="w-full h-full object-cover"
                                      loading="lazy"
@@ -1079,7 +1086,7 @@
                         <!-- Testimonial -->
                         <div class="card p-6 bg-primary-50 border-primary-200">
                             <div class="flex items-start space-x-4">
-                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" 
+                                <img decoding="async" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" 
                                      alt="Portrait of David Martinez, Operations Director at TechManufacturing, wearing business attire" 
                                      class="w-12 h-12 rounded-full object-cover"
                                      loading="lazy"
@@ -1503,6 +1510,5 @@
             }
         });
     </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

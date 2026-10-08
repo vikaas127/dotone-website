@@ -5,8 +5,11 @@
     <title>Industry 4.0 Solutions | Smart Manufacturing by Dotone</title>
     <meta name="description" content="Dotone Industry 4.0 Solutions help manufacturers digitize, automate, and optimize factories using AI, Vision AI, ERP, IoT, and real-time production intelligence.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/industry-4-0-solutions">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
     <meta property="og:title" content="Industry 4.0 Solutions | Smart Manufacturing by Dotone">
     <meta property="og:description" content="Dotone Industry 4.0 Solutions help manufacturers digitize, automate, and optimize factories using AI, Vision AI, ERP, IoT, and real-time production intelligence.">
     <meta property="og:url" content="https://dotoneforbusiness.in/industry-4-0-solutions">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Industry 4.0 Solutions | Smart Manufacturing by Dotone">
     <meta name="twitter:description" content="Dotone Industry 4.0 Solutions help manufacturers digitize, automate, and optimize factories using AI, Vision AI, ERP, IoT, and real-time production intelligence.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -72,98 +79,12 @@
                         <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>ISO 27001 certified</span>
+                        <span>Encrypted, role-based access</span>
                     </div>
                 </div>
         </div>
     </div>
 </section>
- <section class="section-sm bg-surface" id="metrics-section">
-    <div class="container-custom">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric1" data-type="plus" data-target="500">0+</div>
-                <div class="metric-label">Manufacturing Plants</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric2" data-type="percent" data-target="35">0%</div>
-                <div class="metric-label">Average Efficiency Gain</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric3" data-type="currency" data-target="2.4">₹0 Cr</div>
-                <div class="metric-label">Average Annual Savings</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric4" data-type="percent" data-target="99.8">0%</div>
-                <div class="metric-label">Customer Satisfaction</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<script>
-function animateMetric(el, duration = 1500) {
-    const target = parseFloat(el.dataset.target);
-    const type = el.dataset.type;
-
-    let start = 0;
-    const startTime = performance.now();
-
-    function format(value) {
-        switch (type) {
-            case "plus":
-                return `${Math.round(value)}+`;
-            case "percent":
-                return `${value.toFixed(Number.isInteger(target) ? 0 : 1)}%`;
-            case "currency":
-                return `₹${value.toFixed(1)} Cr`;
-            default:
-                return value;
-        }
-    }
-
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const value = start + progress * (target - start);
-
-        el.textContent = format(value);
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            el.textContent = format(target);
-        }
-    }
-
-    requestAnimationFrame(update);
-}
-
-// Run animation when section is visible
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                document.querySelectorAll(".metric[data-target]").forEach(el => {
-                    if (!el.classList.contains("animated")) {
-                        animateMetric(el);
-                        el.classList.add("animated");
-                    }
-                });
-                observer.disconnect();
-            }
-        });
-    },
-    { threshold: 0.4 }
-);
-
-observer.observe(document.getElementById("metrics-section"));
-</script>
 <!-- WHAT IS INDUSTRY 4.0 -->
 <section class="section bg-surface">
     <div class="container-custom">
@@ -813,6 +734,5 @@ function calculateIndustryROI() {
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

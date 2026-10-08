@@ -8,8 +8,11 @@
         content="Dotone CRM & Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP & AI insights for higher conversions.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
     <link rel="canonical" href="https://dotoneforbusiness.in/crm">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
@@ -17,11 +20,15 @@
     <meta property="og:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
     <meta property="og:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
     <meta property="og:url" content="https://dotoneforbusiness.in/crm">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
     <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
     <meta name="twitter:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
+    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -827,6 +834,5 @@ function calculateCrmROI() {
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
 
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

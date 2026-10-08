@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dotone Vision AI Platform - Transform your existing CCTV infrastructure into an intelligent manufacturing monitoring system with real-time worker efficiency tracking and predictive analytics">
     <title>Vision AI Platform - CCTV Integration | Dotone Business Solutions</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/vision_ai_platform">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
       <meta property="og:title" content="Vision AI Platform - CCTV Integration | Dotone Business Solutions">
       <meta property="og:description" content="Dotone Vision AI Platform - Transform your existing CCTV infrastructure into an intelligent manufacturing monitoring system with real-time worker efficiency tracking and predictive analytics">
       <meta property="og:url" content="https://dotoneforbusiness.in/vision_ai_platform">
-      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
       <meta property="og:locale" content="en_IN">
-      <meta name="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Vision AI Platform - CCTV Integration | Dotone Business Solutions">
       <meta name="twitter:description" content="Dotone Vision AI Platform - Transform your existing CCTV infrastructure into an intelligent manufacturing monitoring system with real-time worker efficiency tracking and predictive analytics">
+      <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -78,98 +85,12 @@
                         <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span>ISO 27001 certified</span>
+                        <span>Encrypted, role-based access</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- <section class="section-sm bg-surface" id="metrics-section">
-    <div class="container-custom">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric1" data-type="plus" data-target="500">0+</div>
-                <div class="metric-label">Manufacturing Plants</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric2" data-type="percent" data-target="35">0%</div>
-                <div class="metric-label">Average Efficiency Gain</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric3" data-type="currency" data-target="2.4">₹0 Cr</div>
-                <div class="metric-label">Average Annual Savings</div>
-            </div>
-
-            <div class="text-center space-y-2">
-                <div class="metric" id="metric4" data-type="percent" data-target="99.8">0%</div>
-                <div class="metric-label">Customer Satisfaction</div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<script>
-function animateMetric(el, duration = 1500) {
-    const target = parseFloat(el.dataset.target);
-    const type = el.dataset.type;
-
-    let start = 0;
-    const startTime = performance.now();
-
-    function format(value) {
-        switch (type) {
-            case "plus":
-                return `${Math.round(value)}+`;
-            case "percent":
-                return `${value.toFixed(Number.isInteger(target) ? 0 : 1)}%`;
-            case "currency":
-                return `₹${value.toFixed(1)} Cr`;
-            default:
-                return value;
-        }
-    }
-
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const value = start + progress * (target - start);
-
-        el.textContent = format(value);
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            el.textContent = format(target);
-        }
-    }
-
-    requestAnimationFrame(update);
-}
-
-// Run animation when section is visible
-const observer = new IntersectionObserver(
-    entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                document.querySelectorAll(".metric[data-target]").forEach(el => {
-                    if (!el.classList.contains("animated")) {
-                        animateMetric(el);
-                        el.classList.add("animated");
-                    }
-                });
-                observer.disconnect();
-            }
-        });
-    },
-    { threshold: 0.4 }
-);
-
-observer.observe(document.getElementById("metrics-section"));
-</script>
     <!-- Live CCTV Simulation Section -->
     <section class="section bg-surface">
         <div class="container-custom">
@@ -184,7 +105,7 @@ observer.observe(document.getElementById("metrics-section"));
                 <div class="card-elevated overflow-hidden">
                     <!-- Video Container -->
                     <div class="relative aspect-video bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                              alt="Live manufacturing floor CCTV feed showing workers on assembly line with AI overlay annotations tracking worker movements, efficiency metrics, and safety compliance indicators in real-time" 
                              class="w-full h-full object-cover"
                              loading="eager"
@@ -386,7 +307,7 @@ observer.observe(document.getElementById("metrics-section"));
                 <!-- Visual Representation -->
                 <div class="relative">
                     <div class="card-elevated overflow-hidden">
-                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                        <img decoding="async" src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
                              alt="Manufacturing operations manager reviewing real-time Vision AI analytics dashboard showing worker efficiency metrics, safety compliance scores, and production line performance indicators on multiple monitors" 
                              class="w-full h-auto"
                              loading="lazy"
@@ -811,7 +732,7 @@ observer.observe(document.getElementById("metrics-section"));
                             </div>
                             <div>
                                 <h3 class="text-lg font-display font-semibold mb-2">Privacy Compliance</h3>
-                                <p class="text-text-secondary">GDPR, CCPA, and industry-specific privacy regulation compliance with automated data retention policies.</p>
+                                <p class="text-text-secondary">Designed around Indian IT Act and GDPR privacy principles, with configurable data retention policies.</p>
                             </div>
                         </div>
                     </div>
@@ -819,7 +740,7 @@ observer.observe(document.getElementById("metrics-section"));
                     <!-- Compliance Badges -->
                     <div class="space-y-6">
                         <div class="card-elevated p-8">
-                            <h3 class="text-xl font-display font-semibold mb-6 text-center">Security Certifications</h3>
+                            <h3 class="text-xl font-display font-semibold mb-6 text-center">Security Practices</h3>
                             <div class="grid grid-cols-2 gap-6">
                                 <div class="text-center">
                                     <div class="w-20 h-20 bg-gradient-brand rounded-lg mx-auto mb-3 flex items-center justify-center">
@@ -827,8 +748,8 @@ observer.observe(document.getElementById("metrics-section"));
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                         </svg>
                                     </div>
-                                    <div class="font-semibold text-text-primary">ISO 27001</div>
-                                    <div class="text-xs text-text-secondary mt-1">Information Security</div>
+                                    <div class="font-semibold text-text-primary">Encrypted data</div>
+                                    <div class="text-xs text-text-secondary mt-1">TLS 1.2+ and AES</div>
                                 </div>
 
                                 <div class="text-center">
@@ -837,8 +758,8 @@ observer.observe(document.getElementById("metrics-section"));
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                                         </svg>
                                     </div>
-                                    <div class="font-semibold text-text-primary">SOC 2 Type II</div>
-                                    <div class="text-xs text-text-secondary mt-1">Security & Availability</div>
+                                    <div class="font-semibold text-text-primary">Role-based access</div>
+                                    <div class="text-xs text-text-secondary mt-1">With audit logs</div>
                                 </div>
 
                                 <div class="text-center">
@@ -847,8 +768,8 @@ observer.observe(document.getElementById("metrics-section"));
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/>
                                         </svg>
                                     </div>
-                                    <div class="font-semibold text-text-primary">GDPR</div>
-                                    <div class="text-xs text-text-secondary mt-1">Data Protection</div>
+                                    <div class="font-semibold text-text-primary">Privacy by design</div>
+                                    <div class="text-xs text-text-secondary mt-1">IT Act &amp; GDPR principles</div>
                                 </div>
 
                                 <div class="text-center">
@@ -857,8 +778,8 @@ observer.observe(document.getElementById("metrics-section"));
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                         </svg>
                                     </div>
-                                    <div class="font-semibold text-text-primary">HIPAA</div>
-                                    <div class="text-xs text-text-secondary mt-1">Healthcare Compliance</div>
+                                    <div class="font-semibold text-text-primary">Automated backups</div>
+                                    <div class="text-xs text-text-secondary mt-1">Encrypted and monitored</div>
                                 </div>
                             </div>
                         </div>
@@ -1236,6 +1157,5 @@ observer.observe(document.getElementById("metrics-section"));
             revealObserver.observe(el);
         });
     </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

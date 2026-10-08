@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comprehensive AI Tools Suite for Manufacturing - Vision AI, AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, and Lead Finder">
     <title>AI Tools Suite - Dotone Vision Platform</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="/js/header-nav.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <script src="/js/header-nav.js?v=20261009" defer></script>
       <link rel="canonical" href="https://dotoneforbusiness.in/aitools">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -14,11 +17,15 @@
       <meta property="og:title" content="AI Tools Suite - Dotone Vision Platform">
       <meta property="og:description" content="Comprehensive AI Tools Suite for Manufacturing - Vision AI, AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, and Lead Finder">
       <meta property="og:url" content="https://dotoneforbusiness.in/aitools">
-      <meta property="og:image" content="https://dotoneforbusiness.in/assets/dotone-logo-blue.png">
+      <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+      <meta property="og:image:width" content="1200">
+      <meta property="og:image:height" content="630">
+      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
       <meta property="og:locale" content="en_IN">
-      <meta name="twitter:card" content="summary">
+      <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="AI Tools Suite - Dotone Vision Platform">
       <meta name="twitter:description" content="Comprehensive AI Tools Suite for Manufacturing - Vision AI, AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, and Lead Finder">
+      <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -95,7 +102,7 @@
                 <!-- Tool 1: Vision AI Platform -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="operations automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
                              alt="Manufacturing floor with AI-powered CCTV cameras monitoring worker efficiency and production line operations in real-time" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -161,7 +168,7 @@
                 <!-- Tool 2: AI Agent -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="operations automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2906&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2906&auto=format&fit=crop" 
                              alt="AI-powered virtual assistant interface displaying manufacturing operations dashboard with intelligent decision support and automated workflow management" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -226,7 +233,7 @@
                 <!-- Tool 3: Salesman Tracker -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales operations">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" 
                              alt="GPS tracking dashboard showing field sales team locations, routes, and performance metrics with real-time updates and analytics" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -292,7 +299,7 @@
                 <!-- Tool 4: Invoice Scanner -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="automation operations">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2940&auto=format&fit=crop" 
                              alt="Automated invoice processing system with OCR technology scanning and digitizing paper invoices for ERP integration" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -357,7 +364,7 @@
                 <!-- Tool 5: Business Card Scanner -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2940&auto=format&fit=crop" 
                              alt="Business card scanning application with OCR technology digitizing contact information for CRM integration and lead management" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -422,7 +429,7 @@
                 <!-- Tool 6: Lead Finder -->
                 <div class="tool-card card-elevated overflow-hidden group hover-lift" data-category="sales automation">
                     <div class="relative h-64 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2815&auto=format&fit=crop" 
                              alt="AI-powered lead generation dashboard showing prospect identification, qualification scores, and automated outreach campaigns" 
                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                              loading="lazy"
@@ -917,7 +924,7 @@
                     </div>
                     <p class="text-text-secondary italic">"The integration between Vision AI and AI Agent has transformed our operations. We're seeing efficiency gains we never thought possible. The ROI was evident within the first quarter."</p>
                     <div class="flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" 
                              alt="Portrait of James Rodriguez, Operations Director at AutoTech Manufacturing, wearing business attire" 
                              class="w-12 h-12 rounded-full object-cover"
                              loading="lazy"
@@ -950,7 +957,7 @@
                     </div>
                     <p class="text-text-secondary italic">"Invoice Scanner and Business Card Scanner have eliminated hours of manual data entry. Our sales team can now focus on what they do best - selling. The automation is seamless."</p>
                     <div class="flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2861&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2861&auto=format&fit=crop" 
                              alt="Portrait of Sarah Chen, Sales Manager at TechParts Inc., wearing professional business attire" 
                              class="w-12 h-12 rounded-full object-cover"
                              loading="lazy"
@@ -983,7 +990,7 @@
                     </div>
                     <p class="text-text-secondary italic">"Lead Finder and Salesman Tracker have revolutionized our field operations. Our conversion rates are up 52% and our team is more productive than ever. Best investment we've made."</p>
                     <div class="flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2787&auto=format&fit=crop" 
+                        <img decoding="async" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2787&auto=format&fit=crop" 
                              alt="Portrait of David Thompson, VP of Sales at Industrial Solutions Corp., wearing business suit" 
                              class="w-12 h-12 rounded-full object-cover"
                              loading="lazy"
@@ -1271,6 +1278,5 @@
         `;
         document.head.appendChild(style);
     </script>
-<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
 </html>

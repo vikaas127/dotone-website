@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/facilities-management',
     'title' => 'Facility Management Software for Malls | DotOne',
-    'description' => 'Facility management software for Indian malls, parks and FM contractors: staff attendance across sites, payroll, consumables stock, tenant billing and approvals.',
+    'description' => 'Facility management software for Indian malls and FM contractors: staff attendance across sites, payroll, consumables stock, tenant billing and approvals.',
     'breadcrumbs' => [['Industries', '/industries'], ['Mall & Facilities', '/industries/facilities-management']],
     'name' => 'Mall & Facilities',
     'icon' => 'factory',

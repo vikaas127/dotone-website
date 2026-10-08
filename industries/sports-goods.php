@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/sports-goods',
     'title' => 'Sports Goods Manufacturing ERP Software | DotOne',
-    'description' => 'Sports goods manufacturing ERP for Indian makers of bats, balls, apparel and fitness gear: size and model-wise stock, job work, piece-rate labour and export orders.',
+    'description' => 'Sports goods manufacturing ERP for Indian makers of bats, balls, apparel and fitness gear: variant-wise stock, job work, labour wages and export orders.',
     'breadcrumbs' => [['Industries', '/industries'], ['Sports', '/industries/sports-goods']],
     'name' => 'Sports',
     'icon' => 'trend',

@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/construction',
     'title' => 'Construction ERP Software for Contractors | DotOne',
-    'description' => 'Construction ERP for Indian contractors and builders: project budgets vs actual, site material indents, site stores, labour attendance by site and client billing.',
+    'description' => 'Construction ERP for Indian contractors and builders: project budget vs actual, site indents, site stores, labour attendance by site and client billing.',
     'breadcrumbs' => [['Industries', '/industries'], ['Construction & Building', '/industries/construction']],
     'name' => 'Construction & Building',
     'icon' => 'factory',

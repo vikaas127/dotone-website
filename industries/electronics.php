@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/electronics',
     'title' => 'Electronics Manufacturing ERP Software | DotOne',
-    'description' => 'Electronics manufacturing ERP for Indian EMS and OEM makers: multi-level BOMs, component shortages, serial-wise traceability, stage inspections and purchase planning.',
+    'description' => 'Electronics manufacturing ERP for Indian EMS and OEM makers: multi-level BOMs, shortage checks, serial traceability, stage inspections and purchase.',
     'breadcrumbs' => [['Industries', '/industries'], ['High Tech & Electronics', '/industries/electronics']],
     'name' => 'High Tech & Electronics',
     'icon' => 'cog',

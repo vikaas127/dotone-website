@@ -1,232 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
-    <title>DotOne Pricing | ERP and AI Agent Plans</title>
-    <link rel="canonical" href="https://dotone.biz/pricing">
-    <link rel="icon" href="/public/favicon.ico">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="DotOne Pricing | ERP and AI Agent Plans">
-    <meta property="og:description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
-    <meta property="og:url" content="https://dotone.biz/pricing">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
-    <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne Pricing | ERP and AI Agent Plans">
-    <meta name="twitter:description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261016">
-    <script src="/js/header-nav.js?v=20261016" defer></script>
-</head>
-<body class="bg-background">
+<?php
+require_once __DIR__ . '/includes/site.php';
+$plans = require __DIR__ . '/includes/data/pricing.php';
 
-<div id="header"><?php include __DIR__ . '/includes/header.php'; ?></div>
+$page = [
+    'path' => '/pricing',
+    'title' => 'DotOne Pricing | ERP and AI Agent Plans',
+    'description' => 'Five DotOne plans from Starter to Enterprise AI. Compare users, records, projects and storage, priced monthly in INR with GST invoicing.',
+    'faq' => [
+        ['Can we start small and upgrade later?', 'Yes. Many teams start on Starter or Growth and move up as they add people, records or modules. Your data stays where it is when you change plans.'],
+        ['What do the limits mean?', 'Each plan sets how many records of each type you can keep, such as customers, invoices or projects, and how much file storage you get. "Unlimited" means there is no cap on that record type.'],
+        ['Is implementation included?', 'Our onboarding team helps every customer set up and go live, and most teams are live in 4 to 6 weeks. Large data migrations and custom integrations are scoped and quoted separately. See [how implementation works](/contact).'],
+        ['How is DotOne billed?', 'We invoice in INR with GST-compliant invoices for registered Indian businesses. Talk to us about annual billing and multi-plant pricing.'],
+        ['Which plan includes the AI agents?', 'Enterprise AI is built around DotOne AI agents working across your business. Ask us which agents you can add to other plans. Read more about [AI agents](/ai-agents).'],
+        ['Can we see DotOne before choosing?', 'Yes. Book a 30-minute demo and we will show DotOne running a workflow from your business, then help you pick the right plan.'],
+    ],
+];
 
-<section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
-    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
-    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">DotOne Pricing</h1>
-        <p class="text-xl text-text-secondary">
-            Choose the Dotone modules you need. Scale from a single plant to multi-site enterprise operations.
-        </p>
-    </div>
-</section>
-
-<section class="section-sm">
-    <div class="container-custom">
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-            <!-- Starter -->
-            <div class="card p-8 flex flex-col">
-                <h2 class="text-xl font-display font-semibold mb-1">Starter</h2>
-                <p class="text-sm text-text-secondary mb-6">For small teams getting started</p>
-                <div class="mb-6">
-                    <span class="text-3xl font-display font-semibold">Per user</span>
-                    <span class="text-text-secondary text-sm block mt-1">Monthly price, billed annually. Ask us for a quote.</span>
-                </div>
-                <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Up to 50 employees</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> HRMS &amp; Payroll (1 module)</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> OR Sales Field Tracking</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Email support</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> 14-day free trial</li>
-                </ul>
-                <a href="/contact" class="btn-secondary w-full justify-center">Get a Quote</a>
-            </div>
-
-            <!-- Professional -->
-            <div class="card-elevated p-8 flex flex-col border-2 border-primary-500 relative">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary-500 text-white text-xs font-semibold rounded-full">Most Popular</span>
-                <h2 class="text-xl font-display font-semibold mb-1">Professional</h2>
-                <p class="text-sm text-text-secondary mb-6">For growing manufacturers</p>
-                <div class="mb-6">
-                    <span class="text-3xl font-display font-semibold">Per plant</span>
-                    <span class="text-text-secondary text-sm block mt-1">Includes the platform bundle. Ask us for a quote.</span>
-                </div>
-                <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Up to 500 employees</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Vision AI + Operations Suite</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> HRMS, Payroll &amp; CRM</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Priority support &amp; onboarding</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> API access</li>
-                </ul>
-                <a href="/demo" class="btn-primary w-full justify-center">Book Demo</a>
-            </div>
-
-            <!-- Enterprise -->
-            <div class="card p-8 flex flex-col">
-                <h2 class="text-xl font-display font-semibold mb-1">Enterprise</h2>
-                <p class="text-sm text-text-secondary mb-6">For multi-plant &amp; large operations</p>
-                <div class="mb-6">
-                    <span class="text-3xl font-display font-semibold">Custom quote</span>
-                    <span class="text-text-secondary text-sm block mt-1">Volume pricing with an SLA included.</span>
-                </div>
-                <ul class="space-y-3 text-sm text-text-secondary mb-8 flex-grow">
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Unlimited users &amp; plants</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Full Dotone Platform</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Custom integrations (SAP, Tally)</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> Dedicated success manager</li>
-                    <li class="flex gap-2"><span class="text-success-500">✓</span> On-premise / hybrid options</li>
-                </ul>
-                <a href="/contact" class="btn-secondary w-full justify-center">Contact Sales</a>
-            </div>
-
-        </div>
-
-        <p class="text-center text-sm text-text-secondary mt-10 max-w-2xl mx-auto">
-            All plans include secure cloud hosting, regular updates, and access to our
-            <a href="/security" class="text-primary-500 hover:underline">security &amp; compliance</a> standards.
-            GST invoicing available for Indian businesses.
-        </p>
-    </div>
-</section>
-
-<section class="section bg-surface">
-    <div class="container-custom">
-        <div class="max-w-3xl mx-auto">
-            <div class="text-center space-y-4 mb-12">
-                <h2 class="text-4xl md:text-5xl font-display font-bold">Frequently Asked <span class="text-gradient">Questions</span></h2>
-                <p class="text-xl text-text-secondary">
-                    Common questions about Dotone plans, billing, and implementation
-                </p>
-            </div>
-
-            <div class="space-y-4">
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(1)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">Can I start with one module only?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-1" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">Yes. Many customers begin with Vision AI or HRMS and expand to the full platform as they grow. Starter plans are designed for single-module adoption, and you can add modules at any time without re-implementing your core setup.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(2)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">Is there a free trial?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-2" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">Starter and Professional plans include a 14-day free trial with guided onboarding. No credit card is required to start. Enterprise evaluations are scoped separately with a proof-of-concept tailored to your plant and integration requirements.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(3)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">How is pricing calculated?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-3" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">Starter plans are priced per user per month (billed annually). Professional plans are priced per plant and include a bundled set of modules. Enterprise pricing is volume-based and covers unlimited users, plants, and custom SLAs. We share a detailed quote after understanding your team size, modules, and rollout scope.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(4)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">Do you offer implementation services?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-4" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">Professional and Enterprise plans include implementation support and onboarding. Custom data migration, CCTV integration, and ERP connectors (SAP, Tally, etc.) are scoped and quoted separately based on your environment. Our six-phase methodology keeps rollout predictable and on schedule.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(5)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">Can I upgrade or change plans later?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-5" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">Yes. You can add modules, users, or plants as your operations scale. Upgrades are prorated for the remainder of your billing cycle. If your needs change, our team will help you move to the right plan without disrupting live production workflows.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <button type="button" onclick="toggleFaq(6)" class="w-full p-6 text-left flex items-center justify-between gap-4">
-                        <span class="font-semibold text-text-primary">What billing options are available for Indian businesses?</span>
-                        <svg class="w-5 h-5 shrink-0 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
-                    <div id="faq-6" class="hidden px-6 pb-6">
-                        <p class="text-text-secondary">We invoice in INR with GST-compliant billing for registered Indian businesses. Annual contracts are standard; multi-year and multi-plant agreements may qualify for volume discounts. Payment via bank transfer and standard corporate invoicing terms are supported — contact sales for enterprise procurement requirements.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <p class="text-text-secondary mb-4">Still have questions about pricing?</p>
-                <a href="/contact" class="btn-primary inline-flex">
-                    Contact Sales
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container-custom text-center max-w-2xl mx-auto space-y-6">
-        <h2 class="text-3xl font-display font-bold">Not sure which plan fits?</h2>
-        <p class="text-text-secondary">Our team will map your plant size, modules, and ROI goals to the right package.</p>
-        <a href="/contact" class="btn-primary inline-flex">Talk to an Expert</a>
-    </div>
-</section>
-
-<div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-
-<script>
-
-
-
-function toggleFaq(index) {
-    const faqContent = document.getElementById(`faq-${index}`);
-    const icon = event.currentTarget.querySelector('.faq-icon');
-    faqContent.classList.toggle('hidden');
-    icon.style.transform = faqContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+// Human-readable cell value for the comparison table
+function plan_cell($v)
+{
+    if ($v === null) return '<span class="pr-no" aria-label="Not included">&mdash;</span>';
+    if ($v === 'Unlimited') return '<span class="pr-unl"><i aria-hidden="true">&infin;</i>Unlimited</span>';
+    return '<span class="pr-num">' . e(is_int($v) ? number_format($v) : $v) . '</span>';
 }
-</script>
-</body>
-</html>
+
+// Short highlight list for a plan card, from its limits
+function plan_highlights(array $limits)
+{
+    $out = [];
+    if ($limits['staff'] !== null) $out[] = e($limits['staff']) . ' staff users';
+    $unl = array_keys(array_filter($limits, function ($v) { return $v === 'Unlimited'; }));
+    $nice = ['customers' => 'customers', 'invoices' => 'invoices', 'quotations' => 'quotations', 'leads' => 'leads', 'tickets' => 'tickets', 'projects' => 'projects', 'items' => 'items'];
+    $names = array_values(array_intersect_key($nice, array_flip($unl)));
+    if (count($unl) >= 12) $out[] = 'Unlimited records of every type';
+    elseif ($names) $out[] = 'Unlimited ' . implode(', ', array_slice($names, 0, 3));
+    foreach (['projects' => 'projects', 'invoices' => 'invoices', 'customers' => 'customers', 'items' => 'items'] as $k => $label) {
+        if (is_int($limits[$k])) { $out[] = 'Up to ' . number_format($limits[$k]) . ' ' . $label; if (count($out) >= 3) break; }
+    }
+    if ($limits['storage'] !== null) $out[] = ($limits['storage'] === 'Unlimited' ? 'Unlimited' : e($limits['storage'])) . ' storage';
+    return array_slice($out, 0, 4);
+}
+
+render_head($page);
+?>
+
+<section class="relative pt-32 pb-12 md:pt-40 md:pb-14 overflow-hidden">
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
+    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+        <span class="section-label">Pricing</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-5">Simple plans that <span class="text-primary-500">grow with you</span></h1>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">Five plans, priced monthly in INR. Start with what you need today and move up as your business grows.</p>
+    </div>
+</section>
+
+<section class="pb-14 md:pb-20">
+    <div class="container-custom">
+        <div class="pr-cards" data-pr>
+<?php foreach ($plans as $i => $p): ?>
+            <article class="pr-card<?= !empty($p['popular']) ? ' is-popular' : '' ?>" style="--i: <?= $i ?>">
+<?php if (!empty($p['popular'])): ?>
+                <span class="pr-badge">Most popular</span>
+<?php endif; ?>
+                <h2 class="pr-name"><?= e($p['name']) ?></h2>
+                <p class="pr-tag"><?= e($p['tagline']) ?></p>
+                <div class="pr-price">
+<?php if ($p['price'] !== null): ?>
+                    <b>&#8377;<span data-pr-count="<?= (int) $p['price'] ?>"><?= number_format($p['price']) ?></span></b><span>/ month</span>
+<?php else: ?>
+                    <b class="pr-price-talk">Talk to us</b><span>for a price</span>
+<?php endif; ?>
+                </div>
+                <a href="<?= e($p['cta'][1]) ?>" class="<?= !empty($p['popular']) ? 'btn-hero-glow' : 'btn-ghost' ?> pr-cta"><?= e($p['cta'][0]) ?></a>
+                <ul class="pr-list">
+<?php foreach (plan_highlights($p['limits']) as $h): ?>
+                    <li><?= icon('check', 'w-4 h-4') ?><?= $h ?></li>
+<?php endforeach; ?>
+                </ul>
+            </article>
+<?php endforeach; ?>
+        </div>
+        <p class="text-center text-sm text-text-tertiary mt-6">Prices are per month in INR. GST invoices for registered businesses. <a href="#compare" class="text-primary-600 font-medium hover:underline">Compare every limit</a></p>
+    </div>
+</section>
+
+<section class="section bg-surface" id="compare">
+    <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="section-label">Compare plans</span>
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Every plan, side by side</h2>
+            <p class="text-lg text-text-secondary">What each plan includes, record by record.</p>
+        </div>
+        <div class="pr-table-wrap" data-pr-table>
+            <table class="pr-table">
+                <thead>
+                    <tr>
+                        <th scope="col"><span class="sr-only">Feature</span></th>
+<?php foreach ($plans as $p): ?>
+                        <th scope="col" class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><b><?= e($p['name']) ?></b><span><?= $p['price'] !== null ? '&#8377;' . number_format($p['price']) . ' / month' : 'Talk to us' ?></span></th>
+<?php endforeach; ?>
+                    </tr>
+                </thead>
+                <tbody>
+<?php $r = 0; foreach (PRICING_ROWS as $key => $label): ?>
+                    <tr style="--r: <?= $r++ ?>">
+                        <th scope="row"><?= e($label) ?></th>
+<?php foreach ($plans as $p): ?>
+                        <td class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><?= plan_cell($p['limits'][$key] ?? null) ?></td>
+<?php endforeach; ?>
+                    </tr>
+<?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<?php render_faq($page['faq'], 'Pricing questions'); ?>
+<?php render_cta('Not sure which plan fits?', 'Tell us how your business works and we will recommend a plan in a 30-minute call.', ['Book a Demo', '/demo'], ['Talk to Sales', '/contact']); ?>
+<script src="/js/pricing.js?v=<?= ASSET_VERSION ?>" defer></script>
+<?php render_foot($page); ?>

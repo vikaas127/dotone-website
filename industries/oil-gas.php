@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/oil-gas',
     'title' => 'ERP for Oil and Gas Operations | DotOne',
-    'description' => 'ERP for Indian oil and gas service firms and site operators: critical spares by site, material issues, site staff attendance, vendor POs and site issue tracking.',
+    'description' => 'ERP for Indian oil and gas service firms and site operators: critical spares by site, material issues, crew attendance, vendor POs and site issues.',
     'breadcrumbs' => [['Industries', '/industries'], ['Oil & Gas', '/industries/oil-gas']],
     'name' => 'Oil & Gas',
     'icon' => 'cog',

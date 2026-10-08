@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/chemical',
     'title' => 'Chemical Manufacturing ERP Software | DotOne',
-    'description' => 'Chemical manufacturing ERP for Indian plants: formulations as BOMs, batch production with yield, lot-wise QC, tank and drum stock, and dispatch with test results.',
+    'description' => 'Chemical manufacturing ERP for Indian plants: formulations as BOMs, batch production with yield, lot-wise QC, drum and tank stock, and dispatch by lot.',
     'breadcrumbs' => [['Industries', '/industries'], ['Chemical', '/industries/chemical']],
     'name' => 'Chemical',
     'icon' => 'shield',

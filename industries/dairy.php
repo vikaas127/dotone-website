@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/dairy',
     'title' => 'Dairy ERP Software for Milk Processors | DotOne',
-    'description' => 'Dairy ERP for Indian milk processors: collection by route and centre, fat and SNF records, processing batches, short-shelf-life stock, distributor dispatch and dues.',
+    'description' => 'Dairy ERP for Indian milk processors: collection by route, fat and SNF records, processing batches, short-shelf-life stock, distributor dispatch and dues.',
     'breadcrumbs' => [['Industries', '/industries'], ['Dairy', '/industries/dairy']],
     'name' => 'Dairy',
     'icon' => 'box',

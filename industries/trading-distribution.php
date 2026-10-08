@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/trading-distribution',
     'title' => 'Distribution ERP Software for Traders | DotOne',
-    'description' => 'Distribution ERP for Indian traders and distributors: dealer orders, godown stock, dispatch, salesman beats, outstanding by party and GST invoices synced to Tally.',
+    'description' => 'Distribution ERP for Indian traders and distributors: dealer orders, godown stock, dispatch, salesman beats, party outstanding and GST invoices in Tally.',
     'breadcrumbs' => [['Industries', '/industries'], ['Trading & Distribution', '/industries/trading-distribution']],
     'name' => 'Trading & Distribution',
     'icon' => 'truck',

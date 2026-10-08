@@ -51,6 +51,12 @@ $agent = $page['agent'] ?? null;
     </div>
 </section>
 
+<?php
+// Optional page-specific visual story, e.g. includes/showcase/reports-analytics.php
+$showcase = dirname(__DIR__) . '/showcase/' . ltrim($page['path'], '/') . '.php';
+if (is_file($showcase)) include $showcase;
+?>
+
 <section class="section bg-white">
     <div class="container-custom">
         <div class="max-w-2xl mb-12">

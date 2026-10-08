@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/css/main.css?v=20261017">
     <script src="/js/header-nav.js?v=20261017" defer></script>
     <link rel="canonical" href="https://dotone.biz/manufacturing-erp">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Manufacturing ERP Software for Indian Manufacturers | DotOne">

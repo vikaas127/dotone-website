@@ -13,7 +13,7 @@
           content="AI based quality inspection, vision AI quality control, automated visual inspection software, defect detection manufacturing, AI inspection system">
 
     <link rel="canonical" href="https://dotone.biz/vision-ai/quality-inspection">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="AI Visual Quality Inspection Software | DotOne">

@@ -9,7 +9,7 @@
           content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
 
     <link rel="canonical" href="https://dotone.biz/thank-you">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta name="robots" content="noindex, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">

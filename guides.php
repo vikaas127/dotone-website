@@ -6,7 +6,7 @@
     <meta name="description" content="ERP and AI Guides: practical, India-specific guidance from the DotOne team, with examples and checklists.">
     <title>ERP and AI Guides | DotOne</title>
     <link rel="canonical" href="https://dotone.biz/guides">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="ERP and AI Guides | DotOne">

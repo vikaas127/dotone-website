@@ -27,7 +27,7 @@ function render_head(array $page)
     <meta name="description" content="<?= e($desc) ?>">
     <title><?= e($title) ?></title>
     <link rel="canonical" href="<?= e($url) ?>">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
 <?php if (!empty($page['noindex'])): ?>
     <meta name="robots" content="noindex, follow">
 <?php endif; ?>

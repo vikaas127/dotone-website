@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/production-monitoring-software">
+    <link rel="canonical" href="https://dotone.biz/production-monitoring-software">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
     <meta property="og:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/production-monitoring-software">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/production-monitoring-software">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Production Monitoring Software | Real-Time Factory Monitoring by Dotone">
     <meta name="twitter:description" content="Dotone Production Monitoring Software provides real-time visibility of shop floor operations, machine performance, output, downtime, and productivity for smart factories.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

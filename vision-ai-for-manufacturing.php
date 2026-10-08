@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/vision-ai-for-manufacturing">
+    <link rel="canonical" href="https://dotone.biz/vision-ai-for-manufacturing">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Vision AI for Manufacturing | AI Camera Automation – Dotone">
     <meta property="og:description" content="Dotone Vision AI for Manufacturing enables AI-powered quality inspection, attendance, safety monitoring, and real-time factory intelligence using computer vision.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/vision-ai-for-manufacturing">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/vision-ai-for-manufacturing">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -30,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Vision AI for Manufacturing | AI Camera Automation – Dotone">
     <meta name="twitter:description" content="Dotone Vision AI for Manufacturing enables AI-powered quality inspection, attendance, safety monitoring, and real-time factory intelligence using computer vision.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

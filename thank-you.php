@@ -8,15 +8,15 @@
     <meta name="description"
           content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
 
-    <link rel="canonical" href="https://dotoneforbusiness.in/thank-you">
+    <link rel="canonical" href="https://dotone.biz/thank-you">
     <link rel="icon" href="/public/favicon.ico">
     <meta name="robots" content="noindex, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="You&#x27;re In! | DotOne Manufacturing Webinar">
     <meta property="og:description" content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/thank-you">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/thank-you">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="You&#x27;re In! | DotOne Manufacturing Webinar">
     <meta name="twitter:description" content="You’re successfully registered for the DotOne Manufacturing Webinar. Check your email and WhatsApp for joining details.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">

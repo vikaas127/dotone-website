@@ -12,14 +12,14 @@
     <meta name="keywords"
           content="payroll software india, payroll management system, PF ESIC compliance, salary processing software, indian payroll software">
 
-    <link rel="canonical" href="https://dotoneforbusiness.in/payroll-software-india">
+    <link rel="canonical" href="https://dotone.biz/payroll-software-india">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Payroll Software in India | Statutory Compliance &amp; HR Payroll | Dotone">
     <meta property="og:description" content="Payroll software for Indian businesses. Automate salary processing, PF, ESIC, TDS compliance, payslips, and payroll reports with Dotone.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/payroll-software-india">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/payroll-software-india">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Payroll Software in India | Statutory Compliance &amp; HR Payroll | Dotone">
     <meta name="twitter:description" content="Payroll software for Indian businesses. Automate salary processing, PF, ESIC, TDS compliance, payslips, and payroll reports with Dotone.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">

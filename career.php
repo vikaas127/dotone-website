@@ -12,14 +12,14 @@
   <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
 
-    <link rel="canonical" href="https://dotoneforbusiness.in/career">
+    <link rel="canonical" href="https://dotone.biz/career">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Careers at Dotone | Build the Future of Manufacturing AI">
     <meta property="og:description" content="Join Dotone and build next-generation Manufacturing AI &amp; Vision AI products. Explore open roles in engineering, AI, product, and operations.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/career">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/career">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Careers at Dotone | Build the Future of Manufacturing AI">
     <meta name="twitter:description" content="Join Dotone and build next-generation Manufacturing AI &amp; Vision AI products. Explore open roles in engineering, AI, product, and operations.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

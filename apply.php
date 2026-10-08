@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/apply">
+    <link rel="canonical" href="https://dotone.biz/apply">
     <link rel="icon" href="/public/favicon.ico">
     <meta name="robots" content="noindex, follow">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Apply at Dotone">
     <meta property="og:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/apply">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/apply">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Apply at Dotone">
     <meta name="twitter:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

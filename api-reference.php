@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/api-reference">
+    <link rel="canonical" href="https://dotone.biz/api-reference">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="API Reference | Dotone Manufacturing Automation Platform">
     <meta property="og:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/api-reference">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/api-reference">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="API Reference | Dotone Manufacturing Automation Platform">
     <meta name="twitter:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">
@@ -80,7 +80,7 @@
             <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
 <pre>
 Base URL:
-https://api.dotoneforbusiness.in/v1/
+https://api.dotone.biz/v1/
 
 Format:
 JSON
@@ -276,7 +276,7 @@ Content-Type: application/json
 
         <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
 <pre>
-curl -X GET https://api.dotoneforbusiness.in/v1/inventory/items \
+curl -X GET https://api.dotone.biz/v1/inventory/items \
 -H "Authorization: Bearer YOUR_API_KEY"
 </pre>
         </div>

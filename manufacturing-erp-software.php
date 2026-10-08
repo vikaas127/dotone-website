@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/manufacturing-erp-software">
+    <link rel="canonical" href="https://dotone.biz/manufacturing-erp-software">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Manufacturing ERP Software | Smart Factory ERP by Dotone">
     <meta property="og:description" content="Dotone Manufacturing ERP Software helps factories manage production, inventory, planning, quality, and operations with AI-powered Smart Factory integration.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/manufacturing-erp-software">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/manufacturing-erp-software">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Manufacturing ERP Software | Smart Factory ERP by Dotone">
     <meta name="twitter:description" content="Dotone Manufacturing ERP Software helps factories manage production, inventory, planning, quality, and operations with AI-powered Smart Factory integration.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

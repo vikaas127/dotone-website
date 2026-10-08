@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dotoneforbusiness.in/sitemap.php
+Sitemap: https://dotone.biz/sitemap.php

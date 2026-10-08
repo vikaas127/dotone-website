@@ -12,14 +12,14 @@
     <meta name="keywords"
           content="what is erp, erp system, enterprise resource planning erp, what are erp systems, erp software">
 
-    <link rel="canonical" href="https://dotoneforbusiness.in/what-is-erp">
+    <link rel="canonical" href="https://dotone.biz/what-is-erp">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="What Is ERP? Enterprise Resource Planning Explained Simply">
     <meta property="og:description" content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/what-is-erp">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/what-is-erp">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -27,7 +27,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="What Is ERP? Enterprise Resource Planning Explained Simply">
     <meta name="twitter:description" content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">

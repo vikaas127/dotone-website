@@ -8,14 +8,14 @@
     <meta name="description"
           content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
 
-    <link rel="canonical" href="https://dotoneforbusiness.in/dotone-webinar">
+    <link rel="canonical" href="https://dotone.biz/dotone-webinar">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="DotOne Free Webinar for Manufacturers | ERP Awareness Session">
     <meta property="og:description" content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/dotone-webinar">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/dotone-webinar">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DotOne Free Webinar for Manufacturers | ERP Awareness Session">
     <meta name="twitter:description" content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
@@ -43,12 +43,12 @@
       "endDate": "2026-01-25T16:40:00+05:30",
       "location": {
         "@type": "VirtualLocation",
-        "url": "https://dotoneforbusiness.in/dotone-webinar"
+        "url": "https://dotone.biz/dotone-webinar"
       },
       "organizer": {
         "@type": "Organization",
         "name": "DotOne ERP",
-        "url": "https://dotoneforbusiness.in"
+        "url": "https://dotone.biz"
       },
       "offers": {
         "@type": "Offer",

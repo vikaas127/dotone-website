@@ -1,6 +1,12 @@
 RewriteEngine On
 
 # ------------------------------------------------
+# 0. OLD DOMAIN -> MAIN DOMAIN (dotone.biz)
+# ------------------------------------------------
+RewriteCond %{HTTP_HOST} ^(www\.)?dotoneforbusiness\.in$ [NC]
+RewriteRule ^(.*)$ https://dotone.biz/$1 [R=301,L]
+
+# ------------------------------------------------
 # 1. BLOCK .env FILE (SECURITY – MUST BE FIRST)
 # ------------------------------------------------
 <Files ".env">

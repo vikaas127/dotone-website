@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
   <link rel="stylesheet" href="/css/main.css?v=20261009">
     <script src="/js/header-nav.js?v=20261009" defer></script>
-    <link rel="canonical" href="https://dotoneforbusiness.in/sales-documentation">
+    <link rel="canonical" href="https://dotone.biz/sales-documentation">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Sales Documentation | Dotone Manufacturing AI Platform">
     <meta property="og:description" content="Dotone sales documentation for manufacturing AI, Vision AI, ERP automation. Access pitch decks, ROI calculators, use cases, and sales enablement resources.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/sales-documentation">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/sales-documentation">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -30,7 +30,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sales Documentation | Dotone Manufacturing AI Platform">
     <meta name="twitter:description" content="Dotone sales documentation for manufacturing AI, Vision AI, ERP automation. Access pitch decks, ROI calculators, use cases, and sales enablement resources.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
 </head>
 
 <body class="bg-background">

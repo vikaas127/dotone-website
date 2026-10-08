@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
     <title>Guides &amp; Articles | Dotone</title>
-    <link rel="canonical" href="https://dotoneforbusiness.in/guides">
+    <link rel="canonical" href="https://dotone.biz/guides">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Guides &amp; Articles | Dotone">
     <meta property="og:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/guides">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/guides">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -20,7 +20,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Guides &amp; Articles | Dotone">
     <meta name="twitter:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">

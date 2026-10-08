@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
     <title>Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India</title>
-    <link rel="canonical" href="https://dotoneforbusiness.in/">
+    <link rel="canonical" href="https://dotone.biz/">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
     <meta property="og:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
-    <meta property="og:url" content="https://dotoneforbusiness.in/">
-    <meta property="og:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
+    <meta property="og:url" content="https://dotone.biz/">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
@@ -20,8 +20,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
     <meta name="twitter:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
-    <meta name="twitter:image" content="https://dotoneforbusiness.in/assets/og-image.jpg">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotoneforbusiness.in/#organization","name":"Dotone","url":"https://dotoneforbusiness.in/","logo":"https://dotoneforbusiness.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotoneforbusiness.in/#website","url":"https://dotoneforbusiness.in/","name":"Dotone","publisher":{"@id":"https://dotoneforbusiness.in/#organization"},"inLanguage":"en-IN"}]}</script>
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.biz/#organization","name":"Dotone","url":"https://dotone.biz/","logo":"https://dotone.biz/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.biz/#website","url":"https://dotone.biz/","name":"Dotone","publisher":{"@id":"https://dotone.biz/#organization"},"inLanguage":"en-IN"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">

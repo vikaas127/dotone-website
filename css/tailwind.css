@@ -10275,3 +10275,97 @@ a.card:hover,
 .agent-more-link svg { color: #0096EE; }
 .agent-more-link:hover { border-color: #7DCFFA; color: #0077C0; transform: translateY(-1px); }
 .agent-more-all { font-size: 0.88rem; font-weight: 600; color: #0096EE; margin-left: 0.4rem; }
+
+/* Homepage product fan: fanned module cards over a light arc */
+.pfan-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem;
+  background: radial-gradient(60% 45% at 50% 42%, rgba(0, 150, 238, 0.10), rgba(0, 150, 238, 0) 70%), #fff;
+}
+.pfan { --step: 212px; --cw: 228px; position: relative; margin-top: 3rem; }
+.pfan-stage { position: relative; height: 430px; }
+.pfan-card {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: var(--cw);
+  min-height: 300px;
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-radius: 1.4rem;
+  background: linear-gradient(160deg, #fff 0%, #F5FAFF 100%);
+  border: 1px solid #DCEBF7;
+  box-shadow: 0 18px 40px -22px rgba(0, 84, 140, 0.35);
+  color: #101828;
+  text-decoration: none;
+  z-index: calc(10 - var(--a));
+  transform: translateX(-50%) translateX(calc(var(--o) * var(--step))) translateY(calc(var(--a) * var(--a) * 12px + var(--a) * 22px)) rotate(calc(var(--o) * 6deg));
+  transition: transform 0.7s cubic-bezier(.2, .8, .2, 1), opacity 0.6s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  transition-delay: calc(var(--a) * 70ms);
+}
+.pfan-card b { font-size: 1.15rem; font-weight: 600; }
+.pfan-text { font-size: 0.92rem; line-height: 1.5; color: #475467; }
+.pfan-more { margin-top: auto; font-size: 0.85rem; font-weight: 600; color: #0077C0; opacity: 0; transform: translateY(4px); transition: opacity 0.3s ease, transform 0.3s ease; }
+.pfan-icon {
+  width: 3rem; height: 3rem; border-radius: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  background: #E8F5FE; color: #0096EE; margin-bottom: 0.4rem;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+.pfan-card.is-active {
+  z-index: 11;
+  border-color: #8ACFF7;
+  box-shadow: 0 28px 60px -24px rgba(0, 120, 190, 0.55);
+  transform: translateX(-50%) translateX(calc(var(--o) * var(--step))) translateY(calc(var(--a) * var(--a) * 12px + var(--a) * 22px - 22px)) rotate(calc(var(--o) * 6deg));
+  transition-delay: 0s;
+}
+.pfan-card.is-active .pfan-icon { background: #0096EE; color: #fff; }
+.pfan-card.is-active .pfan-more { opacity: 1; transform: none; }
+.pfan-card:focus-visible { outline: 2px solid #0096EE; outline-offset: 3px; }
+
+/* Entrance: cards rise from a stack and fan out (only once JS is ready) */
+.pfan.is-ready:not(.is-in) .pfan-card { opacity: 0; transform: translateX(-50%) translateY(90px) rotate(0deg); }
+
+.pfan-hill { position: relative; z-index: 20; margin-top: -170px; height: 330px; overflow: hidden; filter: drop-shadow(0 -10px 24px rgba(0, 150, 238, 0.12)); }
+.pfan-hill::before {
+  content: "";
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  top: 0;
+  height: 300%;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #F2F9FF 0%, #fff 30%);
+  border-top: 1.5px solid #B9E1FA;
+}
+.pfan-hill-inner { position: relative; max-width: 40rem; margin: 0 auto; padding: 5.5rem 1rem 0; text-align: center; }
+.pfan-hill-title { font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 600; line-height: 1.15; color: #101828; margin-bottom: 0.8rem; }
+.pfan-ai {
+  display: inline-block; padding: 0 0.35em; border-radius: 0.35em;
+  background: linear-gradient(135deg, #33B1F5, #0078BE); color: #fff;
+  box-shadow: 0 8px 20px -8px rgba(0, 120, 190, 0.6);
+}
+.pfan-hill-inner p { color: #475467; font-size: 1.05rem; margin-bottom: 1.6rem; }
+
+@media (max-width: 1279px) { .pfan { --step: 168px; --cw: 200px; } .pfan-text { font-size: 0.85rem; } }
+@media (max-width: 1023px) {
+  .pfan-stage {
+    height: auto; display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 1rem 1rem 2rem; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .pfan-stage::-webkit-scrollbar { display: none; }
+  .pfan-card, .pfan-card.is-active, .pfan.is-ready:not(.is-in) .pfan-card {
+    position: relative; left: auto; top: auto; flex: 0 0 240px; min-height: 250px;
+    transform: none; opacity: 1; scroll-snap-align: center;
+  }
+  .pfan-more { opacity: 1; transform: none; }
+  .pfan-hill { margin-top: 0; height: auto; padding-bottom: 4rem; }
+  .pfan-hill::before { left: -80%; right: -80%; }
+  .pfan-hill-inner { padding-top: 3.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pfan-card, .pfan-more, .pfan-icon { transition: none; }
+}

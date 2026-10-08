@@ -445,3 +445,42 @@
   tabs.forEach(function (t, k) { t.addEventListener('click', function () { auto = false; show(k); }); });
   show(0);
 })();
+
+// Product fan: fan out on scroll, then rotate the highlighted card until the visitor takes over
+(function () {
+  'use strict';
+  var root = document.querySelector('[data-pfan]');
+  if (!root) return;
+  var cards = Array.prototype.slice.call(root.querySelectorAll('[data-pfan-card]'));
+  var mid = Math.floor(cards.length / 2);
+  var order = [mid, mid + 1, mid - 1, mid + 2, mid - 2, mid + 3, mid - 3].filter(function (i) { return i >= 0 && i < cards.length; });
+  var step = 0, timer = null, paused = false;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function activate(card) {
+    cards.forEach(function (c) { c.classList.toggle('is-active', c === card); });
+  }
+  function tick() {
+    if (paused) return;
+    step = (step + 1) % order.length;
+    activate(cards[order[step]]);
+  }
+  function start() { if (!reduced && !timer) timer = setInterval(tick, 2600); }
+
+  cards.forEach(function (c) {
+    c.addEventListener('mouseenter', function () { paused = true; activate(c); });
+    c.addEventListener('focus', function () { paused = true; activate(c); });
+  });
+  root.addEventListener('mouseleave', function () { paused = false; });
+
+  if (!('IntersectionObserver' in window) || reduced) { start(); return; }
+  root.classList.add('is-ready');
+  new IntersectionObserver(function (entries, io) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      root.classList.add('is-in');
+      setTimeout(start, 900);
+      io.disconnect();
+    });
+  }, { threshold: 0.25 }).observe(root);
+})();

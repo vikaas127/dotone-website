@@ -317,6 +317,48 @@
     </section>
 
     <!-- 04 Solution: one platform, every part of the business -->
+    <section class="pfan-section" aria-labelledby="pfan-heading">
+        <div class="container-custom">
+            <div class="text-center max-w-2xl mx-auto">
+                <span class="section-label">The platform</span>
+                <h2 id="pfan-heading" class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-text-primary leading-tight mb-4">Products that <span class="text-primary-500">run your business</span></h2>
+                <p class="text-lg text-text-secondary">From the first enquiry to the final payslip.</p>
+            </div>
+        </div>
+
+        <div class="pfan" data-pfan>
+            <div class="pfan-stage">
+<?php
+$fan = [
+    ['/hrms', 'id', 'HRMS &amp; Payroll', 'Attendance, shifts, leave and payslips from one record.'],
+    ['/purchase-management', 'cart', 'Purchase', 'RFQs, vendor comparison and purchase orders with approvals.'],
+    ['/crm', 'users', 'Sales &amp; CRM', 'Leads, quotations and orders, with follow-ups nobody misses.'],
+    ['/production-management', 'factory', 'Production', 'Job cards, layered BOMs, WIP and live machine status.'],
+    ['/inventory-management', 'box', 'Inventory', 'Multi-warehouse stock, QR tracking and low-stock alerts.'],
+    ['/finance-management', 'rupee', 'Finance', 'Receivables, payables and cash flow from live operations.'],
+    ['/reports-analytics', 'chart', 'Reports', 'Live dashboards and MIS across every plant and team.'],
+];
+$mid = intdiv(count($fan), 2);
+foreach ($fan as $i => [$url, $ico, $name, $text]): $o = $i - $mid; ?>
+                <a href="<?= $url ?>" class="pfan-card<?= $o === 0 ? ' is-active' : '' ?>" style="--o: <?= $o ?>; --a: <?= abs($o) ?>" data-pfan-card>
+                    <span class="pfan-icon"><?= icon($ico, 'w-6 h-6') ?></span>
+                    <b><?= $name ?></b>
+                    <span class="pfan-text"><?= $text ?></span>
+                    <span class="pfan-more">Explore <span aria-hidden="true">&rarr;</span></span>
+                </a>
+<?php endforeach; ?>
+            </div>
+
+            <div class="pfan-hill">
+                <div class="pfan-hill-inner">
+                    <h3 class="pfan-hill-title"><span class="pfan-ai">AI</span> inside every module</h3>
+                    <p>Agents read live data in each area, flag what needs attention and prepare the next step for your approval.</p>
+                    <a href="/ai-agents" class="btn-hero-glow">Meet the AI agents</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section bg-white" id="platform">
         <div class="container-custom">
             <div class="text-center max-w-3xl mx-auto mb-8 md:mb-10">

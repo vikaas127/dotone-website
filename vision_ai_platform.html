@@ -1229,7 +1229,7 @@ observer.observe(document.getElementById("metrics-section"));
             rootMargin: '0px 0px -100px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
@@ -1239,7 +1239,7 @@ observer.observe(document.getElementById("metrics-section"));
 
         // Observe all scroll-reveal elements
         document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
+            revealObserver.observe(el);
         });
     </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

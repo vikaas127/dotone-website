@@ -43,7 +43,7 @@
       else observer.observe(el);
     });
 
-    document.querySelectorAll('section:not(.hero-dark)').forEach(function (section) {
+    document.querySelectorAll('section:not(.hero-dark):not(.hero-light)').forEach(function (section) {
       if (section.dataset.scroll === 'off') return;
 
       var container = section.querySelector(':scope > .container-custom');
@@ -80,7 +80,7 @@
       mark(el, 'scroll-reveal-scale', 0);
     });
 
-    document.querySelectorAll('.cta-dark .container-custom > *').forEach(function (el, i) {
+    document.querySelectorAll('.cta-dark .container-custom > *, .cta-light .container-custom > *').forEach(function (el, i) {
       mark(el, 'scroll-reveal', i * 100);
     });
 

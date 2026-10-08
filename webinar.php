@@ -6,8 +6,6 @@
     <meta name="description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Join DotOne’s free webinar for manufacturers to learn how ERP simplifies production, inventory, HR, and operations. Free registration.">
 
     <link rel="canonical" href="https://dotone.biz/webinar">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">

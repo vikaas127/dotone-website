@@ -1,0 +1,65 @@
+<?php
+$page = [
+    'path' => '/ai-agents/hr',
+    'slug' => 'hr',
+    'title' => 'HR AI Agent for Attendance and Payroll | DotOne',
+    'description' => 'An HR AI agent in DotOne HRMS that flags late marks, missed punches and geo-fence exceptions, spots leave clashes and runs payroll pre-checks each month.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['HR AI Agent', '/ai-agents/hr']],
+    'h1' => 'HR AI Agent',
+    'intro' => 'An HR assistant that works on attendance, shifts, leave and payroll inputs in DotOne. Ask who missed a punch this week, whether approved leave leaves a shift short or what needs fixing before payroll runs. The agent reads the records, flags the exceptions and prepares the follow-up for your HR team.',
+    'demo' => [
+        'question' => 'What do we need to fix before running payroll this month?',
+        'steps' => [
+            'Reading attendance for the month',
+            'Finding missed punches and missing days',
+            'Checking overtime against the usual pattern',
+            'Matching leave against approved requests',
+            'Preparing a pre-check list for HR',
+        ],
+        'result' => 'A list of employees with missing attendance, unusual overtime and unapproved leave, for HR to fix before the payroll run.',
+    ],
+    'traditional' => [
+        'Download punch data from the biometric device and clean it in a spreadsheet.',
+        'Go through each employee to find late marks and missed punches.',
+        'Check leave requests against shift rosters by hand.',
+        'Find overtime errors only after employees question their payslip.',
+        'Chase supervisors for corrections in the last days before payroll.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Who missed a punch this week?"',
+        'The agent reads attendance, shifts, leave and overtime together.',
+        'It flags late marks, missed punches and check-ins outside the geo-fence.',
+        'It builds the attendance or pre-payroll report, ready to share or export.',
+        'It drafts reminders to employees and supervisors for your approval.',
+    ],
+    'sees' => [
+        'Biometric and geo-fenced attendance entries',
+        'Shift rosters by department and plant',
+        'Leave requests, balances and approvals',
+        'Overtime hours by employee and shift',
+        'Employee master: department, shift and reporting manager',
+        'Payroll inputs for the month',
+    ],
+    'asks' => [
+        '"Who has missed punches this week?"',
+        '"Who checked in outside the geo-fence yesterday?"',
+        '"Does approved leave leave any shift short next week?"',
+        '"Whose overtime is far above normal this month?"',
+        '"What needs fixing before we run payroll?"',
+    ],
+    'does' => [
+        'Flags attendance exceptions: late marks, missed punches and check-ins outside the geo-fence',
+        'Spots leave that clashes with shift cover and alerts the supervisor',
+        'Runs payroll pre-checks for missing attendance and overtime spikes',
+        'Drafts reminders to employees and managers to fix missing entries',
+        'Builds HR reports on request: attendance, leave and overtime by department',
+        'Answers questions about leave balances and shift rosters',
+    ],
+    'faq' => [
+        ['What does the HR AI Agent do in DotOne?', 'It works on your HRMS data: attendance, shifts, leave and overtime. You ask about exceptions or the coming payroll run, and the agent reads the records, picks out what needs fixing and prepares a list or reminder for your HR team.'],
+        ['Can the agent change attendance or approve leave?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data, such as an attendance correction or a leave approval, can be set to need a person\'s approval.'],
+        ['Does it run payroll?', 'No. Payroll runs in DotOne\'s payroll module as usual. The agent checks the inputs before the run, such as missing attendance or overtime that looks wrong, so your team can fix them first.'],
+        ['Who can see employee data through the agent?', 'Only people whose role allows it. The agent follows the same permissions as the HRMS module, so a supervisor sees their own team and HR sees what HR is allowed to see.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

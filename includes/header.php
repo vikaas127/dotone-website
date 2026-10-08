@@ -19,18 +19,19 @@
 $menuIcon = function ($name) { return '<span class="mega-menu-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="' . (ICONS[$name] ?? ICONS['spark']) . '"/></svg></span>'; };
 $moduleKeys = array_keys(MODULES);
 $menuCols = [
-    'ERP Modules' => array_map(function ($k) { return ['/' . $k, MODULES[$k]['name'], MODULES[$k]['icon']]; }, array_slice($moduleKeys, 0, 6)),
+    'ERP Modules' => array_map(function ($k) { return ['/' . $k, MODULES[$k]['name'], MODULES[$k]['icon']]; }, array_slice($moduleKeys, 0, 8)),
     'More Modules' => array_merge(
-        array_map(function ($k) { return ['/' . $k, MODULES[$k]['name'], MODULES[$k]['icon']]; }, array_slice($moduleKeys, 6)),
+        array_map(function ($k) { return ['/' . $k, MODULES[$k]['name'], MODULES[$k]['icon']]; }, array_slice($moduleKeys, 8)),
         [['/modules', 'All modules', 'flow']]
     ),
     'AI Agents' => array_merge(
-        array_map(function ($k) { return ['/ai-agents/' . $k, AGENTS[$k]['name'], AGENTS[$k]['icon']]; }, array_keys(AGENTS)),
-        [['/ai-powered-erp', 'AI-Powered ERP', 'spark'], ['/vision-ai', 'Vision AI', 'eye']]
+        array_map(function ($k) { return ['/ai-agents/' . $k, AGENTS[$k]['name'], AGENTS[$k]['icon']]; }, ['inventory', 'sales', 'purchase', 'production', 'finance', 'reporting']),
+        [['/ai-agents', 'All AI agents', 'flow'], ['/generative-ai', 'Generative AI', 'chat']]
     ),
-    'Automation' => array_merge(
+    'AI & Automation' => array_merge(
+        [['/ai-powered-erp', 'AI-Powered ERP', 'spark'], ['/vision-ai', 'Vision AI', 'eye']],
         array_map(function ($u) { return [$u, AUTOMATION[$u]['name'], AUTOMATION[$u]['icon']]; }, array_keys(AUTOMATION)),
-        [['/solutions', 'All solutions', 'flow'], ['/manufacturing-erp', 'Manufacturing ERP', 'factory']]
+        [['/manufacturing-erp', 'Manufacturing ERP', 'factory']]
     ),
 ];
 foreach ($menuCols as $colTitle => $links): ?>

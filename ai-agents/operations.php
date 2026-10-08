@@ -1,0 +1,65 @@
+<?php
+$page = [
+    'path' => '/ai-agents/operations',
+    'slug' => 'operations',
+    'title' => 'Operations AI Agent for Workflow Automation | DotOne',
+    'description' => 'An operations AI agent in DotOne ERP that finds stuck approvals and delayed hand-offs across departments, nudges the owners and sends a daily summary.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Operations AI Agent', '/ai-agents/operations']],
+    'h1' => 'Operations AI Agent',
+    'intro' => 'An operations assistant that looks across sales, purchase, stores, production and accounts in DotOne. Ask what is stuck, who is holding it up or what the day looked like. The agent finds approvals that have waited too long and hand-offs that have stalled between teams, and prepares a nudge for the right person.',
+    'demo' => [
+        'question' => 'What is stuck across departments today?',
+        'steps' => [
+            'Reading pending approvals in every module',
+            'Checking hand-offs between departments',
+            'Finding items waiting longer than usual',
+            'Naming the owner of each item',
+            'Drafting nudges for approval',
+        ],
+        'result' => 'A list of stuck approvals and stalled hand-offs, each with its owner and how long it has waited, and nudges ready to send.',
+    ],
+    'traditional' => [
+        'Find out something is stuck only when a customer or supervisor complains.',
+        'Call each department to ask where an order or indent stands.',
+        'Go through approval lists module by module.',
+        'Chase people on calls and messages, one at a time.',
+        'Build the daily operations update by hand from several reports.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "What has been waiting more than two days?"',
+        'The agent reads approvals and hand-offs across every module together.',
+        'It flags items stuck with a person or waiting on another team.',
+        'It builds the daily operations summary, ready to share or export.',
+        'It drafts nudges to the owners, sent once you approve or by your rules.',
+    ],
+    'sees' => [
+        'Pending approvals in every module: indents, POs, quotations, leave and more',
+        'Sales orders waiting on stock or production',
+        'Indents waiting on approval or a purchase order',
+        'Goods receipts waiting on quality inspection',
+        'Dispatches waiting on invoices',
+        'Who owns each step and how long it has waited',
+    ],
+    'asks' => [
+        '"What is stuck across departments today?"',
+        '"Which approvals have waited more than two days?"',
+        '"Which sales orders are waiting on stock?"',
+        '"Who has the most pending approvals?"',
+        '"Give me today\'s operations summary."',
+    ],
+    'does' => [
+        'Finds approvals that have waited longer than your set limit',
+        'Spots delayed hand-offs, such as an order waiting on stock or an indent waiting on approval',
+        'Nudges the owner of each stuck item, within your rules',
+        'Escalates to a manager when a nudge has not moved the item',
+        'Sends a daily operations summary to the people you choose',
+        'Answers questions about where any order, indent or document stands',
+    ],
+    'faq' => [
+        ['What does the Operations AI Agent do in DotOne?', 'It looks across departments for work that has stalled. It reads approvals and hand-offs in every module, finds what has waited too long, names the owner and prepares a nudge or a daily summary. The other agents look inside one department; this one looks at the gaps between them.'],
+        ['Can the agent approve things on behalf of someone?', 'No, unless you set it up that way. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data can be set to need a person\'s approval. Nudges and escalations follow the rules you choose.'],
+        ['How does it know what counts as stuck?', 'You set the limits, such as two days for a PO approval or four hours for a dispatch invoice. The agent compares each item against those limits and its usual pace, and flags what has gone past them.'],
+        ['How is it related to workflow automation in DotOne?', 'Workflow automation in DotOne moves approvals and alerts between teams by fixed rules. The Operations AI Agent sits on top of it, watching where those workflows slow down and helping the right people act on them.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

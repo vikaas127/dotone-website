@@ -23,29 +23,41 @@ const ICONS = [
     'eye'      => 'M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z',
     'link'     => 'M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1',
     'check'    => 'M5 13l4 4L19 7',
+    'phone'    => 'M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z',
 ];
 
 // ERP pillar. 'agent' links a module to the AI agent that works on its data.
 const MODULES = [
     'inventory-management'  => ['name' => 'Inventory Management',  'icon' => 'box',    'agent' => 'inventory', 'summary' => 'Multi-warehouse stock, QR tracking, low-stock alerts and valuation.'],
+    'warehouse-management'  => ['name' => 'Warehouse Management',  'icon' => 'truck',  'agent' => 'inventory', 'summary' => 'Inward, storage locations, picking and outward for every warehouse.'],
     'sales-management'      => ['name' => 'Sales Management',      'icon' => 'trend',  'agent' => 'sales',     'summary' => 'Quotation to order, invoice and dispatch in one flow.'],
     'crm'                   => ['name' => 'CRM',                   'icon' => 'users',  'agent' => 'crm',       'summary' => 'Lead pipeline, follow-up reminders, quotations and customer portal.'],
-    'purchase-management'   => ['name' => 'Purchase Management',   'icon' => 'cart',   'agent' => null,        'summary' => 'RFQs, vendor comparison, auto purchase orders with approvals.'],
-    'production-management' => ['name' => 'Production Management', 'icon' => 'factory','agent' => null,        'summary' => 'Job cards, layered BOM, WIP tracking and live OEE.'],
-    'quality-management'    => ['name' => 'Quality Management',    'icon' => 'shield', 'agent' => null,        'summary' => 'Inspections, rejection logging, rework and Vision AI checks.'],
-    'hrms'                  => ['name' => 'HRMS',                  'icon' => 'id',     'agent' => null,        'summary' => 'Biometric and geo-fenced attendance, shifts and leave.'],
-    'payroll'               => ['name' => 'Payroll',               'icon' => 'rupee',  'agent' => null,        'summary' => 'PF, ESI, TDS and payslips generated from attendance.'],
-    'accounting'            => ['name' => 'Accounting & Tally Sync', 'icon' => 'doc',  'agent' => null,        'summary' => 'GST invoicing, funds tracking and two-way Tally sync.'],
-    'reports-analytics'     => ['name' => 'Reports & Analytics',   'icon' => 'chart',  'agent' => 'reporting', 'summary' => 'Live dashboards, MIS and centralised multi-plant reporting.'],
+    'purchase-management'   => ['name' => 'Purchase Management',   'icon' => 'cart',   'agent' => 'purchase',  'summary' => 'RFQs, vendor comparison, auto purchase orders with approvals.'],
+    'production-management' => ['name' => 'Production Management', 'icon' => 'factory','agent' => 'production','summary' => 'Job cards, layered BOM, WIP tracking and live OEE.'],
+    'quality-management'    => ['name' => 'Quality Management',    'icon' => 'shield', 'agent' => 'quality',   'summary' => 'Inspections, rejection logging, rework and Vision AI checks.'],
     'field-sales-tracking'  => ['name' => 'Field Sales Tracking',  'icon' => 'pin',    'agent' => 'sales',     'summary' => 'GPS check-ins, visits and attendance for field teams.'],
+    'hrms'                  => ['name' => 'HRMS',                  'icon' => 'id',     'agent' => 'hr',        'summary' => 'Biometric and geo-fenced attendance, shifts and leave.'],
+    'payroll'               => ['name' => 'Payroll',               'icon' => 'rupee',  'agent' => 'hr',        'summary' => 'PF, ESI, TDS and payslips generated from attendance.'],
+    'accounting'            => ['name' => 'Accounting & Tally Sync', 'icon' => 'doc',  'agent' => 'finance',   'summary' => 'GST invoicing, funds tracking and two-way Tally sync.'],
+    'finance-management'    => ['name' => 'Finance Management',    'icon' => 'rupee',  'agent' => 'finance',   'summary' => 'Receivables, payables, cash flow and budgets from live operations.'],
+    'reports-analytics'     => ['name' => 'Reports & Analytics',   'icon' => 'chart',  'agent' => 'reporting', 'summary' => 'Live dashboards, MIS and centralised multi-plant reporting.'],
+    'business-analytics'    => ['name' => 'Business Analytics',    'icon' => 'trend',  'agent' => 'reporting', 'summary' => 'Trends, comparisons and drill-downs across every department.'],
+    'workflow-automation'   => ['name' => 'Workflow Automation',   'icon' => 'flow',   'agent' => 'operations','summary' => 'Approvals, alerts and hand-offs that move work between teams.'],
+    'mobile-erp'            => ['name' => 'Mobile ERP',            'icon' => 'phone',  'agent' => null,        'summary' => 'Attendance, field sales, approvals and dashboards on the phone.'],
 ];
 
 // AI Agents pillar. 'module' is the ERP module whose data the agent reads.
 const AGENTS = [
-    'inventory' => ['name' => 'Inventory AI Agent', 'icon' => 'box',   'module' => 'inventory-management', 'summary' => 'Finds items below reorder level, slow-moving stock and shortages before they stop production.'],
-    'sales'     => ['name' => 'Sales AI Agent',     'icon' => 'trend', 'module' => 'sales-management',     'summary' => 'Tracks quotations and orders, forecasts demand and reminds your team who to follow up.'],
-    'crm'       => ['name' => 'CRM AI Agent',       'icon' => 'users', 'module' => 'crm',                  'summary' => 'Keeps the pipeline moving: stale leads, missed follow-ups and next best actions.'],
-    'reporting' => ['name' => 'Reporting AI Agent', 'icon' => 'chart', 'module' => 'reports-analytics',    'summary' => 'Answers business questions in plain language and builds the report for you.'],
+    'inventory'  => ['name' => 'Inventory AI Agent',  'icon' => 'box',     'module' => 'inventory-management',  'summary' => 'Finds items below reorder level, slow-moving stock and shortages before they stop production.'],
+    'sales'      => ['name' => 'Sales AI Agent',      'icon' => 'trend',   'module' => 'sales-management',      'summary' => 'Tracks quotations and orders, forecasts demand and reminds your team who to follow up.'],
+    'purchase'   => ['name' => 'Purchase AI Agent',   'icon' => 'cart',    'module' => 'purchase-management',   'summary' => 'Compares vendor quotes, flags price changes and late deliveries, and drafts POs for approval.'],
+    'production' => ['name' => 'Production AI Agent', 'icon' => 'factory', 'module' => 'production-management', 'summary' => 'Watches job cards and machines, flags delays and downtime, and checks material before jobs start.'],
+    'quality'    => ['name' => 'Quality AI Agent',    'icon' => 'shield',  'module' => 'quality-management',    'summary' => 'Spots rejection patterns by machine, shift and vendor, and drafts rework or holds for approval.'],
+    'finance'    => ['name' => 'Finance AI Agent',    'icon' => 'rupee',   'module' => 'finance-management',    'summary' => 'Watches receivables and payables, flags overdue customers and drafts payment reminders.'],
+    'hr'         => ['name' => 'HR AI Agent',         'icon' => 'id',      'module' => 'hrms',                  'summary' => 'Flags attendance exceptions, leave clashes and payroll checks before the monthly run.'],
+    'crm'        => ['name' => 'CRM AI Agent',        'icon' => 'users',   'module' => 'crm',                   'summary' => 'Keeps the pipeline moving: stale leads, missed follow-ups and next best actions.'],
+    'reporting'  => ['name' => 'Reporting AI Agent',  'icon' => 'chart',   'module' => 'reports-analytics',     'summary' => 'Answers business questions in plain language and builds the report for you.'],
+    'operations' => ['name' => 'Operations AI Agent', 'icon' => 'flow',    'module' => 'workflow-automation',   'summary' => 'Looks across departments for stuck approvals and hand-offs, and nudges the right people.'],
 ];
 
 // Automation pillar
@@ -53,4 +65,5 @@ const AUTOMATION = [
     '/solutions/inventory-automation'     => ['name' => 'Inventory Automation',   'icon' => 'box',  'summary' => 'Automatic indents, reorder triggers and stock alerts.'],
     '/solutions/digital-transformation'   => ['name' => 'Digital Transformation', 'icon' => 'factory', 'summary' => 'Industry 4.0: connect machines, workflows and teams.'],
     '/integrations/tally'                 => ['name' => 'Tally Integration',      'icon' => 'link', 'summary' => 'Two-way sync of masters, vouchers and stock with Tally.'],
+    '/ai-automation'                      => ['name' => 'AI Automation',          'icon' => 'spark', 'summary' => 'Agents and workflows that do the routine work, with your approval.'],
 ];

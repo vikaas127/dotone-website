@@ -1,0 +1,9 @@
+config.php
+db.php
+.env
+node_modules/
+*.zip
+test/
+
+# Runtime data (sessions, logins, project data)
+implementation/data/

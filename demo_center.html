@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience Dotone's AI-powered manufacturing intelligence platform through interactive demos. Test Vision AI, worker efficiency tracking, and comprehensive ERP tools in simulated environments.">
+    <title>Interactive Demo Center - Dotone Vision Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="/js/header-nav.js" defer></script>
+  </head>
+<body class="bg-background">
+    <!-- Navigation Header -->
+   <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-brand opacity-5"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle animation-delay-300"></div>
+        </div>
+
+        <div class="container-custom relative z-10">
+            <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
+                <div class="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full">
+                    <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium text-primary-700">Interactive Product Demonstrations</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
+                    Experience <span class="text-gradient">AI-Powered Manufacturing</span> Intelligence
+                </h1>
+
+                <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
+                    Test our Vision AI platform in simulated manufacturing environments. See real-time worker efficiency tracking, predictive maintenance alerts, and comprehensive operational intelligence in action.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#interactive-demos" class="btn-primary group">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Launch Interactive Demo</span>
+                    </a>
+                    <a href="#schedule-demo" class="btn-secondary group">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                        <span>Schedule Guided Demo</span>
+                    </a>
+                </div>
+
+                <!-- Trust Signals -->
+                <div class="flex flex-wrap items-center justify-center gap-6 pt-8 text-sm text-text-secondary">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>No installation required</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Instant access</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Real manufacturing scenarios</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Selection -->
+    <section class="section-sm bg-surface">
+        <div class="container-custom">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Choose Your <span class="text-gradient">Industry</span></h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Experience personalized demos tailored to your manufacturing sector
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Automotive -->
+                <button onclick="selectIndustry('automotive')" class="industry-card card p-6 text-left hover-lift group cursor-pointer transition-all">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-2">Automotive</h3>
+                    <p class="text-sm text-text-secondary">Assembly line optimization and quality control</p>
+                </button>
+
+                <!-- Electronics -->
+                <button onclick="selectIndustry('electronics')" class="industry-card card p-6 text-left hover-lift group cursor-pointer transition-all">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-2">Electronics</h3>
+                    <p class="text-sm text-text-secondary">Precision manufacturing and defect detection</p>
+                </button>
+
+                <!-- Food Processing -->
+                <button onclick="selectIndustry('food')" class="industry-card card p-6 text-left hover-lift group cursor-pointer transition-all">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-2">Food Processing</h3>
+                    <p class="text-sm text-text-secondary">Safety compliance and packaging efficiency</p>
+                </button>
+
+                <!-- Pharmaceuticals -->
+                <button onclick="selectIndustry('pharma')" class="industry-card card p-6 text-left hover-lift group cursor-pointer transition-all">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-2">Pharmaceuticals</h3>
+                    <p class="text-sm text-text-secondary">Regulatory compliance and batch tracking</p>
+                </button>
+            </div>
+
+            <div id="industrySelected" class="hidden mt-8 p-6 bg-primary-50 border border-primary-200 rounded-xl">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-semibold text-primary-700">Industry selected: <span id="selectedIndustryName"></span></span>
+                    </div>
+                    <button onclick="clearIndustry()" class="text-primary-500 hover:text-primary-600 font-medium">Change</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demos Section -->
+    <section id="interactive-demos" class="section">
+        <div class="container-custom">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="text-4xl md:text-5xl font-display font-bold">Interactive <span class="text-gradient">Product Demos</span></h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Experience our AI tools in action with real-time simulations
+                </p>
+            </div>
+
+            <!-- Demo Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="switchDemo('vision-ai')" class="demo-tab active px-6 py-3 rounded-lg font-medium transition-all">
+                    Vision AI Platform
+                </button>
+                <button onclick="switchDemo('efficiency')" class="demo-tab px-6 py-3 rounded-lg font-medium transition-all">
+                    Worker Efficiency
+                </button>
+                <button onclick="switchDemo('maintenance')" class="demo-tab px-6 py-3 rounded-lg font-medium transition-all">
+                    Predictive Maintenance
+                </button>
+                <button onclick="switchDemo('quality')" class="demo-tab px-6 py-3 rounded-lg font-medium transition-all">
+                    Quality Control
+                </button>
+            </div>
+
+            <!-- Vision AI Demo -->
+            <div id="demo-vision-ai" class="demo-content">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Demo Visualization -->
+                    <div class="relative">
+                        <div class="card-elevated overflow-hidden rounded-2xl">
+                            <div class="relative aspect-video bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop" 
+                                     alt="Manufacturing floor with AI-powered camera system showing real-time worker tracking overlays and efficiency heat maps" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                                
+                                <!-- AI Overlay -->
+                                <div class="absolute inset-0 bg-slate-900/40">
+                                    <!-- Detection Boxes -->
+                                    <div class="absolute top-1/4 left-1/4 w-24 h-32 border-2 border-primary-500 rounded-lg animate-pulse-subtle">
+                                        <div class="absolute -top-6 left-0 bg-primary-500 text-white text-xs px-2 py-1 rounded">Worker #1</div>
+                                    </div>
+                                    <div class="absolute top-1/3 right-1/3 w-24 h-32 border-2 border-primary-500 rounded-lg animate-pulse-subtle animation-delay-200">
+                                        <div class="absolute -top-6 left-0 bg-primary-500 text-white text-xs px-2 py-1 rounded">Worker #2</div>
+                                    </div>
+                                    <div class="absolute bottom-1/4 left-1/2 w-24 h-32 border-2 border-primary-500 rounded-lg animate-pulse-subtle animation-delay-400">
+                                        <div class="absolute -top-6 left-0 bg-primary-500 text-white text-xs px-2 py-1 rounded">Worker #3</div>
+                                    </div>
+
+                                    <!-- Stats Overlay -->
+                                    <div class="absolute top-4 right-4 glass p-4 rounded-lg space-y-2">
+                                        <div class="text-white text-sm font-medium">Live Metrics</div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-2 h-2 bg-success-500 rounded-full animate-pulse"></div>
+                                            <span class="text-white text-xs">12 Workers Active</span>
+                                        </div>
+                                        <div class="text-white text-xs">Efficiency: <span class="text-primary-500 font-bold">94.2%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Control Panel -->
+                            <div class="p-6 bg-white border-t border-border">
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="text-sm font-medium text-text-primary">Camera Feed Controls</span>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="p-2 hover:bg-surface rounded-lg transition-colors">
+                                            <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                            </svg>
+                                        </button>
+                                        <button class="p-2 hover:bg-surface rounded-lg transition-colors">
+                                            <svg class="w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <button class="flex-1 btn-primary py-2 text-sm">
+                                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Start Demo
+                                    </button>
+                                    <button class="px-4 py-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors">
+                                        Reset
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-display font-bold mb-4">Vision AI Platform Demo</h3>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                Experience real-time worker tracking and efficiency monitoring through our AI-powered CCTV integration. See how our system identifies workers, tracks movements, and provides actionable insights.
+                            </p>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Real-Time Worker Detection</h4>
+                                    <p class="text-sm text-text-secondary">AI identifies and tracks individual workers across multiple camera feeds</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Efficiency Heat Maps</h4>
+                                    <p class="text-sm text-text-secondary">Visual representation of productivity zones and bottlenecks</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Safety Compliance Monitoring</h4>
+                                    <p class="text-sm text-text-secondary">Automatic detection of safety violations and hazardous situations</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Instant Alerts & Notifications</h4>
+                                    <p class="text-sm text-text-secondary">Real-time alerts for efficiency drops or safety concerns</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="vision_ai_platform.html" class="btn-primary">
+                                Learn More About Vision AI
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </a>
+                            <button onclick="switchDemo('efficiency')" class="btn-secondary">
+                                Next Demo
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worker Efficiency Demo -->
+            <div id="demo-efficiency" class="demo-content hidden">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Demo Visualization -->
+                    <div class="relative">
+                        <div class="card-elevated p-8">
+                            <div class="space-y-6">
+                                <!-- Efficiency Chart -->
+                                <div>
+                                    <div class="flex items-center justify-between mb-4">
+                                        <h4 class="font-semibold text-text-primary">Real-Time Efficiency Tracking</h4>
+                                        <span class="badge badge-success">Live</span>
+                                    </div>
+                                    <div class="h-64 bg-surface rounded-lg p-4 flex items-end justify-between space-x-2">
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 75%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 85%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 92%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 88%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 95%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 90%"></div>
+                                        <div class="flex-1 bg-gradient-brand rounded-t-lg" style="height: 94%"></div>
+                                    </div>
+                                    <div class="flex justify-between mt-2 text-xs text-text-secondary">
+                                        <span>Mon</span>
+                                        <span>Tue</span>
+                                        <span>Wed</span>
+                                        <span>Thu</span>
+                                        <span>Fri</span>
+                                        <span>Sat</span>
+                                        <span>Sun</span>
+                                    </div>
+                                </div>
+
+                                <!-- Worker Stats -->
+                                <div class="grid grid-cols-3 gap-4">
+                                    <div class="bg-surface p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-gradient">247</div>
+                                        <div class="text-xs text-text-secondary mt-1">Active Workers</div>
+                                    </div>
+                                    <div class="bg-surface p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-gradient">94.2%</div>
+                                        <div class="text-xs text-text-secondary mt-1">Avg Efficiency</div>
+                                    </div>
+                                    <div class="bg-surface p-4 rounded-lg">
+                                        <div class="text-2xl font-bold text-gradient">8.5h</div>
+                                        <div class="text-xs text-text-secondary mt-1">Productive Time</div>
+                                    </div>
+                                </div>
+
+                                <!-- Top Performers -->
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-4">Top Performers Today</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-10 h-10 bg-gradient-brand rounded-full flex items-center justify-center text-white font-bold">1</div>
+                                                <div>
+                                                    <div class="font-medium text-text-primary">Worker #A247</div>
+                                                    <div class="text-xs text-text-secondary">Assembly Line 3</div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="font-bold text-success-500">98.5%</div>
+                                                <div class="text-xs text-text-secondary">Efficiency</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-10 h-10 bg-gradient-brand rounded-full flex items-center justify-center text-white font-bold">2</div>
+                                                <div>
+                                                    <div class="font-medium text-text-primary">Worker #B156</div>
+                                                    <div class="text-xs text-text-secondary">Quality Control</div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="font-bold text-success-500">97.8%</div>
+                                                <div class="text-xs text-text-secondary">Efficiency</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="w-10 h-10 bg-gradient-brand rounded-full flex items-center justify-center text-white font-bold">3</div>
+                                                <div>
+                                                    <div class="font-medium text-text-primary">Worker #C089</div>
+                                                    <div class="text-xs text-text-secondary">Packaging</div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right">
+                                                <div class="font-bold text-success-500">96.3%</div>
+                                                <div class="text-xs text-text-secondary">Efficiency</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-display font-bold mb-4">Worker Efficiency Analytics</h3>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                Track individual and team performance with AI-powered analytics. Identify top performers, optimize workflows, and improve overall productivity with data-driven insights.
+                            </p>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Individual Performance Tracking</h4>
+                                    <p class="text-sm text-text-secondary">Monitor each worker's productivity, task completion, and efficiency metrics</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Team Performance Comparison</h4>
+                                    <p class="text-sm text-text-secondary">Compare teams, shifts, and departments to identify best practices</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Productivity Trend Analysis</h4>
+                                    <p class="text-sm text-text-secondary">Historical data analysis to identify patterns and improvement opportunities</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Automated Performance Reports</h4>
+                                    <p class="text-sm text-text-secondary">Daily, weekly, and monthly reports delivered automatically</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="aitools.html" class="btn-primary">
+                                Explore AI Tools Suite
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </a>
+                            <button onclick="switchDemo('maintenance')" class="btn-secondary">
+                                Next Demo
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Predictive Maintenance Demo -->
+            <div id="demo-maintenance" class="demo-content hidden">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Demo Visualization -->
+                    <div class="relative">
+                        <div class="card-elevated p-8">
+                            <div class="space-y-6">
+                                <!-- Equipment Status -->
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-4">Equipment Health Monitoring</h4>
+                                    <div class="space-y-4">
+                                        <div class="p-4 bg-surface rounded-lg">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-12 h-12 bg-success-50 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-6 h-6 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-text-primary">Assembly Robot #A1</div>
+                                                        <div class="text-xs text-text-secondary">Line 3, Station 5</div>
+                                                    </div>
+                                                </div>
+                                                <span class="badge badge-success">Optimal</span>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="text-text-secondary">Health Score</span>
+                                                    <span class="font-semibold text-success-500">98%</span>
+                                                </div>
+                                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                                    <div class="bg-success-500 h-2 rounded-full" style="width: 98%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 bg-surface rounded-lg">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-12 h-12 bg-warning-50 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-6 h-6 text-warning-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-text-primary">Conveyor Belt #B2</div>
+                                                        <div class="text-xs text-text-secondary">Line 1, Station 8</div>
+                                                    </div>
+                                                </div>
+                                                <span class="badge badge-warning">Attention</span>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="text-text-secondary">Health Score</span>
+                                                    <span class="font-semibold text-warning-500">72%</span>
+                                                </div>
+                                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                                    <div class="bg-warning-500 h-2 rounded-full" style="width: 72%"></div>
+                                                </div>
+                                                <div class="flex items-start space-x-2 mt-3 p-3 bg-warning-50 rounded-lg">
+                                                    <svg class="w-5 h-5 text-warning-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                                                    </svg>
+                                                    <div class="text-xs text-warning-700">
+                                                        <div class="font-semibold mb-1">Maintenance Recommended</div>
+                                                        <div>Belt tension adjustment needed within 48 hours</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 bg-surface rounded-lg">
+                                            <div class="flex items-center justify-between mb-3">
+                                                <div class="flex items-center space-x-3">
+                                                    <div class="w-12 h-12 bg-success-50 rounded-lg flex items-center justify-center">
+                                                        <svg class="w-6 h-6 text-success-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="font-medium text-text-primary">Welding Station #C3</div>
+                                                        <div class="text-xs text-text-secondary">Line 2, Station 12</div>
+                                                    </div>
+                                                </div>
+                                                <span class="badge badge-success">Optimal</span>
+                                            </div>
+                                            <div class="space-y-2">
+                                                <div class="flex justify-between text-sm">
+                                                    <span class="text-text-secondary">Health Score</span>
+                                                    <span class="font-semibold text-success-500">95%</span>
+                                                </div>
+                                                <div class="w-full bg-slate-200 rounded-full h-2">
+                                                    <div class="bg-success-500 h-2 rounded-full" style="width: 95%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Maintenance Schedule -->
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-4">Upcoming Maintenance</h4>
+                                    <div class="space-y-3">
+                                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="text-center">
+                                                    <div class="text-xs text-text-secondary">Dec</div>
+                                                    <div class="text-lg font-bold text-text-primary">24</div>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium text-text-primary text-sm">Belt Tension Adjustment</div>
+                                                    <div class="text-xs text-text-secondary">Conveyor Belt #B2</div>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs text-warning-500 font-medium">Urgent</span>
+                                        </div>
+
+                                        <div class="flex items-center justify-between p-3 bg-surface rounded-lg">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="text-center">
+                                                    <div class="text-xs text-text-secondary">Dec</div>
+                                                    <div class="text-lg font-bold text-text-primary">28</div>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium text-text-primary text-sm">Routine Inspection</div>
+                                                    <div class="text-xs text-text-secondary">Assembly Robot #A1</div>
+                                                </div>
+                                            </div>
+                                            <span class="text-xs text-text-secondary font-medium">Scheduled</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-display font-bold mb-4">Predictive Maintenance</h3>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                Prevent equipment failures before they happen with AI-powered predictive maintenance. Monitor equipment health, schedule maintenance proactively, and minimize costly downtime.
+                            </p>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">AI-Powered Failure Prediction</h4>
+                                    <p class="text-sm text-text-secondary">Machine learning algorithms predict equipment failures up to 30 days in advance</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Real-Time Health Monitoring</h4>
+                                    <p class="text-sm text-text-secondary">Continuous monitoring of equipment performance and health indicators</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Automated Maintenance Scheduling</h4>
+                                    <p class="text-sm text-text-secondary">Smart scheduling optimizes maintenance timing to minimize production impact</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Cost Savings Analytics</h4>
+                                    <p class="text-sm text-text-secondary">Track maintenance costs and ROI from prevented downtime</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 gap-4 p-6 bg-surface rounded-xl">
+                            <div>
+                                <div class="text-3xl font-bold text-gradient">38%</div>
+                                <div class="text-sm text-text-secondary mt-1">Downtime Reduction</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-gradient">$2.1M</div>
+                                <div class="text-sm text-text-secondary mt-1">Annual Savings</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="manufacturing_solutions.html" class="btn-primary">
+                                View Solutions
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </a>
+                            <button onclick="switchDemo('quality')" class="btn-secondary">
+                                Next Demo
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quality Control Demo -->
+            <div id="demo-quality" class="demo-content hidden">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Demo Visualization -->
+                    <div class="relative">
+                        <div class="card-elevated overflow-hidden rounded-2xl">
+                            <div class="relative aspect-video bg-slate-900">
+                                <img src="https://images.pexels.com/photos/257700/pexels-photo-257700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                     alt="Quality control inspection station with AI-powered defect detection system analyzing manufactured components on conveyor belt" 
+                                     class="w-full h-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?q=80&w=2940&auto=format&fit=crop'; this.onerror=null;">
+                                
+                                <!-- AI Detection Overlay -->
+                                <div class="absolute inset-0 bg-slate-900/40">
+                                    <!-- Defect Detection Boxes -->
+                                    <div class="absolute top-1/3 left-1/4 w-32 h-32 border-2 border-error-500 rounded-lg">
+                                        <div class="absolute -top-8 left-0 bg-error-500 text-white text-xs px-2 py-1 rounded flex items-center space-x-1">
+                                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>Defect: Scratch</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="absolute top-1/2 right-1/3 w-28 h-28 border-2 border-success-500 rounded-lg">
+                                        <div class="absolute -top-8 left-0 bg-success-500 text-white text-xs px-2 py-1 rounded flex items-center space-x-1">
+                                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>Pass</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Stats Panel -->
+                                    <div class="absolute bottom-4 left-4 right-4 glass p-4 rounded-lg">
+                                        <div class="grid grid-cols-3 gap-4 text-center">
+                                            <div>
+                                                <div class="text-2xl font-bold text-white">1,247</div>
+                                                <div class="text-xs text-white/80">Inspected</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-bold text-success-500">1,189</div>
+                                                <div class="text-xs text-white/80">Passed</div>
+                                            </div>
+                                            <div>
+                                                <div class="text-2xl font-bold text-error-500">58</div>
+                                                <div class="text-xs text-white/80">Rejected</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Defect Analysis -->
+                            <div class="p-6 bg-white">
+                                <h4 class="font-semibold text-text-primary mb-4">Defect Analysis</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-error-500 rounded-full"></div>
+                                            <span class="text-sm text-text-secondary">Surface Scratches</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-32 bg-slate-200 rounded-full h-2">
+                                                <div class="bg-error-500 h-2 rounded-full" style="width: 45%"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold text-text-primary">45%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-warning-500 rounded-full"></div>
+                                            <span class="text-sm text-text-secondary">Dimensional Issues</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-32 bg-slate-200 rounded-full h-2">
+                                                <div class="bg-warning-500 h-2 rounded-full" style="width: 30%"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold text-text-primary">30%</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-3 h-3 bg-accent-500 rounded-full"></div>
+                                            <span class="text-sm text-text-secondary">Color Variations</span>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <div class="w-32 bg-slate-200 rounded-full h-2">
+                                                <div class="bg-accent-500 h-2 rounded-full" style="width: 25%"></div>
+                                            </div>
+                                            <span class="text-sm font-semibold text-text-primary">25%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Information -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-3xl font-display font-bold mb-4">AI-Powered Quality Control</h3>
+                            <p class="text-lg text-text-secondary leading-relaxed">
+                                Achieve 99.9% defect detection accuracy with computer vision AI. Automatically identify surface defects, dimensional issues, and quality variations in real-time, reducing waste and improving product quality.
+                            </p>
+                        </div>
+
+                        <!-- Features List -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Automated Visual Inspection</h4>
+                                    <p class="text-sm text-text-secondary">AI-powered cameras inspect 100% of products at production speed</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Multi-Defect Detection</h4>
+                                    <p class="text-sm text-text-secondary">Simultaneously detect scratches, dents, color variations, and dimensional issues</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Real-Time Alerts</h4>
+                                    <p class="text-sm text-text-secondary">Instant notifications when defect rates exceed thresholds</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-10 h-10 bg-primary-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-1">Traceability & Documentation</h4>
+                                    <p class="text-sm text-text-secondary">Complete inspection records with images for compliance and analysis</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 gap-4 p-6 bg-surface rounded-xl">
+                            <div>
+                                <div class="text-3xl font-bold text-gradient">99.9%</div>
+                                <div class="text-sm text-text-secondary mt-1">Detection Accuracy</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-gradient">28%</div>
+                                <div class="text-sm text-text-secondary mt-1">Waste Reduction</div>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="case_studies.html" class="btn-primary">
+                                View Success Stories
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </a>
+                            <button onclick="switchDemo('vision-ai')" class="btn-secondary">
+                                Back to First Demo
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Guided Demo Section -->
+    <section id="schedule-demo" class="section bg-surface">
+        <div class="container-custom">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center space-y-4 mb-12">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold">Schedule a <span class="text-gradient">Guided Demo</span></h2>
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                        Get a personalized walkthrough with our manufacturing AI experts
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Demo Booking Form -->
+                    <div class="card-elevated p-8">
+                        <form id="demoForm" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-text-primary mb-2">First Name *</label>
+                                    <input type="text" required class="input" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-text-primary mb-2">Last Name *</label>
+                                    <input type="text" required class="input" placeholder="Smith">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Work Email *</label>
+                                <input type="email" required class="input" placeholder="john.smith@company.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Company Name *</label>
+                                <input type="text" required class="input" placeholder="Your Company">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Phone Number</label>
+                                <input type="tel" class="input" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Industry *</label>
+                                <select required class="input">
+                                    <option value="">Select your industry</option>
+                                    <option value="automotive">Automotive Manufacturing</option>
+                                    <option value="electronics">Electronics Manufacturing</option>
+                                    <option value="food">Food & Beverage Processing</option>
+                                    <option value="pharma">Pharmaceuticals</option>
+                                    <option value="aerospace">Aerospace & Defense</option>
+                                    <option value="consumer">Consumer Goods</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Number of Employees</label>
+                                <select class="input">
+                                    <option value="">Select range</option>
+                                    <option value="1-50">1-50</option>
+                                    <option value="51-200">51-200</option>
+                                    <option value="201-500">201-500</option>
+                                    <option value="501-1000">501-1,000</option>
+                                    <option value="1001+">1,001+</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Preferred Demo Date</label>
+                                <input type="date" class="input" min="2025-12-23">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-text-primary mb-2">What would you like to see?</label>
+                                <textarea class="input" rows="4" placeholder="Tell us about your specific needs and challenges..."></textarea>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="consent" required class="mt-1">
+                                <label for="consent" class="text-sm text-text-secondary">
+                                    I agree to receive communications from Dotone about products and services. I understand I can unsubscribe at any time.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-primary w-full">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                                Schedule My Demo
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Demo Benefits -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-display font-semibold mb-4">What to Expect</h3>
+                            <p class="text-text-secondary mb-6">
+                                Our guided demos are tailored to your specific manufacturing challenges and goals. Here's what you'll experience:
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white font-bold">1</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-2">Discovery Call (15 min)</h4>
+                                    <p class="text-sm text-text-secondary">We'll discuss your current challenges, goals, and specific use cases to customize the demo experience.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white font-bold">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-2">Live Platform Demo (45 min)</h4>
+                                    <p class="text-sm text-text-secondary">See Dotone's Vision AI platform in action with scenarios relevant to your industry and operations.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white font-bold">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-2">ROI Analysis (20 min)</h4>
+                                    <p class="text-sm text-text-secondary">We'll calculate potential efficiency gains and cost savings specific to your operation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white font-bold">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-text-primary mb-2">Q&A Session (20 min)</h4>
+                                    <p class="text-sm text-text-secondary">Ask our experts anything about implementation, integration, security, and ongoing support.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial -->
+                        <div class="card p-6 bg-primary-50 border-primary-200">
+                            <div class="flex items-start space-x-4">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" 
+                                     alt="Portrait of David Martinez, Operations Director at TechManufacturing, wearing business attire" 
+                                     class="w-12 h-12 rounded-full object-cover"
+                                     loading="lazy"
+                                     onerror="this.src='https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                                <div>
+                                    <p class="text-sm text-text-secondary italic mb-3">
+                                        "The guided demo was incredibly valuable. The team took time to understand our specific challenges and showed exactly how Dotone could solve them. We signed up for a trial the same day."
+                                    </p>
+                                    <div>
+                                        <div class="font-semibold text-text-primary text-sm">David Martinez</div>
+                                        <div class="text-xs text-text-secondary">Operations Director, TechManufacturing</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Signals -->
+                        <div class="flex flex-wrap gap-4 text-sm text-text-secondary">
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>No credit card required</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>No sales pressure</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <svg class="w-5 h-5 text-success-500" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Flexible scheduling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trial Signup Section -->
+    <section id="trial-signup" class="section">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto">
+                <div class="relative rounded-3xl overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-brand"></div>
+                    <div class="absolute inset-0 opacity-10">
+                        <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
+                    </div>
+                    
+                    <div class="relative z-10 px-8 py-16 md:px-16 md:py-20">
+                        <div class="text-center space-y-6 mb-12">
+                            <h2 class="text-4xl md:text-5xl font-display font-bold text-white">
+                                Start Your Free 14-Day Trial
+                            </h2>
+                            <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                                Experience the full power of Dotone's AI platform with no credit card required. Get instant access to all features and dedicated onboarding support.
+                            </p>
+                        </div>
+
+                        <form id="trialForm" class="max-w-2xl mx-auto space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">First Name *</label>
+                                    <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-white mb-2">Last Name *</label>
+                                    <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Work Email *</label>
+                                <input type="email" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Company Name *</label>
+                                <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Phone Number</label>
+                                <input type="tel" class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-medium text-white mb-2">Industry *</label>
+                                <select required class="input bg-white/10 border-white/20 text-white focus:bg-white/20">
+                                    <option value="" class="text-text-primary">Select your industry</option>
+                                    <option value="automotive" class="text-text-primary">Automotive Manufacturing</option>
+                                    <option value="electronics" class="text-text-primary">Electronics Manufacturing</option>
+                                    <option value="food" class="text-text-primary">Food & Beverage Processing</option>
+                                    <option value="pharma" class="text-text-primary">Pharmaceuticals</option>
+                                    <option value="aerospace" class="text-text-primary">Aerospace & Defense</option>
+                                    <option value="consumer" class="text-text-primary">Consumer Goods</option>
+                                    <option value="other" class="text-text-primary">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="trialConsent" required class="mt-1">
+                                <label for="trialConsent" class="text-sm text-white/90">
+                                    I agree to the Terms of Service and Privacy Policy. I understand I can cancel anytime during the trial period.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg hover:shadow-xl">
+                                <span>Start Free Trial Now</span>
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                </svg>
+                            </button>
+
+                            <div class="flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>14-day free trial</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>No credit card required</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Cancel anytime</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="section-sm bg-surface">
+        <div class="container-custom">
+            <div class="text-center space-y-4 mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold">Demo <span class="text-gradient">Resources</span></h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Additional materials to help you understand Dotone's capabilities
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product Overview -->
+                <div class="card p-6 hover-lift">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-3">Product Overview</h3>
+                    <p class="text-text-secondary mb-4">Comprehensive guide to Dotone's Vision AI platform and AI tools suite</p>
+                    <a href="javascript:void(0)" class="inline-flex items-center text-primary-500 font-medium hover:text-primary-600">
+                        Download PDF
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Implementation Guide -->
+                <div class="card p-6 hover-lift">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-3">Implementation Guide</h3>
+                    <p class="text-text-secondary mb-4">Step-by-step guide to deploying Dotone in your manufacturing facility</p>
+                    <a href="javascript:void(0)" class="inline-flex items-center text-primary-500 font-medium hover:text-primary-600">
+                        Download PDF
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- ROI Calculator -->
+                <div class="card p-6 hover-lift">
+                    <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-display font-semibold mb-3">ROI Calculator</h3>
+                    <p class="text-text-secondary mb-4">Calculate your potential savings and efficiency gains with Dotone</p>
+                    <a href="manufacturing_solutions.html#roi-calculator" class="inline-flex items-center text-primary-500 font-medium hover:text-primary-600">
+                        Open Calculator
+                        <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center space-y-4 mb-12">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                    <p class="text-xl text-text-secondary">
+                        Common questions about our demos and trials
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(1)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">How long does the interactive demo take?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-1" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">The self-guided interactive demos can be completed in 10-15 minutes each. You can explore at your own pace and revisit any section. For a comprehensive experience, we recommend trying all four demo scenarios, which takes about 45 minutes total.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(2)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">What's included in the 14-day free trial?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-2" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">The free trial includes full access to all Dotone features: Vision AI platform, all five AI tools (AI Agent, Salesman Tracker, Invoice Scanner, Business Card Scanner, Lead Finder), unlimited users, dedicated onboarding support, and technical documentation. No credit card is required to start.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(3)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">Can I schedule a demo for my entire team?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-3" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">Absolutely! We offer group demos for teams of any size. When scheduling your guided demo, simply indicate the number of attendees and their roles. We'll customize the presentation to address the specific concerns of operations managers, IT directors, executives, and other stakeholders.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(4)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">Do you offer on-site demonstrations?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-4" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">Yes, for qualified opportunities, we can arrange on-site demonstrations at your manufacturing facility. This allows us to assess your specific environment, discuss integration with your existing systems, and provide a customized proof of concept. Contact our sales team to discuss on-site demo availability.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(5)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">What happens after the trial period ends?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-5" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">At the end of your 14-day trial, you can choose to subscribe to a paid plan that fits your needs. If you decide not to continue, your trial will simply expire with no charges. All your data will be securely stored for 30 days in case you decide to return. We'll never automatically charge you without explicit consent.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="card">
+                        <button onclick="toggleFaq(6)" class="w-full p-6 text-left flex items-center justify-between">
+                            <span class="font-semibold text-text-primary">Can I test Dotone with my actual CCTV cameras?</span>
+                            <svg class="w-5 h-5 text-text-secondary transition-transform faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="faq-6" class="hidden px-6 pb-6">
+                            <p class="text-text-secondary">Yes! During your trial or guided demo, we can connect to your existing CCTV infrastructure (with proper security protocols). This allows you to see Dotone's Vision AI working with your actual manufacturing floor footage. Our team will work with your IT department to ensure secure, compliant integration during the testing phase.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-text-secondary mb-4">Still have questions?</p>
+                    <a href="contact.html" class="btn-primary">
+                        Contact Our Team
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+ <script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+</script>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
+    <!-- JavaScript -->
+    <script>
+        // Industry Selection
+        let selectedIndustry = null;
+
+        function selectIndustry(industry) {
+            selectedIndustry = industry;
+            const industryNames = {
+                'automotive': 'Automotive Manufacturing',
+                'electronics': 'Electronics Manufacturing',
+                'food': 'Food Processing',
+                'pharma': 'Pharmaceuticals'
+            };
+
+            document.getElementById('selectedIndustryName').textContent = industryNames[industry];
+            document.getElementById('industrySelected').classList.remove('hidden');
+
+            // Update all industry cards
+            document.querySelectorAll('.industry-card').forEach(card => {
+                card.classList.remove('border-2', 'border-primary-500', 'bg-primary-50');
+            });
+
+            // Highlight selected card
+            event.currentTarget.classList.add('border-2', 'border-primary-500', 'bg-primary-50');
+
+            // Smooth scroll to demos
+            setTimeout(() => {
+                document.getElementById('interactive-demos').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        }
+
+        function clearIndustry() {
+            selectedIndustry = null;
+            document.getElementById('industrySelected').classList.add('hidden');
+            document.querySelectorAll('.industry-card').forEach(card => {
+                card.classList.remove('border-2', 'border-primary-500', 'bg-primary-50');
+            });
+        }
+
+        // Demo Switching
+        function switchDemo(demoType) {
+            // Hide all demos
+            document.querySelectorAll('.demo-content').forEach(demo => {
+                demo.classList.add('hidden');
+            });
+
+            // Show selected demo
+            document.getElementById(`demo-${demoType}`).classList.remove('hidden');
+
+            // Update tabs
+            document.querySelectorAll('.demo-tab').forEach(tab => {
+                tab.classList.remove('active', 'bg-gradient-brand', 'text-white');
+                tab.classList.add('bg-surface', 'text-text-secondary');
+            });
+
+            event.currentTarget.classList.add('active', 'bg-gradient-brand', 'text-white');
+            event.currentTarget.classList.remove('bg-surface', 'text-text-secondary');
+
+            // Smooth scroll to demo section
+            document.getElementById('interactive-demos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // FAQ Toggle
+        function toggleFaq(index) {
+            const faqContent = document.getElementById(`faq-${index}`);
+            const icon = event.currentTarget.querySelector('.faq-icon');
+
+            faqContent.classList.toggle('hidden');
+            icon.style.transform = faqContent.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+
+        // Form Submissions
+        document.getElementById('demoForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for scheduling a demo! Our team will contact you within 24 hours to confirm your preferred time slot.');
+            e.target.reset();
+        });
+
+        document.getElementById('trialForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Welcome to Dotone! Check your email for login credentials and onboarding instructions. Your 14-day free trial starts now!');
+            e.target.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize first demo tab as active
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstTab = document.querySelector('.demo-tab');
+            if (firstTab) {
+                firstTab.classList.add('active', 'bg-gradient-brand', 'text-white');
+                firstTab.classList.remove('bg-surface', 'text-text-secondary');
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>

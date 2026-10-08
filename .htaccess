@@ -1,0 +1,44 @@
+RewriteEngine On
+
+# ------------------------------------------------
+# 1. BLOCK .env FILE (SECURITY – MUST BE FIRST)
+# ------------------------------------------------
+<Files ".env">
+    Require all denied
+</Files>
+
+# ------------------------------------------------
+# 2. ALLOW SYSTEM FILES (NO REWRITE)
+# ------------------------------------------------
+RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico)$ - [L]
+
+# ------------------------------------------------
+# 3. REDIRECT .html → CLEAN URL (SEO)
+# ------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
+RewriteRule ^ %1 [R=301,L]
+
+# ------------------------------------------------
+# 4. INTERNAL CLEAN URL LOADER (.html fallback)
+# ------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+
+# ------------------------------------------------
+# 5. GZIP COMPRESSION & BROWSER CACHING
+# ------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+</IfModule>

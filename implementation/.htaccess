@@ -1,0 +1,15 @@
+# DotOne Playbook - keep config, shared code and the raw playbook file private
+DirectoryIndex index.php
+Options -Indexes
+
+<FilesMatch "^(config|common)\.php$|^playbook\.html$|\.md$">
+  Require all denied
+</FilesMatch>
+
+# Force HTTPS (passwords are sent at sign-in)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>

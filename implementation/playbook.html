@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DotOne Implementation Playbook & Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#081C4B; --blue:#0096EE; --mynt:#00FEC0;
+  --bg:#F4F7FB; --surface:#FFFFFF; --surface2:#EAF1F9; --ink:#081C4B; --muted:#4F5E7B; --line:#D6E0EC;
+  --ok:#00A57E; --warn:#D98A00; --bad:#D6334B; --na:#8C98AE;
+  --blue-ink:#0077BD;
+  --radius-s:6px; --radius-m:12px;
+  font-family:"Outfit",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#040D26; --surface:#0A1A42; --surface2:#10245A; --ink:#E7EEFA; --muted:#9DAECB; --line:#1E3368;
+    --ok:#00E0AD; --warn:#FFB938; --bad:#FF6B82; --na:#7E8BA6; --blue-ink:#4DB8FF;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#040D26; --surface:#0A1A42; --surface2:#10245A; --ink:#E7EEFA; --muted:#9DAECB; --line:#1E3368;
+  --ok:#00E0AD; --warn:#FFB938; --bad:#FF6B82; --na:#7E8BA6; --blue-ink:#4DB8FF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--blue-ink)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:30;background:var(--navy);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.topbar-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:20px;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:12px;white-space:nowrap}
+.brand .logo{height:30px;width:auto;color:#fff;display:block}
+.brand small{font-weight:400;opacity:.75;font-size:14px;letter-spacing:.01em}
+.switch{margin-left:auto;display:flex;background:rgba(255,255,255,.08);border-radius:999px;padding:4px}
+.switch button{border:0;background:transparent;color:#cfe3ff;padding:7px 18px;border-radius:999px;cursor:pointer;font-weight:500}
+.switch button[aria-selected="true"]{background:var(--mynt);color:var(--navy);font-weight:600}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;overflow:hidden}
+.hero-in{max-width:1240px;margin:0 auto;padding:56px 20px 36px}
+.hero h1{font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.03em;margin:0 0 16px;font-weight:700;max-width:14ch}
+.hero p.lede{font-size:19px;color:#BFD3F2;max-width:60ch;margin:0 0 36px;font-weight:300}
+.journey{position:relative;margin-top:8px;overflow-x:auto;padding-bottom:10px}
+.journey ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(10,minmax(96px,1fr));min-width:980px;position:relative}
+.journey ol::before{content:"";position:absolute;left:14px;right:14px;top:14px;height:3px;background:linear-gradient(90deg,var(--blue),var(--mynt));border-radius:3px}
+.journey li a{display:block;text-decoration:none;color:#fff;padding-right:10px}
+.journey .stn{position:relative;width:31px;height:31px;border-radius:50%;background:var(--navy);border:3px solid var(--blue);display:grid;place-items:center;font-size:13px;font-weight:700;margin-bottom:10px;transition:background .15s}
+.journey li:last-child .stn{border-color:var(--mynt)}
+.journey li a:hover .stn,.journey li a:focus-visible .stn{background:var(--mynt);color:var(--navy);border-color:var(--mynt)}
+.journey .nm{font-weight:600;font-size:15px;line-height:1.2;display:block}
+.journey .gt{font-size:12.5px;color:#8FB0DD;display:block;margin-top:4px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:30px;font-size:14.5px;color:#BFD3F2}
+.hero-meta b{color:var(--mynt);font-weight:600}
+
+/* Guide layout */
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+.guide{display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px;padding:44px 0 90px}
+.rail{position:sticky;top:78px;align-self:start;max-height:calc(100vh - 96px);overflow:auto;font-size:14.5px;padding-right:6px}
+.rail h4{margin:18px 0 6px;font-size:13px;color:var(--muted);font-weight:600}
+.rail a{display:flex;gap:10px;padding:5px 8px;border-radius:var(--radius-s);text-decoration:none;color:var(--ink)}
+.rail a:hover{background:var(--surface2)}
+.rail a.on{background:var(--surface2);color:var(--blue-ink);font-weight:600}
+.rail a span.n{color:var(--muted);min-width:18px;font-variant-numeric:tabular-nums}
+.main{min-width:0}
+.sec{padding:10px 0 46px;border-bottom:1px solid var(--line);margin-bottom:40px;scroll-margin-top:80px}
+.sec:last-child{border-bottom:0}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:6px}
+.pno{font-size:56px;font-weight:800;line-height:.9;color:var(--blue);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.sec h2{font-size:clamp(26px,3.2vw,36px);line-height:1.1;margin:0;letter-spacing:-.02em;font-weight:700}
+.goal{font-size:19px;color:var(--muted);max-width:66ch;margin:10px 0 22px;font-weight:300}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;border:1px solid var(--line);border-radius:var(--radius-m);background:var(--surface);margin:0 0 28px;overflow:hidden}
+.facts div{padding:12px 16px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts dt{font-size:13px;color:var(--muted)}
+.facts dd{margin:2px 0 0;font-weight:600;font-size:15px}
+.gate{display:inline-flex;align-items:center;gap:6px;background:rgba(0,254,192,.18);color:var(--ink);border:1px solid rgba(0,165,126,.45);padding:1px 9px;border-radius:999px;font-size:13.5px;font-weight:600;white-space:nowrap}
+.gate::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
+h3{font-size:20px;margin:30px 0 10px;letter-spacing:-.01em}
+.prose{max-width:72ch}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;max-width:74ch}
+.steps>li{counter-increment:s;position:relative;padding:12px 0 12px 46px;border-top:1px solid var(--line)}
+.steps>li:first-child{border-top:0}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:12px;width:30px;height:30px;border-radius:50%;background:var(--surface2);color:var(--blue-ink);font-weight:700;font-size:14px;display:grid;place-items:center}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--muted)}
+ul.plain{margin:0;padding-left:20px;max-width:72ch}
+ul.plain li{margin:5px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.note{border-left:4px solid var(--mynt);background:var(--surface);padding:14px 18px;border-radius:0 var(--radius-m) var(--radius-m) 0;max-width:74ch;margin:18px 0}
+.note.warn{border-left-color:var(--warn)}
+.note h5{margin:0 0 6px;font-size:15px}
+.note ul{margin:0;padding-left:18px}
+.note li{margin:4px 0}
+.hi{font-style:normal;color:var(--blue-ink)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-m);background:var(--surface);margin:14px 0 8px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:10px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--surface2);font-weight:600;font-size:13.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.k{font-weight:600;white-space:nowrap}
+.cls{display:inline-block;min-width:32px;text-align:center;font-weight:700;border-radius:5px;padding:1px 6px;font-size:13px;color:#fff;background:var(--blue)}
+.cls.c0{background:#00A57E}.cls.c1{background:#0096EE}.cls.c2{background:#5563D9}.cls.c3{background:#B0469C}.cls.c4{background:#D98A00}.cls.x{background:#D6334B}
+
+/* Question bank */
+.qb-tools{display:flex;gap:12px;align-items:center;margin:8px 0 14px;flex-wrap:wrap}
+.qb-tools input{flex:1;min-width:220px;padding:10px 14px;border-radius:var(--radius-s);border:1px solid var(--line);background:var(--surface)}
+.qb-tools button{border:1px solid var(--line);background:var(--surface);padding:9px 14px;border-radius:var(--radius-s);cursor:pointer}
+details.mod{border:1px solid var(--line);border-radius:var(--radius-m);background:var(--surface);margin:8px 0}
+details.mod summary{cursor:pointer;padding:13px 18px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.mod summary::-webkit-details-marker{display:none}
+details.mod summary::after{content:"+";font-size:20px;line-height:1;color:var(--blue)}
+details.mod[open] summary::after{content:"−"}
+details.mod summary small{color:var(--muted);font-weight:400;margin-left:8px}
+details.mod ol{margin:0;padding:4px 22px 16px 46px}
+details.mod li{margin:7px 0}
+details.mod li .hin{display:block;color:var(--muted);font-size:14.5px}
+details.mod .why{padding:0 18px 4px;color:var(--muted);font-size:14.5px;margin:0}
+
+/* Tracker */
+#tracker{padding:30px 0 90px}
+.tk-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m)}
+.plist{padding:10px}
+.plist h3{margin:6px 8px 10px;font-size:16px}
+.pitem{display:block;width:100%;text-align:left;border:0;background:transparent;padding:10px 10px;border-radius:var(--radius-s);cursor:pointer}
+.pitem:hover{background:var(--surface2)}
+.pitem.on{background:var(--surface2);box-shadow:inset 3px 0 0 var(--blue)}
+.pitem b{display:block;font-weight:600}
+.pitem .sub{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.bar{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--mynt))}
+.btn{border:0;background:var(--blue);color:#fff;padding:9px 16px;border-radius:var(--radius-s);cursor:pointer;font-weight:600}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:500}
+.btn.danger{background:transparent;color:var(--bad);border:1px solid var(--line);font-weight:500}
+.btn.block{width:100%;margin-top:8px}
+.store-state{font-size:12.5px;color:var(--muted);padding:6px 10px 2px}
+.empty{padding:50px 30px;text-align:center}
+.empty h2{margin:0 0 8px}
+.empty p{color:var(--muted);max-width:52ch;margin:0 auto 18px}
+.form{padding:22px}
+.form h2{margin:0 0 4px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:14px;color:var(--muted)}
+label.f input,label.f select,label.f textarea{padding:9px 11px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg);color:var(--ink)}
+.modpick{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:6px 14px;margin:10px 0 18px}
+.modpick label{display:flex;gap:8px;align-items:center;font-size:14.5px;cursor:pointer}
+.phead{padding:20px 22px;border-bottom:1px solid var(--line)}
+.phead-top{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.phead h2{margin:0;font-size:28px;letter-spacing:-.02em}
+.phead .meta{color:var(--muted);font-size:14.5px;margin-top:2px}
+.kpis{display:flex;gap:26px;margin-left:auto;flex-wrap:wrap}
+.kpi b{display:block;font-size:30px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi span{font-size:13px;color:var(--muted)}
+.kpi.late b{color:var(--bad)}
+.phasebars{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;margin-top:18px}
+.phasebars button{border:1px solid var(--line);background:var(--bg);border-radius:var(--radius-s);padding:7px 7px 8px;cursor:pointer;text-align:left;min-width:0}
+.phasebars button.on{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.phasebars .pn{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+.phasebars .pp{font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}
+.tabs2{display:flex;gap:4px;padding:0 22px;border-bottom:1px solid var(--line)}
+.tabs2 button{border:0;background:transparent;padding:12px 14px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;font-weight:500}
+.tabs2 button.on{color:var(--ink);border-bottom-color:var(--blue);font-weight:600}
+.tphase{padding:4px 0}
+.tphase h4{margin:0;padding:16px 22px 8px;font-size:15.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.tphase h4 .c{color:var(--muted);font-weight:400;font-size:13.5px}
+.trow{display:grid;grid-template-columns:150px minmax(0,1fr) 140px 140px minmax(0,1fr);gap:10px;align-items:center;padding:8px 22px;border-top:1px solid var(--line)}
+.trow.g{background:rgba(0,254,192,.07)}
+.trow .t{font-size:14.5px}
+.trow .t small{display:block;color:var(--muted);font-size:12.5px}
+.trow input,.trow select{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg);font-size:13.5px;min-width:0}
+.st{font-weight:600}
+.st[data-s="done"]{color:var(--ok)} .st[data-s="wip"]{color:var(--blue-ink)} .st[data-s="blocked"]{color:var(--bad)} .st[data-s="na"]{color:var(--na)}
+.trow.isna .t{color:var(--na);text-decoration:line-through}
+.thead{font-size:12.5px;color:var(--muted);background:var(--surface2);border-top:0}
+.overdue input[type=date]{border-color:var(--bad);color:var(--bad)}
+.crwrap{padding:18px 22px}
+.crform{display:grid;grid-template-columns:2fr 1fr 1fr 90px 90px auto;gap:10px;align-items:end}
+.crform input,.crform select{padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg);width:100%}
+.crtbl td select,.crtbl td input{padding:5px 7px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg);font-size:13.5px;max-width:100%}
+.sugg{font-size:13px;color:var(--muted)}
+.del{border:0;background:transparent;color:var(--bad);cursor:pointer;font-size:13px}
+.legend{font-size:13.5px;color:var(--muted);margin:10px 0 0}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px 22px;border-bottom:1px solid var(--line)}
+.toolbar select{padding:7px 10px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg)}
+.footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+
+@media (max-width:980px){
+  .guide{grid-template-columns:1fr;gap:10px}
+  .rail{position:static;max-height:none;display:none}
+  .tk-grid{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .phasebars{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .trow{grid-template-columns:1fr 1fr;padding:12px 18px}
+  .trow .t{grid-column:1/-1;order:-1}
+  .trow.thead{display:none}
+  .crform{grid-template-columns:1fr 1fr}
+  .kpis{margin-left:0}
+}
+
+/* Requirement capture */
+.qgrp h4{margin:0;padding:16px 22px 8px;font-size:15.5px;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.qgrp h4 .c{color:var(--muted);font-weight:400;font-size:13.5px}
+.qrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) auto;gap:12px;padding:10px 22px;border-top:1px solid var(--line);align-items:start}
+.qrow .qq{font-size:14.5px}
+.qrow .qq .hin{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
+.qrow textarea{width:100%;min-height:54px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--radius-s);background:var(--bg);color:var(--ink);font-size:14px;resize:vertical}
+.qrow.ans textarea{border-color:var(--ok)}
+.gapbtn{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:var(--radius-s);padding:6px 9px;font-size:12.5px;cursor:pointer;white-space:nowrap}
+.gapbtn:hover{border-color:var(--blue);color:var(--blue-ink)}
+.outscope{padding:14px 22px 24px}
+.outscope summary{cursor:pointer;color:var(--muted);font-size:14px}
+/* Generated document */
+.docprev{padding:0 22px 30px}
+.doc{background:#fff;color:#081C4B;border:1px solid var(--line);border-radius:var(--radius-m);padding:38px 40px;max-width:900px;font-size:14.5px;line-height:1.55}
+.doc .d-top{border-bottom:3px solid #0096EE;padding-bottom:14px;margin-bottom:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+.doc .d-brand .logo{height:34px;width:auto;color:#0097ef;display:block;margin-bottom:6px}
+.doc .d-brand small{display:block;font-size:13px;font-weight:400;color:#4F5E7B;letter-spacing:0}
+.doc .d-meta{font-size:13px;color:#4F5E7B;text-align:right}
+.doc h1{font-size:25px;margin:0 0 4px;letter-spacing:-.02em}
+.doc h2{font-size:18px;margin:30px 0 8px;padding-bottom:5px;border-bottom:1px solid #D6E0EC}
+.doc h3{font-size:15px;margin:18px 0 6px}
+.doc p{margin:8px 0;max-width:75ch}
+.doc table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px}
+.doc th,.doc td{border:1px solid #D6E0EC;padding:7px 10px;text-align:left;vertical-align:top}
+.doc th{background:#EAF1F9;font-weight:600}
+.doc .d-qa{margin:0 0 12px;padding:0 0 0 14px;border-left:3px solid #00FEC0}
+.doc .d-qa b{display:block;font-weight:600}
+.doc .d-qa span{color:#33415C;white-space:pre-wrap}
+.doc ul{margin:8px 0;padding-left:20px}
+.doc li{margin:4px 0}
+.doc .d-sign{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.doc .d-sign div{border-top:1px solid #081C4B;padding-top:8px;font-size:13px;color:#4F5E7B;margin-top:56px}
+.doc .d-foot{margin-top:28px;border-top:1px solid #D6E0EC;padding-top:10px;font-size:12px;color:#4F5E7B}
+.doc .d-gate{background:#00FEC0;color:#081C4B;border-radius:3px;padding:1px 6px;font-size:12px;font-weight:600;white-space:nowrap}
+.doc .d-open{color:#D6334B}
+@media (max-width:980px){.qrow{grid-template-columns:1fr}.doc{padding:22px}}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand" id="brand"><svg class="logo" viewBox="206 178 685 162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DotOne"><g fill="currentColor"><path d="M464.413,240.803h-1.89c-5.222-6.752-13.146-10.128-23.768-10.128-10.714,0-18.77,3.332-24.172,9.993-5.401,6.664-8.102,15.26-8.102,25.793s2.701,19.131,8.102,25.793c5.402,6.664,13.457,9.993,24.172,9.993,10.622,0,18.545-3.33,23.768-9.993h1.89v8.102h19.446v-89.126h-19.446v29.574ZM459.484,281.923c-3.287,3.737-8.081,5.604-14.382,5.604-12.694,0-19.041-6.975-19.041-20.931,0-14.133,6.347-21.201,19.041-21.201,6.301,0,11.095,1.87,14.382,5.604,3.285,3.737,4.929,8.936,4.929,15.597,0,6.482-1.644,11.593-4.929,15.327Z"/><path d="M557.09,234.997c-5.806-3.241-13.166-4.861-22.079-4.861s-16.272,1.62-22.079,4.861c-5.806,3.241-10.061,7.585-12.762,13.031-2.7,5.448-4.051,11.546-4.051,18.298,0,6.482,1.351,12.403,4.051,17.758,2.701,5.357,6.956,9.634,12.762,12.829,5.806,3.197,13.166,4.794,22.079,4.794s16.272-1.621,22.079-4.862c5.807-3.241,10.061-7.516,12.762-12.829,2.701-5.311,4.051-11.209,4.051-17.69,0-6.752-1.35-12.85-4.051-18.298-2.701-5.446-6.955-9.79-12.762-13.031ZM549.461,281.721c-3.241,3.511-8.058,5.266-14.449,5.266s-11.208-1.756-14.449-5.266c-3.241-3.511-4.862-8.643-4.862-15.395,0-6.932,1.621-12.242,4.862-15.935,3.242-3.69,8.056-5.537,14.449-5.537s11.209,1.846,14.449,5.537c3.241,3.693,4.862,9.003,4.862,15.935,0,6.752-1.621,11.883-4.862,15.395Z"/><path d="M615.792,246.205h21.877v-14.314l-21.741-.135v-21.606h-23.227v11.343c0,1.441.359,2.724,1.08,3.849.719,1.127,1.756,1.958,3.106,2.498l5.806,2.296v1.756h-21.067l-.135,14.314h14.854v33.355c0,4.952.652,8.936,1.958,11.951,1.304,3.017,3.579,5.246,6.82,6.685,3.241,1.441,7.786,2.161,13.639,2.161h19.716v-14.989h-22.687v-39.161Z"/><path d="M711.198,235.132c-5.448-3.059-12.087-4.591-19.919-4.591s-14.449,1.532-19.851,4.591c-5.401,3.062-9.475,7.271-12.221,12.626-2.747,5.357-4.118,11.502-4.118,18.433s1.372,13.078,4.118,18.433c2.746,5.357,6.82,9.544,12.221,12.559,5.402,3.017,12.019,4.524,19.851,4.524s14.47-1.53,19.919-4.591c5.446-3.06,9.541-7.269,12.288-12.626,2.745-5.355,4.119-11.455,4.119-18.298s-1.374-12.964-4.119-18.365c-2.747-5.402-6.842-9.632-12.288-12.694ZM710.32,286.717c-4.502,4.591-10.849,6.887-19.041,6.887-8.102,0-14.428-2.317-18.973-6.955-4.547-4.636-6.819-11.455-6.819-20.458,0-9.092,2.272-15.979,6.819-20.661,4.544-4.68,10.871-7.022,18.973-7.022s14.426,2.342,18.973,7.022c4.545,4.682,6.819,11.569,6.819,20.661s-2.251,15.935-6.752,20.526Z"/><path d="M795.8,237.292c-5.088-4.591-11.951-6.887-20.594-6.887-4.861,0-9.229.946-13.098,2.836-3.872,1.891-6.978,4.591-9.317,8.102h-1.351v-9.453h-10.264v68.465h10.398v-39.296c0-7.111,1.935-12.603,5.806-16.475,3.87-3.87,9.002-5.807,15.395-5.807,6.121,0,11.05,1.802,14.786,5.401,3.735,3.602,5.605,8.778,5.605,15.53v40.647h10.262v-42.538c0-9.092-2.545-15.935-7.629-20.526Z"/><path d="M867.574,290.026c-3.692,2.836-8.824,4.254-15.395,4.254-7.923,0-14.023-2.228-18.297-6.685-4.277-4.456-6.505-11.141-6.685-20.054h57.122c.179-1.62.27-2.971.27-4.051,0-10.263-2.859-18.319-8.575-24.172-5.718-5.851-13.797-8.778-24.239-8.778-11.255,0-19.874,3.264-25.86,9.791-5.989,6.528-8.981,15.192-8.981,25.995,0,10.533,2.948,19.064,8.845,25.59,5.896,6.528,14.561,9.791,25.996,9.791,9.993,0,17.667-2.228,23.024-6.685,5.354-4.456,8.619-10.06,9.79-16.812h-9.858c-1.08,5.043-3.466,8.98-7.157,11.816ZM834.827,243.572c4.186-3.826,9.88-5.739,17.083-5.739,6.752,0,12.13,1.87,16.137,5.604,4.005,3.737,6.098,9.52,6.28,17.353h-46.994c.81-7.651,3.308-13.39,7.495-17.217Z"/><path d="M223.367,184.662c-1.6,0-3.052.935-3.715,2.392-.662,1.456-.412,3.165.64,4.371l33.962,38.932h-37.378c-1.604,0-3.059.94-3.719,2.402-.66,1.462-.402,3.175.659,4.378l34.327,38.919h-31.258c-1.601,0-3.054.936-3.715,2.394-.662,1.458-.41,3.168.643,4.373l25.457,29.114c11.705,13.387,28.616,21.064,46.398,21.064h20.412c19.868,0,38.536-7.756,52.57-21.843,5.389-5.423,9.878-11.575,13.344-18.285,5.4-10.447,8.254-22.218,8.254-34.04,0-40.896-33.271-74.168-74.168-74.168l-82.713-.003ZM258.405,222.699l-26.063-29.876,73.739.003c36.396,0,66.006,29.611,66.006,66.007,0,6.696-1.032,13.37-3.017,19.735-10.656-28.531-38.935-48.216-69.475-48.216l-24.348.004c-6.457,0-12.598-2.791-16.843-7.656ZM299.595,238.513c30.269,0,57.886,21.735,64.465,51.876-2.261,4.151-4.966,8.053-8.085,11.65-14.011-16.35-34.738-25.984-56.38-25.984h-27.864c-8.078,0-15.767-3.471-21.111-9.529l-24.704-28.008,73.678-.005ZM285.668,324.839c-15.427,0-30.099-6.661-40.254-18.275l-19.541-22.348h73.722c19.808,0,38.068,8.583,50.647,23.671-12.146,10.954-27.689,16.952-44.162,16.952h-20.412Z"/></g></svg><small>Implementation</small></div>
+    <div class="switch" role="tablist" aria-label="View">
+      <button role="tab" id="tabGuide" aria-selected="true" data-view="guide">Playbook</button>
+      <button role="tab" id="tabTracker" aria-selected="false" data-view="tracker">Tracker</button>
+    </div>
+  </div>
+</header>
+
+<div id="viewGuide">
+  <section class="hero">
+    <div class="hero-in">
+      <h1>From signed deal to a factory that runs on DotOne.</h1>
+      <p class="lede">The standard implementation method for every Techdotbit consultant. Ten phases, eight sign-off gates, one rule: no phase closes without the client's written approval.</p>
+      <nav class="journey" aria-label="Implementation phases"><ol id="journey"></ol></nav>
+      <div class="hero-meta">
+        <div><b>8 gates</b> with client sign-off</div>
+        <div><b>20 modules</b> covered in the question bank</div>
+        <div><b>Go live on standard,</b> customise after 30 days of real use</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="guide">
+      <aside class="rail" aria-label="Contents" id="rail"></aside>
+      <main class="main" id="guideMain"></main>
+    </div>
+    <div class="footer">DotOne Business Growth OS by Techdotbit Pvt Ltd, Sector 62, Noida. Internal implementation standard. Every project follows this playbook unless the Implementation Head approves a deviation in writing.</div>
+  </div>
+</div>
+
+<div id="viewTracker" hidden>
+  <div class="wrap" id="tracker"></div>
+</div>
+
+<script>
+/* ============================== CONFIG ==============================
+   Self-hosted deployment: point DOTONE_API at your backend (api.php).
+   Leave it as is to use api.php sitting next to this file.
+   On claude.ai the page uses the built-in shared store instead.       */
+window.DOTONE_API = window.DOTONE_API || "api.php";
+
+const LOGO_MARK = `<svg class="logo" viewBox="206 178 685 162" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DotOne"><g fill="currentColor"><path d="M464.413,240.803h-1.89c-5.222-6.752-13.146-10.128-23.768-10.128-10.714,0-18.77,3.332-24.172,9.993-5.401,6.664-8.102,15.26-8.102,25.793s2.701,19.131,8.102,25.793c5.402,6.664,13.457,9.993,24.172,9.993,10.622,0,18.545-3.33,23.768-9.993h1.89v8.102h19.446v-89.126h-19.446v29.574ZM459.484,281.923c-3.287,3.737-8.081,5.604-14.382,5.604-12.694,0-19.041-6.975-19.041-20.931,0-14.133,6.347-21.201,19.041-21.201,6.301,0,11.095,1.87,14.382,5.604,3.285,3.737,4.929,8.936,4.929,15.597,0,6.482-1.644,11.593-4.929,15.327Z"/><path d="M557.09,234.997c-5.806-3.241-13.166-4.861-22.079-4.861s-16.272,1.62-22.079,4.861c-5.806,3.241-10.061,7.585-12.762,13.031-2.7,5.448-4.051,11.546-4.051,18.298,0,6.482,1.351,12.403,4.051,17.758,2.701,5.357,6.956,9.634,12.762,12.829,5.806,3.197,13.166,4.794,22.079,4.794s16.272-1.621,22.079-4.862c5.807-3.241,10.061-7.516,12.762-12.829,2.701-5.311,4.051-11.209,4.051-17.69,0-6.752-1.35-12.85-4.051-18.298-2.701-5.446-6.955-9.79-12.762-13.031ZM549.461,281.721c-3.241,3.511-8.058,5.266-14.449,5.266s-11.208-1.756-14.449-5.266c-3.241-3.511-4.862-8.643-4.862-15.395,0-6.932,1.621-12.242,4.862-15.935,3.242-3.69,8.056-5.537,14.449-5.537s11.209,1.846,14.449,5.537c3.241,3.693,4.862,9.003,4.862,15.935,0,6.752-1.621,11.883-4.862,15.395Z"/><path d="M615.792,246.205h21.877v-14.314l-21.741-.135v-21.606h-23.227v11.343c0,1.441.359,2.724,1.08,3.849.719,1.127,1.756,1.958,3.106,2.498l5.806,2.296v1.756h-21.067l-.135,14.314h14.854v33.355c0,4.952.652,8.936,1.958,11.951,1.304,3.017,3.579,5.246,6.82,6.685,3.241,1.441,7.786,2.161,13.639,2.161h19.716v-14.989h-22.687v-39.161Z"/><path d="M711.198,235.132c-5.448-3.059-12.087-4.591-19.919-4.591s-14.449,1.532-19.851,4.591c-5.401,3.062-9.475,7.271-12.221,12.626-2.747,5.357-4.118,11.502-4.118,18.433s1.372,13.078,4.118,18.433c2.746,5.357,6.82,9.544,12.221,12.559,5.402,3.017,12.019,4.524,19.851,4.524s14.47-1.53,19.919-4.591c5.446-3.06,9.541-7.269,12.288-12.626,2.745-5.355,4.119-11.455,4.119-18.298s-1.374-12.964-4.119-18.365c-2.747-5.402-6.842-9.632-12.288-12.694ZM710.32,286.717c-4.502,4.591-10.849,6.887-19.041,6.887-8.102,0-14.428-2.317-18.973-6.955-4.547-4.636-6.819-11.455-6.819-20.458,0-9.092,2.272-15.979,6.819-20.661,4.544-4.68,10.871-7.022,18.973-7.022s14.426,2.342,18.973,7.022c4.545,4.682,6.819,11.569,6.819,20.661s-2.251,15.935-6.752,20.526Z"/><path d="M795.8,237.292c-5.088-4.591-11.951-6.887-20.594-6.887-4.861,0-9.229.946-13.098,2.836-3.872,1.891-6.978,4.591-9.317,8.102h-1.351v-9.453h-10.264v68.465h10.398v-39.296c0-7.111,1.935-12.603,5.806-16.475,3.87-3.87,9.002-5.807,15.395-5.807,6.121,0,11.05,1.802,14.786,5.401,3.735,3.602,5.605,8.778,5.605,15.53v40.647h10.262v-42.538c0-9.092-2.545-15.935-7.629-20.526Z"/><path d="M867.574,290.026c-3.692,2.836-8.824,4.254-15.395,4.254-7.923,0-14.023-2.228-18.297-6.685-4.277-4.456-6.505-11.141-6.685-20.054h57.122c.179-1.62.27-2.971.27-4.051,0-10.263-2.859-18.319-8.575-24.172-5.718-5.851-13.797-8.778-24.239-8.778-11.255,0-19.874,3.264-25.86,9.791-5.989,6.528-8.981,15.192-8.981,25.995,0,10.533,2.948,19.064,8.845,25.59,5.896,6.528,14.561,9.791,25.996,9.791,9.993,0,17.667-2.228,23.024-6.685,5.354-4.456,8.619-10.06,9.79-16.812h-9.858c-1.08,5.043-3.466,8.98-7.157,11.816ZM834.827,243.572c4.186-3.826,9.88-5.739,17.083-5.739,6.752,0,12.13,1.87,16.137,5.604,4.005,3.737,6.098,9.52,6.28,17.353h-46.994c.81-7.651,3.308-13.39,7.495-17.217Z"/><path d="M223.367,184.662c-1.6,0-3.052.935-3.715,2.392-.662,1.456-.412,3.165.64,4.371l33.962,38.932h-37.378c-1.604,0-3.059.94-3.719,2.402-.66,1.462-.402,3.175.659,4.378l34.327,38.919h-31.258c-1.601,0-3.054.936-3.715,2.394-.662,1.458-.41,3.168.643,4.373l25.457,29.114c11.705,13.387,28.616,21.064,46.398,21.064h20.412c19.868,0,38.536-7.756,52.57-21.843,5.389-5.423,9.878-11.575,13.344-18.285,5.4-10.447,8.254-22.218,8.254-34.04,0-40.896-33.271-74.168-74.168-74.168l-82.713-.003ZM258.405,222.699l-26.063-29.876,73.739.003c36.396,0,66.006,29.611,66.006,66.007,0,6.696-1.032,13.37-3.017,19.735-10.656-28.531-38.935-48.216-69.475-48.216l-24.348.004c-6.457,0-12.598-2.791-16.843-7.656ZM299.595,238.513c30.269,0,57.886,21.735,64.465,51.876-2.261,4.151-4.966,8.053-8.085,11.65-14.011-16.35-34.738-25.984-56.38-25.984h-27.864c-8.078,0-15.767-3.471-21.111-9.529l-24.704-28.008,73.678-.005ZM285.668,324.839c-15.427,0-30.099-6.661-40.254-18.275l-19.541-22.348h73.722c19.808,0,38.068,8.583,50.647,23.671-12.146,10.954-27.689,16.952-44.162,16.952h-20.412Z"/></g></svg>`;
+
+/* ============================== CONTENT ============================== */
+const MODULES = [
+  ["core","Core & Org setup"],["crm","CRM"],["sales","Sales & Dispatch"],["purchase","Purchase"],
+  ["inventory","Inventory & Warehouse"],["mfg","Manufacturing & Costing"],["qc","Quality Control"],["maint","Maintenance"],
+  ["hrms","HRMS & Payroll"],["finance","Finance & Accounting"],["logistics","Logistics"],["expense","Expense Management"],
+  ["docs","Document Management"],["bi","Reports, BI & Dashboards"],["ai","DotOne AI"],["whatsapp","WhatsApp & Communication"],
+  ["pms","Project & Task Management"],["service","Service Management"],["portal","Client Portal"],["vision","Vision AI (CCTV)"]
+];
+
+const ROLES = {
+  IH:"Implementation Head", PM:"Project Manager", FC:"Functional Consultant", TL:"Tech Lead",
+  DM:"Data Migration Exec", TR:"Trainer", SUP:"Support Team", SAL:"Sales / BDE",
+  OWN:"Client Owner", SPOC:"Client SPOC", KU:"Client Key Users"
+};
+
+const PHASES = [
+ { id:"p0", name:"Sales handover", short:"Handover", gate:"G1", gateName:"Handover accepted",
+   goal:"Move the deal from Sales to Implementation without losing a single promise, expectation or pain point the client shared during the sale.",
+   duration:"1 to 2 days", owner:"Implementation Head", client:"None (internal)",
+   steps:[
+    ["Collect the signed agreement and advance","No work starts without a signed onboarding agreement and the implementation fee or first invoice cleared. Check the SOW document number."],
+    ["Run a 45-minute handover call with the BDE","BDE explains the business, who the decision maker is, what pains were discussed, what was demoed, and every verbal promise made."],
+    ["Fill the handover form","Modules sold, users count, pricing, customisations promised, integrations promised, expected go-live date, special client sensitivities. BDE signs it."],
+    ["Review scope against the SOW","Implementation Head flags anything promised verbally but missing in the SOW. Resolve with Sales before kickoff, never in front of the client."],
+    ["Assign the project team","PM and Functional Consultant based on industry experience (plywood, textile, chemicals, engineering, pharma). Tech Lead if integrations or customisations are sold."],
+    ["Create the project space","Client WhatsApp group (PM, consultant, SPOC, owner), project folder, and this tracker entry."]
+   ],
+   deliverables:["Signed handover form","Project entry in tracker","Team assignment","WhatsApp project group"],
+   notes:["If the BDE promised something DotOne cannot do, it gets raised now, internally. The consultant should never discover it in a workshop.","Ask the BDE one question: what will make this owner say 'paisa vasool' in 90 days? Write the answer on top of the project charter."],
+   mistakes:["Starting setup before advance is received","Accepting a go-live date the BDE promised without checking data readiness","Handover by forwarding WhatsApp chats instead of a call"]
+ },
+ { id:"p1", name:"Kickoff & project charter", short:"Kickoff", gate:null,
+   goal:"Align the owner, SPOC and our team on scope, timeline, responsibilities and how we will communicate, before any requirement workshop starts.",
+   duration:"2 to 3 days", owner:"Project Manager", client:"Owner, SPOC",
+   steps:[
+    ["Schedule kickoff with the owner present","Kickoff without the owner is not a kickoff. 60 to 90 minutes, preferably at the factory."],
+    ["Present the project charter","Scope (modules in, modules out), phases, gates, target dates, team names and phone numbers, escalation path."],
+    ["Name the client SPOC and key users","One SPOC with authority to decide. One key user per department (sales, purchase, stores, production, accounts, HR)."],
+    ["Agree the RACI and time commitment","Key users give minimum 1 hour per day during UAT and training. Write it into the charter."],
+    ["Fix the communication rhythm","Daily update in WhatsApp group, weekly status call with SPOC, fortnightly review with owner."],
+    ["Send the infra readiness checklist","Internet at each location, desktops or tablets, printers, barcode printer, biometric device, CCTV details if Vision AI is in scope."],
+    ["Send the document collection list","Current bills, challans, job cards, registers, Excel sheets, Tally backup, price lists, BOM sheets, salary sheets."],
+    ["Provision the DotOne instance","Company created, domain or subdomain set, admin login shared with SPOC."]
+   ],
+   deliverables:["Project charter (shared PDF)","Named SPOC and key users","Infra readiness checklist","Document collection list","DotOne instance live"],
+   notes:["Speak in the owner's language. Hindi-first owners trust a consultant who explains the plan in Hindi and shows the timeline on one page.","Set the expectation now: 'Pehle 30 din thodi mehnat lagegi, uske baad system aapka kaam karega.' Adoption fear drops when the dip is announced in advance."],
+   mistakes:["No owner in kickoff, so priorities change in week 3","SPOC chosen who has no authority (e.g. a junior computer operator)","Skipping the infra check and discovering no internet at the godown on go-live day"]
+ },
+ { id:"p2", name:"Requirement gathering", short:"Requirements", gate:"G2", gateName:"BRD signed",
+   goal:"Understand how the business actually runs today, what must change, and write it down in a Business Requirement Document the client signs.",
+   duration:"3 days to 3 weeks by tier", owner:"Functional Consultant", client:"Owner, SPOC, Key Users",
+   steps:[
+    ["Owner interview (1 hour)","Business model, goals, top pains, approvals, confidentiality, reports wanted on phone. Use the Owner question set."],
+    ["Factory and godown walk-through","Walk the material path: gate entry, store, issue, each production stage, QC, packing, dispatch. Photograph registers and boards."],
+    ["Collect real documents","Minimum 3 filled samples of every format: PO, GRN, job card, challan, invoice, salary sheet, stock register."],
+    ["Department workshops","One session per department with the key user, using the module question bank. Record answers directly in the BRD template."],
+    ["Map the As-Is process","Draw each flow as it happens today, including Excel sheets, WhatsApp approvals and paper registers."],
+    ["Design the To-Be process on DotOne standard","Show how the same flow runs in DotOne standard. Mark every point where the client's need does not fit (this becomes the gap list)."],
+    ["Finalise reports and dashboards","List the top reports by role. Collect the Excel MIS they use today as the reference."],
+    ["Capture integration needs","Tally, biometric, weighbridge, RFID, e-invoice, WhatsApp, IndiaMART, CCTV. Note make, model, version and API availability."],
+    ["Write and review the BRD","Walk the SPOC and owner through it page by page. Sign-off on every section."]
+   ],
+   deliverables:["Owner interview notes","As-Is and To-Be process flows","Document samples folder","Reports list","Integration list","Signed BRD"],
+   notes:["Ask 'show me' instead of 'tell me'. What the accountant says and what the register shows are often different.","Separate need from habit. 'We need this exact format' is often habit. 'GST auditor needs this field' is a need.","Never say 'yes, possible' in a workshop. Say 'noted, we will confirm feasibility in the solution design'."],
+   mistakes:["Workshops with only the SPOC, not the people who do the work","Copying the client's Excel into the BRD instead of designing To-Be","Promising customisations on the spot"]
+ },
+ { id:"p3", name:"Gap analysis & customisation feasibility", short:"Fit-gap", gate:"G3", gateName:"Solution & CR sign-off",
+   goal:"Decide, for every requirement that standard DotOne does not cover, whether we configure it, build it, move it to Phase 2, or decline it with a workaround.",
+   duration:"2 days to 2 weeks", owner:"Functional Consultant + Tech Lead", client:"Owner, SPOC",
+   steps:[
+    ["Build the fit-gap sheet","Every BRD requirement gets a status: Fit (standard), Config (settings), or Gap."],
+    ["Classify each gap","Use the C0 to C4 and X classes below."],
+    ["Run the feasibility test","Answer the 10 feasibility questions for every C2, C3, C4 item with the Tech Lead."],
+    ["Score value and effort","Business value 1 to 5, effort 1 to 5. The tracker suggests a decision automatically."],
+    ["Estimate effort and cost","Tech Lead gives person-days. PM converts to commercial using the rate card."],
+    ["Hold the customisation decision meeting","Present to the owner: what goes live on day one, what comes in Phase 2, what we recommend not doing and why."],
+    ["Sign change requests","Every approved customisation gets a CR form with scope, acceptance criteria, cost and delivery date."],
+    ["Freeze Phase 1 scope","Anything new after this goes through the CR process, not WhatsApp."]
+   ],
+   deliverables:["Fit-gap sheet","CR register (in tracker)","Signed CR forms","Frozen Phase 1 scope","Solution design document"],
+   notes:["Golden rule: go live on standard and customise after 30 days of real usage. Half the requests disappear once users see the standard flow working.","Anything that touches stock valuation, ledger postings or GST logic needs Implementation Head approval, even if the client insists."],
+   mistakes:["Building customisations before BRD sign-off","Free customisations to 'keep the client happy', which then block upgrades","No acceptance criteria, so the CR is never 'done'"]
+ },
+ { id:"p4", name:"System setup & configuration", short:"Setup", gate:"G4", gateName:"Configuration complete",
+   goal:"Configure DotOne to match the signed To-Be design, in the right order, and prove it works end to end internally before the client touches it.",
+   duration:"1 to 6 weeks by tier", owner:"Functional Consultant", client:"SPOC for clarifications",
+   steps:[
+    ["Company foundation","Legal entities, GSTINs, branches, plants, warehouses, financial year, currency, letterhead."],
+    ["Users, roles and permissions","Role-based access from the BRD. No shared logins. Hide costing and salary from roles that must not see them."],
+    ["Numbering series and print formats","Series per branch and financial year. Invoice, challan, PO, job card formats approved by client."],
+    ["Global masters","UOM and conversions, item categories, tax codes and HSN, payment terms, price lists, territories."],
+    ["Module configuration in dependency order","Finance base, then Inventory, Purchase, Sales, Manufacturing, QC, HRMS, CRM, Logistics, then reports and dashboards."],
+    ["Approval workflows and alerts","Amount-based approvals, credit limit rules, low stock alerts, WhatsApp notifications."],
+    ["Develop approved customisations","Tech Lead builds C1 to C4 items marked 'before go-live'. Each tested against its acceptance criteria."],
+    ["Build and test integrations","Tally sync, biometric import, e-invoice, WhatsApp templates, RFID or CCTV connections."],
+    ["Conference room pilot","Consultant runs 3 full business cycles on test data (enquiry to cash, purchase to pay, material to finished goods). Fix before showing the client."]
+   ],
+   deliverables:["Configured instance","Configuration log (what was set and why)","Customisations deployed on test","Integration test report","Internal pilot report"],
+   notes:["Setup order matters. Configuring sales before tax codes and price lists means redoing work.","Keep a configuration log. When the client asks in month 4 why credit limit blocks an order, the answer is in the log."],
+   mistakes:["Showing the client an unfinished system 'to get feedback', which creates fear","Giving admin rights to every client user","Skipping the internal pilot"]
+ },
+ { id:"p5", name:"Data migration", short:"Data", gate:"G5", gateName:"Masters verified",
+   goal:"Bring clean master data into DotOne and verify it with the client, so day-one transactions are not blocked by wrong items, rates or GSTINs.",
+   duration:"2 days to 2 weeks", owner:"Data Migration Exec", client:"Key Users provide and verify data",
+   steps:[
+    ["Share DotOne import templates","Item master, BOM, customers, vendors, chart of accounts, employees, machines, price lists. One sheet per template, with a filled example row."],
+    ["Receive client data","Set a deadline in the charter. Data delay is the most common reason go-live slips."],
+    ["Cleanse the data","Remove duplicates, fix naming, standardise UOMs, validate GSTIN format and state codes, check HSN and tax rates."],
+    ["Agree item coding","Short, logical, consistent codes. For plywood: thickness, grade, size. For textiles: count, blend, shade."],
+    ["Import in dependency order","Chart of accounts, UOM, categories, items, BOMs, parties, employees, price lists."],
+    ["Client verification","Key users check a 10 percent sample plus all high-value items and top 20 customers and vendors. Sign-off on each master."],
+    ["Plan opening balances","Opening stock, ledger balances, receivables, payables and open orders are loaded at cutover, not now. Plan the method here."]
+   ],
+   deliverables:["Filled templates","Data cleansing log","Imported masters","Master verification sign-off","Opening balance plan"],
+   notes:["The client owns the data, we own the template and the quality check. Write that into the charter.","For factories with thousands of items, migrate active items only (moved in last 12 months). Old items can come later."],
+   mistakes:["Importing the Tally item list as-is with 4 spellings of the same item","Loading opening stock weeks before go-live, so it is wrong on day one","No client sign-off on masters"]
+ },
+ { id:"p6", name:"User acceptance testing", short:"UAT", gate:"G6", gateName:"UAT sign-off",
+   goal:"Let the client's own key users run their real daily work in DotOne and confirm it works, before anyone trains the full team.",
+   duration:"3 days to 2 weeks", owner:"Functional Consultant", client:"Key Users, SPOC",
+   steps:[
+    ["Prepare UAT scripts","Real scenarios from the BRD: 'Create PO for 500 sheets 18mm BWP, receive 480, QC rejects 5, bill at contract rate.' Expected result written against each."],
+    ["Train key users first","Only key users, only what they need for UAT."],
+    ["Run UAT department by department","Key user enters, consultant observes. Use real document samples collected in Phase 2."],
+    ["Log every issue","Type: bug, config change, training gap, new requirement. New requirements go to CR, not to the bug list."],
+    ["Fix and retest","Critical and high issues closed before sign-off. Low issues can carry into hypercare with dates."],
+    ["UAT sign-off","SPOC and each key user sign their department's scripts."]
+   ],
+   deliverables:["UAT scripts","Issue log","Retest results","Signed UAT sign-off"],
+   notes:["If a key user cannot complete their script alone, it is a training gap, not a system bug. Track both separately."],
+   mistakes:["Consultant doing UAT entries themselves","Letting new requirements slip into UAT fixes","Signing off with open critical issues"]
+ },
+ { id:"p7", name:"Training & change management", short:"Training", gate:null,
+   goal:"Make every user confident enough to do their daily job in DotOne, in the language they think in, and make the owner visibly back the change.",
+   duration:"2 days to 2 weeks", owner:"Trainer", client:"All users, Owner",
+   steps:[
+    ["Make a role-wise training plan","Who needs what: store keeper, supervisor, accountant, sales exec, HR, owner. Batch sizes of 5 to 8."],
+    ["Prepare Hindi-first material","One-page quick reference cards per role, short screen-recorded videos, step-by-step SOPs with screenshots."],
+    ["Train on the client's own data","Use their items, their customers. Users learn faster when they see familiar names."],
+    ["Shop floor training on mobile or tablet","Supervisors and store staff get hands-on practice on the device they will actually use."],
+    ["Owner dashboard walkthrough","Show the owner the dashboards and alerts on his phone. This is where the owner becomes the champion."],
+    ["Assess and certify","Each user completes their core transaction alone. Track attendance and pass or retrain."],
+    ["Announce the change from the top","Owner tells the team: from go-live date, no entry outside DotOne will be accepted."]
+   ],
+   deliverables:["Training plan","Hindi quick reference cards","Training videos","Attendance and assessment sheet","Owner announcement"],
+   notes:["Resistance usually comes from people who fear the system will expose them or replace them. Show them what DotOne removes from their day (registers, repeated calls, month-end tallying).","Identify one DotOne champion per department and give them recognition."],
+   mistakes:["Training all 40 users in one hall for 3 hours","English-only screenshots for a Hindi-speaking store team","No owner involvement, so users treat DotOne as optional"]
+ },
+ { id:"p8", name:"Go-live & cutover", short:"Go-live", gate:"G7", gateName:"Go / No-Go approved",
+   goal:"Switch the business from old registers, Excel and software to DotOne on a planned date, with correct opening balances and support on the ground.",
+   duration:"1 to 5 days", owner:"Project Manager", client:"Owner, SPOC, all users",
+   steps:[
+    ["Fix the cutover date","Start of a month or week, away from season peak, festival dispatch rush and statutory due dates."],
+    ["Run the Go / No-Go meeting","Check every readiness criterion below. One red item on a critical line means No-Go and a new date."],
+    ["Freeze old transactions","From cutover time, no new entries in old system for modules going live."],
+    ["Physical stock count","Count on cutover date, store by store. Load counted stock with rate and batch."],
+    ["Load opening balances","Trial balance from Tally as on cutover date, receivables and payables with bill-wise ageing, advances."],
+    ["Load open documents","Pending sales orders, purchase orders, production orders and job work."],
+    ["Go live with support present","Consultant on site or on call for the first 3 working days. Daily 15-minute stand-up with SPOC."],
+    ["Stop the parallel system","Old registers and Excel officially stopped. Accounting parallel run, if any, maximum 1 week."]
+   ],
+   deliverables:["Cutover plan","Go / No-Go checklist","Stock count sheets","Opening balance reconciliation","Go-live announcement"],
+   notes:[],
+   mistakes:["Long parallel runs where users keep Excel 'just in case'","Go-live on the 28th of the month","Opening stock taken from books, not counted"]
+ },
+ { id:"p9", name:"Hypercare & project closure", short:"Hypercare", gate:"G8", gateName:"Project closure",
+   goal:"Stabilise daily usage, close the first month in DotOne, prove value to the owner, and hand the client over to the support team.",
+   duration:"2 to 8 weeks", owner:"Project Manager", client:"SPOC, Owner",
+   steps:[
+    ["Monitor usage daily for 2 weeks","Transactions per user, entries made late, modules not being used. Call the user, not the owner, first."],
+    ["Review the issue log daily","Close quickly. In hypercare, response speed is the product."],
+    ["Weekly review with SPOC","Open issues, adoption numbers, retraining needs."],
+    ["Close the first month end in DotOne","Stock reconciliation, ledger review, GST reports, payroll run. Consultant present."],
+    ["Adoption report to the owner","Before and after: stock accuracy, dispatch time, collection days, time to prepare MIS."],
+    ["Plan Phase 2","Customisations deferred in Phase 3, new modules, Vision AI or WhatsApp ordering."],
+    ["Knowledge transfer to support","Configuration log, CR register, open issues, client sensitivities handed over in a call."],
+    ["Closure sign-off and referral ask","Signed closure, Google review or testimonial video, referral introductions."]
+   ],
+   deliverables:["Daily usage report","Adoption report","First month-end closure","Support KT document","Closure sign-off","Testimonial or referral"],
+   notes:["The best time to ask for a referral is the day the owner sees his first dashboard with real numbers."],
+   mistakes:["Moving the consultant to a new project on go-live day","Closing the project before the first month end","No measurable before and after for the owner"]
+ }
+];
+
+const FEAS_CLASSES = [
+ ["c0","C0","Configuration","Achievable with settings, custom fields, workflows, masters. No code.","0 to 1 day","Include in Phase 1, no charge"],
+ ["c1","C1","Report or print format","New report, dashboard widget, print template, export format.","0.5 to 2 days","Include if in SOW count, else chargeable"],
+ ["c2","C2","Minor customisation","New validation, calculated field, approval step, small screen change on existing module.","2 to 5 days","Chargeable CR, before go-live only if critical"],
+ ["c3","C3","Major customisation","New sub-process or screen, custom costing logic, industry-specific flow.","5 to 20 days","Chargeable CR, normally Phase 2"],
+ ["c4","C4","Integration","Tally, biometric, weighbridge, RFID, e-invoice, IndiaMART, CCTV, payment gateway.","Depends on API","Feasible only after API or file format is confirmed"],
+ ["x","X","Not feasible or not advised","Breaks core data integrity, compliance risk, pure habit with no business value, or third party offers no access.","n/a","Decline in writing, offer a workaround"]
+];
+
+const FEAS_Q = [
+ "Is this a real business need or a habit from the old register or Excel?",
+ "Can the standard DotOne flow deliver 80 percent of the outcome with a small process change?",
+ "Does it change stock valuation, ledger postings, GST or payroll statutory logic?",
+ "What is the rupee impact or time saved per month if we build it?",
+ "How often does it happen, and how many users does it affect?",
+ "Is the data needed for it actually captured anywhere today?",
+ "If an integration: does the third party give an API, file export or database access? Which version?",
+ "Will it survive DotOne product upgrades, or will it break every release?",
+ "Can it wait 30 days after go-live without stopping operations?",
+ "Who on the client side will sign the acceptance criteria?"
+];
+
+const GONOGO = [
+ ["Critical","BRD, CR and UAT sign-offs received"],
+ ["Critical","All critical and high UAT issues closed"],
+ ["Critical","Masters verified by client (items, parties, BOM, employees)"],
+ ["Critical","Opening stock count plan and team ready"],
+ ["Critical","Opening trial balance from CA or accountant available"],
+ ["Critical","Every user has a working login and has passed training"],
+ ["Critical","Internet, devices and printers working at every location going live"],
+ ["High","Print formats (invoice, challan, PO) approved"],
+ ["High","E-invoice and e-way bill tested, if applicable"],
+ ["High","Integrations tested on live credentials"],
+ ["High","Owner announcement made to all staff"],
+ ["Medium","Quick reference cards distributed"],
+ ["Medium","Hypercare roster and escalation numbers shared"]
+];
+
+const TIERS = [
+ ["Handover & kickoff","2 to 3 days","3 to 5 days","1 week"],
+ ["Requirement gathering","3 to 5 days","1 to 2 weeks","2 to 3 weeks"],
+ ["Fit-gap & feasibility","2 days","3 to 5 days","1 to 2 weeks"],
+ ["Setup & configuration","1 week","2 to 3 weeks","4 to 6 weeks"],
+ ["Data migration (parallel to setup)","2 to 3 days","1 week","2 weeks"],
+ ["UAT","3 days","1 week","2 weeks"],
+ ["Training","2 to 3 days","1 week","2 weeks"],
+ ["Go-live & cutover","1 day","2 days","3 to 5 days"],
+ ["Hypercare","2 weeks","30 days","45 to 60 days"],
+ ["Total to go-live","3 to 4 weeks","6 to 9 weeks","12 to 16 weeks"]
+];
+
+const RACI = [
+ ["Handover form","A","R","C","I","","","","R","I","",""],
+ ["Project charter","A","R","C","C","","","","I","A","C",""],
+ ["BRD","C","A","R","C","","","","","A","C","R"],
+ ["Fit-gap & CRs","A","R","R","R","","","","","A","C","C"],
+ ["Configuration","I","A","R","C","","","","","","I",""],
+ ["Customisation build","C","A","C","R","","","","","","I",""],
+ ["Data templates & import","","A","C","","R","","","","","C","R"],
+ ["UAT","","A","R","C","","","","","I","A","R"],
+ ["Training","","A","C","","","R","","","I","C","R"],
+ ["Go / No-Go","A","R","C","C","","","","","A","R","C"],
+ ["Hypercare","C","A","R","C","","","R","","I","R","C"]
+];
+const RACI_COLS = ["IH","PM","FC","TL","DM","TR","SUP","SAL","OWN","SPOC","KU"];
+
+const QBANK = [
+ {m:"owner", t:"Owner & management", why:"First meeting. Keep it conversational, 45 to 60 minutes, owner's language.", q:[
+  ["What does the business make or trade, which sectors do you sell to, and roughly how many plants, godowns, branches and employees?","Aapka business kya banata ya bechta hai, kitne plant, godown aur log hain?"],
+  ["What are the top three things that give you tension every day?","Roz sabse zyada tension kis cheez ki hoti hai?"],
+  ["After 12 months with DotOne, what result would make you say it was worth it? Give numbers if possible.","Ek saal baad DotOne se aapko kya result chahiye, jisse lage paisa vasool hua?"],
+  ["Which numbers do you want to see on your phone every morning?","Subah uthte hi phone pe kaunse 5 numbers dekhna chahenge?"],
+  ["Which software do you use today (Tally version, Busy, Marg, Excel)? Have you tried an ERP before, and why did it not work?",""],
+  ["Which transactions need your personal approval (PO above a value, discounts, credit limit breach, salary advance)?","Kin cheezon mein aapki permission ke bina kaam nahi hona chahiye?"],
+  ["Who should NOT see costing, margins, formulas or salaries?",""],
+  ["Who will be the SPOC with authority to decide, and how many hours a week can they give?",""],
+  ["Are there season peaks, festivals or audit dates when go-live must be avoided?",""],
+  ["Where do you lose money today without knowing exactly how much (wastage, dead stock, late collection, overtime)?","Kahan paisa leak ho raha hai jo pakad mein nahi aata?"]
+ ]},
+ {m:"core", t:"Core & Org setup", why:"Foundation of the instance. Wrong answers here mean rework in every module.", q:[
+  ["How many legal entities and GSTINs? Which states?"],
+  ["List all branches, plants, warehouses and offices with addresses."],
+  ["Financial year and the date from which books will run in DotOne."],
+  ["Departments, designations and reporting hierarchy."],
+  ["List of users with role and department. Does anyone share a login today?"],
+  ["Document numbering: separate series per branch or per financial year?"],
+  ["Letterhead, logo, signatory names for print formats."],
+  ["Any export or import business needing multi-currency?"],
+  ["Devices at each location (desktop, laptop, tablet, mobile) and internet quality."]
+ ]},
+ {m:"crm", t:"CRM", why:"For owners who lose enquiries between IndiaMART, WhatsApp and diaries.", q:[
+  ["Where do leads come from (IndiaMART, TradeIndia, JustDial, website, Facebook ads, dealers, exhibitions, references)?"],
+  ["Stages from enquiry to order. When do you call a lead lost, and why are they usually lost?"],
+  ["Who assigns leads to salespeople, and on what basis (territory, product, turn)?"],
+  ["How are follow-ups tracked today? Is WhatsApp the main channel?"],
+  ["How many field salespeople? Do you need GPS attendance, visit check-in and visit reports?"],
+  ["Do you work through dealers or distributors? Any schemes or targets for them?"],
+  ["Who approves quotations and discounts, and up to what limit?"],
+  ["Do you track competitor prices or win/loss by competitor?"]
+ ]},
+ {m:"sales", t:"Sales & Dispatch", why:"Where cash starts. Pay attention to credit control and dispatch practice.", q:[
+  ["Do you make to stock, make to order, or do job work for customers?"],
+  ["How are prices decided: price list, customer-specific rate, schemes, quantity slabs?"],
+  ["Should a credit limit or overdue customer be blocked or only warned? Who can override?"],
+  ["Walk through the flow: quotation, order, packing, dispatch, invoice. Are partial dispatches common?"],
+  ["Is e-invoice and e-way bill applicable? Which GSP or portal do you use today?"],
+  ["Transport: own vehicles or transporters? Is freight billed to the customer? LR and vehicle details on invoice?"],
+  ["How are sales returns, rate differences and credit notes handled?"],
+  ["Do you send free samples or replacement material? How is it tracked?"],
+  ["Who follows up on payment, and how are reminders sent?"]
+ ]},
+ {m:"purchase", t:"Purchase", why:"Look for approval leakage and rate discipline.", q:[
+  ["Who raises purchase requirements, and who approves at which amounts?"],
+  ["Are comparative quotations from multiple vendors required?"],
+  ["Do you have rate contracts or fixed annual rates with vendors?"],
+  ["Flow after PO: gate entry, GRN, quality check, bill. What quantity or rate tolerance is allowed?"],
+  ["Do you send material for job work outside? Is ITC-04 filed?"],
+  ["Any imports? How is landed cost (freight, duty, clearing) added?"],
+  ["Are advance payments given to vendors?"],
+  ["How are rejections, short supply and debit notes handled?"]
+ ]},
+ {m:"inventory", t:"Inventory & Warehouse", why:"Stock accuracy is usually the owner's biggest invisible problem.", q:[
+  ["How many stores or godowns? Are rack or bin locations used?"],
+  ["How many active items? Is there an item code system, or only names?"],
+  ["Which UOM conversions exist (sheet to sq ft, kg to nos, roll to metre, box to pieces)?"],
+  ["Do you need batch, lot, serial or expiry tracking? For which items?"],
+  ["Barcode, QR or RFID labels needed? At which stage?"],
+  ["Valuation method: FIFO or weighted average? What does your CA follow?"],
+  ["Are reorder levels or minimum stock defined?"],
+  ["When was the last physical stock count, and how big was the difference?"],
+  ["How is material issued to production: against a requisition slip or taken freely?"],
+  ["How are scrap, off-cuts, rejected and damaged goods recorded?"]
+ ]},
+ {m:"mfg", t:"Manufacturing & Costing", why:"Understand the process type before touching BOMs. Walk the floor with the supervisor.", q:[
+  ["Production type: discrete, batch or process, assembly, or job shop?"],
+  ["Do BOMs or recipes exist? How many levels? Alternate materials allowed? Must formulas be hidden from some users?"],
+  ["List the operations or stages, machines and work centres."],
+  ["What drives production planning: customer orders, forecast, or minimum stock?"],
+  ["What does today's job card or production slip look like? Who fills it?"],
+  ["Do you need work-in-progress tracking stage by stage?"],
+  ["How is output measured (weight, count, area, length)? Any by-products?"],
+  ["What wastage or yield percentage is normal, and who checks it?"],
+  ["Costing: standard or actual? How are power, labour and overheads added?"],
+  ["Shift pattern. Do you need worker-wise or operation-wise output (labour credit or piece rate)?"],
+  ["Is any stage done by subcontractors?"]
+ ]},
+ {m:"qc", t:"Quality Control", why:"Especially pharma, chemicals, engineering and export clients.", q:[
+  ["Where are checks done: incoming, in-process, final, pre-dispatch?"],
+  ["What parameters are checked, with what tolerance? Are test certificates issued to customers?"],
+  ["What happens to failed material: rework, downgrade, return, scrap?"],
+  ["Do you need corrective action reports (CAR) and root cause tracking?"],
+  ["Any certification requirements (ISO, BIS, GMP, customer audits)?"]
+ ]},
+ {m:"maint", t:"Maintenance", why:"Short for most MSMEs, critical for continuous process plants.", q:[
+  ["Machine list with critical machines marked."],
+  ["Is preventive maintenance scheduled? By days, hours run, or output?"],
+  ["How are breakdowns reported and downtime recorded today?"],
+  ["Is there a separate spare parts store?"],
+  ["AMC vendors and service contracts to track?"]
+ ]},
+ {m:"hrms", t:"HRMS & Payroll", why:"Collect one full month's attendance export and salary sheet before designing.", q:[
+  ["Headcount split: staff, workers, contract labour."],
+  ["Attendance source: biometric make and model, export format, number of devices and locations."],
+  ["Shifts, overtime rules, late and early rules, weekly offs, holidays."],
+  ["Salary components and structure. Which of PF, ESIC, PT, LWF, TDS apply?"],
+  ["Is piece rate or contractor-based payment used?"],
+  ["How are advances and loans given and recovered?"],
+  ["Leave types and policy."],
+  ["Payroll cut-off and payment date. Bank transfer file format?"],
+  ["Who files statutory returns: in-house or CA?"]
+ ]},
+ {m:"finance", t:"Finance & Accounting", why:"Decide early: does accounting move fully into DotOne, or does Tally stay with sync?", q:[
+  ["Will books be kept in DotOne, or does Tally continue with integration? Which direction and frequency?"],
+  ["Share the Tally ledger list and groups for mapping."],
+  ["Do you need cost centres or profit centres (plant, product line, branch)?"],
+  ["How many bank accounts? Is bank reconciliation done monthly?"],
+  ["Who files GST returns? What reports does your CA need from the system?"],
+  ["TDS and TCS applicability."],
+  ["Cutover date for opening balances and who provides the trial balance."],
+  ["How are receivable ageing and payment reminders handled today?"]
+ ]},
+ {m:"logistics", t:"Logistics", why:"For clients with own fleet or heavy dispatch volume.", q:[
+  ["Own vehicles or hired? How many trips per day?"],
+  ["How are loading plans and trip sheets made?"],
+  ["Is freight cost tracked per trip, per customer, per route?"],
+  ["Is proof of delivery collected? Photo, signature, OTP?"],
+  ["GPS devices on vehicles to integrate?"]
+ ]},
+ {m:"expense", t:"Expense Management", why:"", q:[
+  ["Which expenses do employees claim (travel, fuel, food, site expenses)?"],
+  ["Approval levels and limits per role."],
+  ["Bills required as photo upload? Advance and settlement process?"]
+ ]},
+ {m:"docs", t:"Document Management", why:"", q:[
+  ["Which documents must be stored against records (drawings, test certificates, contracts, KYC)?"],
+  ["Who can view, upload and delete? Any expiry reminders needed (licences, insurance)?"]
+ ]},
+ {m:"bi", t:"Reports, BI & Dashboards", why:"Always collect their current Excel MIS as the reference.", q:[
+  ["List the top 10 reports used today with a sample of each."],
+  ["Which reports go to whom, and how often (daily, weekly, monthly)?"],
+  ["Which KPIs matter for owner, plant manager, sales head, accounts?"],
+  ["Do users need Excel export or scheduled WhatsApp or email delivery?"]
+ ]},
+ {m:"ai", t:"DotOne AI", why:"", q:[
+  ["Which questions does the owner ask the team repeatedly that AI could answer from data?"],
+  ["Is a Hindi voice or chat interface needed for supervisors?"],
+  ["Which actions, if any, can AI perform, and which must always need human confirmation?"]
+ ]},
+ {m:"whatsapp", t:"WhatsApp & Communication", why:"Meta template approvals take days. Start early.", q:[
+  ["Which messages go to customers (order confirmation, dispatch, invoice PDF, payment reminder)?"],
+  ["Which internal alerts are needed (approvals, low stock, breakdown, attendance)?"],
+  ["Is there a separate WhatsApp Business number available for API?"],
+  ["Language for templates: Hindi, English or both?"]
+ ]},
+ {m:"pms", t:"Project & Task Management", why:"", q:[
+  ["Which work runs as projects (plant expansion, installations, customer projects)?"],
+  ["Task assignment, deadlines and escalation rules."],
+  ["Do you track time or cost against projects?"]
+ ]},
+ {m:"service", t:"Service Management", why:"", q:[
+  ["Do you provide installation, warranty or AMC service to customers?"],
+  ["How are complaints logged, assigned and closed today?"],
+  ["Response time commitments (SLA) and field engineer tracking?"]
+ ]},
+ {m:"portal", t:"Client Portal", why:"", q:[
+  ["What should customers or dealers see: orders, dispatch status, invoices, ledger, outstanding?"],
+  ["Can customers or dealers place orders directly through the portal?"]
+ ]},
+ {m:"integrations", t:"Integrations (all modules)", why:"Every integration is C4 until the API or file format is confirmed.", q:[
+  ["Tally: version, single or multi-company, masters and vouchers, one-way or two-way, frequency."],
+  ["Biometric: make, model, cloud or local, export method."],
+  ["Weighbridge: make, software, can it export data?"],
+  ["Barcode printers and scanners: make and label size."],
+  ["RFID: readers, tags, where used."],
+  ["E-invoice and e-way bill: GSP or direct portal credentials."],
+  ["IndiaMART, website forms, Facebook lead ads: access to API or CRM keys."],
+  ["Payment gateway or UPI collection links."]
+ ]},
+ {m:"vision", t:"Vision AI (CCTV)", why:"Needs a site survey before any commitment.", q:[
+  ["Use case: worker productivity, loading and unloading count, material count, safety?"],
+  ["Number of cameras, make, resolution, NVR model. Is RTSP stream access available?"],
+  ["Camera placement and angle at the target area. Lighting at night shifts?"],
+  ["Network bandwidth and whether a local server can be placed on site."],
+  ["Have workers been informed? Any union or privacy concerns?"]
+ ]}
+];
+
+const TEMPLATES = [
+ {t:"Handover form fields", f:["Client legal name, GSTIN, address, industry","Owner name and phone, decision maker","Modules sold and user count","Commercials: implementation fee, subscription, customisation value, payment status","SOW or agreement number","Customisations and integrations promised (exact words)","Client's top 3 pains in their own words","Expected go-live date and reason","Competitors evaluated, previous ERP history","Sensitivities (confidential formulas, family members, difficult staff)","BDE signature and date"]},
+ {t:"BRD structure", f:["Business overview and goals","Organisation structure and users","Module-wise As-Is process","Module-wise To-Be process in DotOne","Reports and dashboards list","Integrations list","Gap list (links to CR register)","Data migration scope","Assumptions and out of scope","Sign-off block per department and owner"]},
+ {t:"Change request (CR) form fields", f:["CR number, date, raised by","Module and linked BRD requirement","Business need and rupee or time impact","Classification (C0 to C4, X)","Proposed solution","Acceptance criteria (how we will test it is done)","Effort in person-days and cost","Phase: before go-live or Phase 2","Upgrade impact noted by Tech Lead","Client approval signature, Implementation Head approval"]},
+ {t:"UAT script fields", f:["Script ID and department","Scenario in business words","Pre-conditions (masters, stock)","Steps","Expected result","Actual result","Pass or fail, issue ID","Tester name and date"]}
+];
+
+const RISKS = [
+ ["Owner unavailable, decisions stall","Owner review dates fixed in charter. Escalate to co-founder-level call after 2 missed reviews."],
+ ["Client data not ready","Data deadline in charter. Go-live date moves automatically if masters arrive late. Say so at kickoff."],
+ ["Key user resistance","Identify early, involve them in UAT, give them champion role, owner backs publicly."],
+ ["Scope creep through WhatsApp requests","Every new ask gets 'noted, raising a CR'. Weekly CR review with SPOC."],
+ ["Dual entry in Excel and DotOne continues","Owner announcement, stop old registers on go-live, daily usage report shows gaps."],
+ ["CA insists on Tally","Involve CA in finance workshop. Offer Tally sync or GST-ready reports for the CA."],
+ ["Infra not ready at factory","Readiness checklist at kickoff, verified again at Go / No-Go."],
+ ["Consultant pulled to another project","Implementation Head approval needed to move any consultant before G8."]
+];
+
+const ESCALATION = [
+ ["L1","Functional Consultant","Same day response, 24 hours resolution for normal issues"],
+ ["L2","Project Manager","If not resolved in 48 hours, or any timeline slip"],
+ ["L3","Implementation Head","Scope disputes, commercial CRs, go-live slip over 1 week"],
+ ["L4","Co-founder","Owner-level relationship risk, payment disputes, contract changes"]
+];
+
+const KPIS = [
+ ["Transactions entered in DotOne vs total business transactions","Above 95 percent by day 30"],
+ ["Daily active users vs trained users","Above 85 percent by day 14"],
+ ["Stock accuracy at physical count","Above 97 percent by day 60"],
+ ["Invoices and challans generated from DotOne","100 percent from go-live"],
+ ["Month-end closing time","Reduced by half vs before"],
+ ["Open critical issues","Zero by end of hypercare"],
+ ["Owner opens dashboard","At least 4 days a week"]
+];
+
+/* ============================== TRACKER TASKS ============================== */
+const TASKS = {
+ p0:[
+  ["Signed agreement and advance received","SAL"],["Handover call held with BDE","PM"],["Handover form filled and signed","SAL"],
+  ["SOW reviewed against verbal promises","IH"],["PM, consultant and tech lead assigned","IH"],["Client WhatsApp project group created","PM"],
+  ["G1: Handover accepted by Implementation Head","IH",1]
+ ],
+ p1:[
+  ["Kickoff meeting held with owner present","PM"],["Project charter shared","PM"],["Client SPOC and key users named","SPOC"],
+  ["RACI and time commitment agreed","PM"],["Communication rhythm fixed","PM"],["Infra readiness checklist sent","PM"],
+  ["Document collection list sent","FC"],["DotOne instance provisioned, admin login shared","TL"]
+ ],
+ p2:[
+  ["Owner interview done","FC"],["Factory and godown walk-through done","FC"],["Document samples collected","FC"],
+  ["Workshop: CRM and Sales","FC","sales"],["Workshop: Purchase","FC","purchase"],["Workshop: Stores and Inventory","FC","inventory"],
+  ["Workshop: Production, QC, Maintenance","FC","mfg"],["Workshop: HR and Payroll","FC","hrms"],["Workshop: Accounts and Finance","FC","finance"],
+  ["As-Is process flows drawn","FC"],["To-Be process flows drawn","FC"],["Reports and dashboards list finalised","FC"],
+  ["Integration requirements captured","TL"],["BRD prepared and walked through","FC"],["G2: BRD signed by client","OWN",1]
+ ],
+ p3:[
+  ["Fit-gap sheet prepared","FC"],["Every gap classified C0 to C4 or X","FC"],["Technical feasibility review done","TL"],
+  ["Effort and cost estimated for C2 to C4","TL"],["Customisation decision meeting with owner","IH"],["CR forms signed, commercials approved","OWN"],
+  ["Phase 1 and Phase 2 scope frozen","PM"],["G3: Solution design and CR sign-off","OWN",1]
+ ],
+ p4:[
+  ["Company, branches, GSTIN, FY configured","FC"],["Users, roles and permissions set","FC"],["Numbering series and print formats approved","FC"],
+  ["Global masters configured (UOM, tax, price lists)","FC"],["Finance base configured","FC","finance"],["Inventory and warehouses configured","FC","inventory"],
+  ["Purchase configured","FC","purchase"],["Sales and dispatch configured","FC","sales"],["CRM configured","FC","crm"],
+  ["Manufacturing: BOM, routing, work centres","FC","mfg"],["QC plans configured","FC","qc"],["HRMS and payroll rules configured","FC","hrms"],
+  ["Approval workflows and alerts","FC"],["WhatsApp templates submitted and approved","TL","whatsapp"],["Dashboards and reports configured","FC","bi"],
+  ["Approved customisations built and tested","TL"],["Integrations built and tested","TL"],["Vision AI site survey and camera setup","TL","vision"],
+  ["Internal conference room pilot passed","FC"],["G4: Configuration complete","IH",1]
+ ],
+ p5:[
+  ["Import templates shared","DM"],["Client data received","SPOC"],["Data cleansed and duplicates removed","DM"],
+  ["Item coding agreed","FC"],["Chart of accounts imported","DM","finance"],["Item master imported","DM"],
+  ["Customer and vendor masters imported","DM"],["BOMs imported","DM","mfg"],["Employee master imported","DM","hrms"],
+  ["Opening balance method planned","FC"],["G5: Masters verified by client","SPOC",1]
+ ],
+ p6:[
+  ["UAT scripts prepared","FC"],["Key users trained for UAT","TR"],["UAT executed department-wise","KU"],
+  ["Issues logged and classified","FC"],["Critical and high issues fixed and retested","TL"],["G6: UAT signed off","SPOC",1]
+ ],
+ p7:[
+  ["Role-wise training plan made","TR"],["Hindi quick reference cards and videos ready","TR"],["Office users trained","TR"],
+  ["Shop floor users trained on devices","TR"],["Owner dashboard walkthrough done","PM"],["Assessments passed, retraining done","TR"],
+  ["Owner announcement to all staff","OWN"]
+ ],
+ p8:[
+  ["Cutover date fixed and announced","PM"],["Go / No-Go meeting held","PM"],["G7: Go-live approved","OWN",1],
+  ["Old system transactions frozen","SPOC"],["Physical stock count done","KU","inventory"],["Opening stock loaded and tallied","DM","inventory"],
+  ["Opening ledger, receivables, payables loaded","DM","finance"],["Open SOs, POs, production orders loaded","DM"],
+  ["Go-live day support on site or on call","FC"],["Old registers and Excel officially stopped","OWN"]
+ ],
+ p9:[
+  ["Daily usage monitored for 2 weeks","FC"],["Issue log reviewed daily","FC"],["Week 1 review with SPOC","PM"],
+  ["First month end closed in DotOne","FC"],["Adoption report shared with owner","PM"],["Phase 2 plan agreed","PM"],
+  ["Knowledge transfer to support team","SUP"],["Testimonial or referral requested","PM"],["G8: Project closure signed","OWN",1]
+ ]
+};
+
+/* ============================== GUIDE RENDER ============================== */
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $ = s => document.querySelector(s);
+
+function renderGuide(){
+  $("#journey").innerHTML = PHASES.map((p,i)=>`<li><a href="#${p.id}"><span class="stn">${i}</span><span class="nm">${esc(p.short)}</span><span class="gt">${p.gate?esc(p.gate+" "+p.gateName):"&nbsp;"}</span></a></li>`).join("");
+
+  const extra = [["roles","Roles & RACI"],["timeline","Timeline by project size"],["questions","Question bank"],["feasibility","Feasibility framework"],["templates","Forms & templates"],["risks","Risks & escalation"],["kpis","Success measures"]];
+  $("#rail").innerHTML = `<h4>Before you start</h4><a href="#roles"><span class="n"></span>Roles & RACI</a><a href="#timeline"><span class="n"></span>Timeline by size</a>
+   <h4>Phases</h4>${PHASES.map((p,i)=>`<a href="#${p.id}"><span class="n">${i}</span>${esc(p.name)}</a>`).join("")}
+   <h4>Toolkit</h4>${extra.slice(2).map(e=>`<a href="#${e[0]}"><span class="n"></span>${esc(e[1])}</a>`).join("")}`;
+
+  let h = "";
+  // Roles
+  h += `<section class="sec" id="roles"><div class="sec-head"><h2>Roles & responsibilities</h2></div>
+   <p class="goal">Every project has named people in these roles. One person may hold two roles on small projects, but never PM and Tech Lead together.</p>
+   <div class="two"><div><h3>Techdotbit team</h3><ul class="plain">
+    <li><b>Implementation Head:</b> owns the method, approves gates G1, G3, G4, handles escalations and deviations.</li>
+    <li><b>Project Manager:</b> owns timeline, communication, charter, Go / No-Go, hypercare.</li>
+    <li><b>Functional Consultant:</b> requirements, BRD, fit-gap, configuration, UAT.</li>
+    <li><b>Tech Lead:</b> feasibility, customisations, integrations, instance and data security.</li>
+    <li><b>Data Migration Exec:</b> templates, cleansing, imports, reconciliation.</li>
+    <li><b>Trainer:</b> Hindi-first material, role-wise sessions, assessment.</li>
+    <li><b>Support Team:</b> takes over after G8.</li>
+    <li><b>Sales / BDE:</b> handover and stays informed for upsell and referral.</li></ul></div>
+   <div><h3>Client team</h3><ul class="plain">
+    <li><b>Owner / Sponsor:</b> sets goals, approves scope, CRs and go-live, announces the change.</li>
+    <li><b>SPOC:</b> single point of contact with decision authority, coordinates key users and data.</li>
+    <li><b>Key Users:</b> one per department, give requirements, test, become champions.</li>
+    <li><b>CA / Accountant:</b> opening balances, tax and statutory validation.</li></ul></div></div>
+   <h3>RACI matrix</h3><p class="prose" style="color:var(--muted);margin:0">R responsible, A accountable, C consulted, I informed.</p>
+   <div class="tbl"><table><thead><tr><th>Activity</th>${RACI_COLS.map(c=>`<th title="${esc(ROLES[c])}">${c}</th>`).join("")}</tr></thead>
+   <tbody>${RACI.map(r=>`<tr><td class="k">${esc(r[0])}</td>${r.slice(1).map(v=>`<td>${v}</td>`).join("")}</tr>`).join("")}</tbody></table></div>
+   <p class="legend">${RACI_COLS.map(c=>`${c} ${esc(ROLES[c])}`).join(", ")}</p></section>`;
+
+  // Timeline
+  h += `<section class="sec" id="timeline"><div class="sec-head"><h2>Timeline by project size</h2></div>
+   <p class="goal">Pick the tier at handover. Starter is 1 to 3 modules and up to 50 users. Growth is 4 to 8 modules. Enterprise is 9 or more modules, multiple plants or heavy integration.</p>
+   <div class="tbl"><table><thead><tr><th>Phase</th><th>Starter</th><th>Growth</th><th>Enterprise</th></tr></thead>
+   <tbody>${TIERS.map((r,i)=>`<tr${i===TIERS.length-1?' style="font-weight:700"':''}><td class="k">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join("")}</tbody></table></div>
+   <div class="note warn"><h5>Timeline rule</h5>The go-live date is a target, not a promise, until G5 (masters verified). Tell the owner this at kickoff so a data delay is never seen as our delay.</div></section>`;
+
+  // Phases
+  PHASES.forEach((p,i)=>{
+    h += `<section class="sec" id="${p.id}"><div class="sec-head"><span class="pno">${i}</span><h2>${esc(p.name)}</h2></div>
+     <p class="goal">${esc(p.goal)}</p>
+     <dl class="facts"><div><dt>Typical duration</dt><dd>${esc(p.duration)}</dd></div><div><dt>Owner</dt><dd>${esc(p.owner)}</dd></div><div><dt>Client involvement</dt><dd>${esc(p.client)}</dd></div><div><dt>Exit gate</dt><dd>${p.gate?`<span class="gate">${esc(p.gate)} ${esc(p.gateName)}</span>`:"Continues into next phase"}</dd></div></dl>
+     <h3>How to run it</h3><ol class="steps">${p.steps.map(s=>`<li><b>${esc(s[0])}</b><span>${esc(s[1])}</span></li>`).join("")}</ol>`;
+    if(p.id==="p2") h += `<div class="note"><h5>Use the question bank</h5>Every workshop uses the module questions in the <a href="#questions">question bank</a>. Record the answer, the person who gave it, and a document sample reference.</div>`;
+    if(p.id==="p3") h += `<div class="note"><h5>Full framework</h5>Classes, feasibility questions and decision rules are in the <a href="#feasibility">feasibility framework</a>. Log every gap in the tracker's customisation register, which suggests a decision from value and effort.</div>`;
+    if(p.id==="p8") h += `<h3>Go / No-Go checklist</h3><div class="tbl"><table><thead><tr><th>Priority</th><th>Criterion</th></tr></thead><tbody>${GONOGO.map(g=>`<tr><td class="k">${esc(g[0])}</td><td>${esc(g[1])}</td></tr>`).join("")}</tbody></table></div><p class="legend">Any Critical item not met means No-Go. High items need an owner-approved workaround with a date.</p>`;
+    h += `<div class="two"><div><h3>Deliverables</h3><ul class="plain">${p.deliverables.map(d=>`<li>${esc(d)}</li>`).join("")}</ul></div>
+     <div><h3>Common mistakes</h3><ul class="plain">${p.mistakes.map(d=>`<li>${esc(d)}</li>`).join("")}</ul></div></div>`;
+    if(p.notes.length) h += `<div class="note"><h5>Field notes</h5><ul>${p.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul></div>`;
+    h += `</section>`;
+  });
+
+  // Question bank
+  const total = QBANK.reduce((a,b)=>a+b.q.length,0);
+  h += `<section class="sec" id="questions"><div class="sec-head"><h2>Requirement question bank</h2></div>
+   <p class="goal">${total} standard questions across ${QBANK.length} areas. Ask only the modules in scope, but always run the owner set. Hindi prompts are for owner and shop floor conversations.</p>
+   <div class="qb-tools"><input type="search" id="qbSearch" placeholder="Search questions, for example: biometric, credit limit, BOM" aria-label="Search questions"><button id="qbOpen">Expand all</button><button id="qbClose">Collapse all</button></div>
+   <div id="qbList">${QBANK.map(g=>`<details class="mod" data-m="${g.m}"><summary><span>${esc(g.t)}<small>${g.q.length} questions</small></span></summary>${g.why?`<p class="why">${esc(g.why)}</p>`:""}<ol>${g.q.map(q=>`<li>${esc(q[0])}${q[1]?`<span class="hin">${esc(q[1])}</span>`:""}</li>`).join("")}</ol></details>`).join("")}</div></section>`;
+
+  // Feasibility
+  h += `<section class="sec" id="feasibility"><div class="sec-head"><h2>Customisation feasibility framework</h2></div>
+   <p class="goal">Every gap is classified, tested and scored before anyone says yes. The decision is written, signed, and logged in the CR register.</p>
+   <h3>Step 1: classify the gap</h3>
+   <div class="tbl"><table><thead><tr><th>Class</th><th>Type</th><th>What it means</th><th>Effort</th><th>Default decision</th></tr></thead>
+   <tbody>${FEAS_CLASSES.map(c=>`<tr><td><span class="cls ${c[0]}">${c[1]}</span></td><td class="k">${esc(c[2])}</td><td>${esc(c[3])}</td><td>${esc(c[4])}</td><td>${esc(c[5])}</td></tr>`).join("")}</tbody></table></div>
+   <h3>Step 2: run the feasibility test</h3>
+   <ol class="steps">${FEAS_Q.map(q=>`<li><b>${esc(q)}</b></li>`).join("")}</ol>
+   <h3>Step 3: score and decide</h3>
+   <p class="prose">Score business value from 1 (nice to have) to 5 (operations stop or money leaks without it). Score effort from 1 (under a day) to 5 (over 15 days or third-party dependency).</p>
+   <div class="tbl"><table><thead><tr><th>Value</th><th>Effort 1 to 2</th><th>Effort 3 to 5</th></tr></thead><tbody>
+    <tr><td class="k">4 to 5 (high)</td><td>Build before go-live</td><td>Phase 2, chargeable CR. Offer a workaround for go-live.</td></tr>
+    <tr><td class="k">3 (medium)</td><td>Build before go-live if it fits timeline, else Phase 2</td><td>Phase 2, chargeable CR</td></tr>
+    <tr><td class="k">1 to 2 (low)</td><td>Decline, offer workaround. Revisit after 30 days.</td><td>Decline, offer workaround</td></tr>
+   </tbody></table></div>
+   <div class="note warn"><h5>Always reject or escalate</h5><ul><li>Editing posted stock or ledger entries without a reversal trail</li><li>Hiding transactions from the auditor or bypassing GST logic</li><li>Changes to core tables that break product upgrades</li><li>Integrations where the vendor gives no API, export or written permission</li></ul></div>
+   <div class="note"><h5>How to say no to a Hindi-first owner</h5>"Sir, yeh hum bana sakte hain, lekin pehle 30 din standard system chalaiye. Agar tab bhi zaroorat lagi, toh Phase 2 mein sahi tarike se banayenge." Offer the workaround in the same sentence, never a flat no.</div></section>`;
+
+  // Templates
+  h += `<section class="sec" id="templates"><div class="sec-head"><h2>Forms & templates</h2></div>
+   <p class="goal">Minimum fields for the standard documents. Use DotOne letterhead for everything the client signs.</p>
+   <div class="two">${TEMPLATES.map(t=>`<div><h3>${esc(t.t)}</h3><ul class="plain">${t.f.map(f=>`<li>${esc(f)}</li>`).join("")}</ul></div>`).join("")}</div>
+   <h3>Data migration templates</h3>
+   <div class="tbl"><table><thead><tr><th>Template</th><th>Key columns</th></tr></thead><tbody>
+    <tr><td class="k">Item master</td><td>Code, name, category, UOM, alternate UOM and conversion, HSN, GST rate, batch or serial flag, reorder level, standard rate</td></tr>
+    <tr><td class="k">BOM</td><td>Finished item, version, component, quantity per unit, UOM, scrap percent, operation</td></tr>
+    <tr><td class="k">Customers and vendors</td><td>Name, GSTIN, state and code, billing and shipping address, contact, credit limit, credit days, price list, territory</td></tr>
+    <tr><td class="k">Chart of accounts</td><td>Ledger name, group, Tally mapping, cost centre applicable, opening balance (at cutover)</td></tr>
+    <tr><td class="k">Opening stock</td><td>Item code, warehouse, bin, batch or serial, quantity, rate, expiry</td></tr>
+    <tr><td class="k">Employees</td><td>Code, name, department, designation, joining date, shift, salary structure, UAN, ESIC number, bank details, biometric ID</td></tr>
+    <tr><td class="k">Open receivables and payables</td><td>Party, bill number, bill date, amount, due date</td></tr>
+   </tbody></table></div></section>`;
+
+  // Risks
+  h += `<section class="sec" id="risks"><div class="sec-head"><h2>Risks & escalation</h2></div>
+   <p class="goal">These eight risks cause most MSME implementation delays. Plan for them from kickoff.</p>
+   <div class="tbl"><table><thead><tr><th>Risk</th><th>Prevention</th></tr></thead><tbody>${RISKS.map(r=>`<tr><td class="k" style="white-space:normal">${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</tbody></table></div>
+   <h3>Escalation matrix</h3>
+   <div class="tbl"><table><thead><tr><th>Level</th><th>Who</th><th>When</th></tr></thead><tbody>${ESCALATION.map(r=>`<tr><td class="k">${r[0]}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join("")}</tbody></table></div>
+   <h3>Communication rhythm</h3><ul class="plain"><li>Daily: progress update in the client WhatsApp group by 7 pm.</li><li>Weekly: 30-minute status call with SPOC, tracker shared on screen.</li><li>Fortnightly: owner review, gates due, CR decisions, risks.</li><li>At every gate: sign-off document on letterhead, stored in project folder.</li></ul></section>`;
+
+  // KPIs
+  h += `<section class="sec" id="kpis"><div class="sec-head"><h2>Success measures</h2></div>
+   <p class="goal">A project is successful when the business runs on DotOne, not when the software is installed. Report these to the owner at day 30 and day 60.</p>
+   <div class="tbl"><table><thead><tr><th>Measure</th><th>Target</th></tr></thead><tbody>${KPIS.map(k=>`<tr><td>${esc(k[0])}</td><td class="k">${esc(k[1])}</td></tr>`).join("")}</tbody></table></div></section>`;
+
+  $("#guideMain").innerHTML = h;
+
+  // Question search
+  const s = $("#qbSearch");
+  s.addEventListener("input", ()=>{
+    const v = s.value.trim().toLowerCase();
+    document.querySelectorAll("#qbList details").forEach(d=>{
+      let any = false;
+      d.querySelectorAll("li").forEach(li=>{ const hit = !v || li.textContent.toLowerCase().includes(v); li.hidden = !hit; if(hit) any = true; });
+      const titleHit = v && d.querySelector("summary").textContent.toLowerCase().includes(v);
+      if(titleHit){ d.querySelectorAll("li").forEach(li=>li.hidden=false); any = true; }
+      d.hidden = !any; d.open = !!v && any;
+    });
+  });
+  $("#qbOpen").onclick = ()=>document.querySelectorAll("#qbList details").forEach(d=>d.open=true);
+  $("#qbClose").onclick = ()=>document.querySelectorAll("#qbList details").forEach(d=>d.open=false);
+
+  // Rail highlight
+  const links = [...document.querySelectorAll("#rail a")];
+  const obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ links.forEach(l=>l.classList.toggle("on", l.getAttribute("href")==="#"+e.target.id)); } });
+  },{rootMargin:"-30% 0px -65% 0px"});
+  document.querySelectorAll(".sec").forEach(s=>obs.observe(s));
+}
+
+/* ============================== VIEW SWITCH ============================== */
+document.querySelectorAll(".switch button").forEach(b=>b.addEventListener("click",()=>{
+  const v = b.dataset.view;
+  document.querySelectorAll(".switch button").forEach(x=>x.setAttribute("aria-selected", x===b));
+  $("#viewGuide").hidden = v!=="guide"; $("#viewTracker").hidden = v!=="tracker";
+  try{ localStorage.setItem("d1.view", v); }catch(e){}
+  window.scrollTo(0,0);
+}));
+
+/* ============================== TRACKER ============================== */
+const STATUS = [["todo","Not started"],["wip","In progress"],["done","Done"],["blocked","Blocked"],["na","Not applicable"]];
+const CR_DEC = ["Include via configuration","Build before go-live","Phase 2 (chargeable)","Decline, offer workaround","Awaiting API confirmation"];
+const CR_ST = ["Open","Client approval pending","Approved","In development","Delivered","Rejected"];
+const S = { projects:{}, cur:null, tab:"tasks", phase:null, statusFilter:"all", mode:"local", creating:false, deferRender:false };
+let DB = null; const writing = {}; const dirty = {}; const timers = {};
+
+function uid(){ return "p" + Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+function today(){ const d=new Date(); d.setHours(0,0,0,0); return d; }
+function allTasks(){ const out=[]; PHASES.forEach(p=>(TASKS[p.id]||[]).forEach((t,i)=>out.push({id:p.id+"_"+i, phase:p.id, text:t[0], role:t[1], mod:typeof t[2]==="string"?t[2]:null, gate:t[2]===1}))); return out; }
+const ALL_TASKS = allTasks();
+
+function taskState(p,t){
+  const s = (p.tasks||{})[t.id];
+  if(s) return s;
+  return { s: (t.mod && !(p.modules||[]).includes(t.mod)) ? "na" : "todo" };
+}
+function progress(p, phaseId){
+  const list = ALL_TASKS.filter(t=>!phaseId || t.phase===phaseId);
+  let tot=0, done=0;
+  list.forEach(t=>{ const s=taskState(p,t).s; if(s==="na") return; tot++; if(s==="done") done++; });
+  return {tot, done, pct: tot? Math.round(done*100/tot) : 0};
+}
+function currentPhase(p){
+  for(const ph of PHASES){ const pr = progress(p, ph.id); if(pr.done < pr.tot) return ph; }
+  return PHASES[PHASES.length-1];
+}
+
+/* storage */
+function loadLocal(){ try{ const raw = localStorage.getItem("d1.projects"); if(raw) S.projects = JSON.parse(raw)||{}; }catch(e){} }
+function saveLocal(){ try{ localStorage.setItem("d1.projects", JSON.stringify(S.projects)); }catch(e){} }
+function persist(id){
+  const p = S.projects[id];
+  if(p) p.updated = new Date().toISOString();
+  if(!DB){ saveLocal(); return; }
+  dirty[id] = true;
+  clearTimeout(timers[id]);
+  timers[id] = setTimeout(()=>flush(id), 500);
+}
+async function flush(id){
+  if(writing[id]) return;
+  writing[id] = true;
+  while(dirty[id]){
+    dirty[id] = false;
+    const p = S.projects[id];
+    try{
+      if(S.mode === "server"){
+        if(p) await api("save", {id, data:p});
+        else await api("delete", {id});
+      } else if(DB){
+        if(p) await DB.doc("projects/"+id).set(JSON.parse(JSON.stringify(p)));
+        else await DB.doc("projects/"+id).delete();
+      } else { saveLocal(); }
+    }catch(e){
+      if(e && (e.code==="unavailable" || e.status===0 || e.status>=500)){ await new Promise(r=>setTimeout(r, 900+Math.random()*900)); dirty[id]=true; continue; }
+      setStoreMsg("Could not save to the server: " + (e && e.message ? e.message : "unknown error") + ". The change is still on this screen, do not reload.");
+    }
+  }
+  writing[id] = false;
+}
+
+/* ---- self-hosted backend (api.php) ---- */
+function apiKey(){ try{ return localStorage.getItem("d1.apikey")||""; }catch(e){ return ""; } }
+async function api(action, body){
+  const res = await fetch(window.DOTONE_API + "?action=" + action, {
+    method: body ? "POST" : "GET",
+    headers: Object.assign({"X-Api-Key": apiKey()}, body ? {"Content-Type":"application/json"} : {}),
+    body: body ? JSON.stringify(body) : undefined,
+    cache: "no-store"
+  });
+  if(!res.ok){ const err = new Error("HTTP " + res.status); err.status = res.status; throw err; }
+  return res.json();
+}
+function mergeServer(rows){
+  const next = {};
+  Object.keys(rows||{}).forEach(id => { next[id] = rows[id]; });
+  Object.keys(dirty).forEach(id => { if((dirty[id] || writing[id]) && S.projects[id]) next[id] = S.projects[id]; });
+  S.projects = next;
+  if(S.cur && !S.projects[S.cur]) S.cur = null;
+}
+async function initServer(){
+  try{
+    const r = await api("list");
+    S.mode = "server";
+    const localCopy = JSON.parse(JSON.stringify(S.projects||{}));
+    mergeServer(r.projects || {});
+    Object.keys(localCopy).forEach(id => { if(!S.projects[id]){ S.projects[id] = localCopy[id]; persist(id); } });
+    try{ localStorage.removeItem("d1.projects"); }catch(e){}
+    setStoreMsg("Connected to your server. Shared with the whole team.");
+    requestRender();
+    setInterval(async ()=>{
+      if(document.hidden) return;
+      try{ const r2 = await api("list"); mergeServer(r2.projects||{}); requestRender(); }catch(e){}
+    }, 20000);
+  }catch(e){
+    if(e && e.status === 401){
+      setStoreMsg("Server needs an access key.");
+      const el = document.getElementById("storeState");
+      if(el){ const b = document.createElement("button"); b.className="btn alt"; b.style.marginTop="6px"; b.textContent="Enter server key";
+        b.onclick = ()=>{ const k = prompt("Enter the API key set in api.php"); if(k){ try{ localStorage.setItem("d1.apikey", k.trim()); }catch(e2){} initServer(); } };
+        el.appendChild(document.createElement("br")); el.appendChild(b); }
+    }
+    /* no backend reachable: stay on this-device storage */
+  }
+}
+function setStoreMsg(m){ const el=document.getElementById("storeState"); if(el) el.textContent = m; }
+
+async function initDb(){
+  if(!window.claude || typeof window.claude.use!=="function") return false;
+  try{
+    const db = await window.claude.use("db");
+    if(!db) return false;
+    DB = db; S.mode = "shared";
+    const localCopy = S.projects;
+    let first = true;
+    DB.collection("projects").onSnapshot(qs=>{
+      const next = {};
+      qs.docs.forEach(d=>{ if(d.exists) next[d.id] = JSON.parse(JSON.stringify(d.data())); });
+      Object.keys(dirty).forEach(id=>{ if(dirty[id]||writing[id]){ if(S.projects[id]) next[id]=S.projects[id]; } });
+      if(first){
+        first = false;
+        // one-time move of device-only projects into shared tracker
+        Object.keys(localCopy).forEach(id=>{ if(!next[id]){ next[id]=localCopy[id]; S.projects[id]=localCopy[id]; persist(id); } });
+        try{ localStorage.removeItem("d1.projects"); }catch(e){}
+      }
+      S.projects = next;
+      if(S.cur && !S.projects[S.cur]) S.cur = null;
+      requestRender();
+    }, err=>{ setStoreMsg("Live sync stopped. Reload the page to reconnect."); });
+    requestRender();
+    return true;
+  }catch(e){ return false; }
+}
+
+function requestRender(){
+  const a = document.activeElement;
+  if(a && a.closest && a.closest("#tracker") && (a.tagName==="INPUT"||a.tagName==="TEXTAREA") && a.type!=="checkbox"){ S.deferRender = true; return; }
+  renderTracker();
+}
+document.addEventListener("focusout", ()=>{ setTimeout(()=>{ if(S.deferRender){ S.deferRender=false; requestRender(); } }, 0); });
+
+/* render */
+function renderTracker(){
+  const root = $("#tracker");
+  const ids = Object.keys(S.projects).sort((a,b)=>(S.projects[b].updated||"").localeCompare(S.projects[a].updated||""));
+  if(!S.cur && ids.length && !S.creating) S.cur = ids[0];
+
+  const list = `<aside class="panel plist"><h3>Client projects</h3>
+    ${ids.length? ids.map(id=>{ const p=S.projects[id]; const pr=progress(p); const ph=currentPhase(p);
+      return `<button class="pitem ${id===S.cur&&!S.creating?"on":""}" data-open="${id}"><b>${esc(p.client||"Untitled")}</b><span class="sub"><span>${esc(ph.short)}</span><span>${pr.pct}%</span></span><span class="bar"><i style="width:${pr.pct}%"></i></span></button>`; }).join("") : `<p style="color:var(--muted);font-size:14px;margin:4px 8px">No projects yet.</p>`}
+    <button class="btn block" id="newProj">Add client project</button>
+    <div class="store-state" id="storeState">${S.mode==="shared"?"Shared with your team, saves automatically.":S.mode==="server"?"Connected to your server. Shared with the whole team.":"Saved on this device only."}</div></aside>`;
+
+  let body = "";
+  if(S.creating || !ids.length) body = renderForm();
+  else body = renderProject(S.projects[S.cur], S.cur);
+
+  root.innerHTML = `<div class="tk-grid">${list}<div>${body}</div></div>`;
+  bindTracker();
+}
+
+function renderForm(existing){
+  const p = existing || {};
+  return `<section class="panel form"><h2>${existing?"Edit project details":"New client project"}</h2>
+   <p style="color:var(--muted);margin:0">Tasks for modules you leave unticked start as not applicable. You can change any task later.</p>
+   <div class="fgrid">
+    <label class="f">Client name<input id="fClient" value="${esc(p.client)}" placeholder="e.g. Shree Ganesh Plywood" required></label>
+    <label class="f">Industry<input id="fInd" value="${esc(p.industry)}" placeholder="Plywood, textiles, chemicals"></label>
+    <label class="f">Project size<select id="fTier">${["Starter","Growth","Enterprise"].map(t=>`<option ${p.tier===t?"selected":""}>${t}</option>`).join("")}</select></label>
+    <label class="f">Project Manager<input id="fPm" value="${esc(p.pm)}"></label>
+    <label class="f">Functional Consultant<input id="fFc" value="${esc(p.fc)}"></label>
+    <label class="f">Client SPOC<input id="fSpoc" value="${esc(p.spoc)}"></label>
+    <label class="f">Kickoff date<input type="date" id="fKick" value="${esc(p.kickoff)}"></label>
+    <label class="f">Target go-live<input type="date" id="fGo" value="${esc(p.golive)}"></label>
+   </div>
+   <b>Modules in scope</b>
+   <div class="modpick">${MODULES.map(m=>`<label><input type="checkbox" value="${m[0]}" ${(p.modules||(!existing?["core"]:[])).includes(m[0])?"checked":""}> ${esc(m[1])}</label>`).join("")}</div>
+   <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn" id="fSave">${existing?"Save details":"Create project"}</button>${(existing||Object.keys(S.projects).length)?`<button class="btn alt" id="fCancel">Cancel</button>`:""}</div>
+   <p id="fErr" style="color:var(--bad);margin:10px 0 0" role="alert"></p></section>`;
+}
+
+function renderProject(p, id){
+  if(S.editing===id) return renderForm(p);
+  const pr = progress(p);
+  let daysTxt = "Not set", late=false;
+  if(p.golive){ const d = Math.round((new Date(p.golive+"T00:00:00") - today())/86400000); daysTxt = d>=0? String(d) : String(-d); late = d<0 && progress(p,"p8").pct<100; }
+  const blocked = ALL_TASKS.filter(t=>taskState(p,t).s==="blocked").length;
+  const crs = Object.values(p.crs||{});
+  const capt = ansStats(p);
+  const modNames = (p.modules||[]).map(m=>(MODULES.find(x=>x[0]===m)||[0,m])[1]);
+
+  let h = `<section class="panel"><div class="phead"><div class="phead-top">
+    <div><h2>${esc(p.client)}</h2><div class="meta">${esc([p.industry,p.tier].filter(Boolean).join(", "))}${p.pm?`. PM ${esc(p.pm)}`:""}${p.fc?`, consultant ${esc(p.fc)}`:""}${p.spoc?`, SPOC ${esc(p.spoc)}`:""}</div>
+    <div class="meta">${modNames.length} modules: ${esc(modNames.join(", "))}</div></div>
+    <div class="kpis"><div class="kpi"><b>${pr.pct}%</b><span>${pr.done} of ${pr.tot} tasks</span></div>
+     <div class="kpi ${late?"late":""}"><b>${daysTxt}</b><span>${p.golive?(late?"days past go-live":"days to go-live"):"go-live date"}</span></div>
+     <div class="kpi ${blocked?"late":""}"><b>${blocked}</b><span>blocked</span></div>
+     <div class="kpi"><b>${crs.length}</b><span>customisation requests</span></div>
+     <div class="kpi"><b>${capt.pct}%</b><span>requirements captured</span></div></div></div>
+    <div class="phasebars">${PHASES.map((ph,i)=>{const pp=progress(p,ph.id);return `<button class="${S.phase===ph.id?"on":""}" data-phase="${ph.id}" title="${esc(ph.name)}"><span class="pn">${i} ${esc(ph.short)}</span><span class="pp">${pp.pct}%</span><span class="bar"><i style="width:${pp.pct}%"></i></span></button>`}).join("")}</div>
+   </div>
+   <div class="tabs2" role="tablist"><button class="${S.tab==="tasks"?"on":""}" data-tab="tasks">Task checklist</button><button class="${S.tab==="req"?"on":""}" data-tab="req">Requirements (${capt.done}/${capt.tot})</button><button class="${S.tab==="crs"?"on":""}" data-tab="crs">Customisation register</button><button class="${S.tab==="doc"?"on":""}" data-tab="doc">Generate document</button><button class="${S.tab==="info"?"on":""}" data-tab="info">Project details</button></div>`;
+
+  if(S.tab==="tasks"){
+    h += `<div class="toolbar"><label>Show <select id="stFilter">${[["all","All tasks"],["open","Open only"],["blocked","Blocked"],["overdue","Overdue"]].map(o=>`<option value="${o[0]}" ${S.statusFilter===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></label>
+     ${S.phase?`<button class="btn alt" id="clrPhase">Show all phases</button>`:""}</div>
+     <div class="trow thead"><span>Status</span><span>Task</span><span>Owner name</span><span>Due date</span><span>Notes</span></div>`;
+    PHASES.filter(ph=>!S.phase||S.phase===ph.id).forEach((ph,i)=>{
+      const pp = progress(p, ph.id);
+      const rows = ALL_TASKS.filter(t=>t.phase===ph.id).filter(t=>{
+        const st = taskState(p,t);
+        if(S.statusFilter==="open") return st.s!=="done" && st.s!=="na";
+        if(S.statusFilter==="blocked") return st.s==="blocked";
+        if(S.statusFilter==="overdue") return st.d && new Date(st.d+"T00:00:00")<today() && st.s!=="done" && st.s!=="na";
+        return true;
+      });
+      if(!rows.length) return;
+      h += `<div class="tphase"><h4>${PHASES.indexOf(ph)} ${esc(ph.name)} <span class="c">${pp.done} of ${pp.tot} done</span>${ph.gate?`<span class="gate">${esc(ph.gate)}</span>`:""}</h4>`;
+      rows.forEach(t=>{
+        const st = taskState(p,t);
+        const od = st.d && new Date(st.d+"T00:00:00")<today() && st.s!=="done" && st.s!=="na";
+        h += `<div class="trow ${t.gate?"g":""} ${st.s==="na"?"isna":""} ${od?"overdue":""}" data-t="${t.id}">
+          <select class="st" data-s="${st.s}" data-f="s" aria-label="Status">${STATUS.map(s=>`<option value="${s[0]}" ${st.s===s[0]?"selected":""}>${s[1]}</option>`).join("")}</select>
+          <span class="t">${esc(t.text)}<small>${esc(ROLES[t.role])}</small></span>
+          <input data-f="o" value="${esc(st.o)}" placeholder="Name" aria-label="Owner name">
+          <input type="date" data-f="d" value="${esc(st.d)}" aria-label="Due date">
+          <input data-f="n" value="${esc(st.n)}" placeholder="Note, blocker, sign-off ref" aria-label="Note"></div>`;
+      });
+      h += `</div>`;
+    });
+  } else if(S.tab==="req"){
+    h += renderReq(p);
+  } else if(S.tab==="doc"){
+    h += renderDocTab(p);
+  } else if(S.tab==="crs"){
+    const list = Object.entries(p.crs||{}).sort((a,b)=>(a[1].c||"").localeCompare(b[1].c||""));
+    h += `<div class="crwrap"><p style="color:var(--muted);margin:0 0 12px">Log every gap from fit-gap here. Value and effort drive the suggested decision; the final decision is yours and needs a signed CR.</p>
+     <div class="crform">
+      <label class="f">Requirement<input id="crReq" placeholder="e.g. Show thickness-wise stock in sq ft and sheets"></label>
+      <label class="f">Module<select id="crMod">${MODULES.map(m=>`<option value="${m[0]}">${esc(m[1])}</option>`).join("")}</select></label>
+      <label class="f">Class<select id="crCls">${FEAS_CLASSES.map(c=>`<option value="${c[1]}">${c[1]} ${esc(c[2])}</option>`).join("")}</select></label>
+      <label class="f">Value<select id="crVal">${[1,2,3,4,5].map(n=>`<option ${n===3?"selected":""}>${n}</option>`).join("")}</select></label>
+      <label class="f">Effort<select id="crEff">${[1,2,3,4,5].map(n=>`<option ${n===2?"selected":""}>${n}</option>`).join("")}</select></label>
+      <button class="btn" id="crAdd">Add request</button></div>
+      <p id="crErr" style="color:var(--bad);margin:8px 0 0" role="alert"></p>
+     ${list.length?`<div class="tbl crtbl"><table><thead><tr><th>#</th><th>Requirement</th><th>Module</th><th>Class</th><th>Value</th><th>Effort</th><th>Decision</th><th>Status</th><th>Est. days</th><th>Notes</th><th></th></tr></thead><tbody>
+      ${list.map(([cid,c],i)=>{ const sug = suggest(c); return `<tr data-cr="${cid}">
+        <td>${i+1}</td><td style="min-width:200px"><input data-cf="req" value="${esc(c.req)}" style="width:100%"></td>
+        <td>${esc((MODULES.find(m=>m[0]===c.mod)||[0,c.mod])[1])}</td>
+        <td><select data-cf="cls">${FEAS_CLASSES.map(x=>`<option ${c.cls===x[1]?"selected":""}>${x[1]}</option>`).join("")}</select></td>
+        <td><select data-cf="val">${[1,2,3,4,5].map(n=>`<option ${+c.val===n?"selected":""}>${n}</option>`).join("")}</select></td>
+        <td><select data-cf="eff">${[1,2,3,4,5].map(n=>`<option ${+c.eff===n?"selected":""}>${n}</option>`).join("")}</select></td>
+        <td style="min-width:190px"><select data-cf="dec"><option value="">Suggested: ${esc(sug)}</option>${CR_DEC.map(d=>`<option ${c.dec===d?"selected":""}>${esc(d)}</option>`).join("")}</select></td>
+        <td><select data-cf="st">${CR_ST.map(d=>`<option ${c.st===d?"selected":""}>${esc(d)}</option>`).join("")}</select></td>
+        <td><input data-cf="days" type="number" min="0" step="0.5" value="${esc(c.days)}" style="width:70px"></td>
+        <td style="min-width:160px"><input data-cf="note" value="${esc(c.note)}" style="width:100%" placeholder="CR no., workaround"></td>
+        <td><button class="del" data-crdel="${cid}">Delete</button></td></tr>`; }).join("")}
+      </tbody></table></div>
+      <p class="legend">Before go-live: ${list.filter(([_,c])=>(c.dec||suggest(c))==="Build before go-live").length}. Phase 2: ${list.filter(([_,c])=>(c.dec||suggest(c))==="Phase 2 (chargeable)").length}. Declined: ${list.filter(([_,c])=>(c.dec||suggest(c))==="Decline, offer workaround").length}. Estimated effort: ${list.reduce((a,[_,c])=>a+(+c.days||0),0)} days.</p>`
+      : `<div class="empty"><h2>No customisation requests yet</h2><p>Add each gap found during fit-gap analysis. Standard fits and pure configuration can be logged too as C0, so the client sees the full picture.</p></div>`}
+     </div>`;
+  } else {
+    h += `<div class="crwrap"><dl class="facts" style="margin-bottom:18px">
+      <div><dt>Kickoff</dt><dd>${esc(p.kickoff||"Not set")}</dd></div><div><dt>Target go-live</dt><dd>${esc(p.golive||"Not set")}</dd></div>
+      <div><dt>Current phase</dt><dd>${esc(currentPhase(p).name)}</dd></div><div><dt>Last updated</dt><dd>${p.updated?new Date(p.updated).toLocaleString():""}</dd></div></dl>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn alt" id="editProj">Edit details and modules</button><button class="btn danger" id="delProj">Delete project</button></div>
+      <p id="delConfirm" hidden style="margin-top:14px">Delete ${esc(p.client)} and all its tasks and requests for everyone? <button class="btn danger" id="delYes">Yes, delete</button> <button class="btn alt" id="delNo">Keep it</button></p></div>`;
+  }
+  h += `</section>`;
+  return h;
+}
+
+/* ---------- requirement capture ---------- */
+function inScope(p,g){ const m=p.modules||[]; return g.m==="owner"||g.m==="integrations"||m.includes(g.m); }
+function ansStats(p){ let tot=0,done=0; QBANK.filter(g=>inScope(p,g)).forEach(g=>g.q.forEach((q,i)=>{tot++; if(((p.ans||{})[g.m+"_"+i]||"").trim()) done++;})); return {tot,done,pct:tot?Math.round(done*100/tot):0}; }
+function grpStats(p,g){ let done=0; g.q.forEach((q,i)=>{ if(((p.ans||{})[g.m+"_"+i]||"").trim()) done++; }); return {done,tot:g.q.length}; }
+
+function qRows(p,g){
+  return g.q.map((q,i)=>{
+    const key = g.m+"_"+i, a = (p.ans||{})[key]||"";
+    return `<div class="qrow ${a.trim()?"ans":""}">
+      <span class="qq">${esc(q[0])}${q[1]?`<span class="hin">${esc(q[1])}</span>`:""}</span>
+      <textarea data-ans="${key}" placeholder="Client's answer, in their words">${esc(a)}</textarea>
+      <button class="gapbtn" data-gap="${key}" data-mod="${g.m}" title="Log this as a gap in the customisation register">Log as gap</button></div>`;
+  }).join("");
+}
+function renderReq(p){
+  const inS = QBANK.filter(g=>inScope(p,g)), out = QBANK.filter(g=>!inScope(p,g));
+  const a = ansStats(p);
+  let h = `<div class="toolbar"><span style="color:var(--muted);font-size:14px">Capture answers during the workshops. Whatever you write here flows straight into the generated document.</span>
+    <span style="margin-left:auto;font-weight:600">${a.done} of ${a.tot} answered</span></div>`;
+  inS.forEach(g=>{
+    const st = grpStats(p,g);
+    h += `<div class="qgrp"><h4>${esc(g.t)} <span class="c">${st.done} of ${st.tot} answered</span></h4>${qRows(p,g)}</div>`;
+  });
+  if(out.length){
+    h += `<div class="outscope"><details><summary>Modules not in scope for this project (${out.length}). Open if the client starts talking about them.</summary>
+      ${out.map(g=>`<div class="qgrp"><h4>${esc(g.t)} <span class="c">not in scope</span></h4>${qRows(p,g)}</div>`).join("")}</details></div>`;
+  }
+  return h;
+}
+
+/* ---------- roadmap ---------- */
+const DUR = { Starter:[2,3,5,2,7,3,3,3,1,14], Growth:[3,5,10,5,18,7,7,7,2,30], Enterprise:[7,7,18,10,35,14,14,14,4,45] };
+const CLIENT_NEEDS = [
+ "Signed agreement and advance",
+ "Owner and SPOC available for the kickoff meeting",
+ "Owner, department heads and document samples for the workshops",
+ "Owner decision on customisations and signed change requests",
+ "SPOC available for clarifications, print formats approved",
+ "Master data in our templates, and verification of imported masters",
+ "Key users testing their own daily work for a few hours a day",
+ "All users released for training batches",
+ "Physical stock count team, opening trial balance from your CA, owner announcement",
+ "Daily use by all users, and one review call a week"
+];
+function fmtD(d){ return d? d.toLocaleDateString("en-GB",{day:"2-digit",month:"short",year:"numeric"}) : "To be planned"; }
+function roadmap(p){
+  const dur = DUR[p.tier] || DUR.Growth;
+  let cur = p.kickoff ? new Date(p.kickoff+"T00:00:00") : null;
+  const rows = [];
+  PHASES.forEach((ph,i)=>{
+    let s=null,e=null;
+    if(cur){
+      if(ph.id==="p5"){ const setup = rows[4]; s = setup && setup.s ? new Date(setup.s) : new Date(cur); e = new Date(s); e.setDate(e.getDate()+dur[i]); }
+      else { s = new Date(cur); e = new Date(s); e.setDate(e.getDate()+dur[i]); cur = new Date(e); }
+    }
+    rows.push({ph, i, days:dur[i], s, e, pct:progress(p,ph.id).pct});
+  });
+  return rows;
+}
+
+/* ---------- document generation ---------- */
+function docNo(p,id){ const d=new Date(); return "DOT/IMP/"+String(d.getFullYear()).slice(2)+String(d.getMonth()+1).padStart(2,"0")+"/"+String(id||"").slice(-4).toUpperCase(); }
+function qaBlock(p,g,onlyAnswered){
+  const rows = g.q.map((q,i)=>{ const a=((p.ans||{})[g.m+"_"+i]||"").trim(); return (onlyAnswered && !a) ? "" :
+    `<div class="d-qa"><b>${esc(q[0])}</b><span>${a?esc(a):"<i>Not captured yet</i>"}</span></div>`; }).join("");
+  return rows;
+}
+function docBody(p, id, audience){
+  const client = audience==="client";
+  const rm = roadmap(p);
+  const modNames = (p.modules||[]).map(m=>(MODULES.find(x=>x[0]===m)||[0,m])[1]);
+  const crs = Object.entries(p.crs||{});
+  const inS = QBANK.filter(g=>inScope(p,g));
+  const owner = inS.find(g=>g.m==="owner");
+  const rest = inS.filter(g=>g.m!=="owner");
+  const a = ansStats(p);
+  const gl = rm[8] && rm[8].e ? fmtD(rm[8].e) : (p.golive? fmtD(new Date(p.golive+"T00:00:00")) : "To be planned");
+  let h = `<div class="d-top"><div class="d-brand">${LOGO_MARK}<small>Business Growth OS by Techdotbit Pvt Ltd</small></div>
+   <div class="d-meta">${client?"Implementation Plan":"Internal Implementation Brief"}<br>Doc ${esc(docNo(p,id))}<br>${fmtD(new Date())}</div></div>
+   <h1>${esc(p.client||"Client")} &mdash; DotOne implementation</h1>
+   <p>${client
+     ? "This document records what we understood about your business, what DotOne will cover, what we will build, and the plan from today to go-live. Please review it and sign at the end so the team can start work."
+     : "Internal working brief generated from the project tracker. It carries the requirements captured so far, the customisation decisions, the roadmap and the open points that must be closed before the next gate."}</p>
+
+   <h2>1. Project summary</h2>
+   <table><tbody>
+    <tr><th>Client</th><td>${esc(p.client)}</td><th>Industry</th><td>${esc(p.industry||"-")}</td></tr>
+    <tr><th>Scope size</th><td>${esc(p.tier||"-")}</td><th>Modules</th><td>${esc(modNames.join(", ")||"-")}</td></tr>
+    <tr><th>Kickoff</th><td>${p.kickoff?fmtD(new Date(p.kickoff+"T00:00:00")):"To be fixed"}</td><th>Planned go-live</th><td>${esc(gl)}</td></tr>
+    <tr><th>Your SPOC</th><td>${esc(p.spoc||"To be named")}</td><th>Techdotbit team</th><td>${esc([p.pm&&("PM "+p.pm), p.fc&&("Consultant "+p.fc)].filter(Boolean).join(", ")||"To be assigned")}</td></tr>
+   </tbody></table>
+   ${client?"":`<p><b>Capture status:</b> ${a.done} of ${a.tot} standard questions answered (${a.pct}%). Overall task completion ${progress(p).pct}%.</p>`}`;
+
+  if(owner){
+    h += `<h2>2. Understanding of your business</h2>${qaBlock(p,owner,client)}`;
+  }
+  h += `<h2>3. Requirements captured, module by module</h2>`;
+  if(rest.length===0) h += `<p>No modules selected yet.</p>`;
+  rest.forEach(g=>{
+    const block = qaBlock(p,g,client);
+    if(!block.trim()) { if(!client) h += `<h3>${esc(g.t)}</h3><p class="d-open">Nothing captured yet for this module.</p>`; return; }
+    h += `<h3>${esc(g.t)}</h3>${block}`;
+  });
+
+  if(!client){
+    const open = [];
+    inS.forEach(g=>g.q.forEach((q,i)=>{ if(!((p.ans||{})[g.m+"_"+i]||"").trim()) open.push([g.t,q[0]]); }));
+    h += `<h2>4. Open questions to close before the next workshop</h2>`;
+    h += open.length? `<table><thead><tr><th>Area</th><th>Question</th></tr></thead><tbody>${open.map(o=>`<tr><td>${esc(o[0])}</td><td>${esc(o[1])}</td></tr>`).join("")}</tbody></table>`
+      : `<p>All standard questions are answered.</p>`;
+  }
+
+  h += `<h2>${client?"4":"5"}. Customisations and gaps</h2>`;
+  if(!crs.length) h += `<p>No customisation requests logged. The implementation runs on standard DotOne.</p>`;
+  else h += `<table><thead><tr><th>#</th><th>Requirement</th><th>Module</th>${client?"":"<th>Class</th><th>Value / Effort</th>"}<th>Decision</th><th>Status</th>${client?"":"<th>Est. days</th>"}</tr></thead><tbody>
+    ${crs.map(([cid,c],i)=>`<tr><td>${i+1}</td><td>${esc(c.req)}</td><td>${esc((MODULES.find(m=>m[0]===c.mod)||[0,c.mod])[1])}</td>
+     ${client?"":`<td>${esc(c.cls)}</td><td>${esc(c.val)} / ${esc(c.eff)}</td>`}
+     <td>${esc(c.dec||suggest(c))}</td><td>${esc(c.st||"Open")}</td>${client?"":`<td>${esc(c.days||"-")}</td>`}</tr>`).join("")}</tbody></table>
+    <p>${client?"Anything marked Phase 2 is planned after go-live so that daily operations start on time. Anything marked declined has a working alternative in the standard system, which we will show your team during training.":"Every item marked for build needs a signed CR with acceptance criteria before development starts."}</p>`;
+
+  h += `<h2>${client?"5":"6"}. Roadmap to go-live</h2>
+   <table><thead><tr><th>#</th><th>Stage</th><th>Dates</th><th>${client?"What we need from you":"Owner"}</th><th>Sign-off</th>${client?"":"<th>Done</th>"}</tr></thead><tbody>
+   ${rm.map(r=>`<tr><td>${r.i}</td><td><b>${esc(r.ph.name)}</b><br><span style="color:#4F5E7B">${esc(r.ph.goal.split(".")[0])}.</span></td>
+     <td>${r.s?fmtD(r.s)+" to "+fmtD(r.e):r.days+" days"}${r.ph.id==="p5"?"<br><span style='color:#4F5E7B'>runs alongside setup</span>":""}</td>
+     <td>${client?esc(CLIENT_NEEDS[r.i]):esc(r.ph.owner)}</td>
+     <td>${r.ph.gate?`<span class="d-gate">${esc(r.ph.gate)} ${esc(r.ph.gateName)}</span>`:"-"}</td>${client?"":`<td>${r.pct}%</td>`}</tr>`).join("")}
+   </tbody></table>
+   <p>Dates are calculated from the kickoff date for a ${esc(p.tier||"Growth")} size project. They hold as long as master data and owner decisions arrive on the dates agreed in the charter.</p>`;
+
+  if(client){
+    h += `<h2>6. What we need from your team</h2><ul>
+     <li>One SPOC with authority to decide, available through the project.</li>
+     <li>One key user per department for workshops, testing and training.</li>
+     <li>Master data (items, parties, BOM, employees, opening balances) in our templates, by the dates in the roadmap.</li>
+     <li>A stock counting team on the cutover date.</li>
+     <li>An announcement from the owner that from go-live, work outside DotOne will not be accepted.</li>
+     <li>One hour a day from key users during testing and training.</li></ul>
+     <h2>7. How we work together</h2><ul>
+     <li>Daily progress update in the project WhatsApp group.</li>
+     <li>Weekly status call with your SPOC.</li>
+     <li>Fortnightly review with you, where we show progress against this roadmap.</li>
+     <li>Each stage closes with a written sign-off, so nothing moves ahead on assumption.</li>
+     <li>Support after go-live: ${esc(p.tier==="Starter"?"2 weeks":p.tier==="Enterprise"?"45 to 60 days":"30 days")} of hypercare, then our support team takes over.</li></ul>`;
+  } else {
+    const openTasks = ALL_TASKS.filter(t=>{ const st=taskState(p,t); return st.s!=="done" && st.s!=="na"; });
+    const blocked = openTasks.filter(t=>taskState(p,t).s==="blocked");
+    h += `<h2>7. Next actions from the tracker</h2>`;
+    h += openTasks.length? `<table><thead><tr><th>Phase</th><th>Task</th><th>Role</th><th>Owner</th><th>Due</th><th>Status</th></tr></thead><tbody>
+      ${openTasks.slice(0,40).map(t=>{const st=taskState(p,t);const ph=PHASES.find(x=>x.id===t.phase);return `<tr><td>${PHASES.indexOf(ph)} ${esc(ph.short)}</td><td>${esc(t.text)}</td><td>${esc(ROLES[t.role])}</td><td>${esc(st.o||"-")}</td><td>${esc(st.d||"-")}</td><td${st.s==="blocked"?' class="d-open"':''}>${esc((STATUS.find(x=>x[0]===st.s)||["","-"])[1])}</td></tr>`;}).join("")}
+      </tbody></table>${openTasks.length>40?`<p>${openTasks.length-40} more open tasks in the tracker.</p>`:""}` : `<p>No open tasks.</p>`;
+    if(blocked.length) h += `<p class="d-open"><b>${blocked.length} blocked task(s).</b> Escalate as per the L1 to L4 matrix before the next review.</p>`;
+    h += `<h2>8. Standing risks to watch</h2><ul>${RISKS.slice(0,5).map(r=>`<li><b>${esc(r[0])}:</b> ${esc(r[1])}</li>`).join("")}</ul>`;
+  }
+
+  h += `<div class="d-sign"><div>${client?esc(p.client||"Client")+" &mdash; authorised signatory, name, date":"Implementation Head, Techdotbit &mdash; approval, date"}</div>
+   <div>${client?"Techdotbit Pvt Ltd &mdash; Implementation Head, date":"Project Manager &mdash; date"}</div></div>
+   <div class="d-foot">Techdotbit Pvt Ltd, Sector 62, Noida. www.dotone.biz &middot; www.techdotbit.com &middot; sales@techdotbit.com &middot; +91 93117 36947.
+   ${client?"":" Internal document. Do not share with the client in this form."}</div>`;
+  return h;
+}
+function docFile(p,id,audience){
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${esc(p.client||"Client")} DotOne implementation ${audience==="client"?"plan":"brief"}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>body{margin:0;background:#EEF3F9;font-family:"Outfit",system-ui,Arial,sans-serif;padding:24px}
+  ${DOC_CSS}
+  @media print{body{background:#fff;padding:0}.doc{border:0;max-width:none;padding:0}}
+  </style></head><body><div class="doc">${docBody(p,id,audience)}</div></body></html>`;
+}
+const DOC_CSS = `.doc{background:#fff;color:#081C4B;border:1px solid #D6E0EC;border-radius:12px;padding:38px 40px;max-width:900px;margin:0 auto;font-size:14.5px;line-height:1.55}
+.doc .d-top{border-bottom:3px solid #0096EE;padding-bottom:14px;margin-bottom:22px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-end}
+.doc .d-brand .logo{height:34px;width:auto;color:#0097ef;display:block;margin-bottom:6px}
+.doc .d-brand small{display:block;font-size:13px;font-weight:400;color:#4F5E7B;letter-spacing:0}
+.doc .d-meta{font-size:13px;color:#4F5E7B;text-align:right}
+.doc h1{font-size:25px;margin:0 0 4px;letter-spacing:-.02em}
+.doc h2{font-size:18px;margin:30px 0 8px;padding-bottom:5px;border-bottom:1px solid #D6E0EC}
+.doc h3{font-size:15px;margin:18px 0 6px}
+.doc p{margin:8px 0;max-width:75ch}
+.doc table{width:100%;border-collapse:collapse;margin:10px 0;font-size:13.5px}
+.doc th,.doc td{border:1px solid #D6E0EC;padding:7px 10px;text-align:left;vertical-align:top}
+.doc th{background:#EAF1F9;font-weight:600}
+.doc .d-qa{margin:0 0 12px;padding:0 0 0 14px;border-left:3px solid #00FEC0}
+.doc .d-qa b{display:block;font-weight:600}.doc .d-qa span{color:#33415C;white-space:pre-wrap}
+.doc ul{margin:8px 0;padding-left:20px}.doc li{margin:4px 0}
+.doc .d-sign{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.doc .d-sign div{border-top:1px solid #081C4B;padding-top:8px;font-size:13px;color:#4F5E7B;margin-top:56px}
+.doc .d-foot{margin-top:28px;border-top:1px solid #D6E0EC;padding-top:10px;font-size:12px;color:#4F5E7B}
+.doc .d-gate{background:#00FEC0;color:#081C4B;border-radius:3px;padding:1px 6px;font-size:12px;font-weight:600;white-space:nowrap}
+.doc .d-open{color:#D6334B}`;
+
+function renderDocTab(p){
+  const a = ansStats(p);
+  return `<div class="toolbar">
+    <label>Version <select id="docAud">${[["client","Client copy"],["team","Internal team brief"]].map(o=>`<option value="${o[0]}" ${S.aud===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></label>
+    <button class="btn" id="docDl">Download as document</button>
+    <button class="btn alt" id="docCopy">Copy text</button>
+    <span style="color:var(--muted);font-size:13.5px">Built from ${a.done} answers, ${Object.keys(p.crs||{}).length} requests and the task tracker. Open the downloaded file and press Ctrl+P to save it as PDF.</span>
+   </div><div class="docprev"><div class="doc">${docBody(p, S.cur, S.aud||"client")}</div></div>`;
+}
+async function saveFile(name, html){
+  if(window.claude && typeof window.claude.use==="function"){
+    try{ const d = await window.claude.use("downloads"); if(d){ await d.save({filename:name, data:html}); return true; } }catch(e){}
+  }
+  try{
+    const url = URL.createObjectURL(new Blob([html],{type:"text/html"}));
+    const a = document.createElement("a"); a.href=url; a.download=name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url), 3000); return true;
+  }catch(e){ return false; }
+}
+
+function suggest(c){
+  const v=+c.val||0, e=+c.eff||0;
+  if(c.cls==="X") return "Decline, offer workaround";
+  if(c.cls==="C0") return "Include via configuration";
+  if(c.cls==="C4" && e>=3) return "Awaiting API confirmation";
+  if(v>=4) return e<=2 ? "Build before go-live" : "Phase 2 (chargeable)";
+  if(v===3) return e<=2 ? "Build before go-live" : "Phase 2 (chargeable)";
+  return "Decline, offer workaround";
+}
+
+function bindTracker(){
+  const root = $("#tracker");
+  root.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>{ S.cur=b.dataset.open; S.creating=false; S.editing=null; S.phase=null; S.tab="tasks"; renderTracker(); });
+  const np = $("#newProj"); if(np) np.onclick=()=>{ S.creating=true; S.editing=null; renderTracker(); };
+
+  const fs = $("#fSave");
+  if(fs) fs.onclick=()=>{
+    const client = $("#fClient").value.trim();
+    if(!client){ $("#fErr").textContent="Enter the client name to create the project."; $("#fClient").focus(); return; }
+    const modules = [...root.querySelectorAll(".modpick input:checked")].map(i=>i.value);
+    const data = { client, industry:$("#fInd").value.trim(), tier:$("#fTier").value, pm:$("#fPm").value.trim(), fc:$("#fFc").value.trim(), spoc:$("#fSpoc").value.trim(), kickoff:$("#fKick").value, golive:$("#fGo").value, modules };
+    if(S.editing && S.projects[S.editing]){
+      Object.assign(S.projects[S.editing], data); persist(S.editing); S.editing=null;
+    } else {
+      const id = uid(); S.projects[id] = Object.assign({tasks:{}, crs:{}, created:new Date().toISOString()}, data);
+      persist(id); S.cur=id; S.creating=false; S.tab="tasks"; S.phase=null;
+    }
+    renderTracker();
+  };
+  const fc = $("#fCancel"); if(fc) fc.onclick=()=>{ S.creating=false; S.editing=null; renderTracker(); };
+
+  root.querySelectorAll("[data-phase]").forEach(b=>b.onclick=()=>{ S.phase = S.phase===b.dataset.phase?null:b.dataset.phase; S.tab="tasks"; renderTracker(); });
+  root.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{ S.tab=b.dataset.tab; renderTracker(); });
+  const sf=$("#stFilter"); if(sf) sf.onchange=()=>{ S.statusFilter=sf.value; renderTracker(); };
+  const cp=$("#clrPhase"); if(cp) cp.onclick=()=>{ S.phase=null; renderTracker(); };
+
+  const p = S.projects[S.cur]; const id = S.cur;
+  root.querySelectorAll(".trow[data-t]").forEach(row=>{
+    const tid = row.dataset.t; const t = ALL_TASKS.find(x=>x.id===tid);
+    row.querySelectorAll("[data-f]").forEach(inp=>{
+      inp.addEventListener("change", ()=>{
+        p.tasks = p.tasks||{};
+        const cur = Object.assign({}, taskState(p,t));
+        cur[inp.dataset.f] = inp.value;
+        p.tasks[tid] = cur; persist(id);
+        if(inp.dataset.f==="s" || inp.dataset.f==="d") renderTracker();
+      });
+    });
+  });
+
+  root.querySelectorAll("[data-ans]").forEach(ta=>ta.addEventListener("change",()=>{
+    p.ans = p.ans||{}; p.ans[ta.dataset.ans] = ta.value; persist(id);
+    ta.closest(".qrow").classList.toggle("ans", !!ta.value.trim());
+  }));
+  root.querySelectorAll("[data-gap]").forEach(b=>b.onclick=()=>{
+    const key = b.dataset.gap, [m, idx] = [key.slice(0,key.lastIndexOf("_")), +key.slice(key.lastIndexOf("_")+1)];
+    const grp = QBANK.find(g=>g.m===m); if(!grp) return;
+    const ansTxt = ((p.ans||{})[key]||"").trim();
+    p.crs = p.crs||{};
+    const cid = "c"+Date.now().toString(36);
+    const mod = MODULES.find(x=>x[0]===m) ? m : "core";
+    p.crs[cid] = { req: ansTxt || grp.q[idx][0], mod, cls:"C2", val:"3", eff:"2", dec:"", st:"Open", days:"", note:"From "+grp.t, c:new Date().toISOString() };
+    persist(id); S.tab="crs"; renderTracker();
+  });
+
+  const aud=$("#docAud"); if(aud) aud.onchange=()=>{ S.aud=aud.value; renderTracker(); };
+  const dl=$("#docDl"); if(dl) dl.onclick=async ()=>{
+    const aud2 = S.aud||"client";
+    const name = (p.client||"client").replace(/[^a-zA-Z0-9]+/g,"_") + "_DotOne_" + (aud2==="client"?"Implementation_Plan":"Internal_Brief") + ".html";
+    dl.disabled = true; dl.textContent = "Preparing...";
+    const ok = await saveFile(name, docFile(p, id, aud2));
+    dl.disabled = false; dl.textContent = ok? "Download as document" : "Download blocked, try again";
+  };
+  const cp2=$("#docCopy"); if(cp2) cp2.onclick=async ()=>{
+    const el = root.querySelector(".doc"); if(!el) return;
+    try{ await navigator.clipboard.writeText(el.innerText); cp2.textContent="Copied"; setTimeout(()=>cp2.textContent="Copy text",1500); }
+    catch(e){ cp2.textContent="Copy blocked, select the text manually"; }
+  };
+
+  const add=$("#crAdd");
+  if(add) add.onclick=()=>{
+    const req=$("#crReq").value.trim();
+    if(!req){ $("#crErr").textContent="Describe the requirement before adding it."; $("#crReq").focus(); return; }
+    p.crs = p.crs||{};
+    const cid = "c"+Date.now().toString(36);
+    p.crs[cid] = { req, mod:$("#crMod").value, cls:$("#crCls").value, val:$("#crVal").value, eff:$("#crEff").value, dec:"", st:"Open", days:"", note:"", c:new Date().toISOString() };
+    persist(id); renderTracker();
+  };
+  root.querySelectorAll("tr[data-cr]").forEach(tr=>{
+    const cid = tr.dataset.cr;
+    tr.querySelectorAll("[data-cf]").forEach(inp=>inp.addEventListener("change",()=>{
+      p.crs[cid][inp.dataset.cf] = inp.value; persist(id);
+      if(["cls","val","eff","dec"].includes(inp.dataset.cf)) renderTracker();
+    }));
+  });
+  root.querySelectorAll("[data-crdel]").forEach(b=>b.onclick=()=>{ delete p.crs[b.dataset.crdel]; persist(id); renderTracker(); });
+
+  const ep=$("#editProj"); if(ep) ep.onclick=()=>{ S.editing=id; renderTracker(); };
+  const dp=$("#delProj"); if(dp) dp.onclick=()=>{ $("#delConfirm").hidden=false; };
+  const dn=$("#delNo"); if(dn) dn.onclick=()=>{ $("#delConfirm").hidden=true; };
+  const dy=$("#delYes"); if(dy) dy.onclick=()=>{ delete S.projects[id]; persist(id); S.cur=null; S.tab="tasks"; renderTracker(); };
+}
+
+/* boot */
+renderGuide();
+loadLocal();
+renderTracker();
+try{ if(localStorage.getItem("d1.view")==="tracker") $("#tabTracker").click(); }catch(e){}
+(async ()=>{ const shared = await initDb(); if(!shared) initServer(); })();
+</script>
+</body>
+</html>

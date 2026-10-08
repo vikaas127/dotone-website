@@ -66,7 +66,7 @@
 
         <div class="site-footer-light-bottom flex flex-col md:flex-row justify-between items-center gap-4 pt-8">
             <p class="text-text-secondary text-sm">
-                © 2025
+                © <?= date('Y') ?>
                 <a href="https://techdotbit.com" class="text-text-primary hover:text-primary-600 transition-colors" target="_blank" rel="noopener noreferrer">TechdotBit Pvt Ltd.</a>
                 All Rights Reserved.
             </p>

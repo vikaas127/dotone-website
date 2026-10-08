@@ -14,6 +14,7 @@
 
   // Cards rise in and prices count up
   var cards = document.querySelector('[data-pr]');
+  if (cards) cards.classList.add('is-ready');
   onVisible(cards, function () {
     cards.classList.add('is-in');
     if (reduced) return;
@@ -33,5 +34,6 @@
 
   // Comparison rows fade in one after another
   var table = document.querySelector('[data-pr-table]');
+  if (table) table.classList.add('is-ready');
   onVisible(table, function () { table.classList.add('is-in'); });
 })();

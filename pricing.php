@@ -90,14 +90,10 @@ $new = !empty($p['base']) ? array_values(array_diff($p['modules'], $prev)) : $p[
 <?php endforeach; ?>
                     </ul>
                 </div>
-                <ul class="pr-groups">
-<?php foreach (PRICING_GROUPS as [$gname, $gicon, $gkeys]): $line = plan_group($gkeys, $p['limits']); ?>
-                    <li class="<?= $line === null ? 'is-off' : '' ?>">
-                        <span class="pr-gicon"><?= $line === null ? '&mdash;' : icon('check', 'w-3.5 h-3.5') ?></span>
-                        <span><b><?= e($gname) ?></b><?= $line === null ? 'Not included' : e($line) ?></span>
-                    </li>
-<?php endforeach; ?>
-                </ul>
+                <div class="pr-facts">
+                    <span><?= icon('users', 'w-4 h-4') ?><?= $p['limits']['staff'] !== null ? e($p['limits']['staff']) . ' users' : 'Small team' ?></span>
+                    <span><?= icon('cog', 'w-4 h-4') ?><?= e($p['limits']['storage']) ?> storage</span>
+                </div>
             </article>
 <?php endforeach; ?>
         </div>

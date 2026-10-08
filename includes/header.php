@@ -111,7 +111,7 @@ foreach ($menuCols as $colTitle => $links): ?>
             </div>
 
             <div class="nav-actions hidden lg:flex items-center gap-5 flex-shrink-0 z-10">
-                <a href="https://techdotbit.in/register" class="nav-login text-sm font-medium transition-colors" rel="noopener">Login</a>
+                <a href="https://techdotbit.in/authentication/register" class="nav-login text-sm font-medium transition-colors" rel="noopener">Login</a>
                 <a href="/demo" class="btn-hero-glow text-sm px-5 py-2.5">Get Started</a>
             </div>
 
@@ -153,7 +153,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                     <a href="/api-reference" class="block px-3 py-2 text-xs rounded-lg transition-colors">API Reference</a>
                 </div>
                 <a href="/security" class="px-4 py-3 text-sm font-medium rounded-lg transition-colors">Security</a>
-                <a href="https://techdotbit.in/register" class="px-4 py-3 text-sm font-medium rounded-lg transition-colors" rel="noopener">Login</a>
+                <a href="https://techdotbit.in/authentication/register" class="px-4 py-3 text-sm font-medium rounded-lg transition-colors" rel="noopener">Login</a>
                 <a href="/demo" class="btn-hero-glow text-center mt-2 justify-center text-sm">Get Started</a>
             </div>
         </div>

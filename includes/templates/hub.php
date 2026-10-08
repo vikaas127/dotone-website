@@ -23,6 +23,11 @@ render_head($page);
     </div>
 </section>
 
+<?php
+require_once dirname(__DIR__) . '/showcase/engine.php';
+showcase(ltrim($page['path'], '/'));
+?>
+
 <?php foreach ($page['blocks'] ?? [] as $block): ?>
 <section class="section bg-white">
     <div class="container-custom">

@@ -61,6 +61,8 @@
         </div>
     </div>
 </section>
+
+<?php require_once __DIR__ . '/../includes/showcase/engine.php'; showcase('vision-ai/quality-inspection'); ?>
 <section class="section-sm bg-surface metrics-section">
 </section>
 <!-- WHY -->

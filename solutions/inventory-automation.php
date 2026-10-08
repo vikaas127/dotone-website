@@ -45,6 +45,8 @@
         </div>
     </div>
 </section>
+
+<?php require_once __DIR__ . '/../includes/showcase/engine.php'; showcase('solutions/inventory-automation'); ?>
 <!-- WHAT IS INVENTORY AUTOMATION -->
 <section class="section bg-surface">
     <div class="container-custom">

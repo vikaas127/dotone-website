@@ -83,6 +83,8 @@
         </div>
     </div>
 </section>
+
+<?php require_once __DIR__ . '/../includes/showcase/engine.php'; showcase('solutions/digital-transformation'); ?>
 <!-- WHAT IS INDUSTRY 4.0 -->
 <section class="section bg-surface">
     <div class="container-custom">

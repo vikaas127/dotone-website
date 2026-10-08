@@ -41,6 +41,8 @@
     </div>
 </section>
 
+<?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('security'); ?>
+
 <section class="section-sm">
     <div class="container-custom max-w-5xl mx-auto">
         <div class="grid md:grid-cols-2 gap-8">

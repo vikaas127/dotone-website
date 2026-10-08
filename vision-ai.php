@@ -89,6 +89,8 @@
             </div>
         </div>
     </section>
+
+<?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('vision-ai'); ?>
     <!-- Live CCTV Simulation Section -->
     <section class="section bg-surface">
         <div class="container-custom">

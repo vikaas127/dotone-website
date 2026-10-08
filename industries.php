@@ -65,6 +65,8 @@
             </div>
         </div>
     </section>
+
+<?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('industries'); ?>
     <!-- Industry Solutions Grid -->
     <section id="industry-solutions" class="section bg-surface">
         <div class="container-custom">

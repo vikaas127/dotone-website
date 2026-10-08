@@ -105,7 +105,7 @@ $new = !empty($p['base']) ? array_values(array_diff($p['modules'], $prev)) : $p[
 
         <div class="pr-includes">
             <span class="pr-includes-title">Every plan includes</span>
-<?php foreach ([['shield', 'Role-based access'], ['doc', 'GST-compliant invoices'], ['cog', 'Encrypted backups'], ['users', 'Onboarding team support'], ['link', 'Tally integration available']] as [$ico, $label]): ?>
+<?php foreach ([['shield', 'Role-based access'], ['doc', 'GST-compliant invoices'], ['cog', 'Encrypted backups'], ['users', 'Onboarding team support']] as [$ico, $label]): ?>
             <span class="pr-include"><?= icon($ico, 'w-4 h-4') ?><?= $label ?></span>
 <?php endforeach; ?>
         </div>

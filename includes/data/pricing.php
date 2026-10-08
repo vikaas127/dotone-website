@@ -31,6 +31,7 @@ const PRICING_MODULES = [
     'purchase'   => ['Purchase', '/purchase-management'],
     'production' => ['Manufacturing', '/production-management'],
     'quality'    => ['Quality', '/quality-management'],
+    'integrations' => ['Third-party integrations', '/integrations/tally'],
     'agents'     => ['AI agent for each module', '/ai-agents'],
 ];
 
@@ -75,9 +76,9 @@ return [
     ],
     [
         'name' => 'Business',
-        'tagline' => 'Adds manufacturing and quality for businesses that make.', 'base' => 'Professional',
+        'tagline' => 'Adds manufacturing, quality and third-party integrations.', 'base' => 'Professional',
         'price' => 26000,
-        'modules' => ['crm', 'support', 'sales', 'field', 'hrms', 'payroll', 'inventory', 'purchase', 'production', 'quality'],
+        'modules' => ['crm', 'support', 'sales', 'field', 'hrms', 'payroll', 'inventory', 'purchase', 'production', 'quality', 'integrations'],
         'cta' => ['Book a Demo', '/demo'],
         'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '20 GB'],
     ],
@@ -85,7 +86,7 @@ return [
         'name' => 'Enterprise AI',
         'tagline' => 'Everything in Business, with an AI agent working on each module.', 'base' => 'Business',
         'price' => 35000,
-        'modules' => ['crm', 'support', 'sales', 'field', 'hrms', 'payroll', 'inventory', 'purchase', 'production', 'quality', 'agents'],
+        'modules' => ['crm', 'support', 'sales', 'field', 'hrms', 'payroll', 'inventory', 'purchase', 'production', 'quality', 'integrations', 'agents'],
         'cta' => ['Talk to Sales', '/contact'],
         'limits' => ['staff' => 50, 'customers' => 200, 'contacts' => U, 'contracts' => U, 'invoices' => 200, 'proforma' => 200, 'creditnotes' => U, 'quotations' => U, 'projects' => 200, 'tasks' => 1000, 'tickets' => U, 'leads' => U, 'items' => 1000, 'storage' => '20 GB'],
     ],

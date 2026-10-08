@@ -9876,3 +9876,11 @@ a.card:hover,
 .pn-side { z-index: 1; }
 .pn-side--l1 { left: max(1.5rem, calc(50% - 31rem - 13rem)); }
 .pn-side--r1 { right: max(1.5rem, calc(50% - 31rem - 13rem)); }
+
+/* Accessibility: readable inactive titles, visible keyboard focus on interactive demos */
+.rp-item-title { color: #7C8798; }
+.rp-item:focus-visible, .show-head:focus-visible, .ind-chip:focus-visible, .explorer-tab:focus-visible {
+  outline: 2px solid #0096EE;
+  outline-offset: 3px;
+  border-radius: 0.6rem;
+}

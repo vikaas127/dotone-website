@@ -58,7 +58,7 @@
                     <li><a href="/demo" class="site-footer-light-link">Book a Demo</a></li>
                     <li><a href="/careers" class="site-footer-light-link">Careers</a></li>
                     <li><a href="/partners" class="site-footer-light-link">Partners</a></li>
-                    <li><a href="/support" class="site-footer-light-link">Support Center</a></li>
+                    <li><a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="site-footer-light-link">Support Center</a></li>
                     <li><a href="/documentation" class="site-footer-light-link">Documentation</a></li>
                 </ul>
             </div>

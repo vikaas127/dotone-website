@@ -105,7 +105,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                                     </div>
                                     <ul class="mega-menu-sublinks">
                                         <li><a href="/demo">Demo Center</a></li>
-                                        <li><a href="/support">Support Center</a></li>
+                                        <li><a href="mailto:support@techdotbit.com?subject=DotOne%20support">Support Center</a></li>
                                         <li><a href="/api-reference">API Reference</a></li>
                                         <li><a href="/guides/bom-setup">BOM Setup Guide</a></li>
                                         <li><a href="/integrations/tally">Tally Connector Guide</a></li>

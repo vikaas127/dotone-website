@@ -50,7 +50,6 @@
             <li><a href="#support-services" class="support-subnav-link">Support Services</a></li>
             <li><a href="#popular-articles" class="support-subnav-link">Popular Articles</a></li>
             <li><a href="#contact" class="support-subnav-link">Contact Us</a></li>
-            <li><a href="#testimonials" class="support-subnav-link">Testimonials</a></li>
         </ul>
     </div>
 </nav>
@@ -90,12 +89,12 @@
                 <h3 class="text-lg font-display font-semibold mb-2">How-to Videos</h3>
                 <p class="text-sm text-text-secondary">Watch step-by-step demos for production, inventory, and Vision AI.</p>
             </a>
-            <a href="/contact" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
+            <a href="mailto:support@techdotbit.com?subject=DotOne%20support%20ticket&amp;body=Company%3A%0D%0AYour%20name%3A%0D%0APhone%3A%0D%0AModule%20(e.g.%20Inventory%2C%20Payroll)%3A%0D%0A%0D%0AWhat%20happened%3A%0D%0A%0D%0AWhat%20you%20expected%3A%0D%0A" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
                 <span class="support-plan-icon" aria-hidden="true">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
                 </span>
-                <h3 class="text-lg font-display font-semibold mb-2">Live Chat &amp; Email</h3>
-                <p class="text-sm text-text-secondary">Reach our support team by email, phone, or in-app chat during business hours.</p>
+                <h3 class="text-lg font-display font-semibold mb-2">Raise a Ticket</h3>
+                <p class="text-sm text-text-secondary">Email support@techdotbit.com with your company, module and what happened. We reply within one business day.</p>
             </a>
         </div>
     </div>
@@ -257,8 +256,8 @@
                     <a href="mailto:support@techdotbit.com" class="text-primary-600 hover:underline text-sm">support@techdotbit.com</a>
                 </div>
                 <div>
-                    <div class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Phone</div>
-                    <a href="tel:+919876543210" class="text-text-primary text-sm">+91 98765 43210</a>
+                    <div class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Raise a ticket</div>
+                    <a href="mailto:support@techdotbit.com?subject=DotOne%20support%20ticket&amp;body=Company%3A%0D%0AYour%20name%3A%0D%0APhone%3A%0D%0AModule%20(e.g.%20Inventory%2C%20Payroll)%3A%0D%0A%0D%0AWhat%20happened%3A%0D%0A%0D%0AWhat%20you%20expected%3A%0D%0A" class="text-primary-600 hover:underline text-sm">Email a support ticket</a>
                 </div>
                 <div>
                     <div class="text-xs font-semibold uppercase tracking-wider text-text-secondary mb-1">Hours</div>
@@ -266,38 +265,13 @@
                 </div>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                <a href="/contact" class="btn-primary">Submit a Support Request</a>
+                <a href="mailto:support@techdotbit.com?subject=DotOne%20support%20ticket&amp;body=Company%3A%0D%0AYour%20name%3A%0D%0APhone%3A%0D%0AModule%20(e.g.%20Inventory%2C%20Payroll)%3A%0D%0A%0D%0AWhat%20happened%3A%0D%0A%0D%0AWhat%20you%20expected%3A%0D%0A" class="btn-primary">Raise a Support Ticket</a>
                 <a href="/demo" class="btn-secondary">Book a Demo</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="testimonials" class="section-sm bg-white">
-    <div class="container-custom max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-            <h2 class="text-3xl font-display font-bold mb-4">What Customers Say</h2>
-            <p class="text-text-secondary">Manufacturers across India trust Dotone support through rollout and beyond.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-            <blockquote class="card p-6">
-                <p class="text-sm text-text-secondary leading-relaxed mb-4">"The onboarding team helped us go live in five weeks. Remote sessions for BOM setup and inventory migration saved us months of trial and error."</p>
-                <footer class="text-sm font-semibold text-text-primary">Operations Head, Auto Components MSME</footer>
-            </blockquote>
-            <blockquote class="card p-6">
-                <p class="text-sm text-text-secondary leading-relaxed mb-4">"Premium support was worth it — our Tally sync and Vision AI camera setup were handled in dedicated sessions. Issues get resolved quickly on WhatsApp."</p>
-                <footer class="text-sm font-semibold text-text-primary">Plant Manager, Plastics Manufacturer</footer>
-            </blockquote>
-            <blockquote class="card p-6">
-                <p class="text-sm text-text-secondary leading-relaxed mb-4">"Enterprise support with a dedicated TAM made scaling to three plants straightforward. Quarterly reviews help us adopt new modules proactively."</p>
-                <footer class="text-sm font-semibold text-text-primary">IT Director, Multi-plant Forging Group</footer>
-            </blockquote>
-        </div>
-        <p class="text-center mt-8">
-            <a href="/case-studies" class="text-sm font-semibold text-primary-600 hover:text-primary-500">View customer stories →</a>
-        </p>
-    </div>
-</section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 

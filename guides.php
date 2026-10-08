@@ -70,7 +70,7 @@
         <h2 class="text-2xl font-display font-bold">Need hands-on help?</h2>
         <p class="text-text-secondary">Our support team and documentation cover setup, integrations, and rollout for every Dotone module.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/support" class="btn-primary">Visit Support Center</a>
+            <a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="btn-primary">Email Support</a>
             <a href="/documentation" class="btn-secondary">Technical Documentation</a>
         </div>
     </div>

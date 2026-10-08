@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -100,7 +100,7 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll(".metric").forEach(el => {
+                document.querySelectorAll(".metric[data-target]").forEach(el => {
                     if (!el.classList.contains("animated")) {
                         animateMetric(el);
                         el.classList.add("animated");
@@ -613,7 +613,7 @@ function calculateManufacturingROI() {
 
 
 <!-- CTA -->
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <div class="container-custom text-center">
         <h2 class="text-4xl font-display font-bold mb-6">
             Upgrade to Manufacturing ERP
@@ -621,7 +621,7 @@ function calculateManufacturingROI() {
         <p class="text-xl mb-8">
             Replace spreadsheets and legacy systems with a Smart Factory ERP.
         </p>
-        <a href="/contact" class="btn-secondary bg-white text-primary-600">
+        <a href="/contact" class="btn-primary bg-primary-500 text-white">
             Request ERP Demo
         </a>
     </div>
@@ -963,14 +963,14 @@ function calculateManufacturingROI() {
     <!-- Manufacturing ERP CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
             <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
                     Run Your Factory on One Powerful ERP Platform
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Replace spreadsheets and disconnected systems with a
                     single manufacturing ERP for production, inventory,
                     planning, and analytics.
@@ -978,16 +978,16 @@ function calculateManufacturingROI() {
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="/demo_center"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
                         View ERP Demo
                     </a>
                     <a href="/contact"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
                         Talk to ERP Expert
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/80 text-sm">
+                <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
                     <span>✔ Production Planning</span>
                     <span>✔ Inventory Control</span>
                     <span>✔ Real-Time Reporting</span>

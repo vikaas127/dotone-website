@@ -17,7 +17,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10 text-center space-y-6">
         <h1 class="text-5xl md:text-6xl font-display font-bold">
@@ -320,22 +320,22 @@ POST /vision/events
 <!-- CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
-            <div class="relative z-10 px-8 py-16 text-center text-white">
+            <div class="relative z-10 px-8 py-16 text-center text-text-primary">
                 <h2 class="text-4xl font-display font-bold mb-4">
                     Build Smarter Manufacturing Systems
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Start integrating Dotone APIs into your factory, ERP, or analytics platform today.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="btn-primary bg-white text-primary-500">
+                    <a href="/contact" class="btn-primary bg-primary-500 text-white">
                         Request API Access
                     </a>
-                    <a href="/documentation" class="btn-secondary border-white text-white">
+                    <a href="/documentation" class="btn-secondary border-border text-text-primary">
                         View Documentation
                     </a>
                 </div>

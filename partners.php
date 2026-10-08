@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -141,7 +141,7 @@
 </section>
 
 <!-- CTA -->
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <div class="container-custom text-center">
         <h2 class="text-4xl font-display font-bold mb-6">
             Become a Dotone Partner
@@ -149,7 +149,7 @@
         <p class="text-xl mb-8">
             Grow your business with Smart Factory & Vision AI solutions.
         </p>
-        <a href="/contact" class="btn-secondary bg-white text-primary-600">
+        <a href="/contact" class="btn-primary bg-primary-500 text-white">
             Apply for Partnership
         </a>
     </div>

@@ -16,11 +16,7 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <!-- Animated Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
-        <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle animation-delay-300"></div>
-        </div>
+        <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
         <div class="container-custom relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -204,7 +200,7 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll(".metric").forEach(el => {
+                document.querySelectorAll(".metric[data-target]").forEach(el => {
                     if (!el.classList.contains("animated")) {
                         animateMetric(el);
                         el.classList.add("animated");
@@ -752,35 +748,33 @@ observer.observe(document.getElementById("metrics-section"));
     <!-- CTA Section -->
     <section class="section">
         <div class="container-custom">
-            <div class="relative rounded-3xl overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-brand"></div>
+            <div class="relative rounded-3xl overflow-hidden cta-frame">
+                
                 <div class="absolute inset-0 opacity-10">
-                    <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
-                    <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
                 </div>
                 
                 <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
                         Ready to Transform Your Manufacturing Operations?
                     </h2>
-                    <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                    <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                         Join 500+ manufacturing plants already using Dotone's AI platform to achieve unprecedented efficiency gains and cost savings.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/demo_center" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg hover:shadow-xl">
+                        <a href="/demo_center" class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl">
                             <span>Start Free Trial</span>
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                             </svg>
                         </a>
-                        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+                        <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                             </svg>
                             <span>Talk to Sales</span>
                         </a>
                     </div>
-                    <div class="flex items-center justify-center space-x-6 mt-8 text-white/80 text-sm">
+                    <div class="flex items-center justify-center space-x-6 mt-8 text-text-secondary text-sm">
                         <div class="flex items-center space-x-2">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>

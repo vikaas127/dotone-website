@@ -24,7 +24,7 @@
 <!-- ================= WHY DOTONE CRM ================= -->
 
 <section class="relative pt-32 pb-24 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-brand opacity-5"></div>
+  <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
   <div class="container-custom relative z-10 max-w-5xl mx-auto text-center space-y-6">
     <h1 class="text-5xl md:text-6xl font-display font-bold">
@@ -110,7 +110,7 @@ const crmObserver = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.querySelectorAll(".metric").forEach(el => {
+        entry.target.querySelectorAll(".metric[data-target]").forEach(el => {
           if (!el.classList.contains("animated")) {
             animateMetric(el);
             el.classList.add("animated");
@@ -774,31 +774,30 @@ function calculateCrmROI() {
 
 <section class="section">
   <div class="container-custom">
-    <div class="relative rounded-3xl overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-brand"></div>
+    <div class="relative rounded-3xl overflow-hidden cta-frame">
 
       <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-        <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+        <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
           Build a High-Performance Sales Engine
         </h2>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+        <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
           Unify leads, pipelines, field sales, and analytics into
           one intelligent CRM system that drives predictable revenue growth.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/demo_center"
-             class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
+             class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
             Watch CRM Demo
           </a>
 
           <a href="/contact"
-             class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+             class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
             Get CRM Roadmap
           </a>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/80 text-sm">
+        <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
           <span>✔ Lead-to-Revenue Automation</span>
           <span>✔ AI-Powered Sales Insights</span>
           <span>✔ Scalable Sales CRM Platform</span>

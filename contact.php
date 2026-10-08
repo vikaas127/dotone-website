@@ -15,11 +15,7 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
         <!-- Animated Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
-        <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle animation-delay-300"></div>
-        </div>
+        <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
         <div class="container-custom relative z-10">
             <div class="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">

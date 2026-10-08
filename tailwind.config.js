@@ -49,10 +49,10 @@ module.exports = {
           800: '#893800',
           900: '#6B2C00',
         },
-        background: '#F5F6F7',
+        background: '#FFFFFF',
         surface: {
-          DEFAULT: '#EFF1F2',
-          hover: '#E5E7E9',
+          DEFAULT: '#F6F9FC',
+          hover: '#EDF3F8',
         },
         text: {
           primary: '#32363A',

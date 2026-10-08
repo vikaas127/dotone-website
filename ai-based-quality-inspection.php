@@ -24,7 +24,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-6">
         <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
             Vision AI Quality Control
@@ -474,30 +474,30 @@ function calculateROI() {
 <!-- AI-Based Quality Inspection CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
             <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
                     Eliminate Manual Inspection with Vision AI
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Detect defects in real time, improve product quality,
                     and reduce rejection costs with AI-powered inspection.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="/demo_center"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
                         Watch Inspection Demo
                     </a>
                     <a href="/contact"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
                         Schedule Quality Assessment
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/80 text-sm">
+                <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
                     <span>✔ 99% Inspection Accuracy</span>
                     <span>✔ Zero Fatigue Errors</span>
                     <span>✔ Real-Time Defect Detection</span>

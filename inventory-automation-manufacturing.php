@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -100,7 +100,7 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll(".metric").forEach(el => {
+                document.querySelectorAll(".metric[data-target]").forEach(el => {
                     if (!el.classList.contains("animated")) {
                         animateMetric(el);
                         el.classList.add("animated");
@@ -577,7 +577,7 @@ function calculateInventoryROI() {
 </section>
 
 <!-- CTA -->
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <div class="container-custom text-center">
         <h2 class="text-4xl font-display font-bold mb-6">
             Automate Your Inventory Operations
@@ -585,7 +585,7 @@ function calculateInventoryROI() {
         <p class="text-xl mb-8">
             Gain real-time control over inventory and eliminate manual stock issues.
         </p>
-        <a href="/contact" class="btn-secondary bg-white text-primary-600">
+        <a href="/contact" class="btn-primary bg-primary-500 text-white">
             Request Inventory Demo
         </a>
     </div>

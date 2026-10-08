@@ -22,10 +22,8 @@
 
 <!-- ================= HERO ================= -->
 <section class="relative pt-32 pb-24 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+  <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
-  <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full blur-3xl opacity-20 animate-pulse-subtle"></div>
-  <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full blur-3xl opacity-20 animate-pulse-subtle animation-delay-300"></div>
 
   <div class="container-custom relative z-10 grid md:grid-cols-2 gap-14 items-center">
 
@@ -135,7 +133,7 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll(".metric").forEach(el => {
+                document.querySelectorAll(".metric[data-target]").forEach(el => {
                     if (!el.classList.contains("animated")) {
                         animateMetric(el);
                         el.classList.add("animated");

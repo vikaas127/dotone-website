@@ -56,7 +56,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-6">
 
         <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
@@ -852,14 +852,14 @@ function calculateHRMSROI() {
 <!-- CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
             <div class="relative z-10 px-8 py-16 text-center">
-                <h2 class="text-4xl font-display font-bold text-white mb-6">
+                <h2 class="text-4xl font-display font-bold text-text-primary mb-6">
                     Ready to Simplify HR?
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Switch to India’s simplest HR software and
                     manage people effortlessly.
                 </p>

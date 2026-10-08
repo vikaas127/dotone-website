@@ -16,11 +16,7 @@
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <!-- Animated Background -->
-        <div class="absolute inset-0 bg-gradient-brand opacity-5"></div>
-        <div class="absolute inset-0">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-subtle animation-delay-300"></div>
-        </div>
+        <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
         <div class="container-custom relative z-10">
             <div class="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
@@ -88,7 +84,7 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 [&>*]:min-w-0">
                 <!-- Automotive -->
                 <button onclick="selectIndustry('automotive')" class="industry-card card p-6 text-left hover-lift group cursor-pointer transition-all">
                     <div class="w-16 h-16 bg-gradient-brand rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
@@ -1120,19 +1116,17 @@
     <section id="trial-signup" class="section">
         <div class="container-custom">
             <div class="max-w-4xl mx-auto">
-                <div class="relative rounded-3xl overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-brand"></div>
+                <div class="relative rounded-3xl overflow-hidden cta-frame">
+                    
                     <div class="absolute inset-0 opacity-10">
-                        <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
-                        <div class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl"></div>
                     </div>
                     
                     <div class="relative z-10 px-8 py-16 md:px-16 md:py-20">
                         <div class="text-center space-y-6 mb-12">
-                            <h2 class="text-4xl md:text-5xl font-display font-bold text-white">
+                            <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary">
                                 Start Your Free 14-Day Trial
                             </h2>
-                            <p class="text-xl text-white/90 max-w-2xl mx-auto">
+                            <p class="text-xl text-text-secondary max-w-2xl mx-auto">
                                 Experience the full power of Dotone's AI platform with no credit card required. Get instant access to all features and dedicated onboarding support.
                             </p>
                         </div>
@@ -1140,32 +1134,32 @@
                         <form id="trialForm" class="max-w-2xl mx-auto space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-sm font-medium text-white mb-2">First Name *</label>
+                                    <label class="block text-sm font-medium text-text-primary mb-2">First Name *</label>
                                     <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
                                 </div>
                                 <div>
-                                    <label class="block text-sm font-medium text-white mb-2">Last Name *</label>
+                                    <label class="block text-sm font-medium text-text-primary mb-2">Last Name *</label>
                                     <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-white mb-2">Work Email *</label>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Work Email *</label>
                                 <input type="email" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-white mb-2">Company Name *</label>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Company Name *</label>
                                 <input type="text" required class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-white mb-2">Phone Number</label>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Phone Number</label>
                                 <input type="tel" class="input bg-white/10 border-white/20 text-white placeholder:text-white/60 focus:bg-white/20">
                             </div>
 
                             <div>
-                                <label class="block text-sm font-medium text-white mb-2">Industry *</label>
+                                <label class="block text-sm font-medium text-text-primary mb-2">Industry *</label>
                                 <select required class="input bg-white/10 border-white/20 text-white focus:bg-white/20">
                                     <option value="" class="text-text-primary">Select your industry</option>
                                     <option value="automotive" class="text-text-primary">Automotive Manufacturing</option>
@@ -1180,19 +1174,19 @@
 
                             <div class="flex items-start space-x-3">
                                 <input type="checkbox" id="trialConsent" required class="mt-1">
-                                <label for="trialConsent" class="text-sm text-white/90">
+                                <label for="trialConsent" class="text-sm text-text-secondary">
                                     I agree to the Terms of Service and Privacy Policy. I understand I can cancel anytime during the trial period.
                                 </label>
                             </div>
 
-                            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg hover:shadow-xl">
+                            <button type="submit" class="w-full inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl">
                                 <span>Start Free Trial Now</span>
                                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                                 </svg>
                             </button>
 
-                            <div class="flex flex-wrap items-center justify-center gap-6 text-white/80 text-sm">
+                            <div class="flex flex-wrap items-center justify-center gap-6 text-text-secondary text-sm">
                                 <div class="flex items-center space-x-2">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>

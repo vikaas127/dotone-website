@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -138,7 +138,7 @@ const observer = new IntersectionObserver(
     entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll(".metric").forEach(el => {
+                document.querySelectorAll(".metric[data-target]").forEach(el => {
                     if (!el.classList.contains("animated")) {
                         animateMetric(el);
                         el.classList.add("animated");
@@ -627,14 +627,14 @@ function calculateIndustryROI() {
 <!-- Industry 4.0 CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
             <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
                     Build a Future-Ready Industry 4.0 Factory
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Connect machines, people, and data into one intelligent system.
                     Experience real-time visibility, predictive insights, and
                     automated decision-making.
@@ -642,17 +642,17 @@ function calculateIndustryROI() {
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="/demo_center"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
                         Watch Smart Factory Demo
                     </a>
 
                     <a href="/contact"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
                         Get Industry 4.0 Roadmap
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/80 text-sm">
+                <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
                     <span>✔ ERP + IoT + AI Integration</span>
                     <span>✔ Predictive & Real-Time Analytics</span>
                     <span>✔ Scalable Smart Factory Platform</span>
@@ -785,7 +785,7 @@ function calculateIndustryROI() {
 
 
 <!-- CTA -->
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <div class="container-custom text-center">
         <h2 class="text-4xl font-display font-bold mb-6">
             Start Your Industry 4.0 Journey
@@ -793,7 +793,7 @@ function calculateIndustryROI() {
         <p class="text-xl mb-8">
             Digitize, automate, and optimize your factory with Dotone Industry 4.0 Solutions.
         </p>
-        <a href="/contact" class="btn-secondary bg-white text-primary-600">
+        <a href="/contact" class="btn-primary bg-primary-500 text-white">
             Talk to Industry 4.0 Expert
         </a>
     </div>

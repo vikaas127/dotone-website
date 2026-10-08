@@ -20,7 +20,7 @@
 
 <!-- HERO SUCCESS -->
 <section class="relative pt-32 pb-24 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10 max-w-5xl mx-auto text-center space-y-8">
 

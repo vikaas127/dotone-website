@@ -579,30 +579,30 @@ Step 5: Go Live 🚀
 <!-- CTA -->
 <section class="section">
     <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-brand"></div>
+        <div class="relative rounded-3xl overflow-hidden cta-frame">
+            
 
             <div class="relative z-10 px-8 py-16 md:px-16 md:py-24 text-center">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+                <h2 class="text-4xl md:text-5xl font-display font-bold text-text-primary mb-6">
                     Deploy Manufacturing Automation Faster
                 </h2>
-                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-8">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
                     Reduce implementation time, integrate seamlessly,
                     and scale confidently with Dotone.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="/demo_center"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-500 font-display font-semibold rounded-lg hover:bg-slate-50 transition-all shadow-lg">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
                         Watch Live Demo
                     </a>
                     <a href="/contact"
-                       class="inline-flex items-center justify-center px-8 py-4 bg-transparent text-white font-display font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all">
+                       class="inline-flex items-center justify-center px-8 py-4 bg-white text-text-primary font-display font-semibold rounded-lg border border-border hover:border-primary-300 transition-all">
                         Schedule Consultation
                     </a>
                 </div>
 
-                <div class="flex flex-wrap justify-center gap-6 mt-10 text-white/80 text-sm">
+                <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
                     <span>✔ Rapid Deployment</span>
                     <span>✔ ERP Ready</span>
                     <span>✔ Enterprise Security</span>

@@ -15,7 +15,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
@@ -65,7 +65,7 @@
         </div>
     </div>
 </section>
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <style>
         .store-btn {
             display: inline-flex;
@@ -95,16 +95,16 @@
             <div class="space-y-6">
                 <h2 class="text-4xl md:text-5xl font-display font-bold">
                     Sales Field Tracking <br>
-                    <span class="text-white/90">Mobile App</span>
+                    <span class="text-text-secondary">Mobile App</span>
                 </h2>
 
-                <p class="text-xl text-white/90 max-w-xl">
+                <p class="text-xl text-text-secondary max-w-xl">
                     Empower your field sales team with a powerful mobile app for
                     GPS tracking, attendance, visit reporting, leads, and daily activity updates —
                     all in real time.
                 </p>
 
-                <ul class="space-y-3 text-white/90">
+                <ul class="space-y-3 text-text-secondary">
                     <li>✔ Live GPS & Route Tracking</li>
                     <li>✔ Geo-Fenced Attendance</li>
                     <li>✔ Visit Reports & Orders</li>
@@ -123,7 +123,7 @@
                     </a>
                 </div>
 
-                <p class="text-sm text-white/70">
+                <p class="text-sm text-text-secondary">
                     * Available for Android & iOS. Admin controls via web dashboard.
                 </p>
             </div>
@@ -505,7 +505,7 @@ function calculateSalesROI() {
 
 
 <!-- FINAL CTA -->
-<section class="section bg-gradient-brand text-white">
+<section class="section cta-light">
     <div class="container-custom text-center">
         <h2 class="text-4xl font-display font-bold mb-6">
             Take Control of Your Field Sales Team
@@ -513,7 +513,7 @@ function calculateSalesROI() {
         <p class="text-xl mb-8">
             Track, manage, and grow your sales force with Dotone Sales Field Tracking Software.
         </p>
-        <a href="/contact" class="btn-secondary bg-white text-primary-600">
+        <a href="/contact" class="btn-primary bg-primary-500 text-white">
             Talk to Sales Tracking Expert
         </a>
     </div>

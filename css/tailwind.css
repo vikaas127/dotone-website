@@ -50,9 +50,9 @@
     --color-accent-800: #893800;
     --color-accent-900: #6B2C00;
 
-    --color-background: #F5F6F7;
-    --color-surface: #EFF1F2;
-    --color-surface-hover: #E5E7E9;
+    --color-background: #FFFFFF;
+    --color-surface: #F6F9FC;
+    --color-surface-hover: #EDF3F8;
 
     --color-text-primary: #32363A;
     --color-text-secondary: #6A6D70;
@@ -666,6 +666,22 @@
 
   .compare-icon--yes {
     @apply bg-primary-50 text-primary-600;
+  }
+
+  /* Inner page hero tint + soft CTA frame (one color, Flux) */
+  .hero-tint {
+    background:
+      radial-gradient(ellipse 55% 60% at 85% 0%, rgba(0, 150, 238, 0.14) 0%, transparent 65%),
+      radial-gradient(ellipse 45% 50% at 0% 100%, rgba(0, 150, 238, 0.08) 0%, transparent 65%),
+      linear-gradient(180deg, #F3FAFE 0%, #FFFFFF 100%);
+  }
+
+  .cta-frame {
+    background:
+      radial-gradient(ellipse 60% 70% at 85% 10%, rgba(0, 150, 238, 0.30) 0%, transparent 60%),
+      radial-gradient(ellipse 55% 60% at 10% 90%, rgba(0, 150, 238, 0.20) 0%, transparent 60%),
+      linear-gradient(135deg, #EEF8FE 0%, #D9F0FD 100%);
+    border: 1px solid rgba(0, 150, 238, 0.12);
   }
 
   /* Soft light section backgrounds (homepage) */

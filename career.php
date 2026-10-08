@@ -19,7 +19,7 @@
 
 <!-- HERO -->
 <section class="relative pt-32 pb-20 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+  <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
   <div class="container-custom relative z-10 text-center max-w-5xl mx-auto">
     <div class="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full mb-6">

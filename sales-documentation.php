@@ -22,7 +22,7 @@
 
 <!-- ================= HERO ================= -->
 <section class="relative pt-32 pb-24 overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+  <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
   <div class="container-custom relative z-10 text-center max-w-4xl mx-auto">
     <h1 class="text-5xl md:text-6xl font-display font-bold leading-tight">

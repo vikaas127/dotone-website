@@ -14,7 +14,7 @@
 <div id="header"><?php include __DIR__ . '/includes/header.php'; ?></div>
 
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-brand opacity-10"></div>
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
             Simple, Transparent <span class="text-gradient">Pricing</span>

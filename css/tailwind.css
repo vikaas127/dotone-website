@@ -10068,3 +10068,40 @@ a.card:hover,
 .pr-cta.btn-ghost { display: inline-flex; align-items: center; padding: 0.7rem 1rem; border: 1.5px solid #0096EE; border-radius: 0.6rem; color: #0077C0; font-weight: 600; background: #fff; transition: background-color 0.2s ease, color 0.2s ease; }
 .pr-cta.btn-ghost:hover { background: #0096EE; color: #fff; }
 .pr-cta.btn-hero-glow { display: inline-flex; padding-top: 0.75rem; padding-bottom: 0.75rem; }
+
+/* Pricing v2: aligned cards, grouped features */
+@supports (grid-template-rows: subgrid) {
+  .pr-cards { grid-auto-rows: auto; }
+  .pr-card { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 0; }
+}
+.pr-card { padding: 1.75rem 1.4rem 1.5rem; }
+.pr-top { margin-bottom: 1.1rem; }
+.pr-name { font-size: 1.25rem; margin-bottom: 0.4rem; }
+.pr-tag { min-height: 0; margin: 0; font-size: 0.86rem; }
+.pr-price { flex-direction: column; align-items: flex-start; gap: 0.3rem; margin-bottom: 1.2rem; }
+.pr-price b { font-size: 2.1rem; }
+.pr-price > span { font-size: 0.8rem; color: #667085; }
+.pr-cta { display: flex; align-items: center; justify-content: center; height: 2.85rem; margin-bottom: 1.4rem; border-radius: 0.65rem; border: 1.5px solid #0096EE; color: #0077C0; background: #fff; font-weight: 600; font-size: 0.95rem; transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; }
+.pr-cta:hover { background: #0096EE; color: #fff; }
+.pr-cta.is-primary { background: #0096EE; color: #fff; box-shadow: 0 12px 24px -12px rgba(0, 150, 238, 0.8); }
+.pr-cta.is-primary:hover { background: #0077C0; border-color: #0077C0; }
+.pr-groups { list-style: none; margin: 0; padding: 1.1rem 0 0; border-top: 1px solid #EEF1F5; display: flex; flex-direction: column; gap: 0.8rem; }
+.pr-groups li { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.84rem; line-height: 1.45; color: #344054; }
+.pr-groups li b { display: block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #101828; margin-bottom: 0.05rem; }
+.pr-gicon { flex: none; width: 1.25rem; height: 1.25rem; margin-top: 0.1rem; border-radius: 50%; display: grid; place-items: center; background: #E6F4FD; color: #0096EE; font-size: 0.7rem; }
+.pr-groups li.is-off { color: #98A2B3; }
+.pr-groups li.is-off b { color: #98A2B3; }
+.pr-groups li.is-off .pr-gicon { background: #F2F4F7; color: #98A2B3; }
+.pr-includes { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.6rem 1.4rem; margin: 2.5rem auto 0; padding: 1.1rem 1.5rem; max-width: 64rem; border-radius: 1rem; background: #F6F9FC; border: 1px solid #EEF1F5; }
+.pr-includes-title { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0077C0; }
+.pr-include { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.88rem; color: #344054; }
+.pr-include svg { color: #0096EE; }
+.pr-group-row th { text-align: left !important; background: #F6F9FC !important; font-size: 0.75rem; font-weight: 600 !important; letter-spacing: 0.08em; text-transform: uppercase; color: #0077C0 !important; padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; }
+.pr-group-row th svg { display: inline-block; vertical-align: -3px; margin-right: 0.45rem; color: #0096EE; }
+.pr-addons { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 1024px) { .pr-addons { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 3.5rem; } }
+.pr-addon-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+@media (min-width: 640px) { .pr-addon-grid { grid-template-columns: repeat(3, 1fr); } }
+.pr-addon { display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem 0.9rem; border-radius: 0.85rem; border: 1px solid #E4E9F0; background: #fff; font-size: 0.9rem; font-weight: 500; color: #344054; transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease; animation: case-in 0.5s ease both; animation-delay: calc(var(--i) * 50ms); }
+.pr-addon span { flex: none; width: 2rem; height: 2rem; border-radius: 0.6rem; display: grid; place-items: center; background: #E6F4FD; color: #0096EE; }
+.pr-addon:hover { border-color: #7DCFFA; color: #0077C0; transform: translateY(-2px); box-shadow: 0 14px 28px -20px rgba(0, 150, 238, 0.7); }

@@ -19,6 +19,17 @@ const PRICING_ROWS = [
     'storage'    => 'Storage',
 ];
 
+// Feature groups: how limits are grouped on plan cards and in the comparison table.
+const PRICING_GROUPS = [
+    ['Team',              'users',  ['staff']],
+    ['CRM',               'users',  ['customers', 'contacts', 'leads']],
+    ['Sales and billing', 'doc',    ['quotations', 'contracts', 'invoices', 'proforma', 'creditnotes']],
+    ['Projects',          'flow',   ['projects', 'tasks']],
+    ['Support',           'chat',   ['tickets']],
+    ['Inventory',         'box',    ['items']],
+    ['Storage',           'cog',    ['storage']],
+];
+
 const U = 'Unlimited';
 
 return [
@@ -27,7 +38,7 @@ return [
         'tagline' => 'For small teams starting with leads, customers and support.',
         'price' => null,
         'cta' => ['Talk to Us', '/contact'],
-        'limits' => ['staff' => null, 'customers' => U, 'contacts' => null, 'contracts' => null, 'invoices' => null, 'proforma' => null, 'creditnotes' => null, 'quotations' => null, 'projects' => null, 'tasks' => null, 'tickets' => U, 'leads' => U, 'items' => null, 'storage' => null],
+        'limits' => ['staff' => null, 'customers' => U, 'contacts' => null, 'contracts' => null, 'invoices' => null, 'proforma' => null, 'creditnotes' => null, 'quotations' => null, 'projects' => null, 'tasks' => null, 'tickets' => U, 'leads' => U, 'items' => null, 'storage' => '2 GB'],
     ],
     [
         'name' => 'Growth',
@@ -38,15 +49,15 @@ return [
     ],
     [
         'name' => 'Professional',
-        'tagline' => 'Everything unlimited for established businesses.',
+        'tagline' => 'Unlimited records for established businesses.',
         'price' => 22000,
         'popular' => true,
         'cta' => ['Book a Demo', '/demo'],
-        'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => U],
+        'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '20 GB'],
     ],
     [
         'name' => 'Business',
-        'tagline' => 'Unlimited records with large storage for growing data.',
+        'tagline' => 'Unlimited records for businesses with more teams and data.',
         'price' => 26000,
         'cta' => ['Book a Demo', '/demo'],
         'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '20 GB'],
@@ -56,6 +67,6 @@ return [
         'tagline' => 'DotOne with AI agents working across your business.',
         'price' => 35000,
         'cta' => ['Talk to Sales', '/contact'],
-        'limits' => ['staff' => 50, 'customers' => 200, 'contacts' => U, 'contracts' => U, 'invoices' => 200, 'proforma' => 200, 'creditnotes' => U, 'quotations' => U, 'projects' => 200, 'tasks' => 1000, 'tickets' => U, 'leads' => U, 'items' => 1000, 'storage' => U],
+        'limits' => ['staff' => 50, 'customers' => 200, 'contacts' => U, 'contracts' => U, 'invoices' => 200, 'proforma' => 200, 'creditnotes' => U, 'quotations' => U, 'projects' => 200, 'tasks' => 1000, 'tickets' => U, 'leads' => U, 'items' => 1000, 'storage' => '20 GB'],
     ],
 ];

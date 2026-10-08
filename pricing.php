@@ -24,21 +24,26 @@ function plan_cell($v)
     return '<span class="pr-num">' . e(is_int($v) ? number_format($v) : $v) . '</span>';
 }
 
-// Short highlight list for a plan card, from its limits
-function plan_highlights(array $limits)
+// One line per feature group on a plan card, e.g. "Unlimited quotations, contracts · 200 invoices"
+function plan_group($keys, array $limits)
 {
-    $out = [];
-    if ($limits['staff'] !== null) $out[] = e($limits['staff']) . ' staff users';
-    $unl = array_keys(array_filter($limits, function ($v) { return $v === 'Unlimited'; }));
-    $nice = ['customers' => 'customers', 'invoices' => 'invoices', 'quotations' => 'quotations', 'leads' => 'leads', 'tickets' => 'tickets', 'projects' => 'projects', 'items' => 'items'];
-    $names = array_values(array_intersect_key($nice, array_flip($unl)));
-    if (count($unl) >= 12) $out[] = 'Unlimited records of every type';
-    elseif ($names) $out[] = 'Unlimited ' . implode(', ', array_slice($names, 0, 3));
-    foreach (['projects' => 'projects', 'invoices' => 'invoices', 'customers' => 'customers', 'items' => 'items'] as $k => $label) {
-        if (is_int($limits[$k])) { $out[] = 'Up to ' . number_format($limits[$k]) . ' ' . $label; if (count($out) >= 3) break; }
+    $short = ['staff' => 'users', 'customers' => 'customers', 'contacts' => 'contacts', 'leads' => 'leads', 'quotations' => 'quotations', 'contracts' => 'contracts', 'invoices' => 'invoices', 'proforma' => 'proforma invoices', 'creditnotes' => 'credit notes', 'projects' => 'projects', 'tasks' => 'tasks', 'tickets' => 'tickets', 'items' => 'items', 'storage' => ''];
+    $byValue = [];
+    foreach ($keys as $k) {
+        $v = $limits[$k] ?? null;
+        if ($v === null) continue;
+        $byValue[(string) $v][] = $short[$k];
     }
-    if ($limits['storage'] !== null) $out[] = ($limits['storage'] === 'Unlimited' ? 'Unlimited' : e($limits['storage'])) . ' storage';
-    return array_slice($out, 0, 4);
+    if (!$byValue) return null;
+    $parts = [];
+    foreach ($byValue as $v => $labels) {
+        $num = is_numeric($v) ? number_format((int) $v) : $v;
+        $list = implode(', ', array_filter($labels));
+        $parts[] = trim(($v === 'Unlimited' ? 'Unlimited' : $num) . ' ' . $list);
+    }
+    // Unlimited first, then capped values
+    usort($parts, function ($x, $y) { return (int) (strpos($y, 'Unlimited') === 0) <=> (int) (strpos($x, 'Unlimited') === 0); });
+    return implode(' · ', $parts);
 }
 
 render_head($page);
@@ -61,25 +66,37 @@ render_head($page);
 <?php if (!empty($p['popular'])): ?>
                 <span class="pr-badge">Most popular</span>
 <?php endif; ?>
-                <h2 class="pr-name"><?= e($p['name']) ?></h2>
-                <p class="pr-tag"><?= e($p['tagline']) ?></p>
+                <div class="pr-top">
+                    <h2 class="pr-name"><?= e($p['name']) ?></h2>
+                    <p class="pr-tag"><?= e($p['tagline']) ?></p>
+                </div>
                 <div class="pr-price">
 <?php if ($p['price'] !== null): ?>
-                    <b>&#8377;<span data-pr-count="<?= (int) $p['price'] ?>"><?= number_format($p['price']) ?></span></b><span>/ month</span>
+                    <b>&#8377;<span data-pr-count="<?= (int) $p['price'] ?>"><?= number_format($p['price']) ?></span></b><span>per month</span>
 <?php else: ?>
-                    <b class="pr-price-talk">Talk to us</b><span>for a price</span>
+                    <b>On request</b><span>priced on your team size</span>
 <?php endif; ?>
                 </div>
-                <a href="<?= e($p['cta'][1]) ?>" class="<?= !empty($p['popular']) ? 'btn-hero-glow' : 'btn-ghost' ?> pr-cta"><?= e($p['cta'][0]) ?></a>
-                <ul class="pr-list">
-<?php foreach (plan_highlights($p['limits']) as $h): ?>
-                    <li><?= icon('check', 'w-4 h-4') ?><?= $h ?></li>
+                <a href="<?= e($p['cta'][1]) ?>" class="pr-cta<?= !empty($p['popular']) ? ' is-primary' : '' ?>"><?= e($p['cta'][0]) ?></a>
+                <ul class="pr-groups">
+<?php foreach (PRICING_GROUPS as [$gname, $gicon, $gkeys]): $line = plan_group($gkeys, $p['limits']); ?>
+                    <li class="<?= $line === null ? 'is-off' : '' ?>">
+                        <span class="pr-gicon"><?= $line === null ? '&mdash;' : icon('check', 'w-3.5 h-3.5') ?></span>
+                        <span><b><?= e($gname) ?></b><?= $line === null ? 'Not included' : e($line) ?></span>
+                    </li>
 <?php endforeach; ?>
                 </ul>
             </article>
 <?php endforeach; ?>
         </div>
-        <p class="text-center text-sm text-text-tertiary mt-6">Prices are per month in INR. GST invoices for registered businesses. <a href="#compare" class="text-primary-600 font-medium hover:underline">Compare every limit</a></p>
+        <p class="text-center text-sm text-text-tertiary mt-6">Prices are per month in INR, with GST-compliant invoices. <a href="#compare" class="text-primary-600 font-medium hover:underline">Compare every limit</a></p>
+
+        <div class="pr-includes">
+            <span class="pr-includes-title">Every plan includes</span>
+<?php foreach ([['shield', 'Role-based access'], ['doc', 'GST-compliant invoices'], ['cog', 'Encrypted backups'], ['users', 'Onboarding team support'], ['link', 'Tally integration available']] as [$ico, $label]): ?>
+            <span class="pr-include"><?= icon($ico, 'w-4 h-4') ?><?= $label ?></span>
+<?php endforeach; ?>
+        </div>
     </div>
 </section>
 
@@ -96,21 +113,44 @@ render_head($page);
                     <tr>
                         <th scope="col"><span class="sr-only">Feature</span></th>
 <?php foreach ($plans as $p): ?>
-                        <th scope="col" class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><b><?= e($p['name']) ?></b><span><?= $p['price'] !== null ? '&#8377;' . number_format($p['price']) . ' / month' : 'Talk to us' ?></span></th>
+                        <th scope="col" class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><b><?= e($p['name']) ?></b><span><?= $p['price'] !== null ? '&#8377;' . number_format($p['price']) . ' / month' : 'On request' ?></span></th>
 <?php endforeach; ?>
                     </tr>
                 </thead>
                 <tbody>
-<?php $r = 0; foreach (PRICING_ROWS as $key => $label): ?>
+<?php $r = 0; foreach (PRICING_GROUPS as [$gname, $gicon, $gkeys]): ?>
+                    <tr class="pr-group-row" style="--r: <?= $r++ ?>"><th scope="rowgroup" colspan="<?= count($plans) + 1 ?>"><?= icon($gicon, 'w-4 h-4') ?><?= e($gname) ?></th></tr>
+<?php foreach ($gkeys as $key): ?>
                     <tr style="--r: <?= $r++ ?>">
-                        <th scope="row"><?= e($label) ?></th>
+                        <th scope="row"><?= e(PRICING_ROWS[$key]) ?></th>
 <?php foreach ($plans as $p): ?>
                         <td class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><?= plan_cell($p['limits'][$key] ?? null) ?></td>
 <?php endforeach; ?>
                     </tr>
 <?php endforeach; ?>
+<?php endforeach; ?>
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-white">
+    <div class="container-custom">
+        <div class="pr-addons">
+            <div>
+                <span class="section-label">Add to any plan</span>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Need more of DotOne?</h2>
+                <p class="text-lg text-text-secondary mb-6">Add the modules your business runs on. We price them on what you need, so you never pay for modules you don&rsquo;t use.</p>
+                <a href="/contact" class="btn-hero-glow">Get a quote for your modules</a>
+            </div>
+            <div class="pr-addon-grid">
+<?php foreach (['hrms', 'payroll', 'production-management', 'quality-management', 'purchase-management', 'warehouse-management', 'field-sales-tracking', 'accounting', 'business-analytics', 'mobile-erp'] as $i => $slug): $m = MODULES[$slug]; ?>
+                <a href="/<?= $slug ?>" class="pr-addon" style="--i: <?= $i ?>"><span><?= icon($m['icon'], 'w-4 h-4') ?></span><?= e($m['name']) ?></a>
+<?php endforeach; ?>
+                <a href="/ai-agents" class="pr-addon" style="--i: 10"><span><?= icon('spark', 'w-4 h-4') ?></span>AI agents</a>
+                <a href="/vision-ai" class="pr-addon" style="--i: 11"><span><?= icon('eye', 'w-4 h-4') ?></span>Vision AI</a>
+            </div>
         </div>
     </div>
 </section>

@@ -69,7 +69,7 @@ showcase('ai-agents/' . $page['slug']);
                 <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4"><?= icon($ico, 'w-5 h-5 text-white') ?></div>
                 <h2 class="text-xl font-display font-semibold mb-4"><?= e($title) ?></h2>
                 <ul class="space-y-2.5">
-<?php foreach ($items as $it): ?>
+<?php foreach (array_slice($items, 0, 5) as $it): ?>
                     <li class="flex gap-2 text-text-secondary text-[0.95rem] leading-relaxed"><span class="text-primary-600 mt-1"><?= icon('check', 'w-4 h-4') ?></span><span><?= e($it) ?></span></li>
 <?php endforeach; ?>
                 </ul>
@@ -80,27 +80,15 @@ showcase('ai-agents/' . $page['slug']);
     </div>
 </section>
 
-<section class="section bg-white">
-    <div class="container-custom">
-        <h2 class="text-3xl md:text-4xl font-display font-semibold mb-12 max-w-2xl">How the agent works</h2>
-        <ol class="flow-steps">
-<?php foreach ([['Reads your ERP data', 'Live ' . strtolower($m['name']) . ' data and related records from the modules it is allowed to see.'], ['Analyses it', 'Applies your rules and recent history to find what needs attention.'], ['Flags exceptions', 'Surfaces the few items that need a decision instead of the whole list.'], ['Builds the report', 'Puts the answer in a table or summary you can share or export.'], ['Recommends or acts', 'Suggests the next step and, where you allow it, prepares or performs it.']] as $i => [$t, $d]): ?>
-            <li class="flow-step"><span class="flow-step-num"><?= $i + 1 ?></span><h3 class="text-base font-display font-semibold text-text-primary mb-1"><?= e($t) ?></h3><p class="text-sm text-text-secondary leading-relaxed"><?= e($d) ?></p></li>
-<?php endforeach; ?>
-        </ol>
-    </div>
-</section>
 
-<section class="section bg-surface">
+<section class="py-12 md:py-14 bg-white border-t border-border">
     <div class="container-custom">
-        <h2 class="text-2xl md:text-3xl font-display font-semibold mb-8">More AI agents</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="agent-more">
+            <span class="agent-more-title">More AI agents</span>
 <?php foreach (AGENTS as $slug => $other): if ($slug === $page['slug']) continue; ?>
-            <a href="/ai-agents/<?= e($slug) ?>" class="card p-6 bg-white hover-lift block">
-                <div class="flex items-center gap-3 mb-3"><span class="text-primary-600"><?= icon($other['icon']) ?></span><h3 class="text-base font-display font-semibold"><?= e($other['name']) ?></h3></div>
-                <p class="text-sm text-text-secondary"><?= e($other['summary']) ?></p>
-            </a>
+            <a href="/ai-agents/<?= e($slug) ?>" class="agent-more-link"><?= icon($other['icon'], 'w-4 h-4') ?><?= e(str_replace(' AI Agent', '', $other['name'])) ?></a>
 <?php endforeach; ?>
+            <a href="/ai-agents" class="agent-more-all">All agents &rarr;</a>
         </div>
     </div>
 </section>

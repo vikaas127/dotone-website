@@ -10187,3 +10187,55 @@ a.card:hover,
   .hero-light-title .text-gradient-shimmer { animation: none; background-position: 50% 50%; background-image: none; color: #0096EE; -webkit-text-fill-color: #0096EE; }
 }
 .hp-field { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---------- Book a demo ---------- */
+.demo-grid { display: grid; gap: 2.5rem; align-items: start; }
+@media (min-width: 1024px) { .demo-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 4rem; } }
+.demo-steps { list-style: none; margin: 0 0 2rem; padding: 0; display: flex; flex-direction: column; gap: 1.1rem; }
+.demo-steps li { display: flex; gap: 0.9rem; align-items: flex-start; color: #475467; line-height: 1.55; animation: case-in 0.5s ease both; animation-delay: calc(var(--i) * 90ms + 150ms); }
+.demo-steps li > span { flex: none; width: 2.6rem; height: 2.6rem; border-radius: 0.8rem; display: grid; place-items: center; background: #fff; color: #0096EE; border: 1px solid #CDEBFC; box-shadow: 0 8px 18px -12px rgba(0, 150, 238, 0.6); }
+.demo-steps b { display: block; color: #101828; font-weight: 600; }
+.demo-assure { display: flex; flex-wrap: wrap; gap: 0.6rem 1.2rem; font-size: 0.9rem; color: #344054; }
+.demo-assure span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.demo-assure svg { color: #12B76A; }
+
+.demo-card { position: relative; background: #fff; border: 1px solid #E4E9F0; border-radius: 1.5rem; padding: 1.5rem; box-shadow: 0 30px 70px -36px rgba(16, 24, 40, 0.35); }
+@media (min-width: 768px) { .demo-card { padding: 2.25rem; } }
+.demo-card::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; background: linear-gradient(140deg, #7DCFFA, transparent 40%); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.demo-card-title { font-size: 1.5rem; font-weight: 600; color: #101828; margin: 0 0 0.3rem; }
+.demo-card-sub { font-size: 0.9rem; color: #667085; margin: 0 0 1.5rem; }
+.demo-row { display: grid; gap: 1rem; margin-bottom: 1rem; }
+@media (min-width: 640px) { .demo-row { grid-template-columns: 1fr 1fr; } }
+.fld { display: flex; flex-direction: column; gap: 0.4rem; margin: 0; border: 0; padding: 0; min-width: 0; }
+.demo-card form > .fld { margin-bottom: 1rem; }
+.fld label, .fld legend { font-size: 0.85rem; font-weight: 500; color: #344054; padding: 0; }
+.fld legend { margin-bottom: 0.5rem; }
+.fld input, .fld select, .fld textarea { width: 100%; font: inherit; font-size: 0.95rem; color: #101828; background: #fff; border: 1px solid #D0D5DD; border-radius: 0.65rem; padding: 0.7rem 0.85rem; transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+.fld select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23667085' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1rem; padding-right: 2.25rem; }
+.fld textarea { resize: vertical; min-height: 5rem; }
+.fld input::placeholder, .fld textarea::placeholder { color: #98A2B3; }
+.fld input:focus, .fld select:focus, .fld textarea:focus { outline: none; border-color: #0096EE; box-shadow: 0 0 0 4px rgba(0, 150, 238, 0.14); }
+.fld.is-invalid input, .fld.is-invalid select { border-color: #F04438; box-shadow: 0 0 0 4px rgba(240, 68, 56, 0.1); }
+.demo-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.demo-chip { position: relative; cursor: pointer; }
+.demo-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.demo-chip span { display: inline-flex; align-items: center; padding: 0.45rem 0.85rem; border-radius: 999px; border: 1px solid #D0D5DD; font-size: 0.85rem; font-weight: 500; color: #344054; background: #fff; transition: all 0.2s ease; }
+.demo-chip:hover span { border-color: #7DCFFA; }
+.demo-chip input:checked + span { background: #0096EE; border-color: #0096EE; color: #fff; }
+.demo-chip input:focus-visible + span { outline: 2px solid #0096EE; outline-offset: 2px; }
+.demo-error { margin: 0 0 1rem; padding: 0.7rem 0.9rem; border-radius: 0.65rem; background: #FEF3F2; color: #B42318; font-size: 0.88rem; }
+.demo-submit { position: relative; width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.6rem; height: 3.2rem; border: 0; border-radius: 0.75rem; background: #0096EE; color: #fff; font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 14px 28px -14px rgba(0, 150, 238, 0.9); transition: background-color 0.2s ease, transform 0.2s ease; }
+.demo-submit:hover { background: #0077C0; }
+.demo-submit:active { transform: scale(0.99); }
+.demo-submit:disabled { cursor: progress; opacity: 0.85; }
+.demo-spinner { display: none; width: 1.1rem; height: 1.1rem; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.45); border-top-color: #fff; animation: demo-spin 0.8s linear infinite; }
+.demo-submit.is-loading .demo-spinner { display: inline-block; }
+@keyframes demo-spin { to { transform: rotate(360deg); } }
+.demo-legal { margin: 0.75rem 0 0; text-align: center; font-size: 0.78rem; color: #98A2B3; }
+.demo-done { text-align: center; padding: 2.5rem 0.5rem; outline: none; }
+.demo-done-icon { width: 4rem; height: 4rem; margin: 0 auto 1.25rem; border-radius: 50%; display: grid; place-items: center; background: #12B76A; color: #fff; box-shadow: 0 0 0 10px rgba(18, 183, 106, 0.12); animation: demo-pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+@keyframes demo-pop { from { transform: scale(0.4); opacity: 0; } }
+.demo-done h2 { font-size: 1.5rem; font-weight: 600; color: #101828; margin: 0 0 0.5rem; }
+.demo-done p { color: #475467; margin: 0 auto 1.5rem; max-width: 26rem; line-height: 1.6; }
+.demo-done .btn-ghost { display: inline-flex; padding: 0.65rem 1.4rem; border: 1.5px solid #0096EE; border-radius: 0.65rem; color: #0077C0; font-weight: 600; }
+.demo-done .btn-ghost:hover { background: #0096EE; color: #fff; }

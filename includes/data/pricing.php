@@ -49,7 +49,7 @@ return [
         'tagline' => 'Unlimited records with large storage for growing data.',
         'price' => 26000,
         'cta' => ['Book a Demo', '/demo'],
-        'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '200171 GB'],
+        'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '20 GB'],
     ],
     [
         'name' => 'Enterprise AI',

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
-    <title>DotOne | AI-Powered Business Management Platform</title>
+    <meta name="description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
+    <title>DotOne | One Connected AI Platform for Business Management</title>
     <link rel="canonical" href="https://dotone.biz/">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="DotOne | AI-Powered Business Management Platform">
-    <meta property="og:description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
+    <meta property="og:title" content="DotOne | One Connected AI Platform for Business Management">
+    <meta property="og:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta property="og:url" content="https://dotone.biz/">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -19,8 +19,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne | AI-Powered Business Management Platform">
-    <meta name="twitter:description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
+    <meta name="twitter:title" content="DotOne | One Connected AI Platform for Business Management">
+    <meta name="twitter:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.biz/#organization","name":"Dotone","url":"https://dotone.biz/","logo":"https://dotone.biz/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.biz/#website","url":"https://dotone.biz/","name":"Dotone","publisher":{"@id":"https://dotone.biz/#organization"},"inLanguage":"en-IN"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -122,7 +122,7 @@
                     <div class="hero-stat-label">from CRM to payroll, on one platform</div>
                 </div>
                 <div class="hero-stat hero-anim" style="--d: 700ms">
-                    <div class="hero-stat-value"><span data-count="15">15</span> industries</div>
+                    <div class="hero-stat-value"><span data-count="18">18</span> industries</div>
                     <div class="hero-stat-label">served with industry-specific workflows</div>
                 </div>
             </div>

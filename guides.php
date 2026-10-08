@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
-    <title>Guides &amp; Articles | Dotone</title>
+    <meta name="description" content="ERP and AI Guides: practical, India-specific guidance from the DotOne team, with examples and checklists.">
+    <title>ERP and AI Guides | DotOne</title>
     <link rel="canonical" href="https://dotone.biz/guides">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Guides &amp; Articles | Dotone">
-    <meta property="og:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
+    <meta property="og:title" content="ERP and AI Guides | DotOne">
+    <meta property="og:description" content="ERP and AI Guides: practical, India-specific guidance from the DotOne team, with examples and checklists.">
     <meta property="og:url" content="https://dotone.biz/guides">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Guides &amp; Articles | Dotone">
-    <meta name="twitter:description" content="Dotone guides and articles for MSME manufacturers — ERP, Vision AI, production, inventory, HRMS, Industry 4.0, and shopfloor best practices.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="ERP and AI Guides | DotOne">
+    <meta name="twitter:description" content="ERP and AI Guides: practical, India-specific guidance from the DotOne team, with examples and checklists.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
 </head>
 <body class="bg-white">
 
@@ -35,9 +35,7 @@
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
         <span class="section-label bg-primary-50 text-primary-600 px-4 py-1.5 rounded-full">Guides &amp; Articles</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-            Learn how to run a smarter <span class="text-gradient">factory</span>
-        </h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">ERP and AI Guides</h1>
         <p class="text-xl text-text-secondary">
             Practical guides on ERP, Vision AI, production, inventory, HRMS, and Industry 4.0 — written for Indian MSME manufacturers.
         </p>
@@ -80,7 +78,7 @@
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/guides-articles.js?v=20261009" defer></script>
-<script src="/js/guides-page.js?v=20261009" defer></script>
+<script src="/js/guides-articles.js?v=20261010" defer></script>
+<script src="/js/guides-page.js?v=20261010" defer></script>
 </body>
 </html>

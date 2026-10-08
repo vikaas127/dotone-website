@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
-    <title>Pricing | Dotone Business Platform</title>
+    <meta name="description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
+    <title>DotOne Pricing | ERP and AI Agent Plans</title>
     <link rel="canonical" href="https://dotone.biz/pricing">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Pricing | Dotone Business Platform">
-    <meta property="og:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
+    <meta property="og:title" content="DotOne Pricing | ERP and AI Agent Plans">
+    <meta property="og:description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
     <meta property="og:url" content="https://dotone.biz/pricing">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Pricing | Dotone Business Platform">
-    <meta name="twitter:description" content="Dotone pricing plans for manufacturing ERP, Vision AI, HRMS, and field sales. Flexible plans for SMBs to enterprise manufacturers in India.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne Pricing | ERP and AI Agent Plans">
+    <meta name="twitter:description" content="Plans for small teams to multi-plant businesses. Pay for the modules and users you need, with GST invoicing and onboarding support.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
 </head>
 <body class="bg-background">
 
@@ -34,9 +34,7 @@
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-            Simple, Transparent <span class="text-gradient">Pricing</span>
-        </h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">DotOne Pricing</h1>
         <p class="text-xl text-text-secondary">
             Choose the Dotone modules you need. Scale from a single plant to multi-site enterprise operations.
         </p>
@@ -81,7 +79,7 @@
                     <li class="flex gap-2"><span class="text-success-500">✓</span> Priority support &amp; onboarding</li>
                     <li class="flex gap-2"><span class="text-success-500">✓</span> API access</li>
                 </ul>
-                <a href="/demo_center" class="btn-primary w-full justify-center">Book Demo</a>
+                <a href="/demo" class="btn-primary w-full justify-center">Book Demo</a>
             </div>
 
             <!-- Enterprise -->

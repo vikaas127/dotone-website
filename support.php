@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
-    <title>Support Center | Dotone</title>
+    <meta name="description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
+    <title>DotOne Support | DotOne</title>
     <link rel="canonical" href="https://dotone.biz/support">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Support Center | Dotone">
-    <meta property="og:description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
+    <meta property="og:title" content="DotOne Support | DotOne">
+    <meta property="og:description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
     <meta property="og:url" content="https://dotone.biz/support">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Support Center | Dotone">
-    <meta name="twitter:description" content="Dotone support plans, product help, and customer services for manufacturing ERP, Vision AI, HRMS, and shopfloor teams in India.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne Support | DotOne">
+    <meta name="twitter:description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
 </head>
 <body class="bg-white support-page">
 
@@ -35,9 +35,7 @@
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
         <span class="section-label bg-primary-50 text-primary-600 px-4 py-1.5 rounded-full">Support Center</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-            We're here to help you <span class="text-gradient">succeed</span>
-        </h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">DotOne Support</h1>
         <p class="text-xl text-text-secondary">
             From onboarding your first plant to scaling across sites — get the right level of support for your manufacturing team.
         </p>
@@ -85,7 +83,7 @@
                 <h3 class="text-lg font-display font-semibold mb-2">API Reference</h3>
                 <p class="text-sm text-text-secondary">Integrate Dotone with Tally, SAP, WhatsApp, and custom systems.</p>
             </a>
-            <a href="/demo_center" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
+            <a href="/demo" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
                 <span class="support-plan-icon" aria-hidden="true">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                 </span>
@@ -215,19 +213,19 @@
             <p class="text-text-secondary">Quick answers to the questions our customers ask most.</p>
         </div>
         <div class="card divide-y divide-border">
-            <a href="/bom-setup-guide" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
+            <a href="/guides/bom-setup" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
                 <span class="font-medium text-text-primary">How to set up layered BOMs for production costing</span>
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
-            <a href="/tally-connector-guide" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
+            <a href="/integrations/tally" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
                 <span class="font-medium text-text-primary">Dotone Tally Connector — sync ERP vouchers to Tally Prime</span>
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
-            <a href="/what-is-erp" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
+            <a href="/guides/what-is-erp" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
                 <span class="font-medium text-text-primary">What is ERP and why MSME manufacturers need it</span>
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
-            <a href="/vision-ai-for-manufacturing" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
+            <a href="/vision-ai" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
                 <span class="font-medium text-text-primary">Getting started with Vision AI on existing CCTV cameras</span>
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
@@ -269,7 +267,7 @@
             </div>
             <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <a href="/contact" class="btn-primary">Submit a Support Request</a>
-                <a href="/demo_center" class="btn-secondary">Book a Demo</a>
+                <a href="/demo" class="btn-secondary">Book a Demo</a>
             </div>
         </div>
     </div>
@@ -296,13 +294,13 @@
             </blockquote>
         </div>
         <p class="text-center mt-8">
-            <a href="/case_studies" class="text-sm font-semibold text-primary-600 hover:text-primary-500">View customer stories →</a>
+            <a href="/case-studies" class="text-sm font-semibold text-primary-600 hover:text-primary-500">View customer stories →</a>
         </p>
     </div>
 </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/support-nav.js?v=20261009" defer></script>
+<script src="/js/support-nav.js?v=20261010" defer></script>
 </body>
 </html>

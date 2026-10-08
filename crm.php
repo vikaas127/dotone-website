@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CRM & Sales Automation for Manufacturing | Dotone</title>
+  <title>CRM Software for Sales Teams | DotOne</title>
 
   <meta name="description"
         content="Dotone CRM & Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP & AI insights for higher conversions.">
@@ -11,24 +11,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+  <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
     <link rel="canonical" href="https://dotone.biz/crm">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
-    <meta property="og:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
+    <meta property="og:title" content="CRM Software for Sales Teams | DotOne">
+    <meta property="og:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing.">
     <meta property="og:url" content="https://dotone.biz/crm">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CRM &amp; Sales Automation for Manufacturing | Dotone">
-    <meta name="twitter:description" content="Dotone CRM &amp; Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP &amp; AI insights for higher conversions.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="CRM Software for Sales Teams | DotOne">
+    <meta name="twitter:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 
 <body class="bg-background">
@@ -45,10 +45,7 @@
   <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
   <div class="container-custom relative z-10 max-w-5xl mx-auto text-center space-y-6">
-    <h1 class="text-5xl md:text-6xl font-display font-bold">
-      CRM & Sales Automation for
-      <span class="text-gradient">Manufacturing Businesses</span>
-    </h1>
+    <h1 class="text-5xl md:text-6xl font-display font-bold">CRM Software for Sales Teams</h1>
 
     <p class="text-xl text-text-secondary">
       Manage leads, track opportunities, forecast revenue,
@@ -492,7 +489,7 @@ function calculateCrmROI() {
         </div>
 
         <div class="text-center mt-12">
-            <a href="/manufacturing_solutions" class="btn-primary">
+            <a href="/industries" class="btn-primary">
                 Explore Industry Solutions
                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -804,7 +801,7 @@ function calculateCrmROI() {
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/demo_center"
+          <a href="/demo"
              class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
             Watch CRM Demo
           </a>

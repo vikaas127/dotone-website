@@ -62,9 +62,33 @@
     run();
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeroAgent);
-  } else {
+  // Reveal the agent showcase cards one by one when the section scrolls into view
+  function initShowcase() {
+    var el = document.querySelector('.agent-showcase');
+    if (!el) return;
+    if (reducedMotion || !('IntersectionObserver' in window)) {
+      el.classList.add('is-visible');
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          el.classList.add('is-visible');
+          io.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    io.observe(el);
+  }
+
+  function init() {
     initHeroAgent();
+    initShowcase();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 })();

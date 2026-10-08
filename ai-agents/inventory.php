@@ -1,0 +1,66 @@
+<?php
+$page = [
+    'path' => '/ai-agents/inventory',
+    'slug' => 'inventory',
+    'title' => 'Inventory AI Agent for AI Inventory Management | DotOne',
+    'description' => 'AI inventory management in DotOne ERP. Ask the inventory agent what is below reorder level, what is slow-moving and where to move stock across warehouses.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Inventory AI Agent', '/ai-agents/inventory']],
+    'h1' => 'Inventory AI Agent',
+    'intro' => 'AI inventory management for manufacturers who cannot afford a stock-out on the shop floor. Ask the agent about stock in plain language. It reads live stock, orders and consumption across every warehouse, points out what needs attention and prepares the next step, such as a purchase indent, for your team to approve.',
+    'demo' => [
+        'question' => 'Which raw materials will run short before the next purchase order arrives?',
+        'steps' => [
+            'Reading stock across all warehouses',
+            'Checking open purchase orders',
+            'Comparing with recent consumption',
+            'Flagging items below reorder level',
+            'Drafting purchase indents for approval',
+        ],
+        'result' => 'Items at risk of running short listed by warehouse, with draft indents waiting for the purchase head to approve.',
+    ],
+    'traditional' => [
+        'Open the inventory module and the stock report.',
+        'Filter by warehouse, category and item, one view at a time.',
+        'Export to a spreadsheet and match it against open POs and sales orders.',
+        'Work out by hand which items are short, excess or not moving.',
+        'Raise indents or transfers manually, often after the shortage is already felt.',
+    ],
+    'dotone' => [
+        'Ask the agent a question, for example "What is below reorder level?"',
+        'The agent reads stock, movement and orders across every warehouse together.',
+        'It picks out the exceptions: shortages, excess and slow-moving items.',
+        'It builds the stock report, ready to share or export.',
+        'It recommends reorders or transfers and drafts indents for your approval.',
+    ],
+    'sees' => [
+        'Stock levels by item, batch and warehouse',
+        'Stock movement: receipts, issues, transfers and dispatches',
+        'Warehouses and store locations',
+        'Open purchase orders and goods receipts',
+        'Sales orders waiting to be dispatched',
+        'Material consumption in production',
+        'Reorder levels set for each item',
+    ],
+    'asks' => [
+        '"Which products are below reorder level?"',
+        '"Show slow-moving inventory."',
+        '"Which warehouse has excess stock?"',
+        '"Which items have not moved in the last 90 days?"',
+        '"Do we have enough material for the orders due this week?"',
+    ],
+    'does' => [
+        'Monitors stock and alerts the right users when an item falls below its reorder level',
+        'Generates inventory reports on request: current stock, ageing, movement and valuation',
+        'Identifies anomalies, such as unusual consumption or stock that does not match recent movement',
+        'Analyses consumption and stock trends to recommend reorder quantities',
+        'Raises purchase indents for approval, within the permissions you set',
+        'Suggests transfers from warehouses holding excess stock to those running short',
+    ],
+    'faq' => [
+        ['What is AI inventory management in DotOne?', 'It is the Inventory AI Agent working on your live DotOne inventory data. Instead of opening stock reports and filtering them, you ask a question and the agent reads stock, orders and consumption, finds the items that need attention and prepares a report or a next step. In short, it is an AI inventory agent that does the checking your stores team does by hand today.'],
+        ['Can the inventory agent place purchase orders on its own?', 'Only if you allow it. The agent works within the roles, permissions and approval rules you set in DotOne. You can keep it to recommendations and draft purchase indents, and anything that changes data can be set to need a person\'s approval.'],
+        ['Does it work across more than one warehouse?', 'Yes. DotOne tracks stock separately for each store and warehouse, so the agent can compare them, find where stock is short or in excess, and suggest transfers between sites. This works alongside DotOne low-stock alerts and automatic indents, which together make up AI inventory automation in DotOne.'],
+        ['Do we need to change how we record stock?', 'No. The agent reads the same records your team already creates in DotOne: GRNs, issues, transfers and dispatches. The better those records are kept, the more useful its answers will be. AI stock management builds on good stock entries; it does not replace them.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

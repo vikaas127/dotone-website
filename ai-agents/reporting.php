@@ -1,0 +1,66 @@
+<?php
+$page = [
+    'path' => '/ai-agents/reporting',
+    'slug' => 'reporting',
+    'title' => 'Reporting AI Agent: AI Reporting Software | DotOne',
+    'description' => 'AI reporting software inside DotOne ERP. Ask a business question in plain language and the reporting agent builds the report from live ERP data.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Reporting AI Agent', '/ai-agents/reporting']],
+    'h1' => 'Reporting AI Agent',
+    'intro' => 'AI reporting software for owners and managers who want answers, not another spreadsheet. Ask a question about sales, stock, production or purchase in plain language. The agent reads live data across your DotOne modules, points out what has changed and builds the report you need.',
+    'demo' => [
+        'question' => 'How did this month compare with last month across sales, production and stock?',
+        'steps' => [
+            'Reading sales, production and stock data',
+            'Comparing this month with last month',
+            'Finding the biggest changes',
+            'Building the summary report',
+            'Sharing it with the management team',
+        ],
+        'result' => 'A one-page monthly summary with the main changes highlighted, shared with the people you chose.',
+    ],
+    'traditional' => [
+        'Open each module and find the right report.',
+        'Filter by date, plant, product and department.',
+        'Export everything and combine it in a spreadsheet.',
+        'Analyse the numbers to find what changed and why.',
+        'Format the MIS and send it, then repeat next month.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "What changed in sales this month?"',
+        'The agent reads data across the modules you are allowed to see.',
+        'It picks out the exceptions: big changes, unusual numbers, missed targets.',
+        'It generates the report as a table or summary you can export.',
+        'It schedules the report and shares it with the right people.',
+    ],
+    'sees' => [
+        'Sales, quotations and invoices',
+        'Inventory and stock movement',
+        'Production orders, job cards and output',
+        'Purchase orders and vendor deliveries',
+        'Accounts data synced with Tally',
+        'Attendance and workforce data from HRMS',
+        'Data across plants and branches',
+    ],
+    'asks' => [
+        '"What were our top 10 products by sales this quarter?"',
+        '"Compare production output this month with last month."',
+        '"Which customers have overdue payments?"',
+        '"Show purchase spend by vendor for this year."',
+        '"Send me the weekly MIS every Monday morning."',
+    ],
+    'does' => [
+        'Generates reports from a plain-language question',
+        'Highlights exceptions and big changes so you do not read every row',
+        'Combines data from several modules and plants in one report',
+        'Schedules recurring reports and shares them with chosen users',
+        'Exports reports for meetings, banks and auditors',
+        'Shows each user only the data their role allows',
+    ],
+    'faq' => [
+        ['What is AI reporting software?', 'It is software that builds reports from a question instead of a fixed menu. In DotOne the Reporting AI Agent reads your live ERP data, finds what has changed and puts the answer in a table or summary. It works as an AI report generator for anyone who needs numbers but does not want to build spreadsheets.'],
+        ['Can it replace our monthly MIS?', 'It can prepare it. You ask for the MIS once, check it and set it to repeat. The agent then builds it from live data each time, so your team spends time on the discussion instead of collecting numbers.'],
+        ['Is automated reporting software safe with sensitive data?', 'The agent only reads the modules and records your role allows, and it shares reports only with the users you choose. It works within the roles, permissions and approval rules you set in DotOne.'],
+        ['Does it work for more than one plant?', 'Yes. DotOne supports centralised multi-plant reporting, so the agent can answer for one plant or compare all of them in a single report, which is useful for AI business reporting at group level.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

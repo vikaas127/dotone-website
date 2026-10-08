@@ -1,5 +1,7 @@
 # DotOne Playbook - keep config, shared code and the raw playbook file private
 DirectoryIndex index.php
+# The main site turns DirectorySlash off for clean URLs; this app needs it on
+DirectorySlash On
 Options -Indexes
 
 <FilesMatch "^(config|common)\.php$|^playbook\.html$|\.md$">

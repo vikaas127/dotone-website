@@ -4,7 +4,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
             <div class="space-y-4">
                 <a href="/" class="flex items-center">
-                    <img loading="lazy" decoding="async" src="assets/dotone-wm-blue.png" alt="Dotone Logo" class="h-14 w-auto object-contain" width="119" height="56">
+                    <img loading="lazy" decoding="async" src="/assets/dotone-wm-blue.png" alt="Dotone Logo" class="h-14 w-auto object-contain" width="119" height="56">
                 </a>
                 <p class="text-text-secondary text-sm leading-relaxed max-w-xs">
                     Transforming manufacturing operations with AI-powered vision intelligence and comprehensive ERP solutions.
@@ -25,38 +25,40 @@
             <div>
                 <h3 class="site-footer-light-heading">Platform</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="/vision_ai_platform" class="site-footer-light-link">Vision AI</a></li>
-                    <li><a href="/aitools" class="site-footer-light-link">AI Tools Suite</a></li>
-                    <li><a href="/manufacturing_solutions" class="site-footer-light-link">Solutions</a></li>
-                    <li><a href="/case_studies" class="site-footer-light-link">Case Studies</a></li>
+                    <li><a href="/erp-software" class="site-footer-light-link">ERP Software</a></li>
+                    <li><a href="/ai-powered-erp" class="site-footer-light-link">AI-Powered ERP</a></li>
+                    <li><a href="/modules" class="site-footer-light-link">ERP Modules</a></li>
+                    <li><a href="/ai-agents" class="site-footer-light-link">AI Agents</a></li>
+                    <li><a href="/solutions" class="site-footer-light-link">Automation</a></li>
+                    <li><a href="/vision-ai" class="site-footer-light-link">Vision AI</a></li>
                     <li><a href="/pricing" class="site-footer-light-link">Pricing</a></li>
                     <li><a href="/security" class="site-footer-light-link">Security</a></li>
-                    <li><a href="/demo_center" class="site-footer-light-link">Demo Center</a></li>
-                    <li><a href="/api-reference" class="site-footer-light-link">API Reference</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="site-footer-light-heading">Resources</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="/manufacturing-automation-software" class="site-footer-light-link">Manufacturing Automation Software</a></li>
-                    <li><a href="/industry-4-0-solutions" class="site-footer-light-link">Industry 4.0 Solutions</a></li>
-                    <li><a href="/vision-ai-for-manufacturing" class="site-footer-light-link">Vision AI for Manufacturing</a></li>
-                    <li><a href="/manufacturing-erp-software" class="site-footer-light-link">Manufacturing ERP</a></li>
-                    <li><a href="/production-monitoring-software" class="site-footer-light-link">Production Monitoring</a></li>
-                    <li><a href="/inventory-automation-manufacturing" class="site-footer-light-link">Inventory Automation</a></li>
+                    <li><a href="/manufacturing-erp" class="site-footer-light-link">Manufacturing ERP</a></li>
+                    <li><a href="/inventory-management" class="site-footer-light-link">Inventory Management</a></li>
+                    <li><a href="/production-management" class="site-footer-light-link">Production Management</a></li>
+                    <li><a href="/guides" class="site-footer-light-link">Guides &amp; Articles</a></li>
+                    <li><a href="/guides/what-is-erp" class="site-footer-light-link">What Is ERP?</a></li>
+                    <li><a href="/integrations/tally" class="site-footer-light-link">Tally Integration</a></li>
+                    <li><a href="/case-studies" class="site-footer-light-link">Case Studies</a></li>
+                    <li><a href="/api-reference" class="site-footer-light-link">API Reference</a></li>
                 </ul>
             </div>
 
             <div>
                 <h3 class="site-footer-light-heading">Company</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="https://techdotbit.com/about-us/" class="site-footer-light-link">About Us</a></li>
+                    <li><a href="/about" class="site-footer-light-link">About DotOne</a></li>
                     <li><a href="/contact" class="site-footer-light-link">Contact</a></li>
-                    <li><a href="/career" class="site-footer-light-link">Careers</a></li>
+                    <li><a href="/demo" class="site-footer-light-link">Book a Demo</a></li>
+                    <li><a href="/careers" class="site-footer-light-link">Careers</a></li>
                     <li><a href="/partners" class="site-footer-light-link">Partners</a></li>
                     <li><a href="/support" class="site-footer-light-link">Support Center</a></li>
-                    <li><a href="/guides" class="site-footer-light-link">Guides &amp; Articles</a></li>
                     <li><a href="/documentation" class="site-footer-light-link">Documentation</a></li>
                 </ul>
             </div>

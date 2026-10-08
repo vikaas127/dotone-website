@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
-    <title>Contact Us - Dotone Vision Platform | Manufacturing AI Consultation</title>
+    <meta name="description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
+    <title>Contact DotOne | Sales, Support and Partnerships</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
       <link rel="canonical" href="https://dotone.biz/contact">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
       <meta property="og:site_name" content="Dotone">
-      <meta property="og:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
-      <meta property="og:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
+      <meta property="og:title" content="Contact DotOne | Sales, Support and Partnerships">
+      <meta property="og:description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
       <meta property="og:url" content="https://dotone.biz/contact">
-      <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+      <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
       <meta property="og:image:width" content="1200">
       <meta property="og:image:height" content="630">
-      <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+      <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
       <meta property="og:locale" content="en_IN">
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Contact Us - Dotone Vision Platform | Manufacturing AI Consultation">
-      <meta name="twitter:description" content="Contact Dotone Vision Platform - Schedule a consultation, book a demo, or speak with our manufacturing AI experts. Transform your operations with AI-powered solutions.">
-      <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+      <meta name="twitter:title" content="Contact DotOne | Sales, Support and Partnerships">
+      <meta name="twitter:description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
+      <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
   </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -42,9 +42,7 @@
                     <span class="text-sm font-medium text-primary-700">Expert Manufacturing AI Consultation</span>
                 </div>
 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">
-                    Let's Transform Your <span class="text-gradient">Manufacturing Operations</span>
-                </h1>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">Contact DotOne</h1>
 
                 <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
                     Connect with our manufacturing AI experts to discover how Dotone's Vision AI platform can optimize your operations, increase efficiency, and drive measurable ROI.
@@ -433,7 +431,7 @@
                                 </svg>
                                 <span>Return to Homepage</span>
                             </a>
-                            <a href="/demo_center" class="btn-primary">
+                            <a href="/demo" class="btn-primary">
                                 <span>Explore Interactive Demo</span>
                                 <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -564,7 +562,7 @@
 
                 <div class="text-center mt-12">
                     <p class="text-text-secondary mb-6">Timeline may vary based on facility size and complexity</p>
-                    <a href="/demo_center" class="btn-primary">
+                    <a href="/demo" class="btn-primary">
                         <span>See Implementation in Action</span>
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>

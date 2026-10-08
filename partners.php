@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dotone Partner Program | Smart Factory & Vision AI Partnerships</title>
-    <meta name="description" content="Join the Dotone Partner Program and deliver Smart Factory Software, Vision AI, and Manufacturing Automation solutions to factories worldwide.">
+    <title>DotOne Partner Program | DotOne</title>
+    <meta name="description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
     <link rel="canonical" href="https://dotone.biz/partners">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Dotone Partner Program | Smart Factory &amp; Vision AI Partnerships">
-    <meta property="og:description" content="Join the Dotone Partner Program and deliver Smart Factory Software, Vision AI, and Manufacturing Automation solutions to factories worldwide.">
+    <meta property="og:title" content="DotOne Partner Program | DotOne">
+    <meta property="og:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
     <meta property="og:url" content="https://dotone.biz/partners">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dotone Partner Program | Smart Factory &amp; Vision AI Partnerships">
-    <meta name="twitter:description" content="Join the Dotone Partner Program and deliver Smart Factory Software, Vision AI, and Manufacturing Automation solutions to factories worldwide.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne Partner Program | DotOne">
+    <meta name="twitter:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 
 <body class="bg-background">
@@ -37,9 +37,7 @@
 
     <div class="container-custom relative z-10">
         <div class="max-w-4xl mx-auto text-center space-y-6">
-            <h1 class="text-5xl md:text-6xl font-display font-bold">
-                Dotone <span class="text-gradient">Partner Program</span>
-            </h1>
+            <h1 class="text-5xl md:text-6xl font-display font-bold">DotOne Partner Program</h1>
             <p class="text-xl text-text-secondary">
                 Build the future of smart manufacturing with Vision AI, Smart Factory Software,
                 and Manufacturing Automation — together.

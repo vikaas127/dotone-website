@@ -4,7 +4,7 @@ module.exports = {
     "./pages/**/*.{html,js}",
     "./components/**/*.{html,js}",
     "./*.php",
-    "./includes/*.php",
+    "./{includes,ai-agents,industries,solutions,integrations,guides,vision-ai,compare}/**/*.php",
     "./js/*.js"
   ],
   theme: {

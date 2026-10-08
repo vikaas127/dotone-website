@@ -1,0 +1,65 @@
+<?php
+$page = [
+    'path' => '/ai-agents/crm',
+    'slug' => 'crm',
+    'title' => 'AI CRM Agent for Leads and Follow-ups | DotOne',
+    'description' => 'AI CRM inside DotOne ERP. The CRM agent finds stale leads and missed follow-ups, keeps the pipeline clean and gives your team full customer history.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['CRM AI Agent', '/ai-agents/crm']],
+    'h1' => 'CRM AI Agent',
+    'intro' => 'AI CRM for manufacturers whose leads come from calls, exhibitions, dealers and field visits. The agent watches your lead pipeline in DotOne, finds leads nobody has touched, reminds the owner before a follow-up is missed and pulls up a customer\'s full history before the next call.',
+    'demo' => [
+        'question' => 'Which leads have had no follow-up in the last 10 days?',
+        'steps' => [
+            'Reading leads in the pipeline',
+            'Checking last activity on each lead',
+            'Finding leads past their follow-up date',
+            'Grouping them by owner and stage',
+            'Scheduling reminders for each owner',
+        ],
+        'result' => 'Stale leads listed by salesperson and stage, with follow-up reminders set for each owner.',
+    ],
+    'traditional' => [
+        'Open the CRM and the lead list.',
+        'Filter by stage, owner, source and last activity date.',
+        'Export the list to see which leads are stuck or overdue.',
+        'Read through notes and past orders to judge each lead.',
+        'Remind each salesperson personally to call back.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Which leads are stuck in the same stage?"',
+        'The agent reads leads, activities and customer history together.',
+        'It picks out the exceptions: stale leads, missed follow-ups, duplicates.',
+        'It builds a pipeline report by stage, source and owner.',
+        'It sets follow-up reminders and routes leads, within your rules.',
+    ],
+    'sees' => [
+        'Leads and their source',
+        'Pipeline stages and expected values',
+        'Follow-up dates, calls and meeting notes',
+        'Customer and contact records',
+        'Past quotations and orders for each account',
+        'Field sales visits logged against leads',
+    ],
+    'asks' => [
+        '"Which leads have had no follow-up in the last 10 days?"',
+        '"Show leads stuck in the negotiation stage."',
+        '"Which lead source brought the most enquiries this quarter?"',
+        '"Give me the history of this customer before my call."',
+        '"Which follow-ups are due today for my team?"',
+    ],
+    'does' => [
+        'Sets follow-up reminders and alerts the lead owner before a date is missed',
+        'Flags stale leads, duplicate contacts and leads with missing details',
+        'Recommends the next action on a lead based on its stage and history',
+        'Routes new leads to the right salesperson by your assignment rules',
+        'Summarises a customer\'s history: enquiries, quotations, orders and notes',
+        'Updates lead stages for approval, within the permissions you set',
+    ],
+    'faq' => [
+        ['What is AI CRM in DotOne?', 'It is the CRM AI Agent working on your DotOne CRM data. You ask about leads, follow-ups or a customer in plain language, and the agent reads the pipeline, finds what has slipped and prepares reminders, summaries or reports. It works like an AI CRM assistant for each salesperson and their manager.'],
+        ['How is the CRM AI Agent different from the Sales AI Agent?', 'The CRM agent works before the deal: leads, pipeline hygiene, follow-ups and customer history. The Sales AI Agent works from the quotation onward: orders, dispatch, invoices and the sales forecast. Together they cover the whole journey from enquiry to delivery.'],
+        ['Is this separate AI CRM software?', 'No. The agent is part of DotOne and reads the same CRM module your team already uses, which is connected to sales, inventory and accounts. There is no second system to keep in sync.'],
+        ['Can the agent change lead details or reassign leads?', 'Only within the roles, permissions and approval rules you set in DotOne. It can suggest a stage change or a new owner, and anything that changes data can be set to need a person\'s approval.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

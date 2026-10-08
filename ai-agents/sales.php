@@ -1,0 +1,66 @@
+<?php
+$page = [
+    'path' => '/ai-agents/sales',
+    'slug' => 'sales',
+    'title' => 'AI Sales Agent for Manufacturers | DotOne',
+    'description' => 'An AI sales agent inside DotOne ERP that tracks quotations, orders and dispatch, forecasts demand and tells your team which orders need attention today.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Sales AI Agent', '/ai-agents/sales']],
+    'h1' => 'Sales AI Agent',
+    'intro' => 'An AI sales agent that works on your quotations, sales orders, invoices and dispatch in DotOne. Ask which quotations are about to go cold, which orders are late or what next month is likely to look like. The agent reads the data, picks out what needs action and prepares the follow-up or report for your team.',
+    'demo' => [
+        'question' => 'Which confirmed orders are at risk of missing their dispatch date this week?',
+        'steps' => [
+            'Reading open sales orders',
+            'Checking finished goods stock',
+            'Matching against dispatch dates',
+            'Flagging orders at risk',
+            'Preparing a list for the sales head',
+        ],
+        'result' => 'Orders at risk of late dispatch, with the reason for each and the customers to inform.',
+    ],
+    'traditional' => [
+        'Open the sales module and pull the quotation and order registers.',
+        'Filter by customer, salesperson, date and status.',
+        'Build a report in a spreadsheet to see pending quotations and late orders.',
+        'Compare with stock and past months to judge what is at risk.',
+        'Call or message the team to follow up, order by order.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Which quotations have had no reply for two weeks?"',
+        'The agent reads quotations, orders, stock and dispatch together.',
+        'It picks out the exceptions: stale quotations, late orders and unusual drops.',
+        'It builds the sales report or forecast, ready to share or export.',
+        'It assigns follow-up tasks and sends reminders, within your rules.',
+    ],
+    'sees' => [
+        'Quotations and their status',
+        'Sales orders, pending and confirmed',
+        'Invoices and payments due',
+        'Dispatch plans and delivery challans',
+        'Finished goods stock',
+        'Customer order history',
+        'Field sales visits and orders booked',
+    ],
+    'asks' => [
+        '"Which quotations are pending for more than 15 days?"',
+        '"Show this month\'s sales by product and region."',
+        '"Which orders are due for dispatch this week?"',
+        '"What demand should we plan for next month?"',
+        '"Which regular customers have not ordered recently?"',
+    ],
+    'does' => [
+        'Tracks every quotation and reminds the owner when one needs a follow-up',
+        'Flags confirmed orders at risk of late dispatch',
+        'Forecasts demand from order history so production can plan ahead',
+        'Generates sales reports by customer, product, region or salesperson',
+        'Routes follow-up tasks to the right salesperson and alerts managers',
+        'Prepares draft quotations and orders for review, within your approval rules',
+    ],
+    'faq' => [
+        ['What does the Sales AI Agent do?', 'It works on the sales side of DotOne: quotations, sales orders, invoices and dispatch. You ask it questions in plain language, and it finds stale quotations, late orders and changes in demand, then prepares a report, a forecast or a follow-up for your team. Think of it as an AI sales assistant that already knows your ERP data.'],
+        ['How is it different from the CRM AI Agent?', 'The CRM AI Agent looks after leads, the pipeline and customer conversations before a deal is won. The Sales AI Agent picks up from the quotation onward: orders, dispatch, invoices and the sales forecast.'],
+        ['Can the agent send quotations to customers by itself?', 'Only if you allow it. The agent acts within the roles, permissions and approval rules you set in DotOne. It can prepare a draft for a salesperson to check, and anything that changes data can be set to need a person\'s approval.'],
+        ['What parts of sales work can be automated?', 'AI sales automation in DotOne covers the routine work around orders: follow-up reminders on quotations, alerts on late dispatch, task routing to the right salesperson and regular sales reports. Decisions on price, credit and commitments stay with your team.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

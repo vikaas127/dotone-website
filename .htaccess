@@ -6,6 +6,9 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www\.)?dotoneforbusiness\.in$ [NC]
 RewriteRule ^(.*)$ https://dotone.biz/$1 [R=301,L]
 
+Options -Indexes
+DirectorySlash Off
+
 # ------------------------------------------------
 # 1. BLOCK .env FILE (SECURITY – MUST BE FIRST)
 # ------------------------------------------------
@@ -23,7 +26,33 @@ RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0a
 RewriteRule ^includes/ - [F,L]
 
 # ------------------------------------------------
-# 3. OLD .html AND DIRECT .php PAGE URLS -> CLEAN URL (301, SEO)
+# 3. MOVED PAGES (new site structure) -> NEW URL (301)
+# ------------------------------------------------
+RewriteRule ^aitools(\.html|\.php)?/?$ /ai [R=301,L]
+RewriteRule ^manufacturing_solutions(\.html|\.php)?/?$ /industries [R=301,L]
+RewriteRule ^demo_center(\.html|\.php)?/?$ /demo [R=301,L]
+RewriteRule ^production-monitoring-software(\.html|\.php)?/?$ /production-management [R=301,L]
+RewriteRule ^hrms-software-india(\.html|\.php)?/?$ /hrms [R=301,L]
+RewriteRule ^sales-field-tracking(\.html|\.php)?/?$ /field-sales-tracking [R=301,L]
+RewriteRule ^payroll-software-india(\.html|\.php)?/?$ /payroll [R=301,L]
+RewriteRule ^manufacturing-erp-software(\.html|\.php)?/?$ /manufacturing-erp [R=301,L]
+RewriteRule ^vision_ai_platform(\.html|\.php)?/?$ /vision-ai [R=301,L]
+RewriteRule ^vision-ai-for-manufacturing(\.html|\.php)?/?$ /vision-ai [R=301,L]
+RewriteRule ^ai-based-quality-inspection(\.html|\.php)?/?$ /vision-ai/quality-inspection [R=301,L]
+RewriteRule ^manufacturing-automation-software(\.html|\.php)?/?$ /industries/manufacturing [R=301,L]
+RewriteRule ^smart-factory-software(\.html|\.php)?/?$ /industries/manufacturing [R=301,L]
+RewriteRule ^industry-4-0-solutions(\.html|\.php)?/?$ /solutions/digital-transformation [R=301,L]
+RewriteRule ^inventory-automation-manufacturing(\.html|\.php)?/?$ /solutions/inventory-automation [R=301,L]
+RewriteRule ^tally-connector-guide(\.html|\.php)?/?$ /integrations/tally [R=301,L]
+RewriteRule ^what-is-erp(\.html|\.php)?/?$ /guides/what-is-erp [R=301,L]
+RewriteRule ^bom-setup-guide(\.html|\.php)?/?$ /guides/bom-setup [R=301,L]
+RewriteRule ^case_studies(\.html|\.php)?/?$ /case-studies [R=301,L]
+RewriteRule ^dotone-webinar(\.html|\.php)?/?$ /webinar [R=301,L]
+RewriteRule ^career(\.html|\.php)?/?$ /careers [R=301,L]
+RewriteRule ^home(\.html|\.php)?/?$ / [R=301,L]
+
+# ------------------------------------------------
+# 4. OLD .html, DIRECT .php AND TRAILING-SLASH URLS -> CLEAN URL (301)
 # ------------------------------------------------
 RewriteCond %{THE_REQUEST} \s/+index(\.html|\.php)?[\s?]
 RewriteRule ^ / [R=301,L]
@@ -31,26 +60,28 @@ RewriteRule ^ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?]
 RewriteRule ^ /%1 [R=301,L]
 
-# Pages only (form handlers and API endpoints keep their .php URL)
+# Pages only (form handlers, API endpoints and the implementation app keep their URLs)
 RewriteCond %{REQUEST_METHOD} =GET
 RewriteCond %{REQUEST_URI} !^/(contact-submit|webinar-count|webinar-register|sitemap)\.php$
 RewriteCond %{REQUEST_URI} !^/implementation/
 RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.php[\s?]
 RewriteRule ^ /%1 [R=301,L]
 
-# Old duplicate homepage
-RewriteRule ^home/?$ / [R=301,L]
+# The implementation app lives in a real folder and needs its trailing slash
+RewriteRule ^implementation$ /implementation/ [R=301,L]
+
+# /ai-agents/ -> /ai-agents
+RewriteCond %{REQUEST_URI} !^/implementation/
+RewriteRule ^(.+)/$ /$1 [R=301,L]
 
 # ------------------------------------------------
-# 4. INTERNAL CLEAN URL LOADER (.php)
+# 5. INTERNAL CLEAN URL LOADER (/pricing -> pricing.php, /ai-agents/inventory -> ai-agents/inventory.php)
 # ------------------------------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.+)$ $1.php [L]
+RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+RewriteRule ^(.+?)$ /$1.php [L]
 
 # ------------------------------------------------
-# 5. GZIP COMPRESSION & BROWSER CACHING
+# 6. GZIP COMPRESSION & BROWSER CACHING
 # ------------------------------------------------
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json image/svg+xml

@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>API Reference | Dotone Manufacturing Automation Platform</title>
-    <meta name="description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
+    <title>DotOne API Reference | DotOne</title>
+    <meta name="description" content="REST API reference for DotOne: authentication, endpoints, examples and webhooks.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
     <link rel="canonical" href="https://dotone.biz/api-reference">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="API Reference | Dotone Manufacturing Automation Platform">
-    <meta property="og:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
+    <meta property="og:title" content="DotOne API Reference | DotOne">
+    <meta property="og:description" content="REST API reference for DotOne: authentication, endpoints, examples and webhooks.">
     <meta property="og:url" content="https://dotone.biz/api-reference">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="API Reference | Dotone Manufacturing Automation Platform">
-    <meta name="twitter:description" content="Dotone API Reference for Industry 4.0, manufacturing automation, Vision AI, inventory and production monitoring integrations.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne API Reference | DotOne">
+    <meta name="twitter:description" content="REST API reference for DotOne: authentication, endpoints, examples and webhooks.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 
 <body class="bg-background">
@@ -38,9 +38,7 @@
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
 
     <div class="container-custom relative z-10 text-center space-y-6">
-        <h1 class="text-5xl md:text-6xl font-display font-bold">
-            Dotone <span class="text-gradient">API Reference</span>
-        </h1>
+        <h1 class="text-5xl md:text-6xl font-display font-bold">DotOne API Reference</h1>
         <p class="text-xl text-text-secondary max-w-3xl mx-auto">
             Secure, scalable APIs to integrate manufacturing automation, Industry 4.0, Vision AI,
             inventory management, and production monitoring into your systems.

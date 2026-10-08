@@ -2,31 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Documentation | Dotone Manufacturing Automation Platform</title>
-    <meta name="description" content="Dotone documentation for manufacturing automation, Industry 4.0, Vision AI, inventory automation, production monitoring, and ERP integration.">
+    <title>DotOne Documentation | DotOne</title>
+    <meta name="description" content="Product documentation for DotOne modules, setup, configuration and administration.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
     <link rel="canonical" href="https://dotone.biz/documentation">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Documentation | Dotone Manufacturing Automation Platform">
-    <meta property="og:description" content="Dotone documentation for manufacturing automation, Industry 4.0, Vision AI, inventory automation, production monitoring, and ERP integration.">
+    <meta property="og:title" content="DotOne Documentation | DotOne">
+    <meta property="og:description" content="Product documentation for DotOne modules, setup, configuration and administration.">
     <meta property="og:url" content="https://dotone.biz/documentation">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Documentation | Dotone Manufacturing Automation Platform">
-    <meta name="twitter:description" content="Dotone documentation for manufacturing automation, Industry 4.0, Vision AI, inventory automation, production monitoring, and ERP integration.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne Documentation | DotOne">
+    <meta name="twitter:description" content="Product documentation for DotOne modules, setup, configuration and administration.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 
 <body class="bg-background">
@@ -42,9 +42,7 @@
             Product & Developer Documentation
         </span>
 
-        <h1 class="text-5xl md:text-6xl font-display font-bold">
-            Dotone <span class="text-gradient">Documentation</span>
-        </h1>
+        <h1 class="text-5xl md:text-6xl font-display font-bold">DotOne Documentation</h1>
 
         <p class="text-xl text-text-secondary max-w-4xl mx-auto">
             Everything you need to deploy, configure, integrate, and scale
@@ -610,7 +608,7 @@ Step 5: Go Live 🚀
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/demo_center"
+                    <a href="/demo"
                        class="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold rounded-lg hover:bg-primary-600 transition-all shadow-lg">
                         Watch Live Demo
                     </a>

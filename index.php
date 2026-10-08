@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
-    <title>Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India</title>
+    <meta name="description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
+    <title>DotOne | AI-Powered Business Management Platform</title>
     <link rel="canonical" href="https://dotone.biz/">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
-    <meta property="og:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
+    <meta property="og:title" content="DotOne | AI-Powered Business Management Platform">
+    <meta property="og:description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
     <meta property="og:url" content="https://dotone.biz/">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dotone | AI Manufacturing ERP &amp; Factory Software for MSMEs in India">
-    <meta name="twitter:description" content="Dotone is the AI operating system for Indian MSME manufacturers: ERP, production monitoring, inventory, quality, Vision AI, HRMS and CRM in one platform.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="DotOne | AI-Powered Business Management Platform">
+    <meta name="twitter:description" content="ERP, AI agents and intelligent automation in one platform. Run inventory, sales, production, HR and finance with AI that works on your ERP data.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.biz/#organization","name":"Dotone","url":"https://dotone.biz/","logo":"https://dotone.biz/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.biz/#website","url":"https://dotone.biz/","name":"Dotone","publisher":{"@id":"https://dotone.biz/#organization"},"inLanguage":"en-IN"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -34,46 +34,80 @@
     <!-- Dark Hero -->
     <section class="hero-light" data-scroll="off">
         <div class="container-custom relative z-10">
-            <div class="hero-light-grid">
-                <div class="hero-light-copy">
-                    <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>AI Operating System for MSME Business</span>
+            <div class="hero-split">
+                <div class="hero-split-copy">
+                    <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        <span class="text-gradient-shimmer">See More. Do More.</span>
-                        <span class="block">One AI platform for your whole factory.</span>
+                        <span class="text-gradient-shimmer">AI-Powered</span> Business Management Platform
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
-                        Production, inventory, quality, sales and shopfloor AI, connected in one place and built for Indian manufacturers.
+                        ERP, AI agents and intelligent automation, connected in one platform. Ask an agent a question and it works on your live ERP data.
                     </p>
                     <div class="hero-light-ctas hero-anim" style="--d: 360ms">
-                        <a href="/demo_center" class="btn-hero-glow-lg group">
-                            <span>Get Started Free</span>
+                        <a href="/demo" class="btn-hero-glow-lg group">
+                            <span>Book a Demo</span>
                             <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                         </a>
-                        <a href="/contact" class="btn-ghost-lg group">
-                            Book a Demo
+                        <a href="/modules" class="btn-ghost-lg group">
+                            Explore the Platform
                             <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <div class="hero-visual-frame hero-anim" style="--d: 420ms">
-                <div class="hero-agent-card" id="hero-agent-card" aria-hidden="true">
-                    <div class="hero-agent-prompt">
-                        <span class="hero-agent-you">You</span>
-                        <span class="hero-agent-prompt-text" data-text="Check today's production and flag anything running late"></span><span class="hero-agent-caret"></span>
+                <div class="hero-network hero-anim" style="--d: 300ms" aria-hidden="true">
+                    <div class="hero-network-glow"></div>
+                    <svg class="hero-network-lines" viewBox="0 0 600 560" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="netLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="560">
+                                <stop offset="0" stop-color="#80D1FA"/>
+                                <stop offset="1" stop-color="#0096EE"/>
+                            </linearGradient>
+                        </defs>
+                        <path id="net-1" d="M96 40 C 96 90, 170 80, 190 150"/>
+                        <path id="net-2" d="M300 40 L 300 150"/>
+                        <path id="net-3" d="M504 40 C 504 90, 430 80, 410 150"/>
+                        <path id="net-4" d="M96 520 C 96 470, 170 480, 190 410"/>
+                        <path id="net-5" d="M300 520 L 300 410"/>
+                        <path id="net-6" d="M504 520 C 504 470, 430 480, 410 410"/>
+                        <g class="hero-network-pulses">
+                            <circle r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#net-1"/></animateMotion></circle>
+                            <circle r="3.5"><animateMotion dur="2s" repeatCount="indefinite" begin="0.7s"><mpath href="#net-2"/></animateMotion></circle>
+                            <circle r="3.5"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.3s"><mpath href="#net-3"/></animateMotion></circle>
+                            <circle r="3.5"><animateMotion dur="2.5s" repeatCount="indefinite" begin="1.1s"><mpath href="#net-4"/></animateMotion></circle>
+                            <circle r="3.5"><animateMotion dur="2.1s" repeatCount="indefinite" begin="1.5s"><mpath href="#net-5"/></animateMotion></circle>
+                            <circle r="3.5"><animateMotion dur="2.7s" repeatCount="indefinite" begin="0.5s"><mpath href="#net-6"/></animateMotion></circle>
+                        </g>
+                    </svg>
+                    <span class="hero-node" style="left: 16%; top: 7.1%;">Inventory</span>
+                    <span class="hero-node" style="left: 50%; top: 7.1%;">Sales &amp; CRM</span>
+                    <span class="hero-node" style="left: 84%; top: 7.1%;">Purchase</span>
+                    <span class="hero-node" style="left: 16%; top: 92.9%;">Production</span>
+                    <span class="hero-node" style="left: 50%; top: 92.9%;">HRMS &amp; Payroll</span>
+                    <span class="hero-node" style="left: 84%; top: 92.9%;">Finance</span>
+
+                    <div class="hero-agent-card hero-agent-card--window" id="hero-agent-card">
+                        <div class="hero-agent-window-bar">
+                            <span class="hero-agent-window-dots"><i></i><i></i><i></i></span>
+                            <span class="hero-agent-window-title">DotOne Inventory Agent</span>
+                            <span class="hero-agent-live"><i></i>Live</span>
+                        </div>
+                        <div class="hero-agent-prompt">
+                            <span class="hero-agent-you">You</span>
+                            <span class="hero-agent-prompt-text" data-text="Which products are below reorder level?"></span><span class="hero-agent-caret"></span>
+                        </div>
+                        <ul class="hero-agent-steps">
+                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Reading stock across 3 warehouses</li>
+                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Comparing against reorder levels</li>
+                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Checking open purchase orders</li>
+                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Drafting purchase indents for 4 items</li>
+                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Sending to the purchase manager for approval</li>
+                        </ul>
+                        <div class="hero-agent-tools">
+                            <span>Inventory</span><span>Purchase</span><span>Warehouse</span><span>WhatsApp</span>
+                        </div>
+                        <div class="hero-agent-done"><strong>&#10003; Done</strong> &middot; 4 items below reorder level, indents waiting for approval</div>
                     </div>
-                    <ul class="hero-agent-steps">
-                        <li class="hero-agent-step"><span class="hero-agent-check"></span>Reading live data from 6 production lines</li>
-                        <li class="hero-agent-step"><span class="hero-agent-check"></span>Checking OEE and downtime by shift</li>
-                        <li class="hero-agent-step"><span class="hero-agent-check"></span>Matching stock against open job cards</li>
-                        <li class="hero-agent-step"><span class="hero-agent-check"></span>Raising a purchase order for RM-104</li>
-                        <li class="hero-agent-step"><span class="hero-agent-check"></span>Alerting the line supervisor on WhatsApp</li>
-                    </ul>
-                    <div class="hero-agent-tools">
-                        <span>Production</span><span>Inventory</span><span>Quality</span><span>WhatsApp</span>
-                    </div>
-                    <div class="hero-agent-done"><strong>&#10003; Completed</strong> &middot; OEE 87.4%, 1 order flagged for review</div>
-                </div>
                 </div>
             </div>
 
@@ -83,12 +117,12 @@
                     <div class="hero-stat-label">typical time to go live</div>
                 </div>
                 <div class="hero-stat hero-anim" style="--d: 600ms">
-                    <div class="hero-stat-value">18+</div>
-                    <div class="hero-stat-label">industries served</div>
+                    <div class="hero-stat-value">11 modules</div>
+                    <div class="hero-stat-label">from inventory to payroll, on one database</div>
                 </div>
                 <div class="hero-stat hero-anim" style="--d: 700ms">
-                    <div class="hero-stat-value">One platform</div>
-                    <div class="hero-stat-label">ERP, IoT, Vision AI and CRM together</div>
+                    <div class="hero-stat-value">Tally sync</div>
+                    <div class="hero-stat-label">two-way, with your existing books</div>
                 </div>
             </div>
         </div>
@@ -110,68 +144,68 @@
                 <!-- SET 1 -->
                 <div class="brand-carousel-group">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
+                        <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
                 </div>
 
                 <!-- SET 2 - DUPLICATE FOR SEAMLESS CONTINUOUS LOOP -->
                 <div class="brand-carousel-group" aria-hidden="true">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
+                        <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
                 </div>
 
@@ -186,6 +220,90 @@
 
     </div>
 </section>
+
+    <!-- Three pillars -->
+    <section class="section bg-white">
+        <div class="container-custom">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="section-label">One platform, three layers</span>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold text-text-primary mb-4">ERP, AI agents and automation, working on the same data</h2>
+                <p class="text-lg text-text-secondary">Most tools give you one of these. DotOne connects all three, so an agent can read your stock, raise the indent and route it for approval in one flow.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/modules" class="pillar-card">
+                    <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/></svg></div>
+                    <h3 class="text-xl font-display font-semibold mb-2">ERP modules</h3>
+                    <p class="text-text-secondary">The system of record: every order, item, job card, employee and invoice in one database.</p>
+                    <div class="pillar-links"><span>Inventory</span><span>Sales &amp; CRM</span><span>Purchase</span><span>Production</span><span>Quality</span><span>HRMS</span><span>Accounting</span></div>
+                    <span class="mt-6 inline-block text-sm font-medium text-primary-600">Explore modules &rarr;</span>
+                </a>
+                <a href="/ai-agents" class="pillar-card">
+                    <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg></div>
+                    <h3 class="text-xl font-display font-semibold mb-2">AI agents</h3>
+                    <p class="text-text-secondary">Agents that read the ERP data, find the exceptions, build the report and recommend the next step.</p>
+                    <div class="pillar-links"><span>Inventory agent</span><span>Sales agent</span><span>CRM agent</span><span>Reporting agent</span></div>
+                    <span class="mt-6 inline-block text-sm font-medium text-primary-600">Meet the agents &rarr;</span>
+                </a>
+                <a href="/solutions" class="pillar-card">
+                    <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-5"><svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+                    <h3 class="text-xl font-display font-semibold mb-2">Automation</h3>
+                    <p class="text-text-secondary">Approvals, alerts and handoffs that run on their own, across departments and on WhatsApp.</p>
+                    <div class="pillar-links"><span>Approvals</span><span>Notifications</span><span>Auto indents</span><span>Tally sync</span><span>Integrations</span></div>
+                    <span class="mt-6 inline-block text-sm font-medium text-primary-600">See solutions &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agent at work showcase -->
+    <section class="section agent-showcase-section">
+        <div class="container-custom">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="section-label">Inventory AI Agent</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-text-primary leading-tight mb-4">Stock that reorders itself</h2>
+                <p class="text-lg text-text-secondary mb-8">Ask the Inventory Agent. It checks every warehouse, finds the shortages and prepares the purchase indent. You approve it.</p>
+                <a href="/ai-agents/inventory" class="btn-hero-glow">See the Inventory Agent</a>
+            </div>
+
+            <div class="agent-showcase" aria-hidden="true">
+                <div class="agent-showcase-photo">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1600&auto=format&fit=crop" alt="" loading="lazy" decoding="async" width="1600" height="1067" onerror="this.remove()">
+                </div>
+
+                <div class="agent-showcase-steps">
+                    <div class="agent-float-card" style="--i: 0"><span class="agent-float-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span>Stock checked across 3 warehouses</div>
+                    <div class="agent-float-card" style="--i: 1"><span class="agent-float-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg></span>4 items found below reorder level</div>
+                </div>
+
+                <div class="agent-showcase-summary" style="--i: 2">
+                    <div class="agent-summary-title">Indent summary</div>
+                    <dl>
+                        <dt>Key details</dt>
+                        <dd>Items: 4 raw materials</dd>
+                        <dd>Deliver to: Main store</dd>
+                        <dt>Reasoning</dt>
+                        <dd>Stock is below the reorder level set for each item, and no open purchase order covers it.</dd>
+                    </dl>
+                </div>
+
+                <div class="agent-showcase-action" style="--i: 3">
+                    <span>Send for approval</span>
+                    <span class="agent-action-btn">Purchase manager</span>
+                </div>
+
+                <div class="agent-showcase-prompt" style="--i: 0">
+                    <span class="agent-prompt-text">Raise indents for items below reorder level</span>
+                    <span class="agent-prompt-send"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg></span>
+                </div>
+
+                <svg class="agent-showcase-connectors" viewBox="0 0 1000 620" preserveAspectRatio="none">
+                    <path d="M120 400 L 120 560 L 200 560"/>
+                    <path d="M840 150 L 790 150 L 790 200"/>
+                    <path d="M870 420 L 870 470"/>
+                </svg>
+            </div>
+        </div>
+    </section>
 
     <!-- Without / With Dotone -->
     <section class="section bg-white">
@@ -204,7 +322,7 @@
                     <div class="compare-row"><span class="compare-icon compare-icon--no">&times;</span>The owner personally chases every purchase, payment and delivery.</div>
                 </div>
                 <div class="compare-col compare-col--with">
-                    <div class="compare-head"><img loading="lazy" decoding="async" src="assets/dotone-logo-blue.png" alt="" class="h-5 w-auto">With Dotone</div>
+                    <div class="compare-head"><img loading="lazy" decoding="async" src="/assets/dotone-logo-blue.png" alt="" class="h-5 w-auto">With Dotone</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>Live stock across every store and warehouse, on one screen.</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>OEE, downtime and delays for each line, updated in real time.</div>
                     <div class="compare-row"><span class="compare-icon compare-icon--yes">&#10003;</span>Vision AI flags defects on the line and routes them to rework.</div>
@@ -352,7 +470,7 @@
     </section>
 
     <!-- Floating Ask Factory AI -->
-    <a href="/demo_center" class="factory-ai-fab" aria-label="Ask Factory AI">
+    <a href="/demo" class="factory-ai-fab" aria-label="Ask Factory AI">
         <span class="text-sm font-semibold text-text-primary hidden sm:inline">Ask Factory AI</span>
         <span class="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -527,81 +645,61 @@
     </section>
 
     <!-- Why Dotone -->
-    <section class="section chaos-section" data-scroll="off">
+    <section class="section unify-section">
         <div class="container-custom">
-            <div class="text-center mb-8 md:mb-10 chaos-section-header">
-                <span class="section-label">Why Dotone</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-primary max-w-4xl mx-auto leading-tight">
-                    Old-tool chaos keeps falling.<br class="hidden sm:block"> <span class="text-gradient">Dotone keeps the floor clear.</span>
-                </h2>
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                <span class="section-label">From scattered tools to one system</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-text-primary leading-tight mb-4">Your data lives in six places. DotOne puts it in one.</h2>
+                <p class="text-lg text-text-secondary">Spreadsheets, Tally, WhatsApp groups and paper registers each hold part of the answer. DotOne connects them so every question has one reliable answer.</p>
             </div>
-        </div>
 
-        <div class="chaos-scroll-track">
-            <div class="chaos-sticky">
-                <div class="container-custom">
-                    <div class="chaos-stage relative max-w-5xl mx-auto h-[380px] sm:h-[440px] md:h-[500px]">
-                <div class="chaos-chips-layer">
-                <div class="chaos-divider" aria-hidden="true"></div>
-                <div class="chaos-floor-glow" aria-hidden="true"></div>
-
-                <span class="chaos-tag-question chaos-chip absolute top-[0%] left-[1%] sm:left-[3%]" data-chaos-layer="question" data-chaos-speed="0.55" data-chaos-phase="0" data-chaos-z="12" style="--rot: -3deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    Are we profitable?
-                </span>
-                <span class="chaos-tag-question chaos-chip absolute top-[2%] left-[34%] sm:left-[36%]" data-chaos-layer="question" data-chaos-speed="0.48" data-chaos-phase="1.2" data-chaos-z="11" style="--rot: 2deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    Production status?
-                </span>
-                <span class="chaos-tag-question chaos-chip absolute top-[0%] right-[1%] sm:right-[3%]" data-chaos-layer="question" data-chaos-speed="0.52" data-chaos-phase="2.4" data-chaos-z="13" style="--rot: -2deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    What is stock?
-                </span>
-                <span class="chaos-tag-question chaos-chip absolute top-[14%] left-[8%] sm:left-[12%]" data-chaos-layer="question" data-chaos-speed="0.5" data-chaos-phase="0.8" data-chaos-z="10" style="--rot: 3deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    Duplicate entries
-                </span>
-                <span class="chaos-tag-question chaos-chip absolute top-[12%] right-[8%] sm:right-[12%]" data-chaos-layer="question" data-chaos-speed="0.46" data-chaos-phase="1.8" data-chaos-z="14" style="--rot: -3deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    Sales margins?
-                </span>
-                <span class="chaos-tag-question chaos-chip absolute top-[22%] left-[38%] sm:left-[40%]" data-chaos-layer="question" data-chaos-speed="0.58" data-chaos-phase="3" data-chaos-z="15" style="--rot: 1deg">
-                    <span class="chaos-chip-icon" aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                    Where is the order?
-                </span>
-
-                <span class="chaos-tag chaos-chip absolute bottom-[46%] left-[1%] sm:left-[4%]" data-chaos-layer="tool" data-chaos-speed="0.42" data-chaos-phase="0.5" data-chaos-z="6" style="--rot: -4deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-amber">N</span>
-                    Notebook
-                </span>
-                <span class="chaos-tag chaos-chip absolute bottom-[50%] left-[24%] sm:left-[26%]" data-chaos-layer="tool" data-chaos-speed="0.38" data-chaos-phase="1.5" data-chaos-z="7" style="--rot: 3deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-coral">Z</span>
-                    Zoho
-                </span>
-                <span class="chaos-tag chaos-chip absolute bottom-[44%] left-[46%] sm:left-[48%] -translate-x-1/2" data-chaos-layer="tool" data-chaos-speed="0.45" data-chaos-phase="2.2" data-chaos-z="8" style="--rot: -2deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-mint">X</span>
-                    Excel
-                </span>
-                <span class="chaos-tag chaos-chip absolute bottom-[48%] right-[24%] sm:right-[26%]" data-chaos-layer="tool" data-chaos-speed="0.4" data-chaos-phase="0.3" data-chaos-z="5" style="--rot: 3deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-flux">P</span>
-                    Paper Trails
-                </span>
-                <span class="chaos-tag chaos-chip absolute bottom-[44%] right-[1%] sm:right-[4%]" data-chaos-layer="tool" data-chaos-speed="0.43" data-chaos-phase="1.1" data-chaos-z="9" style="--rot: -3deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-flux">S</span>
-                    SAP
-                </span>
-                <span class="chaos-tag chaos-chip absolute bottom-[8%] left-[34%] sm:left-[38%]" data-chaos-layer="tool" data-chaos-speed="0.36" data-chaos-phase="2.8" data-chaos-z="4" style="--rot: 2deg">
-                    <span class="chaos-tool-badge chaos-tool-badge-mint">G</span>
-                    Google Sheets
-                </span>
+            <div class="unify-grid">
+                <div class="unify-tools">
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#1D6F42">X</span><div><strong>Excel</strong><span>Stock counted by hand</span></div></div>
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#2F6FB5">T</span><div><strong>Tally</strong><span>Margins known at month-end</span></div></div>
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#25A55F">W</span><div><strong>WhatsApp groups</strong><span>Orders lost in chat</span></div></div>
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#188038">G</span><div><strong>Google Sheets</strong><span>Five versions of one list</span></div></div>
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#8A6D3B">R</span><div><strong>Paper registers</strong><span>Entries made twice</span></div></div>
+                    <div class="unify-tool"><span class="unify-tool-icon" style="--c:#6B7280">C</span><div><strong>Separate CRM</strong><span>Sales cut off from stock</span></div></div>
                 </div>
 
-                <div class="chaos-clarity-reveal" aria-hidden="true">
-                    <div class="chaos-clarity-glow" aria-hidden="true"></div>
-                    <img loading="lazy" decoding="async" src="assets/dotone-wm-blue.png" alt="Dotone" class="chaos-brand-logo chaos-clarity-logo" width="220" height="104">
-                    <h3 class="chaos-clarity-title">Endless clarity.</h3>
+                <div class="unify-flow" aria-hidden="true">
+                    <svg viewBox="0 0 160 360" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="unifyLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="160" y2="0">
+                                <stop offset="0" stop-color="#B3E3FC"/>
+                                <stop offset="1" stop-color="#0096EE"/>
+                            </linearGradient>
+                        </defs>
+                        <path id="uf-1" d="M0 30 C 80 30, 80 180, 160 180"/>
+                        <path id="uf-2" d="M0 90 C 80 90, 80 180, 160 180"/>
+                        <path id="uf-3" d="M0 150 C 80 150, 80 180, 160 180"/>
+                        <path id="uf-4" d="M0 210 C 80 210, 80 180, 160 180"/>
+                        <path id="uf-5" d="M0 270 C 80 270, 80 180, 160 180"/>
+                        <path id="uf-6" d="M0 330 C 80 330, 80 180, 160 180"/>
+                        <g class="unify-pulses">
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0s"><mpath href="#uf-1"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.4s"><mpath href="#uf-2"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="0.8s"><mpath href="#uf-3"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.2s"><mpath href="#uf-4"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="1.6s"><mpath href="#uf-5"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" begin="2s"><mpath href="#uf-6"/></animateMotion></circle>
+                        </g>
+                    </svg>
                 </div>
+
+                <div class="unify-hub">
+                    <div class="unify-hub-head">
+                        <img src="/assets/dotone-wm-blue.png" alt="DotOne" width="102" height="48" loading="lazy" decoding="async">
+                        <span class="hero-agent-live"><i></i>One source of truth</span>
                     </div>
+                    <ul class="unify-answers">
+                        <li><span class="unify-q">What is our stock?</span><span class="unify-a">Live, for every warehouse</span></li>
+                        <li><span class="unify-q">Are we profitable?</span><span class="unify-a">Margin by order and customer</span></li>
+                        <li><span class="unify-q">Where is the order?</span><span class="unify-a">Quote to dispatch, one timeline</span></li>
+                        <li><span class="unify-q">Why are there duplicates?</span><span class="unify-a">Entered once, used everywhere</span></li>
+                        <li><span class="unify-q">What needs my attention?</span><span class="unify-a">Agents flag the exceptions</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -665,7 +763,7 @@
                                     <li>Layered BOM with live cost estimation</li>
                                     <li>Rejection logging &amp; quality control workflows</li>
                                 </ul>
-                                <a href="/production-monitoring-software" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/production-management" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -725,7 +823,7 @@
                                     <li>Multi-warehouse management &amp; QR tracking</li>
                                     <li>Stock valuation &amp; Smart GRN on receipt</li>
                                 </ul>
-                                <a href="/inventory-automation-manufacturing" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/solutions/inventory-automation" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -755,7 +853,7 @@
                                     <li>Automated follow-ups, alerts &amp; task routing</li>
                                     <li>Conversational workflow copilot for your team</li>
                                 </ul>
-                                <a href="/aitools" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/ai" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -785,7 +883,7 @@
                                     <li>AI-powered predictive maintenance scheduling</li>
                                     <li>Energy usage &amp; cycle time optimization insights</li>
                                 </ul>
-                                <a href="/industry-4-0-solutions" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/solutions/digital-transformation" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -815,7 +913,7 @@
                                     <li>Auto PO generation with approval workflows</li>
                                     <li>Funds management &amp; native Tally sync</li>
                                 </ul>
-                                <a href="/manufacturing_solutions" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/industries" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -845,7 +943,7 @@
                                     <li>Automated payroll with statutory compliance</li>
                                     <li>Leave, shifts &amp; performance linked to production</li>
                                 </ul>
-                                <a href="/hrms-software-india" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/hrms" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -875,7 +973,7 @@
                                     <li>Live shipment tracking &amp; proof of delivery</li>
                                     <li>Freight cost tracking &amp; carrier performance</li>
                                 </ul>
-                                <a href="/inventory-automation-manufacturing" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/solutions/inventory-automation" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -905,7 +1003,7 @@
                                     <li>Worker efficiency &amp; safety zone monitoring</li>
                                     <li>Automated rework routing &amp; alert workflows</li>
                                 </ul>
-                                <a href="/vision_ai_platform" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/vision-ai" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -935,7 +1033,7 @@
                                     <li>Machine-to-ERP data sync &amp; auto job triggers</li>
                                     <li>Digital twin dashboards for full plant visibility</li>
                                 </ul>
-                                <a href="/smart-factory-software" class="workspace-showcase-cta btn-primary">Get Started →</a>
+                                <a href="/industries/manufacturing" class="workspace-showcase-cta btn-primary">Get Started →</a>
                             </div>
                             <div class="workspace-showcase-cards">
                                 <div class="workspace-feature-card">
@@ -962,7 +1060,7 @@
         <div class="container-custom">
             <div class="text-center mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/pricing" class="btn-secondary">Compare Plans</a>
-                <a href="/demo_center" class="btn-primary">Get Started Free</a>
+                <a href="/demo" class="btn-primary">Get Started Free</a>
             </div>
         </div>
     </section>
@@ -984,24 +1082,24 @@
             <div class="industries-sticky">
                 <div class="container-custom">
                     <div class="industries-grid">
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item is-active"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Manufacturing</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span><span>Retail</span></a>
-                <a href="/sales-field-tracking" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span><span>Trading &amp; Distribution</span></a>
-                <a href="/ai-based-quality-inspection" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Pharma &amp; Life Sciences</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Dairy</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></span><span>Food &amp; Beverage</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Construction &amp; Building</span></a>
+                <a href="/industries" class="industry-card industry-seq-item is-active"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Manufacturing</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span><span>Retail</span></a>
+                <a href="/field-sales-tracking" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span><span>Trading &amp; Distribution</span></a>
+                <a href="/vision-ai/quality-inspection" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Pharma &amp; Life Sciences</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Dairy</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></span><span>Food &amp; Beverage</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Construction &amp; Building</span></a>
                 <a href="/crm" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></span><span>Automotive &amp; Rental</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Chemical</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></span><span>Gems &amp; Jewelry</span></a>
-                <a href="/industry-4-0-solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span><span>High Tech &amp; Electronics</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Mall &amp; Facilities</span></a>
-                <a href="/inventory-automation-manufacturing" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Packaging</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Chemical</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></span><span>Gems &amp; Jewelry</span></a>
+                <a href="/solutions/digital-transformation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span><span>High Tech &amp; Electronics</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Mall &amp; Facilities</span></a>
+                <a href="/solutions/inventory-automation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Packaging</span></a>
                 <a href="/documentation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></span><span>Publication</span></a>
-                <a href="/hrms-software-india" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span><span>Education</span></a>
-                <a href="/manufacturing_solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span><span>Sports</span></a>
-                <a href="/industry-4-0-solutions" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span><span>Oil &amp; Gas</span></a>
-                <a href="/inventory-automation-manufacturing" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span><span>Warehouse</span></a>
+                <a href="/hrms" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span><span>Education</span></a>
+                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span><span>Sports</span></a>
+                <a href="/solutions/digital-transformation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span><span>Oil &amp; Gas</span></a>
+                <a href="/solutions/inventory-automation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span><span>Warehouse</span></a>
                     </div>
                 </div>
             </div>
@@ -1205,7 +1303,7 @@
                     </div>
 
                     <div class="text-center mt-10 md:mt-12 customer-stories-cta-wrap">
-                        <a href="/case_studies" class="btn-secondary customer-stories-cta">
+                        <a href="/case-studies" class="btn-secondary customer-stories-cta">
                             View All Success Stories
                             <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
@@ -1281,7 +1379,7 @@
             <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10">
                 Built for manufacturers who want clarity, control, and confidence.
             </p>
-            <a href="/demo_center" class="btn-hero-glow-lg">Get Started Free</a>
+            <a href="/demo" class="btn-hero-glow-lg">Get Started Free</a>
             <p class="text-sm text-text-tertiary mt-10 max-w-xl mx-auto">
                 Meet Us Right Away — We're here to assist, answer and address any feedback.
             </p>
@@ -1289,18 +1387,17 @@
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261009" defer></script>
-<script src="/js/scroll-animate.js?v=20261009" defer></script>
-<script src="/js/metrics-animate.js?v=20261009" defer></script>
-<script src="/js/scroll-sequence.js?v=20261009" defer></script>
-<script src="/js/chaos-scroll.js?v=20261009" defer></script>
-<script src="/js/customer-stories.js?v=20261009" defer></script>
-<script src="/js/methodology-steps.js?v=20261009" defer></script>
-<script src="/js/workspace-cards.js?v=20261009" defer></script>
-<script src="/js/industries-scroll.js?v=20261009" defer></script>
-<script src="/js/hero-agent.js?v=20261009" defer></script>
-<script src="/js/index-visuals.js?v=20261009" defer></script>
-<script src="/js/platform-tabs.js?v=20261009" defer></script>
+<script src="/js/header-nav.js?v=20261010" defer></script>
+<script src="/js/scroll-animate.js?v=20261010" defer></script>
+<script src="/js/metrics-animate.js?v=20261010" defer></script>
+<script src="/js/scroll-sequence.js?v=20261010" defer></script>
+<script src="/js/customer-stories.js?v=20261010" defer></script>
+<script src="/js/methodology-steps.js?v=20261010" defer></script>
+<script src="/js/workspace-cards.js?v=20261010" defer></script>
+<script src="/js/industries-scroll.js?v=20261010" defer></script>
+<script src="/js/hero-agent.js?v=20261010" defer></script>
+<script src="/js/index-visuals.js?v=20261010" defer></script>
+<script src="/js/platform-tabs.js?v=20261010" defer></script>
     <!-- Footer -->
   
 

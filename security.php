@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
-    <title>Security & Trust Center | Dotone</title>
+    <meta name="description" content="How DotOne protects your data: TLS 1.2+ and AES encryption, role-based access with audit logs and automated encrypted backups.">
+    <title>Security and Data Protection | DotOne</title>
     <link rel="canonical" href="https://dotone.biz/security">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Security &amp; Trust Center | Dotone">
-    <meta property="og:description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
+    <meta property="og:title" content="Security and Data Protection | DotOne">
+    <meta property="og:description" content="How DotOne protects your data: TLS 1.2+ and AES encryption, role-based access with audit logs and automated encrypted backups.">
     <meta property="og:url" content="https://dotone.biz/security">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Dotone: one AI platform for your whole factory">
+    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Security &amp; Trust Center | Dotone">
-    <meta name="twitter:description" content="Dotone security, data privacy, and compliance. Learn how we protect manufacturing and workforce data for enterprise customers in India.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg">
+    <meta name="twitter:title" content="Security and Data Protection | DotOne">
+    <meta name="twitter:description" content="How DotOne protects your data: TLS 1.2+ and AES encryption, role-based access with audit logs and automated encrypted backups.">
+    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261009">
-    <script src="/js/header-nav.js?v=20261009" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <script src="/js/header-nav.js?v=20261010" defer></script>
 </head>
 <body class="bg-background">
 
@@ -34,9 +34,7 @@
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">
-            Security &amp; <span class="text-gradient">Trust Center</span>
-        </h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">Security and Data Protection</h1>
         <p class="text-xl text-text-secondary">
             Enterprise-grade protection for your manufacturing data, workforce records, and operational intelligence.
         </p>

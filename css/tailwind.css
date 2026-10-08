@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
 
 @tailwind base;
@@ -54,9 +54,9 @@
     --color-surface: #F6F9FC;
     --color-surface-hover: #EDF3F8;
 
-    --color-text-primary: #32363A;
-    --color-text-secondary: #6A6D70;
-    --color-text-tertiary: #89919A;
+    --color-text-primary: #101828;
+    --color-text-secondary: #475467;
+    --color-text-tertiary: #667085;
     --color-text-inverse: #FFFFFF;
 
     --color-success: #107E3E;
@@ -77,8 +77,8 @@
     --color-error-600: #990000;
     --color-error-700: #770000;
 
-    --color-border: #D9D9D9;
-    --color-border-light: #EAECEE;
+    --color-border: #E4E9F0;
+    --color-border-light: #EEF2F6;
     --color-border-dark: #BFBFBF;
 
     --shadow-sm: 0 1px 2px 0 rgba(29, 45, 62, 0.06);
@@ -389,7 +389,6 @@
 
   .hero-light-title {
     @apply font-display font-semibold mb-6;
-    color: #0F1B2D;
     font-size: clamp(2.1rem, 1.3rem + 2.6vw, 3.6rem);
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -5904,4 +5903,58 @@
       max-height: none !important;
     }
   }
+}
+
+/* ── Professional polish (site-wide, unlayered so it wins over utilities) ── */
+h1, h2, h3, h4 {
+  letter-spacing: -0.022em;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+h1.font-bold, h2.font-bold, h3.font-bold, h4.font-bold,
+.font-display.font-bold {
+  font-weight: 600;
+}
+
+/* One heading color: no two-tone highlighted words inside headings */
+:is(h1, h2, h3, h4) :is(.text-gradient, .text-gradient-flux, .text-gradient-mynt, .text-gradient-brand-dark) {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: inherit;
+}
+
+/* Icon tiles and step numbers: light tint instead of solid blue squares */
+.bg-gradient-brand.flex.items-center.justify-center {
+  background: #EAF5FE;
+  color: #0078BE;
+  box-shadow: none;
+  border: 1px solid #D5EBFB;
+}
+
+.bg-gradient-brand.flex.items-center.justify-center .text-white,
+.bg-gradient-brand.flex.items-center.justify-center.text-white {
+  color: #0078BE;
+}
+
+/* Flat, consistent cards */
+.card,
+.card-elevated {
+  border-radius: 12px;
+  border-color: #E4E9F0;
+  box-shadow: none;
+}
+
+.card:hover,
+.card-elevated:hover {
+  border-color: #CFDDEA;
+  box-shadow: 0 12px 28px -16px rgba(16, 24, 40, 0.16);
+}
+
+.hover-lift:hover {
+  --tw-translate-y: -2px;
+}
+
+/* Calmer section eyebrow labels */
+.section-label {
+  letter-spacing: 0.12em;
 }

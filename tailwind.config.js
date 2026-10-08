@@ -55,9 +55,9 @@ module.exports = {
           hover: '#EDF3F8',
         },
         text: {
-          primary: '#32363A',
-          secondary: '#6A6D70',
-          tertiary: '#89919A',
+          primary: '#101828',
+          secondary: '#475467',
+          tertiary: '#667085',
           inverse: '#FFFFFF',
         },
         success: {
@@ -85,13 +85,13 @@ module.exports = {
           700: '#770000',
         },
         border: {
-          DEFAULT: '#D9D9D9',
-          light: '#EAECEE',
+          DEFAULT: '#E4E9F0',
+          light: '#EEF2F6',
           dark: '#BFBFBF',
         },
       },
       fontFamily: {
-        display: ['Poppins', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },

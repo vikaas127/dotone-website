@@ -70,7 +70,7 @@ function animateMetric(el, duration = 1500) {
             case "plus":
                 return `${Math.round(value)}+`;
             case "percent":
-                return `${value.toFixed(1)}%`;
+                return `${value.toFixed(Number.isInteger(target) ? 0 : 1)}%`;
             case "currency":
                 return `₹${value.toFixed(1)} Cr`;
             default:

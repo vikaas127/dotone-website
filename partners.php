@@ -32,142 +32,79 @@
 <div id="header"><?php include __DIR__ . '/includes/header.php'; ?></div>
 
 <!-- HERO -->
-<section class="relative pt-32 pb-20 overflow-hidden">
+<section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
-
-    <div class="container-custom relative z-10">
-        <div class="max-w-4xl mx-auto text-center space-y-6">
-            <h1 class="text-5xl md:text-6xl font-display font-bold">DotOne Partner Program</h1>
-            <p class="text-xl text-text-secondary">
-                Build the future of smart manufacturing with Vision AI, Smart Factory Software,
-                and Manufacturing Automation — together.
-            </p>
+    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+        <span class="section-label">Partners</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6">DotOne Partner Program</h1>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
+            Become a DotOne implementation, reseller or technology partner and grow with Indian businesses moving their operations onto one connected platform.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="/contact" class="btn-hero-glow-lg">Apply for partnership</a>
+            <a href="/modules" class="btn-ghost-lg">Explore the modules</a>
         </div>
     </div>
 </section>
 
-<!-- WHY PARTNER -->
-<section class="section bg-surface">
+<!-- PARTNER MODELS -->
+<section class="section bg-white">
     <div class="container-custom">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-display font-bold">
-                Why Partner with <span class="text-gradient">DotOne</span>
-            </h2>
-            <p class="text-xl text-text-secondary mt-4">
-                Purpose-built AI solutions designed for real manufacturing environments.
-            </p>
+        <div class="max-w-2xl mb-10">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Partner models</h2>
+            <p class="text-lg text-text-secondary">For system integrators, consultants, ERP and IT companies, and resellers.</p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-semibold mb-3">Manufacturing-First AI</h3>
-                <p class="text-text-secondary">
-                    Vision AI, Quality Inspection, Smart Factory and ERP designed specifically for factories.
-                </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Referral partner</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Earn commission by referring qualified leads.</p>
             </div>
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-semibold mb-3">High revenue potential</h3>
-                <p class="text-text-secondary">
-                    Project revenue, recurring subscriptions, and long-term client retention.
-                </p>
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Implementation partner</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Implement and support DotOne for your clients.</p>
             </div>
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-semibold mb-3">Fast deployment</h3>
-                <p class="text-text-secondary">
-                    Rapid implementation with existing cameras, machines, and infrastructure.
-                </p>
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Reseller partner</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Sell DotOne directly with recurring revenue.</p>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHO CAN PARTNER -->
-<section class="section">
-    <div class="container-custom">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-display font-bold">
-                Who Should <span class="text-gradient">Partner</span>
-            </h2>
-        </div>
-
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="card p-6 text-center hover-lift">System Integrators</div>
-            <div class="card p-6 text-center hover-lift">Manufacturing Consultants</div>
-            <div class="card p-6 text-center hover-lift">ERP & IT Companies</div>
-            <div class="card p-6 text-center hover-lift">Resellers & Channel Partners</div>
-        </div>
-    </div>
-</section>
-
-<!-- PARTNER TYPES -->
-<section class="section bg-surface">
-    <div class="container-custom">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-display font-bold">
-                Partner <span class="text-gradient">Models</span>
-            </h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="card p-6 hover-lift">
-                <h3 class="font-semibold text-lg mb-2">Referral partner</h3>
-                <p class="text-text-secondary">Earn commission by referring qualified leads.</p>
-            </div>
-            <div class="card p-6 hover-lift">
-                <h3 class="font-semibold text-lg mb-2">Implementation partner</h3>
-                <p class="text-text-secondary">Implement and support DotOne solutions on-ground.</p>
-            </div>
-            <div class="card p-6 hover-lift">
-                <h3 class="font-semibold text-lg mb-2">Reseller partner</h3>
-                <p class="text-text-secondary">Sell DotOne directly with recurring revenue.</p>
-            </div>
-            <div class="card p-6 hover-lift">
-                <h3 class="font-semibold text-lg mb-2">Technology partner</h3>
-                <p class="text-text-secondary">Integrate hardware or software with DotOne.</p>
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Technology partner</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Integrate your hardware or software with DotOne.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- WHAT DOTONE PROVIDES -->
-<section class="section">
+<section class="section bg-surface">
     <div class="container-custom">
         <div class="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-4xl font-display font-bold mb-6">
-                    What DotOne <span class="text-gradient">Provides</span>
-                </h2>
-                <ul class="space-y-4 text-text-secondary">
-                    <li>✔ Product & technical training</li>
-                    <li>✔ Sales demos & partner support</li>
-                    <li>✔ Marketing & co-branding material</li>
-                    <li>✔ Priority partner assistance</li>
-                    <li>✔ Clear commission tracking</li>
-                </ul>
+                <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">What DotOne provides</h2>
+                <p class="text-lg text-text-secondary">Earn through implementation, subscriptions and long-term client relationships, with our team behind you.</p>
             </div>
-
-            <div class="card p-8">
-                <h3 class="text-xl font-semibold mb-4">Revenue opportunity</h3>
-                <p class="text-text-secondary">
-                    Earn through implementation, subscriptions, AI modules, and long-term enterprise deals.
-                </p>
-            </div>
+            <ul class="card p-8 space-y-4 text-text-secondary">
+                <li class="flex items-start gap-3"><span class="text-primary-600 font-semibold" aria-hidden="true">&#10003;</span>Product and technical training</li>
+                <li class="flex items-start gap-3"><span class="text-primary-600 font-semibold" aria-hidden="true">&#10003;</span>Sales demos and partner support</li>
+                <li class="flex items-start gap-3"><span class="text-primary-600 font-semibold" aria-hidden="true">&#10003;</span>Marketing and co-branding material</li>
+                <li class="flex items-start gap-3"><span class="text-primary-600 font-semibold" aria-hidden="true">&#10003;</span>Priority partner assistance</li>
+                <li class="flex items-start gap-3"><span class="text-primary-600 font-semibold" aria-hidden="true">&#10003;</span>Clear commission tracking</li>
+            </ul>
         </div>
     </div>
 </section>
 
 <!-- CTA -->
-<section class="section cta-light">
-    <div class="container-custom text-center">
-        <h2 class="text-4xl font-display font-bold mb-6">
-            Become a DotOne partner
-        </h2>
-        <p class="text-xl mb-8">
-            Grow your business with Smart Factory & Vision AI solutions.
-        </p>
-        <a href="/contact" class="btn-primary bg-primary-500 text-white">
-            Apply for Partnership
-        </a>
+<section class="section">
+    <div class="container-custom">
+        <div class="relative rounded-3xl overflow-hidden cta-frame px-8 py-14 md:px-16 md:py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold text-text-primary mb-4">Become a DotOne partner</h2>
+            <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">Tell us about your business and the clients you serve.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="/contact" class="btn-hero-glow-lg">Apply for partnership</a>
+                <a href="/about" class="btn-ghost-lg">About DotOne</a>
+            </div>
+        </div>
     </div>
 </section>
 

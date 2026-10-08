@@ -33,108 +33,79 @@
 
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
-    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">Security and Data Protection</h1>
-        <p class="text-xl text-text-secondary">
-            Enterprise-grade protection for your manufacturing data, workforce records, and operational intelligence.
+    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+        <span class="section-label">Security</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6">Security and Data Protection</h1>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
+            How DotOne protects your business data, workforce records and day-to-day operations.
         </p>
     </div>
 </section>
 
 <?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('security'); ?>
 
-<section class="section-sm">
-    <div class="container-custom max-w-5xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-8">
-
-            <div class="card p-8">
-                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<section class="section bg-surface">
+    <div class="container-custom">
+        <div class="max-w-2xl mb-10">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">How we protect your data</h2>
+            <p class="text-lg text-text-secondary">The safeguards behind every DotOne account.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card p-6">
+                <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                     </svg>
                 </div>
-                <h2 class="text-xl font-display font-semibold mb-3">Data Encryption</h2>
-                <p class="text-text-secondary text-sm">All data in transit is protected with TLS 1.2+. Sensitive fields at rest are encrypted using industry-standard AES-256 encryption on our cloud infrastructure.</p>
+                <h3 class="text-lg font-display font-semibold mb-2">Data encryption</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Data in transit is protected with TLS 1.2+, and sensitive fields at rest are encrypted with AES-256.</p>
             </div>
-
-            <div class="card p-8">
-                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card p-6">
+                <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                     </svg>
                 </div>
-                <h2 class="text-xl font-display font-semibold mb-3">Access Control</h2>
-                <p class="text-text-secondary text-sm">Role-based access control (RBAC) ensures employees only see data relevant to their role. Admin audit logs track critical configuration and user management changes.</p>
+                <h3 class="text-lg font-display font-semibold mb-2">Access control</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Role-based access means people only see data relevant to their role, and admin audit logs track key configuration and user changes.</p>
             </div>
-
-            <div class="card p-8">
-                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card p-6">
+                <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2"/>
                     </svg>
                 </div>
-                <h2 class="text-xl font-display font-semibold mb-3">Secure Infrastructure</h2>
-                <p class="text-text-secondary text-sm">DotOne runs on hardened cloud servers with automated backups, network firewalls, and intrusion monitoring. Production and staging environments are fully isolated.</p>
+                <h3 class="text-lg font-display font-semibold mb-2">Secure infrastructure</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Hardened cloud servers with automated encrypted backups, firewalls and intrusion monitoring, with production and staging fully isolated.</p>
             </div>
-
-            <div class="card p-8">
-                <div class="w-12 h-12 bg-gradient-brand rounded-xl flex items-center justify-center mb-4">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="card p-6">
+                <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                     </svg>
                 </div>
-                <h2 class="text-xl font-display font-semibold mb-3">Compliance &amp; Privacy</h2>
-                <p class="text-text-secondary text-sm">We follow Indian IT Act guidelines and align with GDPR principles for data minimization and user rights. HRMS modules support PF, ESIC, and statutory record-keeping requirements.</p>
+                <h3 class="text-lg font-display font-semibold mb-2">Compliance and privacy</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">We follow Indian IT Act guidelines and GDPR principles of data minimisation, and HRMS supports PF, ESIC and statutory records.</p>
             </div>
-
         </div>
-    </div>
-</section>
-
-<section class="section bg-surface">
-    <div class="container-custom max-w-4xl mx-auto">
-        <h2 class="text-3xl font-display font-bold text-center mb-10">Vision AI &amp; CCTV Data</h2>
-        <div class="card-elevated p-8 space-y-4 text-text-secondary">
-            <p>DotOne Vision AI processes video feeds on-premises or in your private network edge — video is not stored unnecessarily. Analytics outputs (counts, alerts, efficiency metrics) are transmitted securely to your dashboard.</p>
-            <ul class="space-y-2 text-sm">
-                <li>• Configurable retention policies for analytics data</li>
-                <li>• No sharing of customer video with third parties</li>
-                <li>• Worker privacy controls and zone-based monitoring</li>
-                <li>• Deployment options: cloud, hybrid, or on-premise (Enterprise)</li>
-            </ul>
+        <div class="card p-6 mt-6">
+            <h3 class="text-lg font-display font-semibold mb-2">Vision AI and CCTV data</h3>
+            <p class="text-text-secondary text-[0.95rem] leading-relaxed">Video is processed on-premises or at your private network edge and is never shared with third parties; only analytics such as counts and alerts reach your dashboard, with configurable retention.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
-    <div class="container-custom max-w-4xl mx-auto">
-        <h2 class="text-3xl font-display font-bold text-center mb-10">Our Commitments</h2>
-        <div class="grid sm:grid-cols-3 gap-6 text-center">
-            <div class="card p-6">
-                <div class="text-3xl font-display font-bold text-gradient mb-2">99.5%+</div>
-                <div class="text-sm text-text-secondary">Platform uptime target</div>
+    <div class="container-custom">
+        <div class="relative rounded-3xl overflow-hidden cta-frame px-8 py-14 md:px-16 md:py-20 text-center">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold text-text-primary mb-4">Questions about security?</h2>
+            <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">Enterprise customers can request our security questionnaire, DPA and architecture overview.</p>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="/contact" class="btn-hero-glow-lg">Contact the security team</a>
+                <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="btn-ghost-lg">Privacy policy</a>
             </div>
-            <div class="card p-6">
-                <div class="text-3xl font-display font-bold text-gradient mb-2">24h</div>
-                <div class="text-sm text-text-secondary">Security incident response SLA</div>
-            </div>
-            <div class="card p-6">
-                <div class="text-3xl font-display font-bold text-gradient mb-2">Daily</div>
-                <div class="text-sm text-text-secondary">Automated encrypted backups</div>
-            </div>
+            <p class="text-xs text-text-secondary mt-8">DotOne is a product of <a href="https://techdotbit.com" class="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">TechDotBit Pvt Ltd.</a></p>
         </div>
-    </div>
-</section>
-
-<section class="section bg-surface">
-    <div class="container-custom max-w-3xl mx-auto text-center space-y-6">
-        <h2 class="text-2xl font-display font-bold">Questions about security?</h2>
-        <p class="text-text-secondary">Enterprise customers can request our security questionnaire, DPA, and architecture overview.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" class="btn-primary">Contact Security Team</a>
-            <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Privacy Policy</a>
-        </div>
-        <p class="text-xs text-text-secondary pt-4">DotOne is a product of <a href="https://techdotbit.com" class="text-primary-500 hover:underline" target="_blank" rel="noopener noreferrer">TechDotBit Pvt Ltd.</a></p>
     </div>
 </section>
 

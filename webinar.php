@@ -68,428 +68,196 @@
 <!-- STICKY MINI CTA -->
 <div id="stickyCta"
      class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] md:w-auto">
-
     <div class="card px-4 py-3 flex flex-col md:flex-row items-center gap-3 md:gap-4 shadow-lg">
-
-        <!-- Timer -->
         <span class="text-sm font-medium text-center md:text-left">
-            ⏳ Starts in
+            Starts in
             <strong class="ml-1">
                 <span id="miniHours">00</span>:
                 <span id="miniMinutes">00</span>:
                 <span id="miniSeconds">00</span>
             </strong>
         </span>
-
-        <!-- CTA Button -->
-        <a href="#register"
-           class="btn-primary text-sm px-4 py-2 w-full md:w-auto text-center">
-            Join Free Webinar
-        </a>
-
+        <a href="#register" class="btn-primary text-sm px-4 py-2 w-full md:w-auto text-center">Join free webinar</a>
     </div>
 </div>
-
 
 <!-- HEADER -->
 <div id="header"><?php include __DIR__ . '/includes/header.php'; ?></div>
 
 <!-- HERO -->
-<section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="container-custom text-center max-w-4xl mx-auto space-y-6">
-
-        <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-            Free Webinar for Manufacturers
-        </span>
-
-       <h1 class="text-5xl md:text-6xl font-display font-bold">Automate Your Factory with DotOne ERP</h1>
-
-
-
-
-        <p class="text-xl text-text-secondary">
-            Learn how modern ERP systems help manufacturers streamline
-            production, inventory, HR, and operations — without complexity.
+<section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
+    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
+    <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
+        <span class="section-label">Free webinar for manufacturers</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6">Automate Your Factory with DotOne ERP</h1>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed mb-6">
+            Learn how a modern ERP helps manufacturers run production, inventory, HR and operations without the complexity.
         </p>
-
-        <div class="flex flex-wrap justify-center gap-6 text-sm text-text-secondary">
-            <span>🎟️ Free to Join</span>
-            <span>🏭 Manufacturing Focused</span>
-            <span>⏱️ 30–40 Minutes</span>
-        </div>
-
-        <a href="#register" class="btn-primary mt-6">
-            Join Free Webinar
-        </a>
-
-        <p class="text-sm text-text-secondary mt-4" data-reg-line hidden>
-            ⭐ Already <strong><span class="regCount">0</span> manufacturers</strong> have registered
-        </p>
-
-    </div>
-</section>
-
-<!-- SPEAKER -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-6xl mx-auto">
-
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- LEFT: Image + Name -->
-    <div class="flex justify-center">
-        <div class="card p-4 max-w-sm text-center">
-
-            <img
-                src="https://media.licdn.com/dms/image/v2/D5603AQEtOgN2k3GAnw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718311050896?e=1769644800&v=beta&t=JZA3N0I5qrNdXMLhDx6rrA1l-t1SJGdSzMAL3P3dKAM"
-                alt="Mr.Raushan Kumar Manufacturing Consultant"
-                class="rounded-2xl w-full object-cover mb-4"
-            >
-
-            <h3 class="text-xl font-display font-bold">
-                Mr.Raushan Kumar
-            </h3>
-
-            <p class="text-sm text-primary-600 font-semibold mt-1">
-                Manufacturing Consultant & Factory Scaling Specialist
-            </p>
-
-            <p class="text-xs text-text-secondary mt-1">
-                10+ Years of Hands-On Industry Experience
-            </p>
-
-        </div>
-    </div>
-
-    <!-- RIGHT: Expert Content -->
-    <div>
-        <p class="text-text-secondary mb-5">
-            With over a decade of on-ground manufacturing experience,
-            Mr. Raushan Kumar has worked closely with factory owners,
-            plant heads, and operations teams to build, stabilize,
-            and scale manufacturing businesses.
-        </p>
-
-        <p class="text-text-secondary mb-6">
-            He has helped factories grow from <strong>greenfield setup
-            to ₹200+ crore annual turnover</strong>, working across
-            <strong>10+ manufacturing industries</strong>. His expertise
-            lies in practical process improvement, cost control, and
-            ERP adoption that teams actually use on the shop floor.
-        </p>
-
-        <!-- Expertise List -->
-        <ul class="space-y-3 text-text-secondary mb-8">
-            <li>✔ Factory setup & scalable process design</li>
-            <li>✔ Production planning & operational control</li>
-            <li>✔ Cost optimisation & efficiency improvement</li>
-            <li>✔ Practical, people-friendly ERP implementation</li>
+        <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-text-secondary mb-8">
+            <li>Free to join</li>
+            <li>Manufacturing focused</li>
+            <li>30–40 minutes</li>
         </ul>
-
-        <!-- Credibility Tags -->
-        <div class="flex flex-wrap gap-3">
-            <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-                Factory Scaling Expert
-            </span>
-            <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-                ₹200+ Cr Growth Experience
-            </span>
-            <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-                ERP & Process Transformation
-            </span>
-            <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-                Shop-Floor Focused
-            </span>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#register" class="btn-hero-glow-lg">Join free webinar</a>
+            <a href="#agenda" class="btn-ghost-lg">See the agenda</a>
         </div>
-    </div>
-
-</div>
-
-
+        <p class="text-sm text-text-secondary mt-6" data-reg-line hidden>
+            <strong><span id="regCount" class="regCount">0</span> manufacturers</strong> have already registered
+        </p>
     </div>
 </section>
 
 <!-- AGENDA -->
-<!-- WEBINAR AGENDA -->
+<section id="agenda" class="section bg-white">
+    <div class="container-custom">
+        <div class="max-w-2xl mb-12">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Webinar agenda</h2>
+            <p class="text-lg text-text-secondary">
+                A focused 30–40 minute session for manufacturers, hosted by Raushan Kumar, manufacturing consultant and factory scaling specialist.
+            </p>
+        </div>
+        <ol class="flow-steps">
+            <li class="flow-step">
+                <span class="flow-step-num">1</span>
+                <h3 class="text-base font-display font-semibold text-text-primary mb-1">Manufacturing challenges today</h3>
+                <p class="text-sm text-text-secondary leading-relaxed">Common problems factories face in production, inventory, HR and reporting.</p>
+            </li>
+            <li class="flow-step">
+                <span class="flow-step-num">2</span>
+                <h3 class="text-base font-display font-semibold text-text-primary mb-1">How ERP solves these problems</h3>
+                <p class="text-sm text-text-secondary leading-relaxed">How ERP brings control, visibility and automation across operations.</p>
+            </li>
+            <li class="flow-step">
+                <span class="flow-step-num">3</span>
+                <h3 class="text-base font-display font-semibold text-text-primary mb-1">DotOne ERP walkthrough</h3>
+                <p class="text-sm text-text-secondary leading-relaxed">A simple, practical walkthrough of DotOne built for manufacturers.</p>
+            </li>
+            <li class="flow-step">
+                <span class="flow-step-num">4</span>
+                <h3 class="text-base font-display font-semibold text-text-primary mb-1">Live Q&amp;A with the expert</h3>
+                <p class="text-sm text-text-secondary leading-relaxed">Get your questions answered directly by a manufacturing consultant.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- WHO SHOULD ATTEND -->
 <section class="section bg-surface">
     <div class="container-custom">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                Webinar <span class="text-gradient">Agenda</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                A focused 30–40 minute learning session designed
-                specifically for manufacturers
-            </p>
+        <div class="max-w-2xl mb-10">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Who should attend</h2>
+            <p class="text-lg text-text-secondary">Decision-makers and operators involved in daily manufacturing operations.</p>
         </div>
-
-        <div class="max-w-5xl mx-auto">
-            <div class="relative">
-
-                <!-- Vertical Line -->
-                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-brand"></div>
-
-                <div class="space-y-12">
-
-                    <!-- Agenda 1 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">
-                            1
-                        </div>
-                        <div class="flex-1 card p-6 hover-lift">
-                            <h3 class="text-xl font-display font-semibold mb-2">
-                                Manufacturing challenges today
-                            </h3>
-                            <p class="text-text-secondary mb-3">
-                                Understand common problems faced by factories
-                                in production, inventory, HR, and reporting.
-                            </p>
-                            <span class="text-sm text-text-secondary">
-                                ⏱ Duration: 10 Minutes
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 2 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">
-                            2
-                        </div>
-                        <div class="flex-1 card p-6 hover-lift">
-                            <h3 class="text-xl font-display font-semibold mb-2">
-                                How ERP solves these problems
-                            </h3>
-                            <p class="text-text-secondary mb-3">
-                                Learn how ERP brings control, visibility,
-                                and automation across manufacturing operations.
-                            </p>
-                            <span class="text-sm text-text-secondary">
-                                ⏱ Duration: 10 Minutes
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 3 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">
-                            3
-                        </div>
-                        <div class="flex-1 card p-6 hover-lift">
-                            <h3 class="text-xl font-display font-semibold mb-2">
-                                DotOne ERP walkthrough
-                            </h3>
-                            <p class="text-text-secondary mb-3">
-                                A simple, practical walkthrough of DotOne ERP
-                                built specifically for manufacturers.
-                            </p>
-                            <span class="text-sm text-text-secondary">
-                                ⏱ Duration: 10 Minutes
-                            </span>
-                        </div>
-                    </div>
-
-                    <!-- Agenda 4 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">
-                            4
-                        </div>
-                        <div class="flex-1 card p-6 hover-lift">
-                            <h3 class="text-xl font-display font-semibold mb-2">
-                                Live Q&A with expert
-                            </h3>
-                            <p class="text-text-secondary mb-3">
-                                Get your questions answered directly by
-                                a manufacturing consultant.
-                            </p>
-                            <span class="text-sm text-text-secondary">
-                                ⏱ Duration: 10 Minutes
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Factory owners and directors</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Better control and visibility over production, costing, inventory and growth decisions.</p>
+            </div>
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Production and plant managers</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">Optimise daily operations, reduce delays and improve coordination across departments.</p>
+            </div>
+            <div class="card p-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Accounts and operations teams</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">See how ERP improves reporting, costing accuracy and compliance.</p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- REGISTRATION FORM -->
+<section id="register" class="section bg-white">
+    <div class="container-custom max-w-3xl mx-auto">
 
-<!-- WHY LEARN -->
-<!-- WHY THIS WEBINAR IS DIFFERENT -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                Why This <span class="text-gradient">Webinar Is Different</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                Not theory. Not sales. Just real manufacturing experience
-                and practical ERP insights.
-            </p>
+        <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Register for the free webinar</h2>
+            <p class="text-lg text-text-secondary">Tell us a little about your setup so we can tailor the session to you.</p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <div class="card p-8 hover-lift">
-                <div class="text-3xl mb-4">🏭</div>
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Real factory experience
-                </h3>
-                <p class="text-text-secondary">
-                    Learn from insights gained directly on the shop floor —
-                    dealing with production delays, inventory gaps,
-                    manpower issues, and daily operational challenges.
-                </p>
-            </div>
-
-            <div class="card p-8 hover-lift">
-                <div class="text-3xl mb-4">📈</div>
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Proven scaling results
-                </h3>
-                <p class="text-text-secondary">
-                    See how factories were scaled from early-stage
-                    operations to <strong>₹200+ crore businesses</strong>
-                    using structured processes and ERP discipline.
-                </p>
-            </div>
-
-            <div class="card p-8 hover-lift">
-                <div class="text-3xl mb-4">⚙️</div>
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    ERP that teams actually use
-                </h3>
-                <p class="text-text-secondary">
-                    Understand how ERP is implemented in a way that
-                    production teams, supervisors, and accounts
-                    staff actually use — every single day.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- WHO SHOULD ATTEND -->
-<!-- WHO SHOULD ATTEND -->
-<section class="section">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                Who Should <span class="text-gradient">Attend?</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                This webinar is designed for decision-makers and
-                operators involved in daily manufacturing operations.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Factory owners & directors
-                </h3>
-                <p class="text-text-secondary">
-                    Gain better control, visibility, and confidence
-                    in production, costing, inventory, and growth decisions.
-                </p>
-            </div>
-
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Production & plant managers
-                </h3>
-                <p class="text-text-secondary">
-                    Learn how to optimise daily operations,
-                    reduce delays, and improve coordination
-                    across departments.
-                </p>
-            </div>
-
-            <div class="card p-8 hover-lift">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Accounts & operations teams
-                </h3>
-                <p class="text-text-secondary">
-                    Understand how ERP improves reporting,
-                    costing accuracy, compliance,
-                    and operational transparency.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<!-- FREE JOIN -->
-<!-- LIMITED TIME FREE WEBINAR + COUNTDOWN -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-5xl mx-auto text-center">
-
-        <!-- Badge -->
-        <span class="inline-flex px-5 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium mb-6">
-            Limited Time Free Webinar for Manufacturers
-        </span>
-
-        <!-- Heading -->
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
-            Join <span class="text-gradient">FREE</span> Before Registration Closes
-        </h2>
-
-        <!-- Price -->
-        <p class="text-lg text-text-secondary mb-8">
-            Worth <span class="line-through">₹5,000</span> · Now
-            <span class="font-display font-bold text-gradient">FREE</span>
-        </p>
 
         <!-- Countdown -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-10">
-
-            <div class="card p-6">
-                <p id="days" class="text-4xl font-display font-bold text-gradient">00</p>
-                <p class="text-sm text-text-secondary mt-1">Days</p>
-            </div>
-
-            <div class="card p-6">
-                <p id="hours" class="text-4xl font-display font-bold text-gradient">00</p>
-                <p class="text-sm text-text-secondary mt-1">Hours</p>
-            </div>
-
-            <div class="card p-6">
-                <p id="minutes" class="text-4xl font-display font-bold text-gradient">00</p>
-                <p class="text-sm text-text-secondary mt-1">Minutes</p>
-            </div>
-
-            <div class="card p-6">
-                <p id="seconds" class="text-4xl font-display font-bold text-gradient">00</p>
-                <p class="text-sm text-text-secondary mt-1">Seconds</p>
-            </div>
-
+        <div class="grid grid-cols-4 gap-3 max-w-md mx-auto mb-10 text-center" aria-label="Time until the webinar starts">
+            <div class="card p-3"><p id="days" class="text-2xl font-display font-semibold text-primary-600">00</p><p class="text-xs text-text-secondary">Days</p></div>
+            <div class="card p-3"><p id="hours" class="text-2xl font-display font-semibold text-primary-600">00</p><p class="text-xs text-text-secondary">Hours</p></div>
+            <div class="card p-3"><p id="minutes" class="text-2xl font-display font-semibold text-primary-600">00</p><p class="text-xs text-text-secondary">Minutes</p></div>
+            <div class="card p-3"><p id="seconds" class="text-2xl font-display font-semibold text-primary-600">00</p><p class="text-xs text-text-secondary">Seconds</p></div>
         </div>
 
-        <!-- Social Proof -->
-        <p class="text-sm text-text-secondary mb-8" data-reg-line hidden>
-            ⭐ Already <strong><span id="regCount" class="regCount">0</span> manufacturers</strong> have registered
-        </p>
+        <form method="post" action="/webinar-register.php" class="card p-6 md:p-8">
+            <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
 
-        <!-- CTA -->
-        <a href="#register" class="btn-primary">
-            Register Now – It’s Free
-        </a>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <label for="w-name" class="block text-sm font-medium mb-2">Full name *</label>
+                    <input type="text" id="w-name" name="name" class="input" autocomplete="name" required>
+                </div>
+                <div>
+                    <label for="w-email" class="block text-sm font-medium mb-2">Business email *</label>
+                    <input type="email" id="w-email" name="email" class="input" autocomplete="email" required>
+                </div>
+                <div>
+                    <label for="w-phone" class="block text-sm font-medium mb-2">Phone number *</label>
+                    <input type="tel" id="w-phone" name="phone" class="input" autocomplete="tel" required>
+                </div>
+                <div>
+                    <label for="w-company" class="block text-sm font-medium mb-2">Company name *</label>
+                    <input type="text" id="w-company" name="company" class="input" autocomplete="organization" required>
+                </div>
+                <div>
+                    <label for="w-industry" class="block text-sm font-medium mb-2">Industry</label>
+                    <select id="w-industry" name="industry" class="input">
+                        <option value="">Select industry</option>
+                        <option>Automotive</option>
+                        <option>FMCG / Packaging</option>
+                        <option>Pharmaceutical</option>
+                        <option>Engineering / Fabrication</option>
+                        <option>Electronics</option>
+                        <option>Textile / Apparel</option>
+                        <option>Other Manufacturing</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="w-team" class="block text-sm font-medium mb-2">Team size</label>
+                    <select id="w-team" name="team_size" class="input">
+                        <option value="">Select team size</option>
+                        <option>10 – 25</option>
+                        <option>26 – 50</option>
+                        <option>51 – 100</option>
+                        <option>101 – 300</option>
+                        <option>300+</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="w-revenue" class="block text-sm font-medium mb-2">Current annual revenue</label>
+                    <select id="w-revenue" name="revenue" class="input">
+                        <option value="">Select revenue range</option>
+                        <option>Below ₹10 Cr</option>
+                        <option>₹10 – ₹50 Cr</option>
+                        <option>₹50 – ₹100 Cr</option>
+                        <option>₹100 – ₹200 Cr</option>
+                        <option>₹200+ Cr</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="w-growth" class="block text-sm font-medium mb-2">Growth ambition (next 3–5 years)</label>
+                    <select id="w-growth" name="growth_goal" class="input">
+                        <option value="">Select growth goal</option>
+                        <option>₹50 Cr+</option>
+                        <option>₹100 Cr+</option>
+                        <option>₹200 Cr+</option>
+                        <option>₹300 Cr+</option>
+                        <option>₹500 Cr+</option>
+                    </select>
+                </div>
+            </div>
 
-        <p class="text-xs text-text-secondary mt-4">
-            No payment · No sales pitch · Learning-focused session
-        </p>
+            <button type="submit" class="btn-hero-glow-lg w-full">Reserve my free seat</button>
+            <p class="text-xs text-text-secondary mt-4 text-center">No sales calls, no spam: a learning-focused session only.</p>
+        </form>
 
     </div>
 </section>
+
 <script>
 (function () {
 
@@ -613,136 +381,8 @@ fetch('/webinar-count.php')
 })();
 </script>
 
-<!-- REGISTRATION FORM -->
-<section id="register" class="section bg-surface">
-    <div class="container-custom max-w-5xl mx-auto">
-
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                Register Now for the <span class="text-gradient">Free Webinar</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto mt-4">
-                Help us understand your manufacturing setup so we can
-                tailor the session better for you.
-            </p>
-        </div>
-
-       
-
-            <form method="post" action="/webinar-register.php">
-                        <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
-
-                <!-- BASIC INFO -->
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-
-                    <div>
-                        <label class="block text-sm mb-2">Full Name *</label>
-                        <input type="text" name="name" class="input" required>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm mb-2">Business Email *</label>
-                        <input type="email" name="email" class="input" required>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm mb-2">Phone Number *</label>
-                        <input type="tel" name="phone" class="input" required>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm mb-2">Company Name *</label>
-                        <input type="text" name="company" class="input" required>
-                    </div>
-
-                </div>
-
-                <!-- BUSINESS PROFILE -->
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-
-                    <div>
-                        <label class="block text-sm mb-2">Industry</label>
-                        <select name="industry" class="input">
-                            <option value="">Select Industry</option>
-                            <option>Automotive</option>
-                            <option>FMCG / Packaging</option>
-                            <option>Pharmaceutical</option>
-                            <option>Engineering / Fabrication</option>
-                            <option>Electronics</option>
-                            <option>Textile / Apparel</option>
-                            <option>Other Manufacturing</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm mb-2">Team Size</label>
-                        <select name="team_size" class="input">
-                            <option value="">Select Team Size</option>
-                            <option>10 – 25</option>
-                            <option>26 – 50</option>
-                            <option>51 – 100</option>
-                            <option>101 – 300</option>
-                            <option>300+</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <!-- REVENUE & GROWTH -->
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-
-                    <div>
-                        <label class="block text-sm mb-2">
-                            Current Annual Revenue
-                        </label>
-                        <select name="revenue" class="input">
-                            <option value="">Select Revenue Range</option>
-                            <option>Below ₹10 Cr</option>
-                            <option>₹10 – ₹50 Cr</option>
-                            <option>₹50 – ₹100 Cr</option>
-                            <option>₹100 – ₹200 Cr</option>
-                            <option>₹200+ Cr</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm mb-2">
-                            Growth Ambition (Next 3–5 Years)
-                        </label>
-                        <select name="growth_goal" class="input">
-                            <option value="">Select Growth Goal</option>
-                            <option>₹50 Cr+</option>
-                            <option>₹100 Cr+</option>
-                            <option>₹200 Cr+</option>
-                            <option>₹300 Cr+</option>
-                            <option>₹500 Cr+</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <!-- CTA -->
-                <button type="submit" class="btn-primary w-full">
-                    Reserve My Free Seat
-                </button>
-
-                <p class="text-xs text-text-secondary mt-4 text-center">
-                    No sales calls · No spam · Learning-focused session only
-                </p>
-
-            </form>
-
-      
-
-    </div>
-</section>
-
 <!-- FOOTER -->
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-
-<!-- STICKY BUTTON -->
-
-
 
 </body>
 </html>

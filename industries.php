@@ -67,6 +67,44 @@
     </section>
 
 <?php require_once __DIR__ . '/includes/showcase/engine.php'; showcase('industries'); ?>
+
+<!-- All industries -->
+<section class="section bg-white" id="all-industries">
+    <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+            <span class="section-label">18 industries</span>
+            <h2 class="text-3xl md:text-4xl font-display font-semibold mb-4">Find your industry</h2>
+            <p class="text-lg text-text-secondary">Each page shows how work flows through DotOne for that industry, and which modules it runs on.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<?php foreach ([
+    ['manufacturing', 'Manufacturing', 'factory', 'BOM, job cards, quality and dispatch.'],
+    ['retail', 'Retail', 'cart', 'Store stock, billing and daily sales.'],
+    ['trading-distribution', 'Trading & Distribution', 'truck', 'Buy, stock and deliver with margins visible.'],
+    ['pharma', 'Pharma & Life Sciences', 'shield', 'Batch-wise control from material to release.'],
+    ['dairy', 'Dairy', 'box', 'Collection, processing and route delivery.'],
+    ['food-beverage', 'Food & Beverage', 'box', 'Recipes, batches and shelf life.'],
+    ['construction', 'Construction & Building', 'factory', 'Material, labour and cost per project.'],
+    ['automotive', 'Automotive & Rental', 'truck', 'Leads, bookings, service and rentals.'],
+    ['chemical', 'Chemical', 'shield', 'Formulations, batches and safe stock.'],
+    ['jewellery', 'Gems & Jewellery', 'spark', 'Item-level tracking for high-value stock.'],
+    ['electronics', 'High Tech & Electronics', 'cog', 'Multi-level BOMs and serial tracking.'],
+    ['facilities-management', 'Mall & Facilities', 'factory', 'Staff, upkeep and vendor work.'],
+    ['packaging', 'Packaging', 'box', 'Job-wise runs from order to dispatch.'],
+    ['publishing', 'Publication', 'doc', 'Print runs, stock and distribution.'],
+    ['education', 'Education', 'id', 'Staff, payroll and purchases for campuses.'],
+    ['sports-goods', 'Sports', 'trend', 'Production, stock and dealer orders.'],
+    ['oil-gas', 'Oil & Gas', 'cog', 'Spares, site issues and field teams.'],
+    ['warehousing', 'Warehouse', 'truck', 'Inward, storage and outward with live stock.'],
+] as [$slug, $name, $ico, $line]): ?>
+            <a href="/industries/<?= $slug ?>" class="card p-5 hover-lift flex gap-4 items-start">
+                <span class="w-11 h-11 flex-none rounded-xl flex items-center justify-center bg-primary-50 text-primary-600"><?= icon($ico, 'w-5 h-5') ?></span>
+                <span><b class="block font-display font-semibold text-text-primary"><?= $name ?></b><span class="text-sm text-text-secondary"><?= $line ?></span></span>
+            </a>
+<?php endforeach; ?>
+        </div>
+    </div>
+</section>
     <!-- Industry Solutions Grid -->
     <section id="industry-solutions" class="section bg-surface">
         <div class="container-custom">

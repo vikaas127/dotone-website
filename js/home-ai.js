@@ -140,7 +140,19 @@
     var text = root.querySelector('.ask-answer-text');
     var table = root.querySelector('.ask-table');
     var source = root.querySelector('.ask-source');
+    var action = root.querySelector('.ask-action');
+    var actionText = root.querySelector('.ask-action-text');
+    var stepList = document.querySelectorAll('[data-ai-step]');
+    var ACTIONS = ['Draft indents for 4 items', 'Send payment reminders to 3 customers', 'Share this report with the sales team', 'Send follow-ups to 2 vendors', 'Flag the HDPE price rise to purchase', 'Alert the production head'];
     var timers = [];
+
+    // Ask -> Understand -> Recommend -> Automate
+    function step(n) {
+      stepList.forEach(function (li, k) {
+        li.classList.toggle('is-done', k < n);
+        li.classList.toggle('is-current', k === n);
+      });
+    }
     var auto = null;
 
     function clear() { timers.forEach(clearTimeout); timers = []; }
@@ -157,29 +169,35 @@
       var q = chips[i].textContent;
       var a = ANSWERS[i];
       root.classList.remove('has-answer');
+      if (action) { action.classList.remove('is-shown', 'is-done'); actionText.textContent = ACTIONS[i] || ''; }
       text.textContent = '';
       table.innerHTML = '';
       source.textContent = '';
       if (reducedMotion) {
         input.textContent = q; text.textContent = a[0]; renderTable(a[1]); source.textContent = a[2];
         root.classList.add('has-answer');
+        if (action) action.classList.add('is-shown');
+        step(4);
         return;
       }
       input.textContent = '';
+      step(0);
       var t = 0;
       for (var n = 1; n <= q.length; n++) {
         (function (n) { timers.push(setTimeout(function () { input.textContent = q.slice(0, n); }, t += 22)); })(n);
       }
       t += 350;
-      timers.push(setTimeout(function () { root.classList.add('is-thinking'); }, t));
+      timers.push(setTimeout(function () { root.classList.add('is-thinking'); step(1); }, t));
       t += 700;
-      timers.push(setTimeout(function () { root.classList.remove('is-thinking'); root.classList.add('has-answer'); }, t));
+      timers.push(setTimeout(function () { root.classList.remove('is-thinking'); root.classList.add('has-answer'); step(2); }, t));
       var words = a[0].split(' ');
       words.forEach(function (w, k) {
         timers.push(setTimeout(function () { text.textContent = words.slice(0, k + 1).join(' '); }, t + k * 45));
       });
       t += words.length * 45 + 200;
       timers.push(setTimeout(function () { renderTable(a[1]); source.textContent = a[2]; }, t));
+      timers.push(setTimeout(function () { step(3); if (action) action.classList.add('is-shown'); }, t + 900));
+      timers.push(setTimeout(function () { if (action) action.classList.add('is-done'); step(4); }, t + 2600));
     }
 
     chips.forEach(function (c, i) {
@@ -343,4 +361,87 @@
     visible = true;
     schedule();
   }
+})();
+
+// Solution tabs: nine areas drive the app mock; auto-advance until the visitor picks one
+(function () {
+  var root = document.querySelector('[data-sol]');
+  if (!root) return;
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-sol-tab]'));
+  var texts = root.querySelectorAll('[data-sol-text]');
+  var screens = root.querySelectorAll('[data-screen]');
+  var rail = root.querySelectorAll('[data-rail]');
+  var chips = root.querySelectorAll('.show-chip');
+  var CHIP = { sales: [1], crm: [0], purchase: [2], inventory: [3], finance: [6], hr: [5], operations: [0, 1, 2, 3, 4, 5, 6], projects: [2, 6], manufacturing: [4, 3] };
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DUR = 6000, auto = !reduced, visible = false, seen = false, timer = null;
+  var current = tabs[0].getAttribute('data-sol-tab');
+
+  function show(key, scrollTab) {
+    current = key;
+    tabs.forEach(function (t) {
+      var on = t.getAttribute('data-sol-tab') === key;
+      t.classList.toggle('is-active', on);
+      t.classList.remove('is-timing');
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on && scrollTab && t.parentNode.scrollWidth > t.parentNode.clientWidth) {
+        t.parentNode.scrollTo({ left: t.offsetLeft - 16, behavior: 'smooth' });
+      }
+    });
+    texts.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-sol-text') === key); });
+    screens.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-screen') === key); });
+    rail.forEach(function (x) { x.classList.toggle('is-active', x.getAttribute('data-rail') === key); });
+    chips.forEach(function (c, i) { c.classList.toggle('is-lit', (CHIP[key] || []).indexOf(i) > -1); });
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (!auto || !visible) return;
+    var t = root.querySelector('[data-sol-tab="' + current + '"]');
+    void t.offsetWidth;
+    t.style.setProperty('--dur', DUR + 'ms');
+    t.classList.add('is-timing');
+    timer = setTimeout(function () { show(tabs[(tabs.indexOf(t) + 1) % tabs.length].getAttribute('data-sol-tab'), true); }, DUR);
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { auto = false; show(t.getAttribute('data-sol-tab'), true); });
+  });
+  screens.forEach(function (x) { x.classList.remove('is-active'); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      var was = visible;
+      visible = entries[0].isIntersecting;
+      if (visible && !was) { if (!seen) { seen = true; show(current, false); } else schedule(); }
+      if (!visible) clearTimeout(timer);
+    }, { threshold: 0.3 }).observe(root);
+  } else { visible = true; show(current, false); }
+})();
+
+// Implementation timeline fills in as it scrolls into view
+(function () {
+  var el = document.querySelector('[data-impl]');
+  if (!el) return;
+  if (!('IntersectionObserver' in window)) { el.classList.add('is-in'); return; }
+  var io = new IntersectionObserver(function (entries) {
+    if (entries[0].isIntersecting) { el.classList.add('is-in'); io.disconnect(); }
+  }, { threshold: 0.35 });
+  io.observe(el);
+})();
+
+// Product screenshots: tabs switch the screen, auto-cycle until clicked
+(function () {
+  var root = document.querySelector('[data-shots]');
+  if (!root) return;
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[data-shot-tab]'));
+  var imgs = root.querySelectorAll('[data-shot]');
+  var i = 0, auto = !window.matchMedia('(prefers-reduced-motion: reduce)').matches, timer;
+  function show(n) {
+    i = n;
+    tabs.forEach(function (t, k) { t.classList.toggle('is-active', k === n); t.setAttribute('aria-selected', k === n ? 'true' : 'false'); });
+    imgs.forEach(function (im, k) { im.classList.toggle('is-active', k === n); });
+    clearTimeout(timer);
+    if (auto && tabs.length > 1) timer = setTimeout(function () { show((i + 1) % tabs.length); }, 5000);
+  }
+  tabs.forEach(function (t, k) { t.addEventListener('click', function () { auto = false; show(k); }); });
+  show(0);
 })();

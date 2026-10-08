@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
-    <title>DotOne Support | DotOne</title>
+    <meta name="description" content="Get help with DotOne: support plans, help articles, onboarding and training, and how to reach the DotOne support team whenever you need it.">
+    <title>Support and Help Centre | DotOne</title>
     <link rel="canonical" href="https://dotone.biz/support">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="DotOne Support | DotOne">
-    <meta property="og:description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
+    <meta property="og:title" content="Support and Help Centre | DotOne">
+    <meta property="og:description" content="Get help with DotOne: support plans, help articles, onboarding and training, and how to reach the DotOne support team whenever you need it.">
     <meta property="og:url" content="https://dotone.biz/support">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -18,8 +18,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne Support | DotOne">
-    <meta name="twitter:description" content="Get help with DotOne: support plans, help articles, onboarding and how to reach the support team.">
+    <meta name="twitter:title" content="Support and Help Centre | DotOne">
+    <meta name="twitter:description" content="Get help with DotOne: support plans, help articles, onboarding and training, and how to reach the DotOne support team whenever you need it.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

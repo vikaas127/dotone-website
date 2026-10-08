@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>AI Visual Quality Inspection Software | DotOne</title>
+    <meta name="description" content="Cameras on the line detect defects, Vision AI makes the quality call and every result is logged in DotOne quality records with rework routing.">
 
     <meta name="description"
           content="AI-based quality inspection software for manufacturing. Detect defects in real time using Vision AI, reduce rejection, and eliminate manual inspection with Dotone.">
@@ -17,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="AI Visual Quality Inspection Software | DotOne">
-    <meta property="og:description" content="Cameras on the line detect defects, Vision AI makes the quality call and the result is logged in DotOne with rework routing.">
+    <meta property="og:description" content="Cameras on the line detect defects, Vision AI makes the quality call and every result is logged in DotOne quality records with rework routing.">
     <meta property="og:url" content="https://dotone.biz/vision-ai/quality-inspection">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -26,7 +27,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Visual Quality Inspection Software | DotOne">
-    <meta name="twitter:description" content="Cameras on the line detect defects, Vision AI makes the quality call and the result is logged in DotOne with rework routing.">
+    <meta name="twitter:description" content="Cameras on the line detect defects, Vision AI makes the quality call and every result is logged in DotOne quality records with rework routing.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

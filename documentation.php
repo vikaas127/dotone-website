@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DotOne Documentation | DotOne</title>
-    <meta name="description" content="Product documentation for DotOne modules, setup, configuration and administration.">
+    <title>Documentation and Setup Guides | DotOne</title>
+    <meta name="description" content="Product documentation for DotOne: module guides, setup, configuration and administration, so your team can run every part of the platform.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,8 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="DotOne Documentation | DotOne">
-    <meta property="og:description" content="Product documentation for DotOne modules, setup, configuration and administration.">
+    <meta property="og:title" content="Documentation and Setup Guides | DotOne">
+    <meta property="og:description" content="Product documentation for DotOne: module guides, setup, configuration and administration, so your team can run every part of the platform.">
     <meta property="og:url" content="https://dotone.biz/documentation">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -24,8 +24,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne Documentation | DotOne">
-    <meta name="twitter:description" content="Product documentation for DotOne modules, setup, configuration and administration.">
+    <meta name="twitter:title" content="Documentation and Setup Guides | DotOne">
+    <meta name="twitter:description" content="Product documentation for DotOne: module guides, setup, configuration and administration, so your team can run every part of the platform.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 

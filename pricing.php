@@ -48,6 +48,17 @@ function plan_group($keys, array $limits)
 
 render_head($page);
 ?>
+<?php
+// Software and price data for search engines, from the same plan data as the cards
+$offers = [];
+foreach ($plans as $p) {
+    if ($p['price'] === null) continue;
+    $offers[] = ['@type' => 'Offer', 'name' => $p['name'], 'price' => (string) $p['price'], 'priceCurrency' => 'INR', 'url' => 'https://dotone.biz/pricing',
+        'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => (string) $p['price'], 'priceCurrency' => 'INR', 'unitText' => 'MONTH']];
+}
+echo '<script type="application/ld+json">' . json_encode(['@context' => 'https://schema.org', '@type' => 'SoftwareApplication', 'name' => 'DotOne', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web, Android', 'url' => 'https://dotone.biz/', 'publisher' => ['@type' => 'Organization', 'name' => 'TechDotBit Pvt Ltd'], 'offers' => $offers], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
+?>
+
 
 <section class="relative pt-32 pb-12 md:pt-40 md:pb-14 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>

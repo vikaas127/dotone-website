@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DotOne Webinar: Automate Your Factory with ERP</title>
+    <meta name="description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
@@ -13,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="DotOne Webinar: Automate Your Factory with ERP">
-    <meta property="og:description" content="Join a live session on running production, inventory and dispatch on DotOne ERP.">
+    <meta property="og:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta property="og:url" content="https://dotone.biz/webinar">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -22,7 +23,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DotOne Webinar: Automate Your Factory with ERP">
-    <meta name="twitter:description" content="Join a live session on running production, inventory and dispatch on DotOne ERP.">
+    <meta name="twitter:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

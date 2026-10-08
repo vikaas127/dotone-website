@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HRMS Software | DotOne</title>
+    <title>HRMS Software for Indian Businesses | DotOne</title>
+    <meta name="description" content="Attendance, shifts, leave, onboarding and employee records in one HRMS built for Indian businesses, with biometric attendance and a mobile app for staff.">
 
     <meta name="description"
           content="India's simplest HR software (HRMS) to manage payroll, attendance, leave, compliance, and employees. Easy to use, cloud-based, and built for Indian businesses.">
@@ -16,8 +17,8 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="HRMS Software | DotOne">
-    <meta property="og:description" content="Attendance, shifts, leave, onboarding and employee records in one HRMS built for Indian businesses, with a mobile app for staff.">
+    <meta property="og:title" content="HRMS Software for Indian Businesses | DotOne">
+    <meta property="og:description" content="Attendance, shifts, leave, onboarding and employee records in one HRMS built for Indian businesses, with biometric attendance and a mobile app for staff.">
     <meta property="og:url" content="https://dotone.biz/hrms">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -25,8 +26,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HRMS Software | DotOne">
-    <meta name="twitter:description" content="Attendance, shifts, leave, onboarding and employee records in one HRMS built for Indian businesses, with a mobile app for staff.">
+    <meta name="twitter:title" content="HRMS Software for Indian Businesses | DotOne">
+    <meta name="twitter:description" content="Attendance, shifts, leave, onboarding and employee records in one HRMS built for Indian businesses, with biometric attendance and a mobile app for staff.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

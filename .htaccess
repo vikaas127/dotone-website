@@ -37,7 +37,8 @@ ServerSignature Off
 # 2. ALLOW SYSTEM FILES (NO REWRITE)
 # ------------------------------------------------
 DirectoryIndex index.php
-RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+RewriteRule ^(sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
 
 # Header/footer partials are only included by PHP, never served directly
 RewriteRule ^includes/ - [F,L]

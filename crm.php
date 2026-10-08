@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CRM Software for Sales Teams | DotOne</title>
+    <meta name="description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing in one place.">
 
   <meta name="description"
         content="Dotone CRM & Sales Automation helps manufacturing companies manage leads, track sales pipelines, automate follow-ups, and integrate ERP & AI insights for higher conversions.">
@@ -18,7 +19,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="CRM Software for Sales Teams | DotOne">
-    <meta property="og:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing.">
+    <meta property="og:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing in one place.">
     <meta property="og:url" content="https://dotone.biz/crm">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -27,7 +28,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CRM Software for Sales Teams | DotOne">
-    <meta name="twitter:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing.">
+    <meta name="twitter:description" content="Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing in one place.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 

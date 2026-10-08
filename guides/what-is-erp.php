@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>What Is ERP? A Plain-English Guide | DotOne</title>
+    <meta name="description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
 
     <meta name="description"
           content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
@@ -17,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="What Is ERP? A Plain-English Guide | DotOne">
-    <meta property="og:description" content="What Is ERP? A Plain-English Guide: practical, India-specific guidance from the DotOne team, with examples and checklists.">
+    <meta property="og:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
     <meta property="og:url" content="https://dotone.biz/guides/what-is-erp">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -26,7 +27,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="What Is ERP? A Plain-English Guide | DotOne">
-    <meta name="twitter:description" content="What Is ERP? A Plain-English Guide: practical, India-specific guidance from the DotOne team, with examples and checklists.">
+    <meta name="twitter:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -74,6 +74,7 @@ function render_foot(array $page = [])
 function render_breadcrumb_schema(array $page)
 {
     if (empty($page['breadcrumbs'])) return;
+    $GLOBALS['dotone_breadcrumbs_done'] = true;
     $items = [['Home', '/']];
     foreach ($page['breadcrumbs'] as $crumb) $items[] = $crumb;
     $list = [];

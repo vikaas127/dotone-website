@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>DotOne Partner Program | DotOne</title>
-    <meta name="description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
+    <meta name="description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses moving their operations onto one connected platform.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
     <meta property="og:title" content="DotOne Partner Program | DotOne">
-    <meta property="og:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
+    <meta property="og:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses moving their operations onto one connected platform.">
     <meta property="og:url" content="https://dotone.biz/partners">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DotOne Partner Program | DotOne">
-    <meta name="twitter:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses going digital.">
+    <meta name="twitter:description" content="Become a DotOne implementation, reseller or technology partner and grow with Indian businesses moving their operations onto one connected platform.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 

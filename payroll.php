@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Payroll Software | DotOne</title>
+    <title>Payroll Software with PF, ESI and TDS | DotOne</title>
+    <meta name="description" content="Run payroll with PF, ESI, PT and TDS worked out, generate payslips in one run and sync salaries with attendance and accounts. Built for Indian businesses.">
 
     <meta name="description"
           content="Payroll software for Indian businesses. Automate salary processing, PF, ESIC, TDS compliance, payslips, and payroll reports with Dotone.">
@@ -16,8 +17,8 @@
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Payroll Software | DotOne">
-    <meta property="og:description" content="Run payroll with PF, ESI, PT and TDS compliance, generate payslips and sync salaries with attendance and accounts.">
+    <meta property="og:title" content="Payroll Software with PF, ESI and TDS | DotOne">
+    <meta property="og:description" content="Run payroll with PF, ESI, PT and TDS worked out, generate payslips in one run and sync salaries with attendance and accounts. Built for Indian businesses.">
     <meta property="og:url" content="https://dotone.biz/payroll">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -25,8 +26,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Payroll Software | DotOne">
-    <meta name="twitter:description" content="Run payroll with PF, ESI, PT and TDS compliance, generate payslips and sync salaries with attendance and accounts.">
+    <meta name="twitter:title" content="Payroll Software with PF, ESI and TDS | DotOne">
+    <meta name="twitter:description" content="Run payroll with PF, ESI, PT and TDS worked out, generate payslips in one run and sync salaries with attendance and accounts. Built for Indian businesses.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

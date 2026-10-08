@@ -1,4 +1,31 @@
 <?php require_once __DIR__ . '/data/catalog.php'; ?>
+<?php
+// Structured data for search engines on every page: organisation, website and a breadcrumb trail from the URL.
+(function () {
+    $path = '/' . trim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
+    $base = 'https://dotone.biz';
+    $graph = [];
+    if ($path !== '/') {
+        $graph[] = ['@type' => 'Organization', '@id' => $base . '/#organization', 'name' => 'DotOne', 'url' => $base . '/', 'logo' => $base . '/assets/dotone-logo-blue.png',
+            'parentOrganization' => ['@type' => 'Organization', 'name' => 'TechDotBit Pvt Ltd', 'url' => 'https://techdotbit.com'],
+            'sameAs' => ['https://www.linkedin.com/products/techdotbit-dotone-business-suite/']];
+        $graph[] = ['@type' => 'WebSite', '@id' => $base . '/#website', 'url' => $base . '/', 'name' => 'DotOne', 'publisher' => ['@id' => $base . '/#organization'], 'inLanguage' => 'en-IN'];
+        if (empty($GLOBALS['dotone_breadcrumbs_done'])) {
+            $special = ['ai' => 'AI', 'crm' => 'CRM', 'hrms' => 'HRMS', 'erp' => 'ERP', 'api' => 'API', 'hr' => 'HR', 'oil-gas' => 'Oil and Gas', 'what-is-erp' => 'What Is ERP', 'bom-setup' => 'BOM Setup', 'vision-ai' => 'Vision AI', 'ai-agents' => 'AI Agents', 'ai-powered-erp' => 'AI-Powered ERP', 'manufacturing-erp' => 'Manufacturing ERP', 'erp-software' => 'ERP Software', 'generative-ai' => 'Generative AI', 'ai-automation' => 'AI Automation', 'mobile-erp' => 'Mobile ERP'];
+            $items = [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => $base . '/']];
+            $acc = '';
+            foreach (array_values(array_filter(explode('/', $path))) as $i => $seg) {
+                $acc .= '/' . $seg;
+                $name = $special[$seg] ?? ucwords(str_replace('-', ' ', $seg));
+                $items[] = ['@type' => 'ListItem', 'position' => $i + 2, 'name' => $name, 'item' => $base . $acc];
+            }
+            $graph[] = ['@type' => 'BreadcrumbList', 'itemListElement' => $items];
+        }
+    }
+    if ($graph) echo '<script type="application/ld+json">' . json_encode(['@context' => 'https://schema.org', '@graph' => $graph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
+})();
+?>
+
 <header class="site-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-scrolled" id="siteHeader">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="nav-bar-row relative flex items-center justify-between h-16 w-full min-w-0">

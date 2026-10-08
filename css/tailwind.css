@@ -10186,3 +10186,4 @@ a.card:hover,
 @media (prefers-reduced-motion: reduce) {
   .hero-light-title .text-gradient-shimmer { animation: none; background-position: 50% 50%; background-image: none; color: #0096EE; -webkit-text-fill-color: #0096EE; }
 }
+.hp-field { position: absolute !important; left: -10000px !important; width: 1px; height: 1px; overflow: hidden; }

@@ -156,6 +156,7 @@
 
                     <!-- Contact Form -->
                     <form id="contactForm" class="space-y-8">
+                        <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
                         <!-- Step 1: Contact Information -->
                         <div id="step1" class="space-y-6">
                             <div class="text-center mb-8">
@@ -742,7 +743,7 @@
             submitBtn.innerHTML = 'Submitting...';
 
             const formData = new FormData(this);
-            fetch('contact-submit.php', {
+            fetch('/contact-submit.php', {
                 method: 'POST',
                 body: formData
             })

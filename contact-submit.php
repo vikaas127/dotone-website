@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once __DIR__ . '/includes/form-guard.php';
 
 header('Content-Type: application/json');
 
@@ -8,6 +8,20 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'error' => 'Method not allowed']);
     exit;
 }
+
+// Bots fill the hidden field: pretend it worked and store nothing
+if (form_is_bot()) {
+    echo json_encode(['success' => true]);
+    exit;
+}
+
+if (form_rate_limited('contact', 5, 600)) {
+    http_response_code(429);
+    echo json_encode(['success' => false, 'error' => 'Too many requests. Please try again in a few minutes or email sales@techdotbit.com.']);
+    exit;
+}
+
+require_once __DIR__ . '/db.php';
 
 $conn->query("
 CREATE TABLE IF NOT EXISTS contact_submissions (
@@ -33,28 +47,28 @@ CREATE TABLE IF NOT EXISTS contact_submissions (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 ");
 
-$firstName = trim($_POST['firstName'] ?? '');
-$lastName = trim($_POST['lastName'] ?? '');
-$email = trim($_POST['email'] ?? '');
-$phone = trim($_POST['phone'] ?? '');
-$jobTitle = trim($_POST['jobTitle'] ?? '');
-$inquiryType = trim($_POST['inquiryType'] ?? '');
-$companyName = trim($_POST['companyName'] ?? '');
-$industry = trim($_POST['industry'] ?? '');
-$companySize = trim($_POST['companySize'] ?? '');
-$numberOfPlants = ($_POST['numberOfPlants'] ?? '') !== '' ? (int) $_POST['numberOfPlants'] : 0;
-$numberOfWorkers = ($_POST['numberOfWorkers'] ?? '') !== '' ? (int) $_POST['numberOfWorkers'] : 0;
-$currentSystems = trim($_POST['currentSystems'] ?? '');
-$implementationTimeline = trim($_POST['implementationTimeline'] ?? '');
-$budget = trim($_POST['budget'] ?? '');
-$message = trim($_POST['message'] ?? '');
+$firstName = form_field('firstName', 100);
+$lastName = form_field('lastName', 100);
+$email = form_field('email', 255);
+$phone = form_field('phone', 50);
+$jobTitle = form_field('jobTitle', 100);
+$inquiryType = form_field('inquiryType', 100);
+$companyName = form_field('companyName', 255);
+$industry = form_field('industry', 100);
+$companySize = form_field('companySize', 50);
+$numberOfPlants = max(0, min(10000, (int) form_field('numberOfPlants', 10)));
+$numberOfWorkers = max(0, min(10000000, (int) form_field('numberOfWorkers', 10)));
+$currentSystems = form_field('currentSystems', 2000);
+$implementationTimeline = form_field('implementationTimeline', 100);
+$budget = form_field('budget', 100);
+$message = form_field('message', 5000);
 $newsletter = isset($_POST['newsletter']) ? 1 : 0;
 
 $solutions = $_POST['solutions'] ?? [];
 if (!is_array($solutions)) {
     $solutions = [$solutions];
 }
-$solutionsStr = implode(', ', array_filter(array_map('trim', $solutions)));
+$solutionsStr = mb_substr(implode(', ', array_filter(array_map(function ($v) { return is_string($v) ? trim($v) : ''; }, $solutions))), 0, 1000);
 
 if (!$firstName || !$lastName || !$email || !$phone || !$jobTitle || !$inquiryType || !$companyName || !$industry || !$companySize || !$implementationTimeline) {
     http_response_code(400);

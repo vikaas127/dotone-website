@@ -10,11 +10,28 @@ Options -Indexes
 DirectorySlash Off
 
 # ------------------------------------------------
-# 1. BLOCK .env FILE (SECURITY – MUST BE FIRST)
+# 1. SECURITY: never serve source, config or build files
 # ------------------------------------------------
-<Files ".env">
+# Git history, dotfiles (.env, .gitignore, .htaccess), build tooling and docs
+RedirectMatch 404 /\.(?!well-known)
+RedirectMatch 404 ^/(node_modules|implementation/data)(/|$)
+RedirectMatch 404 ^/(package(-lock)?\.json|tailwind\.config\.js|postcss\.config\.js|README\.md|composer\.(json|lock)|config\.php|db\.php)$
+RedirectMatch 404 ^/css/tailwind\.css$
+<FilesMatch "\.(md|log|sql|bak|zip|sh|lock)$">
     Require all denied
-</Files>
+</FilesMatch>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on' || %{HTTP:X-Forwarded-Proto} == 'https'"
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+</IfModule>
+ServerSignature Off
 
 # ------------------------------------------------
 # 2. ALLOW SYSTEM FILES (NO REWRITE)
@@ -24,6 +41,9 @@ RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0a
 
 # Header/footer partials are only included by PHP, never served directly
 RewriteRule ^includes/ - [F,L]
+
+# Server config files are never pages (also blocks the clean-URL form /db and /config)
+RewriteRule ^(db|config)(\.php)?$ - [R=404,L]
 
 # ------------------------------------------------
 # 3. MOVED PAGES (new site structure) -> NEW URL (301)

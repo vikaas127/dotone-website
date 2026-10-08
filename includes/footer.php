@@ -79,5 +79,5 @@
     </div>
 </footer>
 
-<script src="/js/scroll-animate.js?v=20261014" defer></script>
-<script src="/js/site-motion.js?v=20261014" defer></script>
+<script src="/js/scroll-animate.js?v=20261015" defer></script>
+<script src="/js/site-motion.js?v=20261015" defer></script>

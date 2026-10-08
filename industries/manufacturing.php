@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="/css/main.css?v=20261014">
-    <script src="/js/header-nav.js?v=20261014" defer></script>
+  <link rel="stylesheet" href="/css/main.css?v=20261015">
+    <script src="/js/header-nav.js?v=20261015" defer></script>
     <link rel="canonical" href="https://dotone.biz/industries/manufacturing">
     <link rel="icon" href="/public/favicon.ico">
     <meta property="og:type" content="website">

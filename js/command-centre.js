@@ -12,6 +12,9 @@
     ['hrms', '3 operators absent in shift B', 'HRMS · shift plan adjusted', 'Updated'],
     ['finance', '₹6.2 lakh overdue past 60 days', 'Finance · reminders queued', 'Queued'],
     ['inventory', '4 items below reorder level', 'Inventory · indents drafted', 'For approval'],
+    ['crm', '12 leads with no follow-up in 7 days', 'CRM · reminders assigned', 'Assigned'],
+    ['quality', 'Batch B-2291 failed thickness test', 'Quality · held for review', 'Review'],
+    ['reports', 'Weekly MIS ready', 'Reports · shared with managers', 'Sent'],
   ];
 
   function initCommandCentre() {

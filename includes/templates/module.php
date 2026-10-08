@@ -9,7 +9,8 @@ $agent = $page['agent'] ?? null;
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10">
         <?php render_breadcrumbs($page); ?>
-        <div class="max-w-3xl">
+        <div class="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-12 items-center">
+        <div>
             <span class="section-label"><?= e($page['eyebrow']) ?></span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6"><?= e($page['h1']) ?></h1>
             <p class="text-lg md:text-xl text-text-secondary leading-relaxed mb-8"><?= e($page['intro']) ?></p>
@@ -22,6 +23,30 @@ $agent = $page['agent'] ?? null;
                 <li class="flex items-center gap-2"><span class="text-primary-600"><?= icon('check', 'w-4 h-4') ?></span><?= e($h) ?></li>
 <?php endforeach; ?>
             </ul>
+        </div>
+
+        <div class="module-graphic" data-tilt aria-hidden="true">
+            <div class="module-graphic-window">
+                <div class="module-graphic-bar">
+                    <span class="hero-agent-window-dots"><i></i><i></i><i></i></span>
+                    <span class="hero-agent-window-title">DotOne &middot; <?= e(MODULES[ltrim($page['path'], '/')]['name'] ?? $page['h1']) ?></span>
+                    <span class="hero-agent-live"><i></i>Live</span>
+                </div>
+                <div class="mg-bars">
+<?php foreach (array_slice($page['reports'], 0, 3) as $i => $r): ?>
+                    <div class="mg-bar"><span><?= e($r) ?></span><div class="mg-bar-track"><i style="--w: <?= [86, 64, 42][$i] ?>%"></i></div></div>
+<?php endforeach; ?>
+                </div>
+                <ul class="mg-rows">
+<?php foreach (array_slice($page['capabilities'], 0, 4) as $cap): ?>
+                    <li><?= e($cap[1]) ?></li>
+<?php endforeach; ?>
+                </ul>
+            </div>
+<?php foreach (array_slice($page['connected'], 0, 4) as $i => $slug): $cm = MODULES[$slug]; ?>
+            <span class="mg-chip mg-chip--<?= $i + 1 ?>"><?= icon($cm['icon'], '') ?><?= e($cm['name']) ?></span>
+<?php endforeach; ?>
+        </div>
         </div>
     </div>
 </section>

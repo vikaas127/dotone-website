@@ -25,8 +25,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261012">
-    <script src="/js/header-nav.js?v=20261012" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261013">
+    <script src="/js/header-nav.js?v=20261013" defer></script>
 </head>
 
 <body class="bg-background">
@@ -399,7 +399,6 @@
 
 <div id="footer"><?php include __DIR__ . '/../includes/footer.php'; ?></div>
 
-<script src="/js/scroll-animate.js?v=20261012" defer></script>
-<script src="/js/tally-guide.js?v=20261012" defer></script>
+<script src="/js/tally-guide.js?v=20261013" defer></script>
 </body>
 </html>

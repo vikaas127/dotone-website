@@ -19,15 +19,15 @@ $m = MODULES[$a['module']];
                 <a href="/<?= e($a['module']) ?>" class="btn-ghost-lg"><?= e($m['name']) ?> module</a>
             </div>
         </div>
-        <div class="hero-visual-frame">
-            <div class="hero-agent-card">
+        <div class="hero-visual-frame" data-tilt>
+            <div class="hero-agent-card" data-animate-steps>
                 <div class="hero-agent-prompt"><span class="hero-agent-you">You</span><span><?= e($page['demo']['question']) ?></span></div>
                 <ul class="hero-agent-steps">
 <?php foreach ($page['demo']['steps'] as $s): ?>
-                    <li class="hero-agent-step is-done"><span class="hero-agent-check"></span><?= e($s) ?></li>
+                    <li class="hero-agent-step"><span class="hero-agent-check"></span><?= e($s) ?></li>
 <?php endforeach; ?>
                 </ul>
-                <div class="hero-agent-done is-visible"><strong>Result</strong> &middot; <?= e($page['demo']['result']) ?></div>
+                <div class="hero-agent-done"><strong>Result</strong> &middot; <?= e($page['demo']['result']) ?></div>
             </div>
         </div>
     </div>

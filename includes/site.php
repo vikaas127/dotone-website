@@ -3,7 +3,7 @@
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
 const SITE_URL = 'https://dotone.biz';
-const ASSET_VERSION = '20261012';
+const ASSET_VERSION = '20261013';
 
 require_once __DIR__ . '/data/catalog.php';
 
@@ -65,7 +65,6 @@ function render_foot(array $page = [])
     ?>
 
 <div id="footer"><?php include __DIR__ . '/footer.php'; ?></div>
-<script src="/js/scroll-animate.js?v=<?= $v ?>" defer></script>
 </body>
 </html>
 <?php

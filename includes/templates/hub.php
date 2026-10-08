@@ -7,6 +7,11 @@ render_head($page);
 
 <section class="relative pt-32 pb-16 md:pt-40 md:pb-20 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
+    <div class="hub-icons" aria-hidden="true">
+<?php foreach ([['box', '7%', '20%', '0s'], ['chart', '12%', '70%', '-2s'], ['users', '3%', '46%', '-4s'], ['cart', '88%', '18%', '-1s'], ['factory', '93%', '50%', '-3s'], ['spark', '85%', '76%', '-5s']] as [$ico, $x, $y, $d]): ?>
+        <span style="left: <?= $x ?>; top: <?= $y ?>; animation-delay: <?= $d ?>"><?= icon($ico, '') ?></span>
+<?php endforeach; ?>
+    </div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
         <span class="section-label"><?= e($page['eyebrow']) ?></span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6"><?= e($page['h1']) ?></h1>

@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261012">
+    <link rel="stylesheet" href="/css/main.css?v=20261013">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="hero-network hero-anim" style="--d: 300ms" aria-hidden="true">
+                <div class="hero-network hero-anim" style="--d: 300ms" aria-hidden="true" data-tilt>
                     <div class="hero-network-glow"></div>
                     <svg class="hero-network-lines" viewBox="0 0 600 560" preserveAspectRatio="none">
                         <defs>
@@ -117,7 +117,7 @@
                     <div class="hero-stat-label">typical time to go live</div>
                 </div>
                 <div class="hero-stat hero-anim" style="--d: 600ms">
-                    <div class="hero-stat-value">11 modules</div>
+                    <div class="hero-stat-value"><span data-count="11">11</span> modules</div>
                     <div class="hero-stat-label">from inventory to payroll, on one database</div>
                 </div>
                 <div class="hero-stat hero-anim" style="--d: 700ms">
@@ -1333,18 +1333,17 @@
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261012" defer></script>
-<script src="/js/scroll-animate.js?v=20261012" defer></script>
-<script src="/js/metrics-animate.js?v=20261012" defer></script>
-<script src="/js/scroll-sequence.js?v=20261012" defer></script>
-<script src="/js/customer-stories.js?v=20261012" defer></script>
-<script src="/js/methodology-steps.js?v=20261012" defer></script>
-<script src="/js/workspace-cards.js?v=20261012" defer></script>
-<script src="/js/industries-scroll.js?v=20261012" defer></script>
-<script src="/js/hero-agent.js?v=20261012" defer></script>
-<script src="/js/roi-calculator.js?v=20261012" defer></script>
-<script src="/js/index-visuals.js?v=20261012" defer></script>
-<script src="/js/platform-tabs.js?v=20261012" defer></script>
+<script src="/js/header-nav.js?v=20261013" defer></script>
+<script src="/js/metrics-animate.js?v=20261013" defer></script>
+<script src="/js/scroll-sequence.js?v=20261013" defer></script>
+<script src="/js/customer-stories.js?v=20261013" defer></script>
+<script src="/js/methodology-steps.js?v=20261013" defer></script>
+<script src="/js/workspace-cards.js?v=20261013" defer></script>
+<script src="/js/industries-scroll.js?v=20261013" defer></script>
+<script src="/js/hero-agent.js?v=20261013" defer></script>
+<script src="/js/roi-calculator.js?v=20261013" defer></script>
+<script src="/js/index-visuals.js?v=20261013" defer></script>
+<script src="/js/platform-tabs.js?v=20261013" defer></script>
     <!-- Footer -->
   
 

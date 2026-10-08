@@ -251,7 +251,7 @@
                         </div>
                         <div class="flex-1">
                             <h3 class="text-xl font-display font-semibold mb-2">Real-Time Worker Identification</h3>
-                            <p class="text-text-secondary">Automatically detect and track individual workers across multiple camera feeds with 99.2% accuracy using advanced facial recognition and movement pattern analysis.</p>
+                            <p class="text-text-secondary">Automatically detect and track individual workers across multiple camera feeds using movement and position analysis on your existing camera feeds.</p>
                         </div>
                     </div>
 
@@ -323,8 +323,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <div class="text-2xl font-bold text-gradient">35%</div>
-                                <div class="text-sm text-text-secondary">Avg Efficiency Gain</div>
+                                <div class="text-2xl font-bold text-gradient">Live</div>
+                                <div class="text-sm text-text-secondary">Works with your existing CCTV</div>
                             </div>
                         </div>
                     </div>
@@ -473,19 +473,19 @@
                                 <svg class="w-4 h-4 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>99.2% worker identification</span>
+                                <span>Worker presence and zone tracking</span>
                             </li>
                             <li class="flex items-start space-x-2">
                                 <svg class="w-4 h-4 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>97.8% PPE detection accuracy</span>
+                                <span>PPE detection</span>
                             </li>
                             <li class="flex items-start space-x-2">
                                 <svg class="w-4 h-4 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>95.4% behavior classification</span>
+                                <span>Activity and idle-time detection</span>
                             </li>
                         </ul>
                     </div>

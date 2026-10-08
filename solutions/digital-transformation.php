@@ -306,12 +306,12 @@ function calculateIndustryROI() {
 
         <div class="grid md:grid-cols-3 gap-8">
             <div class="card p-6 text-center hover-lift">
-                <h3 class="text-2xl font-bold text-gradient mb-2">↑ 30%</h3>
-                <p class="text-text-secondary">Productivity Improvement</p>
+                <h3 class="text-2xl font-bold text-gradient mb-2">More output</h3>
+                <p class="text-text-secondary">See where output is lost, shift by shift, and act on it.</p>
             </div>
             <div class="card p-6 text-center hover-lift">
-                <h3 class="text-2xl font-bold text-gradient mb-2">↓ 25%</h3>
-                <p class="text-text-secondary">Operational Loss Reduction</p>
+                <h3 class="text-2xl font-bold text-gradient mb-2">Fewer losses</h3>
+                <p class="text-text-secondary">Downtime, scrap and rework tracked as they happen.</p>
             </div>
             <div class="card p-6 text-center hover-lift">
                 <h3 class="text-2xl font-bold text-gradient mb-2">Real-Time</h3>

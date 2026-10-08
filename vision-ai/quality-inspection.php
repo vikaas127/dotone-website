@@ -516,7 +516,7 @@ function calculateROI() {
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-6 mt-10 text-text-secondary text-sm">
-                    <span>✔ 99% Inspection Accuracy</span>
+                    <span>✔ Every piece inspected</span>
                     <span>✔ Zero Fatigue Errors</span>
                     <span>✔ Real-Time Defect Detection</span>
                 </div>

@@ -121,8 +121,8 @@
             Join Free Webinar
         </a>
 
-        <p class="text-sm text-text-secondary mt-4">
-            ⭐ Already <strong>100+ manufacturers</strong> have registered
+        <p class="text-sm text-text-secondary mt-4" data-reg-line hidden>
+            ⭐ Already <strong><span class="regCount">0</span> manufacturers</strong> have registered
         </p>
 
     </div>
@@ -474,8 +474,8 @@
         </div>
 
         <!-- Social Proof -->
-        <p class="text-sm text-text-secondary mb-8">
-            ⭐ Already <strong><span id="regCount">100</span>+ manufacturers</strong> have registered
+        <p class="text-sm text-text-secondary mb-8" data-reg-line hidden>
+            ⭐ Already <strong><span id="regCount" class="regCount">0</span> manufacturers</strong> have registered
         </p>
 
         <!-- CTA -->
@@ -571,10 +571,12 @@ function animateNumber(el, start, end, duration = 800) {
 // After fetch
 fetch('/webinar-count.php')
   .then(res => res.json())
+  .catch(() => null)
   .then(data => {
-      const el = document.getElementById('regCount');
-      if (!el) return;
-      animateNumber(el, 0, data.count);
+      // Show the registration line only with a real count from the server
+      if (!data || !(data.count >= 10)) return;
+      document.querySelectorAll('[data-reg-line]').forEach(function (p) { p.hidden = false; });
+      document.querySelectorAll('.regCount').forEach(function (el) { animateNumber(el, 0, data.count); });
   });
 </script>
 

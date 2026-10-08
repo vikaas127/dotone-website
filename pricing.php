@@ -101,7 +101,7 @@ $new = !empty($p['base']) ? array_values(array_diff($p['modules'], $prev)) : $p[
 
         <div class="pr-includes">
             <span class="pr-includes-title">Every plan includes</span>
-<?php foreach ([['users', 'Unlimited leads and support tickets'], ['shield', 'Role-based access'], ['doc', 'GST-compliant invoices'], ['cog', 'Encrypted backups'], ['users', 'Onboarding team support']] as [$ico, $label]): ?>
+<?php foreach ([['users', '50 staff users on paid plans'], ['chat', 'Unlimited leads and support tickets'], ['doc', 'Unlimited contacts, quotations, contracts and credit notes on paid plans'], ['shield', 'Role-based access'], ['doc', 'GST-compliant invoices'], ['cog', 'Encrypted backups'], ['users', 'Onboarding team support']] as [$ico, $label]): ?>
             <span class="pr-include"><?= icon($ico, 'w-4 h-4') ?><?= $label ?></span>
 <?php endforeach; ?>
         </div>
@@ -137,8 +137,8 @@ $new = !empty($p['base']) ? array_values(array_diff($p['modules'], $prev)) : $p[
                     </tr>
 <?php endforeach; ?>
 <?php
-// Only rows that differ between plans; rows identical everywhere are listed under "Every plan includes"
-$same = function ($key) use ($plans) { return count(array_unique(array_map(function ($p) use ($key) { return var_export($p['limits'][$key] ?? null, true); }, $plans))) === 1; };
+// Only rows that differ between plans that include them; common limits are listed under "Every plan includes"
+$same = function ($key) use ($plans) { $vals = array_filter(array_map(function ($p) use ($key) { return $p['limits'][$key] ?? null; }, $plans), function ($v) { return $v !== null; }); return count(array_unique(array_map('strval', $vals))) <= 1; };
 foreach (PRICING_GROUPS as [$gname, $gicon, $gkeys]):
     $gkeys = array_values(array_filter($gkeys, function ($k) use ($same) { return !$same($k); }));
     if (!$gkeys) continue;

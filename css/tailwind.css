@@ -10127,3 +10127,8 @@ a.card:hover,
 .pr-card, .pr-table tbody tr { opacity: 1; transform: none; }
 .pr-cards.is-ready:not(.is-in) .pr-card { opacity: 0; transform: translateY(18px); }
 .pr-table-wrap.is-ready:not(.is-in) tbody tr { opacity: 0; }
+/* Pricing: wider cards */
+@media (min-width: 1280px) {
+  .pr-cards { --prw: min(1560px, calc(100vw - 3rem)); width: var(--prw); margin-left: calc((100% - var(--prw)) / 2); margin-right: calc((100% - var(--prw)) / 2); gap: 1rem; }
+  .pr-card { padding: 1.9rem 1.6rem 1.6rem; }
+}

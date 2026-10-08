@@ -72,7 +72,7 @@
       var el = document.createElement('div');
       el.className = 'cc-card is-entering';
       el.innerHTML =
-        '<span class="cc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">' + (icons[item[0]] || '') + '</svg></span>' +
+        '<span class="cc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor">' + (icons[item[0]] || icons[{ crm: 'sales', quality: 'production', reports: 'finance' }[item[0]]] || '') + '</svg></span>' +
         '<div class="cc-card-body"><strong></strong><span></span></div>' +
         '<span class="cc-card-pill"></span>';
       el.querySelector('strong').textContent = item[1];

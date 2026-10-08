@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <link rel="stylesheet" href="/css/main.css?v=<?= ASSET_VERSION ?>">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -90,7 +90,7 @@
                             <circle class="cc-ring cc-ring--3" cx="100" cy="100" r="60"/>
                         </svg>
                         <div class="cc-core-disc">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="<?= ICONS['spark'] ?>"/></svg>
+                            <img src="/assets/dotone-mark-white.png" alt="DotOne" width="160" height="142" class="cc-core-mark">
                             <span>DotOne Agent</span>
                         </div>
                     </div>
@@ -1241,11 +1241,11 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
     </a>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261019" defer></script>
-<script src="/js/command-centre.js?v=20261019" defer></script>
-<script src="/js/glance-cards.js?v=20261019" defer></script>
-<script src="/js/home-ai.js?v=20261019" defer></script>
-<script src="/js/roi-calculator.js?v=20261019" defer></script>
+<script src="/js/header-nav.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/command-centre.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/glance-cards.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/home-ai.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/roi-calculator.js?v=<?= ASSET_VERSION ?>" defer></script>
     <!-- Footer -->
   
 

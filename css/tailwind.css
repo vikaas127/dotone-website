@@ -7220,6 +7220,12 @@ a.card:hover,
   height: 32%;
 }
 
+.cc-core-mark {
+  width: 38%;
+  height: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 60, 110, 0.25));
+}
+
 .cc-core-disc span {
   font-size: 0.6rem;
   font-weight: 700;

@@ -104,8 +104,8 @@ foreach ($menuCols as $colTitle => $links): ?>
                                         <span class="mega-menu-category-title">Free Resources</span>
                                     </div>
                                     <ul class="mega-menu-sublinks">
-                                        <li><a href="/demo">Demo Center</a></li>
-                                        <li><a href="mailto:support@techdotbit.com?subject=DotOne%20support">Support Center</a></li>
+                                        <li><a href="/demo">Demo Centre</a></li>
+                                        <li><a href="mailto:support@techdotbit.com?subject=DotOne%20support">Support Centre</a></li>
                                         <li><a href="/api-reference">API Reference</a></li>
                                         <li><a href="/guides/bom-setup">BOM Setup Guide</a></li>
                                         <li><a href="/integrations/tally">Tally Connector Guide</a></li>
@@ -174,7 +174,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                 </button>
                 <div id="resourcesMobileLinks" class="hidden pl-4 pb-2 space-y-1 border-l ml-4 mb-2">
                     <a href="/guides" class="block px-3 py-2 text-xs rounded-lg transition-colors">Guides &amp; Articles</a>
-                    <a href="/demo" class="block px-3 py-2 text-xs rounded-lg transition-colors">Demo Center</a>
+                    <a href="/demo" class="block px-3 py-2 text-xs rounded-lg transition-colors">Demo Centre</a>
                     <a href="/webinar" class="block px-3 py-2 text-xs rounded-lg transition-colors">Webinars</a>
                     <a href="/case-studies" class="block px-3 py-2 text-xs rounded-lg transition-colors">Case Studies</a>
                     <a href="/api-reference" class="block px-3 py-2 text-xs rounded-lg transition-colors">API Reference</a>

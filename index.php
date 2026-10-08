@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://dotone.biz/">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="DotOne | One Connected AI Platform for Business Management">
     <meta property="og:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta property="og:url" content="https://dotone.biz/">
@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -61,8 +61,8 @@
                     <svg class="cc-lines cc-depth" data-depth="6" viewBox="0 0 600 600" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="ccLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="600">
-                                <stop offset="0" stop-color="#B3E3FC"/>
-                                <stop offset="1" stop-color="#0096EE"/>
+                                <stop offset="0" stop-colour="#B3E3FC"/>
+                                <stop offset="1" stop-colour="#0096EE"/>
                             </linearGradient>
                         </defs>
                         <path id="cc-p-inventory" d="M95 150 Q 190 170 300 235"/>
@@ -274,8 +274,8 @@
                     <svg viewBox="0 0 160 360" preserveAspectRatio="none">
                         <defs>
                             <linearGradient id="unifyLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="160" y2="0">
-                                <stop offset="0" stop-color="#B3E3FC"/>
-                                <stop offset="1" stop-color="#0096EE"/>
+                                <stop offset="0" stop-colour="#B3E3FC"/>
+                                <stop offset="1" stop-colour="#0096EE"/>
                             </linearGradient>
                         </defs>
                         <path id="uf-1" d="M0 22 C 80 22, 80 180, 160 180"/>
@@ -830,7 +830,7 @@ $pipe = [
     <section class="section command-section" id="command-centre">
         <div class="container-custom">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="section-label">AI Command Center</span>
+                <span class="section-label">AI Command Centre</span>
                 <h2 class="text-3xl md:text-4xl font-display font-semibold text-text-primary mb-4">AI works. You stay in control.</h2>
                 <p class="text-lg text-text-secondary">See every agent, what it is doing and what is waiting for you. Agents prepare the work; people approve anything that matters.</p>
             </div>
@@ -838,7 +838,7 @@ $pipe = [
             <div class="console" data-console>
                 <div class="console-bar">
                     <span class="hero-agent-window-dots"><i></i><i></i><i></i></span>
-                    <span class="console-title">DotOne AI Command Center</span>
+                    <span class="console-title">DotOne AI Command Centre</span>
                     <span class="demo-badge">Demo data</span>
                 </div>
 
@@ -1105,7 +1105,7 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
 <?php endif; ?>
             </div>
             <div class="text-center mt-8">
-                <a href="/contact" class="btn-ghost-lg">Ask for a reference call</a>
+                <a href="/contact" class="btn-ghost-lg">Ask for a Reference Call</a>
             </div>
 <?php endif; ?>
         </div>
@@ -1241,11 +1241,11 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
     </a>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261018" defer></script>
-<script src="/js/command-centre.js?v=20261018" defer></script>
-<script src="/js/glance-cards.js?v=20261018" defer></script>
-<script src="/js/home-ai.js?v=20261018" defer></script>
-<script src="/js/roi-calculator.js?v=20261018" defer></script>
+<script src="/js/header-nav.js?v=20261019" defer></script>
+<script src="/js/command-centre.js?v=20261019" defer></script>
+<script src="/js/glance-cards.js?v=20261019" defer></script>
+<script src="/js/home-ai.js?v=20261019" defer></script>
+<script src="/js/roi-calculator.js?v=20261019" defer></script>
     <!-- Footer -->
   
 

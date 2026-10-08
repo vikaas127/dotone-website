@@ -9,13 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+  <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 
     <link rel="canonical" href="https://dotone.biz/careers">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="Careers: Build ERP and AI Agents | DotOne">
     <meta property="og:description" content="Open roles at DotOne. Join TechDotBit to build ERP software and AI agents used every day by manufacturers and distributors across India.">
     <meta property="og:url" content="https://dotone.biz/careers">
@@ -42,7 +42,7 @@
   <div class="container-custom relative z-10 text-center max-w-5xl mx-auto">
     <div class="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full mb-6">
       <span class="w-2 h-2 bg-primary-500 rounded-full animate-pulse mr-2"></span>
-      <span class="text-sm font-medium text-primary-700">Careers at Dotone</span>
+      <span class="text-sm font-medium text-primary-700">Careers at DotOne</span>
     </div>
 
     <h1 class="text-5xl md:text-6xl font-display font-bold leading-tight">Careers at DotOne</h1>
@@ -54,7 +54,7 @@
 
     <div class="flex justify-center gap-4 mt-10">
       <a href="#open-roles" class="btn-primary">View Open Roles</a>
-      <a href="#culture" class="btn-secondary">Life at Dotone</a>
+      <a href="#culture" class="btn-secondary">Life at DotOne</a>
     </div>
   </div>
 </section>
@@ -84,7 +84,7 @@
 
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-display font-bold">
-        Explore Job Areas at <span class="text-gradient">Dotone</span>
+        Explore Job Areas at <span class="text-gradient">DotOne</span>
       </h2>
       <p class="text-xl text-text-secondary max-w-4xl mx-auto mt-4">
         Come to us with your bold and creative ideas – and help us build a
@@ -124,7 +124,7 @@
       <div class="card p-8 hover-lift">
         <h3 class="text-xl font-semibold mb-3">Consulting & Support</h3>
         <p class="text-text-secondary mb-4">
-          Guide customers through implementation, optimization, and long-term
+          Guide customers through implementation, optimisation, and long-term
           success.
         </p>
         <a href="#open-roles" class="text-primary-500 font-medium">Learn more</a>
@@ -133,7 +133,7 @@
       <div class="card p-8 hover-lift">
         <h3 class="text-xl font-semibold mb-3">Marketing & Communications</h3>
         <p class="text-text-secondary mb-4">
-          Build the Dotone brand, create campaigns, generate leads, and tell
+          Build the DotOne brand, create campaigns, generate leads, and tell
           powerful stories.
         </p>
         <a href="#open-roles" class="text-primary-500 font-medium">Learn more</a>
@@ -184,28 +184,28 @@
 
     <div class="space-y-6">
 
-      <!-- Dotone Operator -->
+      <!-- DotOne Operator -->
       <div class="card p-6 hover-lift flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
-          <h3 class="text-xl font-semibold">Dotone Operator</h3>
+          <h3 class="text-xl font-semibold">DotOne Operator</h3>
           <p class="text-text-secondary mt-1">
             Factory Operations · Production Monitoring · ERP Usage · Reports
           </p>
         </div>
-        <a href="/apply?role=Dotone%20Operator&dept=Operations" class="btn-primary mt-4 md:mt-0">
+        <a href="/apply?role=DotOne%20Operator&dept=Operations" class="btn-primary mt-4 md:mt-0">
           Apply
         </a>
       </div>
 
-      <!-- Dotone Sales Consultant -->
+      <!-- DotOne Sales Consultant -->
       <div class="card p-6 hover-lift flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
-          <h3 class="text-xl font-semibold">Dotone Sales Consultant</h3>
+          <h3 class="text-xl font-semibold">DotOne Sales Consultant</h3>
           <p class="text-text-secondary mt-1">
             Manufacturing Sales · ERP · AI Solutions · Client Engagement
           </p>
         </div>
-        <a href="/apply?role=Dotone%20Sales%20Consultant&dept=Sales" class="btn-primary mt-4 md:mt-0">
+        <a href="/apply?role=DotOne%20Sales%20Consultant&dept=Sales" class="btn-primary mt-4 md:mt-0">
           Apply
         </a>
       </div>

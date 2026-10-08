@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://dotone.biz/guides/bom-setup">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="How to Set Up a Bill of Materials | DotOne">
     <meta property="og:description" content="How to Set Up a Bill of Materials: practical, India-specific guidance from the DotOne team, with examples and checklists.">
     <meta property="og:url" content="https://dotone.biz/guides/bom-setup">
@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
 
 <body class="bg-background">
@@ -48,7 +48,7 @@
                 <span class="section-label bg-primary-50 text-primary-600 px-4 py-1.5 rounded-full">Production Guide · 12 min read</span>
                 <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight">How to Set Up a Bill of Materials</h1>
                 <p class="text-lg md:text-xl text-text-secondary max-w-xl mx-auto lg:mx-0">
-                    Master product variants, pack sizes, flavors, materials, and attribute scaling — so production planning, costing, and inventory stay accurate in Dotone.
+                    Master product variants, pack sizes, flavours, materials, and attribute scaling — so production planning, costing, and inventory stay accurate in DotOne.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                     <a href="#golden-rule" class="btn-primary">Read Guide</a>
@@ -89,8 +89,8 @@
                     </g>
                     <defs>
                         <linearGradient id="bomGrad" x1="0" y1="0" x2="1" y2="1">
-                            <stop stop-color="#0096EE"/>
-                            <stop offset="1" stop-color="#0096EE"/>
+                            <stop stop-colour="#0096EE"/>
+                            <stop offset="1" stop-colour="#0096EE"/>
                         </linearGradient>
                     </defs>
                 </svg>
@@ -108,8 +108,8 @@
                 <h2 class="text-3xl md:text-4xl font-display font-bold mb-5">What is a BOM in manufacturing?</h2>
                 <div class="guide-prose-block">
                     <p>A <strong>Bill of Materials (BOM)</strong> is the complete recipe for making a product — every raw material, sub-assembly, quantity, and operation step needed from input to finished goods.</p>
-                    <p>In Dotone, a BOM connects to your <strong>routing</strong> (production steps), <strong>work orders</strong>, <strong>inventory consumption</strong>, and <strong>costing</strong>. Getting the BOM structure right upfront saves weeks of rework later.</p>
-                    <p>MSME manufacturers often struggle with variants: same liquid in 5L and 1L bottles, tiles in two sizes, or juices in different flavors. The golden rule below tells you when to split or keep one BOM.</p>
+                    <p>In DotOne, a BOM connects to your <strong>routing</strong> (production steps), <strong>work orders</strong>, <strong>inventory consumption</strong>, and <strong>costing</strong>. Getting the BOM structure right upfront saves weeks of rework later.</p>
+                    <p>MSME manufacturers often struggle with variants: same liquid in 5L and 1L bottles, tiles in two sizes, or juices in different flavours. The golden rule below tells you when to split or keep one BOM.</p>
                 </div>
             </div>
             <div class="guide-stat-grid">
@@ -156,7 +156,7 @@
             </div>
             <div class="guide-compare-panel guide-compare-panel--warn scroll-reveal-left" style="--scroll-delay: 120ms">
                 <span class="guide-badge guide-badge--warn mb-4">Separate BOMs required</span>
-                <h3 class="text-xl font-display font-semibold mb-2">Recipe / flavor / material changes</h3>
+                <h3 class="text-xl font-display font-semibold mb-2">Recipe / flavour / material changes</h3>
                 <p class="text-sm text-text-secondary mb-2">Each variant needs its own BOM because inputs or process differ.</p>
                 <div class="guide-mini-tree">
                     <div class="guide-mini-tree-row"><span class="guide-mini-tree-dot"></span><strong>Mango Juice BOM</strong> — Mango pulp, sugar, water</div>
@@ -171,12 +171,12 @@
 <!-- GOLDEN RULE -->
 <section id="golden-rule" class="section-sm bg-surface">
     <div class="container-custom max-w-4xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">The Golden Rule</h2>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">The golden rule</h2>
         <div class="guide-rule-card">
             <h3 class="text-xl font-display font-semibold text-text-primary mb-4">Does the manufacturing recipe change?</h3>
             <div class="space-y-4 text-text-secondary leading-relaxed">
                 <p>If the <strong class="text-text-primary">raw materials, percentages, routing steps, or manufacturing process</strong> changes → create a <strong class="text-text-primary">Separate BOM</strong> (or separate parent product).</p>
-                <p>If only <strong class="text-text-primary">packaging, labels, pack sizes, colors, or physical dimensions</strong> change → use <strong class="text-text-primary">One Parent BOM</strong> with Multi Variant Packing or Attribute Scaling.</p>
+                <p>If only <strong class="text-text-primary">packaging, labels, pack sizes, colours, or physical dimensions</strong> change → use <strong class="text-text-primary">One Parent BOM</strong> with Multi Variant Packing or Attribute Scaling.</p>
             </div>
         </div>
         <div class="guide-prose-block mt-8 max-w-3xl">
@@ -189,7 +189,7 @@
 <section class="section-sm">
     <div class="container-custom max-w-4xl mx-auto">
         <div class="text-center mb-8 md:mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">Quick Decision Flow</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">Quick decision flow</h2>
             <p class="text-text-secondary mt-3">Use this every time you add a new product, pack size, or variant.</p>
         </div>
         <div class="guide-flow guide-flow-animated">
@@ -217,7 +217,7 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-5xl mx-auto">
         <div class="text-center mb-8 md:mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">When to Use One Parent BOM</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">When to use one parent BOM</h2>
             <p class="text-text-secondary mt-3">Same recipe — different packaging or scaling only.</p>
         </div>
         <div class="guide-table-wrap scroll-reveal">
@@ -231,7 +231,7 @@
                         <tr><td>Pack Type</td><td>Pouch vs Bottle</td><td><span class="guide-badge guide-badge--good">Parent BOM + Packaging Materials</span></td></tr>
                         <tr><td>Size Scaling</td><td>600×600 vs 300×300 tile</td><td><span class="guide-badge guide-badge--good">Attribute Scaling on area</span></td></tr>
                         <tr><td>Thickness</td><td>8mm vs 12mm sheet</td><td><span class="guide-badge guide-badge--good">Attribute Scaling on thickness</span></td></tr>
-                        <tr><td>Color / Label</td><td>Red vs Blue label, white-label brand</td><td><span class="guide-badge guide-badge--good">Packaging Variants on packing step</span></td></tr>
+                        <tr><td>Colour / Label</td><td>Red vs Blue label, white-label brand</td><td><span class="guide-badge guide-badge--good">Packaging Variants on packing step</span></td></tr>
                         <tr><td>UOM Conversion</td><td>Bulk kg → retail grams</td><td><span class="guide-badge guide-badge--good">Packing targets + conversion factor</span></td></tr>
                     </tbody>
                 </table>
@@ -244,7 +244,7 @@
 <section class="section-sm">
     <div class="container-custom max-w-5xl mx-auto">
         <div class="text-center mb-8 md:mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">When to Create Separate BOMs</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">When to create separate BOMs</h2>
             <p class="text-text-secondary mt-3">Different recipe, material, or formula — always split.</p>
         </div>
         <div class="guide-table-wrap scroll-reveal">
@@ -254,7 +254,7 @@
                         <tr><th>Scenario</th><th>Example</th><th>Action</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>Flavor</td><td>Mango vs Lemon juice — different inputs</td><td><span class="guide-badge guide-badge--warn">Separate BOM per flavor</span></td></tr>
+                        <tr><td>Flavour</td><td>Mango vs Lemon juice — different inputs</td><td><span class="guide-badge guide-badge--warn">Separate BOM per flavour</span></td></tr>
                         <tr><td>Material Grade</td><td>SS304 vs MS components</td><td><span class="guide-badge guide-badge--warn">Separate parent product + BOM</span></td></tr>
                         <tr><td>Model / SKU family</td><td>Completely different part lists</td><td><span class="guide-badge guide-badge--warn">Separate BOM</span></td></tr>
                         <tr><td>Formula change</td><td>Reformulation with new additives</td><td><span class="guide-badge guide-badge--warn">New BOM version or product</span></td></tr>
@@ -270,7 +270,7 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-4xl mx-auto">
         <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">Step-by-Step BOM Setup in Dotone</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">Step-by-step BOM setup in DotOne</h2>
             <p class="text-base md:text-lg text-text-secondary mt-3 max-w-2xl mx-auto">Follow this sequence for a parent BOM with multi-variant packing.</p>
         </div>
         <div class="guide-steps-track">
@@ -315,11 +315,11 @@
     <div class="container-custom max-w-5xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-10 items-center">
             <div>
-                <h2 class="text-3xl md:text-4xl font-display font-bold mb-5">Attribute Scaling explained</h2>
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-5">Attribute scaling explained</h2>
                 <div class="guide-prose-block">
                     <p>For products where quantity scales with <strong>size, area, or thickness</strong> — like tiles, sheets, or panels — use Attribute Scaling instead of duplicating BOM lines.</p>
                     <p><strong>Formula:</strong> Scaled Qty = Base Qty × (New Attribute ÷ Base Attribute)</p>
-                    <p>Example: A 600×600 tile uses 4× the raw material of a 300×300 tile (area ratio 4:1). Dotone calculates consumption automatically when you enter dimensions on the work order.</p>
+                    <p>Example: A 600×600 tile uses 4× the raw material of a 300×300 tile (area ratio 4:1). DotOne calculates consumption automatically when you enter dimensions on the work order.</p>
                 </div>
             </div>
             <div class="card p-6 md:p-8 guide-scaling-viz">
@@ -344,16 +344,16 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-6xl mx-auto">
         <div class="text-center mb-10 md:mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">BOM Field Guide</h2>
-            <p class="text-text-secondary mt-3">Key Dotone fields and when to use each one.</p>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">BOM field guide</h2>
+            <p class="text-text-secondary mt-3">Key DotOne fields and when to use each one.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Product</h3><p class="text-sm text-text-secondary">Parent product or bulk item that holds the core manufacturing recipe.</p></div>
             <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Product Variant</h3><p class="text-sm text-text-secondary">Use only when the recipe itself differs — assign variant on a separate BOM.</p></div>
             <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Multi Variant Packing</h3><p class="text-sm text-text-secondary">One bulk output packed into multiple sellable SKUs from a single work order.</p></div>
-            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Packing Targets</h3><p class="text-sm text-text-secondary">Which finished SKUs can be produced from one bulk batch — with qty per pack.</p></div>
-            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Attribute Scaling</h3><p class="text-sm text-text-secondary">Auto-scale material qty by length, width, thickness, or custom attributes.</p></div>
-            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Apply on Variants</h3><p class="text-sm text-text-secondary">Limit packaging materials to specific SKUs — e.g. premium label on 5L only.</p></div>
+            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Packing targets</h3><p class="text-sm text-text-secondary">Which finished SKUs can be produced from one bulk batch — with qty per pack.</p></div>
+            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Attribute scaling</h3><p class="text-sm text-text-secondary">Auto-scale material qty by length, width, thickness, or custom attributes.</p></div>
+            <div class="guide-field-card"><div class="guide-field-icon" aria-hidden="true"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg></div><h3 class="text-lg font-display font-semibold mb-2">Apply on variants</h3><p class="text-sm text-text-secondary">Limit packaging materials to specific SKUs — e.g. premium label on 5L only.</p></div>
         </div>
     </div>
 </section>
@@ -362,7 +362,7 @@
 <section class="section-sm">
     <div class="container-custom max-w-4xl mx-auto">
         <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">Common BOM Mistakes</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">Common BOM mistakes</h2>
             <p class="text-base md:text-lg text-text-secondary mt-3 max-w-2xl mx-auto">Avoid these — they cause wrong costing, stock issues, and planning errors.</p>
         </div>
         <div class="space-y-4">
@@ -371,7 +371,7 @@
                 <p class="guide-step-desc">Creates maintenance hell. Use one parent BOM + multi-variant packing instead.</p>
             </div>
             <div class="guide-mistake-card scroll-reveal">
-                <h3 class="guide-step-title">Mixing flavors in one BOM</h3>
+                <h3 class="guide-step-title">Mixing flavours in one BOM</h3>
                 <p class="guide-step-desc">Mango and lemon share a bottle but not a recipe — separate BOMs with shared packing materials if needed.</p>
             </div>
             <div class="guide-mistake-card scroll-reveal">
@@ -390,12 +390,12 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-6xl mx-auto">
         <div class="text-center mb-10 md:mb-12">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">Real Manufacturing Examples</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">Real manufacturing examples</h2>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Lubricant Manufacturing</h3><ul class="guide-example-list"><li>Engine Oil Bulk (blending)</li><li>Engine Oil 5L / 1L / 500ml</li><li>Shared additives in parent BOM</li></ul><p class="guide-example-verdict">✓ One Parent BOM + Packing</p></div>
-            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Juice Manufacturing</h3><ul class="guide-example-list"><li>Mango Juice BOM</li><li>Lemon Juice BOM</li><li>Same bottle, different pulp inputs</li></ul><p class="guide-example-verdict">✓ Separate BOM per Flavor</p></div>
-            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Tile Manufacturing</h3><ul class="guide-example-list"><li>Single tile slurry recipe</li><li>600×600 and 300×300 sizes</li><li>Clay scales by area</li></ul><p class="guide-example-verdict">✓ Attribute Scaling</p></div>
+            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Lubricant manufacturing</h3><ul class="guide-example-list"><li>Engine Oil Bulk (blending)</li><li>Engine Oil 5L / 1L / 500ml</li><li>Shared additives in parent BOM</li></ul><p class="guide-example-verdict">✓ One Parent BOM + Packing</p></div>
+            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Juice manufacturing</h3><ul class="guide-example-list"><li>Mango Juice BOM</li><li>Lemon Juice BOM</li><li>Same bottle, different pulp inputs</li></ul><p class="guide-example-verdict">✓ Separate BOM per Flavour</p></div>
+            <div class="guide-example-card scroll-reveal-scale"><h3 class="text-lg font-display font-semibold mb-4">Tile manufacturing</h3><ul class="guide-example-list"><li>Single tile slurry recipe</li><li>600×600 and 300×300 sizes</li><li>Clay scales by area</li></ul><p class="guide-example-verdict">✓ Attribute Scaling</p></div>
         </div>
     </div>
 </section>
@@ -404,7 +404,7 @@
 <section class="section-sm">
     <div class="container-custom max-w-4xl mx-auto">
         <div class="card p-8 md:p-10 scroll-reveal">
-            <h2 class="text-3xl font-display font-bold mb-8">Go-Live Checklist</h2>
+            <h2 class="text-3xl font-display font-bold mb-8">Go-live checklist</h2>
             <div class="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div>
                     <h3 class="text-lg font-display font-semibold mb-4 text-text-primary">Parent BOM</h3>
@@ -435,12 +435,12 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-3xl mx-auto">
         <div class="text-center mb-10">
-            <h2 class="text-3xl md:text-4xl font-display font-bold">Frequently Asked Questions</h2>
+            <h2 class="text-3xl md:text-4xl font-display font-bold">Frequently asked questions</h2>
         </div>
         <div class="card px-6 md:px-8 scroll-reveal">
             <div class="guide-faq-item">
                 <button type="button" class="guide-faq-trigger" aria-expanded="false">Can I change from separate BOMs to one parent BOM later?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                <div class="guide-faq-body">Yes, if recipes are identical. Merge materials into a parent BOM, enable multi-variant packing, and migrate open work orders during a planned downtime window with Dotone support.</div>
+                <div class="guide-faq-body">Yes, if recipes are identical. Merge materials into a parent BOM, enable multi-variant packing, and migrate open work orders during a planned downtime window with DotOne support.</div>
             </div>
             <div class="guide-faq-item">
                 <button type="button" class="guide-faq-trigger" aria-expanded="false">Where do packaging materials go — on BOM or packing step?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
@@ -448,7 +448,7 @@
             </div>
             <div class="guide-faq-item">
                 <button type="button" class="guide-faq-trigger" aria-expanded="false">How does attribute scaling work for non-area products?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-                <div class="guide-faq-body">Define custom attributes (length, diameter, weight) on the item. Map each BOM line to scale by that attribute. Dotone recalculates qty when dimensions change on the work order.</div>
+                <div class="guide-faq-body">Define custom attributes (length, diameter, weight) on the item. Map each BOM line to scale by that attribute. DotOne recalculates qty when dimensions change on the work order.</div>
             </div>
             <div class="guide-faq-item">
                 <button type="button" class="guide-faq-trigger" aria-expanded="false">Should sub-assemblies have their own BOMs?<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
@@ -463,7 +463,7 @@
     <div class="container-custom">
         <div class="guide-cta scroll-reveal-scale">
             <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Build better BOM structures</h2>
-            <p class="text-text-secondary max-w-2xl mx-auto mb-8">Reduce BOM maintenance, simplify production planning, and manage product variants correctly with Dotone Manufacturing.</p>
+            <p class="text-text-secondary max-w-2xl mx-auto mb-8">Reduce BOM maintenance, simplify production planning, and manage product variants correctly with DotOne Manufacturing.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/contact" class="btn-primary">Schedule Consultation</a>
                 <a href="/guides" class="btn-secondary">More Guides</a>
@@ -474,6 +474,6 @@
 
 <div id="footer"><?php include __DIR__ . '/../includes/footer.php'; ?></div>
 
-<script src="/js/bom-guide.js?v=20261018" defer></script>
+<script src="/js/bom-guide.js?v=20261019" defer></script>
 </body>
 </html>

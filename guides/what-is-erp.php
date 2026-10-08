@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://dotone.biz/guides/what-is-erp">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="What Is ERP? A Plain-English Guide | DotOne">
     <meta property="og:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
     <meta property="og:url" content="https://dotone.biz/guides/what-is-erp">
@@ -32,8 +32,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
 
 <body class="bg-background">
@@ -54,8 +54,8 @@
 
         <p class="text-xl text-text-secondary">
             ERP (Enterprise Resource Planning) is a business management system
-            that helps organizations run finance, operations, HR, inventory,
-            sales, and manufacturing from one centralized platform.
+            that helps organisations run finance, operations, HR, inventory,
+            sales, and manufacturing from one centralised platform.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
@@ -69,7 +69,7 @@
 <section class="section bg-surface">
     <div class="container-custom max-w-5xl mx-auto">
         <h2 class="text-4xl font-display font-bold mb-6">
-            What Is an ERP System?
+            What is an ERP system?
         </h2>
         <p class="text-text-secondary text-lg mb-4">
             An <strong>ERP system</strong> (Enterprise Resource Planning system)
@@ -90,7 +90,7 @@
     <div class="container-custom grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
         <div class="card p-6 hover-lift">
-            <h4 class="font-semibold mb-2">Centralized Data</h4>
+            <h4 class="font-semibold mb-2">Centralised Data</h4>
             <p class="text-sm text-text-secondary">
                 All departments work on the same real-time data, eliminating
                 duplication and manual errors.
@@ -143,7 +143,7 @@
 <section class="section">
     <div class="container-custom max-w-5xl mx-auto">
         <h2 class="text-4xl font-display font-bold mb-6">
-            Who Uses ERP Software?
+            Who uses ERP software?
         </h2>
         <p class="text-text-secondary text-lg mb-4">
             ERP systems are used across industries and company sizes:
@@ -184,7 +184,7 @@
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">1</div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-3">
-                                Business Process Assessment
+                                Business process assessment
                             </h3>
                             <p class="text-text-secondary mb-4">
                                 Understand current workflows, challenges, and
@@ -203,7 +203,7 @@
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">2</div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-3">
-                                ERP Configuration & Customization
+                                ERP configuration & customisation
                             </h3>
                             <p class="text-text-secondary mb-4">
                                 Configure ERP modules, roles, and workflows
@@ -222,7 +222,7 @@
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">3</div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-3">
-                                Data Migration & System Integration
+                                Data migration & system integration
                             </h3>
                             <p class="text-text-secondary mb-4">
                                 Migrate historical data and integrate ERP
@@ -241,7 +241,7 @@
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">4</div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-3">
-                                User Training & Go-Live
+                                User training & go-live
                             </h3>
                             <p class="text-text-secondary mb-4">
                                 Train users, perform final testing, and
@@ -260,15 +260,15 @@
                         <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">5</div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-3">
-                                Optimization & Continuous Improvement
+                                Optimisation & continuous improvement
                             </h3>
                             <p class="text-text-secondary mb-4">
-                                Continuously optimize ERP usage, improve
+                                Continuously optimise ERP usage, improve
                                 processes, and scale as the business grows.
                             </p>
                             <ul class="text-sm text-text-secondary space-y-2">
                                 <li>✔ Performance tracking & reporting</li>
-                                <li>✔ Process optimization</li>
+                                <li>✔ Process optimisation</li>
                                 <li>✔ New module rollout & upgrades</li>
                             </ul>
                         </div>
@@ -290,7 +290,7 @@
 
         <p class="text-text-secondary text-lg mb-6">
             ERP systems work by integrating all core business functions into a
-            single centralized database. Every department—such as finance,
+            single centralised database. Every department—such as finance,
             sales, inventory, HR, and manufacturing—uses the same system and
             real-time data.
         </p>
@@ -298,7 +298,7 @@
         <div class="space-y-6 text-text-secondary text-lg">
             <p>
                 When a transaction happens in one department, the ERP system
-                automatically updates related processes across the organization.
+                automatically updates related processes across the organisation.
                 This eliminates manual data entry, reduces errors, and improves
                 coordination between teams.
             </p>
@@ -416,11 +416,11 @@
             <!-- Higher Productivity -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Higher Productivity
+                    Higher productivity
                 </h3>
                 <p class="text-text-secondary">
                     ERP systems streamline and automate core business processes,
-                    enabling employees across the organization to do more work
+                    enabling employees across the organisation to do more work
                     with fewer resources and less manual effort.
                 </p>
             </div>
@@ -428,7 +428,7 @@
             <!-- Deeper Insights -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Deeper Business Insights
+                    Deeper business insights
                 </h3>
                 <p class="text-text-secondary">
                     By eliminating information silos, ERP provides a single
@@ -440,7 +440,7 @@
             <!-- Accelerated Reporting -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Accelerated Reporting
+                    Accelerated reporting
                 </h3>
                 <p class="text-text-secondary">
                     ERP enables faster financial and operational reporting,
@@ -452,11 +452,11 @@
             <!-- Lower Risk -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Lower Business Risk
+                    Lower business risk
                 </h3>
                 <p class="text-text-secondary">
                     With improved visibility and control, ERP systems help
-                    organizations ensure regulatory compliance, reduce errors,
+                    organisations ensure regulatory compliance, reduce errors,
                     and predict and prevent operational risks.
                 </p>
             </div>
@@ -464,7 +464,7 @@
             <!-- Simpler IT -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Simpler IT Infrastructure
+                    Simpler IT infrastructure
                 </h3>
                 <p class="text-text-secondary">
                     Integrated ERP applications share a common database, which
@@ -476,10 +476,10 @@
             <!-- Improved Agility -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Improved Business Agility
+                    Improved business agility
                 </h3>
                 <p class="text-text-secondary">
-                    ERP systems enable organizations to quickly identify and
+                    ERP systems enable organisations to quickly identify and
                     respond to new opportunities through efficient operations
                     and real-time access to accurate business data.
                 </p>
@@ -509,19 +509,19 @@
             <!-- 1 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    1. A Common Database
+                    1. A common database
                 </h3>
                 <p class="text-text-secondary">
-                    A centralized database provides a single source of truth,
+                    A centralised database provides a single source of truth,
                     ensuring consistent shared data and a cross-functional view
-                    of the entire organization.
+                    of the entire organisation.
                 </p>
             </div>
 
             <!-- 2 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    2. Embedded Analytics
+                    2. Embedded analytics
                 </h3>
                 <p class="text-text-secondary">
                     Built-in analytics, reporting, self-service BI, and
@@ -533,7 +533,7 @@
             <!-- 3 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    3. Data Visualization
+                    3. Data visualisation
                 </h3>
                 <p class="text-text-secondary">
                     Interactive dashboards, KPIs, and point-and-click analytics
@@ -560,7 +560,7 @@
                     5. Consistent UI/UX
                 </h3>
                 <p class="text-text-secondary">
-                    A standardized and intuitive user interface across modules,
+                    A standardised and intuitive user interface across modules,
                     with easy configuration and personalization for users,
                     customers, and suppliers.
                 </p>
@@ -569,7 +569,7 @@
             <!-- 6 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    6. Seamless Integration
+                    6. Seamless integration
                 </h3>
                 <p class="text-text-secondary">
                     ERP should integrate smoothly across internal workflows and
@@ -581,7 +581,7 @@
             <!-- 7 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    7. Support for New Technologies
+                    7. Support for new technologies
                 </h3>
                 <p class="text-text-secondary">
                     Look for ERP systems that support generative AI, machine
@@ -593,7 +593,7 @@
             <!-- 8 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    8. Strong Technology Platform
+                    8. Strong technology platform
                 </h3>
                 <p class="text-text-secondary">
                     A modern ERP should run on a stable, scalable technology
@@ -605,7 +605,7 @@
             <!-- 9 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    9. Multinational Support
+                    9. Multinational support
                 </h3>
                 <p class="text-text-secondary">
                     Global ERP systems support multiple languages, currencies,
@@ -617,7 +617,7 @@
             <!-- 10 -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-2">
-                    10. Choice of Deployment
+                    10. Choice of deployment
                 </h3>
                 <p class="text-text-secondary">
                     A flexible ERP solution should offer cloud-based,
@@ -640,7 +640,7 @@
             </h2>
             <p class="text-xl text-text-secondary max-w-4xl mx-auto mt-4">
                 Different businesses have different needs. ERP solutions are
-                designed to support organizations at various stages of growth—
+                designed to support organisations at various stages of growth—
                 from small businesses to large global enterprises.
             </p>
         </div>
@@ -650,7 +650,7 @@
             <!-- Small Business ERP -->
             <div class="card p-6 hover-lift">
                 <h3 class="text-2xl font-display font-semibold mb-3">
-                    Small Business ERP
+                    Small business ERP
                 </h3>
                 <p class="text-text-secondary mb-4">
                     ERP software helps small businesses move beyond spreadsheets
@@ -711,10 +711,10 @@
 
             <div class="relative z-10 px-8 py-16 text-center">
                 <h2 class="text-4xl font-display font-bold text-text-primary mb-6">
-                    Looking for the Right ERP for Your Business?
+                    Looking for the right ERP for your business?
                 </h2>
                 <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-                    Dotone ERP helps businesses automate operations,
+                    DotOne ERP helps businesses automate operations,
                     gain visibility, and scale faster with AI-powered insights.
                 </p>
 

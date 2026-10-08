@@ -2,22 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Apply at Dotone</title>
-    <meta name="description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
+  <title>Apply at DotOne</title>
+    <meta name="description" content="Apply for a role at DotOne. Help build the AI operating system for Indian MSME manufacturers.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-  <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+  <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
     <link rel="canonical" href="https://dotone.biz/apply">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta name="robots" content="noindex, follow">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
-    <meta property="og:title" content="Apply at Dotone">
-    <meta property="og:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
+    <meta property="og:site_name" content="DotOne">
+    <meta property="og:title" content="Apply at DotOne">
+    <meta property="og:description" content="Apply for a role at DotOne. Help build the AI operating system for Indian MSME manufacturers.">
     <meta property="og:url" content="https://dotone.biz/apply">
     <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -25,8 +25,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Apply at Dotone">
-    <meta name="twitter:description" content="Apply for a role at Dotone. Help build the AI operating system for Indian MSME manufacturers.">
+    <meta name="twitter:title" content="Apply at DotOne">
+    <meta name="twitter:description" content="Apply for a role at DotOne. Help build the AI operating system for Indian MSME manufacturers.">
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
 </head>
 
@@ -41,7 +41,7 @@
       Job Application
     </h1>
     <p class="text-text-secondary mt-4">
-      Complete the form below to apply at Dotone.
+      Complete the form below to apply at DotOne.
       Our hiring team reviews every application.
     </p>
   </div>
@@ -127,7 +127,7 @@
           </button>
 
           <p class="text-xs text-text-secondary mt-4">
-            Dotone is an equal opportunity employer.
+            DotOne is an equal opportunity employer.
           </p>
         </div>
 

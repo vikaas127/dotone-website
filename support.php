@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://dotone.biz/support">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="Support and Help Centre | DotOne">
     <meta property="og:description" content="Get help with DotOne: support plans, help articles, onboarding and training, and how to reach the DotOne support team whenever you need it.">
     <meta property="og:url" content="https://dotone.biz/support">
@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
 <body class="bg-white support-page">
 
@@ -34,7 +34,7 @@
 <section class="relative pt-32 pb-12 md:pt-40 md:pb-14 overflow-hidden">
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto space-y-6">
-        <span class="section-label bg-primary-50 text-primary-600 px-4 py-1.5 rounded-full">Support Center</span>
+        <span class="section-label bg-primary-50 text-primary-600 px-4 py-1.5 rounded-full">Support Centre</span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold">DotOne Support</h1>
         <p class="text-xl text-text-secondary">
             From onboarding your first plant to scaling across sites — get the right level of support for your manufacturing team.
@@ -58,7 +58,7 @@
     <div class="container-custom max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
             <h2 class="text-3xl font-display font-bold mb-4">Product Help</h2>
-            <p class="text-text-secondary">Find answers, guides, and live assistance for every Dotone module — ERP, Vision AI, HRMS, IoT, and more.</p>
+            <p class="text-text-secondary">Find answers, guides, and live assistance for every DotOne module — ERP, Vision AI, HRMS, IoT, and more.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="/guides" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
@@ -80,7 +80,7 @@
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                 </span>
                 <h3 class="text-lg font-display font-semibold mb-2">API Reference</h3>
-                <p class="text-sm text-text-secondary">Integrate Dotone with Tally, SAP, WhatsApp, and custom systems.</p>
+                <p class="text-sm text-text-secondary">Integrate DotOne with Tally, SAP, WhatsApp, and custom systems.</p>
             </a>
             <a href="/demo" class="support-help-card card p-6 hover:border-primary-500/30 transition-colors">
                 <span class="support-plan-icon" aria-hidden="true">
@@ -116,7 +116,7 @@
                     </span>
                     <h3 class="text-2xl font-display font-bold mb-4">Classic Support</h3>
                     <p class="text-text-secondary leading-relaxed">
-                        Growing manufacturer with a lean team? Classic support is included with every Dotone subscription. Reach our team via email, phone, or chat — or request a remote assistance session for configuration help.
+                        Growing manufacturer with a lean team? Classic support is included with every DotOne subscription. Reach our team via email, phone, or chat — or request a remote assistance session for configuration help.
                     </p>
                     <ul class="support-plan-mini-list mt-6">
                         <li>Email &amp; chat support (business hours)</li>
@@ -131,7 +131,7 @@
                     </span>
                     <h3 class="text-2xl font-display font-bold mb-4">Premium Support</h3>
                     <p class="text-text-secondary leading-relaxed">
-                        Schedule guided one-on-one onboarding with our product experts and get extended multi-channel assistance. Premium support helps you configure modules, migrate data, and roll out Dotone across your shopfloor with confidence.
+                        Schedule guided one-on-one onboarding with our product experts and get extended multi-channel assistance. Premium support helps you configure modules, migrate data, and roll out DotOne across your shopfloor with confidence.
                     </p>
                     <ul class="support-plan-mini-list mt-6">
                         <li>Priority response within 8 business hours</li>
@@ -198,7 +198,7 @@
             </div>
             <div class="card p-8">
                 <h3 class="text-lg font-display font-semibold mb-3">Managed Support</h3>
-                <p class="text-sm text-text-secondary mb-4">Ongoing monitoring, optimization reviews, and dedicated support hours for multi-plant deployments.</p>
+                <p class="text-sm text-text-secondary mb-4">Ongoing monitoring, optimisation reviews, and dedicated support hours for multi-plant deployments.</p>
                 <a href="/pricing" class="text-sm font-semibold text-primary-600 hover:text-primary-500">Compare plans →</a>
             </div>
         </div>
@@ -217,7 +217,7 @@
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
             <a href="/integrations/tally" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
-                <span class="font-medium text-text-primary">Dotone Tally Connector — sync ERP vouchers to Tally Prime</span>
+                <span class="font-medium text-text-primary">DotOne Tally Connector — sync ERP vouchers to Tally Prime</span>
                 <span class="text-primary-500 text-sm flex-shrink-0">Read →</span>
             </a>
             <a href="/guides/what-is-erp" class="support-article-link flex items-center justify-between gap-4 p-5 hover:bg-surface/60 transition-colors">
@@ -275,6 +275,6 @@
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/support-nav.js?v=20261018" defer></script>
+<script src="/js/support-nav.js?v=20261019" defer></script>
 </body>
 </html>

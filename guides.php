@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://dotone.biz/guides">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="ERP and AI Guides | DotOne">
     <meta property="og:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta property="og:url" content="https://dotone.biz/guides">
@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
 <body class="bg-white">
 
@@ -68,7 +68,7 @@
 <section class="section-sm bg-surface">
     <div class="container-custom max-w-3xl mx-auto text-center space-y-6">
         <h2 class="text-2xl font-display font-bold">Need hands-on help?</h2>
-        <p class="text-text-secondary">Our support team and documentation cover setup, integrations, and rollout for every Dotone module.</p>
+        <p class="text-text-secondary">Our support team and documentation cover setup, integrations, and rollout for every DotOne module.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="btn-primary">Email Support</a>
             <a href="/documentation" class="btn-secondary">Technical Documentation</a>
@@ -78,7 +78,7 @@
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/guides-articles.js?v=20261018" defer></script>
-<script src="/js/guides-page.js?v=20261018" defer></script>
+<script src="/js/guides-articles.js?v=20261019" defer></script>
+<script src="/js/guides-page.js?v=20261019" defer></script>
 </body>
 </html>

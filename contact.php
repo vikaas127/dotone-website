@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
       <link rel="canonical" href="https://dotone.biz/contact">
       <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
       <meta property="og:type" content="website">
-      <meta property="og:site_name" content="Dotone">
+      <meta property="og:site_name" content="DotOne">
       <meta property="og:title" content="Contact DotOne | Sales, Support and Partnerships">
       <meta property="og:description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
       <meta property="og:url" content="https://dotone.biz/contact">
@@ -45,7 +45,7 @@
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight">Contact DotOne</h1>
 
                 <p class="text-xl text-text-secondary leading-relaxed max-w-3xl mx-auto">
-                    Connect with our manufacturing AI experts to discover how Dotone's Vision AI platform can optimize your operations, increase efficiency, and drive measurable ROI.
+                    Connect with our manufacturing AI experts to discover how DotOne's Vision AI platform can optimise your operations, increase efficiency, and drive measurable ROI.
                 </p>
 
                 <!-- Quick Stats -->
@@ -78,7 +78,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Executive Briefing</h3>
+                    <h3 class="text-2xl font-display font-semibold mb-3">Executive briefing</h3>
                     <p class="text-text-secondary mb-4">Schedule a strategic consultation with our leadership team to discuss ROI, implementation roadmap, and transformation strategy.</p>
                     <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
                         <span>Book Executive Session</span>
@@ -95,7 +95,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Technical Consultation</h3>
+                    <h3 class="text-2xl font-display font-semibold mb-3">Technical consultation</h3>
                     <p class="text-text-secondary mb-4">Connect with our technical architects to discuss integration requirements, security compliance, and infrastructure planning.</p>
                     <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
                         <span>Schedule Tech Review</span>
@@ -112,7 +112,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-display font-semibold mb-3">Sales Inquiry</h3>
+                    <h3 class="text-2xl font-display font-semibold mb-3">Sales inquiry</h3>
                     <p class="text-text-secondary mb-4">Speak with our sales team about pricing, packages, implementation timelines, and custom solution configurations.</p>
                     <div class="flex items-center text-primary-500 font-medium group-hover:text-primary-600">
                         <span>Talk to Sales</span>
@@ -160,7 +160,7 @@
                         <!-- Step 1: Contact Information -->
                         <div id="step1" class="space-y-6">
                             <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Let's Get Started</h2>
+                                <h2 class="text-3xl font-display font-bold mb-3">Let's get started</h2>
                                 <p class="text-text-secondary">Tell us about yourself and how we can help transform your manufacturing operations.</p>
                             </div>
 
@@ -218,7 +218,7 @@
                         <!-- Step 2: Company Details -->
                         <div id="step2" class="space-y-6 hidden">
                             <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Company Information</h2>
+                                <h2 class="text-3xl font-display font-bold mb-3">Company information</h2>
                                 <p class="text-text-secondary">Help us understand your manufacturing environment and requirements.</p>
                             </div>
 
@@ -292,7 +292,7 @@
                         <!-- Step 3: Requirements & Timeline -->
                         <div id="step3" class="space-y-6 hidden">
                             <div class="text-center mb-8">
-                                <h2 class="text-3xl font-display font-bold mb-3">Your Requirements</h2>
+                                <h2 class="text-3xl font-display font-bold mb-3">Your requirements</h2>
                                 <p class="text-text-secondary">Tell us about your specific needs and implementation timeline.</p>
                             </div>
 
@@ -361,7 +361,7 @@
                             <div>
                                 <label class="flex items-start space-x-3">
                                     <input type="checkbox" name="newsletter" class="w-5 h-5 text-primary-500 rounded focus:ring-2 focus:ring-primary-500 mt-1">
-                                    <span class="text-sm text-text-secondary">I'd like to receive updates about manufacturing AI trends, product updates, and exclusive resources from Dotone.</span>
+                                    <span class="text-sm text-text-secondary">I'd like to receive updates about manufacturing AI trends, product updates, and exclusive resources from DotOne.</span>
                                 </label>
                             </div>
 
@@ -398,7 +398,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                             </svg>
                         </div>
-                        <h2 class="text-3xl font-display font-bold">Thank You for Reaching Out!</h2>
+                        <h2 class="text-3xl font-display font-bold">Thank you for reaching out!</h2>
                         <p class="text-xl text-text-secondary max-w-2xl mx-auto">
                             We've received your inquiry and our team will review your requirements. You'll hear from us within 24 hours to schedule your consultation.
                         </p>
@@ -421,7 +421,7 @@
                                     <svg class="w-5 h-5 text-success-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>We'll schedule your personalized consultation at your convenience</span>
+                                    <span>We'll schedule your personalised consultation at your convenience</span>
                                 </li>
                             </ul>
                         </div>
@@ -445,7 +445,7 @@
         </div>
     </section>
 
-    <!-- Implementation Timeline Visualization -->
+    <!-- Implementation Timeline Visualisation -->
     <section class="section bg-surface">
         <div class="container-custom">
             <div class="max-w-6xl mx-auto">
@@ -459,28 +459,28 @@
                 <ol class="flow-steps">
                     <li class="flow-step">
                         <div class="flex items-center justify-between mb-3"><span class="flow-step-num">1</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 1-2</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Discovery & Assessment</h3>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Discovery & assessment</h3>
                         <p class="text-sm text-text-secondary leading-relaxed">Initial consultation, requirements gathering, facility assessment, and custom solution design.</p>
                     </li>
                     <li class="flow-step">
                         <div class="flex items-center justify-between mb-3"><span class="flow-step-num">2</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 3-4</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Infrastructure Setup</h3>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Infrastructure setup</h3>
                         <p class="text-sm text-text-secondary leading-relaxed">CCTV integration, network configuration, security implementation, and system architecture deployment.</p>
                     </li>
                     <li class="flow-step">
                         <div class="flex items-center justify-between mb-3"><span class="flow-step-num">3</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 5-6</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">AI Training & Calibration</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Vision AI model training, workflow optimization, accuracy calibration, and performance tuning.</p>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">AI training & calibration</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Vision AI model training, workflow optimisation, accuracy calibration, and performance tuning.</p>
                     </li>
                     <li class="flow-step">
                         <div class="flex items-center justify-between mb-3"><span class="flow-step-num">4</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 7-8</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Team Training & Pilot</h3>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Team training & pilot</h3>
                         <p class="text-sm text-text-secondary leading-relaxed">Comprehensive team training, pilot program launch, feedback collection, and system refinement.</p>
                     </li>
                     <li class="flow-step">
                         <div class="flex items-center justify-between mb-3"><span class="flow-step-num">5</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 9+</span></div>
-                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Full Deployment & Optimization</h3>
-                        <p class="text-sm text-text-secondary leading-relaxed">Complete rollout, continuous monitoring, ongoing optimization, and dedicated support.</p>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Full deployment & optimisation</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Complete rollout, continuous monitoring, ongoing optimisation, and dedicated support.</p>
                     </li>
                 </ol>
             </div>
@@ -506,7 +506,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Call Us</h3>
+                        <h3 class="text-xl font-display font-semibold mb-2">Call us</h3>
                         <p class="text-text-secondary mb-4">Speak directly with our team</p>
                         <a href="tel:+18005551234" class="text-primary-500 font-semibold hover:text-primary-600">+918233081931</a>
                         <p class="text-sm text-text-tertiary mt-2">Mon-Fri, 8am-6pm EST</p>
@@ -519,7 +519,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Email Us</h3>
+                        <h3 class="text-xl font-display font-semibold mb-2">Email us</h3>
                         <p class="text-text-secondary mb-4">Send us a detailed inquiry</p>
                         <a href="mailto:sales@techdotbit.com" class="text-primary-500 font-semibold hover:text-primary-600">sales@techdotbit.com</a>
                         <p class="text-sm text-text-tertiary mt-2">Response within 24 hours</p>
@@ -532,7 +532,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
                             </svg>
                         </div>
-                        <h3 class="text-xl font-display font-semibold mb-2">Live Chat</h3>
+                        <h3 class="text-xl font-display font-semibold mb-2">Live chat</h3>
                         <p class="text-text-secondary mb-4">Chat with our AI assistant</p>
                         <button onclick="openLiveChat()" class="text-primary-500 font-semibold hover:text-primary-600">Start Chat</button>
                         <p class="text-sm text-text-tertiary mt-2">Available 24/7</p>
@@ -541,13 +541,13 @@
 
                 <!-- Office Locations -->
                 <div class="mt-16">
-                    <h3 class="text-2xl font-display font-semibold text-center mb-8">Our Offices</h3>
+                    <h3 class="text-2xl font-display font-semibold text-center mb-8">Our offices</h3>
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="text-center">
                             <div class="text-lg font-semibold text-text-primary mb-2"> HQ</div>
                             <p class="text-text-secondary text-sm">
                                 Innov8 Coworking Space<br>
-                                Graphix Tower, A – 13A , Sector 62<br>
+                                Graphix Tower, A–13A, Sector 62<br>
                                 Noida
                             </p>
                         </div>

@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://dotone.biz/security">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="Security and Data Protection | DotOne">
     <meta property="og:description" content="How DotOne protects your data: TLS 1.2+ and AES encryption, role-based access with audit logs and automated encrypted backups.">
     <meta property="og:url" content="https://dotone.biz/security">
@@ -24,8 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
 <body class="bg-background">
 
@@ -74,7 +74,7 @@
                     </svg>
                 </div>
                 <h2 class="text-xl font-display font-semibold mb-3">Secure Infrastructure</h2>
-                <p class="text-text-secondary text-sm">Dotone runs on hardened cloud servers with automated backups, network firewalls, and intrusion monitoring. Production and staging environments are fully isolated.</p>
+                <p class="text-text-secondary text-sm">DotOne runs on hardened cloud servers with automated backups, network firewalls, and intrusion monitoring. Production and staging environments are fully isolated.</p>
             </div>
 
             <div class="card p-8">
@@ -95,7 +95,7 @@
     <div class="container-custom max-w-4xl mx-auto">
         <h2 class="text-3xl font-display font-bold text-center mb-10">Vision AI &amp; CCTV Data</h2>
         <div class="card-elevated p-8 space-y-4 text-text-secondary">
-            <p>Dotone Vision AI processes video feeds on-premises or in your private network edge — video is not stored unnecessarily. Analytics outputs (counts, alerts, efficiency metrics) are transmitted securely to your dashboard.</p>
+            <p>DotOne Vision AI processes video feeds on-premises or in your private network edge — video is not stored unnecessarily. Analytics outputs (counts, alerts, efficiency metrics) are transmitted securely to your dashboard.</p>
             <ul class="space-y-2 text-sm">
                 <li>• Configurable retention policies for analytics data</li>
                 <li>• No sharing of customer video with third parties</li>
@@ -134,7 +134,7 @@
             <a href="/contact" class="btn-primary">Contact Security Team</a>
             <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="btn-secondary">Privacy Policy</a>
         </div>
-        <p class="text-xs text-text-secondary pt-4">Dotone is a product of <a href="https://techdotbit.com" class="text-primary-500 hover:underline" target="_blank" rel="noopener noreferrer">TechdotBit Pvt Ltd.</a></p>
+        <p class="text-xs text-text-secondary pt-4">DotOne is a product of <a href="https://techdotbit.com" class="text-primary-500 hover:underline" target="_blank" rel="noopener noreferrer">TechDotBit Pvt Ltd.</a></p>
     </div>
 </section>
 

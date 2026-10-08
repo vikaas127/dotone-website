@@ -1,5 +1,5 @@
 /**
- * Dotone Guides — article registry
+ * DotOne Guides — article registry
  *
  * To publish a new article:
  * 1. Create your article HTML page (copy bom-setup-guide.php or what-is-erp.php as a template).
@@ -8,8 +8,8 @@
  */
 window.GUIDES_ARTICLES = [
   {
-    title: 'Dotone Tally Connector: ERP to Tally Sync Guide',
-    excerpt: 'Connect Dotone with Tally Prime — sync sales invoices, purchases, payments, GST, ledgers, and stock journals without double entry.',
+    title: 'DotOne Tally Connector: ERP to Tally Sync Guide',
+    excerpt: 'Connect DotOne with Tally Prime — sync sales invoices, purchases, payments, GST, ledgers, and stock journals without double entry.',
     url: '/integrations/tally',
     category: 'implementation',
     date: '2025-06-28',
@@ -97,7 +97,7 @@ window.GUIDES_ARTICLES = [
   },
   {
     title: 'Data Security & Compliance for Manufacturers',
-    excerpt: 'How Dotone protects production data, workforce records, and CCTV analytics — encryption, access control, and Indian compliance.',
+    excerpt: 'How DotOne protects production data, workforce records, and CCTV analytics — encryption, access control, and Indian compliance.',
     url: '/security',
     category: 'implementation',
     date: '2025-02-10',

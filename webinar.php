@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://dotone.biz/webinar">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="DotOne Webinar: Automate Your Factory with ERP">
     <meta property="og:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta property="og:url" content="https://dotone.biz/webinar">
@@ -28,8 +28,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
 
     <!-- SEO: Webinar Schema -->
     <script type="application/ld+json">
@@ -181,7 +181,7 @@
         <ul class="space-y-3 text-text-secondary mb-8">
             <li>✔ Factory setup & scalable process design</li>
             <li>✔ Production planning & operational control</li>
-            <li>✔ Cost optimization & efficiency improvement</li>
+            <li>✔ Cost optimisation & efficiency improvement</li>
             <li>✔ Practical, people-friendly ERP implementation</li>
         </ul>
 
@@ -237,7 +237,7 @@
                         </div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-2">
-                                Manufacturing Challenges Today
+                                Manufacturing challenges today
                             </h3>
                             <p class="text-text-secondary mb-3">
                                 Understand common problems faced by factories
@@ -256,7 +256,7 @@
                         </div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-2">
-                                How ERP Solves These Problems
+                                How ERP solves these problems
                             </h3>
                             <p class="text-text-secondary mb-3">
                                 Learn how ERP brings control, visibility,
@@ -275,7 +275,7 @@
                         </div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-2">
-                                DotOne ERP Walkthrough
+                                DotOne ERP walkthrough
                             </h3>
                             <p class="text-text-secondary mb-3">
                                 A simple, practical walkthrough of DotOne ERP
@@ -294,7 +294,7 @@
                         </div>
                         <div class="flex-1 card p-6 hover-lift">
                             <h3 class="text-xl font-display font-semibold mb-2">
-                                Live Q&A with Expert
+                                Live Q&A with expert
                             </h3>
                             <p class="text-text-secondary mb-3">
                                 Get your questions answered directly by
@@ -334,7 +334,7 @@
             <div class="card p-8 hover-lift">
                 <div class="text-3xl mb-4">🏭</div>
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Real Factory Experience
+                    Real factory experience
                 </h3>
                 <p class="text-text-secondary">
                     Learn from insights gained directly on the shop floor —
@@ -346,7 +346,7 @@
             <div class="card p-8 hover-lift">
                 <div class="text-3xl mb-4">📈</div>
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Proven Scaling Results
+                    Proven scaling results
                 </h3>
                 <p class="text-text-secondary">
                     See how factories were scaled from early-stage
@@ -358,7 +358,7 @@
             <div class="card p-8 hover-lift">
                 <div class="text-3xl mb-4">⚙️</div>
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    ERP That Teams Actually Use
+                    ERP that teams actually use
                 </h3>
                 <p class="text-text-secondary">
                     Understand how ERP is implemented in a way that
@@ -392,7 +392,7 @@
 
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Factory Owners & Directors
+                    Factory owners & directors
                 </h3>
                 <p class="text-text-secondary">
                     Gain better control, visibility, and confidence
@@ -402,10 +402,10 @@
 
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Production & Plant Managers
+                    Production & plant managers
                 </h3>
                 <p class="text-text-secondary">
-                    Learn how to optimize daily operations,
+                    Learn how to optimise daily operations,
                     reduce delays, and improve coordination
                     across departments.
                 </p>
@@ -413,7 +413,7 @@
 
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Accounts & Operations Teams
+                    Accounts & operations teams
                 </h3>
                 <p class="text-text-secondary">
                     Understand how ERP improves reporting,
@@ -522,7 +522,7 @@
                 reg.innerHTML = `
                     <div class="card p-10 text-center">
                         <h2 class="text-3xl font-display font-bold mb-4">
-                            Registration Closed
+                            Registration closed
                         </h2>
                         <p class="text-text-secondary">
                             This webinar has already started or reached capacity.

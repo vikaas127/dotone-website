@@ -9,12 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261018">
-    <script src="/js/header-nav.js?v=20261018" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261019">
+    <script src="/js/header-nav.js?v=20261019" defer></script>
     <link rel="canonical" href="https://dotone.biz/api-reference">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dotone">
+    <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="API Reference: REST Endpoints | DotOne">
     <meta property="og:description" content="REST API reference for DotOne: authentication, endpoints, request and response examples, and webhooks to connect DotOne with your other systems.">
     <meta property="og:url" content="https://dotone.biz/api-reference">
@@ -58,10 +58,10 @@
 
             <div>
                 <h2 class="text-3xl font-display font-bold mb-4">
-                    Designed for Modern Manufacturing
+                    Designed for modern manufacturing
                 </h2>
                 <p class="text-text-secondary mb-6">
-                    Dotone APIs enable seamless integration between your factory floor,
+                    DotOne APIs enable seamless integration between your factory floor,
                     ERP, MES, BI tools, and third-party systems.
                     Built to handle real-time data, automation workflows, and AI insights
                     at enterprise scale.
@@ -134,7 +134,7 @@ Content-Type: application/json
             <!-- Inventory -->
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Inventory Automation API
+                    Inventory automation API
                 </h3>
                 <p class="text-text-secondary mb-4">
                     Track raw material, WIP, and finished goods with real-time accuracy.
@@ -149,7 +149,7 @@ Content-Type: application/json
             <!-- Production -->
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Production Monitoring API
+                    Production monitoring API
                 </h3>
                 <p class="text-text-secondary mb-4">
                     Live production data, OEE metrics, downtime events.
@@ -177,7 +177,7 @@ Content-Type: application/json
             <!-- Quality -->
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    Quality Inspection API
+                    Quality inspection API
                 </h3>
                 <p class="text-text-secondary mb-4">
                     Capture defects, inspections, and quality analytics.
@@ -205,10 +205,10 @@ Content-Type: application/json
             <!-- ERP -->
             <div class="card p-8 hover-lift">
                 <h3 class="text-xl font-display font-semibold mb-3">
-                    ERP Integration API
+                    ERP integration API
                 </h3>
                 <p class="text-text-secondary mb-4">
-                    Sync Dotone with SAP, Oracle, Tally, or custom ERPs.
+                    Sync DotOne with SAP, Oracle, Tally, or custom ERPs.
                 </p>
                 <code class="block text-sm bg-surface p-3 rounded">
                     POST /erp/sync<br>
@@ -233,7 +233,7 @@ Content-Type: application/json
 <section id="inventory-api" class="section">
     <div class="container-custom max-w-6xl">
         <h2 class="text-3xl font-display font-bold mb-6">
-            Inventory Automation API
+            Inventory automation API
         </h2>
 
         <div class="card overflow-x-auto">
@@ -269,7 +269,7 @@ Content-Type: application/json
 <section class="section bg-surface">
     <div class="container-custom max-w-5xl">
         <h3 class="text-2xl font-display font-semibold mb-4">
-            Example Request
+            Example request
         </h3>
 
         <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
@@ -280,7 +280,7 @@ curl -X GET https://api.dotone.biz/v1/inventory/items \
         </div>
 
         <h3 class="text-2xl font-display font-semibold mt-8 mb-4">
-            Example Response
+            Example response
         </h3>
 
         <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
@@ -303,7 +303,7 @@ curl -X GET https://api.dotone.biz/v1/inventory/items \
 <section id="vision-api" class="section">
     <div class="container-custom max-w-6xl">
         <h2 class="text-3xl font-display font-bold mb-6">
-            Vision AI Events API
+            Vision AI events API
         </h2>
 
         <div class="grid md:grid-cols-2 gap-8">
@@ -341,10 +341,10 @@ POST /vision/events
 
             <div class="relative z-10 px-8 py-16 text-center text-text-primary">
                 <h2 class="text-4xl font-display font-bold mb-4">
-                    Build Smarter Manufacturing Systems
+                    Build smarter manufacturing systems
                 </h2>
                 <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-                    Start integrating Dotone APIs into your factory, ERP, or analytics platform today.
+                    Start integrating DotOne APIs into your factory, ERP, or analytics platform today.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">

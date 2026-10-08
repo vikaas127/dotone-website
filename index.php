@@ -39,7 +39,7 @@
                 <div class="hero-split-copy">
                     <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        Run Your Entire Business. <span class="text-gradient-shimmer">One Connected Platform.</span>
+                        Run Your Entire Business. <span class="text-gradient-shimmer">One Connected AI Platform.</span>
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
                         DotOne connects sales, CRM, purchase, inventory, production, quality, HR, finance, reporting and AI automation in one intelligent business platform.
@@ -814,50 +814,185 @@ $levels = [
     </section>
 
     <!-- Industries -->
-    <section class="section industries-section" data-scroll="off">
+    <section class="section ind-section" id="industries">
         <div class="container-custom">
-            <div class="text-center max-w-4xl mx-auto mb-4">
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-text-primary mb-4">
-                    Make Your Business Run Easier With Dotone for <span class="text-gradient">18+ Industries</span>
-                </h2>
-                <p class="text-lg text-text-secondary">
-                    Industry-specific Dotone solutions designed to integrate with your processes, compliance needs, and shopfloor best practices.
-                </p>
+            <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+                <span class="section-label">Industries</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-primary mb-4">Built for the way <span class="text-primary-500">your industry works.</span></h2>
+                <p class="text-lg text-text-secondary">Pick your industry to see how work moves through DotOne, and which modules it runs on.</p>
             </div>
-        </div>
-
-        <div class="industries-scroll-track">
-            <div class="industries-sticky">
-                <div class="container-custom">
-                    <div class="industries-grid">
-                <a href="/industries" class="industry-card industry-seq-item is-active"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Manufacturing</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span><span>Retail</span></a>
-                <a href="/field-sales-tracking" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span><span>Trading &amp; Distribution</span></a>
-                <a href="/vision-ai/quality-inspection" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Pharma &amp; Life Sciences</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Dairy</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></span><span>Food &amp; Beverage</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Construction &amp; Building</span></a>
-                <a href="/crm" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></span><span>Automotive &amp; Rental</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><span>Chemical</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></span><span>Gems &amp; Jewelry</span></a>
-                <a href="/solutions/digital-transformation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span><span>High Tech &amp; Electronics</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><span>Mall &amp; Facilities</span></a>
-                <a href="/solutions/inventory-automation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><span>Packaging</span></a>
-                <a href="/documentation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></span><span>Publication</span></a>
-                <a href="/hrms" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span><span>Education</span></a>
-                <a href="/industries" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span><span>Sports</span></a>
-                <a href="/solutions/digital-transformation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span><span>Oil &amp; Gas</span></a>
-                <a href="/solutions/inventory-automation" class="industry-card industry-seq-item"><span class="industry-card-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span><span>Warehouse</span></a>
+            <div class="ind" data-ind-root>
+                <div class="ind-chips" role="tablist" aria-label="Industries">
+                    <button type="button" class="ind-chip is-active" data-ind="manufacturing" role="tab" aria-selected="true"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>Manufacturing</button>
+                    <button type="button" class="ind-chip" data-ind="retail" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span>Retail</button>
+                    <button type="button" class="ind-chip" data-ind="trading-distribution" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span>Trading &amp; Distribution</button>
+                    <button type="button" class="ind-chip" data-ind="pharma-life-sciences" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span>Pharma &amp; Life Sciences</button>
+                    <button type="button" class="ind-chip" data-ind="dairy" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span>Dairy</button>
+                    <button type="button" class="ind-chip" data-ind="food-beverage" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></span>Food &amp; Beverage</button>
+                    <button type="button" class="ind-chip" data-ind="construction-building" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>Construction &amp; Building</button>
+                    <button type="button" class="ind-chip" data-ind="automotive-rental" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></span>Automotive &amp; Rental</button>
+                    <button type="button" class="ind-chip" data-ind="chemical" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span>Chemical</button>
+                    <button type="button" class="ind-chip" data-ind="gems-jewelry" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></span>Gems &amp; Jewelry</button>
+                    <button type="button" class="ind-chip" data-ind="high-tech-electronics" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span>High Tech &amp; Electronics</button>
+                    <button type="button" class="ind-chip" data-ind="mall-facilities" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span>Mall &amp; Facilities</button>
+                    <button type="button" class="ind-chip" data-ind="packaging" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span>Packaging</button>
+                    <button type="button" class="ind-chip" data-ind="publication" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></span>Publication</button>
+                    <button type="button" class="ind-chip" data-ind="education" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span>Education</button>
+                    <button type="button" class="ind-chip" data-ind="sports" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>Sports</button>
+                    <button type="button" class="ind-chip" data-ind="oil-gas" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span>Oil &amp; Gas</button>
+                    <button type="button" class="ind-chip" data-ind="warehouse" role="tab" aria-selected="false"><span class="ind-chip-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span>Warehouse</button>
+                </div>
+                <div class="ind-stage">
+                    <div class="ind-panel is-active" data-ind-panel="manufacturing" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><div><h3>Manufacturing</h3><p>Plan, make, check and ship from one system.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Sales order</li><li style="--s: 1"><span>2</span>BOM &amp; job card</li><li style="--s: 2"><span>3</span>Quality check</li><li style="--s: 3"><span>4</span>Dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Inventory</span><span>Quality</span><span>Payroll</span></div>
+                        <a href="/industries/manufacturing" class="ind-link">Explore Manufacturing &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="retail" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg></span><div><h3>Retail</h3><p>Keep stores, stock and billing in step.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Purchase</li><li style="--s: 1"><span>2</span>Stock in store</li><li style="--s: 2"><span>3</span>Billing</li><li style="--s: 3"><span>4</span>Daily sales report</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Inventory</span><span>Sales</span><span>Finance</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="trading-distribution" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></span><div><h3>Trading &amp; Distribution</h3><p>Buy, stock and deliver with every margin visible.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Vendor quote</li><li style="--s: 1"><span>2</span>Purchase order</li><li style="--s: 2"><span>3</span>Warehouse</li><li style="--s: 3"><span>4</span>Delivery</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Purchase</span><span>Inventory</span><span>Sales</span><span>Field sales</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="pharma-life-sciences" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><div><h3>Pharma &amp; Life Sciences</h3><p>Batch-wise control from raw material to release.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Material receipt</li><li style="--s: 1"><span>2</span>Batch production</li><li style="--s: 2"><span>3</span>QC release</li><li style="--s: 3"><span>4</span>Dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Quality</span><span>Inventory</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="dairy" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><div><h3>Dairy</h3><p>Daily collection, processing and route delivery.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Milk collection</li><li style="--s: 1"><span>2</span>Processing</li><li style="--s: 2"><span>3</span>Packing</li><li style="--s: 3"><span>4</span>Route delivery</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Purchase</span><span>Production</span><span>Inventory</span><span>Sales</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="food-beverage" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg></span><div><h3>Food &amp; Beverage</h3><p>Recipes, batches and shelf life under control.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Recipe / BOM</li><li style="--s: 1"><span>2</span>Batch production</li><li style="--s: 2"><span>3</span>Quality check</li><li style="--s: 3"><span>4</span>Distribution</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Quality</span><span>Inventory</span><span>Sales</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="construction-building" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><div><h3>Construction &amp; Building</h3><p>Material, labour and site costs per project.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Project budget</li><li style="--s: 1"><span>2</span>Material indent</li><li style="--s: 2"><span>3</span>Site issue</li><li style="--s: 3"><span>4</span>Billing</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Purchase</span><span>Inventory</span><span>HRMS</span><span>Finance</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="automotive-rental" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg></span><div><h3>Automotive &amp; Rental</h3><p>Leads, bookings and service in one place.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Lead</li><li style="--s: 1"><span>2</span>Booking</li><li style="--s: 2"><span>3</span>Service / rental</li><li style="--s: 3"><span>4</span>Invoice</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>CRM</span><span>Sales</span><span>Inventory</span><span>Finance</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="chemical" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></span><div><h3>Chemical</h3><p>Formulations, batches and safe stock handling.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Formulation</li><li style="--s: 1"><span>2</span>Batch</li><li style="--s: 2"><span>3</span>Lab test</li><li style="--s: 3"><span>4</span>Dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Quality</span><span>Inventory</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="gems-jewelry" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg></span><div><h3>Gems &amp; Jewelry</h3><p>Item-level tracking for high-value stock.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Purchase</li><li style="--s: 1"><span>2</span>Making</li><li style="--s: 2"><span>3</span>Item tagging</li><li style="--s: 3"><span>4</span>Sale</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Inventory</span><span>Production</span><span>Sales</span><span>Finance</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="high-tech-electronics" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/></svg></span><div><h3>High Tech &amp; Electronics</h3><p>Multi-level BOMs and serial tracking.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>BOM</li><li style="--s: 1"><span>2</span>Assembly</li><li style="--s: 2"><span>3</span>Testing</li><li style="--s: 3"><span>4</span>Serial-wise dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Quality</span><span>Inventory</span><span>Sales</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="mall-facilities" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></span><div><h3>Mall &amp; Facilities</h3><p>Staff, upkeep and vendor work under one roof.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Work request</li><li style="--s: 1"><span>2</span>Vendor order</li><li style="--s: 2"><span>3</span>Staff attendance</li><li style="--s: 3"><span>4</span>Monthly report</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>HRMS</span><span>Purchase</span><span>Finance</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="packaging" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></span><div><h3>Packaging</h3><p>Job-wise runs from order to dispatch.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Customer order</li><li style="--s: 1"><span>2</span>Job card</li><li style="--s: 2"><span>3</span>Print &amp; convert</li><li style="--s: 3"><span>4</span>Dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Sales</span><span>Production</span><span>Quality</span><span>Inventory</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="publication" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg></span><div><h3>Publication</h3><p>Print runs, stock and distribution tracked.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Title plan</li><li style="--s: 1"><span>2</span>Print order</li><li style="--s: 2"><span>3</span>Warehouse</li><li style="--s: 3"><span>4</span>Distribution</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Purchase</span><span>Inventory</span><span>Sales</span><span>Finance</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="education" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg></span><div><h3>Education</h3><p>Staff, payroll and purchases for campuses.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Staff onboarding</li><li style="--s: 1"><span>2</span>Attendance</li><li style="--s: 2"><span>3</span>Payroll</li><li style="--s: 3"><span>4</span>Purchase</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>HRMS</span><span>Payroll</span><span>Purchase</span><span>Finance</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="sports" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span><div><h3>Sports</h3><p>Product, stock and dealer orders connected.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Production</li><li style="--s: 1"><span>2</span>Stock</li><li style="--s: 2"><span>3</span>Dealer order</li><li style="--s: 3"><span>4</span>Dispatch</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Production</span><span>Inventory</span><span>Sales</span><span>CRM</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="oil-gas" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></span><div><h3>Oil &amp; Gas</h3><p>Assets, spares and field teams on one record.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Spares indent</li><li style="--s: 1"><span>2</span>Purchase</li><li style="--s: 2"><span>3</span>Site issue</li><li style="--s: 3"><span>4</span>Field report</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Purchase</span><span>Inventory</span><span>HRMS</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
+                    </div>
+                    <div class="ind-panel" data-ind-panel="warehouse" role="tabpanel">
+                        <div class="ind-panel-head"><span class="ind-panel-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg></span><div><h3>Warehouse</h3><p>Inward, storage and outward with live stock.</p></div></div>
+                        <span class="ind-sub">How work flows</span>
+                        <ol class="ind-flow"><li style="--s: 0"><span>1</span>Inward (GRN)</li><li style="--s: 1"><span>2</span>Put away</li><li style="--s: 2"><span>3</span>Pick &amp; pack</li><li style="--s: 3"><span>4</span>Outward</li></ol>
+                        <span class="ind-sub">Modules used</span>
+                        <div class="ind-mods"><span>Inventory</span><span>Purchase</span><span>Sales</span><span>Reports</span></div>
+                        <a href="/industries" class="ind-link">See industry solutions &rarr;</a>
                     </div>
                 </div>
             </div>
-            <div class="container-custom industries-cta-wrap">
-                <div class="text-center">
-                    <a href="/contact" class="btn-primary inline-flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-                        Request a Quote
-                    </a>
-                </div>
+            <div class="text-center mt-10">
+                <a href="/contact" class="btn-primary inline-flex items-center gap-2">Talk to us about your industry
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -935,8 +1070,6 @@ $levels = [
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 <script src="/js/header-nav.js?v=20261015" defer></script>
-<script src="/js/scroll-sequence.js?v=20261015" defer></script>
-<script src="/js/industries-scroll.js?v=20261015" defer></script>
 <script src="/js/command-centre.js?v=20261015" defer></script>
 <script src="/js/glance-cards.js?v=20261015" defer></script>
 <script src="/js/home-ai.js?v=20261015" defer></script>

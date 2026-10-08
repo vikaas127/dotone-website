@@ -278,3 +278,69 @@
     show(first);
   }
 })();
+
+// Industry explorer: chips switch the workflow card, auto-cycles until the visitor picks one
+(function () {
+  var root = document.querySelector('[data-ind-root]');
+  if (!root) return;
+  var chips = Array.prototype.slice.call(root.querySelectorAll('[data-ind]'));
+  var panels = root.querySelectorAll('[data-ind-panel]');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var DUR = 5500;
+  var auto = !reduced;
+  var visible = false;
+  var hover = false;
+  var timer = null;
+  var current = chips[0].getAttribute('data-ind');
+  var seen = false;
+
+  function show(key, scrollChip) {
+    current = key;
+    chips.forEach(function (c) {
+      var on = c.getAttribute('data-ind') === key;
+      c.classList.toggle('is-active', on);
+      c.classList.remove('is-timing');
+      c.setAttribute('aria-selected', on ? 'true' : 'false');
+      if (on && scrollChip && c.parentNode.scrollWidth > c.parentNode.clientWidth) {
+        c.parentNode.scrollTo({ left: c.offsetLeft - 16, behavior: 'smooth' });
+      }
+    });
+    panels.forEach(function (p) {
+      var on = p.getAttribute('data-ind-panel') === key;
+      if (on) { p.classList.remove('is-active'); void p.offsetWidth; }
+      p.classList.toggle('is-active', on);
+    });
+    schedule();
+  }
+
+  function schedule() {
+    clearTimeout(timer);
+    if (!auto || !visible || hover) return;
+    var chip = root.querySelector('[data-ind="' + current + '"]');
+    void chip.offsetWidth;
+    chip.style.setProperty('--dur', DUR + 'ms');
+    chip.classList.add('is-timing');
+    timer = setTimeout(function () {
+      var i = chips.indexOf(chip);
+      show(chips[(i + 1) % chips.length].getAttribute('data-ind'), true);
+    }, DUR);
+  }
+
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () { auto = false; show(c.getAttribute('data-ind'), true); });
+  });
+  root.addEventListener('mouseenter', function () { hover = true; clearTimeout(timer); root.querySelectorAll('.is-timing').forEach(function (el) { el.classList.remove('is-timing'); }); });
+  root.addEventListener('mouseleave', function () { hover = false; schedule(); });
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      var was = visible;
+      visible = entries[0].isIntersecting;
+      if (visible && !was) { if (!seen) { seen = true; show(current, false); } else { schedule(); } }
+      if (!visible) clearTimeout(timer);
+    }, { threshold: 0.3 }).observe(root);
+  } else {
+    visible = true;
+    schedule();
+  }
+})();

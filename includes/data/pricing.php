@@ -1,6 +1,6 @@
 <?php
 // Pricing plans, copied from the DotOne admin plan settings. Edit here and the pricing page updates.
-// price: monthly amount in INR, or null to show "Talk to us".
+// price: monthly amount in INR, 0 for a free plan, or null to show "On request".
 // limits: number, 'Unlimited', or null (not included in the plan). Keys must match PRICING_ROWS.
 const PRICING_ROWS = [
     'staff'      => 'Staff users',
@@ -52,9 +52,9 @@ return [
     [
         'name' => 'Starter',
         'tagline' => 'For small teams starting with leads, customers and support.', 'base' => null,
-        'price' => null,
+        'price' => 0,
         'modules' => ['crm', 'support'],
-        'cta' => ['Talk to Us', '/contact'],
+        'cta' => ['Start Free', 'https://techdotbit.in/authentication/register'],
         'limits' => ['staff' => null, 'customers' => U, 'contacts' => null, 'contracts' => null, 'invoices' => null, 'proforma' => null, 'creditnotes' => null, 'quotations' => null, 'projects' => null, 'tasks' => null, 'tickets' => U, 'leads' => U, 'items' => null, 'storage' => '2 GB'],
     ],
     [

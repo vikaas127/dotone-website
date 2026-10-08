@@ -10169,3 +10169,20 @@ a.card:hover,
 @keyframes hs-agent { 0%, 16%, 100% { background: #F6F9FC; color: #98A2B3; box-shadow: none; } 6% { background: #0096EE; color: #fff; box-shadow: 0 0 0 4px rgba(0, 150, 238, 0.18); } }
 @media (prefers-reduced-motion: reduce) { .hs-weeks i, .hs-mods span, .hs-agents span, .hs-marquee > div { animation: none; } }
 @media (min-width: 640px) { .hs { grid-template-columns: repeat(3, 1fr); max-width: 60rem; } }
+
+/* Hero: moving light sweep across "AI-Powered" */
+.hero-light-title .text-gradient-shimmer {
+  position: relative;
+  background-image: linear-gradient(100deg, #0096EE 0%, #0096EE 36%, #66C8FF 43%, #E9F8FF 50%, #66C8FF 57%, #0096EE 64%, #0096EE 100%);
+  background-size: 260% 100%;
+  background-position: 100% 50%;
+  animation: ai-light 4.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 14px rgba(0, 150, 238, 0.28));
+}
+@keyframes ai-light {
+  0% { background-position: 100% 50%; }
+  65%, 100% { background-position: 0% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-light-title .text-gradient-shimmer { animation: none; background-position: 50% 50%; background-image: none; color: #0096EE; -webkit-text-fill-color: #0096EE; }
+}

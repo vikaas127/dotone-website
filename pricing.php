@@ -5,7 +5,7 @@ $plans = require __DIR__ . '/includes/data/pricing.php';
 $page = [
     'path' => '/pricing',
     'title' => 'DotOne Pricing | ERP and AI Agent Plans',
-    'description' => 'Five DotOne plans from Starter to Enterprise AI. Compare modules, users, records and storage, priced monthly in INR with GST invoicing.',
+    'description' => 'Start free on DotOne Starter, then grow to Enterprise AI. Compare modules, users, records and storage, priced monthly in INR with GST invoicing.',
     'faq' => [
         ['Can we start small and upgrade later?', 'Yes. Many teams start on Starter or Growth and move up as they add people, records or modules. Your data stays where it is when you change plans.'],
         ['What do the limits mean?', 'Each plan sets how many records of each type you can keep, such as customers, invoices or projects, and how much file storage you get. "Unlimited" means there is no cap on that record type.'],
@@ -54,7 +54,7 @@ render_head($page);
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
         <span class="section-label">Pricing</span>
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-5">Simple plans that <span class="text-primary-500">grow with you</span></h1>
-        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">Five plans, priced monthly in INR. Start with what you need today and move up as your business grows.</p>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">Start free, then pick the plan that fits. Priced monthly in INR, and you can move up as your business grows.</p>
     </div>
 </section>
 
@@ -71,7 +71,9 @@ render_head($page);
                     <p class="pr-tag"><?= e($p['tagline']) ?></p>
                 </div>
                 <div class="pr-price">
-<?php if ($p['price'] !== null): ?>
+<?php if ($p['price'] === 0): ?>
+                    <b>Free</b><span>for small teams</span>
+<?php elseif ($p['price'] !== null): ?>
                     <b>&#8377;<span data-pr-count="<?= (int) $p['price'] ?>"><?= number_format($p['price']) ?></span></b><span>per month</span>
 <?php else: ?>
                     <b>On request</b><span>priced on your team size</span>
@@ -121,7 +123,7 @@ $new = !empty($p['base']) ? array_values(array_diff($p['modules'], $prev)) : $p[
                     <tr>
                         <th scope="col"><span class="sr-only">Feature</span></th>
 <?php foreach ($plans as $p): ?>
-                        <th scope="col" class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><b><?= e($p['name']) ?></b><span><?= $p['price'] !== null ? '&#8377;' . number_format($p['price']) . ' / month' : 'On request' ?></span></th>
+                        <th scope="col" class="<?= !empty($p['popular']) ? 'is-popular' : '' ?>"><b><?= e($p['name']) ?></b><span><?= $p['price'] === 0 ? 'Free' : ($p['price'] !== null ? '&#8377;' . number_format($p['price']) . ' / month' : 'On request') ?></span></th>
 <?php endforeach; ?>
                     </tr>
                 </thead>

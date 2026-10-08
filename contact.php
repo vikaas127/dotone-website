@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261011">
-    <script src="/js/header-nav.js?v=20261011" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261012">
+    <script src="/js/header-nav.js?v=20261012" defer></script>
       <link rel="canonical" href="https://dotone.biz/contact">
       <link rel="icon" href="/public/favicon.ico">
       <meta property="og:type" content="website">
@@ -177,11 +177,11 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-text-primary mb-2">Business Email *</label>
-                                    <input type="email" id="email" name="email" required class="input" placeholder="john.smith@company.com">
+                                    <input type="email" id="email" name="email" required class="input" placeholder="name@company.com">
                                 </div>
                                 <div>
                                     <label for="phone" class="block text-sm font-medium text-text-primary mb-2">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required class="input" placeholder="+1 (555) 123-4567">
+                                    <input type="tel" id="phone" name="phone" required class="input" placeholder="+91 98765 43210">
                                 </div>
                             </div>
 
@@ -455,120 +455,33 @@
                     </p>
                 </div>
 
-                <div class="relative">
-                    <!-- Timeline Line -->
-                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-brand opacity-20"></div>
-
-                    <!-- Timeline Items -->
-                    <div class="space-y-12">
-                        <!-- Week 1-2 -->
-                        <div class="relative">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                                    <div class="card p-6 hover-lift">
-                                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-3">
-                                            <span>Week 1-2</span>
-                                        </div>
-                                        <h3 class="text-xl font-display font-semibold mb-2">Discovery & Assessment</h3>
-                                        <p class="text-text-secondary">Initial consultation, requirements gathering, facility assessment, and custom solution design.</p>
-                                    </div>
-                                </div>
-                                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-brand rounded-full items-center justify-center text-white font-bold shadow-lg">
-                                    1
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-                        </div>
-
-                        <!-- Week 3-4 -->
-                        <div class="relative">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-brand rounded-full items-center justify-center text-white font-bold shadow-lg">
-                                    2
-                                </div>
-                                <div class="md:w-1/2 md:pl-12">
-                                    <div class="card p-6 hover-lift">
-                                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-3">
-                                            <span>Week 3-4</span>
-                                        </div>
-                                        <h3 class="text-xl font-display font-semibold mb-2">Infrastructure Setup</h3>
-                                        <p class="text-text-secondary">CCTV integration, network configuration, security implementation, and system architecture deployment.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Week 5-6 -->
-                        <div class="relative">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                                    <div class="card p-6 hover-lift">
-                                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-3">
-                                            <span>Week 5-6</span>
-                                        </div>
-                                        <h3 class="text-xl font-display font-semibold mb-2">AI Training & Calibration</h3>
-                                        <p class="text-text-secondary">Vision AI model training, workflow optimization, accuracy calibration, and performance tuning.</p>
-                                    </div>
-                                </div>
-                                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-brand rounded-full items-center justify-center text-white font-bold shadow-lg">
-                                    3
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-                        </div>
-
-                        <!-- Week 7-8 -->
-                        <div class="relative">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-12"></div>
-                                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-brand rounded-full items-center justify-center text-white font-bold shadow-lg">
-                                    4
-                                </div>
-                                <div class="md:w-1/2 md:pl-12">
-                                    <div class="card p-6 hover-lift">
-                                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-3">
-                                            <span>Week 7-8</span>
-                                        </div>
-                                        <h3 class="text-xl font-display font-semibold mb-2">Team Training & Pilot</h3>
-                                        <p class="text-text-secondary">Comprehensive team training, pilot program launch, feedback collection, and system refinement.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Week 9+ -->
-                        <div class="relative">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
-                                    <div class="card p-6 hover-lift">
-                                        <div class="inline-flex items-center space-x-2 px-3 py-1 bg-success-100 text-success-700 rounded-full text-sm font-medium mb-3">
-                                            <span>Week 9+</span>
-                                        </div>
-                                        <h3 class="text-xl font-display font-semibold mb-2">Full Deployment & Optimization</h3>
-                                        <p class="text-text-secondary">Complete rollout, continuous monitoring, ongoing optimization, and dedicated support.</p>
-                                    </div>
-                                </div>
-                                <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-brand rounded-full items-center justify-center text-white font-bold shadow-lg">
-                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </div>
-                                <div class="md:w-1/2 md:pl-12"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-12">
-                    <p class="text-text-secondary mb-6">Timeline may vary based on facility size and complexity</p>
-                    <a href="/demo" class="btn-primary">
-                        <span>See Implementation in Action</span>
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                        </svg>
-                    </a>
-                </div>
+                <ol class="flow-steps">
+                    <li class="flow-step">
+                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">1</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 1-2</span></div>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Discovery & Assessment</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Initial consultation, requirements gathering, facility assessment, and custom solution design.</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">2</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 3-4</span></div>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Infrastructure Setup</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">CCTV integration, network configuration, security implementation, and system architecture deployment.</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">3</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 5-6</span></div>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">AI Training & Calibration</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Vision AI model training, workflow optimization, accuracy calibration, and performance tuning.</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">4</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 7-8</span></div>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Team Training & Pilot</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Comprehensive team training, pilot program launch, feedback collection, and system refinement.</p>
+                    </li>
+                    <li class="flow-step">
+                        <div class="flex items-center justify-between mb-3"><span class="flow-step-num">5</span><span class="text-xs font-semibold text-primary-700 bg-primary-50 rounded-full px-2.5 py-1">Week 9+</span></div>
+                        <h3 class="text-base font-display font-semibold text-text-primary mb-1">Full Deployment & Optimization</h3>
+                        <p class="text-sm text-text-secondary leading-relaxed">Complete rollout, continuous monitoring, ongoing optimization, and dedicated support.</p>
+                    </li>
+                </ol>
             </div>
         </div>
     </section>

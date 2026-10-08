@@ -31,8 +31,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261011">
-    <script src="/js/header-nav.js?v=20261011" defer></script>
+    <link rel="stylesheet" href="/css/main.css?v=20261012">
+    <script src="/js/header-nav.js?v=20261012" defer></script>
 </head>
 
 <body class="bg-background">

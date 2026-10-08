@@ -10168,3 +10168,4 @@ a.card:hover,
 .hs-agents span:first-child { margin-left: 0; }
 @keyframes hs-agent { 0%, 16%, 100% { background: #F6F9FC; color: #98A2B3; box-shadow: none; } 6% { background: #0096EE; color: #fff; box-shadow: 0 0 0 4px rgba(0, 150, 238, 0.18); } }
 @media (prefers-reduced-motion: reduce) { .hs-weeks i, .hs-mods span, .hs-agents span, .hs-marquee > div { animation: none; } }
+@media (min-width: 640px) { .hs { grid-template-columns: repeat(3, 1fr); max-width: 60rem; } }

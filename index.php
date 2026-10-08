@@ -114,12 +114,6 @@
 
             <div class="hs" data-hs>
                 <div class="hs-card hero-anim" style="--d: 500ms">
-                    <span class="hs-icon"><?= icon('flow', 'w-5 h-5') ?></span>
-                    <div class="hs-value"><span data-count="4">4</span>&ndash;<span data-count="6">6</span> weeks</div>
-                    <div class="hs-label">Typical time to go live</div>
-                    <div class="hs-weeks" aria-hidden="true"><?php for ($w = 1; $w <= 6; $w++): ?><i style="--w: <?= $w ?>"><?= $w ?></i><?php endfor; ?></div>
-                </div>
-                <div class="hs-card hero-anim" style="--d: 600ms">
                     <span class="hs-icon"><?= icon('box', 'w-5 h-5') ?></span>
                     <div class="hs-value"><span data-count="45" data-suffix="+">45+</span> modules</div>
                     <div class="hs-label">From CRM to payroll, on one platform</div>
@@ -129,7 +123,7 @@
 <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="hs-card hero-anim" style="--d: 700ms">
+                <div class="hs-card hero-anim" style="--d: 600ms">
                     <span class="hs-icon"><?= icon('factory', 'w-5 h-5') ?></span>
                     <div class="hs-value"><span data-count="18">18</span> industries</div>
                     <div class="hs-label">Each with its own workflow</div>
@@ -139,7 +133,7 @@
 <?php endforeach; endfor; ?>
                     </div></div>
                 </div>
-                <div class="hs-card hero-anim" style="--d: 800ms">
+                <div class="hs-card hero-anim" style="--d: 700ms">
                     <span class="hs-icon"><?= icon('spark', 'w-5 h-5') ?></span>
                     <div class="hs-value"><span data-count="10">10</span> AI agents</div>
                     <div class="hs-label">Working on your data, with your approval</div>

@@ -322,12 +322,12 @@
   /* ── Light hero (homepage) ── */
   .hero-light {
     @apply relative overflow-hidden bg-white;
-    padding: 8.5rem 0 4rem;
+    padding: 7rem 0 3.5rem;
   }
 
   @media (min-width: 1024px) {
     .hero-light {
-      padding: 10rem 0 5rem;
+      padding: 7.5rem 0 4rem;
     }
   }
 
@@ -387,14 +387,14 @@
 
   .hero-light-title {
     @apply font-display font-semibold mb-6;
-    font-size: clamp(2.1rem, 1.3rem + 2.6vw, 3.6rem);
-    line-height: 1.1;
+    font-size: clamp(2.1rem, 1.4rem + 2vw, 3.25rem);
+    line-height: 1.12;
     letter-spacing: -0.02em;
     text-wrap: balance;
   }
 
   .hero-light-title .text-gradient-shimmer {
-    @apply block mb-1;
+    @apply inline;
   }
 
   .hero-light-sub {
@@ -443,8 +443,8 @@
   }
 
   .hero-network {
-    @apply relative w-full max-w-[600px] mx-auto;
-    padding: 21% 6%;
+    @apply relative w-full max-w-[560px] mx-auto;
+    padding: 17% 5%;
   }
 
   .hero-network-glow {
@@ -510,7 +510,19 @@
   }
 
   .hero-network .hero-agent-step {
-    @apply py-2.5 text-sm;
+    @apply py-2 text-sm;
+  }
+
+  .hero-network .hero-agent-steps {
+    @apply space-y-1.5 mb-3;
+  }
+
+  .hero-network .hero-agent-tools {
+    display: none;
+  }
+
+  .hero-network .hero-agent-done {
+    @apply py-2.5;
   }
 
   .hero-network .hero-agent-prompt {
@@ -1128,6 +1140,132 @@
     .agent-showcase-connectors path {
       animation: none;
     }
+  }
+
+  /* Savings estimate (homepage) */
+  .roi-section {
+    @apply bg-surface;
+  }
+
+  .roi-card {
+    @apply grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] gap-6 lg:gap-10 max-w-5xl mx-auto rounded-3xl border border-border bg-white p-5 sm:p-8 lg:p-10;
+    box-shadow: 0 30px 60px -40px rgba(0, 60, 95, 0.35);
+  }
+
+  .roi-inputs {
+    @apply flex flex-col gap-7 lg:py-2;
+  }
+
+  .roi-field-head {
+    @apply flex items-baseline justify-between gap-4 mb-3;
+  }
+
+  .roi-field-head label {
+    @apply text-sm font-medium text-text-primary;
+  }
+
+  .roi-field-head output {
+    @apply text-base font-semibold text-primary-600 tabular-nums;
+  }
+
+  .roi-field input[type="range"] {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+    background: linear-gradient(90deg, #0096EE 0%, #0096EE var(--fill, 50%), #E4E9F0 var(--fill, 50%), #E4E9F0 100%);
+  }
+
+  .roi-field input[type="range"]:focus {
+    outline: none;
+  }
+
+  .roi-field input[type="range"]:focus-visible {
+    outline: 2px solid #80D1FA;
+    outline-offset: 6px;
+  }
+
+  .roi-field input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-white;
+    border: 2px solid #0096EE;
+    box-shadow: 0 2px 6px rgba(0, 60, 95, 0.25);
+    transition: transform 0.15s ease;
+  }
+
+  .roi-field input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.15);
+  }
+
+  .roi-field input[type="range"]::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-white;
+    border: 2px solid #0096EE;
+    box-shadow: 0 2px 6px rgba(0, 60, 95, 0.25);
+  }
+
+  .roi-result {
+    @apply rounded-2xl p-6 sm:p-8 flex flex-col;
+    background:
+      radial-gradient(ellipse 70% 60% at 100% 0%, rgba(0, 150, 238, 0.22) 0%, transparent 60%),
+      linear-gradient(160deg, #F3FAFE 0%, #E3F3FD 100%);
+    border: 1px solid #D5EBFB;
+  }
+
+  .roi-result-label {
+    @apply text-sm font-medium text-text-secondary;
+  }
+
+  .roi-result-value {
+    @apply font-display font-semibold text-text-primary tabular-nums mt-1;
+    font-size: clamp(2.25rem, 1.6rem + 2.2vw, 3.25rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+
+  .roi-result-sub {
+    @apply text-sm text-text-tertiary mb-6;
+  }
+
+  .roi-bars {
+    @apply space-y-3 mb-6;
+  }
+
+  .roi-bar {
+    @apply grid grid-cols-[7.5rem_1fr_2.75rem] items-center gap-3 text-sm text-text-secondary;
+  }
+
+  .roi-bar b {
+    @apply text-right font-semibold text-text-primary tabular-nums;
+  }
+
+  .roi-bar-track {
+    @apply h-2.5 rounded-full bg-white overflow-hidden;
+  }
+
+  .roi-bar-track i {
+    @apply block h-full rounded-full;
+    background: #9AA9B8;
+    transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .roi-bar--after .roi-bar-track i {
+    background: #0096EE;
+  }
+
+  .roi-breakdown {
+    @apply grid grid-cols-2 gap-3 m-0;
+  }
+
+  .roi-breakdown div {
+    @apply rounded-xl bg-white/80 px-4 py-3;
+  }
+
+  .roi-breakdown dt {
+    @apply text-xs text-text-tertiary;
+  }
+
+  .roi-breakdown dd {
+    @apply m-0 text-lg font-semibold text-text-primary tabular-nums;
+  }
+
+  .roi-note {
+    @apply mt-4 text-xs text-text-tertiary leading-relaxed;
   }
 
   /* Without / With comparison (homepage) */
@@ -3375,8 +3513,22 @@
   }
 
   .factory-ai-fab {
-    @apply fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center gap-3 p-1.5 sm:pl-5 sm:pr-2 sm:py-2 rounded-full;
+    @apply fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center p-1.5 rounded-full;
     @apply bg-white shadow-xl border border-border hover:shadow-2xl transition-shadow;
+  }
+
+  .factory-ai-fab > span:first-child {
+    @apply inline-block overflow-hidden whitespace-nowrap;
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.3s ease, opacity 0.2s ease, margin 0.3s ease;
+  }
+
+  .factory-ai-fab:hover > span:first-child,
+  .factory-ai-fab:focus-visible > span:first-child {
+    max-width: 10rem;
+    opacity: 1;
+    margin: 0 0.75rem 0 1rem;
   }
 
   .section-label {

@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261010">
+    <link rel="stylesheet" href="/css/main.css?v=20261011">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -106,7 +106,7 @@
                         <div class="hero-agent-tools">
                             <span>Inventory</span><span>Purchase</span><span>Warehouse</span><span>WhatsApp</span>
                         </div>
-                        <div class="hero-agent-done"><strong>&#10003; Done</strong> &middot; 4 items below reorder level, indents waiting for approval</div>
+                        <div class="hero-agent-done"><strong>&#10003; Done</strong> &middot; 4 items flagged, indents awaiting approval</div>
                     </div>
                 </div>
             </div>
@@ -471,7 +471,7 @@
 
     <!-- Floating Ask Factory AI -->
     <a href="/demo" class="factory-ai-fab" aria-label="Ask Factory AI">
-        <span class="text-sm font-semibold text-text-primary hidden sm:inline">Ask Factory AI</span>
+        <span class="text-sm font-semibold text-text-primary">Ask Factory AI</span>
         <span class="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
@@ -536,109 +536,55 @@
     </section>
 
     <!-- Interactive ROI Calculator Section -->
-    <section class="section">
+    <section class="section roi-section" id="roi">
         <div class="container-custom">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center space-y-4 mb-12">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold">Calculate Your <span class="text-gradient">ROI</span></h2>
-                    <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                        See how much you could save with Dotone's AI-powered manufacturing intelligence platform
-                    </p>
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="section-label">Savings estimate</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-semibold text-text-primary leading-tight mb-4">What could DotOne save your plant?</h2>
+                <p class="text-lg text-text-secondary">Move the sliders. The estimate updates as you go.</p>
+            </div>
+
+            <div class="roi-card" id="roi-calculator">
+                <div class="roi-inputs">
+                    <div class="roi-field">
+                        <div class="roi-field-head"><label for="roi-workers">Shop floor workers</label><output id="roi-workers-out">250</output></div>
+                        <input type="range" id="roi-workers" min="10" max="2000" step="10" value="250">
+                    </div>
+                    <div class="roi-field">
+                        <div class="roi-field-head"><label for="roi-wage">Average hourly labour cost</label><output id="roi-wage-out">₹70</output></div>
+                        <input type="range" id="roi-wage" min="30" max="400" step="5" value="70">
+                    </div>
+                    <div class="roi-field">
+                        <div class="roi-field-head"><label for="roi-hours">Hours per worker per day</label><output id="roi-hours-out">9</output></div>
+                        <input type="range" id="roi-hours" min="6" max="12" step="1" value="9">
+                    </div>
+                    <div class="roi-field">
+                        <div class="roi-field-head"><label for="roi-eff">Current efficiency</label><output id="roi-eff-out">70%</output></div>
+                        <input type="range" id="roi-eff" min="40" max="95" step="1" value="70">
+                    </div>
+                    <div class="roi-field">
+                        <div class="roi-field-head"><label for="roi-imp">Lost time you expect to recover</label><output id="roi-imp-out">20%</output></div>
+                        <input type="range" id="roi-imp" min="5" max="40" step="1" value="20">
+                    </div>
                 </div>
 
-                <div class="card-elevated p-5 sm:p-8 md:p-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 [&>*]:min-w-0">
-                        <!-- Calculator Inputs -->
-                        <div class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-text-primary mb-2">Number of Workers</label>
-                                <input type="number" id="workers" value="250" min="10" max="10000" class="input">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-text-primary mb-2">Average Hourly Wage (₹)</label>
-                                <input type="number" id="wage" value="25" min="10" max="100" class="input">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-text-primary mb-2">Current Efficiency (%)</label>
-                                <input type="range" id="efficiency" value="70" min="40" max="95" class="w-full">
-                                <div class="flex justify-between text-sm text-text-secondary mt-2">
-                                    <span>40%</span>
-                                    <span id="efficiencyValue" class="font-semibold text-primary-500">70%</span>
-                                    <span>95%</span>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-text-primary mb-2">Operating Hours per Day</label>
-                                <input type="number" id="hours" value="16" min="8" max="24" class="input">
-                            </div>
-                            <button onclick="calculateROI()" class="btn-primary w-full">
-                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
-                                </svg>
-                                Calculate Savings
-                            </button>
-                        </div>
+                <div class="roi-result">
+                    <div class="roi-result-label">Estimated annual savings</div>
+                    <div class="roi-result-value" id="roi-annual">₹28.4 lakh</div>
+                    <div class="roi-result-sub">per year, from labour time recovered</div>
 
-                        <!-- Results Display -->
-                        <div class="space-y-6">
-                            <div class="roi-visual-card" id="roi-visual" aria-hidden="true">
-                                <div class="roi-visual-header">
-                                    <span>Efficiency gain</span>
-                                    <span class="roi-visual-badge">+35%</span>
-                                </div>
-                                <div class="roi-ring-wrap">
-                                    <svg class="roi-ring-svg" viewBox="0 0 120 120">
-                                        <defs>
-                                            <linearGradient id="roiRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                <stop offset="0%" stop-color="#0096EE"/>
-                                                <stop offset="100%" stop-color="#0096EE"/>
-                                            </linearGradient>
-                                        </defs>
-                                        <circle class="roi-ring-bg" cx="60" cy="60" r="52" fill="none" stroke-width="10"/>
-                                        <circle class="roi-ring-fill" cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke="url(#roiRingGrad)" stroke-dasharray="327" stroke-dashoffset="327"/>
-                                    </svg>
-                                    <div class="roi-ring-label">
-                                        <span class="roi-ring-value">35%</span>
-                                        <span class="roi-ring-sub">avg. uplift</span>
-                                    </div>
-                                </div>
-                                <div class="roi-mini-bars">
-                                    <div class="roi-mini-bar"><span>Before</span><div class="roi-mini-track"><div class="roi-mini-fill roi-mini-fill--before" style="--w: 70%"></div></div></div>
-                                    <div class="roi-mini-bar"><span>After Dotone</span><div class="roi-mini-track"><div class="roi-mini-fill roi-mini-fill--after" style="--w: 94%"></div></div></div>
-                                </div>
-                            </div>
-
-                            <div class="bg-gradient-brand rounded-xl p-8 text-white">
-                                <div class="text-sm font-medium opacity-90 mb-2">Estimated Annual Savings</div>
-                                <div class="text-5xl font-bold mb-4" id="annualSavings">₹2,184,000</div>
-                                <div class="text-sm opacity-90">Based on 35% efficiency improvement</div>
-                            </div>
-
-                            <div class="space-y-4">
-                                <div class="flex items-center justify-between p-4 bg-surface rounded-lg">
-                                    <span class="text-text-secondary">Monthly Savings</span>
-                                    <span class="text-xl font-bold text-text-primary" id="monthlySavings">₹182,000</span>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-surface rounded-lg">
-                                    <span class="text-text-secondary">Weekly Savings</span>
-                                    <span class="text-xl font-bold text-text-primary" id="weeklySavings">₹42,000</span>
-                                </div>
-                                <div class="flex items-center justify-between p-4 bg-surface rounded-lg">
-                                    <span class="text-text-secondary">ROI Timeline</span>
-                                    <span class="text-xl font-bold text-success-500">3.2 months</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 bg-primary-50 rounded-lg border border-primary-200">
-                                <div class="flex items-start space-x-3">
-                                    <svg class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <p class="text-sm text-text-secondary">These calculations are based on industry averages. Actual results may vary based on your specific operations.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="roi-bars" aria-hidden="true">
+                        <div class="roi-bar"><span>Efficiency today</span><div class="roi-bar-track"><i id="roi-bar-before" style="width: 70%"></i></div><b id="roi-bar-before-val">70%</b></div>
+                        <div class="roi-bar roi-bar--after"><span>With DotOne</span><div class="roi-bar-track"><i id="roi-bar-after" style="width: 76%"></i></div><b id="roi-bar-after-val">76%</b></div>
                     </div>
+
+                    <dl class="roi-breakdown">
+                        <div><dt>Per month</dt><dd id="roi-monthly">₹2.4 lakh</dd></div>
+                        <div><dt>Hours recovered per year</dt><dd id="roi-hours-saved">40,500</dd></div>
+                    </dl>
+
+                    <a href="/contact" class="btn-hero-glow w-full mt-6">Get a detailed estimate for your plant</a>
+                    <p class="roi-note">Estimate only, based on 300 working days and labour time recovered. Your actual result depends on your processes.</p>
                 </div>
             </div>
         </div>
@@ -1387,56 +1333,23 @@
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261010" defer></script>
-<script src="/js/scroll-animate.js?v=20261010" defer></script>
-<script src="/js/metrics-animate.js?v=20261010" defer></script>
-<script src="/js/scroll-sequence.js?v=20261010" defer></script>
-<script src="/js/customer-stories.js?v=20261010" defer></script>
-<script src="/js/methodology-steps.js?v=20261010" defer></script>
-<script src="/js/workspace-cards.js?v=20261010" defer></script>
-<script src="/js/industries-scroll.js?v=20261010" defer></script>
-<script src="/js/hero-agent.js?v=20261010" defer></script>
-<script src="/js/index-visuals.js?v=20261010" defer></script>
-<script src="/js/platform-tabs.js?v=20261010" defer></script>
+<script src="/js/header-nav.js?v=20261011" defer></script>
+<script src="/js/scroll-animate.js?v=20261011" defer></script>
+<script src="/js/metrics-animate.js?v=20261011" defer></script>
+<script src="/js/scroll-sequence.js?v=20261011" defer></script>
+<script src="/js/customer-stories.js?v=20261011" defer></script>
+<script src="/js/methodology-steps.js?v=20261011" defer></script>
+<script src="/js/workspace-cards.js?v=20261011" defer></script>
+<script src="/js/industries-scroll.js?v=20261011" defer></script>
+<script src="/js/hero-agent.js?v=20261011" defer></script>
+<script src="/js/roi-calculator.js?v=20261011" defer></script>
+<script src="/js/index-visuals.js?v=20261011" defer></script>
+<script src="/js/platform-tabs.js?v=20261011" defer></script>
     <!-- Footer -->
   
 
     <!-- JavaScript -->
     <script>
-        // ROI Calculator
-        function calculateROI() {
-            const workers = parseInt(document.getElementById('workers').value) || 250;
-            const wage = parseFloat(document.getElementById('wage').value) || 25;
-            const efficiency = parseInt(document.getElementById('efficiency').value) || 70;
-            const hours = parseInt(document.getElementById('hours').value) || 16;
-
-            // Calculate current productivity loss
-            const efficiencyGain = 0.35; // 35% improvement
-            const workingDaysPerYear = 260;
-            
-            // Annual calculations
-            const currentProductivityLoss = (100 - efficiency) / 100;
-            const improvedProductivityLoss = currentProductivityLoss * (1 - efficiencyGain);
-            const productivityGainPercentage = currentProductivityLoss - improvedProductivityLoss;
-            
-            const annualSavings = workers * wage * hours * workingDaysPerYear * productivityGainPercentage;
-            const monthlySavings = annualSavings / 12;
-            const weeklySavings = annualSavings / 52;
-
-            // Update display
-            document.getElementById('annualSavings').textContent = '₹' + annualSavings.toLocaleString('en-US', {maximumFractionDigits: 0});
-            document.getElementById('monthlySavings').textContent = '₹' + monthlySavings.toLocaleString('en-US', {maximumFractionDigits: 0});
-            document.getElementById('weeklySavings').textContent = '₹' + weeklySavings.toLocaleString('en-US', {maximumFractionDigits: 0});
-        }
-
-        // Efficiency slider update
-        const efficiencySlider = document.getElementById('efficiency');
-        const efficiencyValue = document.getElementById('efficiencyValue');
-
-        efficiencySlider.addEventListener('input', (e) => {
-            efficiencyValue.textContent = e.target.value + '%';
-        });
-
         // Animated Counter for Metrics
         function animateCounter(element, target, duration = 2000) {
             const start = 0;
@@ -1470,8 +1383,6 @@
             });
         });
 
-        // Initial ROI calculation on page load
-        calculateROI();
     </script>
 
     

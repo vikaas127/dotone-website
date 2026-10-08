@@ -26,7 +26,6 @@
 
   function initIndexVisuals() {
     observeSection('#impact-section', 'is-visual-active');
-    observeSection('#roi-visual', 'is-visible');
   }
 
   if (document.readyState === 'loading') {

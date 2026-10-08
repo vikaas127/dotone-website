@@ -24,8 +24,8 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.biz/#organization","name":"Dotone","url":"https://dotone.biz/","logo":"https://dotone.biz/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.biz/#website","url":"https://dotone.biz/","name":"Dotone","publisher":{"@id":"https://dotone.biz/#organization"},"inLanguage":"en-IN"}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261013">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261014">
 </head>
 <body class="bg-background">
     <!-- Navigation Header -->
@@ -55,58 +55,58 @@
                     </div>
                 </div>
 
-                <div class="hero-network hero-anim" style="--d: 300ms" aria-hidden="true" data-tilt>
-                    <div class="hero-network-glow"></div>
-                    <svg class="hero-network-lines" viewBox="0 0 600 560" preserveAspectRatio="none">
+                <div class="cc hero-anim" style="--d: 300ms" data-cc aria-hidden="true">
+                    <div class="cc-glow"></div>
+                    <svg class="cc-lines cc-depth" data-depth="6" viewBox="0 0 600 600" preserveAspectRatio="none">
                         <defs>
-                            <linearGradient id="netLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="560">
-                                <stop offset="0" stop-color="#80D1FA"/>
+                            <linearGradient id="ccLine" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="600" y2="600">
+                                <stop offset="0" stop-color="#B3E3FC"/>
                                 <stop offset="1" stop-color="#0096EE"/>
                             </linearGradient>
                         </defs>
-                        <path id="net-1" d="M96 40 C 96 90, 170 80, 190 150"/>
-                        <path id="net-2" d="M300 40 L 300 150"/>
-                        <path id="net-3" d="M504 40 C 504 90, 430 80, 410 150"/>
-                        <path id="net-4" d="M96 520 C 96 470, 170 480, 190 410"/>
-                        <path id="net-5" d="M300 520 L 300 410"/>
-                        <path id="net-6" d="M504 520 C 504 470, 430 480, 410 410"/>
-                        <g class="hero-network-pulses">
-                            <circle r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#net-1"/></animateMotion></circle>
-                            <circle r="3.5"><animateMotion dur="2s" repeatCount="indefinite" begin="0.7s"><mpath href="#net-2"/></animateMotion></circle>
-                            <circle r="3.5"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.3s"><mpath href="#net-3"/></animateMotion></circle>
-                            <circle r="3.5"><animateMotion dur="2.5s" repeatCount="indefinite" begin="1.1s"><mpath href="#net-4"/></animateMotion></circle>
-                            <circle r="3.5"><animateMotion dur="2.1s" repeatCount="indefinite" begin="1.5s"><mpath href="#net-5"/></animateMotion></circle>
-                            <circle r="3.5"><animateMotion dur="2.7s" repeatCount="indefinite" begin="0.5s"><mpath href="#net-6"/></animateMotion></circle>
+                        <path id="cc-p-inventory" d="M95 150 Q 190 170 300 235"/>
+                        <path id="cc-p-sales" d="M215 60 Q 240 160 300 235"/>
+                        <path id="cc-p-purchase" d="M385 60 Q 360 160 300 235"/>
+                        <path id="cc-p-production" d="M505 150 Q 410 170 300 235"/>
+                        <path id="cc-p-hrms" d="M75 330 Q 180 300 300 235"/>
+                        <path id="cc-p-finance" d="M525 330 Q 420 300 300 235"/>
+                        <path id="cc-p-out" class="cc-out" d="M300 300 L 300 392"/>
+                        <g class="cc-packets">
+                            <circle r="3"><animateMotion dur="3s" repeatCount="indefinite" begin="0s"><mpath href="#cc-p-inventory"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="3.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#cc-p-sales"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.2s"><mpath href="#cc-p-purchase"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.3s"><mpath href="#cc-p-production"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="3.1s" repeatCount="indefinite" begin="1.8s"><mpath href="#cc-p-hrms"/></animateMotion></circle>
+                            <circle r="3"><animateMotion dur="3.5s" repeatCount="indefinite" begin="0.9s"><mpath href="#cc-p-finance"/></animateMotion></circle>
+                            <circle r="3.5" class="cc-packet-out"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#cc-p-out"/></animateMotion></circle>
                         </g>
                     </svg>
-                    <span class="hero-node" style="left: 16%; top: 7.1%;">Inventory</span>
-                    <span class="hero-node" style="left: 50%; top: 7.1%;">Sales &amp; CRM</span>
-                    <span class="hero-node" style="left: 84%; top: 7.1%;">Purchase</span>
-                    <span class="hero-node" style="left: 16%; top: 92.9%;">Production</span>
-                    <span class="hero-node" style="left: 50%; top: 92.9%;">HRMS &amp; Payroll</span>
-                    <span class="hero-node" style="left: 84%; top: 92.9%;">Finance</span>
 
-                    <div class="hero-agent-card hero-agent-card--window" id="hero-agent-card">
-                        <div class="hero-agent-window-bar">
-                            <span class="hero-agent-window-dots"><i></i><i></i><i></i></span>
-                            <span class="hero-agent-window-title">DotOne Inventory Agent</span>
-                            <span class="hero-agent-live"><i></i>Live</span>
+                    <div class="cc-core cc-depth" data-depth="14">
+                        <svg class="cc-rings" viewBox="0 0 200 200">
+                            <circle class="cc-ring cc-ring--1" cx="100" cy="100" r="92"/>
+                            <circle class="cc-ring cc-ring--2" cx="100" cy="100" r="76"/>
+                            <circle class="cc-ring cc-ring--3" cx="100" cy="100" r="60"/>
+                        </svg>
+                        <div class="cc-core-disc">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="<?= ICONS['spark'] ?>"/></svg>
+                            <span>DotOne Agent</span>
                         </div>
-                        <div class="hero-agent-prompt">
-                            <span class="hero-agent-you">You</span>
-                            <span class="hero-agent-prompt-text" data-text="Which products are below reorder level?"></span><span class="hero-agent-caret"></span>
+                    </div>
+
+<?php foreach ([['inventory', 'Inventory', 'box', 15.8, 25], ['sales', 'Sales &amp; CRM', 'trend', 35.8, 10], ['purchase', 'Purchase', 'cart', 64.2, 10], ['production', 'Production', 'factory', 84.2, 25], ['hrms', 'HRMS', 'id', 12.5, 55], ['finance', 'Finance', 'rupee', 87.5, 55]] as [$k, $label, $ico, $x, $y]): ?>
+                    <div class="cc-node cc-depth" data-depth="20" data-mod="<?= $k ?>" style="left: <?= $x ?>%; top: <?= $y ?>%;">
+                        <span class="cc-node-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="<?= ICONS[$ico] ?>"/></svg></span>
+                        <span class="cc-node-label"><?= $label ?></span>
+                    </div>
+<?php endforeach; ?>
+
+                    <div class="cc-feed cc-depth" data-depth="28">
+                        <div class="cc-card is-in" data-mod="inventory">
+                            <span class="cc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="<?= ICONS['box'] ?>"/></svg></span>
+                            <div class="cc-card-body"><strong>4 items below reorder level</strong><span>Inventory &middot; indents drafted</span></div>
+                            <span class="cc-card-pill">For approval</span>
                         </div>
-                        <ul class="hero-agent-steps">
-                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Reading stock across 3 warehouses</li>
-                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Comparing against reorder levels</li>
-                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Checking open purchase orders</li>
-                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Drafting purchase indents for 4 items</li>
-                            <li class="hero-agent-step"><span class="hero-agent-check"></span>Sending to the purchase manager for approval</li>
-                        </ul>
-                        <div class="hero-agent-tools">
-                            <span>Inventory</span><span>Purchase</span><span>Warehouse</span><span>WhatsApp</span>
-                        </div>
-                        <div class="hero-agent-done"><strong>&#10003; Done</strong> &middot; 4 items flagged, indents awaiting approval</div>
                     </div>
                 </div>
             </div>
@@ -1333,17 +1333,18 @@
     </section>
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
-<script src="/js/header-nav.js?v=20261013" defer></script>
-<script src="/js/metrics-animate.js?v=20261013" defer></script>
-<script src="/js/scroll-sequence.js?v=20261013" defer></script>
-<script src="/js/customer-stories.js?v=20261013" defer></script>
-<script src="/js/methodology-steps.js?v=20261013" defer></script>
-<script src="/js/workspace-cards.js?v=20261013" defer></script>
-<script src="/js/industries-scroll.js?v=20261013" defer></script>
-<script src="/js/hero-agent.js?v=20261013" defer></script>
-<script src="/js/roi-calculator.js?v=20261013" defer></script>
-<script src="/js/index-visuals.js?v=20261013" defer></script>
-<script src="/js/platform-tabs.js?v=20261013" defer></script>
+<script src="/js/header-nav.js?v=20261014" defer></script>
+<script src="/js/metrics-animate.js?v=20261014" defer></script>
+<script src="/js/scroll-sequence.js?v=20261014" defer></script>
+<script src="/js/customer-stories.js?v=20261014" defer></script>
+<script src="/js/methodology-steps.js?v=20261014" defer></script>
+<script src="/js/workspace-cards.js?v=20261014" defer></script>
+<script src="/js/industries-scroll.js?v=20261014" defer></script>
+<script src="/js/hero-agent.js?v=20261014" defer></script>
+<script src="/js/command-centre.js?v=20261014" defer></script>
+<script src="/js/roi-calculator.js?v=20261014" defer></script>
+<script src="/js/index-visuals.js?v=20261014" defer></script>
+<script src="/js/platform-tabs.js?v=20261014" defer></script>
     <!-- Footer -->
   
 

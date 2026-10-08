@@ -23,9 +23,9 @@
     <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261013">
-    <script src="/js/header-nav.js?v=20261013" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="/css/main.css?v=20261014">
+    <script src="/js/header-nav.js?v=20261014" defer></script>
 </head>
 
 <body class="bg-background">
@@ -474,6 +474,6 @@
 
 <div id="footer"><?php include __DIR__ . '/../includes/footer.php'; ?></div>
 
-<script src="/js/bom-guide.js?v=20261013" defer></script>
+<script src="/js/bom-guide.js?v=20261014" defer></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
 const SITE_URL = 'https://dotone.biz';
-const ASSET_VERSION = '20261013';
+const ASSET_VERSION = '20261014';
 
 require_once __DIR__ . '/data/catalog.php';
 
@@ -47,7 +47,7 @@ function render_head(array $page)
     <meta name="twitter:image" content="<?= SITE_URL ?>/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=<?= $v ?>">
     <script src="/js/header-nav.js?v=<?= $v ?>" defer></script>
 <?php render_breadcrumb_schema($page); ?>

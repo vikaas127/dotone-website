@@ -39,7 +39,7 @@
                 <div class="hero-split-copy">
                     <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        <span class="text-gradient-shimmer">AI-Powered</span> Business Management Platform
+                        <span class="text-gradient-shimmer">AI-Powered</span> 360° Business Management Platform
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
                         One connected system for your entire business: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.

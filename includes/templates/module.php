@@ -57,6 +57,11 @@ require_once dirname(__DIR__) . '/showcase/engine.php';
 showcase(ltrim($page['path'], '/'));
 ?>
 
+<?php
+// Feature stories replace the plain capability grid where a page has them
+require_once dirname(__DIR__) . '/stories/engine.php';
+if (!stories(ltrim($page['path'], '/'))):
+?>
 <section class="section bg-white">
     <div class="container-custom">
         <div class="max-w-2xl mb-12">
@@ -74,6 +79,7 @@ showcase(ltrim($page['path'], '/'));
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <section class="section bg-surface">
     <div class="container-custom">
@@ -125,5 +131,5 @@ showcase(ltrim($page['path'], '/'));
 <?php endif; ?>
 
 <?php render_faq($page['faq']); ?>
-<?php render_cta($page['cta_heading'], $page['cta_text']); ?>
+<?php if (!stories_cta(ltrim($page['path'], '/'), $page['cta_heading'], $page['cta_text'])) render_cta($page['cta_heading'], $page['cta_text']); ?>
 <?php render_foot($page); ?>

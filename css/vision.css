@@ -25,7 +25,7 @@
 .vz-scanline { fill: rgba(124, 208, 250, 0.35); animation: vz-scan 3s linear infinite; }
 @keyframes vz-scan { from { transform: translateY(0); } to { transform: translateY(180px); } }
 .vz-walk { animation: vz-walk 6s ease-in-out infinite; }
-@keyframes vz-walk { 50% { transform: translateX(-22px); } }
+@keyframes vz-walk { 50% { transform: translateX(-12px); } }
 .vz-enter { animation: vz-enter 5s ease-in-out infinite; }
 @keyframes vz-enter { 0%, 20% { transform: translate(0, 0); } 60%, 80% { transform: translate(70px, -4px); } 100% { transform: translate(0, 0); } }
 .vz-zone { animation: vz-zone 5s ease-in-out infinite; }

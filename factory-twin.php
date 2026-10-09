@@ -6,7 +6,8 @@ $title = 'Factory Twin: Live 3D Factory with Vision AI and ERP | DotOne';
 $desc = 'Explore a live 3D twin of a demo factory: machines, stock, docks, trucks, people and alerts from DotOne ERP and Vision AI, with a replayable shift timeline.';
 $head = '<title>' . e($title) . '</title>' . "\n"
     . '<meta name="description" content="' . e($desc) . '">' . "\n"
-    . '<link rel="canonical" href="' . SITE_URL . '/factory-twin">' . "\n"
+    . '<meta name="robots" content="noindex, follow">' . "\n"
+    . '<link rel="canonical" href="' . SITE_URL . '/vision-ai">' . "\n"
     . '<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png">' . "\n"
     . '<meta property="og:type" content="website"><meta property="og:site_name" content="DotOne">' . "\n"
     . '<meta property="og:title" content="' . e($title) . '"><meta property="og:description" content="' . e($desc) . '">' . "\n"

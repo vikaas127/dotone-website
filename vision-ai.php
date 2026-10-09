@@ -7,7 +7,7 @@ $page = [
     'title' => 'Vision AI and Computer Vision for Manufacturing | DotOne',
     'description' => 'Turn existing CCTV into a data source: defect detection, safety monitoring and line activity, recorded straight into your ERP.',
     'breadcrumbs' => [['Vision AI', '/vision-ai']],
-    'css' => ['/css/hrms.css', '/css/vision.css'],
+    'css' => ['/css/hrms.css', '/css/vision.css', '/css/vision2.css'],
     'faq' => [
         ['Do we need new cameras?', 'Usually not. Vision AI works with IP cameras, analog cameras through an encoder, and NVR or DVR systems with RTSP access.'],
         ['Where does the data go?', 'Detections are recorded in DotOne against the shift and line, alongside your production, quality and HR records. You can choose cloud or on-premise deployment.'],
@@ -40,8 +40,8 @@ function vz_feed($kind)
             echo '<rect x="20" y="40" width="70" height="60" rx="4" fill="#3E5A80"/><rect x="230" y="30" width="70" height="70" rx="4" fill="#3E5A80"/>';
             echo $person(130, 140, 1.4) . '<path d="M121 85 a9 7 0 0 1 18 0 z" fill="#FFC53D"/>';
             echo '<rect class="vz-box is-ok" x="108" y="78" width="44" height="88" rx="3"/><text class="vz-tag is-ok" x="96" y="73">Helmet ✓ Vest ✓</text>';
-            echo $person(245, 150, 1.3, 'vz-walk');
-            echo '<g class="vz-walk"><rect class="vz-box is-bad" x="225" y="94" width="40" height="78" rx="3"/><text class="vz-tag is-bad" x="225" y="89">No vest</text></g>';
+            echo $person(262, 150, 1.3, 'vz-walk');
+            echo '<g class="vz-walk"><rect class="vz-box is-bad" x="242" y="94" width="40" height="78" rx="3"/><text class="vz-tag is-bad" x="242" y="89">No vest</text></g>';
             break;
         case 'zone':
             echo '<path d="M150 70 L300 60 L310 170 L170 175Z" fill="rgba(240,68,56,0.18)" stroke="#F04438" stroke-dasharray="6 5" class="vz-zone"/>';
@@ -69,94 +69,72 @@ function vz_feed($kind)
 render_head($page);
 ?>
 
-<main class="hr vz">
+<main class="vz2">
 
-<!-- Hero: night sky over the plant, with the camera console rising -->
-<section class="hr-hero vz-hero">
+<!-- Hero: control room, split layout -->
+<section class="vz2-hero">
     <div class="vz-grid-bg" aria-hidden="true"></div>
-    <div class="hr-hero-copy">
-        <?php render_breadcrumbs($page); ?>
-        <span class="hr-eyebrow">DotOne Vision AI</span>
-        <h1>Vision AI for <span>Business Operations</span></h1>
-        <p>Your cameras already watch the floor. Vision AI reads the CCTV you have, spots safety lapses, idle stations and defects, and records each one in DotOne against the right shift and line.</p>
-        <div class="hr-ctas">
-            <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-            <a href="#features" class="hr-btn hr-btn--light">See it in action</a>
+    <div class="container-custom vz2-hero-grid">
+        <div class="vz2-hero-copy">
+            <?php render_breadcrumbs($page); ?>
+            <span class="vz2-tag"><span class="vz-rec"></span>Vision AI · live on your CCTV</span>
+            <h1>Vision AI for <span>Business Operations</span></h1>
+            <p>Your cameras already watch the floor. Vision AI reads the CCTV you have, spots safety lapses, idle stations and defects, and records each one in DotOne against the right shift and line.</p>
+            <div class="vz2-ctas">
+                <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
+                <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory twin</a>
+            </div>
+            <ul class="vz2-points"><li>Works with existing cameras</li><li>Cloud or on-premise</li><li>Every detection becomes a record</li></ul>
         </div>
-    </div>
-    <div class="hr-dash-wrap">
-        <div class="vz-console" role="img" aria-label="Vision AI console with four camera feeds and live detections, demo data">
+        <div class="vz-console vz2-console" role="img" aria-label="Vision AI console with four camera feeds and live detections, demo data">
             <div class="vz-console-top" aria-hidden="true"><b><span class="vz-rec"></span>Plant 1 · live</b><span>4 cameras</span><em>Demo data</em></div>
-            <div class="vz-console-body" aria-hidden="true">
-                <div class="vz-feeds">
+            <div class="vz-feeds" aria-hidden="true">
 <?php foreach ([['ppe', 'CAM 03 · Line 2'], ['zone', 'CAM 07 · Press area'], ['line', 'CAM 11 · Packing'], ['idle', 'CAM 05 · Assembly']] as [$k, $label]): ?>
-                    <div class="vz-feed"><?php vz_feed($k); ?><span class="vz-cam"><i></i><?= $label ?></span></div>
+                <div class="vz-feed"><?php vz_feed($k); ?><span class="vz-cam"><i></i><?= $label ?></span></div>
 <?php endforeach; ?>
-                </div>
-                <div class="vz-alerts">
-                    <small>Live detections</small>
-<?php foreach ([['bad', 'No vest', 'CAM 03 · Line 2 · 10:42'], ['bad', 'Zone entry', 'CAM 07 · Press · 10:39'], ['warn', 'Station idle 12 min', 'CAM 05 · Assembly · 10:31'], ['bad', 'Scratch on part', 'CAM 11 · Packing · 10:28'], ['ok', 'PPE check passed', 'CAM 03 · Line 2 · 10:20']] as $k => [$t, $h, $sub]): ?>
-                    <div class="vz-alert is-<?= $t ?>" style="--i: <?= $k ?>"><i></i><span><b><?= $h ?></b><em><?= $sub ?></em></span></div>
-<?php endforeach; ?>
-                </div>
             </div>
+            <div class="vz2-ticker" aria-hidden="true"><div>
+<?php for ($r = 0; $r < 2; $r++): foreach ([['bad', 'No vest · CAM 03 · 10:42'], ['bad', 'Zone entry · CAM 07 · 10:39'], ['warn', 'Station idle 12 min · CAM 05'], ['bad', 'Scratch on part · CAM 11'], ['ok', 'PPE check passed · CAM 03']] as [$t, $txt]): ?>
+                <span class="is-<?= $t ?>"><i></i><?= $txt ?></span>
+<?php endforeach; endfor; ?>
+            </div></div>
         </div>
     </div>
 </section>
 
-<!-- Why -->
-<section class="hr-why">
+<!-- How a detection flows -->
+<section class="vz2-flow">
     <div class="container-custom">
-        <div class="hr-head">
-            <span class="section-label">Why DotOne Vision AI</span>
-            <h2>Cameras that do more than <span>record</span></h2>
-            <p>Most CCTV footage is only watched after something goes wrong. Vision AI turns it into data your supervisors can act on during the shift.</p>
-        </div>
-        <div class="hr-why-grid">
-<?php
-$why = [
-    ['eye', 'No new cameras in most plants', 'IP, PTZ, analog and NVR or DVR systems connect, so you start with the cameras already on the walls.'],
-    ['bell', 'Alerts while it still matters', 'Supervisors hear about a missed vest or an entered zone during the shift, with a snapshot to see what happened.'],
-    ['flow', 'Records, not just footage', 'Every detection becomes an entry in DotOne against the shift, line and job, next to production and quality data.'],
-    ['shield', 'Your data, your rules', 'Cloud or on-premise, role-based access, encryption, audit logs and retention you set.'],
-];
-foreach ($why as $k => [$ico, $t, $d]):
-    if ($k === 2): ?>
-            <div class="hr-why-art vz-why-art" aria-hidden="true">
-                <div class="hr-orbit"><i></i><i></i></div>
-                <span class="hr-core vz-eye"><?= icon('eye', 'w-10 h-10') ?></span>
-<?php foreach (['shield', 'users', 'eye', 'chart', 'bell', 'factory'] as $o => $oi): ?>
-                <span class="hr-sat" style="--o: <?= $o ?>"><?= icon($oi, 'w-5 h-5') ?></span>
-<?php endforeach; ?>
-            </div>
-<?php endif; ?>
-            <div class="hr-why-item">
-                <span class="hr-why-ico"><?= icon($ico, 'w-5 h-5') ?></span>
-                <h3><?= e($t) ?></h3>
-                <p><?= e($d) ?></p>
-            </div>
+        <div class="vz2-flow-row">
+<?php foreach ([['eye', 'Camera sees', 'Existing CCTV streams over RTSP'], ['spark', 'Vision AI checks', 'PPE, zones, idle stations, defects'], ['bell', 'Supervisor alerted', 'With a snapshot, during the shift'], ['flow', 'DotOne records it', 'Against the shift, line and job']] as $n => [$ico, $t, $d]): ?>
+            <div class="vz2-step" style="--i: <?= $n ?>"><span><?= icon($ico, 'w-5 h-5') ?></span><b><?= $t ?></b><small><?= $d ?></small></div>
+<?php if ($n < 3): ?><i class="vz2-link" aria-hidden="true"><em></em></i><?php endif; ?>
 <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- Feature panels -->
-<section class="hr-features" id="features">
-    <div class="container-custom hr-feat-grid">
-        <nav class="hr-feat-nav" aria-label="Vision AI features">
-            <span class="section-label">What it watches</span>
+<!-- Tabbed camera wall -->
+<section class="vz2-tabs" id="features" data-vz-tabs>
+    <div class="container-custom">
+        <div class="vz2-head">
+            <span class="vz2-kicker">What it watches</span>
+            <h2>One system, six jobs your cameras can do</h2>
+        </div>
+        <div class="vz2-tablist" role="tablist" aria-label="Vision AI features">
 <?php foreach ($features as $k => [$key, $name]): ?>
-            <a href="#<?= $key ?>" class="<?= $k === 0 ? 'is-active' : '' ?>" data-hr-link="<?= $key ?>"><?= e($name) ?><i></i></a>
+            <button type="button" role="tab" class="<?= $k === 0 ? 'is-active' : '' ?>" aria-selected="<?= $k === 0 ? 'true' : 'false' ?>" data-vz-tab="<?= $key ?>"><?= e($name) ?></button>
 <?php endforeach; ?>
-        </nav>
-        <div class="hr-feat-list">
-<?php foreach ($features as $k => [$key, $name, $h, $text, $scene]): ?>
-            <article class="hr-feat hr-scene--<?= $scene ?>" id="<?= $key ?>" data-hr-panel="<?= $key ?>">
-                <div class="hr-scene" aria-hidden="true"><i class="hr-s1"></i><i class="hr-s2"></i><i class="hr-s3"></i></div>
-                <span class="hr-feat-label"><?= e($name) ?></span>
+        </div>
+<?php foreach ($features as $k => [$key, $name, $h, $text]): ?>
+        <div class="vz2-panel hr-feat<?= $k === 0 ? ' is-active is-in' : '' ?>" role="tabpanel" id="<?= $key ?>" data-vz-panel="<?= $key ?>"<?= $k === 0 ? '' : ' hidden' ?>>
+            <div class="vz2-panel-copy">
+                <span class="vz2-num">0<?= $k + 1 ?></span>
                 <h3><?= e($h) ?></h3>
                 <p><?= e($text) ?></p>
-                <div class="hr-mock" aria-hidden="true">
+                <a href="/demo" class="vz2-link-cta">Book a Technical Consultation &rarr;</a>
+            </div>
+            <div class="hr-mock vz2-mock" aria-hidden="true">
 <?php switch ($key):
     case 'safety': ?>
                     <div class="hr-win vz-win"><div class="hr-win-bar"><i></i><i></i><i></i><b>CAM 03 · Line 2</b><em><span class="vz-rec"></span>Live</em></div><div class="vz-big"><?php vz_feed('ppe'); ?></div></div>
@@ -200,68 +178,66 @@ foreach ($why as $k => [$ico, $t, $d]):
                         </div>
                     </div>
 <?php break; endswitch; ?>
-                </div>
-                <a href="/demo" class="hr-btn hr-btn--primary hr-feat-cta">Book a Technical Consultation</a>
-            </article>
-<?php endforeach; ?>
+            </div>
         </div>
+<?php endforeach; ?>
     </div>
 </section>
 
-<!-- Benefit rows -->
-<section class="hr-benefits">
+<!-- Factory twin, live on the page -->
+<section class="vz2-twin" id="twin">
     <div class="container-custom">
-        <div class="hr-benefit">
-            <div class="hr-benefit-copy">
-                <span class="hr-kicker">Act during the shift</span>
-                <h2>Fewer surprises at the end of the day</h2>
-                <p>Lapses, idle stations and defects reach the right person while there is still time to fix them.</p>
-                <ul class="hr-ticks"><li>Alerts with a snapshot, not hours of footage</li><li>Idle time logged as production downtime</li><li>Rejections recorded in the quality record</li></ul>
-                <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-            </div>
-            <div class="hr-benefit-art hr-art--cool" aria-hidden="true">
-                <div class="vz-phone">
-                    <b>Alerts · today</b>
-<?php foreach ([['bad', 'No vest · Line 2', '10:42'], ['warn', 'Station S4 idle', '10:31'], ['bad', 'Zone entry · Press', '10:39']] as $k => [$t, $h, $tm]): ?>
-                    <div class="vz-alert is-<?= $t ?>" style="--i: <?= $k ?>"><i></i><span><b><?= $h ?></b><em><?= $tm ?></em></span></div>
-<?php endforeach; ?>
-                </div>
-                <div class="hr-float hr-float--b"><span class="hr-dot-ok">&#10003;</span><div><b>Resolved on the floor</b><small>Supervisor confirmed at 10:45</small></div></div>
+        <div class="vz2-head">
+            <span class="vz2-kicker">Try it live</span>
+            <h2>A whole factory in 3D, running on Vision AI and DotOne</h2>
+            <p class="vz2-lead">Machines, stock, docks, trucks, people and alerts in one live view, with a shift timeline you can replay. Drag to look around, pick an area, or speed up time.</p>
+        </div>
+        <div class="vz2-twin-frame" data-vz-twin>
+            <div class="vz2-twin-bar"><span class="hr-win-bar-dots"><i></i><i></i><i></i></span><b>DotOne · Factory twin</b><em>Demo factory · interactive</em><a href="/factory-twin" target="_blank" rel="noopener">Full screen &#8599;</a></div>
+            <div class="vz2-twin-stage">
+                <img src="/images/factory-twin.webp" alt="DotOne factory twin: a 3D demo factory with machine, stock and dock panels" width="1440" height="900" loading="lazy">
+                <button type="button" class="vz2-twin-start" data-vz-twin-start><span class="vz2-play">&#9654;</span>Start the live factory twin</button>
             </div>
         </div>
-        <div class="hr-benefit hr-benefit--flip">
-            <div class="hr-benefit-copy">
-                <span class="hr-kicker">Real insight</span>
-                <h2>See where the floor needs help</h2>
-                <p>History by camera, shift and line shows where lapses repeat and where stations sit idle.</p>
-                <ul class="hr-ticks"><li>Safety lapses by line and shift</li><li>Station utilisation over the week</li><li>Defect reasons by product and line</li></ul>
-                <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-            </div>
-            <div class="hr-benefit-art hr-art--warm" aria-hidden="true">
-                <div class="hr-insight">
-                    <b>This week</b>
-                    <div><span><small>Lapses</small><em>5</em></span><span><small>Idle hours</small><em>14</em></span><span><small>Rejections</small><em>31</em></span></div>
-                    <div class="hr-line"><svg viewBox="0 0 200 60" preserveAspectRatio="none"><path d="M0 12 C30 16 40 24 70 22 S120 34 140 36 170 44 200 48"/></svg></div>
-                </div>
-            </div>
+        <p class="ps-demo">Demo factory and demo data. Works best on a laptop or desktop.</p>
+    </div>
+</section>
+
+<!-- Why: four cards -->
+<section class="vz2-why">
+    <div class="container-custom">
+        <div class="vz2-head vz2-head--light">
+            <span class="vz2-kicker">Why DotOne Vision AI</span>
+            <h2>Cameras that do more than record</h2>
+        </div>
+        <div class="vz2-why-grid">
+<?php foreach ([
+    ['eye', 'No new cameras in most plants', 'IP, PTZ, analog and NVR or DVR systems connect, so you start with the cameras already on the walls.'],
+    ['bell', 'Alerts while it still matters', 'Supervisors hear about a missed vest or an entered zone during the shift, with a snapshot to see what happened.'],
+    ['flow', 'Records, not just footage', 'Every detection becomes an entry in DotOne against the shift, line and job, next to production and quality data.'],
+    ['shield', 'Your data, your rules', 'Cloud or on-premise, role-based access, encryption, audit logs and retention you set.'],
+] as $k => [$ico, $t, $d]): ?>
+            <div class="vz2-card" style="--i: <?= $k ?>"><span><?= icon($ico, 'w-5 h-5') ?></span><h3><?= e($t) ?></h3><p><?= e($d) ?></p></div>
+<?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- AI layer -->
-<section class="hr-ai">
-    <div class="hr-stars" aria-hidden="true"></div>
-    <div class="hr-planet" aria-hidden="true"></div>
-    <div class="hr-ai-orb vz-orb" aria-hidden="true"><?= icon('eye', 'w-16 h-16') ?><span>VISION AI</span></div>
-    <div class="hr-ai-copy">
-        <h2>Agents that read what the cameras see</h2>
-        <p>The Quality AI Agent spots rejection patterns by machine, shift and vendor, and the Production AI Agent sees idle stations next to job cards and machine status.</p>
-        <div class="hr-ai-qs">
-<?php foreach (['Which line had the most PPE lapses this week?', 'Show rejections from CAM 11 by reason.', 'Which stations were idle longest on Shift B?'] as $q): ?>
-            <span><?= e($q) ?></span>
-<?php endforeach; ?>
+<!-- Agents -->
+<section class="vz2-agents">
+    <div class="container-custom vz2-agents-grid">
+        <div>
+            <span class="vz2-kicker">With AI agents</span>
+            <h2>Ask what the cameras saw</h2>
+            <p>The Quality AI Agent spots rejection patterns by machine, shift and vendor, and the Production AI Agent sees idle stations next to job cards and machine status.</p>
+            <a href="/ai-agents/quality" class="hr-btn hr-btn--primary">Meet the Quality AI Agent</a>
         </div>
-        <a href="/ai-agents/quality" class="hr-btn hr-btn--light">Meet the Quality AI Agent</a>
+        <div class="vz2-chat">
+<?php foreach ([['you', 'Which line had the most PPE lapses this week?'], ['bot', 'Line 2, with 9 lapses. Most were on Shift C, near the press area.'], ['you', 'Which stations were idle longest on Shift B?'], ['bot', 'S4 and S11, about 40 minutes each. Both waited for material.']] as $n => [$who, $txt]): ?>
+            <div class="vz2-bubble is-<?= $who ?>" style="--i: <?= $n ?>"><?= e($txt) ?></div>
+<?php endforeach; ?>
+            <small>Demo answers</small>
+        </div>
     </div>
 </section>
 
@@ -278,45 +254,21 @@ foreach ($why as $k => [$ico, $t, $d]):
 
 <?php render_faq($page['faq']); ?>
 
-<section class="hr-end">
-    <div class="hr-end-copy">
+<!-- Closing: viewfinder -->
+<section class="vz2-end">
+    <div class="vz-grid-bg" aria-hidden="true"></div>
+    <div class="vz2-frame" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="vz-rec"></span><em>REC · Your floor</em></div>
+    <div class="vz2-end-copy">
         <h2>See Vision AI on your own floor</h2>
         <p>Book a technical consultation. We review your cameras and network and pick the first use case with you.</p>
-        <div class="hr-ctas">
+        <div class="vz2-ctas vz2-ctas--center">
             <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-            <a href="/walkthrough" class="hr-btn hr-btn--light">Watch an order flow</a>
+            <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory twin</a>
         </div>
-    </div>
-    <div class="hr-end-scene" aria-hidden="true" data-hr-end>
-        <i class="hr-end-glow"></i>
-        <i class="hr-end-rays"></i>
-        <span class="hr-cloud hr-end-cloud hr-end-cloud--1"></span><span class="hr-cloud hr-end-cloud hr-end-cloud--2"></span><span class="hr-cloud hr-end-cloud hr-end-cloud--3"></span>
-        <svg class="hr-birds" viewBox="0 0 120 40"><path d="M2 20 q6 -8 12 0 q6 -8 12 0"/><path d="M40 10 q5 -6 10 0 q5 -6 10 0"/><path d="M78 26 q4 -5 8 0 q4 -5 8 0"/></svg>
-        <span class="hr-end-word"><span>dotone</span></span>
-        <svg class="hr-land" viewBox="0 0 1440 420" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="wv0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9E8FC"/><stop offset="1" stop-color="#A9DAF8"/></linearGradient>
-                <linearGradient id="wv1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CCDF5"/><stop offset="1" stop-color="#5FB6EE"/></linearGradient>
-                <linearGradient id="wv2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3FA6EC"/><stop offset="1" stop-color="#1C8BDB"/></linearGradient>
-                <linearGradient id="wv3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F6FC0"/><stop offset="1" stop-color="#0A5FA8"/></linearGradient>
-                <linearGradient id="wv4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A4C8C"/><stop offset="1" stop-color="#083D72"/></linearGradient>
-            </defs>
-            <g class="hl" style="--d: 0.15"><path class="wv" style="--dur: 38s" fill="url(#wv0)" d="M0 230 Q180.0 204 360.0 230 T720 230 T1080 230 T1440 230 T1800 230 T2160 230 T2520 230 T2880 230 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.35"><path class="wv" style="--dur: 30s" fill="url(#wv1)" d="M0 270 Q180.0 240 360.0 270 T720 270 T1080 270 T1440 270 T1800 270 T2160 270 T2520 270 T2880 270 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.6"><path class="wv" style="--dur: 24s" fill="url(#wv2)" d="M0 310 Q180.0 276 360.0 310 T720 310 T1080 310 T1440 310 T1800 310 T2160 310 T2520 310 T2880 310 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.85"><path class="wv" style="--dur: 18s" fill="url(#wv3)" d="M0 352 Q180.0 322 360.0 352 T720 352 T1080 352 T1440 352 T1800 352 T2160 352 T2520 352 T2880 352 V420 H0Z"/></g>
-            <g class="hl" style="--d: 1"><path class="wv" style="--dur: 14s" fill="url(#wv4)" d="M0 392 Q180.0 370 360.0 392 T720 392 T1080 392 T1440 392 T1800 392 T2160 392 T2520 392 T2880 392 V420 H0Z"/></g>
-        </svg>
-        <div class="hr-chips">
-<?php foreach ([['shield', 'Safety', 14, 62], ['users', 'Activity', 30, 72], ['eye', 'Defects', 48, 66], ['chart', 'Trends', 66, 74], ['bell', 'Alerts', 84, 64]] as $c => [$ico, $lbl, $x, $y]): ?>
-            <span class="hr-chip" style="left: <?= $x ?>%; top: <?= $y ?>%; --c: <?= $c ?>"><?= icon($ico, 'w-4 h-4') ?><?= $lbl ?></span>
-<?php endforeach; ?>
-        </div>
-        <div class="hr-sparks"><?php for ($k = 0; $k < 14; $k++): ?><i style="--k: <?= $k ?>; left: <?= 4 + ($k * 37) % 92 ?>%; bottom: <?= 10 + ($k * 23) % 45 ?>%"></i><?php endfor; ?></div>
     </div>
 </section>
 
 </main>
 
-<script src="/js/hrms.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/vision.js?v=<?= ASSET_VERSION ?>" defer></script>
 <?php render_foot($page); ?>

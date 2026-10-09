@@ -7,7 +7,7 @@ $page = [
     'title' => 'AI-Powered ERP Software | ERP + AI Agents | DotOne',
     'description' => 'ERP data, AI agents and analytics in one system. Ask questions in plain language, get exceptions flagged and reports generated from live ERP data.',
     'breadcrumbs' => [['AI-Powered ERP', '/ai-powered-erp']],
-    'css' => ['/css/hrms.css', '/css/vision.css', '/css/aierp.css'],
+    'css' => ['/css/hrms.css', '/css/vision.css', '/css/aierp.css', '/css/aierp2.css'],
     'faq' => [
         ['What is AI-powered ERP?', 'An ERP where AI works on the business data itself: answering questions in plain language, spotting exceptions, forecasting and preparing actions, rather than only storing records for people to analyse.'],
         ['Is our data used to train public AI models?', 'Your ERP data stays in your DotOne account and is accessed only within the roles and permissions you set. See our [security page](/security) for how data is protected.'],
@@ -28,21 +28,22 @@ $features = [
 render_head($page);
 ?>
 
-<main class="hr vz ai">
+<main class="ai2">
 
-<section class="hr-hero vz-hero ai-hero">
-    <div class="vz-grid-bg" aria-hidden="true"></div>
-    <div class="hr-hero-copy">
-        <?php render_breadcrumbs($page); ?>
-        <span class="hr-eyebrow">ERP + AI agents</span>
-        <h1>AI-Powered ERP Software <span>for Modern Businesses</span></h1>
-        <p>Adding a chatbot to an ERP does not make it intelligent. In DotOne, AI agents work directly on your ERP data: they find exceptions, build the report and prepare the next step, within the permissions you set.</p>
-        <div class="hr-ctas">
-            <a href="/demo" class="hr-btn hr-btn--primary">Book a Demo</a>
-            <a href="#features" class="hr-btn hr-btn--light">See the agents work</a>
+<!-- Hero: light, split, chat on the right -->
+<section class="ai2-hero">
+    <i class="ai2-blob ai2-blob--1" aria-hidden="true"></i><i class="ai2-blob ai2-blob--2" aria-hidden="true"></i>
+    <div class="container-custom ai2-hero-grid">
+        <div class="ai2-hero-copy">
+            <?php render_breadcrumbs($page); ?>
+            <span class="ai2-pill"><?= icon('spark', 'w-4 h-4') ?>ERP + AI agents</span>
+            <h1>AI-Powered ERP Software <span>for Modern Businesses</span></h1>
+            <p>Adding a chatbot to an ERP does not make it intelligent. In DotOne, AI agents work directly on your ERP data: they find exceptions, build the report and prepare the next step, within the permissions you set.</p>
+            <div class="ai2-ctas">
+                <a href="/demo" class="hr-btn hr-btn--primary">Book a Demo</a>
+                <a href="#how" class="ai2-text-link">See how the agents work &darr;</a>
+            </div>
         </div>
-    </div>
-    <div class="hr-dash-wrap">
         <div class="vz-console ai-console" role="img" aria-label="Inventory AI Agent answering a stock question with a table and an approval button, demo data">
             <div class="vz-console-top" aria-hidden="true"><b><span class="ai-live"></span>Inventory AI Agent</b><span>Reading live ERP data</span><em>Demo data</em></div>
             <div class="ai-console-body" aria-hidden="true">
@@ -70,59 +71,34 @@ render_head($page);
                 </div>
             </div>
         </div>
+        </div>
+</section>
+
+<!-- Agents marquee -->
+<section class="ai2-marquee" aria-label="DotOne AI agents">
+    <div class="ai2-marquee-track">
+<?php for ($r = 0; $r < 2; $r++): foreach (AGENTS as $slug => $a): ?>
+        <a href="/ai-agents/<?= e($slug) ?>"<?= $r ? ' tabindex="-1" aria-hidden="true"' : '' ?>><?= icon($a['icon'], 'w-4 h-4') ?><?= e($a['name']) ?></a>
+<?php endforeach; endfor; ?>
     </div>
 </section>
 
-<section class="hr-why">
+<!-- Zig-zag features -->
+<section class="ai2-rows" id="how">
     <div class="container-custom">
-        <div class="hr-head">
-            <span class="section-label">Why AI-powered ERP</span>
-            <h2>The difference is <span>who does the analysis</span></h2>
+        <div class="ai2-head">
+            <span class="ai2-kicker">How the agents work</span>
+            <h2>The difference is who does the analysis</h2>
             <p>In a traditional ERP, people dig through screens to find what matters. In DotOne, agents do the digging and people make the decisions.</p>
         </div>
-        <div class="hr-why-grid">
-<?php
-$why = [
-    ['chat', 'Questions, not filters', 'Managers ask in plain language and get answers from live data, without building a report first.'],
-    ['bell', 'Exceptions come to you', 'Agents watch every module and raise only what needs a decision, before it turns into a problem.'],
-    ['flow', 'Advice turns into action', 'An agent’s recommendation becomes a draft indent, reminder or report that you approve in one step.'],
-    ['shield', 'Inside your permissions', 'Agents see and do only what their role allows. Data stays in your account and every action is logged.'],
-];
-foreach ($why as $k => [$ico, $t, $d]):
-    if ($k === 2): ?>
-            <div class="hr-why-art" aria-hidden="true">
-                <div class="hr-orbit"><i></i><i></i></div>
-                <span class="hr-core"><img src="/assets/dotone-mark-white.png" alt="" width="160" height="142"></span>
-<?php foreach (['box', 'trend', 'cart', 'factory', 'rupee', 'shield'] as $o => $oi): ?>
-                <span class="hr-sat" style="--o: <?= $o ?>"><?= icon($oi, 'w-5 h-5') ?></span>
-<?php endforeach; ?>
-            </div>
-<?php endif; ?>
-            <div class="hr-why-item">
-                <span class="hr-why-ico"><?= icon($ico, 'w-5 h-5') ?></span>
-                <h3><?= e($t) ?></h3>
-                <p><?= e($d) ?></p>
-            </div>
-<?php endforeach; ?>
-        </div>
-    </div>
-</section>
-
-<section class="hr-features" id="features">
-    <div class="container-custom hr-feat-grid">
-        <nav class="hr-feat-nav" aria-label="AI-powered ERP features">
-            <span class="section-label">How the agents work</span>
-<?php foreach ($features as $k => [$key, $name]): ?>
-            <a href="#<?= $key ?>" class="<?= $k === 0 ? 'is-active' : '' ?>" data-hr-link="<?= $key ?>"><?= e($name) ?><i></i></a>
-<?php endforeach; ?>
-        </nav>
-        <div class="hr-feat-list">
-<?php foreach ($features as $k => [$key, $name, $h, $text, $scene]): ?>
-            <article class="hr-feat hr-scene--<?= $scene ?>" id="<?= $key ?>" data-hr-panel="<?= $key ?>">
-                <div class="hr-scene" aria-hidden="true"><i class="hr-s1"></i><i class="hr-s2"></i><i class="hr-s3"></i></div>
-                <span class="hr-feat-label"><?= e($name) ?></span>
+<?php foreach ($features as $k => [$key, $name, $h, $text]): ?>
+        <article class="ai2-row hr-feat<?= $k % 2 ? ' ai2-row--flip' : '' ?>" id="<?= $key ?>" data-hr-panel="<?= $key ?>">
+            <div class="ai2-row-copy">
+                <span class="ai2-step"><?= sprintf('%02d', $k + 1) ?> · <?= e($name) ?></span>
                 <h3><?= e($h) ?></h3>
                 <p><?= e($text) ?></p>
+            </div>
+            <div class="ai2-row-art">
                 <div class="hr-mock" aria-hidden="true">
 <?php switch ($key):
     case 'ask': ?>
@@ -178,108 +154,72 @@ foreach ($why as $k => [$ico, $t, $d]):
                     <div class="hr-float hr-float--r"><span class="hr-dot-ok">&#10003;</span><div><b>Audit log</b><small>Every agent action recorded</small></div></div>
 <?php break; endswitch; ?>
                 </div>
-                <a href="/demo" class="hr-btn hr-btn--primary hr-feat-cta">Book a Demo</a>
-            </article>
+            </div>
+        </article>
 <?php endforeach; ?>
-        </div>
     </div>
 </section>
 
-<section class="hr-benefits">
+<!-- Before / after -->
+<section class="ai2-compare">
     <div class="container-custom">
-        <div class="hr-benefit">
-            <div class="hr-benefit-copy">
-                <span class="hr-kicker">Save time</span>
-                <h2>Five steps become one question</h2>
-                <p>In a traditional ERP you open the module, filter, build the report, analyse it and then decide. In DotOne you ask the agent.</p>
-                <ul class="hr-ticks"><li>Answers from live data, not last month’s export</li><li>Exceptions raised before anyone has to look</li><li>The report and next step prepared for you</li></ul>
-                <a href="/demo" class="hr-btn hr-btn--primary">Book a Demo</a>
-            </div>
-            <div class="hr-benefit-art hr-art--warm" aria-hidden="true">
-                <div class="ai-compare">
-                    <div class="ai-old"><b>Traditional ERP</b><?php foreach (['Open the module', 'Filter the data', 'Build a report', 'Analyse it', 'Decide'] as $n => $st): ?><span style="--i: <?= $n ?>"><?= $n + 1 ?>. <?= $st ?></span><?php endforeach; ?></div>
-                    <div class="ai-new"><b>DotOne</b><span class="ai-one"><?= icon('chat', 'w-4 h-4') ?>Ask the agent</span><em>&#10003; Report and next step ready</em></div>
-                </div>
-            </div>
+        <div class="ai2-head ai2-head--center">
+            <span class="ai2-kicker">Save time</span>
+            <h2>Five steps become one question</h2>
         </div>
-        <div class="hr-benefit hr-benefit--flip">
-            <div class="hr-benefit-copy">
-                <span class="hr-kicker">Stay in control</span>
-                <h2>AI that asks before it acts</h2>
-                <p>Agents work within the roles you set. Anything that changes data can require a person’s approval, and every action is logged.</p>
-                <ul class="hr-ticks"><li>Role-based access for every agent</li><li>Approval before data changes</li><li>Data stays in your DotOne account</li></ul>
-                <a href="/security" class="hr-btn hr-btn--primary">How we protect data</a>
-            </div>
-            <div class="hr-benefit-art hr-art--cool" aria-hidden="true">
-                <div class="vz-phone">
-                    <b>Waiting for you</b>
-<?php foreach ([['warn', 'Approve 4 purchase indents', 'Inventory AI Agent'], ['warn', 'Send 3 payment reminders', 'Finance AI Agent'], ['ok', 'Weekly MIS shared', 'Reporting AI Agent']] as $n => [$t, $hh, $sub]): ?>
-                    <div class="vz-alert is-<?= $t ?>" style="--i: <?= $n ?>"><i></i><span><b><?= $hh ?></b><em><?= $sub ?></em></span></div>
+        <div class="ai2-vs">
+            <div class="ai2-vs-old">
+                <b>Traditional ERP</b>
+<?php foreach (['Open the inventory module', 'Filter the data', 'Build a report', 'Analyse it', 'Decide what to do'] as $n => $st): ?>
+                <span style="--i: <?= $n ?>"><em><?= $n + 1 ?></em><?= $st ?></span>
 <?php endforeach; ?>
-                </div>
-                <div class="hr-float hr-float--b"><span class="hr-dot-ok">&#10003;</span><div><b>Approved by you</b><small>Indents raised at 10:48</small></div></div>
+            </div>
+            <span class="ai2-vs-badge">vs</span>
+            <div class="ai2-vs-new">
+                <b>DotOne</b>
+                <div class="ai2-ask"><?= icon('chat', 'w-5 h-5') ?>“Which items will run out this week?”</div>
+                <ul><li>Exceptions found</li><li>Report generated</li><li>Indents drafted for approval</li></ul>
             </div>
         </div>
     </div>
 </section>
 
-<section class="hr-ai">
-    <div class="hr-stars" aria-hidden="true"></div>
-    <div class="hr-planet" aria-hidden="true"></div>
-    <div class="hr-ai-orb" aria-hidden="true"><img src="/assets/dotone-mark-white.png" alt="" width="160" height="142"><span>AI</span></div>
-    <div class="hr-ai-copy">
-        <h2>Meet the agents</h2>
-        <p>Each agent looks after one area of the business and sees related records across modules.</p>
-        <div class="ai-agents">
+<!-- Agents grid -->
+<section class="ai2-agents">
+    <div class="container-custom">
+        <div class="ai2-head ai2-head--center">
+            <span class="ai2-kicker">Meet the agents</span>
+            <h2>One agent for each area of the business</h2>
+            <p>Each agent looks after one area and sees related records across modules.</p>
+        </div>
+        <div class="ai2-agent-grid">
 <?php foreach (AGENTS as $slug => $a): ?>
-            <a href="/ai-agents/<?= e($slug) ?>" class="ai-agent-chip"><?= icon($a['icon'], 'w-4 h-4') ?><?= e($a['name']) ?></a>
+            <a href="/ai-agents/<?= e($slug) ?>" class="ai2-agent-card"><span><?= icon($a['icon'], 'w-5 h-5') ?></span><b><?= e($a['name']) ?></b><small><?= e($a['summary']) ?></small><em>Meet the agent &rarr;</em></a>
 <?php endforeach; ?>
         </div>
-        <a href="/ai-agents" class="hr-btn hr-btn--light">See all AI agents</a>
     </div>
 </section>
 
 <?php render_faq($page['faq']); ?>
 
-<section class="hr-end">
-    <div class="hr-end-copy">
+<!-- Closing: blue band with floating questions -->
+<section class="ai2-end">
+    <div class="ai2-end-qs" aria-hidden="true">
+<?php foreach (['Which orders may miss dispatch?', 'Who has not paid in 60 days?', 'Show this week’s MIS', 'Which vendor is cheapest?', 'What is below reorder level?', 'Which batch failed QC?'] as $n => $q): ?>
+        <span style="--n: <?= $n ?>"><?= e($q) ?></span>
+<?php endforeach; ?>
+    </div>
+    <div class="ai2-end-copy">
         <h2>See AI-powered ERP on your own data</h2>
         <p>In a 30-minute demo we connect the agents to a sample of your data and ask the questions your managers ask every week.</p>
-        <div class="hr-ctas">
-            <a href="/demo" class="hr-btn hr-btn--primary">Book a Demo</a>
-            <a href="/walkthrough" class="hr-btn hr-btn--light">Watch an order flow</a>
+        <div class="ai2-ctas ai2-ctas--center">
+            <a href="/demo" class="hr-btn ai2-btn-white">Book a Demo</a>
+            <a href="/ai-agents" class="ai2-btn-line">See all AI agents</a>
         </div>
-    </div>
-    <div class="hr-end-scene" aria-hidden="true" data-hr-end>
-        <i class="hr-end-glow"></i>
-        <i class="hr-end-rays"></i>
-        <span class="hr-cloud hr-end-cloud hr-end-cloud--1"></span><span class="hr-cloud hr-end-cloud hr-end-cloud--2"></span><span class="hr-cloud hr-end-cloud hr-end-cloud--3"></span>
-        <svg class="hr-birds" viewBox="0 0 120 40"><path d="M2 20 q6 -8 12 0 q6 -8 12 0"/><path d="M40 10 q5 -6 10 0 q5 -6 10 0"/><path d="M78 26 q4 -5 8 0 q4 -5 8 0"/></svg>
-        <span class="hr-end-word"><span>dotone</span></span>
-        <svg class="hr-land" viewBox="0 0 1440 420" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="wv0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9E8FC"/><stop offset="1" stop-color="#A9DAF8"/></linearGradient>
-                <linearGradient id="wv1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CCDF5"/><stop offset="1" stop-color="#5FB6EE"/></linearGradient>
-                <linearGradient id="wv2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3FA6EC"/><stop offset="1" stop-color="#1C8BDB"/></linearGradient>
-                <linearGradient id="wv3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F6FC0"/><stop offset="1" stop-color="#0A5FA8"/></linearGradient>
-                <linearGradient id="wv4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A4C8C"/><stop offset="1" stop-color="#083D72"/></linearGradient>
-            </defs>
-            <g class="hl" style="--d: 0.15"><path class="wv" style="--dur: 38s" fill="url(#wv0)" d="M0 230 Q180.0 204 360.0 230 T720 230 T1080 230 T1440 230 T1800 230 T2160 230 T2520 230 T2880 230 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.35"><path class="wv" style="--dur: 30s" fill="url(#wv1)" d="M0 270 Q180.0 240 360.0 270 T720 270 T1080 270 T1440 270 T1800 270 T2160 270 T2520 270 T2880 270 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.6"><path class="wv" style="--dur: 24s" fill="url(#wv2)" d="M0 310 Q180.0 276 360.0 310 T720 310 T1080 310 T1440 310 T1800 310 T2160 310 T2520 310 T2880 310 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.85"><path class="wv" style="--dur: 18s" fill="url(#wv3)" d="M0 352 Q180.0 322 360.0 352 T720 352 T1080 352 T1440 352 T1800 352 T2160 352 T2520 352 T2880 352 V420 H0Z"/></g>
-            <g class="hl" style="--d: 1"><path class="wv" style="--dur: 14s" fill="url(#wv4)" d="M0 392 Q180.0 370 360.0 392 T720 392 T1080 392 T1440 392 T1800 392 T2160 392 T2520 392 T2880 392 V420 H0Z"/></g>
-        </svg>
-        <div class="hr-chips">
-<?php foreach ([['box', 'Inventory', 14, 62], ['trend', 'Sales', 30, 72], ['cart', 'Purchase', 48, 66], ['factory', 'Production', 66, 74], ['chart', 'Reports', 84, 64]] as $c => [$ico, $lbl, $x, $y]): ?>
-            <span class="hr-chip" style="left: <?= $x ?>%; top: <?= $y ?>%; --c: <?= $c ?>"><?= icon($ico, 'w-4 h-4') ?><?= $lbl ?></span>
-<?php endforeach; ?>
-        </div>
-        <div class="hr-sparks"><?php for ($k = 0; $k < 14; $k++): ?><i style="--k: <?= $k ?>; left: <?= 4 + ($k * 37) % 92 ?>%; bottom: <?= 10 + ($k * 23) % 45 ?>%"></i><?php endfor; ?></div>
     </div>
 </section>
 
 </main>
 
-<script src="/js/hrms.js?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="/js/aierp.js?v=<?= ASSET_VERSION ?>" defer></script>
 <?php render_foot($page); ?>

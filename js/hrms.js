@@ -1,6 +1,21 @@
 // HRMS page: highlight the feature list as panels scroll past, and start each panel's animation once
 (function () {
   'use strict';
+  // Closing scene: the word rises and the hills settle as the scene scrolls into view
+  var end = document.querySelector('[data-hr-end]');
+  if (end && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      var r = end.getBoundingClientRect();
+      var p = Math.min(1, Math.max(0, (window.innerHeight - r.top) / (r.height * 0.8)));
+      end.style.setProperty('--p', p.toFixed(3));
+    };
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  } else if (end) {
+    end.style.setProperty('--p', 1);
+  }
   var links = document.querySelectorAll('[data-hr-link]');
   var panels = document.querySelectorAll('[data-hr-panel]');
   if (!panels.length) return;

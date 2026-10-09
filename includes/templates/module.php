@@ -81,6 +81,7 @@ if (!stories(ltrim($page['path'], '/'))):
 </section>
 <?php endif; ?>
 
+<?php if (!stories_has(ltrim($page['path'], '/'), 'split')): // the phone story already walks through the process ?>
 <section class="section bg-surface">
     <div class="container-custom">
         <div class="max-w-2xl mb-12">
@@ -98,6 +99,7 @@ if (!stories(ltrim($page['path'], '/'))):
         </ol>
     </div>
 </section>
+<?php endif; ?>
 
 <section class="py-14 bg-white border-t border-border">
     <div class="container-custom flex flex-col lg:flex-row lg:items-center gap-6">

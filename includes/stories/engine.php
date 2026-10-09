@@ -15,6 +15,15 @@ function stories($key)
     return !empty($data['cards']);
 }
 
+// True when a page's stories file has the given section
+function stories_has($key, $section)
+{
+    $file = __DIR__ . '/' . basename($key) . '.php';
+    if (!is_file($file)) return false;
+    $data = require $file;
+    return !empty($data[$section]);
+}
+
 function stories_script()
 {
     static $done = false;

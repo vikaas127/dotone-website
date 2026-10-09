@@ -51,27 +51,6 @@ return [
             'mock' => ['type' => 'table', 'cols' => ['Entry', 'Amount', 'Status'], 'rows' => [['Net salaries', '₹37.7 L', 'Posted'], ['PF payable', '₹4.6 L', 'Posted'], ['TDS payable', '₹2.1 L', 'Posted']]],
         ],
     ],
-    'split' => [
-        'label' => 'One payroll run',
-        'h2' => ['From attendance', 'to payslip'],
-        'items' => [
-            [
-                'title' => 'Close attendance',
-                'text' => 'Attendance, overtime and leave for the month are finalised in HRMS first.',
-                'screen' => ['type' => 'form', 'title' => 'Attendance, November', 'fields' => [['Employees', '319'], ['Attendance', 'Closed in HRMS'], ['Overtime', '1,240 hours']], 'toast' => 'Ready to calculate salaries.'],
-            ],
-            [
-                'title' => 'Calculate and deduct',
-                'text' => 'Gross pay is worked out from the salary structure, then statutory deductions are applied.',
-                'screen' => ['type' => 'form', 'title' => 'Payroll, November', 'fields' => [['Gross pay', '₹45.6 L'], ['PF and ESIC', '₹5.2 L'], ['PT and TDS', '₹2.7 L']], 'toast' => 'Deductions applied for 319 employees.'],
-            ],
-            [
-                'title' => 'Approve and post',
-                'text' => 'Once HR approves, payslips go out and salary entries post to accounts.',
-                'screen' => ['type' => 'form', 'dark' => true, 'done' => 'Payroll approved', 'title' => 'Payroll, November', 'fields' => [['Payslips', '319 generated'], ['Net pay', '₹37.7 L'], ['Accounts', 'Salary entries posted']]],
-            ],
-        ],
-    ],
     'cta_chart' => [
         'title' => 'Payroll',
         'sub' => 'Gross pay by department in ₹ lakh, last 9 months',

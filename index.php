@@ -1261,16 +1261,10 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
     </section>
 
     <!-- 14 Final CTA -->
-    <section class="cta-light section">
-        <div class="container-custom text-center max-w-4xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary mb-6 leading-tight">Ready to connect <span class="text-primary-500">your business?</span></h2>
-            <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10">See DotOne running your own workflow in a 30-minute demo.</p>
-            <a href="/demo" class="btn-hero-glow-lg group">
-                <span>Book a Demo</span>
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-            </a>
-        </div>
-    </section>
+<?php
+require_once __DIR__ . '/includes/stories/engine.php';
+stories_cta('home', 'Ready to connect your business?', 'See DotOne running your own workflow in a 30-minute demo.');
+?>
 
     <!-- Floating Ask Factory AI -->
     <a href="/demo" class="factory-ai-fab" aria-label="Ask Factory AI">

@@ -11,6 +11,7 @@ function stories($key)
     $data = require $file;
     if (!empty($data['cards'])) render_stories($data);
     if (!empty($data['split'])) render_split($data['split']);
+    if (!empty($data['flow'])) render_flow($data['flow']);
     return !empty($data['cards']);
 }
 
@@ -257,4 +258,85 @@ function stories_cta($key, $heading, $text)
 <?php
     stories_script();
     return true;
+}
+
+// Flow map: a process diagram with dashed connectors that carry moving packets.
+// Laid out on a 1100 x 640 canvas; stacks into a vertical list on small screens.
+function render_flow(array $f)
+{
+    $W = 1100; $H = 640;
+    $pos = function ($x, $y, $w) use ($W, $H) {
+        return 'left: ' . round($x / $W * 100, 3) . '%; top: ' . round($y / $H * 100, 3) . '%; width: ' . round($w / $W * 100, 3) . '%';
+    };
+    $check = '<span class="fl-ok">&#10003;</span>';
+    $wait = '<span class="fl-wait">&#8226;&#8226;</span>';
+    ?>
+<section class="section bg-white">
+    <div class="container-custom">
+        <div class="max-w-2xl mb-10 md:mb-14">
+            <span class="section-label"><?= e($f['label']) ?></span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-primary mb-4"><?= e($f['h2'][0]) ?> <span class="text-primary-500"><?= e($f['h2'][1]) ?></span></h2>
+            <p class="text-lg text-text-secondary"><?= e($f['intro']) ?></p>
+        </div>
+        <div class="fl" data-ps aria-label="<?= e($f['aria']) ?>" role="img">
+            <svg class="fl-lines" viewBox="0 0 <?= $W ?> <?= $H ?>" preserveAspectRatio="none" aria-hidden="true">
+                <defs><marker id="fl-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#0096EE"/></marker></defs>
+                <path id="fl-p1" class="fl-path" d="M146 88 V190" marker-end="url(#fl-arrow)"/>
+                <path id="fl-p2" class="fl-path" d="M248 250 H322 V52 H368" marker-end="url(#fl-arrow)"/>
+                <path id="fl-p3" class="fl-path" d="M510 112 V140"/>
+                <path id="fl-p4" class="fl-path" d="M510 176 V204" marker-end="url(#fl-arrow)"/>
+                <path id="fl-p5" class="fl-path" d="M628 238 H724 V52 H828" marker-end="url(#fl-arrow)"/>
+                <path class="fl-path fl-path--dim" d="M148 420 V600"/>
+                <path class="fl-path fl-path--dim" d="M450 268 V440"/>
+                <path class="fl-path fl-path--dark" d="M505 312 L532 326 M505 352 L532 330"/>
+                <path class="fl-path fl-path--dark" d="M568 328 H690"/>
+                <path class="fl-path fl-path--dark" d="M505 392 L560 412 H710 V348 M505 432 L560 412" marker-end="url(#fl-arrow)"/>
+                <path class="fl-path fl-path--dark" d="M710 306 V246" marker-end="url(#fl-arrow)"/>
+                <circle class="fl-packet" r="5"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#fl-p2"/></animateMotion></circle>
+                <circle class="fl-packet" r="5"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite"><mpath href="#fl-p5"/></animateMotion></circle>
+            </svg>
+
+            <div class="fl-node fl-chip-dark" style="<?= $pos(30, 26, 236) ?>; --o: 0"><b><?= e($f['start'][0]) ?></b><span><?= e($f['start'][1]) ?></span></div>
+
+            <div class="fl-node fl-card" style="<?= $pos(56, 194, 190) ?>; --o: 1">
+                <div class="fl-card-top"><span class="fl-icon"><?= icon('doc', 'w-4 h-4') ?></span><?= $check ?></div>
+                <i class="fl-line" style="width: 70%"></i><i class="fl-line"></i><i class="fl-line" style="width: 85%"></i>
+            </div>
+            <div class="fl-node fl-chip-dark fl-chip-avatar" style="<?= $pos(56, 352, 190) ?>; --o: 2"><span class="fl-avatar"><?= e($f['quotes']['initials']) ?></span><b><?= e($f['quotes']['title']) ?></b></div>
+<?php foreach ($f['quotes']['steps'] as $k => [$label, $done]): ?>
+            <div class="fl-node fl-pill" style="<?= $pos(56, 444 + $k * 66, 190) ?>; --o: <?= 3 + $k ?>"><?= e($label) ?><?= $done ? $check : $wait ?></div>
+<?php endforeach; ?>
+
+            <div class="fl-node fl-panel" style="<?= $pos(372, 4, 276) ?>; --o: 2">
+                <b class="fl-panel-title"><?= e($f['po']['title']) ?></b>
+                <div class="fl-mini"><span class="fl-avatar fl-avatar--soft"><?= e($f['po']['initials']) ?></span><span><b><?= e($f['po']['line1']) ?></b><small><?= e($f['po']['line2']) ?></small></span></div>
+            </div>
+            <span class="fl-node fl-dot" style="<?= $pos(492, 140, 36) ?>; --o: 3"><?= icon('bell', 'w-4 h-4') ?></span>
+            <div class="fl-node fl-hub" style="<?= $pos(392, 206, 236) ?>; --o: 4"><?= e($f['approval']['title']) ?></div>
+<?php foreach ($f['approval']['stages'] as $k => $stage): ?>
+            <div class="fl-node fl-stage" style="<?= $pos(392, 290 + $k * 42, 118) ?>; --o: <?= 5 + $k ?>"><?= e($stage) ?></div>
+<?php endforeach; ?>
+            <span class="fl-node fl-dot fl-dot--dark" style="<?= $pos(532, 310, 36) ?>; --o: 6"><?= icon('doc', 'w-4 h-4') ?><em class="is-warn">!</em></span>
+            <span class="fl-node fl-ring" style="<?= $pos(623, 320, 16) ?>; --o: 7"></span>
+            <span class="fl-node fl-dot fl-dot--dark" style="<?= $pos(692, 310, 36) ?>; --o: 8"><?= icon('doc', 'w-4 h-4') ?><em>&#10003;</em></span>
+            <p class="fl-node fl-note" style="<?= $pos(520, 448, 230) ?>; --o: 9"><?= e($f['approval']['note']) ?></p>
+
+            <div class="fl-node fl-tag" style="<?= $pos(656, 130, 136) ?>; --o: 9"><?= e($f['approved']) ?></div>
+
+            <div class="fl-node fl-panel" style="<?= $pos(832, 4, 268) ?>; --o: 10">
+                <b class="fl-panel-title"><?= e($f['end']['title']) ?></b>
+                <div class="fl-end">
+                    <svg class="fl-donut" viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="15.9" class="fl-donut-bg"/><circle cx="21" cy="21" r="15.9" pathLength="100" class="fl-donut-fg" style="--p: <?= (int) $f['end']['pct'] ?>"/></svg>
+                    <ul><li><i></i><?= e($f['end']['legend'][0]) ?></li><li><i class="is-soft"></i><?= e($f['end']['legend'][1]) ?></li></ul>
+                </div>
+<?php foreach ($f['end']['rows'] as [$label, $done]): ?>
+                <div class="fl-end-row"><?= e($label) ?><?= $done ? $check : $wait ?></div>
+<?php endforeach; ?>
+            </div>
+        </div>
+        <p class="ps-demo">Diagram shows demo data.</p>
+    </div>
+</section>
+<?php
+    stories_script();
 }

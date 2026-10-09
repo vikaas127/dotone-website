@@ -4,6 +4,5 @@ Disallow: /implementation/
 Disallow: /contact-submit.php
 Disallow: /webinar-register.php
 Disallow: /webinar-count.php
-Disallow: /thank-you
 
 Sitemap: https://dotone.biz/sitemap.xml

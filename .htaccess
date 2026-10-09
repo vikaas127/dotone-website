@@ -72,6 +72,19 @@ RewriteRule ^case_studies(\.html|\.php)?/?$ /case-studies [R=301,L]
 RewriteRule ^dotone-webinar(\.html|\.php)?/?$ /webinar [R=301,L]
 RewriteRule ^career(\.html|\.php)?/?$ /careers [R=301,L]
 RewriteRule ^home(\.html|\.php)?/?$ / [R=301,L]
+# Common guesses and old links that would otherwise 404
+RewriteRule ^(contact-us|contactus|get-in-touch)(\.html|\.php)?/?$ /contact [R=301,L]
+RewriteRule ^(about-us|aboutus|company)(\.html|\.php)?/?$ /about [R=301,L]
+RewriteRule ^(products|product|features|erp)(\.html|\.php)?/?$ /modules [R=301,L]
+RewriteRule ^(services|solution)(\.html|\.php)?/?$ /solutions [R=301,L]
+RewriteRule ^(blog|blogs|resources|articles)(\.html|\.php)?/?$ /guides [R=301,L]
+RewriteRule ^(book-demo|book-a-demo|request-demo|free-demo)(\.html|\.php)?/?$ /demo [R=301,L]
+RewriteRule ^(price|plans)(\.html|\.php)?/?$ /pricing [R=301,L]
+RewriteRule ^(privacy|privacy-policy)(\.html|\.php)?/?$ https://techdotbit.com/privacy-policy/ [R=301,L]
+RewriteRule ^(terms|terms-of-service|terms-and-conditions)(\.html|\.php)?/?$ https://techdotbit.com/terms-and-conditions/ [R=301,L]
+RewriteRule ^(refund-policy|cancellation-and-refund-policy)(\.html|\.php)?/?$ https://techdotbit.com/cancellation-and-refund-policy/ [R=301,L]
+# Old page fragments from the previous site: gone for good
+RewriteRule ^(header|header-home|footer|metrics-section)(\.html|\.php)?$ - [G,L]
 
 # ------------------------------------------------
 # 4. OLD .html, DIRECT .php AND TRAILING-SLASH URLS -> CLEAN URL (301)

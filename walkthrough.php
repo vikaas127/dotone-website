@@ -305,21 +305,20 @@ $v = ASSET_VERSION;
             <div class="wt-visual" aria-hidden="true"><?php wt_visual($s['key']); ?></div>
         </section>
 <?php endforeach; ?>
-        <section class="wt-panel wt-done" data-wt-panel="<?= count($stages) ?>" id="done" aria-label="Summary">
-            <div class="wt-copy">
-                <span class="wt-step">The full flow</span>
-                <h2>One order. <span>Eight teams. One system.</span></h2>
-                <p>Every stage worked on the same record, so nobody re-typed anything and everyone saw the same numbers.</p>
-                <div class="wt-done-ctas">
-                    <a href="/demo" class="btn-hero-glow-lg">Book a Demo</a>
-                    <button type="button" class="btn-ghost-lg" data-wt-go="0">Watch again</button>
+        <section class="wt-panel wt-done" data-wt-panel="<?= count($stages) ?>" id="done" aria-label="The full flow">
+            <div class="wt-fin">
+                <span class="wt-step">The full flow · 8 stages done</span>
+                <h2>Your business. <span>One connected system.</span></h2>
+                <p>Eight teams worked on one order without re-typing a thing, and an AI agent prepared every next step.</p>
+                <div class="wt-fin-ctas">
+                    <a href="/demo" class="btn-hero-glow-lg">Book a Demo <span aria-hidden="true" style="margin-left: 0.5rem">&rarr;</span></a>
+                    <button type="button" class="wt-again" data-wt-go="0">&#8635; Watch it again</button>
                 </div>
-            </div>
-            <div class="wt-visual" aria-hidden="true">
-                <ol class="wt-summary">
+                <ol class="wt-chain" aria-hidden="true">
 <?php foreach ($stages as $i => $s): ?>
-                    <li style="--i: <?= $i ?>"><span><?= icon($s['icon'], 'w-4 h-4') ?></span><b><?= e($s['name']) ?></b><em><?= e(AGENTS[$s['agent']]['name']) ?></em></li>
+                    <li style="--i: <?= $i ?>"><span><?= icon($s['icon'], 'w-5 h-5') ?><em>&#10003;</em></span><b><?= e($s['name']) ?></b><small><?= e(str_replace(' AI Agent', '', AGENTS[$s['agent']]['name'])) ?> agent</small></li>
 <?php endforeach; ?>
+                    <i class="wt-chain-pulse"></i>
                 </ol>
             </div>
         </section>

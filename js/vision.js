@@ -1,4 +1,4 @@
-// Vision AI page: feature tabs, chat reveal and the embedded factory twin
+// Vision AI page: feature tabs, chat reveal and the embedded factory demo
 (function () {
   'use strict';
   var root = document.querySelector('[data-vz-tabs]');
@@ -50,8 +50,8 @@
       if (started) return;
       started = true;
       var f = document.createElement('iframe');
-      f.src = '/factory-twin';
-      f.title = 'DotOne factory twin, interactive 3D demo';
+      f.src = '/factory-demo';
+      f.title = 'DotOne factory demo, interactive 3D demo';
       f.setAttribute('allow', 'fullscreen');
       f.loading = 'eager';
       stage.appendChild(f);

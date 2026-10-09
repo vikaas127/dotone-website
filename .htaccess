@@ -72,6 +72,7 @@ RewriteRule ^case_studies(\.html|\.php)?/?$ /case-studies [R=301,L]
 RewriteRule ^dotone-webinar(\.html|\.php)?/?$ /webinar [R=301,L]
 RewriteRule ^career(\.html|\.php)?/?$ /careers [R=301,L]
 RewriteRule ^home(\.html|\.php)?/?$ / [R=301,L]
+RewriteRule ^factory-twin(\.html|\.php)?/?$ /factory-demo [R=301,L]
 # Common guesses and old links that would otherwise 404
 RewriteRule ^(contact-us|contactus|get-in-touch)(\.html|\.php)?/?$ /contact [R=301,L]
 RewriteRule ^(about-us|aboutus|company)(\.html|\.php)?/?$ /about [R=301,L]

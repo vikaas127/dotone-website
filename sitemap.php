@@ -5,7 +5,7 @@ $base = "https://dotone.biz/";
 
 // Public pages live in the root and in these section folders
 $sections = ['', 'ai-agents/', 'industries/', 'solutions/', 'integrations/', 'guides/', 'vision-ai/', 'compare/'];
-$skip = ['sitemap.php', 'contact-submit.php', 'webinar-count.php', 'webinar-register.php', 'config.php', 'db.php', 'thank-you.php', 'apply.php', 'sales-documentation.php', 'factory-twin.php'];
+$skip = ['sitemap.php', 'contact-submit.php', 'webinar-count.php', 'webinar-register.php', 'config.php', 'db.php', 'thank-you.php', 'apply.php', 'sales-documentation.php', 'factory-demo.php'];
 
 $files = [];
 foreach ($sections as $dir) {

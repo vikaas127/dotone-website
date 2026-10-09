@@ -82,7 +82,7 @@ render_head($page);
             <p>Your cameras already watch the floor. Vision AI reads the CCTV you have, spots safety lapses, idle stations and defects, and records each one in DotOne against the right shift and line.</p>
             <div class="vz2-ctas">
                 <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-                <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory twin</a>
+                <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory demo</a>
             </div>
             <ul class="vz2-points"><li>Works with existing cameras</li><li>Cloud or on-premise</li><li>Every detection becomes a record</li></ul>
         </div>
@@ -184,7 +184,7 @@ render_head($page);
     </div>
 </section>
 
-<!-- Factory twin, live on the page -->
+<!-- Factory demo, live on the page -->
 <section class="vz2-twin" id="twin">
     <div class="container-custom">
         <div class="vz2-head">
@@ -193,10 +193,10 @@ render_head($page);
             <p class="vz2-lead">Machines, stock, docks, trucks, people and alerts in one live view, with a shift timeline you can replay. Drag to look around, pick an area, or speed up time.</p>
         </div>
         <div class="vz2-twin-frame" data-vz-twin>
-            <div class="vz2-twin-bar"><span class="hr-win-bar-dots"><i></i><i></i><i></i></span><b>DotOne · Factory twin</b><em>Demo factory · interactive</em><a href="/factory-twin" target="_blank" rel="noopener">Full screen &#8599;</a></div>
+            <div class="vz2-twin-bar"><span class="hr-win-bar-dots"><i></i><i></i><i></i></span><b>DotOne · Factory demo</b><em>Demo factory · interactive</em><a href="/factory-demo" target="_blank" rel="noopener">Full screen &#8599;</a></div>
             <div class="vz2-twin-stage">
-                <img src="/images/factory-twin.webp" alt="DotOne factory twin: a 3D demo factory with machine, stock and dock panels" width="1440" height="900" loading="lazy">
-                <button type="button" class="vz2-twin-start" data-vz-twin-start><span class="vz2-play">&#9654;</span>Start the live factory twin</button>
+                <img src="/images/factory-demo.webp" alt="DotOne factory demo: a 3D demo factory with machine, stock and dock panels" width="1440" height="900" loading="lazy">
+                <button type="button" class="vz2-twin-start" data-vz-twin-start><span class="vz2-play">&#9654;</span>Start the live factory demo</button>
             </div>
         </div>
         <p class="ps-demo">Demo factory and demo data. Works best on a laptop or desktop.</p>
@@ -263,7 +263,7 @@ render_head($page);
         <p>Book a technical consultation. We review your cameras and network and pick the first use case with you.</p>
         <div class="vz2-ctas vz2-ctas--center">
             <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>
-            <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory twin</a>
+            <a href="#twin" class="vz2-ghost"><span class="vz2-play">&#9654;</span>Try the live factory demo</a>
         </div>
     </div>
 </section>

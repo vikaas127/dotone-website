@@ -39,9 +39,12 @@ showcase(ltrim($page['path'], '/'));
         </div>
 <?php if (!empty($block['cards'])): ?>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<?php foreach ($block['cards'] as [$url, $name, $ico, $summary]): ?>
-            <a href="<?= e($url) ?>" class="card p-6 hover-lift block">
+<?php foreach ($block['cards'] as $card): [$url, $name, $ico, $summary] = $card; $persona = $card[4] ?? ''; $color = $card[5] ?? ''; ?>
+            <a href="<?= e($url) ?>" class="card p-6 hover-lift block<?= $color ? ' agent-card' : '' ?>"<?= $color ? ' style="--ac: ' . e($color) . '"' : '' ?>>
                 <div class="w-11 h-11 bg-gradient-brand rounded-lg flex items-center justify-center mb-4"><?= icon($ico, 'w-5 h-5 text-white') ?></div>
+<?php if ($persona): ?>
+                <span class="agent-persona"><?= e($persona) ?></span>
+<?php endif; ?>
                 <h3 class="text-lg font-display font-semibold mb-2"><?= e($name) ?></h3>
                 <p class="text-text-secondary text-[0.95rem] leading-relaxed mb-3"><?= e($summary) ?></p>
                 <span class="text-sm font-medium text-primary-600">Learn more &rarr;</span>

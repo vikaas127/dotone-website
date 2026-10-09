@@ -11,7 +11,7 @@ $m = MODULES[$a['module']];
     <div class="container-custom relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div>
             <?php render_breadcrumbs($page); ?>
-            <span class="section-label">AI Agent</span>
+            <span class="agent-badge" style="--ac: <?= e($a['color']) ?>"><span><?= icon($a['icon'], 'w-4 h-4') ?></span>Meet <?= e($a['persona']) ?> &middot; AI Agent</span>
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-6"><?= e($page['h1']) ?></h1>
             <p class="text-lg md:text-xl text-text-secondary leading-relaxed mb-8"><?= e($page['intro']) ?></p>
             <div class="flex flex-col sm:flex-row gap-3">
@@ -86,7 +86,7 @@ showcase('ai-agents/' . $page['slug']);
         <div class="agent-more">
             <span class="agent-more-title">More AI agents</span>
 <?php foreach (AGENTS as $slug => $other): if ($slug === $page['slug']) continue; ?>
-            <a href="/ai-agents/<?= e($slug) ?>" class="agent-more-link"><?= icon($other['icon'], 'w-4 h-4') ?><?= e(str_replace(' AI Agent', '', $other['name'])) ?></a>
+            <a href="/ai-agents/<?= e($slug) ?>" class="agent-more-link" style="--ac: <?= e($other['color']) ?>"><?= icon($other['icon'], 'w-4 h-4') ?><b><?= e($other['persona']) ?></b> <?= e(str_replace(' AI Agent', '', $other['name'])) ?></a>
 <?php endforeach; ?>
             <a href="/ai-agents" class="agent-more-all">All agents &rarr;</a>
         </div>

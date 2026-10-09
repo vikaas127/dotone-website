@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/includes/site.php';
 $cards = [];
-foreach (AGENTS as $slug => $a) $cards[] = ['/ai-agents/' . $slug, $a['name'], $a['icon'], $a['summary']];
+foreach (AGENTS as $slug => $a) $cards[] = ['/ai-agents/' . $slug, $a['name'], $a['icon'], $a['summary'], $a['persona'], $a['color']];
 $page = [
     'path' => '/ai-agents',
     'title' => 'AI Agents for Business Operations | DotOne',

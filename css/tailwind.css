@@ -10754,3 +10754,15 @@ a.card:hover,
 .o2i.is-ready:not(.is-in) .o2i-pkt { opacity: 0; transition-delay: 0s; }
 @media (max-width: 767px) { .o2i-cap-t { font-size: 0.82rem; } .o2i-head::after { display: none; } }
 @media (prefers-reduced-motion: reduce) { .o2i-pkt { display: none; } }
+
+/* Named AI agents: persona name and accent colour */
+.agent-card { border-top: 3px solid var(--ac); }
+.agent-card .bg-gradient-brand { background: var(--ac); }
+.agent-card .text-primary-600 { color: var(--ac); }
+.agent-persona { display: inline-block; font-size: 1.3rem; font-weight: 700; color: var(--ac); line-height: 1.2; margin-bottom: 0.15rem; }
+.agent-badge { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.35rem 0.9rem 0.35rem 0.35rem; border-radius: 99px; background: #fff; border: 1px solid color-mix(in srgb, var(--ac) 35%, #fff); color: var(--ac); font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem; box-shadow: 0 8px 20px -14px color-mix(in srgb, var(--ac) 70%, transparent); }
+.agent-badge > span { width: 1.9rem; height: 1.9rem; border-radius: 50%; background: var(--ac); color: #fff; display: flex; align-items: center; justify-content: center; }
+.agent-more-link b { color: var(--ac); font-weight: 700; }
+.agent-more-link svg { color: var(--ac); }
+.agent-card .w-11 { background: var(--ac) !important; }
+.agent-card .w-11 svg { color: #fff !important; }

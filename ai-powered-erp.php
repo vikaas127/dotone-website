@@ -78,7 +78,7 @@ render_head($page);
 <section class="ai2-marquee" aria-label="DotOne AI agents">
     <div class="ai2-marquee-track">
 <?php for ($r = 0; $r < 2; $r++): foreach (AGENTS as $slug => $a): ?>
-        <a href="/ai-agents/<?= e($slug) ?>"<?= $r ? ' tabindex="-1" aria-hidden="true"' : '' ?>><?= icon($a['icon'], 'w-4 h-4') ?><?= e($a['name']) ?></a>
+        <a href="/ai-agents/<?= e($slug) ?>" style="--ac: <?= e($a['color']) ?>"<?= $r ? ' tabindex="-1" aria-hidden="true"' : '' ?>><?= icon($a['icon'], 'w-4 h-4') ?><b><?= e($a['persona']) ?></b><?= e($a['name']) ?></a>
 <?php endforeach; endfor; ?>
     </div>
 </section>
@@ -194,7 +194,7 @@ render_head($page);
         </div>
         <div class="ai2-agent-grid">
 <?php foreach (AGENTS as $slug => $a): ?>
-            <a href="/ai-agents/<?= e($slug) ?>" class="ai2-agent-card"><span><?= icon($a['icon'], 'w-5 h-5') ?></span><b><?= e($a['name']) ?></b><small><?= e($a['summary']) ?></small><em>Meet the agent &rarr;</em></a>
+            <a href="/ai-agents/<?= e($slug) ?>" class="ai2-agent-card" style="--ac: <?= e($a['color']) ?>"><span><?= icon($a['icon'], 'w-5 h-5') ?></span><b><?= e($a['persona']) ?></b><i><?= e($a['name']) ?></i><small><?= e($a['summary']) ?></small><em>Meet <?= e($a['persona']) ?> &rarr;</em></a>
 <?php endforeach; ?>
         </div>
     </div>

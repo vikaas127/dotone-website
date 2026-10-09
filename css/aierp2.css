@@ -118,3 +118,14 @@
 .ai2 #actions .hr-mock { justify-content: center; padding: 0 0 1.5rem; }
 .ai2 #control .hr-float--r { bottom: -2.2rem; right: -1rem; }
 .ai2 #control .hr-mock { padding-bottom: 1.5rem; }
+
+/* Named agents with their own accent colour */
+.ai2-agent-card { --ac: #0096EE; border-top: 3px solid var(--ac); }
+.ai2-agent-card span { background: var(--ac); }
+.ai2-agent-card b { font-size: 1.25rem; color: var(--ac); }
+.ai2-agent-card i { font-style: normal; font-size: 0.82rem; font-weight: 600; color: #101828; margin-top: -0.3rem; }
+.ai2-agent-card em { color: var(--ac); }
+.ai2-agent-card:hover { border-color: var(--ac); border-top-color: var(--ac); box-shadow: 0 24px 40px -28px color-mix(in srgb, var(--ac) 60%, transparent); }
+.ai2-marquee a svg { color: var(--ac, #0096EE); }
+.ai2-marquee a b { color: var(--ac, #0096EE); margin-right: 0.15rem; }
+.ai2-marquee a:hover { border-color: var(--ac, #0096EE); color: #101828; }

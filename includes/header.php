@@ -52,7 +52,7 @@ $menuCols = [
         [['/modules', 'All modules', 'flow']]
     ),
     'AI Agents' => array_merge(
-        array_map(function ($k) { return ['/ai-agents/' . $k, AGENTS[$k]['name'], AGENTS[$k]['icon']]; }, ['inventory', 'sales', 'purchase', 'production', 'finance', 'reporting']),
+        array_map(function ($k) { return ['/ai-agents/' . $k, AGENTS[$k]['persona'] . ' · ' . AGENTS[$k]['name'], AGENTS[$k]['icon']]; }, ['inventory', 'sales', 'purchase', 'production', 'finance', 'reporting']),
         [['/ai-agents', 'All AI agents', 'flow'], ['/generative-ai', 'Generative AI', 'chat']]
     ),
     'AI & Automation' => array_merge(
@@ -162,7 +162,7 @@ foreach ($menuCols as $colTitle => $links): ?>
 <?php endforeach; ?>
                     <a href="/ai-agents" class="block px-3 py-2 text-xs font-semibold rounded-lg transition-colors">AI Agents</a>
 <?php foreach (AGENTS as $k => $ag): ?>
-                    <a href="/ai-agents/<?= $k ?>" class="block px-3 py-2 text-xs rounded-lg transition-colors"><?= htmlspecialchars($ag['name']) ?></a>
+                    <a href="/ai-agents/<?= $k ?>" class="block px-3 py-2 text-xs rounded-lg transition-colors"><?= htmlspecialchars($ag['persona']) ?> &middot; <?= htmlspecialchars($ag['name']) ?></a>
 <?php endforeach; ?>
                     <a href="/solutions" class="block px-3 py-2 text-xs font-semibold rounded-lg transition-colors">Automation</a>
                 </div>

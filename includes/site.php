@@ -3,7 +3,7 @@
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
 const SITE_URL = 'https://dotone.biz';
-const ASSET_VERSION = '20261027';
+const ASSET_VERSION = '20261028';
 
 require_once __DIR__ . '/data/catalog.php';
 

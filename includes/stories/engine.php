@@ -12,6 +12,7 @@ function stories($key)
     if (!empty($data['cards'])) render_stories($data);
     if (!empty($data['split'])) render_split($data['split']);
     if (!empty($data['flow'])) render_flow($data['flow']);
+    if (!empty($data['o2i'])) { require_once __DIR__ . '/o2i.php'; render_o2i(); }
     return !empty($data['cards']);
 }
 

@@ -57,3 +57,18 @@
     }
   });
 })();
+
+// Order-to-invoice flow: replay the build-up animation
+(function () {
+  'use strict';
+  document.querySelectorAll('[data-o2i]').forEach(function (root) {
+    var btn = root.querySelector('[data-o2i-replay]');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      root.classList.add('is-ready');
+      root.classList.remove('is-in');
+      void root.offsetWidth;
+      setTimeout(function () { root.classList.add('is-in'); }, 60);
+    });
+  });
+})();

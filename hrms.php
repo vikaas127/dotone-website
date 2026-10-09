@@ -282,25 +282,23 @@ foreach ($why as $k => [$ico, $t, $d]):
         <span class="hr-end-word"><span>dotone</span></span>
         <svg class="hr-land" viewBox="0 0 1440 420" preserveAspectRatio="none">
             <defs>
-                <linearGradient id="hl1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FD3F2"/><stop offset="1" stop-color="#7DBFE6"/></linearGradient>
-                <linearGradient id="hl2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6FC1C6"/><stop offset="1" stop-color="#4FA6B3"/></linearGradient>
-                <linearGradient id="hl3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5DB98F"/><stop offset="1" stop-color="#3E9B78"/></linearGradient>
-                <linearGradient id="hl4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4FAE7C"/><stop offset="1" stop-color="#2F8A63"/></linearGradient>
-                <linearGradient id="hl5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3C9A6C"/><stop offset="1" stop-color="#226F4E"/></linearGradient>
-                <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0.55"/></linearGradient>
+                <linearGradient id="wv0" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9E8FC"/><stop offset="1" stop-color="#A9DAF8"/></linearGradient>
+                <linearGradient id="wv1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8CCDF5"/><stop offset="1" stop-color="#5FB6EE"/></linearGradient>
+                <linearGradient id="wv2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3FA6EC"/><stop offset="1" stop-color="#1C8BDB"/></linearGradient>
+                <linearGradient id="wv3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F6FC0"/><stop offset="1" stop-color="#0A5FA8"/></linearGradient>
+                <linearGradient id="wv4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A4C8C"/><stop offset="1" stop-color="#083D72"/></linearGradient>
             </defs>
-            <g class="hl" style="--d: 0.15"><path fill="url(#hl1)" d="M0 250 C160 190 300 210 440 230 S720 170 900 200 1220 160 1440 190 V420 H0Z"/></g>
-            <rect class="hl-mist" x="0" y="200" width="1440" height="90" fill="url(#mist)"/>
-            <g class="hl" style="--d: 0.3"><path fill="url(#hl2)" d="M0 290 C140 230 330 250 520 280 S860 230 1040 250 1300 220 1440 240 V420 H0Z"/></g>
-            <g class="hl" style="--d: 0.5"><path fill="url(#hl3)" d="M0 180 C120 110 260 120 420 200 C470 230 520 270 560 300 L560 420 H0Z"/><path fill="url(#hl3)" d="M880 300 C960 220 1080 130 1220 120 C1320 115 1390 140 1440 160 V420 H880Z"/></g>
-            <g class="hl hl-trees" style="--d: 0.5">
-<?php foreach ([[90, 150, 1], [140, 140, 0.8], [330, 168, 0.9], [1120, 140, 1], [1180, 128, 0.85], [1300, 128, 0.9]] as $t => [$tx, $ty, $sc]): ?>
-                <g class="hr-tree" style="--t: <?= $t ?>" transform="translate(<?= $tx ?> <?= $ty ?>) scale(<?= $sc ?>)"><rect x="-2" y="0" width="4" height="16" fill="#2B6B4A"/><path d="M0 -34 L14 4 H-14Z" fill="#2E7D57"/><path d="M0 -22 L17 12 H-17Z" fill="#33895F"/></g>
-<?php endforeach; ?>
-            </g>
-            <g class="hl" style="--d: 0.75"><path fill="url(#hl4)" d="M0 330 C220 290 420 320 640 330 S1020 300 1220 310 1360 300 1440 310 V420 H0Z"/></g>
-            <g class="hl" style="--d: 1"><path fill="url(#hl5)" d="M0 380 C260 350 520 370 760 368 S1220 350 1440 360 V420 H0Z"/></g>
+            <g class="hl" style="--d: 0.15"><path class="wv" style="--dur: 38s" fill="url(#wv0)" d="M0 230 Q180.0 204 360.0 230 T720 230 T1080 230 T1440 230 T1800 230 T2160 230 T2520 230 T2880 230 V420 H0Z"/></g>
+            <g class="hl" style="--d: 0.35"><path class="wv" style="--dur: 30s" fill="url(#wv1)" d="M0 270 Q180.0 240 360.0 270 T720 270 T1080 270 T1440 270 T1800 270 T2160 270 T2520 270 T2880 270 V420 H0Z"/></g>
+            <g class="hl" style="--d: 0.6"><path class="wv" style="--dur: 24s" fill="url(#wv2)" d="M0 310 Q180.0 276 360.0 310 T720 310 T1080 310 T1440 310 T1800 310 T2160 310 T2520 310 T2880 310 V420 H0Z"/></g>
+            <g class="hl" style="--d: 0.85"><path class="wv" style="--dur: 18s" fill="url(#wv3)" d="M0 352 Q180.0 322 360.0 352 T720 352 T1080 352 T1440 352 T1800 352 T2160 352 T2520 352 T2880 352 V420 H0Z"/></g>
+            <g class="hl" style="--d: 1"><path class="wv" style="--dur: 14s" fill="url(#wv4)" d="M0 392 Q180.0 370 360.0 392 T720 392 T1080 392 T1440 392 T1800 392 T2160 392 T2520 392 T2880 392 V420 H0Z"/></g>
         </svg>
+        <div class="hr-chips">
+<?php foreach ([['id', 'Records', 14, 62], ['check', 'Attendance', 30, 72], ['bell', 'Leave', 48, 66], ['users', 'Hiring', 66, 74], ['trend', 'Performance', 84, 64]] as $c => [$ico, $lbl, $x, $y]): ?>
+            <span class="hr-chip" style="left: <?= $x ?>%; top: <?= $y ?>%; --c: <?= $c ?>"><?= icon($ico, 'w-4 h-4') ?><?= $lbl ?></span>
+<?php endforeach; ?>
+        </div>
         <div class="hr-sparks"><?php for ($k = 0; $k < 14; $k++): ?><i style="--k: <?= $k ?>; left: <?= 4 + ($k * 37) % 92 ?>%; bottom: <?= 10 + ($k * 23) % 45 ?>%"></i><?php endfor; ?></div>
     </div>
 </section>

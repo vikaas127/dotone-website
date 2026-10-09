@@ -3,7 +3,7 @@
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
 const SITE_URL = 'https://dotone.biz';
-const ASSET_VERSION = '20261030';
+const ASSET_VERSION = '20261031';
 
 require_once __DIR__ . '/data/catalog.php';
 
@@ -49,6 +49,9 @@ function render_head(array $page)
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=<?= $v ?>">
+<?php foreach ($page['css'] ?? [] as $css): ?>
+    <link rel="stylesheet" href="<?= e($css) ?>?v=<?= $v ?>">
+<?php endforeach; ?>
     <script src="/js/header-nav.js?v=<?= $v ?>" defer></script>
 <?php render_breadcrumb_schema($page); ?>
 <?php if (!empty($page['faq'])) render_faq_schema($page['faq']); ?>

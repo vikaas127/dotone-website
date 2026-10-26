@@ -5,4 +5,4 @@ Disallow: /contact-submit.php
 Disallow: /webinar-register.php
 Disallow: /webinar-count.php
 
-Sitemap: https://dotone.biz/sitemap.xml
+Sitemap: https://dotone.in/sitemap.xml

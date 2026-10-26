@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="canonical" href="https://dotone.biz/webinar">
+    <link rel="canonical" href="https://dotone.in/webinar">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="DotOne Webinar: Automate Your Factory with ERP">
     <meta property="og:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
-    <meta property="og:url" content="https://dotone.biz/webinar">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta property="og:url" content="https://dotone.in/webinar">
+    <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DotOne Webinar: Automate Your Factory with ERP">
     <meta name="twitter:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
@@ -42,12 +42,12 @@
       "endDate": "2026-01-25T16:40:00+05:30",
       "location": {
         "@type": "VirtualLocation",
-        "url": "https://dotone.biz/webinar"
+        "url": "https://dotone.in/webinar"
       },
       "organizer": {
         "@type": "Organization",
         "name": "DotOne ERP",
-        "url": "https://dotone.biz"
+        "url": "https://dotone.in"
       },
       "offers": {
         "@type": "Offer",

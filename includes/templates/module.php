@@ -1,6 +1,7 @@
 <?php
 // ERP module page. Expects $page (see any module file for the shape).
 require_once dirname(__DIR__) . '/site.php';
+$page['software'] = $page['software'] ?? true;
 render_head($page);
 $agent = $page['agent'] ?? null;
 ?>

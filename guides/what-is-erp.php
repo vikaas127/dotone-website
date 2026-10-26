@@ -13,14 +13,14 @@
     <meta name="keywords"
           content="what is erp, erp system, enterprise resource planning erp, what are erp systems, erp software">
 
-    <link rel="canonical" href="https://dotone.biz/guides/what-is-erp">
+    <link rel="canonical" href="https://dotone.in/guides/what-is-erp">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="What Is ERP? A Plain-English Guide | DotOne">
     <meta property="og:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
-    <meta property="og:url" content="https://dotone.biz/guides/what-is-erp">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta property="og:url" content="https://dotone.in/guides/what-is-erp">
+    <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
@@ -28,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="What Is ERP? A Plain-English Guide | DotOne">
     <meta name="twitter:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">

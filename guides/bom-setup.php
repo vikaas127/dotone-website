@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Set Up a Bill of Materials | DotOne</title>
     <meta name="description" content="How to Set Up a Bill of Materials: practical, India-specific guidance from the DotOne team, with examples and checklists.">
-    <link rel="canonical" href="https://dotone.biz/guides/bom-setup">
+    <link rel="canonical" href="https://dotone.in/guides/bom-setup">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="How to Set Up a Bill of Materials | DotOne">
     <meta property="og:description" content="How to Set Up a Bill of Materials: practical, India-specific guidance from the DotOne team, with examples and checklists.">
-    <meta property="og:url" content="https://dotone.biz/guides/bom-setup">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta property="og:url" content="https://dotone.in/guides/bom-setup">
+    <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
@@ -20,7 +20,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="How to Set Up a Bill of Materials | DotOne">
     <meta name="twitter:description" content="How to Set Up a Bill of Materials: practical, India-specific guidance from the DotOne team, with examples and checklists.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">

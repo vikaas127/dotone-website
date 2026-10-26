@@ -53,10 +53,10 @@ render_head($page);
 $offers = [];
 foreach ($plans as $p) {
     if ($p['price'] === null) continue;
-    $offers[] = ['@type' => 'Offer', 'name' => $p['name'], 'price' => (string) $p['price'], 'priceCurrency' => 'INR', 'url' => 'https://dotone.biz/pricing',
+    $offers[] = ['@type' => 'Offer', 'name' => $p['name'], 'price' => (string) $p['price'], 'priceCurrency' => 'INR', 'url' => 'https://dotone.in/pricing',
         'priceSpecification' => ['@type' => 'UnitPriceSpecification', 'price' => (string) $p['price'], 'priceCurrency' => 'INR', 'unitText' => 'MONTH']];
 }
-echo '<script type="application/ld+json">' . json_encode(['@context' => 'https://schema.org', '@type' => 'SoftwareApplication', 'name' => 'DotOne', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web, Android', 'url' => 'https://dotone.biz/', 'publisher' => ['@type' => 'Organization', 'name' => 'TechDotBit Pvt Ltd'], 'offers' => $offers], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
+echo '<script type="application/ld+json">' . json_encode(['@context' => 'https://schema.org', '@type' => 'SoftwareApplication', 'name' => 'DotOne', 'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web, Android', 'url' => 'https://dotone.in/', 'publisher' => ['@type' => 'Organization', 'name' => 'TechDotBit Pvt Ltd'], 'offers' => $offers], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
 ?>
 
 

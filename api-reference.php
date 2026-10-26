@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
-    <link rel="canonical" href="https://dotone.biz/api-reference">
+    <link rel="canonical" href="https://dotone.in/api-reference">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="API Reference: REST Endpoints | DotOne">
     <meta property="og:description" content="REST API reference for DotOne: authentication, endpoints, request and response examples, and webhooks to connect DotOne with your other systems.">
-    <meta property="og:url" content="https://dotone.biz/api-reference">
-    <meta property="og:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta property="og:url" content="https://dotone.in/api-reference">
+    <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
@@ -26,7 +26,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="API Reference: REST Endpoints | DotOne">
     <meta name="twitter:description" content="REST API reference for DotOne: authentication, endpoints, request and response examples, and webhooks to connect DotOne with your other systems.">
-    <meta name="twitter:image" content="https://dotone.biz/assets/og-image.jpg?v=2">
+    <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
 </head>
 
 <body class="bg-background">
@@ -58,7 +58,7 @@
                 Every request uses JSON and a Bearer token in the request header.
                 Tokens can be rotated, revoked or restricted by IP for enterprise deployments.
             </p>
-            <p class="text-text-secondary">Base URL: <code>https://api.dotone.biz/v1/</code></p>
+            <p class="text-text-secondary">Base URL: <code>https://api.dotone.in/v1/</code></p>
         </div>
         <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
 <pre>
@@ -121,7 +121,7 @@ Content-Type: application/json
         <div class="grid lg:grid-cols-2 gap-6">
             <div class="card p-6 bg-slate-900 text-white text-sm overflow-x-auto">
 <pre>
-curl -X GET https://api.dotone.biz/v1/inventory/items \
+curl -X GET https://api.dotone.in/v1/inventory/items \
 -H "Authorization: Bearer YOUR_API_KEY"
 </pre>
             </div>

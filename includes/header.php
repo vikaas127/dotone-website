@@ -3,7 +3,7 @@
 // Structured data for search engines on every page: organisation, website and a breadcrumb trail from the URL.
 (function () {
     $path = '/' . trim(parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH), '/');
-    $base = 'https://dotone.biz';
+    $base = 'https://dotone.in';
     $graph = [];
     if ($path !== '/') {
         $graph[] = ['@type' => 'Organization', '@id' => $base . '/#organization', 'name' => 'DotOne', 'url' => $base . '/', 'logo' => $base . '/assets/dotone-logo-blue.png',

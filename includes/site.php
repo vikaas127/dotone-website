@@ -2,7 +2,7 @@
 // Shared page shell for template-driven pages: <head>, header, footer.
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
-const SITE_URL = 'https://dotone.biz';
+const SITE_URL = 'https://dotone.in';
 const ASSET_VERSION = '20261109';
 
 require_once __DIR__ . '/data/catalog.php';
@@ -55,6 +55,7 @@ function render_head(array $page)
     <script src="/js/header-nav.js?v=<?= $v ?>" defer></script>
 <?php render_breadcrumb_schema($page); ?>
 <?php if (!empty($page['faq'])) render_faq_schema($page['faq']); ?>
+<?php if (!empty($page['software'])) render_software_schema($page, $url); ?>
 </head>
 <body class="bg-background">
 
@@ -85,6 +86,16 @@ function render_breadcrumb_schema(array $page)
         $list[] = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $name, 'item' => SITE_URL . $path];
     }
     $data = ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => $list];
+    echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
+}
+
+// SoftwareApplication for ERP module pages (/crm, /hrms, ...)
+function render_software_schema(array $page, $url)
+{
+    $name = $page['h1'] ?? preg_replace('/\s*\|.*$/', '', $page['title']);
+    $data = ['@context' => 'https://schema.org', '@type' => 'SoftwareApplication', 'name' => $name, 'description' => $page['description'],
+        'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web, Android, iOS', 'url' => $url,
+        'publisher' => ['@id' => SITE_URL . '/#organization']];
     echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
 

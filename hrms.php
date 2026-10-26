@@ -25,6 +25,7 @@ $features = [
     ['payroll', 'Hand-off to payroll', 'Clean data for every pay run', 'Approved attendance, overtime and leave flow straight into payroll, so the monthly run starts from data HR has already checked.', 'night'],
 ];
 
+$page['software'] = true;
 render_head($page);
 ?>
 

@@ -1,10 +1,19 @@
 RewriteEngine On
 
 # ------------------------------------------------
-# 0. OLD DOMAIN -> MAIN DOMAIN (dotone.biz)
+# 0. CANONICAL HOST: everything -> https://dotone.in (301, path and query kept)
 # ------------------------------------------------
-RewriteCond %{HTTP_HOST} ^(www\.)?dotoneforbusiness\.in$ [NC]
-RewriteRule ^(.*)$ https://dotone.biz/$1 [R=301,L]
+# Old domains: dotone.biz, www.dotone.biz, dotoneforbusiness.in
+RewriteCond %{HTTP_HOST} ^(www\.)?(dotone\.biz|dotoneforbusiness\.in)$ [NC]
+RewriteRule ^(.*)$ https://dotone.in/$1 [R=301,L,NE]
+# www.dotone.in -> dotone.in
+RewriteCond %{HTTP_HOST} ^www\.dotone\.in$ [NC]
+RewriteRule ^(.*)$ https://dotone.in/$1 [R=301,L,NE]
+# http -> https (works behind a proxy/CDN that sets X-Forwarded-Proto)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} ^dotone\.in$ [NC]
+RewriteRule ^(.*)$ https://dotone.in/$1 [R=301,L,NE]
 
 Options -Indexes
 DirectorySlash Off
@@ -37,7 +46,9 @@ ServerSignature Off
 # 2. ALLOW SYSTEM FILES (NO REWRITE)
 # ------------------------------------------------
 DirectoryIndex index.php
-RewriteRule ^(sitemap\.xml|sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
+# sitemap.xml is generated from the page files, so new pages appear automatically
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+RewriteRule ^(sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
 
 # Header/footer partials are only included by PHP, never served directly
 RewriteRule ^includes/ - [F,L]

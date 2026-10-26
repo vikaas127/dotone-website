@@ -1,7 +1,7 @@
 <?php
 header("Content-Type: application/xml; charset=UTF-8");
 
-$base = "https://dotone.biz/";
+$base = "https://dotone.in/";
 
 // Public pages live in the root and in these section folders
 $sections = ['', 'ai-agents/', 'industries/', 'solutions/', 'integrations/', 'guides/', 'vision-ai/', 'compare/'];
@@ -11,6 +11,8 @@ $files = [];
 foreach ($sections as $dir) {
     foreach (glob(__DIR__ . '/' . $dir . '*.php') as $path) {
         if (in_array(basename($path), $skip)) continue;
+        // Private pages (noindex) stay out of the sitemap
+        if (stripos(file_get_contents($path), 'noindex') !== false) continue;
         $files[] = [$dir . basename($path, '.php'), $path];
     }
 }

@@ -1,0 +1,65 @@
+<?php
+$page = [
+    'path' => '/ai-agents/quality',
+    'slug' => 'quality',
+    'title' => 'Quality AI Agent for Quality Control | DotOne',
+    'description' => 'A quality AI agent in DotOne ERP that spots rejection patterns by machine, shift and vendor, holds failed batches and drafts rework or vendor complaints.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Quality AI Agent', '/ai-agents/quality']],
+    'h1' => 'Quality AI Agent',
+    'intro' => 'A quality control assistant that works on your inspections, rejections, rework and batch records in DotOne. Ask where rejections are coming from, which vendor\'s material keeps failing or where a batch went. The agent reads the records, finds the pattern and prepares the hold, rework order or vendor complaint for your quality head to approve.',
+    'demo' => [
+        'question' => 'Why have rejections gone up on the pipe line this week?',
+        'steps' => [
+            'Reading inspection and rejection entries',
+            'Grouping rejections by machine, shift and operator',
+            'Tracing rejected batches back to raw material lots',
+            'Finding the common factor',
+            'Drafting a vendor complaint for approval',
+        ],
+        'result' => 'Most rejections traced to one PVC Resin lot from a single vendor, with the affected batches on hold and a draft complaint waiting for approval.',
+    ],
+    'traditional' => [
+        'Collect inspection sheets and rejection registers from each line.',
+        'Type them into a spreadsheet to see totals by machine or shift.',
+        'Dig through GRNs and batch cards to find which material lot was used.',
+        'Hold failed batches by word of mouth and hope nothing is dispatched.',
+        'Write rework instructions and vendor complaints by hand.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Where are this week\'s rejections coming from?"',
+        'The agent reads inspections, rejections, batches and receipts together.',
+        'It finds patterns by machine, shift, operator or vendor.',
+        'It builds the quality report, ready to share or export.',
+        'It holds failed batches and drafts rework or vendor complaints for your approval.',
+    ],
+    'sees' => [
+        'Incoming, in-process and final inspection results',
+        'Rejection and rework entries with their reasons',
+        'Batches, lots and their production history',
+        'Machine, shift and operator for each production entry',
+        'Goods receipts and the vendor behind each raw material lot',
+        'Customer complaints and returns',
+    ],
+    'asks' => [
+        '"Which machine has the highest rejection rate this month?"',
+        '"Are rejections worse on the night shift?"',
+        '"Which vendor\'s material fails incoming inspection most often?"',
+        '"Which raw material lot went into batch B-2291, and where was it dispatched?"',
+        '"Which batches are on hold and why?"',
+    ],
+    'does' => [
+        'Spots rejection patterns by machine, shift, operator and vendor',
+        'Puts failed batches on hold so they are not issued or dispatched',
+        'Drafts rework orders for approval',
+        'Drafts vendor complaints with the inspection results attached, for approval',
+        'Answers batch traceability questions from raw material to dispatch',
+        'Builds quality reports on request: rejection rate, rework and vendor quality',
+    ],
+    'faq' => [
+        ['What does the Quality AI Agent do in DotOne?', 'It works on your quality records: inspections, rejections, rework and batch history. You ask where problems are coming from, and the agent reads the records, finds the pattern and prepares the next step, such as a hold, a rework order or a vendor complaint.'],
+        ['Can the agent reject material or hold a batch on its own?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data, such as a hold, a rework order or a complaint to a vendor, can be set to need a person\'s approval.'],
+        ['How does batch traceability work?', 'DotOne links each batch to the raw material lots, machine, shift and operator used to make it, and to the dispatches it went out in. The agent follows those links, so you can ask where a lot was used or what went into a batch and get the answer in one place.'],
+        ['Do we need to change how we record inspections?', 'No. The agent reads the inspection and rejection entries your team already makes in DotOne. Recording the reason for each rejection makes its pattern-finding more useful.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

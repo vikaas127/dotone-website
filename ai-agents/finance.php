@@ -1,0 +1,65 @@
+<?php
+$page = [
+    'path' => '/ai-agents/finance',
+    'slug' => 'finance',
+    'title' => 'Finance AI Agent for Receivables and Cash | DotOne',
+    'description' => 'A finance AI agent in DotOne ERP that tracks receivables ageing and payables due, flags overdue customers, drafts payment reminders and shows cash position.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Finance AI Agent', '/ai-agents/finance']],
+    'h1' => 'Finance AI Agent',
+    'intro' => 'A finance assistant that works on your invoices, bills, receipts and payments in DotOne. Ask who owes you money, what falls due next week or where cash will stand at month end. The agent reads live sales and purchase data, flags what needs attention and drafts the payment reminders for your accounts team to send.',
+    'demo' => [
+        'question' => 'Which customers are more than 60 days overdue, and how much do they owe?',
+        'steps' => [
+            'Reading open sales invoices',
+            'Matching receipts against each invoice',
+            'Building the receivables ageing',
+            'Flagging customers past 60 days',
+            'Drafting payment reminders for approval',
+        ],
+        'result' => 'Overdue customers listed by amount and days outstanding, with reminders drafted for the accounts manager to approve.',
+    ],
+    'traditional' => [
+        'Export outstanding invoices from the accounts system each week.',
+        'Build the ageing in a spreadsheet and sort by customer.',
+        'Write and send payment reminders one by one.',
+        'Check bills due by going through the payables register.',
+        'Piece together the cash position from bank balances and memory.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Who is overdue by more than 60 days?"',
+        'The agent reads invoices, bills, receipts and payments together.',
+        'It flags overdue customers and payables falling due.',
+        'It builds the ageing, cash or GST summary, ready to share or export.',
+        'It drafts payment reminders for your approval.',
+    ],
+    'sees' => [
+        'Sales invoices, receipts and credit notes',
+        'Purchase bills, payments and debit notes',
+        'Receivables and payables ageing by party',
+        'Customer credit limits and payment terms',
+        'Open sales and purchase orders that will turn into cash in or out',
+        'GST on invoices and bills, by rate',
+    ],
+    'asks' => [
+        '"Which customers are overdue, and by how much?"',
+        '"What payments to vendors fall due next week?"',
+        '"What will our cash position look like at month end?"',
+        '"Which customers are above their credit limit?"',
+        '"Give me the GST summary for September."',
+    ],
+    'does' => [
+        'Builds receivables ageing and flags overdue customers',
+        'Drafts payment reminders to customers for your approval',
+        'Lists payables falling due so you can plan payments',
+        'Shows the cash position from live sales and purchase data',
+        'Alerts the sales team when a customer goes past their credit limit',
+        'Answers GST summary questions from your invoices and bills',
+    ],
+    'faq' => [
+        ['What does the Finance AI Agent do in DotOne?', 'It works on your receivables, payables and cash data. You ask who is overdue, what is due or where cash stands, and the agent reads live invoices, bills and payments, picks out what needs attention and prepares the report or reminder.'],
+        ['Can the agent send reminders or record payments on its own?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data or goes out to a customer can be set to need a person\'s approval.'],
+        ['Does it replace Tally or our accountant?', 'No. Your books stay in Tally, and the sync is handled by DotOne\'s Accounting and Tally Sync module. The Finance AI Agent works on the tracking side: who owes what, what is due and where cash stands. GST summaries are ready to hand to your accountant.'],
+        ['How current are its numbers?', 'It reads the same live sales and purchase data your team enters in DotOne, so its answers are as current as those entries.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

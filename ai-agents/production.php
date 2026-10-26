@@ -1,0 +1,66 @@
+<?php
+$page = [
+    'path' => '/ai-agents/production',
+    'slug' => 'production',
+    'title' => 'Production AI Agent for Shop Floor Planning | DotOne',
+    'description' => 'A production AI agent in DotOne ERP that tracks job cards against plan, flags machine downtime and OEE dips, and checks material against the BOM before jobs.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Production AI Agent', '/ai-agents/production']],
+    'h1' => 'Production AI Agent',
+    'intro' => 'A production planning assistant that works on your job cards, machines, BOMs and orders in DotOne. Ask which jobs are behind plan, which machine lost the most time this week or whether there is enough material to start tomorrow\'s jobs. The agent reads the shop floor data, flags what needs attention and prepares the next step for your production head.',
+    'demo' => [
+        'question' => 'Which jobs planned for tomorrow cannot start because of missing material?',
+        'steps' => [
+            'Reading tomorrow\'s production plan',
+            'Exploding each job\'s BOM',
+            'Checking stock in the plant store',
+            'Flagging jobs with a material gap',
+            'Preparing a shortage list for approval',
+        ],
+        'result' => 'Jobs that cannot start listed with the missing material, and a draft indent for the shortfall waiting for approval.',
+    ],
+    'traditional' => [
+        'Walk the shop floor or call supervisors to find out where each job stands.',
+        'Collect job card entries and machine logs at the end of the shift.',
+        'Work out OEE and downtime in a spreadsheet, often days later.',
+        'Check the BOM against stock by hand before releasing a job.',
+        'Find out an order will be late only when dispatch asks for it.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Which jobs are behind plan today?"',
+        'The agent reads job cards, machine status, BOMs and stock together.',
+        'It flags downtime, OEE dips and jobs falling behind schedule.',
+        'It builds the production report, ready to share or export.',
+        'It points out orders at risk of being late and drafts the next step for approval.',
+    ],
+    'sees' => [
+        'Production plans and job cards',
+        'Quantity produced against plan, by job and shift',
+        'Machine status, downtime entries and reasons',
+        'OEE by machine and line',
+        'Bills of material and routings',
+        'Raw material stock in the plant store',
+        'Sales orders linked to each job and their due dates',
+    ],
+    'asks' => [
+        '"Which jobs are behind plan today?"',
+        '"Which machine had the most downtime this week, and why?"',
+        '"Why did OEE on Extruder 1 drop yesterday?"',
+        '"Do we have the material for the jobs planned tomorrow?"',
+        '"Which customer orders are at risk of being late?"',
+    ],
+    'does' => [
+        'Tracks job card progress against the plan and flags jobs falling behind',
+        'Alerts supervisors when a machine is down or its OEE drops',
+        'Checks material against the BOM before a job starts',
+        'Lists orders at risk of missing their due date, with the reason',
+        'Drafts indents or material requests for shortfalls, for approval',
+        'Builds production reports on request: output, downtime and OEE by machine or shift',
+    ],
+    'faq' => [
+        ['What does the Production AI Agent do in DotOne?', 'It works on your production data: plans, job cards, machines, BOMs and stock. You ask about progress, downtime or material, and the agent reads the records, finds the jobs and machines that need attention and prepares a report or next step for your team.'],
+        ['Can the agent change the production plan?', 'Only if you allow it. The agent reads DotOne data and prepares things, such as a list of jobs to reschedule or a draft material request. It works within the roles, permissions and approval rules you set, and anything that changes data can be set to need a person\'s approval.'],
+        ['Where does the machine and OEE data come from?', 'From what is recorded in DotOne: job card entries, downtime logs and, where you have connected them, machine signals through DotOne\'s production module. The agent uses whatever data your plant records there.'],
+        ['Does it work across more than one plant?', 'Yes. The agent can answer for one plant, such as Plant 2, or compare lines and machines across plants, as long as your role allows you to see them.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

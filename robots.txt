@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /implementation/
+Disallow: /contact-submit.php
+Disallow: /webinar-register.php
+Disallow: /webinar-count.php
 
-Sitemap: https://dotoneforbusiness.in/sitemap.php
+Sitemap: https://dotone.in/sitemap.xml

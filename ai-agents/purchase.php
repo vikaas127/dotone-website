@@ -1,0 +1,66 @@
+<?php
+$page = [
+    'path' => '/ai-agents/purchase',
+    'slug' => 'purchase',
+    'title' => 'Purchase AI Agent for Procurement | DotOne',
+    'description' => 'A purchase AI agent in DotOne ERP that compares vendor quotes, flags price changes and late deliveries, and drafts purchase orders from approved indents.',
+    'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Purchase AI Agent', '/ai-agents/purchase']],
+    'h1' => 'Purchase AI Agent',
+    'intro' => 'A procurement assistant that works on your indents, vendor quotes, purchase orders and goods receipts in DotOne. Ask which vendor gives the best overall deal, which rates have gone up or which deliveries are late. The agent reads the data, points out what needs a decision and drafts the purchase order for your team to approve.',
+    'demo' => [
+        'question' => 'Which vendor should we buy PVC Resin from for the approved indent this week?',
+        'steps' => [
+            'Reading the approved indent',
+            'Collecting quotes from three vendors',
+            'Comparing price, payment terms and delivery',
+            'Checking each vendor\'s past delivery record',
+            'Drafting the purchase order for approval',
+        ],
+        'result' => 'A side-by-side comparison of the quotes, with a draft PO for the recommended vendor waiting for the purchase head to approve.',
+    ],
+    'traditional' => [
+        'Collect vendor quotes over email and phone, then type them into a spreadsheet.',
+        'Look up the last purchase rate for each item by hand.',
+        'Compare price, payment terms and delivery dates line by line.',
+        'Chase vendors for late deliveries only when stores raise the alarm.',
+        'Create each purchase order manually from the approved indent.',
+    ],
+    'dotone' => [
+        'Ask the agent, for example "Compare the quotes for HDPE granules."',
+        'The agent reads indents, quotes, past POs and receipts together.',
+        'It flags rates above the last purchase price and deliveries running late.',
+        'It builds the comparison table, ready to share or export.',
+        'It recommends a vendor and drafts the PO for your approval.',
+    ],
+    'sees' => [
+        'Purchase indents and their approval status',
+        'Vendor quotations: price, payment terms and delivery dates',
+        'Purchase orders, open and closed',
+        'Goods receipts and quantities received against each PO',
+        'Last purchase rate for each item and vendor',
+        'Vendor master: terms, lead times and contacts',
+        'Stock levels and reorder levels for the items being bought',
+    ],
+    'asks' => [
+        '"Which vendor quote is best for this indent?"',
+        '"Which items cost more than last time we bought them?"',
+        '"Which purchase orders are past their delivery date?"',
+        '"Which approved indents do not have a PO yet?"',
+        '"How has Shree Polymers delivered against promised dates this quarter?"',
+    ],
+    'does' => [
+        'Compares vendor quotes on price, payment terms and delivery date',
+        'Flags rates that have changed against the last purchase',
+        'Tracks open POs and alerts buyers when a delivery is late',
+        'Drafts purchase orders from approved indents for your approval',
+        'Prepares reminders to vendors for overdue deliveries',
+        'Builds purchase reports on request: spend by vendor, item or period',
+    ],
+    'faq' => [
+        ['What does the Purchase AI Agent do in DotOne?', 'It works on your purchase data: indents, quotes, purchase orders and goods receipts. You ask a question, such as which vendor to buy from or which deliveries are late, and the agent reads the records, picks out what needs a decision and prepares the comparison, reminder or draft PO.'],
+        ['Can the agent send purchase orders to vendors on its own?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data, such as creating or sending a PO, can be set to need a person\'s approval.'],
+        ['How does it judge which vendor is best?', 'It puts price, payment terms and delivery date side by side, along with how each vendor has delivered on past orders. It then suggests a vendor and shows why, so your buyer can agree or choose differently.'],
+        ['Do we need to change our purchase process?', 'No. The agent reads the same indents, quotes and GRNs your team already records in DotOne. The more complete those records are, the more useful its comparisons and alerts will be.'],
+    ],
+];
+include dirname(__DIR__) . '/includes/templates/agent.php';

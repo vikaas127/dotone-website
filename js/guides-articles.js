@@ -8,6 +8,22 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'Stocktaking: How to Do a Physical Stock Count',
+    excerpt: 'Full counts vs cycle counts, a step-by-step physical count, and how to handle stock variances, with a worked example.',
+    url: '/guides/stocktaking',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'General Ledger, Journal Entries and Bank Reconciliation',
+    excerpt: 'Journal entry vs general ledger with examples, and a step-by-step bank reconciliation with a worked example.',
+    url: '/guides/general-ledger',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
     title: 'Inventory Formulas Every Manufacturer Should Know',
     excerpt: 'Safety stock, reorder point, EOQ, carrying cost, turnover, backorders and FIFO vs weighted average, with worked examples.',
     url: '/guides/inventory-formulas',

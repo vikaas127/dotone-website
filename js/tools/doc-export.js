@@ -15,19 +15,25 @@ window.DotoneDoc = (function () {
   var PDF_SRI = 'sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==';
   var pdfLib = null;
   // DotOne footer on every downloaded document: logo on the left, tagline on the right
-  var LOGO = '/assets/dotone-wm-blue-tight.png', LOGO_RATIO = 983 / 227;
+  var LOGO = '/assets/dotone-wm-blue.svg', LOGO_RATIO = 1043.832 / 233.605;
   var TAGLINE = 'Endless clarity  \u00b7  dotone.in';
   var logoData = null;
+  // The PDF library cannot place SVG, so the SVG logo is drawn onto a large canvas and placed as a sharp PNG
   function loadLogo() {
     if (logoData) return logoData;
-    logoData = fetch(LOGO).then(function (r) { return r.blob(); }).then(function (blob) {
-      return new Promise(function (resolve) {
-        var fr = new FileReader();
-        fr.onload = function () { resolve(fr.result); };
-        fr.onerror = function () { resolve(null); };
-        fr.readAsDataURL(blob);
-      });
-    }).catch(function () { logoData = null; return null; });
+    logoData = new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () {
+        try {
+          var c = document.createElement('canvas');
+          c.width = 1800; c.height = Math.round(1800 / LOGO_RATIO);
+          c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+          resolve(c.toDataURL('image/png'));
+        } catch (e) { resolve(null); }
+      };
+      img.onerror = function () { logoData = null; resolve(null); };
+      img.src = LOGO;
+    });
     return logoData;
   }
   function brand() {
@@ -140,7 +146,7 @@ window.DotoneDoc = (function () {
           pdf.setDrawColor(234, 236, 240);
           pdf.setLineWidth(0.2);
           pdf.line(12, h - 13, w - 12, h - 13);
-          if (logo) pdf.addImage(logo, 'PNG', 12, h - 10.5, 5 * LOGO_RATIO, 5);
+          if (logo) pdf.addImage(logo, 'PNG', 12, h - 10.5, 4.6 * LOGO_RATIO, 4.6);
           pdf.setFontSize(8);
           pdf.setTextColor(152, 162, 179);
           pdf.text(TAGLINE, w - 12, h - 7, { align: 'right' });

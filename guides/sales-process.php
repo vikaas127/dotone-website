@@ -44,7 +44,7 @@ $page = [
         <tr><td>Best for</td><td>Steady flow of small and mid-sized buyers</td><td>Large target accounts and new regions</td></tr>
     </tbody>
 </table></div>
-<p>Most manufacturers need both: inbound for a steady flow of enquiries, outbound to open the large accounts that will not find you on their own.</p>
+<p>Most manufacturers need both: inbound for a steady flow of enquiries, outbound to open the large accounts that will not find you on their own. To compare channels, work out what each new customer costs you: see our guide to <a href="/guides/customer-acquisition">customer acquisition and CAC</a>.</p>
 '],
         ['consultative-selling', 'Consultative selling', '
 <p><strong>Consultative selling</strong> means selling by understanding and solving the buyer\'s problem, instead of pushing a product. The salesperson acts like an advisor: asks questions, recommends what fits, and is honest when something does not fit.</p>

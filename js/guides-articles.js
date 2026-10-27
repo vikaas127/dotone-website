@@ -8,6 +8,14 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'Customer Acquisition: Strategy, Cost and Channels for B2B',
+    excerpt: 'The customer acquisition process, how to calculate CAC with a worked example, CAC vs lifetime value, and the channels that work.',
+    url: '/guides/customer-acquisition',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
     title: 'What Is a Sales Pipeline? Stages, Funnel and CRM Dashboard',
     excerpt: 'B2B pipeline stages, pipeline vs sales funnel, weighted pipeline value and what a CRM dashboard should show.',
     url: '/guides/sales-pipeline',

@@ -34,29 +34,38 @@
     items.forEach(function (i) { value += i.value; tax += i.tax; });
     var total = Math.round(value + tax);
 
+    var g = function (id) { return $(id).value; };
+    var cols = [4, 32, 9, 10, 11, 13, 8, 13];
     var rows = items.map(function (i, n) {
-      return '<tr><td>' + (n + 1) + '</td><td>' + esc(i.desc) + '</td><td>' + esc(i.hsn) + '</td><td class="num">' + i.qty + ' ' + esc(i.unit) + '</td><td class="num">' + money.format(i.rate) + '</td><td class="num">' + money.format(i.value) + '</td><td class="num">' + i.gst + '%</td><td class="num">' + money.format(i.value + i.tax) + '</td></tr>';
+      return '<tr><td>' + (n + 1) + '</td><td>' + esc(i.desc) + '</td><td>' + esc(i.hsn) + '</td><td class="num">' + i.qty + '<small>' + esc(i.unit) + '</small></td><td class="num">' + money.format(i.rate) + '</td><td class="num">' + money.format(i.value) + '</td><td class="num">' + i.gst + '%</td><td class="num">' + money.format(i.value + i.tax) + '</td></tr>';
     }).join('');
     var taxLines = intra
       ? '<div><span>CGST</span><span>' + money.format(tax / 2) + '</span></div><div><span>SGST</span><span>' + money.format(tax / 2) + '</span></div>'
       : '<div><span>IGST</span><span>' + money.format(tax) + '</span></div>';
+    var exact = value + tax, roundOff = total - exact;
     var terms = [];
-    if ($('delivery').value) terms.push('<b>Delivery by:</b> ' + esc(D.formatDate($('delivery').value)) + ', at the address above');
-    if ($('pay').value) terms.push('<b>Payment:</b> ' + esc($('pay').value));
-    if ($('terms').value) terms.push(esc($('terms').value));
+    if (g('delivery')) terms.push('Delivery by ' + D.formatDate(g('delivery')) + ', at the address above.');
+    if (g('pay')) terms.push('Payment: ' + g('pay'));
+    if (g('terms').trim()) terms.push(g('terms').trim());
 
-    preview.innerHTML =
-      '<div class="inv-head"><div><h3>PURCHASE ORDER</h3><div>' + esc($('b-name').value) + '</div></div>' +
-      '<div><div><b>PO no:</b> ' + esc($('no').value) + '</div><div><b>Date:</b> ' + esc(D.formatDate($('date').value)) + '</div></div></div>' +
-      '<div class="inv-parties">' +
-      '<div class="inv-box"><b>Buyer</b>' + esc($('b-name').value) + '\n' + esc($('b-addr').value) + '\nGSTIN: ' + esc($('b-gstin').value) + '\nState: ' + esc($('b-state').value) + '</div>' +
-      '<div class="inv-box"><b>Vendor</b>' + esc($('v-name').value) + '\n' + esc($('v-addr').value) + '\nGSTIN: ' + esc($('v-gstin').value || 'Unregistered') + '\nState: ' + esc($('v-state').value) + '</div></div>' +
-      '<div class="inv-scroll"><table class="inv-table"><thead><tr><th>#</th><th>Description</th><th>HSN/SAC</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Value</th><th class="num">GST</th><th class="num">Amount</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '<div class="inv-totals"><div><span>Value before tax</span><span>' + money.format(value) + '</span></div>' + taxLines +
-      '<div class="is-total"><span>PO total (₹)</span><span>' + money.format(total) + '</span></div></div>' +
-      '<p class="inv-words">' + D.amountInWords(total) + '</p>' +
-      (terms.length ? '<div class="inv-box" style="margin-top:1rem"><b>Terms</b>' + terms.join('\n') + '</div>' : '') +
-      '<p style="margin-top:2rem;text-align:right">For ' + esc($('b-name').value) + '<br><br>Authorised signatory</p>';
+    preview.innerHTML = '<div class="doc-sheet">' +
+      D.head(g('b-name'), g('b-addr') + '\nGSTIN: ' + g('b-gstin') + '  ·  State: ' + g('b-state'), 'PURCHASE ORDER', [
+        ['PO no.', g('no')], ['PO date', D.formatDate(g('date'))], ['Delivery by', D.formatDate(g('delivery'))]
+      ]) +
+      '<div class="doc-parties">' +
+      '<div class="doc-box"><span class="doc-label">Vendor</span><span class="doc-name">' + esc(g('v-name')) + '</span>\n' + esc(g('v-addr')) + '\nGSTIN: ' + esc(g('v-gstin') || 'Unregistered') + '\nState: ' + esc(g('v-state')) + '</div>' +
+      '<div class="doc-box"><span class="doc-label">Deliver to</span><span class="doc-name">' + esc(g('b-name')) + '</span>\n' + esc(g('b-addr')) + '\nTax: ' + (intra ? 'CGST + SGST (same state)' : 'IGST (inter-state)') + '</div></div>' +
+      '<table class="doc-table"><colgroup>' + cols.map(function (w) { return '<col style="width:' + w + '%">'; }).join('') + '</colgroup>' +
+      '<thead><tr><th>#</th><th>Description</th><th>HSN/SAC</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Value</th><th class="num">GST</th><th class="num">Amount</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody>' +
+      '<tfoot><tr><td></td><td>Total</td><td></td><td></td><td></td><td class="num">' + money.format(value) + '</td><td></td><td class="num">' + money.format(exact) + '</td></tr></tfoot></table>' +
+      '<div class="doc-foot"><div><div class="doc-words"><b>Amount in words</b>' + D.amountInWords(total) + '</div>' +
+      (terms.length ? '<div class="doc-notes"><span class="doc-label">Terms</span>' + esc(terms.join('\n')) + '</div>' : '') + '</div>' +
+      '<div class="doc-totals"><div><span>Value before tax</span><span>' + money.format(value) + '</span></div>' + taxLines +
+      '<div><span>Round off</span><span>' + (roundOff < 0 ? '−' : '') + money.format(Math.abs(roundOff)) + '</span></div>' +
+      '<div class="doc-grand"><span>PO total</span><span>₹ ' + money.format(total) + '</span></div></div></div>' +
+      D.sign(g('b-name'), 'Please quote this PO number on your invoice and delivery challan.') +
+      '<p class="doc-small">This is a computer-generated purchase order.</p></div>';
   }
 
   $('date').value = D.today();

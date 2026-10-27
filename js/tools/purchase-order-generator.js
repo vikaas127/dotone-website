@@ -65,7 +65,7 @@
       '<div><span>Round off</span><span>' + (roundOff < 0 ? '−' : '') + money.format(Math.abs(roundOff)) + '</span></div>' +
       '<div class="doc-grand"><span>PO total</span><span>₹ ' + money.format(total) + '</span></div></div></div>' +
       D.sign(g('b-name'), 'Please quote this PO number on your invoice and delivery challan.') +
-      '<p class="doc-small">This is a computer-generated purchase order.</p></div>';
+      '<p class="doc-small">This is a computer-generated purchase order.</p>' + D.brand() + '</div>';
   }
 
   $('date').value = D.today();

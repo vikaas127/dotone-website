@@ -85,7 +85,7 @@
       '<div class="doc-grand"><span>Total</span><span>₹ ' + money.format(total) + '</span></div></div></div>' +
       '<div class="doc-section"><span class="doc-label">Tax summary by HSN/SAC</span><table class="doc-table"><thead><tr><th>HSN/SAC</th><th class="num">Taxable value</th>' + sumHead + '<th class="num">Total tax</th></tr></thead><tbody>' + sumRows + '</tbody></table></div>' +
       D.sign(g('s-name'), 'We declare that this invoice shows the actual price of the goods or services described and that all particulars are true and correct.') +
-      '<p class="doc-small">This is a computer-generated invoice.</p></div>';
+      '<p class="doc-small">This is a computer-generated invoice.</p>' + D.brand() + '</div>';
   }
 
   $('date').value = D.today();

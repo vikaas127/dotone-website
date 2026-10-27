@@ -25,7 +25,7 @@
       row('Description', g('note')) +
       '</tbody></table>' +
       D.sign(g('s-name'), mode === 'Cheque' ? 'Received subject to realisation of the cheque.' : 'Received with thanks.') +
-      '<p class="doc-small">This is a computer-generated receipt.</p></div>';
+      '<p class="doc-small">This is a computer-generated receipt.</p>' + D.brand() + '</div>';
   }
 
   $('date').value = D.today();

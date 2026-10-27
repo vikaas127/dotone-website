@@ -43,7 +43,7 @@
       '<tfoot><tr><td>Gross earnings</td><td class="num">' + money.format(gross) + '</td><td>Total deductions</td><td class="num">' + money.format(ded) + '</td></tr></tfoot></table>' +
       '<div class="doc-foot"><div class="doc-words"><b>Net pay in words</b>' + D.amountInWords(net) + '</div>' +
       '<div class="doc-totals"><div class="doc-grand" style="margin-top:0"><span>Net pay</span><span>₹ ' + money.format(net) + '</span></div></div></div>' +
-      '<p class="doc-small">This is a computer-generated payslip and does not need a signature.</p></div>';
+      '<p class="doc-small">This is a computer-generated payslip and does not need a signature.</p>' + D.brand() + '</div>';
   }
 
   var now = new Date();

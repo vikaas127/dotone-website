@@ -7,9 +7,6 @@
     <title>What Is ERP? A Plain-English Guide | DotOne</title>
     <meta name="description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
 
-    <meta name="description"
-          content="What is ERP? Learn what an ERP system is, how enterprise resource planning works, key benefits, modules, examples, and why businesses use ERP software.">
-
     <meta name="keywords"
           content="what is erp, erp system, enterprise resource planning erp, what are erp systems, erp software">
 

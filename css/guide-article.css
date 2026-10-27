@@ -1,0 +1,29 @@
+/* Long-form guide articles (includes/templates/guide.php) */
+.guide-toc { background: #F6F9FC; border: 1px solid #E4E7EC; border-radius: 1rem; padding: 1.25rem 1.5rem; margin-bottom: 3rem; }
+.guide-toc-title { font-weight: 600; color: #101828; margin-bottom: 0.5rem; }
+.guide-toc ol { list-style: decimal; padding-left: 1.25rem; display: grid; gap: 0.35rem; }
+.guide-toc a { color: #0078BE; }
+.guide-toc a:hover { text-decoration: underline; }
+
+.guide-article { color: #475467; font-size: 1.0625rem; line-height: 1.75; }
+.guide-article section { scroll-margin-top: 6rem; }
+.guide-article section + section { margin-top: 3rem; }
+.guide-article h2 { font-family: Poppins, sans-serif; font-size: 1.75rem; line-height: 1.3; font-weight: 600; color: #101828; margin-bottom: 1rem; }
+.guide-article h3 { font-family: Poppins, sans-serif; font-size: 1.2rem; font-weight: 600; color: #101828; margin: 1.75rem 0 0.5rem; }
+.guide-article p { margin-bottom: 1rem; }
+.guide-article strong { color: #101828; font-weight: 600; }
+.guide-article ul, .guide-article ol { padding-left: 1.5rem; margin-bottom: 1rem; display: grid; gap: 0.4rem; }
+.guide-article ul { list-style: disc; }
+.guide-article ol { list-style: decimal; }
+.guide-article a { color: #0078BE; text-decoration: underline; text-underline-offset: 2px; }
+
+.guide-table-wrap { overflow-x: auto; margin: 1.25rem 0 1.5rem; border: 1px solid #E4E7EC; border-radius: 0.75rem; }
+.guide-article table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.guide-article th, .guide-article td { text-align: left; padding: 0.7rem 1rem; border-bottom: 1px solid #E4E7EC; vertical-align: top; }
+.guide-article th { background: #F6F9FC; color: #101828; font-weight: 600; }
+.guide-article tr:last-child td { border-bottom: 0; }
+.guide-article td.num, .guide-article th.num { text-align: right; white-space: nowrap; }
+.guide-article tr.total td { font-weight: 600; color: #101828; background: #F6F9FC; }
+
+.guide-callout { background: #E6F5FE; border-left: 4px solid #0096EE; border-radius: 0.5rem; padding: 1rem 1.25rem; margin: 1.5rem 0; color: #005A8F; }
+.guide-callout p:last-child { margin-bottom: 0; }

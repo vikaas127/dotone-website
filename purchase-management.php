@@ -1,11 +1,11 @@
 <?php
 $page = [
     'path' => '/purchase-management',
-    'title' => 'Purchase Management Software | DotOne',
-    'description' => 'Purchase management software for manufacturers. Raise RFQs, compare vendor quotes, auto-generate purchase orders with approvals and sync to Tally.',
+    'title' => 'Procurement and Purchase Management Software | DotOne',
+    'description' => 'Procurement and purchase management software for manufacturers. Raise RFQs, compare vendor quotes, auto-generate purchase orders with approvals and sync to Tally.',
     'breadcrumbs' => [['Modules', '/modules'], ['Purchase Management', '/purchase-management']],
     'eyebrow' => 'ERP Module',
-    'h1' => 'Purchase Management Software',
+    'h1' => 'Procurement and Purchase Management Software',
     'intro' => 'Buy the right material, from the right vendor, at the right time. DotOne takes a purchase from indent to RFQ, vendor comparison, approved PO and goods receipt, with every step on record.',
     'highlights' => ['RFQ and vendor comparison', 'Auto PO with approvals', 'PO-linked goods receipt', 'Tally sync'],
     'capabilities_heading' => 'Procurement software that follows how you buy',

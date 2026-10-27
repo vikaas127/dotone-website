@@ -8,6 +8,166 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'Inventory Formulas Every Manufacturer Should Know',
+    excerpt: 'Safety stock, reorder point, EOQ, carrying cost, turnover, backorders and FIFO vs weighted average, with worked examples.',
+    url: '/guides/inventory-formulas',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'What Is CTC? Salary Structure in India Explained',
+    excerpt: 'Basic, HRA, special allowance, PF, ESI and gratuity explained, with a full ₹6 lakh CTC breakup and in-hand pay.',
+    url: '/guides/ctc-salary-structure',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is a Warehouse Management System (WMS)?',
+    excerpt: 'How a WMS works, core features, WMS vs inventory management vs ERP, and how to choose one.',
+    url: '/guides/what-is-a-warehouse-management-system',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is MES? Manufacturing Execution Systems Explained',
+    excerpt: 'What an MES does on the shop floor, MES vs ERP, and how to calculate OEE with an example.',
+    url: '/guides/what-is-mes',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is MRP? Material Requirements Planning Explained',
+    excerpt: 'How MRP works, a worked BOM explosion, MRP vs MRP II vs ERP, and why MRP results go wrong.',
+    url: '/guides/what-is-mrp',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is HRMS? HRMS vs HRIS vs HCM Explained',
+    excerpt: 'What an HRMS does, how it differs from HRIS and HCM, and the core modules for Indian businesses.',
+    url: '/guides/what-is-hrms',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'Payroll Management System: How Payroll Works in India',
+    excerpt: 'The monthly payroll process, a salary example with PF and professional tax, and common mistakes.',
+    url: '/guides/payroll-management-system',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'What Is Cloud ERP? Cloud vs On-Premise ERP Explained',
+    excerpt: 'How cloud ERP works, cloud vs on-premise compared, security questions to ask, and how to move.',
+    url: '/guides/what-is-cloud-erp',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'Procure to Pay: The P2P Process, Step by Step',
+    excerpt: 'The P2P process from indent to payment, procurement vs purchasing, and three-way matching.',
+    url: '/guides/procure-to-pay',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is Working Capital? Formula, Cycle and Example',
+    excerpt: 'The formula, the working capital cycle in days with an example, and how to free up cash.',
+    url: '/guides/working-capital',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'Customer Acquisition: Strategy, Cost and Channels for B2B',
+    excerpt: 'The customer acquisition process, how to calculate CAC with a worked example, CAC vs lifetime value, and the channels that work.',
+    url: '/guides/customer-acquisition',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'What Is a Sales Pipeline? Stages, Funnel and CRM Dashboard',
+    excerpt: 'B2B pipeline stages, pipeline vs sales funnel, weighted pipeline value and what a CRM dashboard should show.',
+    url: '/guides/sales-pipeline',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Sales Process Steps: A Practical Guide for B2B Businesses',
+    excerpt: 'The 7 steps of the sales process, sales leads, inbound vs outbound, consultative selling and sales automation.',
+    url: '/guides/sales-process',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'What Is S&OP? Sales and Operations Planning Explained',
+    excerpt: 'The monthly S&OP process in five steps, a worked example for a manufacturer, S&OP vs IBP vs MRP, and the KPIs to track.',
+    url: '/guides/sales-and-operations-planning',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Vendor Management: A Practical Guide for Manufacturers',
+    excerpt: 'The vendor management process, a weighted vendor scorecard, the KPIs to track and the mistakes to avoid.',
+    url: '/guides/vendor-management',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'How to Raise Multiple Final Invoices From One Proforma Invoice',
+    excerpt: 'Bill one proforma invoice in several dispatches: GST rules, a worked example, and how to track what is still to be billed.',
+    url: '/guides/proforma-invoice',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is a Cash Flow Statement? Format, Example and How to Read It',
+    excerpt: 'The three sections, direct vs indirect method, and a worked example that shows why profit and cash are not the same.',
+    url: '/guides/cash-flow-statement',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Supply Chain Management and Optimization: A Practical Guide',
+    excerpt: 'The five stages of the supply chain, the levers that cut cost and delays, reorder point maths and the KPIs to track.',
+    url: '/guides/supply-chain-management',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '11 min'
+  },
+  {
+    title: 'What Is a Data Warehouse? A Plain-English Guide',
+    excerpt: 'How a data warehouse works, how it differs from a database and a data lake, and when a growing business needs one.',
+    url: '/guides/what-is-a-data-warehouse',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Master Data Management: A Practical Guide for ERP Users',
+    excerpt: 'Items, customers, vendors and BOMs: why master data goes wrong, the rules that keep it clean, and a go-live checklist.',
+    url: '/guides/master-data-management',
+    category: 'implementation',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
     title: 'DotOne Tally Connector: ERP to Tally Sync Guide',
     excerpt: 'Connect DotOne with Tally Prime — sync sales invoices, purchases, payments, GST, ledgers, and stock journals without double entry.',
     url: '/integrations/tally',

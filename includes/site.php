@@ -56,6 +56,7 @@ function render_head(array $page)
 <?php render_breadcrumb_schema($page); ?>
 <?php if (!empty($page['faq'])) render_faq_schema($page['faq']); ?>
 <?php if (!empty($page['software'])) render_software_schema($page, $url); ?>
+<?php if (!empty($page['article'])) render_article_schema($page, $url); ?>
 </head>
 <body class="bg-background">
 
@@ -96,6 +97,16 @@ function render_software_schema(array $page, $url)
     $data = ['@context' => 'https://schema.org', '@type' => 'SoftwareApplication', 'name' => $name, 'description' => $page['description'],
         'applicationCategory' => 'BusinessApplication', 'operatingSystem' => 'Web, Android, iOS', 'url' => $url,
         'publisher' => ['@id' => SITE_URL . '/#organization']];
+    echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
+}
+
+// Article for long-form guides (/guides/...); $page['article'] = ['published' => 'Y-m-d']
+function render_article_schema(array $page, $url)
+{
+    $data = ['@context' => 'https://schema.org', '@type' => 'Article', 'headline' => $page['h1'], 'description' => $page['description'],
+        'mainEntityOfPage' => $url, 'datePublished' => $page['article']['published'], 'inLanguage' => 'en-IN',
+        'author' => ['@id' => SITE_URL . '/#organization'], 'publisher' => ['@id' => SITE_URL . '/#organization'],
+        'image' => SITE_URL . '/assets/og-image.jpg'];
     echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
 

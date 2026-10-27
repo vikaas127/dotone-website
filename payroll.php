@@ -1,11 +1,11 @@
 <?php
 $page = [
     'path' => '/payroll',
-    'title' => 'Payroll Software with PF, ESI and TDS | DotOne',
+    'title' => 'Payroll Software for India with PF, ESI and TDS | DotOne',
     'description' => 'Run payroll with PF, ESI, PT and TDS worked out, generate payslips in one run and sync salaries with attendance and accounts. Built for Indian businesses.',
     'breadcrumbs' => [['Modules', '/modules'], ['Payroll', '/payroll']],
     'eyebrow' => 'ERP Module',
-    'h1' => 'Payroll Software',
+    'h1' => 'Payroll Software for Indian Businesses',
     'intro' => 'Pay employees accurately and on time, with Indian statutory deductions worked out for you. DotOne calculates salaries from attendance, applies PF, ESIC, PT and TDS, and produces payslips and registers in one run.',
     'highlights' => ['PF, ESIC, PT and TDS', 'Payslips in one run', 'Salary from attendance', 'Payroll registers'],
     'capabilities_heading' => 'Payroll built for Indian rules',

@@ -8,6 +8,46 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'How to Raise Multiple Final Invoices From One Proforma Invoice',
+    excerpt: 'Bill one proforma invoice in several dispatches: GST rules, a worked example, and how to track what is still to be billed.',
+    url: '/guides/proforma-invoice',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is a Cash Flow Statement? Format, Example and How to Read It',
+    excerpt: 'The three sections, direct vs indirect method, and a worked example that shows why profit and cash are not the same.',
+    url: '/guides/cash-flow-statement',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Supply Chain Management and Optimization: A Practical Guide',
+    excerpt: 'The five stages of the supply chain, the levers that cut cost and delays, reorder point maths and the KPIs to track.',
+    url: '/guides/supply-chain-management',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '11 min'
+  },
+  {
+    title: 'What Is a Data Warehouse? A Plain-English Guide',
+    excerpt: 'How a data warehouse works, how it differs from a database and a data lake, and when a growing business needs one.',
+    url: '/guides/what-is-a-data-warehouse',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Master Data Management: A Practical Guide for ERP Users',
+    excerpt: 'Items, customers, vendors and BOMs: why master data goes wrong, the rules that keep it clean, and a go-live checklist.',
+    url: '/guides/master-data-management',
+    category: 'implementation',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
     title: 'DotOne Tally Connector: ERP to Tally Sync Guide',
     excerpt: 'Connect DotOne with Tally Prime — sync sales invoices, purchases, payments, GST, ledgers, and stock journals without double entry.',
     url: '/integrations/tally',

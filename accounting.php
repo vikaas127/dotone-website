@@ -1,11 +1,11 @@
 <?php
 $page = [
     'path' => '/accounting',
-    'title' => 'GST Accounting Software with Tally Sync | DotOne',
-    'description' => 'GST invoicing, receivables, payables and cash flow visibility in DotOne, with a two-way Tally connector that keeps your books in Tally Prime.',
+    'title' => 'Cloud Accounting Software with GST and Tally Sync | DotOne',
+    'description' => 'Cloud accounting software for Indian businesses: GST invoicing, receivables, payables and cash flow, with a two-way Tally connector that keeps your books in Tally Prime.',
     'breadcrumbs' => [['Modules', '/modules'], ['Accounting and Tally Sync', '/accounting']],
     'eyebrow' => 'ERP Module',
-    'h1' => 'Accounting and Tally Sync',
+    'h1' => 'Cloud Accounting Software with Tally Sync',
     'intro' => 'Raise GST invoices, track who owes you and who you owe, and see your funds position from live sales and purchase data. Your books stay in Tally, where your CA already works, kept up to date by the DotOne Tally connector.',
     'highlights' => ['GST invoicing', 'Receivables and payables', 'Cash flow visibility', 'Two-way Tally sync'],
     'capabilities_heading' => 'Billing and accounting software that works with Tally',

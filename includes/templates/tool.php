@@ -58,6 +58,6 @@ render_head($page);
 
 <?php render_cta($page['cta_heading'], $page['cta_text']); ?>
 <?php foreach ((array) $page['script'] as $src): ?>
-<script src="<?= e($src) ?>?v=<?= ASSET_VERSION ?>" defer></script>
+<script src="<?= e($src) ?>?v=<?= asset_v($src) ?>" defer></script>
 <?php endforeach; ?>
 <?php render_foot($page);

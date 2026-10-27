@@ -25,7 +25,7 @@ $page = [
         <tr><td>HRA</td><td>House rent allowance, often 40–50% of basic. Partly tax-exempt under the old tax regime if rent is paid; fully taxable under the new regime.</td></tr>
         <tr><td>Special allowance</td><td>The balancing figure that makes the components add up to CTC. Fully taxable.</td></tr>
         <tr><td>LTA, bonus, other allowances</td><td>Leave travel allowance, statutory or performance bonus, conveyance and others, depending on the employer.</td></tr>
-        <tr><td>Employer PF</td><td>12% of basic, on basic up to ₹15,000 a month unless the employer contributes on higher wages.</td></tr>
+        <tr><td>Employer PF</td><td>12% of basic, on basic up to the ₹25,000 a month wage ceiling (₹15,000 before 17 September 2026) unless the employer contributes on higher wages.</td></tr>
         <tr><td>Employer ESI</td><td>3.25% of gross for employees earning ₹21,000 a month or less.</td></tr>
         <tr><td>Gratuity</td><td>About 4.81% of basic (15 days\' pay for each year, ÷ 26 working days ÷ 12 months), paid on leaving after the qualifying service.</td></tr>
         <tr><td>Insurance and other benefits</td><td>Group health or life cover, meal cards and similar, if the employer counts them in CTC.</td></tr>
@@ -33,24 +33,24 @@ $page = [
 </table></div>
 '],
         ['example', 'Worked example: ₹6 lakh CTC breakup', '
-<p>Basic at 50% of CTC, HRA at 40% of basic, PF on the ₹15,000 ceiling, gratuity included in CTC, professional tax of ₹200 a month and the new tax regime.</p>
+<p>Basic at 50% of CTC, HRA at 40% of basic, PF on the ₹25,000 wage ceiling, gratuity included in CTC, professional tax of ₹200 a month and the new tax regime.</p>
 <div class="guide-table-wrap"><table>
     <thead><tr><th>Component</th><th class="num">Yearly (₹)</th><th class="num">Monthly (₹)</th></tr></thead>
     <tbody>
         <tr><td>Basic</td><td class="num">3,00,000</td><td class="num">25,000</td></tr>
         <tr><td>HRA</td><td class="num">1,20,000</td><td class="num">10,000</td></tr>
-        <tr><td>Special allowance</td><td class="num">1,43,970</td><td class="num">11,998</td></tr>
-        <tr class="total"><td>Gross salary</td><td class="num">5,63,970</td><td class="num">46,998</td></tr>
-        <tr><td>Employer PF (12% of ₹15,000)</td><td class="num">21,600</td><td class="num">1,800</td></tr>
+        <tr><td>Special allowance</td><td class="num">1,29,570</td><td class="num">10,798</td></tr>
+        <tr class="total"><td>Gross salary</td><td class="num">5,49,570</td><td class="num">45,798</td></tr>
+        <tr><td>Employer PF (12% of ₹25,000)</td><td class="num">36,000</td><td class="num">3,000</td></tr>
         <tr><td>Gratuity (4.81% of basic)</td><td class="num">14,430</td><td class="num">1,203</td></tr>
         <tr class="total"><td>CTC</td><td class="num">6,00,000</td><td class="num">50,000</td></tr>
-        <tr><td>Less: employee PF</td><td class="num">(21,600)</td><td class="num">(1,800)</td></tr>
+        <tr><td>Less: employee PF</td><td class="num">(36,000)</td><td class="num">(3,000)</td></tr>
         <tr><td>Less: professional tax</td><td class="num">(2,400)</td><td class="num">(200)</td></tr>
-        <tr><td>Less: income tax (taxable ₹4,88,970, within the ₹12 lakh rebate)</td><td class="num">0</td><td class="num">0</td></tr>
-        <tr class="total"><td>In-hand salary</td><td class="num">5,39,970</td><td class="num">44,998</td></tr>
+        <tr><td>Less: income tax (taxable ₹4,74,570, within the ₹12 lakh rebate)</td><td class="num">0</td><td class="num">0</td></tr>
+        <tr class="total"><td>In-hand salary</td><td class="num">5,11,170</td><td class="num">42,598</td></tr>
     </tbody>
 </table></div>
-<p>A ₹6 lakh CTC, or ₹50,000 a month on paper, becomes about ₹45,000 a month in hand. Gross is above ₹21,000 a month, so ESI does not apply. Monthly figures are rounded. Try other figures in the <a href="/tools/salary-calculator">CTC to in-hand salary calculator</a>.</p>
+<p>A ₹6 lakh CTC, or ₹50,000 a month on paper, becomes about ₹42,600 a month in hand. Gross is above ₹21,000 a month, so ESI does not apply. Monthly figures are rounded. Try other figures in the <a href="/tools/salary-calculator">CTC to in-hand salary calculator</a>.</p>
 '],
         ['structure-tips', 'Designing a salary structure', '
 <ul>
@@ -67,7 +67,7 @@ $page = [
         ['What is the difference between CTC and in-hand salary?', 'CTC includes employer contributions such as PF and gratuity. In-hand salary is gross salary minus employee PF, ESI, professional tax and income tax.'],
         ['How much is basic salary in CTC?', 'Commonly 40 to 50 percent of CTC, though it varies by employer and role.'],
         ['How is gratuity calculated in CTC?', 'Employers usually set aside about 4.81% of basic, which equals 15 days\' pay per year of service. It is paid when the employee leaves after completing the qualifying period of service.'],
-        ['What is the in-hand salary for 6 LPA?', 'With basic at 50%, PF on the ₹15,000 ceiling, gratuity in CTC and ₹200 a month professional tax, it is about ₹45,000 a month under the new tax regime. Use the [salary calculator](/tools/salary-calculator) for other figures.'],
+        ['What is the in-hand salary for 6 LPA?', 'With basic at 50%, PF on the ₹25,000 wage ceiling, gratuity in CTC and ₹200 a month professional tax, it is about ₹42,600 a month under the new tax regime. Use the [salary calculator](/tools/salary-calculator) for other figures.'],
     ],
     'related' => [
         ['CTC to In-Hand Salary Calculator', '/tools/salary-calculator', 'Take-home pay after PF, ESI, PT and income tax.'],

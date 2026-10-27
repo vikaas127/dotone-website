@@ -4,10 +4,10 @@
   var $ = function (id) { return root.querySelector('#sal-' + id); };
   var inr = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
 
-  // New tax regime, Budget 2025. Update these if a later Budget changes them.
+  // New tax regime, Budget 2025 (unchanged by Budget 2026). PF wage ceiling ₹25,000 from 17 Sep 2026 (S.O. 5109(E)).
   var SLABS = [[400000, 0], [800000, 0.05], [1200000, 0.10], [1600000, 0.15], [2000000, 0.20], [2400000, 0.25], [Infinity, 0.30]];
   var STANDARD_DEDUCTION = 75000, REBATE_LIMIT = 1200000, CESS = 0.04;
-  var PF_RATE = 0.12, PF_CEILING = 15000, ESI_LIMIT = 21000, ESI_EMP = 0.0075, ESI_ER = 0.0325, GRATUITY = 0.0481;
+  var PF_RATE = 0.12, PF_CEILING = 25000, ESI_LIMIT = 21000, ESI_EMP = 0.0075, ESI_ER = 0.0325, GRATUITY = 0.0481;
 
   function num(el) { var v = parseFloat(el.value); return isFinite(v) && v >= 0 ? v : 0; }
 

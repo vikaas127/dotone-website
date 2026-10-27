@@ -43,7 +43,7 @@ $page = [
                 <div class="tool-field"><label for="ps-other">Overtime / other (₹)</label><input id="ps-other" type="number" min="0" step="any" value="1200"><span class="tool-hint">Not pro-rated.</span></div>
             </div>
             <p class="tool-label">Deductions</p>
-            <label class="tool-check"><input id="ps-pf" type="checkbox" checked> Work out PF at 12% of earned basic (up to ₹15,000)</label>
+            <label class="tool-check"><input id="ps-pf" type="checkbox" checked> Work out PF at 12% of earned basic (up to ₹25,000)</label>
             <label class="tool-check"><input id="ps-esi" type="checkbox" checked> Work out ESI at 0.75% when gross is ₹21,000 or less</label>
             <div class="tool-row">
                 <div class="tool-field"><label for="ps-pt">Professional tax (₹)</label><input id="ps-pt" type="number" min="0" step="any" value="200"></div>
@@ -82,7 +82,7 @@ $page = [
     'faq' => [
         ['Is this payslip generator free?', 'Yes. It is free, needs no sign-up and runs in your browser. No employee data is sent to us or stored.'],
         ['How do I download the salary slip?', 'Click "Download PDF". The payslip downloads as an A4 PDF named after the employee code and month.'],
-        ['How is PF calculated on a payslip?', 'Usually 12% of earned basic and DA, on wages up to ₹15,000 a month unless the employer contributes on higher wages.'],
+        ['How is PF calculated on a payslip?', 'Usually 12% of earned basic and DA, on wages up to the ₹25,000 a month ceiling (₹15,000 before 17 September 2026) unless the employer contributes on higher wages.'],
         ['When is ESI deducted?', 'When the employee\'s gross monthly wages are ₹21,000 or less, at 0.75% from the employee, in establishments covered by the ESI Act. ESI contributions are rounded up to the next rupee.'],
         ['Can payslips be sent to employees automatically?', 'Yes. [DotOne Payroll](/payroll) generates payslips for everyone in one run and publishes them to the employee app.'],
     ],

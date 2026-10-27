@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/fmcg',
     'title' => 'ERP Software for FMCG Companies in India | DotOne',
-    'description' => 'FMCG ERP and distribution software: super stockist and distributor tiers, field visits from a mobile app, pack sizes and flavours, blending and filling, and fast dispatch.',
+    'description' => 'FMCG ERP and distribution software: super stockist and distributor tiers, mobile field visits, pack sizes and flavours, blending, filling and dispatch.',
     'breadcrumbs' => [['Industries', '/industries'], ['FMCG', '/industries/fmcg']],
     'name' => 'FMCG',
     'icon' => 'truck',

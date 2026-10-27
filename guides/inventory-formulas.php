@@ -2,7 +2,7 @@
 $page = [
     'path' => '/guides/inventory-formulas',
     'title' => 'Inventory Formulas: Safety Stock, EOQ, Turnover | DotOne',
-    'description' => 'Inventory formulas with worked examples: safety stock, reorder point, EOQ, carrying cost, inventory turnover, backorders, and FIFO vs weighted average valuation.',
+    'description' => 'Inventory formulas with examples: safety stock, reorder point, EOQ, carrying cost, turnover, backorders, and FIFO vs weighted average valuation.',
     'breadcrumbs' => [['Guides', '/guides'], ['Inventory Formulas', '/guides/inventory-formulas']],
     'article' => ['published' => '2026-10-27'],
     'eyebrow' => 'Inventory Guide',

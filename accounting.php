@@ -2,7 +2,7 @@
 $page = [
     'path' => '/accounting',
     'title' => 'Cloud Accounting Software with GST and Tally Sync | DotOne',
-    'description' => 'Cloud accounting software for Indian businesses: GST invoicing, receivables, payables and cash flow, with a two-way Tally connector that keeps your books in Tally Prime.',
+    'description' => 'Cloud accounting software for Indian businesses: GST invoicing, receivables, payables and cash flow, with two-way Tally sync so books stay in Tally.',
     'breadcrumbs' => [['Modules', '/modules'], ['Accounting and Tally Sync', '/accounting']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Cloud Accounting Software with Tally Sync',

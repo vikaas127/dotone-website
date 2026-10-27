@@ -2,7 +2,7 @@
 $page = [
     'path' => '/tools/sku-generator',
     'title' => 'Free SKU Generator: Create Item Codes in Bulk | DotOne',
-    'description' => 'Free SKU generator. Build consistent item codes from category, brand and attributes like size and colour, generate every variant at once and download them as CSV.',
+    'description' => 'Free SKU generator: build consistent item codes from category and attributes like size and colour, generate every variant and download as CSV.',
     'breadcrumbs' => [['Free Tools', '/tools'], ['SKU Generator', '/tools/sku-generator']],
     'h1' => 'SKU Generator',
     'intro' => 'Create consistent SKUs (item codes) from a category, a product name and its attributes. List several values for an attribute, such as sizes or colours, and every combination is generated in one go, ready to download as a CSV.',

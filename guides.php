@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
-    <title>ERP and AI Guides | DotOne</title>
+    <title>ERP, Inventory, HR and Finance Guides | DotOne</title>
     <link rel="canonical" href="https://dotone.in/guides">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
-    <meta property="og:title" content="ERP and AI Guides | DotOne">
+    <meta property="og:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
     <meta property="og:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta property="og:url" content="https://dotone.in/guides">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
@@ -18,7 +18,7 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ERP and AI Guides | DotOne">
+    <meta name="twitter:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
     <meta name="twitter:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">

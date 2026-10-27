@@ -1,7 +1,7 @@
 <?php
 $page = [
     'path' => '/guides/sales-pipeline',
-    'title' => 'What Is a Sales Pipeline? Stages, Funnel and Dashboard | DotOne',
+    'title' => 'What Is a Sales Pipeline? Stages and Funnel | DotOne',
     'description' => 'What is a sales pipeline? The stages for B2B sales, pipeline vs sales funnel, how to calculate pipeline value, and what a CRM dashboard should show.',
     'breadcrumbs' => [['Guides', '/guides'], ['Sales Pipeline', '/guides/sales-pipeline']],
     'article' => ['published' => '2026-10-27'],

@@ -2,7 +2,7 @@
 $page = [
     'path' => '/manufacturing-erp',
     'title' => 'Manufacturing ERP Software for Indian Manufacturers | DotOne',
-    'description' => 'Manufacturing ERP software for Indian factories: BOM, production planning, job cards, inventory, quality and dispatch connected, with AI agents that flag delays and shortages.',
+    'description' => 'Manufacturing ERP for Indian factories: BOM, production planning, job cards, inventory, quality and dispatch, with AI agents that flag delays.',
     'breadcrumbs' => [['Modules', '/modules'], ['Manufacturing ERP', '/manufacturing-erp']],
     'eyebrow' => 'ERP for Factories',
     'h1' => 'Manufacturing ERP Software',

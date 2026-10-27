@@ -2,7 +2,7 @@
 $page = [
     'path' => '/tools/break-even-calculator',
     'title' => 'Break-Even Point Calculator: Units and Sales | DotOne',
-    'description' => 'Free break-even calculator. Find how many units and how much sales you need to cover fixed costs, your contribution margin, and the units needed for a target profit.',
+    'description' => 'Free break-even calculator: the units and sales you need to cover fixed costs, your contribution margin, and the units needed for a target profit.',
     'breadcrumbs' => [['Free Tools', '/tools'], ['Break-Even Calculator', '/tools/break-even-calculator']],
     'h1' => 'Break-Even Point Calculator',
     'intro' => 'Enter your fixed costs, selling price and variable cost per unit to see the break-even point in units and in sales value, your contribution margin, and what you need to sell to reach a target profit.',

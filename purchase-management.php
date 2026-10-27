@@ -2,7 +2,7 @@
 $page = [
     'path' => '/purchase-management',
     'title' => 'Procurement and Purchase Management Software | DotOne',
-    'description' => 'Procurement and purchase management software for manufacturers. Raise RFQs, compare vendor quotes, auto-generate purchase orders with approvals and sync to Tally.',
+    'description' => 'Procurement and purchase management software for manufacturers: RFQs, vendor quote comparison, approved purchase orders and Tally sync.',
     'breadcrumbs' => [['Modules', '/modules'], ['Purchase Management', '/purchase-management']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Procurement and Purchase Management Software',

@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/acp',
     'title' => 'ERP Software for ACP Sheet Manufacturers | DotOne',
-    'description' => 'ACP ERP for aluminium composite panel makers: coil batches and sq m yield, sheet cutting plans, shade-lot checks per project, samples, warranties and container loading.',
+    'description' => 'ACP ERP for aluminium composite panel makers: coil yield, sheet cutting plans, shade-lot checks per project, samples, warranties and container loading.',
     'breadcrumbs' => [['Industries', '/industries'], ['ACP Sheets', '/industries/acp']],
     'name' => 'ACP Sheets',
     'icon' => 'factory',

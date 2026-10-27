@@ -2,7 +2,7 @@
 $page = [
     'path' => '/tools',
     'title' => 'Free GST, Invoice, Salary and Inventory Tools | DotOne',
-    'description' => 'Free tools for Indian businesses: GST invoice, purchase order, receipt and payslip generators, GST, salary, EMI, break-even and EOQ calculators, and SKU and barcode generators.',
+    'description' => 'Free tools for Indian businesses: GST invoice, PO, receipt and payslip generators, plus GST, salary, EMI, break-even, EOQ, SKU and barcode tools.',
     'eyebrow' => 'Free Tools',
     'h1' => 'Free Tools for Indian Businesses',
     'intro' => 'Calculators and document generators for GST, invoices, salaries, loans and stock. They are free, need no sign-up and run entirely in your browser.',

@@ -1,7 +1,7 @@
 <?php
 $page = [
     'path' => '/guides/payroll-management-system',
-    'title' => 'Payroll Management System: How Payroll Works in India | DotOne',
+    'title' => 'Payroll Management System: How It Works in India | DotOne',
     'description' => 'What is a payroll management system? The monthly payroll process in India, a salary calculation example with PF and ESI, common mistakes and what to look for.',
     'breadcrumbs' => [['Guides', '/guides'], ['Payroll Management System', '/guides/payroll-management-system']],
     'article' => ['published' => '2026-10-27'],

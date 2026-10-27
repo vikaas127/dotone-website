@@ -8,6 +8,70 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'What Is a Warehouse Management System (WMS)?',
+    excerpt: 'How a WMS works, core features, WMS vs inventory management vs ERP, and how to choose one.',
+    url: '/guides/what-is-a-warehouse-management-system',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is MES? Manufacturing Execution Systems Explained',
+    excerpt: 'What an MES does on the shop floor, MES vs ERP, and how to calculate OEE with an example.',
+    url: '/guides/what-is-mes',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is MRP? Material Requirements Planning Explained',
+    excerpt: 'How MRP works, a worked BOM explosion, MRP vs MRP II vs ERP, and why MRP results go wrong.',
+    url: '/guides/what-is-mrp',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is HRMS? HRMS vs HRIS vs HCM Explained',
+    excerpt: 'What an HRMS does, how it differs from HRIS and HCM, and the core modules for Indian businesses.',
+    url: '/guides/what-is-hrms',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'Payroll Management System: How Payroll Works in India',
+    excerpt: 'The monthly payroll process, a salary example with PF and professional tax, and common mistakes.',
+    url: '/guides/payroll-management-system',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'What Is Cloud ERP? Cloud vs On-Premise ERP Explained',
+    excerpt: 'How cloud ERP works, cloud vs on-premise compared, security questions to ask, and how to move.',
+    url: '/guides/what-is-cloud-erp',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'Procure to Pay: The P2P Process, Step by Step',
+    excerpt: 'The P2P process from indent to payment, procurement vs purchasing, and three-way matching.',
+    url: '/guides/procure-to-pay',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
+    title: 'What Is Working Capital? Formula, Cycle and Example',
+    excerpt: 'The formula, the working capital cycle in days with an example, and how to free up cash.',
+    url: '/guides/working-capital',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
     title: 'Customer Acquisition: Strategy, Cost and Channels for B2B',
     excerpt: 'The customer acquisition process, how to calculate CAC with a worked example, CAC vs lifetime value, and the channels that work.',
     url: '/guides/customer-acquisition',

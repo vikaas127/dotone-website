@@ -26,7 +26,7 @@ $page = [
                 <span class="tool-hint">Varies by state. Enter 0 if none.</span>
             </div>
         </div>
-        <label class="tool-check"><input id="sal-pfcap" type="checkbox" checked> Calculate PF on basic up to ₹15,000 a month (wage ceiling)</label>
+        <label class="tool-check"><input id="sal-pfcap" type="checkbox" checked> Calculate PF on basic up to ₹25,000 a month (wage ceiling)</label>
         <label class="tool-check"><input id="sal-grat" type="checkbox"> CTC includes gratuity (4.81% of basic)</label>
     </div>
     <div class="tool-result" aria-live="polite">
@@ -42,14 +42,14 @@ $page = [
     <li><strong>Employer contributions</strong> come out of CTC first: employer PF, employer ESI where it applies, and gratuity if the employer includes it in CTC. What is left is <strong>gross salary</strong>.</li>
     <li><strong>Employee deductions</strong> come out of gross salary: employee PF, employee ESI, professional tax and income tax (TDS). What is left is <strong>in-hand (take-home) salary</strong>.</li>
 </ol>
-<p>Example with the default figures: CTC ₹12,00,000 and basic at 50%. Employer PF on the ₹15,000 ceiling is ₹1,800 a month, ₹21,600 a year, so gross salary is ₹11,78,400. Monthly gross is above ₹21,000, so ESI does not apply. Taxable income after the ₹75,000 standard deduction is ₹11,03,400, which is under ₹12 lakh, so the rebate brings income tax to nil. Take-home is ₹11,78,400 − ₹21,600 employee PF − ₹2,400 professional tax = ₹11,54,400 a year, or <strong>₹96,200 a month</strong>.</p>
+<p>Example with the default figures: CTC ₹12,00,000 and basic at 50%. Basic is ₹50,000 a month, above the ₹25,000 PF wage ceiling, so employer PF is 12% of ₹25,000 = ₹3,000 a month, ₹36,000 a year, and gross salary is ₹11,64,000. Monthly gross is above ₹21,000, so ESI does not apply. Taxable income after the ₹75,000 standard deduction is ₹10,89,000, which is under ₹12 lakh, so the rebate brings income tax to nil. Take-home is ₹11,64,000 − ₹36,000 employee PF − ₹2,400 professional tax = ₹11,25,600 a year, or <strong>₹93,800 a month</strong>.</p>
 '],
         ['rules', 'Rules this calculator uses', '
 <ul>
-    <li><strong>PF:</strong> 12% of basic from the employee and 12% from the employer, on basic up to ₹15,000 a month if the ceiling box is ticked, or on full basic if it is not.</li>
+    <li><strong>PF:</strong> 12% of basic from the employee and 12% from the employer, on basic up to the ₹25,000 a month wage ceiling (raised from ₹15,000 with effect from 17 September 2026) if the ceiling box is ticked, or on full basic if it is not. Under the Code on Social Security, if allowances make up more than half of total pay, the excess can count as wages for PF, so keep basic at about half of pay or check with your CA.</li>
     <li><strong>ESI:</strong> applies when monthly gross is ₹21,000 or less, at 0.75% from the employee and 3.25% from the employer.</li>
     <li><strong>Gratuity:</strong> if included in CTC, 4.81% of basic, set aside by the employer. It is paid only on leaving after the qualifying service.</li>
-    <li><strong>Income tax:</strong> new tax regime slabs from Budget 2025, a ₹75,000 standard deduction, the section 87A rebate up to ₹12 lakh of taxable income with marginal relief just above it, surcharge above ₹50 lakh, and 4% health and education cess. Old-regime deductions such as 80C and HRA are not applied.</li>
+    <li><strong>Income tax:</strong> new tax regime slabs from Budget 2025, a ₹75,000 standard deduction, the section 87A rebate up to ₹12 lakh of taxable income with marginal relief just above it, surcharge above ₹50 lakh, and 4% health and education cess. Old-regime deductions such as 80C and HRA are not applied. Budget 2026 left these slabs, the standard deduction and the rebate unchanged for FY 2026-27.</li>
 </ul>
 <div class="guide-callout"><p>This is an estimate for planning. Actual pay depends on the salary structure, the state, the tax regime chosen and any changes in the latest Budget. Confirm with your employer or CA.</p></div>
 '],
@@ -71,7 +71,7 @@ $page = [
     ],
     'faq' => [
         ['How is in-hand salary calculated from CTC?', 'Subtract employer contributions (employer PF, employer ESI and any gratuity) from CTC to get gross salary, then subtract employee PF, employee ESI, professional tax and income tax to get in-hand salary.'],
-        ['What is the in-hand salary for 12 LPA?', 'With basic at 50% of CTC, PF on the ₹15,000 ceiling, ₹200 a month professional tax and the new tax regime, in-hand pay is about ₹96,200 a month. It changes with the salary structure and state.'],
+        ['What is the in-hand salary for 12 LPA?', 'With basic at 50% of CTC, PF on the ₹25,000 wage ceiling, ₹200 a month professional tax and the new tax regime, in-hand pay is about ₹93,800 a month. It changes with the salary structure and state.'],
         ['Is income up to ₹12 lakh tax-free?', 'Under the new tax regime from Budget 2025, the section 87A rebate brings tax to nil when taxable income is up to ₹12 lakh. Salaried employees also get a ₹75,000 standard deduction, so gross salary up to ₹12.75 lakh can be tax-free.'],
         ['When does ESI apply?', 'ESI applies to employees whose monthly gross wages are ₹21,000 or less, in establishments covered by the ESI Act.'],
         ['Can payroll software do this every month?', 'Yes. [DotOne Payroll](/payroll) works out PF, ESI, professional tax and TDS from attendance and salary structures in one payroll run.'],

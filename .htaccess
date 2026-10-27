@@ -48,7 +48,9 @@ ServerSignature Off
 DirectoryIndex index.php
 # sitemap.xml is generated from the page files, so new pages appear automatically
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
-RewriteRule ^(sitemap\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
+# llms.txt (guide to the site for AI assistants) is generated the same way
+RewriteRule ^llms\.txt$ /llms.php [L]
+RewriteRule ^(sitemap\.php|llms\.php|robots\.txt|favicon\.ico|google9bffe2e0ab9e0da0\.html)$ - [L]
 
 # Header/footer partials are only included by PHP, never served directly
 RewriteRule ^includes/ - [F,L]
@@ -109,7 +111,7 @@ RewriteRule ^ /%1 [R=301,L]
 
 # Pages only (form handlers, API endpoints and the implementation app keep their URLs)
 RewriteCond %{REQUEST_METHOD} =GET
-RewriteCond %{REQUEST_URI} !^/(contact-submit|webinar-count|webinar-register|sitemap)\.php$
+RewriteCond %{REQUEST_URI} !^/(contact-submit|webinar-count|webinar-register|sitemap|llms)\.php$
 RewriteCond %{REQUEST_URI} !^/implementation/
 RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.php[\s?]
 RewriteRule ^ /%1 [R=301,L]

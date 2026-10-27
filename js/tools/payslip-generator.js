@@ -4,7 +4,7 @@
   var D = window.DotoneDoc, esc = D.esc, num = D.num, money = D.money;
   var preview = root.querySelector('[data-preview]');
   var $ = function (id) { return root.querySelector('#ps-' + id); };
-  var PF_RATE = 0.12, PF_CEILING = 15000, ESI_LIMIT = 21000, ESI_EMP = 0.0075;
+  var PF_RATE = 0.12, PF_CEILING = 25000, ESI_LIMIT = 21000, ESI_EMP = 0.0075;
 
   function monthLabel(v) {
     if (!v) return '';

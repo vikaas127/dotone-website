@@ -2,7 +2,7 @@
 $page = [
     'path' => '/guides/supply-chain-management',
     'title' => 'Supply Chain Management and Optimization Guide | DotOne',
-    'description' => 'Supply chain management and optimization for Indian manufacturers: the five stages, the levers that cut cost and delays, reorder point maths and the KPIs to track.',
+    'description' => 'Supply chain management and optimization for Indian manufacturers: the five stages, levers that cut cost and delays, reorder point maths and KPIs.',
     'breadcrumbs' => [['Guides', '/guides'], ['Supply Chain Management', '/guides/supply-chain-management']],
     'article' => ['published' => '2026-10-27'],
     'eyebrow' => 'Operations Guide',

@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/site.php';
 $stories = require __DIR__ . '/includes/data/case-studies.php';
 $page = [
     'path' => '/case-studies',
-    'title' => 'Customer Stories | DotOne',
+    'title' => 'Customer Stories: ERP for Indian Manufacturers | DotOne',
     'description' => 'How manufacturers and distributors across India run their business on DotOne. Read customer stories or ask for a reference call in your industry.',
     'breadcrumbs' => [['Customer Stories', '/case-studies']],
     'css' => ['/css/cases.css'],

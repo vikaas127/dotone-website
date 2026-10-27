@@ -2,7 +2,7 @@
 $page = [
     'path' => '/guides/working-capital',
     'title' => 'What Is Working Capital? Formula, Cycle and Example | DotOne',
-    'description' => 'What is working capital? The formula, the working capital cycle in days with a worked manufacturing example, what a good ratio looks like, and how to free up cash.',
+    'description' => 'What is working capital? The formula, the working capital cycle in days with a manufacturing example, a good ratio, and how to free up cash.',
     'breadcrumbs' => [['Guides', '/guides'], ['What Is Working Capital?', '/guides/working-capital']],
     'article' => ['published' => '2026-10-27'],
     'eyebrow' => 'Finance Guide',

@@ -2,7 +2,7 @@
 $page = [
     'path' => '/guides/customer-acquisition',
     'title' => 'Customer Acquisition: Strategy, Cost and Channels | DotOne',
-    'description' => 'What is customer acquisition? The B2B customer acquisition process, how to calculate customer acquisition cost (CAC) with an example, CAC vs lifetime value, and the channels that work.',
+    'description' => 'What is customer acquisition? The B2B acquisition process, how to calculate CAC with an example, CAC vs lifetime value, and the channels that work.',
     'breadcrumbs' => [['Guides', '/guides'], ['Customer Acquisition', '/guides/customer-acquisition']],
     'article' => ['published' => '2026-10-27'],
     'eyebrow' => 'Sales Guide',

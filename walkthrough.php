@@ -220,7 +220,7 @@ function wt_visual($key)
 $page = [
     'path' => '/walkthrough',
     'title' => 'Order Journey: One Order Through the Factory | DotOne',
-    'description' => 'Follow one order through DotOne from enquiry to dispatch: quotation, planning, purchase, stores, production, quality and invoice, with an AI agent at every step.',
+    'description' => 'Follow one order through DotOne from enquiry to dispatch: quotation, planning, purchase, stores, production, quality and invoice, with AI at each step.',
 ];
 $v = ASSET_VERSION;
 ?>

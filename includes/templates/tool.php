@@ -1,7 +1,7 @@
 <?php
 // Free tool page: hero, the tool itself, then explainer sections, FAQ, related links and CTA.
 // $page['tool']     = trusted HTML for the tool's form and results (written in the page file)
-// $page['script']   = path of the tool's JavaScript
+// $page['script']   = path of the tool's JavaScript, or a list of paths loaded in order
 // $page['sections'] = [[id, heading, html], ...], $page['related'] = [[title, url, summary], ...]
 require_once dirname(__DIR__) . '/site.php';
 $page['css'] = array_merge($page['css'] ?? [], ['/css/guide-article.css', '/css/tools.css']);
@@ -57,5 +57,7 @@ render_head($page);
 <?php endif; ?>
 
 <?php render_cta($page['cta_heading'], $page['cta_text']); ?>
-<script src="<?= e($page['script']) ?>?v=<?= ASSET_VERSION ?>" defer></script>
+<?php foreach ((array) $page['script'] as $src): ?>
+<script src="<?= e($src) ?>?v=<?= ASSET_VERSION ?>" defer></script>
+<?php endforeach; ?>
 <?php render_foot($page);

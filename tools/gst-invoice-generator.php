@@ -1,5 +1,5 @@
 <?php
-$states = ['Andaman and Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chandigarh', 'Chhattisgarh', 'Dadra and Nagar Haveli and Daman and Diu', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jammu and Kashmir', 'Jharkhand', 'Karnataka', 'Kerala', 'Ladakh', 'Lakshadweep', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Puducherry', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal'];
+$states = require dirname(__DIR__) . '/includes/data/states.php';
 $opts = function ($selected) use ($states) {
     $out = '';
     foreach ($states as $s) $out .= '<option' . ($s === $selected ? ' selected' : '') . '>' . $s . '</option>';
@@ -11,8 +11,8 @@ $page = [
     'description' => 'Free GST invoice generator for India. Add your business and customer details and line items with HSN and GST rates, then print or save the GST invoice as PDF.',
     'breadcrumbs' => [['Free Tools', '/tools'], ['GST Invoice Generator', '/tools/gst-invoice-generator']],
     'h1' => 'Free GST Invoice Generator',
-    'intro' => 'Fill in your business details, your customer and the items sold. The invoice works out CGST and SGST for a sale within your state, or IGST for a sale to another state, and you can print it or save it as a PDF.',
-    'script' => '/js/tools/gst-invoice-generator.js',
+    'intro' => 'Fill in your business details, your customer and the items sold. The invoice works out CGST and SGST for a sale within your state, or IGST for a sale to another state, and you can download it as a PDF or print it.',
+    'script' => ['/js/tools/doc-export.js', '/js/tools/gst-invoice-generator.js'],
     'tool' => '
 <div data-inv>
     <div class="tool-grid">
@@ -48,7 +48,8 @@ $page = [
     </div>
     <div class="tool-actions">
         <button type="button" class="tool-btn tool-btn--ghost" data-add>+ Add item</button>
-        <button type="button" class="tool-btn" data-print>Print or save as PDF</button>
+        <button type="button" class="tool-btn" data-download>Download PDF</button>
+        <button type="button" class="tool-btn tool-btn--ghost" data-print>Print</button>
     </div>
     <div class="inv-preview" data-preview aria-live="polite"></div>
 </div>',
@@ -74,7 +75,7 @@ $page = [
     ],
     'faq' => [
         ['Is this GST invoice generator free?', 'Yes. It is free, needs no sign-up, and works entirely in your browser. Nothing you enter is sent to us.'],
-        ['How do I save the invoice as a PDF?', 'Click "Print or save as PDF" and choose "Save as PDF" as the printer in the print dialog.'],
+        ['How do I save the invoice as a PDF?', 'Click "Download PDF". The invoice downloads as an A4 PDF named after the invoice number. To print it instead, click "Print".'],
         ['When does the invoice show IGST instead of CGST and SGST?', 'When your state and the customer\'s state (the place of supply) are different. For a sale within the same state, GST is split equally into CGST and SGST.'],
         ['Can I use this for e-invoicing?', 'No. Businesses above the e-invoicing turnover threshold must register B2B invoices on the Invoice Registration Portal to get an IRN. Use accounting software that supports e-invoicing.'],
         ['Is there software that makes GST invoices automatically?', 'Yes. [DotOne accounting](/accounting) raises GST invoices from sales orders, with tax worked out from your item and HSN setup, and syncs them to Tally.'],

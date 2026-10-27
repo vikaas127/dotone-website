@@ -2,7 +2,7 @@
 // escaping, Indian amount in words, PDF download and printing of the .inv-preview block.
 window.DotoneDoc = (function () {
   // Document styles, used by the on-page preview, the PDF and the print frame (the only copy)
-  var CSS = '* { box-sizing: border-box; } .inv-preview { margin-top: 2rem; background: #fff; color: #101828; font-family: Poppins, Arial, sans-serif; font-size: 12px; line-height: 1.5; border: 1px solid #E4E7EC; border-radius: 12px; padding: 28px; overflow-x: auto; } .inv-preview .doc-sheet { min-width: 640px; } .doc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid #101828; } .doc-brand { font-size: 17px; font-weight: 700; line-height: 1.3; } .doc-sub { color: #475467; font-size: 11px; white-space: pre-line; margin-top: 2px; } .doc-title { font-size: 19px; font-weight: 700; letter-spacing: 0.08em; text-align: right; margin-bottom: 6px; } .doc-meta { border-collapse: collapse; margin-left: auto; font-size: 11px; } .doc-meta th { text-align: left; color: #667085; font-weight: 500; padding: 1px 12px 1px 0; white-space: nowrap; } .doc-meta td { text-align: right; font-weight: 600; padding: 1px 0; white-space: nowrap; } .doc-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; } .doc-box { border: 1px solid #E4E7EC; border-radius: 6px; padding: 10px 12px; font-size: 11.5px; white-space: pre-line; } .doc-box .doc-name { font-weight: 600; font-size: 12.5px; } .doc-label { display: block; font-size: 9.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #667085; margin-bottom: 4px; white-space: normal; } .doc-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 11px; } .doc-table th { background: #F2F4F7; color: #344054; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; text-align: left; padding: 7px 6px; border-bottom: 1px solid #D0D5DD; } .doc-table td { padding: 7px 6px; border-bottom: 1px solid #EAECF0; vertical-align: top; overflow-wrap: anywhere; } .doc-table .num { text-align: right; white-space: nowrap; overflow-wrap: normal; } .doc-table th.num { white-space: normal; } .doc-table small { display: block; color: #667085; font-size: 9.5px; } .doc-table tfoot td { font-weight: 600; background: #F9FAFB; border-bottom: 0; } .doc-foot { display: grid; grid-template-columns: 1fr 260px; gap: 20px; margin-top: 14px; align-items: start; } .doc-words { font-size: 11px; } .doc-words b { display: block; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667085; margin-bottom: 2px; } .doc-notes { margin-top: 10px; font-size: 10.5px; color: #475467; white-space: pre-line; } .doc-totals { font-size: 11.5px; } .doc-totals div { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; } .doc-totals span:last-child { white-space: nowrap; } .doc-totals .doc-grand { margin-top: 6px; padding: 8px 10px; background: #101828; color: #fff; border-radius: 6px; font-size: 13px; font-weight: 700; } .doc-section { margin-top: 16px; } .doc-section > .doc-label { margin-bottom: 6px; } .doc-sign { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 28px; font-size: 10.5px; color: #475467; } .doc-sign-box { text-align: center; min-width: 200px; color: #101828; } .doc-sign-box .doc-sign-line { border-top: 1px solid #101828; margin-top: 44px; padding-top: 4px; font-size: 11px; } .doc-table tr, .doc-foot, .doc-sign, .doc-parties { page-break-inside: avoid; break-inside: avoid; } .doc-table thead { display: table-header-group; } .doc-kv th { width: 38%; background: #F9FAFB; text-transform: none; letter-spacing: 0; font-size: 10.5px; color: #475467; font-weight: 500; border-bottom: 1px solid #EAECF0; } .doc-kv td { font-weight: 500; } .doc-small { font-size: 9.5px; color: #98A2B3; margin-top: 18px; text-align: center; }';
+  var CSS = '* { box-sizing: border-box; } .inv-preview { margin-top: 2rem; background: #fff; color: #101828; font-family: Poppins, Arial, sans-serif; font-size: 12px; line-height: 1.5; border: 1px solid #E4E7EC; border-radius: 12px; padding: 28px; overflow-x: auto; } .inv-preview .doc-sheet { min-width: 640px; } .doc-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid #101828; } .doc-brand { font-size: 17px; font-weight: 700; line-height: 1.3; } .doc-sub { color: #475467; font-size: 11px; white-space: pre-line; margin-top: 2px; } .doc-title { font-size: 19px; font-weight: 700; letter-spacing: 0.08em; text-align: right; margin-bottom: 6px; } .doc-meta { border-collapse: collapse; margin-left: auto; font-size: 11px; } .doc-meta th { text-align: left; color: #667085; font-weight: 500; padding: 1px 12px 1px 0; white-space: nowrap; } .doc-meta td { text-align: right; font-weight: 600; padding: 1px 0; white-space: nowrap; } .doc-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; } .doc-box { border: 1px solid #E4E7EC; border-radius: 6px; padding: 10px 12px; font-size: 11.5px; white-space: pre-line; } .doc-box .doc-name { font-weight: 600; font-size: 12.5px; } .doc-label { display: block; font-size: 9.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #667085; margin-bottom: 4px; white-space: normal; } .doc-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 11px; } .doc-table th { background: #F2F4F7; color: #344054; font-weight: 600; font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; text-align: left; padding: 7px 6px; border-bottom: 1px solid #D0D5DD; } .doc-table td { padding: 7px 6px; border-bottom: 1px solid #EAECF0; vertical-align: top; overflow-wrap: anywhere; } .doc-table .num { text-align: right; white-space: nowrap; overflow-wrap: normal; } .doc-table th.num { white-space: normal; } .doc-table small { display: block; color: #667085; font-size: 9.5px; } .doc-table tfoot td { font-weight: 600; background: #F9FAFB; border-bottom: 0; } .doc-foot { display: grid; grid-template-columns: 1fr 260px; gap: 20px; margin-top: 14px; align-items: start; } .doc-words { font-size: 11px; } .doc-words b { display: block; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: #667085; margin-bottom: 2px; } .doc-notes { margin-top: 10px; font-size: 10.5px; color: #475467; white-space: pre-line; } .doc-totals { font-size: 11.5px; } .doc-totals div { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; } .doc-totals span:last-child { white-space: nowrap; } .doc-totals .doc-grand { margin-top: 6px; padding: 8px 10px; background: #101828; color: #fff; border-radius: 6px; font-size: 13px; font-weight: 700; } .doc-section { margin-top: 16px; } .doc-section > .doc-label { margin-bottom: 6px; } .doc-sign { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 28px; font-size: 10.5px; color: #475467; } .doc-sign-box { text-align: center; min-width: 200px; color: #101828; } .doc-sign-box .doc-sign-line { border-top: 1px solid #101828; margin-top: 44px; padding-top: 4px; font-size: 11px; } .doc-table tr, .doc-foot, .doc-sign, .doc-parties { page-break-inside: avoid; break-inside: avoid; } .doc-table thead { display: table-header-group; } .doc-kv th { width: 38%; background: #F9FAFB; text-transform: none; letter-spacing: 0; font-size: 10.5px; color: #475467; font-weight: 500; border-bottom: 1px solid #EAECF0; } .doc-kv td { font-weight: 500; } .doc-brandbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 18px; padding-top: 10px; border-top: 1px solid #EAECF0; font-size: 10px; color: #98A2B3; } .doc-brandbar img { height: 18px; width: auto; display: block; } .doc-small { font-size: 9.5px; color: #98A2B3; margin-top: 18px; text-align: center; }';
   // Fixed A4 content width so the PDF and print layout do not depend on the screen
   var SHEET_CSS = ' body { margin: 0; } .inv-preview { margin: 0; border: 0; border-radius: 0; padding: 0; overflow: visible; } .inv-preview .doc-sheet { min-width: 0; }';
   (function () {
@@ -14,6 +14,26 @@ window.DotoneDoc = (function () {
   var PDF_LIB = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';
   var PDF_SRI = 'sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==';
   var pdfLib = null;
+  // DotOne footer on every downloaded document: logo on the left, tagline on the right
+  var LOGO = '/assets/dotone-wm-blue-tight.png', LOGO_RATIO = 983 / 227;
+  var TAGLINE = 'Endless clarity  \u00b7  dotone.in';
+  var logoData = null;
+  function loadLogo() {
+    if (logoData) return logoData;
+    logoData = fetch(LOGO).then(function (r) { return r.blob(); }).then(function (blob) {
+      return new Promise(function (resolve) {
+        var fr = new FileReader();
+        fr.onload = function () { resolve(fr.result); };
+        fr.onerror = function () { resolve(null); };
+        fr.readAsDataURL(blob);
+      });
+    }).catch(function () { logoData = null; return null; });
+    return logoData;
+  }
+  function brand() {
+    return '<div class="doc-brandbar"><img src="' + LOGO + '" alt="DotOne"><span>' + TAGLINE + '</span></div>';
+  }
+  function withoutBrand(htmlStr) { return htmlStr.replace(/<div class="doc-brandbar">[\s\S]*?<\/div>/, ''); }
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
@@ -85,9 +105,16 @@ window.DotoneDoc = (function () {
     doc.write('<!doctype html><html><head><meta charset="utf-8"><title>' + esc(title || 'Document') + '</title>' +
       '<style>' + CSS + SHEET_CSS + ' @page { size: A4; margin: 12mm; }</style></head><body><div class="inv-preview">' + preview.innerHTML + '</div></body></html>');
     doc.close();
-    frame.contentWindow.focus();
-    frame.contentWindow.print();
-    setTimeout(function () { frame.remove(); }, 1000);
+    var printed = false;
+    function go() {
+      if (printed) return;
+      printed = true;
+      frame.contentWindow.focus();
+      frame.contentWindow.print();
+      setTimeout(function () { frame.remove(); }, 1000);
+    }
+    var img = doc.querySelector('.doc-brandbar img');
+    if (img && !img.complete) { img.addEventListener('load', go); img.addEventListener('error', go); setTimeout(go, 1500); } else go();
   }
 
   // Render a clean copy of the document (not the on-page element, which is offset by scroll and animations)
@@ -95,24 +122,29 @@ window.DotoneDoc = (function () {
     var label = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Preparing PDF…';
-    return loadPdfLib().then(function (html2pdf) {
+    return Promise.all([loadPdfLib(), loadLogo()]).then(function (libs) {
+      var html2pdf = libs[0], logo = libs[1];
       return html2pdf().set({
-        margin: [12, 12, 12, 12],
+        margin: [12, 12, 18, 12],
         filename: safeName(name),
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 3, useCORS: true, backgroundColor: '#ffffff', scrollX: 0, scrollY: 0 },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
         pagebreak: { mode: ['css', 'legacy'], avoid: ['tr', '.doc-top', '.doc-parties', '.doc-foot', '.doc-section', '.doc-sign'] }
-      }).from('<div style="width:186mm;background:#fff"><style>' + CSS + SHEET_CSS + '</style><div class="inv-preview">' + preview.innerHTML + '</div></div>', 'string').toPdf().get('pdf').then(function (pdf) {
-        // Page numbers when the document runs past one page
+      }).from('<div style="width:186mm;background:#fff"><style>' + CSS + SHEET_CSS + '</style><div class="inv-preview">' + withoutBrand(preview.innerHTML) + '</div></div>', 'string').toPdf().get('pdf').then(function (pdf) {
+        // DotOne footer on every page, plus page numbers when the document runs past one page
         var pages = pdf.internal.getNumberOfPages();
-        if (pages < 2) return;
         var w = pdf.internal.pageSize.getWidth(), h = pdf.internal.pageSize.getHeight();
         for (var i = 1; i <= pages; i++) {
           pdf.setPage(i);
+          pdf.setDrawColor(234, 236, 240);
+          pdf.setLineWidth(0.2);
+          pdf.line(12, h - 13, w - 12, h - 13);
+          if (logo) pdf.addImage(logo, 'PNG', 12, h - 10.5, 5 * LOGO_RATIO, 5);
           pdf.setFontSize(8);
           pdf.setTextColor(152, 162, 179);
-          pdf.text('Page ' + i + ' of ' + pages, w - 12, h - 6, { align: 'right' });
+          pdf.text(TAGLINE, w - 12, h - 7, { align: 'right' });
+          if (pages > 1) pdf.text('Page ' + i + ' of ' + pages, w / 2, h - 7, { align: 'center' });
         }
       }).save();
     }).catch(function () {
@@ -144,5 +176,5 @@ window.DotoneDoc = (function () {
     if (dlBtn) dlBtn.addEventListener('click', function () { download(preview, nameFn(), dlBtn, function () { print(preview, nameFn()); }); });
   }
 
-  return { esc: esc, num: num, money: money, amountInWords: amountInWords, today: today, formatDate: formatDate, head: head, sign: sign, bind: bind };
+  return { esc: esc, num: num, money: money, amountInWords: amountInWords, today: today, formatDate: formatDate, head: head, sign: sign, brand: brand, bind: bind };
 })();

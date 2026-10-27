@@ -1,11 +1,11 @@
 <?php
 $page = [
     'path' => '/crm',
-    'title' => 'CRM Software for Sales Teams | DotOne',
-    'description' => 'Capture leads, manage the pipeline, schedule follow-ups and send quotations. DotOne CRM connects every deal to sales, stock and invoicing in one place.',
+    'title' => 'Cloud-Based CRM Software for Sales Teams | DotOne',
+    'description' => 'Cloud-based CRM with lead generation, pipeline, follow-up automation and quotations. DotOne CRM connects every deal to sales, stock and invoicing in one place.',
     'breadcrumbs' => [['Modules', '/modules'], ['CRM', '/crm']],
     'eyebrow' => 'ERP Module',
-    'h1' => 'CRM Software for Sales Teams',
+    'h1' => 'Cloud-Based CRM Software for Sales Teams',
     'intro' => 'Manage leads, track opportunities, forecast revenue and keep sales in step with production. DotOne CRM is built for B2B and manufacturing sales, where pricing, approvals and delivery matter as much as closing the deal.',
     'highlights' => ['Lead pipeline', 'Follow-up reminders', 'Quotation approvals', 'Order to invoice'],
     'capabilities_heading' => 'From first enquiry to confirmed order',
@@ -46,6 +46,7 @@ $page = [
         ['Is DotOne CRM suitable for manufacturing businesses?', 'Yes. It is built for long B2B sales cycles, BOM-based pricing and quotations, dealer and distributor sales, and multi-location sales teams.'],
         ['Can leads from WhatsApp and phone calls go into the CRM?', 'Yes. Leads from the website, WhatsApp, calls, distributors and field sales are collected in one pipeline.'],
         ['What happens when a deal is won?', 'The deal converts into a sales order and then an invoice, and can feed the production plan. See [Sales Management](/sales-management) for the order side.'],
+        ['What sales automation does DotOne CRM include?', 'Leads from your website and other sources land in the pipeline without manual entry, follow-up reminders keep every lead moving, quotation discounts are routed for approval, and a won deal converts into a sales order and invoice. Read more in our guide to [sales process steps](/guides/sales-process).'],
         ['Can we track salespeople in the field?', 'Yes. GPS-based visit logs and activity tracking are available through [Field Sales Tracking](/field-sales-tracking), linked to the same customer records.'],
     ],
     'cta_heading' => 'See your sales pipeline in DotOne',

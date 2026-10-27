@@ -8,6 +8,38 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'What Is a Sales Pipeline? Stages, Funnel and CRM Dashboard',
+    excerpt: 'B2B pipeline stages, pipeline vs sales funnel, weighted pipeline value and what a CRM dashboard should show.',
+    url: '/guides/sales-pipeline',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Sales Process Steps: A Practical Guide for B2B Businesses',
+    excerpt: 'The 7 steps of the sales process, sales leads, inbound vs outbound, consultative selling and sales automation.',
+    url: '/guides/sales-process',
+    category: 'sales',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'What Is S&OP? Sales and Operations Planning Explained',
+    excerpt: 'The monthly S&OP process in five steps, a worked example for a manufacturer, S&OP vs IBP vs MRP, and the KPIs to track.',
+    url: '/guides/sales-and-operations-planning',
+    category: 'production',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'Vendor Management: A Practical Guide for Manufacturers',
+    excerpt: 'The vendor management process, a weighted vendor scorecard, the KPIs to track and the mistakes to avoid.',
+    url: '/guides/vendor-management',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
     title: 'How to Raise Multiple Final Invoices From One Proforma Invoice',
     excerpt: 'Bill one proforma invoice in several dispatches: GST rules, a worked example, and how to track what is still to be billed.',
     url: '/guides/proforma-invoice',

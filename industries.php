@@ -2,6 +2,12 @@
 require_once __DIR__ . '/includes/site.php';
 $industries = [
     ['manufacturing', 'Manufacturing', 'factory', 'BOM, job cards, quality and dispatch.'],
+    ['plywood', 'Plywood', 'box', 'Sheets by size, thickness and grade.'],
+    ['laminates', 'Laminates', 'doc', 'Designs, finishes and sheet stock.'],
+    ['tape', 'Adhesive Tape', 'flow', 'Jumbo rolls, slitting and roll sizes.'],
+    ['acp', 'ACP Sheets', 'factory', 'Coil yield, shade lots and warranties.'],
+    ['metal', 'Metal & Steel', 'cog', 'Stock by weight, grade and size.'],
+    ['fmcg', 'FMCG', 'truck', 'Super stockists, distributors and field visits.'],
     ['retail', 'Retail', 'cart', 'Store stock, billing and daily sales.'],
     ['trading-distribution', 'Trading & Distribution', 'truck', 'Buy, stock and deliver with margins visible.'],
     ['pharma', 'Pharma & Life Sciences', 'shield', 'Batch-wise control from material to release.'],
@@ -24,8 +30,8 @@ $cards = [];
 foreach ($industries as [$slug, $name, $ico, $summary]) $cards[] = ['/industries/' . $slug, $name, $ico, $summary];
 $page = [
     'path' => '/industries',
-    'title' => 'Industry ERP: Plywood, Footwear, Metal, FMCG | DotOne',
-    'description' => 'ERP workflows configured for plywood, tape, footwear, laminates, ACP, metal, FMCG, healthcare and service businesses.',
+    'title' => 'Industry ERP: Plywood, Tape, ACP, Metal, FMCG | DotOne',
+    'description' => 'ERP workflows configured for plywood, laminates, adhesive tape, ACP, metal, FMCG, healthcare and service businesses.',
     'eyebrow' => 'Industries',
     'h1' => 'ERP and AI Built for Your Industry',
     'intro' => 'One platform, shaped to your industry. Businesses that make goods, move goods or run sites all work in DotOne, each with the workflow and modules that fit how they operate.',
@@ -40,7 +46,7 @@ $page = [
     ],
     'faq' => [
         ['Is each industry a separate product?', 'No. Every industry runs on the same DotOne platform. What changes is the workflow, the masters and the modules you switch on.'],
-        ['My industry is not listed. Can DotOne still work for us?', 'Very likely. DotOne workflows are configured for many businesses, including plywood, tape, footwear, laminates, ACP, metal, FMCG, healthcare and services. [Talk to us](/contact) about your process.'],
+        ['My industry is not listed. Can DotOne still work for us?', 'Very likely. DotOne workflows are configured for many businesses, including plywood, laminates, adhesive tape, ACP, metal, FMCG, healthcare and services. [Talk to us](/contact) about your process.'],
         ['Can manufacturers use cameras for quality checks?', 'Yes. Vision AI connects to cameras on the line to spot defects and record them in DotOne. See [Vision AI](/vision-ai).'],
         ['How is our data kept secure?', 'Data is encrypted, access is role-based with audit logs, and changes are recorded. See our [security practices](/security).'],
     ],

@@ -29,6 +29,7 @@ $page = [
         ]],
     ],
     'faq' => [
+        ['Is DotOne suitable for a small business?', 'Yes. Small teams start with two or three modules on a free or low-cost plan and add more as they grow. See [ERP for small business](/erp-for-small-business) and our guide on [how to choose an ERP](/guides/how-to-choose-erp).'],
         ['What is ERP software?', 'ERP (enterprise resource planning) software keeps inventory, sales, purchase, production, HR and accounts in one system, so every department works from the same data. Read our guide: [What is ERP?](/guides/what-is-erp)'],
         ['Is DotOne cloud or on-premise?', 'DotOne runs in the cloud. Enterprise plans can discuss on-premise or hybrid options.'],
         ['How long does implementation take?', 'Most teams go live in 4 to 6 weeks using fit-to-standard templates, with a dedicated onboarding team.'],

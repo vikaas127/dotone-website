@@ -38,7 +38,7 @@ const MODULES = [
     'field-sales-tracking'  => ['name' => 'Field Sales Tracking',  'icon' => 'pin',    'agent' => 'sales',     'summary' => 'GPS check-ins, visits and attendance for field teams.'],
     'hrms'                  => ['name' => 'HRMS',                  'icon' => 'id',     'agent' => 'hr',        'summary' => 'Biometric and geo-fenced attendance, shifts and leave.'],
     'payroll'               => ['name' => 'Payroll',               'icon' => 'rupee',  'agent' => 'hr',        'summary' => 'PF, ESI, TDS and payslips generated from attendance.'],
-    'accounting'            => ['name' => 'Accounting & Tally Sync', 'icon' => 'doc',  'agent' => 'finance',   'summary' => 'GST invoicing, funds tracking and two-way Tally sync.'],
+    'accounting'            => ['name' => 'Accounting',            'icon' => 'doc',    'agent' => 'finance',   'summary' => 'GST invoicing, ledgers, bank reconciliation, with optional Tally sync.'],
     'finance-management'    => ['name' => 'Finance Management',    'icon' => 'rupee',  'agent' => 'finance',   'summary' => 'Receivables, payables, cash flow and budgets from live operations.'],
     'reports-analytics'     => ['name' => 'Reports & Analytics',   'icon' => 'chart',  'agent' => 'reporting', 'summary' => 'Live dashboards, MIS and centralised multi-plant reporting.'],
     'business-analytics'    => ['name' => 'Business Analytics',    'icon' => 'trend',  'agent' => 'reporting', 'summary' => 'Trends, comparisons and drill-downs across every department.'],

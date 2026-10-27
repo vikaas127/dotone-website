@@ -8,6 +8,46 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'ERP Implementation: Steps, Timeline and Best Practices',
+    excerpt: 'The 6 steps of ERP implementation, realistic timelines, data migration, change management and a go-live checklist.',
+    url: '/guides/erp-implementation',
+    category: 'implementation',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'How to Choose an ERP: Selection Checklist and Cost',
+    excerpt: 'Requirements, shortlisting, demo scripts, total cost of ownership and a weighted scoring sheet.',
+    url: '/guides/how-to-choose-erp',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'Best ERP Software in India: How to Compare for Manufacturers',
+    excerpt: 'The four kinds of ERP in India, the criteria that matter for manufacturers, a comparison table and red flags.',
+    url: '/guides/best-erp-software-india',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'ERP Modules and Features: What Each Module Does',
+    excerpt: 'The core ERP modules, features every ERP should have, types of ERP, and which modules to start with.',
+    url: '/guides/erp-modules',
+    category: 'erp',
+    date: '2026-10-27',
+    readTime: '9 min'
+  },
+  {
+    title: 'ERP Integration: Connecting Tally, CRM, APIs and Machines',
+    excerpt: 'Common integrations for Indian businesses, the main integration methods and a planning checklist.',
+    url: '/guides/erp-integration',
+    category: 'implementation',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
     title: 'Stocktaking: How to Do a Physical Stock Count',
     excerpt: 'Full counts vs cycle counts, a step-by-step physical count, and how to handle stock variances, with a worked example.',
     url: '/guides/stocktaking',
@@ -192,12 +232,12 @@ window.GUIDES_ARTICLES = [
     readTime: '11 min'
   },
   {
-    title: 'What Is ERP? Enterprise Resource Planning Explained',
-    excerpt: 'Learn what an ERP system is, how it works for manufacturers, key modules, and why MSMEs in India are adopting unified platforms.',
+    title: 'What Is ERP? Meaning, Full Form and How It Works',
+    excerpt: 'ERP stands for enterprise resource planning. What an ERP system means, how it works through one order, its modules, and who needs one.',
     url: '/guides/what-is-erp',
     category: 'erp',
-    date: '2025-06-01',
-    readTime: '12 min'
+    date: '2026-10-27',
+    readTime: '10 min'
   },
   {
     title: 'BOM Setup Guide for Multi-Variant Manufacturing',

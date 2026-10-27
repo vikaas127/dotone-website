@@ -1,732 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>What Is ERP? A Plain-English Guide | DotOne</title>
-    <meta name="description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
-
-    <meta name="keywords"
-          content="what is erp, erp system, enterprise resource planning erp, what are erp systems, erp software">
-
-    <link rel="canonical" href="https://dotone.in/guides/what-is-erp">
-    <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="DotOne">
-    <meta property="og:title" content="What Is ERP? A Plain-English Guide | DotOne">
-    <meta property="og:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
-    <meta property="og:url" content="https://dotone.in/guides/what-is-erp">
-    <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
-    <meta property="og:locale" content="en_IN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="What Is ERP? A Plain-English Guide | DotOne">
-    <meta name="twitter:description" content="What is ERP? A plain-English guide to ERP software for Indian businesses: what it does, the core modules, costs, and how to choose and go live.">
-    <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
-    <link rel="stylesheet" href="/css/main.css?v=20261019">
-    <script src="/js/header-nav.js?v=20261019" defer></script>
-</head>
-
-<body class="bg-background">
-
-<!-- HEADER -->
-<div id="header"><?php include __DIR__ . '/../includes/header.php'; ?></div>
-
-<!-- HERO -->
-<section class="relative pt-32 pb-20 overflow-hidden">
-    <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
-    <div class="container-custom relative z-10 text-center max-w-4xl mx-auto space-y-6">
-
-        <span class="inline-flex px-4 py-2 rounded-full bg-primary-50 text-primary-700 text-sm font-medium">
-            Enterprise Resource Planning (ERP)
-        </span>
-
-        <h1 class="text-5xl md:text-6xl font-display font-bold">What Is ERP? A Plain-English Guide</h1>
-
-        <p class="text-xl text-text-secondary">
-            ERP (Enterprise Resource Planning) is a business management system
-            that helps organisations run finance, operations, HR, inventory,
-            sales, and manufacturing from one centralised platform.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-            <a href="/demo" class="btn-primary">See ERP Demo</a>
-            <a href="/contact" class="btn-secondary">Talk to an ERP Expert</a>
-        </div>
-    </div>
-</section>
-
-<!-- WHAT IS ERP -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-5xl mx-auto">
-        <h2 class="text-4xl font-display font-bold mb-6">
-            What is an ERP system?
-        </h2>
-        <p class="text-text-secondary text-lg mb-4">
-            An <strong>ERP system</strong> (Enterprise Resource Planning system)
-            is software that integrates all core business processes into a single
-            system. Instead of using multiple disconnected tools, ERP allows
-            companies to manage everything from one unified platform.
-        </p>
-        <p class="text-text-secondary text-lg">
-            ERP systems are widely used by small businesses, enterprises,
-            manufacturers, hospitals, and educational institutions to improve
-            efficiency, visibility, and decision-making.
-        </p>
-    </div>
-</section>
-
-<!-- WHY ERP -->
-<section class="section">
-    <div class="container-custom grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-        <div class="card p-6">
-            <h4 class="font-semibold mb-2">Centralised Data</h4>
-            <p class="text-sm text-text-secondary">
-                All departments work on the same real-time data, eliminating
-                duplication and manual errors.
-            </p>
-        </div>
-
-        <div class="card p-6">
-            <h4 class="font-semibold mb-2">Process Automation</h4>
-            <p class="text-sm text-text-secondary">
-                Automate billing, inventory updates, payroll, production planning,
-                and approvals.
-            </p>
-        </div>
-
-        <div class="card p-6">
-            <h4 class="font-semibold mb-2">Better Decisions</h4>
-            <p class="text-sm text-text-secondary">
-                ERP provides reports and analytics that help management make
-                faster and smarter decisions.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<!-- ERP MODULES -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-6xl mx-auto">
-        <div class="text-center mb-14">
-            <h2 class="text-4xl font-display font-bold">
-                Core Modules of an <span class="text-gradient">ERP System</span>
-            </h2>
-            <p class="text-xl text-text-secondary mt-4">
-                Modern ERP systems are modular and scalable
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="card p-6">Finance & Accounting</div>
-            <div class="card p-6">Inventory & Warehouse Management</div>
-            <div class="card p-6">Manufacturing & MRP</div>
-            <div class="card p-6">Human Resource Management (HRMS)</div>
-            <div class="card p-6">Sales, CRM & Billing</div>
-            <div class="card p-6">Procurement & Vendor Management</div>
-        </div>
-    </div>
-</section>
-
-<!-- WHO USES ERP -->
-<section class="section">
-    <div class="container-custom max-w-5xl mx-auto">
-        <h2 class="text-4xl font-display font-bold mb-6">
-            Who uses ERP software?
-        </h2>
-        <p class="text-text-secondary text-lg mb-4">
-            ERP systems are used across industries and company sizes:
-        </p>
-        <ul class="list-disc pl-6 text-text-secondary space-y-2">
-            <li>Manufacturing companies</li>
-            <li>Small and medium businesses (SMEs)</li>
-            <li>Enterprises with multi-location operations</li>
-            <li>Hospitals and healthcare providers</li>
-            <li>Schools, colleges, and universities</li>
-        </ul>
-    </div>
-</section>
-
-<!-- ERP BENEFITS -->
-<!-- ERP IMPLEMENTATION PLAN -->
-<section class="section">
-    <div class="container-custom">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                ERP <span class="text-gradient">Implementation Plan</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-                Implement an ERP system with minimal disruption, faster adoption,
-                and measurable business impact
-            </p>
-        </div>
-
-        <div class="max-w-5xl mx-auto">
-            <div class="relative">
-                <!-- Vertical Line -->
-                <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-brand"></div>
-
-                <div class="space-y-12">
-
-                    <!-- Step 1 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">1</div>
-                        <div class="flex-1 card p-6">
-                            <h3 class="text-xl font-display font-semibold mb-3">
-                                Business process assessment
-                            </h3>
-                            <p class="text-text-secondary mb-4">
-                                Understand current workflows, challenges, and
-                                business goals to define ERP scope and success metrics.
-                            </p>
-                            <ul class="text-sm text-text-secondary space-y-2">
-                                <li>✔ Process mapping across departments</li>
-                                <li>✔ Pain-point and gap analysis</li>
-                                <li>✔ ERP goals & KPI definition</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 2 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">2</div>
-                        <div class="flex-1 card p-6">
-                            <h3 class="text-xl font-display font-semibold mb-3">
-                                ERP configuration & customisation
-                            </h3>
-                            <p class="text-text-secondary mb-4">
-                                Configure ERP modules, roles, and workflows
-                                to align with your business operations.
-                            </p>
-                            <ul class="text-sm text-text-secondary space-y-2">
-                                <li>✔ Module selection & setup</li>
-                                <li>✔ User roles & access control</li>
-                                <li>✔ Workflow & approval configuration</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 3 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">3</div>
-                        <div class="flex-1 card p-6">
-                            <h3 class="text-xl font-display font-semibold mb-3">
-                                Data migration & system integration
-                            </h3>
-                            <p class="text-text-secondary mb-4">
-                                Migrate historical data and integrate ERP
-                                with existing systems and third-party tools.
-                            </p>
-                            <ul class="text-sm text-text-secondary space-y-2">
-                                <li>✔ Master & transactional data migration</li>
-                                <li>✔ Integration with CRM, payroll, and tools</li>
-                                <li>✔ Data validation & security checks</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 4 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">4</div>
-                        <div class="flex-1 card p-6">
-                            <h3 class="text-xl font-display font-semibold mb-3">
-                                User training & go-live
-                            </h3>
-                            <p class="text-text-secondary mb-4">
-                                Train users, perform final testing, and
-                                launch ERP with controlled rollout.
-                            </p>
-                            <ul class="text-sm text-text-secondary space-y-2">
-                                <li>✔ Role-based user training</li>
-                                <li>✔ User acceptance testing (UAT)</li>
-                                <li>✔ Go-live support & monitoring</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Step 5 -->
-                    <div class="relative flex items-start space-x-6">
-                        <div class="w-16 h-16 bg-gradient-brand rounded-full flex items-center justify-center text-white font-display font-bold text-xl shadow-lg z-10">5</div>
-                        <div class="flex-1 card p-6">
-                            <h3 class="text-xl font-display font-semibold mb-3">
-                                Optimisation & continuous improvement
-                            </h3>
-                            <p class="text-text-secondary mb-4">
-                                Continuously optimise ERP usage, improve
-                                processes, and scale as the business grows.
-                            </p>
-                            <ul class="text-sm text-text-secondary space-y-2">
-                                <li>✔ Performance tracking & reporting</li>
-                                <li>✔ Process optimisation</li>
-                                <li>✔ New module rollout & upgrades</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HOW ERP SYSTEMS WORK -->
-<section class="section">
-    <div class="container-custom max-w-5xl mx-auto">
-
-        <h2 class="text-4xl font-display font-bold mb-6">
-            How Do <span class="text-gradient">ERP Systems</span> Work?
-        </h2>
-
-        <p class="text-text-secondary text-lg mb-6">
-            ERP systems work by integrating all core business functions into a
-            single centralised database. Every department—such as finance,
-            sales, inventory, HR, and manufacturing—uses the same system and
-            real-time data.
-        </p>
-
-        <div class="space-y-6 text-text-secondary text-lg">
-            <p>
-                When a transaction happens in one department, the ERP system
-                automatically updates related processes across the organisation.
-                This eliminates manual data entry, reduces errors, and improves
-                coordination between teams.
-            </p>
-
-            <p>
-                For example, when a sales order is created in an ERP system:
-            </p>
-
-            <ul class="list-disc pl-6 space-y-2">
-                <li>Inventory levels are updated automatically</li>
-                <li>Production planning is adjusted if manufacturing is required</li>
-                <li>Finance records the revenue and taxes</li>
-                <li>Logistics prepares dispatch and delivery</li>
-            </ul>
-
-            <p>
-                Modern ERP systems operate on cloud or on-premise platforms and
-                provide dashboards, reports, and analytics so management can
-                monitor business performance in real time.
-            </p>
-        </div>
-
-    </div>
-</section>
-<!-- TYPES OF ERP DEPLOYMENT -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <h2 class="text-4xl font-display font-bold mb-6 text-center">
-            Types of <span class="text-gradient">ERP Deployment</span>
-        </h2>
-
-        <p class="text-text-secondary text-lg max-w-4xl mx-auto text-center mb-12">
-            ERP systems can be deployed in different ways depending on business
-            size, infrastructure, security needs, and scalability requirements.
-            The most common ERP deployment models are listed below.
-        </p>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <!-- Cloud ERP -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Cloud ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    Cloud ERP is hosted on the internet and accessed through a
-                    web browser. It requires no on-site servers and is managed
-                    by the ERP provider.
-                </p>
-                <ul class="text-sm text-text-secondary space-y-2">
-                    <li>✔ Lower upfront cost</li>
-                    <li>✔ Faster implementation</li>
-                    <li>✔ Automatic updates & scalability</li>
-                    <li>✔ Ideal for SMEs and growing businesses</li>
-                </ul>
-            </div>
-
-            <!-- On-Premise ERP -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    On-Premise ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    On-premise ERP is installed on a company’s own servers and
-                    maintained by its internal IT team.
-                </p>
-                <ul class="text-sm text-text-secondary space-y-2">
-                    <li>✔ Full control over data and security</li>
-                    <li>✔ Suitable for strict compliance requirements</li>
-                    <li>✔ Higher upfront infrastructure cost</li>
-                    <li>✔ Longer implementation timeline</li>
-                </ul>
-            </div>
-
-            <!-- Hybrid ERP -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Hybrid ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    Hybrid ERP combines cloud and on-premise deployments,
-                    allowing businesses to keep sensitive data on-site while
-                    using cloud modules for flexibility.
-                </p>
-                <ul class="text-sm text-text-secondary space-y-2">
-                    <li>✔ Flexible deployment model</li>
-                    <li>✔ Balanced security and scalability</li>
-                    <li>✔ Gradual cloud migration</li>
-                    <li>✔ Common in large enterprises</li>
-                </ul>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- BENEFITS OF ERP -->
-<section class="section">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <div class="text-center mb-14">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                Benefits of <span class="text-gradient">ERP Systems</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-4xl mx-auto mt-4">
-                As mentioned, the advantages of implementing an ERP system may
-                vary depending on the deployment model. However, the following
-                benefits apply to all modern ERP solutions.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Higher Productivity -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Higher productivity
-                </h3>
-                <p class="text-text-secondary">
-                    ERP systems streamline and automate core business processes,
-                    enabling employees across the organisation to do more work
-                    with fewer resources and less manual effort.
-                </p>
-            </div>
-
-            <!-- Deeper Insights -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Deeper business insights
-                </h3>
-                <p class="text-text-secondary">
-                    By eliminating information silos, ERP provides a single
-                    source of truth, helping leaders gain fast and accurate
-                    answers to mission-critical business questions.
-                </p>
-            </div>
-
-            <!-- Accelerated Reporting -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Accelerated reporting
-                </h3>
-                <p class="text-text-secondary">
-                    ERP enables faster financial and operational reporting,
-                    making it easy to share insights and take real-time action
-                    to improve overall business performance.
-                </p>
-            </div>
-
-            <!-- Lower Risk -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Lower business risk
-                </h3>
-                <p class="text-text-secondary">
-                    With improved visibility and control, ERP systems help
-                    organisations ensure regulatory compliance, reduce errors,
-                    and predict and prevent operational risks.
-                </p>
-            </div>
-
-            <!-- Simpler IT -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Simpler IT infrastructure
-                </h3>
-                <p class="text-text-secondary">
-                    Integrated ERP applications share a common database, which
-                    simplifies IT management and provides employees with a
-                    consistent and user-friendly way to work.
-                </p>
-            </div>
-
-            <!-- Improved Agility -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-3">
-                    Improved business agility
-                </h3>
-                <p class="text-text-secondary">
-                    ERP systems enable organisations to quickly identify and
-                    respond to new opportunities through efficient operations
-                    and real-time access to accurate business data.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- 10 THINGS TO LOOK FOR IN AN ERP SYSTEM -->
-<section class="section bg-surface">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <div class="text-center mb-14">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                10 Things to Look for in an <span class="text-gradient">ERP System</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-4xl mx-auto mt-4">
-                While ERP capabilities may vary by industry and modules, every
-                modern enterprise resource planning system should include these
-                core features.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-
-            <!-- 1 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    1. A common database
-                </h3>
-                <p class="text-text-secondary">
-                    A centralised database provides a single source of truth,
-                    ensuring consistent shared data and a cross-functional view
-                    of the entire organisation.
-                </p>
-            </div>
-
-            <!-- 2 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    2. Embedded analytics
-                </h3>
-                <p class="text-text-secondary">
-                    Built-in analytics, reporting, self-service BI, and
-                    compliance tools help deliver intelligent insights across
-                    all business functions.
-                </p>
-            </div>
-
-            <!-- 3 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    3. Data visualisation
-                </h3>
-                <p class="text-text-secondary">
-                    Interactive dashboards, KPIs, and point-and-click analytics
-                    present key information visually, enabling faster and more
-                    informed decision-making.
-                </p>
-            </div>
-
-            <!-- 4 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    4. Automation
-                </h3>
-                <p class="text-text-secondary">
-                    Modern ERP systems automate repetitive tasks using advanced
-                    robotic process automation (RPA) powered by AI and machine
-                    learning.
-                </p>
-            </div>
-
-            <!-- 5 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    5. Consistent UI/UX
-                </h3>
-                <p class="text-text-secondary">
-                    A standardised and intuitive user interface across modules,
-                    with easy configuration and personalization for users,
-                    customers, and suppliers.
-                </p>
-            </div>
-
-            <!-- 6 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    6. Seamless integration
-                </h3>
-                <p class="text-text-secondary">
-                    ERP should integrate smoothly across internal workflows and
-                    offer open integration with third-party software and data
-                    sources.
-                </p>
-            </div>
-
-            <!-- 7 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    7. Support for new technologies
-                </h3>
-                <p class="text-text-secondary">
-                    Look for ERP systems that support generative AI, machine
-                    learning, digital assistants, IoT, mobile access, and strong
-                    security and privacy features.
-                </p>
-            </div>
-
-            <!-- 8 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    8. Strong technology platform
-                </h3>
-                <p class="text-text-secondary">
-                    A modern ERP should run on a stable, scalable technology
-                    stack with low-code/no-code tools, iPaaS, and advanced data
-                    management capabilities.
-                </p>
-            </div>
-
-            <!-- 9 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    9. Multinational support
-                </h3>
-                <p class="text-text-secondary">
-                    Global ERP systems support multiple languages, currencies,
-                    local regulations, and offer strong cloud services,
-                    implementation, and training support.
-                </p>
-            </div>
-
-            <!-- 10 -->
-            <div class="card p-6">
-                <h3 class="text-xl font-display font-semibold mb-2">
-                    10. Choice of deployment
-                </h3>
-                <p class="text-text-secondary">
-                    A flexible ERP solution should offer cloud-based,
-                    on-premises, two-tier, or hybrid deployment options to match
-                    business needs.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- ERP SOFTWARE ISN'T ONE-SIZE-FITS-ALL -->
-<section class="section">
-    <div class="container-custom max-w-6xl mx-auto">
-
-        <div class="text-center mb-14">
-            <h2 class="text-4xl md:text-5xl font-display font-bold">
-                ERP Software Isn’t <span class="text-gradient">One-Size-Fits-All</span>
-            </h2>
-            <p class="text-xl text-text-secondary max-w-4xl mx-auto mt-4">
-                Different businesses have different needs. ERP solutions are
-                designed to support organisations at various stages of growth—
-                from small businesses to large global enterprises.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-
-            <!-- Small Business ERP -->
-            <div class="card p-6">
-                <h3 class="text-2xl font-display font-semibold mb-3">
-                    Small business ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    ERP software helps small businesses move beyond spreadsheets
-                    and manage every aspect of growth—from sales and customer
-                    relationships to finance and daily operations.
-                </p>
-                <p class="text-text-secondary">
-                    Small business ERP solutions are usually cloud-based, quick
-                    to implement, affordable, and designed to scale as the
-                    business grows.
-                </p>
-            </div>
-
-            <!-- Midmarket ERP -->
-            <div class="card p-6">
-                <h3 class="text-2xl font-display font-semibold mb-3">
-                    Midmarket ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    ERP systems for midmarket companies and subsidiaries offer
-                    built-in analytics, rapid deployment, and industry best
-                    practices across multiple business processes.
-                </p>
-                <p class="text-text-secondary">
-                    Modular, cloud-based ERP platforms help midsize businesses
-                    scale efficiently, manage complex operations, and compete
-                    with larger enterprises—even with limited resources.
-                </p>
-            </div>
-
-            <!-- Enterprise ERP -->
-            <div class="card p-6">
-                <h3 class="text-2xl font-display font-semibold mb-3">
-                    Enterprise ERP
-                </h3>
-                <p class="text-text-secondary mb-4">
-                    Large enterprises with global operations require robust ERP
-                    systems with embedded AI, machine learning, advanced
-                    analytics, and intelligent automation.
-                </p>
-                <p class="text-text-secondary">
-                    Enterprise ERP can be deployed in the cloud, on premises, or
-                    in hybrid and two-tier models to support complex business
-                    structures, compliance, and long-term digital transformation.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="section">
-    <div class="container-custom">
-        <div class="relative rounded-3xl overflow-hidden cta-frame">
-            
-
-            <div class="relative z-10 px-8 py-16 text-center">
-                <h2 class="text-4xl font-display font-bold text-text-primary mb-6">
-                    Looking for the right ERP for your business?
-                </h2>
-                <p class="text-xl text-text-secondary max-w-3xl mx-auto mb-8">
-                    DotOne ERP helps businesses automate operations,
-                    gain visibility, and scale faster with AI-powered insights.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/demo" class="btn-primary">Book ERP Demo</a>
-                    <a href="/contact" class="btn-secondary">Get Consultation</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<div id="footer"><?php include __DIR__ . '/../includes/footer.php'; ?></div>
-
-
-</body>
-</html>
+<?php
+$page = [
+    'path' => '/guides/what-is-erp',
+    'title' => 'What Is ERP? Meaning, Full Form and Examples | DotOne',
+    'description' => 'What is ERP? ERP stands for enterprise resource planning. The meaning of an ERP system, how it works, its modules, a worked example and who needs one.',
+    'breadcrumbs' => [['Guides', '/guides'], ['What Is ERP?', '/guides/what-is-erp']],
+    'article' => ['published' => '2026-10-27'],
+    'eyebrow' => 'ERP Guide',
+    'read_time' => '10 min',
+    'h1' => 'What Is ERP? Meaning, Full Form and How an ERP System Works',
+    'intro' => 'ERP stands for enterprise resource planning. An ERP system is one piece of software that runs a company\'s sales, purchase, stock, production, accounts and people on a single shared database, so every team works from the same live numbers.',
+    'sections' => [
+        ['meaning', 'ERP meaning: what does ERP stand for?', '
+<p><strong>ERP stands for Enterprise Resource Planning.</strong> Each word tells you part of the meaning:</p>
+<ul>
+    <li><strong>Enterprise:</strong> the whole business, not one department.</li>
+    <li><strong>Resource:</strong> what the business runs on: material, machines, money and people.</li>
+    <li><strong>Planning:</strong> deciding how to use those resources, and then tracking what actually happened.</li>
+</ul>
+<p>So the meaning of ERP, in plain words, is <strong>software that plans and records everything a business does, in one place</strong>. When people say "ERP", "ERP system" or "ERP software" they mean the same thing.</p>
+<div class="guide-callout"><p><strong>ERP full form:</strong> Enterprise Resource Planning.</p></div>
+'],
+        ['erp-system', 'What is an ERP system?', '
+<p>An <strong>ERP system</strong> is a set of connected modules (sales, purchase, inventory, production, accounting, HR and so on) that share one database. A record entered once is visible everywhere it is needed.</p>
+<p>Without ERP, most growing businesses run on a mix of tools: Tally for accounts, Excel for stock and production, WhatsApp for orders, and a separate payroll tool. Each tool is fine on its own. The trouble is between them. Someone has to copy data from one to the other, the numbers drift apart, and nobody is sure which sheet is right.</p>
+<p>ERP removes those gaps. The salesperson, the store keeper, the plant manager and the accountant all look at the same order, the same stock and the same invoice.</p>
+'],
+        ['how-it-works', 'How does an ERP system work? A worked example', '
+<p>Follow one order through a small manufacturer that makes steel brackets:</p>
+<ol>
+    <li><strong>Sales:</strong> a customer orders 5,000 brackets. The salesperson creates a sales order in the ERP.</li>
+    <li><strong>Inventory:</strong> the system checks finished stock (1,200 in hand) and shows a shortfall of 3,800.</li>
+    <li><strong>Planning:</strong> it uses the bill of materials to work out the steel sheet, bolts and paint needed for 3,800 pieces, and compares that with raw material stock.</li>
+    <li><strong>Purchase:</strong> short material becomes a purchase request, then a purchase order to the vendor.</li>
+    <li><strong>Production:</strong> a work order is released to the shopfloor once material is in. Output and scrap are recorded against it.</li>
+    <li><strong>Dispatch and billing:</strong> finished goods are packed, a GST invoice and e-way bill are raised, and stock reduces automatically.</li>
+    <li><strong>Accounts:</strong> the sale, the purchase and the receivable post to the ledgers. The owner sees margin on the order without waiting for month end.</li>
+</ol>
+<p>Nobody re-typed the order. That single flow is what an ERP system does.</p>
+'],
+        ['modules', 'ERP modules: what an ERP system includes', '
+<div class="guide-table-wrap"><table>
+    <thead><tr><th>Module</th><th>What it handles</th></tr></thead>
+    <tbody>
+        <tr><td>CRM and sales</td><td>Leads, quotations, sales orders, customer pricing</td></tr>
+        <tr><td>Purchase</td><td>Purchase requests, RFQs, purchase orders, goods receipt</td></tr>
+        <tr><td>Inventory and warehouse</td><td>Stock by location, batches, transfers, reorder levels</td></tr>
+        <tr><td>Production</td><td>Bills of materials, work orders, shopfloor output, scrap</td></tr>
+        <tr><td>Accounting</td><td>GST invoicing, ledgers, bank reconciliation, financial reports</td></tr>
+        <tr><td>HR and payroll</td><td>Attendance, leave, salary, PF, ESI and payslips</td></tr>
+        <tr><td>Reports and dashboards</td><td>Live views across every module</td></tr>
+    </tbody>
+</table></div>
+<p>You rarely need every module on day one. See our guide to <a href="/guides/erp-modules">ERP modules and features</a> for which to start with.</p>
+'],
+        ['erp-software', 'What is ERP software, and how is it different from accounting software?', '
+<p>Accounting software such as Tally records the financial result of what happened: invoices, payments, ledgers and GST. ERP software also runs the work that creates those entries: the order, the stock, the purchase and the production.</p>
+<div class="guide-table-wrap"><table>
+    <thead><tr><th></th><th>Accounting software</th><th>ERP software</th></tr></thead>
+    <tbody>
+        <tr><td>Main user</td><td>Accounts team</td><td>Every department</td></tr>
+        <tr><td>Records</td><td>Financial transactions</td><td>Orders, stock, production, people and finance</td></tr>
+        <tr><td>Stock</td><td>Basic quantity and value</td><td>Locations, batches, reorder levels, consumption</td></tr>
+        <tr><td>Production</td><td>Not covered</td><td>BOM, work orders and shopfloor tracking</td></tr>
+        <tr><td>When you see the numbers</td><td>After entries are posted</td><td>As the work happens</td></tr>
+    </tbody>
+</table></div>
+<p>Many businesses keep Tally and add ERP around it. DotOne has its own <a href="/accounting">accounting</a>, and can also sync to Tally if your CA prefers it.</p>
+'],
+        ['types', 'Types of ERP', '
+<ul>
+    <li><strong>Cloud ERP:</strong> runs on the vendor\'s servers and opens in a browser or mobile app. Paid monthly, no servers to manage. See <a href="/guides/what-is-cloud-erp">what is cloud ERP</a>.</li>
+    <li><strong>On-premise ERP:</strong> installed on your own servers. You buy licences and look after the hardware, backups and upgrades.</li>
+    <li><strong>Industry ERP:</strong> built or configured for one industry, such as <a href="/manufacturing-erp">manufacturing ERP</a>, with the workflows that industry needs.</li>
+    <li><strong>Small business ERP:</strong> a lighter, faster-to-start setup. See <a href="/erp-for-small-business">ERP for small business</a>.</li>
+</ul>
+'],
+        ['who-needs', 'Who needs ERP? Signs it is time', '
+<ul>
+    <li>You cannot tell live stock without calling the store.</li>
+    <li>Orders are promised without knowing whether material or capacity is free.</li>
+    <li>The same data is typed into Excel, Tally and WhatsApp.</li>
+    <li>Month-end closing takes days, and profit by product or customer is a guess.</li>
+    <li>You have opened a second plant, warehouse or branch, and visibility has dropped.</li>
+</ul>
+<p>If three or more of these are true, an ERP will usually pay for itself in saved time and less excess stock. Our guide on <a href="/guides/how-to-choose-erp">how to choose an ERP</a> walks through the next steps, and <a href="/guides/erp-implementation">ERP implementation</a> covers going live.</p>
+'],
+        ['dotone', 'ERP from DotOne', '
+<p><a href="/erp-software">DotOne</a> is a cloud ERP built for Indian businesses, with CRM, sales, purchase, inventory, production, accounting with GST, and HR and payroll on one database. There is a free Starter plan, paid plans start at ₹15,000 a month, and most customers go live in 4 to 6 weeks. See <a href="/pricing">pricing</a>.</p>
+'],
+    ],
+    'faq' => [
+        ['What is the full form of ERP?', 'ERP stands for Enterprise Resource Planning.'],
+        ['What does ERP mean in simple words?', 'It means one software system that runs the whole business, sales, purchase, stock, production, accounts and HR, on shared data, so every team sees the same live numbers.'],
+        ['What is ERP software used for?', 'To manage orders, inventory, purchase, production, accounting and payroll in one place, without copying data between separate tools.'],
+        ['What is an example of an ERP system?', 'A sales order entered once that automatically checks stock, raises purchase for short material, creates a work order, generates the GST invoice and posts to the accounts. DotOne, SAP, Oracle and Odoo are examples of ERP software.'],
+        ['Is Tally an ERP?', 'Tally is mainly accounting and inventory software. It does not cover production planning, CRM or HR in depth, which is why many businesses run an ERP alongside it or replace it.'],
+        ['Is ERP only for large companies?', 'No. Cloud ERP has made it affordable for small and mid-sized businesses. See [ERP for small business](/erp-for-small-business).'],
+    ],
+    'related' => [
+        ['ERP Modules and Features', '/guides/erp-modules', 'What each module does and which to start with.'],
+        ['How to Choose an ERP', '/guides/how-to-choose-erp', 'Requirements, costs, scoring and the questions to ask vendors.'],
+        ['DotOne ERP Software', '/erp-software', 'Sales, stock, production, accounts and HR on one cloud platform.'],
+    ],
+    'cta_heading' => 'See an ERP run one order end to end',
+    'cta_text' => 'In a 30-minute demo we take a sales order through stock, purchase, production, invoice and accounts in DotOne.',
+];
+include __DIR__ . '/../includes/templates/guide.php';

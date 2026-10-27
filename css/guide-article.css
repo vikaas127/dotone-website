@@ -27,3 +27,6 @@
 
 .guide-callout { background: #E6F5FE; border-left: 4px solid #0096EE; border-radius: 0.5rem; padding: 1rem 1.25rem; margin: 1.5rem 0; color: #005A8F; }
 .guide-callout p:last-child { margin-bottom: 0; }
+
+/* Related cards: keep "Read more" at the bottom so links line up across cards */
+.card-more { margin-top: auto; padding-top: 0.25rem; }

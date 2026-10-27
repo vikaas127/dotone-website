@@ -25,23 +25,25 @@
     var ded = deductions.reduce(function (s, d) { return s + d[1]; }, 0);
     var net = Math.max(0, gross - ded);
 
+    var g = function (id) { return $(id).value; };
     var max = Math.max(earnings.length, deductions.length), rows = '';
     for (var i = 0; i < max; i++) {
       var e = earnings[i], d = deductions[i];
       rows += '<tr><td>' + (e ? e[0] : '') + '</td><td class="num">' + (e ? money.format(e[1]) : '') + '</td><td>' + (d ? d[0] : '') + '</td><td class="num">' + (d ? money.format(d[1]) : '') + '</td></tr>';
     }
-    var info = function (label, value) { return value ? '<div><b>' + label + ':</b> ' + esc(value) + '</div>' : ''; };
+    var info = function (label, value) { return value ? '<tr><th>' + esc(label) + '</th><td>' + esc(value) + '</td></tr>' : ''; };
 
-    preview.innerHTML =
-      '<div class="inv-head"><div><h3>PAYSLIP</h3><div>' + esc($('c-name').value) + '</div><div>' + esc($('c-addr').value) + '</div></div>' +
-      '<div><div><b>Pay period:</b> ' + esc(monthLabel($('month').value)) + '</div><div><b>Days paid:</b> ' + paid + ' of ' + total + '</div></div></div>' +
-      '<div class="inv-parties"><div class="inv-box" style="white-space:normal">' + info('Employee', $('e-name').value) + info('Employee code', $('e-code').value) + info('Designation', $('e-desig').value) + '</div>' +
-      '<div class="inv-box" style="white-space:normal">' + info('Department', $('e-dept').value) + info('UAN', $('e-uan').value) + info('PAN', $('e-pan').value) + '</div></div>' +
-      '<table class="inv-table"><thead><tr><th>Earnings</th><th class="num">Amount (₹)</th><th>Deductions</th><th class="num">Amount (₹)</th></tr></thead><tbody>' + rows +
-      '<tr><th>Gross earnings</th><th class="num">' + money.format(gross) + '</th><th>Total deductions</th><th class="num">' + money.format(ded) + '</th></tr></tbody></table>' +
-      '<div class="inv-totals"><div class="is-total"><span>Net pay (₹)</span><span>' + money.format(net) + '</span></div></div>' +
-      '<p class="inv-words">' + D.amountInWords(net) + '</p>' +
-      '<p style="margin-top:1.5rem;font-size:0.8rem;color:#667085">This is a computer-generated payslip.</p>';
+    preview.innerHTML = '<div class="doc-sheet">' +
+      D.head(g('c-name'), g('c-addr'), 'PAYSLIP', [['Pay period', monthLabel(g('month'))], ['Days paid', paid + ' of ' + total]]) +
+      '<div class="doc-parties">' +
+      '<table class="doc-table doc-kv"><tbody>' + info('Employee', g('e-name')) + info('Employee code', g('e-code')) + info('Designation', g('e-desig')) + '</tbody></table>' +
+      '<table class="doc-table doc-kv"><tbody>' + info('Department', g('e-dept')) + info('UAN', g('e-uan')) + info('PAN', g('e-pan')) + '</tbody></table></div>' +
+      '<table class="doc-table"><colgroup><col style="width:32%"><col style="width:18%"><col style="width:32%"><col style="width:18%"></colgroup>' +
+      '<thead><tr><th>Earnings</th><th class="num">Amount (₹)</th><th>Deductions</th><th class="num">Amount (₹)</th></tr></thead><tbody>' + rows + '</tbody>' +
+      '<tfoot><tr><td>Gross earnings</td><td class="num">' + money.format(gross) + '</td><td>Total deductions</td><td class="num">' + money.format(ded) + '</td></tr></tfoot></table>' +
+      '<div class="doc-foot"><div class="doc-words"><b>Net pay in words</b>' + D.amountInWords(net) + '</div>' +
+      '<div class="doc-totals"><div class="doc-grand" style="margin-top:0"><span>Net pay</span><span>₹ ' + money.format(net) + '</span></div></div></div>' +
+      '<p class="doc-small">This is a computer-generated payslip and does not need a signature.</p></div>';
   }
 
   var now = new Date();

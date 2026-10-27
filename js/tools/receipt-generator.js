@@ -9,22 +9,23 @@
     var amount = D.num($('amount').value);
     var mode = $('mode').value;
     var gstin = $('s-gstin').value.trim();
-    var row = function (label, value) { return value ? '<tr><th style="width:35%">' + label + '</th><td>' + esc(value) + '</td></tr>' : ''; };
-    preview.innerHTML =
-      '<div class="inv-head"><div><h3>PAYMENT RECEIPT</h3><div>' + esc($('s-name').value) + '</div>' +
-      '<div style="white-space:pre-line">' + esc($('s-addr').value) + '</div>' + (gstin ? '<div>GSTIN: ' + esc(gstin) + '</div>' : '') + '</div>' +
-      '<div><div><b>Receipt no:</b> ' + esc($('no').value) + '</div><div><b>Date:</b> ' + esc(D.formatDate($('date').value)) + '</div></div></div>' +
-      '<table class="inv-table">' +
-      row('Received from', $('from').value) +
-      '<tr><th>Amount</th><td><b>₹ ' + money.format(amount) + '</b></td></tr>' +
-      '<tr><th>Amount in words</th><td>' + D.amountInWords(amount) + '</td></tr>' +
+    var g = function (id) { return $(id).value; };
+    var row = function (label, value) { return value ? '<tr><th style="width:32%">' + esc(label) + '</th><td>' + esc(value) + '</td></tr>' : ''; };
+    preview.innerHTML = '<div class="doc-sheet">' +
+      D.head(g('s-name'), g('s-addr') + (gstin ? '\nGSTIN: ' + gstin : ''), 'PAYMENT RECEIPT', [
+        ['Receipt no.', g('no')], ['Date', D.formatDate(g('date'))]
+      ]) +
+      '<div class="doc-foot" style="margin-top:16px"><div class="doc-box"><span class="doc-label">Received from</span><span class="doc-name">' + esc(g('from')) + '</span></div>' +
+      '<div class="doc-totals"><div class="doc-grand" style="margin-top:0"><span>Amount received</span><span>₹ ' + money.format(amount) + '</span></div></div></div>' +
+      '<table class="doc-table doc-kv" style="margin-top:14px"><tbody>' +
+      '<tr><th style="width:32%">Amount in words</th><td>' + D.amountInWords(amount) + '</td></tr>' +
       row('Payment mode', mode) +
-      row(mode === 'Cheque' ? 'Cheque no. / bank' : 'Reference', $('ref').value) +
-      row('Against invoice', $('inv').value) +
-      row('Description', $('note').value) +
-      '</table>' +
-      (mode === 'Cheque' ? '<p class="inv-words">Subject to realisation of the cheque.</p>' : '') +
-      '<p style="margin-top:2.5rem;text-align:right">For ' + esc($('s-name').value) + '<br><br>Authorised signatory</p>';
+      row(mode === 'Cheque' ? 'Cheque no. / bank' : 'Reference', g('ref')) +
+      row('Against invoice', g('inv')) +
+      row('Description', g('note')) +
+      '</tbody></table>' +
+      D.sign(g('s-name'), mode === 'Cheque' ? 'Received subject to realisation of the cheque.' : 'Received with thanks.') +
+      '<p class="doc-small">This is a computer-generated receipt.</p></div>';
   }
 
   $('date').value = D.today();

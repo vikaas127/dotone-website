@@ -37,31 +37,55 @@
     items.forEach(function (i) { taxable += i.taxable; tax += i.tax; });
     var exact = taxable + tax, total = Math.round(exact), roundOff = total - exact;
 
-    var date = D.formatDate($('date').value);
+    var g = function (id) { return $(id).value; };
+    var cols = intra ? [4, 26, 8, 9, 10, 12, 10, 10, 11] : [4, 30, 9, 9, 11, 13, 11, 13];
     var taxHead = intra ? '<th class="num">CGST</th><th class="num">SGST</th>' : '<th class="num">IGST</th>';
+    var pct = function (r) { return '<small>' + r + '%</small>'; };
     var rows = items.map(function (i, n) {
       var taxCells = intra
-        ? '<td class="num">' + money.format(i.tax / 2) + '<br><small>' + i.gst / 2 + '%</small></td><td class="num">' + money.format(i.tax / 2) + '<br><small>' + i.gst / 2 + '%</small></td>'
-        : '<td class="num">' + money.format(i.tax) + '<br><small>' + i.gst + '%</small></td>';
-      return '<tr><td>' + (n + 1) + '</td><td>' + esc(i.desc) + '</td><td>' + esc(i.hsn) + '</td><td class="num">' + i.qty + ' ' + esc(i.unit) + '</td><td class="num">' + money.format(i.rate) + '</td><td class="num">' + money.format(i.taxable) + '</td>' + taxCells + '<td class="num">' + money.format(i.taxable + i.tax) + '</td></tr>';
+        ? '<td class="num">' + money.format(i.tax / 2) + pct(i.gst / 2) + '</td><td class="num">' + money.format(i.tax / 2) + pct(i.gst / 2) + '</td>'
+        : '<td class="num">' + money.format(i.tax) + pct(i.gst) + '</td>';
+      return '<tr><td>' + (n + 1) + '</td><td>' + esc(i.desc) + '</td><td>' + esc(i.hsn) + '</td><td class="num">' + i.qty + '<small>' + esc(i.unit) + '</small></td><td class="num">' + money.format(i.rate) + '</td><td class="num">' + money.format(i.taxable) + '</td>' + taxCells + '<td class="num">' + money.format(i.taxable + i.tax) + '</td></tr>';
+    }).join('');
+    var taxFoot = intra ? '<td class="num">' + money.format(tax / 2) + '</td><td class="num">' + money.format(tax / 2) + '</td>' : '<td class="num">' + money.format(tax) + '</td>';
+
+    // HSN-wise tax summary, grouped by HSN code and rate
+    var groups = {}, order = [];
+    items.forEach(function (i) {
+      var k = i.hsn + '|' + i.gst;
+      if (!groups[k]) { groups[k] = { hsn: i.hsn, gst: i.gst, taxable: 0, tax: 0 }; order.push(k); }
+      groups[k].taxable += i.taxable; groups[k].tax += i.tax;
+    });
+    var sumHead = intra ? '<th class="num">CGST</th><th class="num">SGST</th>' : '<th class="num">IGST</th>';
+    var sumRows = order.map(function (k) {
+      var x = groups[k];
+      var t = intra ? '<td class="num">' + money.format(x.tax / 2) + pct(x.gst / 2) + '</td><td class="num">' + money.format(x.tax / 2) + pct(x.gst / 2) + '</td>' : '<td class="num">' + money.format(x.tax) + pct(x.gst) + '</td>';
+      return '<tr><td>' + esc(x.hsn || '—') + '</td><td class="num">' + money.format(x.taxable) + '</td>' + t + '<td class="num">' + money.format(x.tax) + '</td></tr>';
     }).join('');
     var taxTotals = intra
       ? '<div><span>CGST</span><span>' + money.format(tax / 2) + '</span></div><div><span>SGST</span><span>' + money.format(tax / 2) + '</span></div>'
       : '<div><span>IGST</span><span>' + money.format(tax) + '</span></div>';
+    var notes = g('notes').trim();
 
-    preview.innerHTML =
-      '<div class="inv-head"><div><h3>TAX INVOICE</h3><div>' + esc($('s-name').value) + '</div></div>' +
-      '<div><div><b>Invoice no:</b> ' + esc($('no').value) + '</div><div><b>Date:</b> ' + esc(date) + '</div>' +
-      '<div><b>Place of supply:</b> ' + esc($('b-state').value) + '</div></div></div>' +
-      '<div class="inv-parties">' +
-      '<div class="inv-box"><b>From</b>' + esc($('s-name').value) + '\n' + esc($('s-addr').value) + '\nGSTIN: ' + esc($('s-gstin').value) + '\nState: ' + esc($('s-state').value) + '</div>' +
-      '<div class="inv-box"><b>Bill to</b>' + esc($('b-name').value) + '\n' + esc($('b-addr').value) + '\nGSTIN: ' + esc($('b-gstin').value || 'Unregistered') + '\nState: ' + esc($('b-state').value) + '</div></div>' +
-      '<div class="inv-scroll"><table class="inv-table"><thead><tr><th>#</th><th>Description</th><th>HSN/SAC</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Taxable value</th>' + taxHead + '<th class="num">Amount</th></tr></thead><tbody>' + rows + '</tbody></table></div>' +
-      '<div class="inv-totals"><div><span>Taxable value</span><span>' + money.format(taxable) + '</span></div>' + taxTotals +
-      '<div><span>Round off</span><span>' + money.format(roundOff) + '</span></div>' +
-      '<div class="is-total"><span>Total (₹)</span><span>' + money.format(total) + '</span></div></div>' +
-      '<p class="inv-words">' + D.amountInWords(total) + '</p>' +
-      '<p style="margin-top:2rem;text-align:right">For ' + esc($('s-name').value) + '<br><br>Authorised signatory</p>';
+    preview.innerHTML = '<div class="doc-sheet">' +
+      D.head(g('s-name'), g('s-addr') + '\nGSTIN: ' + g('s-gstin') + '  ·  State: ' + g('s-state'), 'TAX INVOICE', [
+        ['Invoice no.', g('no')], ['Invoice date', D.formatDate(g('date'))], ['Place of supply', g('b-state')], ['Reverse charge', 'No']
+      ]) +
+      '<div class="doc-parties">' +
+      '<div class="doc-box"><span class="doc-label">Bill to</span><span class="doc-name">' + esc(g('b-name')) + '</span>\n' + esc(g('b-addr')) + '\nGSTIN: ' + esc(g('b-gstin') || 'Unregistered') + '\nState: ' + esc(g('b-state')) + '</div>' +
+      '<div class="doc-box"><span class="doc-label">Supply</span>' + (intra ? 'Within the state: CGST + SGST' : 'Inter-state: IGST') + '\nSupplier state: ' + esc(g('s-state')) + '\nPlace of supply: ' + esc(g('b-state')) + '</div></div>' +
+      '<table class="doc-table"><colgroup>' + cols.map(function (w) { return '<col style="width:' + w + '%">'; }).join('') + '</colgroup>' +
+      '<thead><tr><th>#</th><th>Description</th><th>HSN/SAC</th><th class="num">Qty</th><th class="num">Rate</th><th class="num">Taxable value</th>' + taxHead + '<th class="num">Amount</th></tr></thead>' +
+      '<tbody>' + rows + '</tbody>' +
+      '<tfoot><tr><td></td><td>Total</td><td></td><td></td><td></td><td class="num">' + money.format(taxable) + '</td>' + taxFoot + '<td class="num">' + money.format(exact) + '</td></tr></tfoot></table>' +
+      '<div class="doc-foot"><div><div class="doc-words"><b>Amount in words</b>' + D.amountInWords(total) + '</div>' +
+      (notes ? '<div class="doc-notes"><span class="doc-label">Notes and bank details</span>' + esc(notes) + '</div>' : '') + '</div>' +
+      '<div class="doc-totals"><div><span>Taxable value</span><span>' + money.format(taxable) + '</span></div>' + taxTotals +
+      '<div><span>Round off</span><span>' + (roundOff < 0 ? '−' : '') + money.format(Math.abs(roundOff)) + '</span></div>' +
+      '<div class="doc-grand"><span>Total</span><span>₹ ' + money.format(total) + '</span></div></div></div>' +
+      '<div class="doc-section"><span class="doc-label">Tax summary by HSN/SAC</span><table class="doc-table"><thead><tr><th>HSN/SAC</th><th class="num">Taxable value</th>' + sumHead + '<th class="num">Total tax</th></tr></thead><tbody>' + sumRows + '</tbody></table></div>' +
+      D.sign(g('s-name'), 'We declare that this invoice shows the actual price of the goods or services described and that all particulars are true and correct.') +
+      '<p class="doc-small">This is a computer-generated invoice.</p></div>';
   }
 
   $('date').value = D.today();

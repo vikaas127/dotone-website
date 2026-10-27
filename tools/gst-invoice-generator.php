@@ -46,6 +46,7 @@ $page = [
             <tbody data-rows></tbody>
         </table>
     </div>
+    <div class="tool-field" style="margin-top:1rem"><label for="inv-notes">Notes and bank details (optional)</label><textarea id="inv-notes" rows="3" placeholder="Bank: name, account number, IFSC">Payment due within 30 days of the invoice date.</textarea></div>
     <div class="tool-actions">
         <button type="button" class="tool-btn tool-btn--ghost" data-add>+ Add item</button>
         <button type="button" class="tool-btn" data-download>Download PDF</button>

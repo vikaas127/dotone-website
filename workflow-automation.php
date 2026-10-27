@@ -1,7 +1,7 @@
 <?php
 $page = [
     'path' => '/workflow-automation',
-    'title' => 'Workflow Automation Software | DotOne',
+    'title' => 'Workflow Automation and Approval Software | DotOne',
     'description' => 'Workflow automation for manufacturers. Approval chains, alerts, automatic indents, hand-offs between departments and escalations inside DotOne ERP.',
     'breadcrumbs' => [['Modules', '/modules'], ['Workflow Automation', '/workflow-automation']],
     'eyebrow' => 'ERP Module',
@@ -11,7 +11,7 @@ $page = [
     'capabilities_heading' => 'Rules that keep work moving',
     'capabilities_intro' => 'You decide the rules. DotOne applies them every time a record is saved, so routine steps do not depend on someone remembering.',
     'capabilities' => [
-        ['check', 'Approval chains', 'Route purchase orders, quotations and other documents to the right approver based on amount, discount or department.'],
+        ['check', 'One approvals inbox', 'Every approver sees one list: purchase requests and orders, warehouse documents, leave, expenses, loans, payroll runs and work orders, with approvers set per module.'],
         ['bell', 'Alerts', 'Notify the right people when stock is low, an order is late or a quality check fails.'],
         ['box', 'Automatic indents', 'When an item falls below its reorder level, a purchase indent is raised for the buying team.'],
         ['flow', 'Hand-offs between departments', 'A confirmed order can move to stores for picking, production for planning or accounts for billing.'],
@@ -43,6 +43,7 @@ $page = [
         'Who has the most pending tasks this week?',
     ],
     'faq' => [
+        ['What is an approval workflow?', 'The route a document takes before it is final: who must approve a purchase order, a leave request or a payroll run, and in what order. In DotOne, approvers are set per module and every pending approval lands in one inbox, where stuck approvals can be reassigned.'],
         ['What kind of workflows can we automate?', 'Common ones are purchase and quotation approvals, low-stock indents, alerts on late orders or failed checks, and hand-offs from sales to stores, production and accounts.'],
         ['Do we need to write code?', 'No. Workflows are set up as rules on documents and roles. Our onboarding team helps you set up the first ones.'],
         ['What happens if an approver is away?', 'You can route tasks to roles and set escalations, so work moves to the next person if it waits too long.'],

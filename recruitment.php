@@ -1,0 +1,53 @@
+<?php
+$page = [
+    'path' => '/recruitment',
+    'title' => 'Recruitment Software and Applicant Tracking | DotOne',
+    'description' => 'Recruitment software for Indian businesses: job openings, a careers page, a candidate pipeline, interview scheduling, offer letters and one-click hire.',
+    'breadcrumbs' => [['Modules', '/modules'], ['HRMS', '/hrms'], ['Recruitment', '/recruitment']],
+    'eyebrow' => 'HRMS Module',
+    'h1' => 'Recruitment Software',
+    'intro' => 'Hire without spreadsheets. Publish openings on your careers page, move every candidate through a visual pipeline, schedule interviews, send offer letters and turn the person you hire into an employee record in one step.',
+    'highlights' => ['Careers page', 'Candidate pipeline', 'Interview scheduling', 'Offer letters'],
+    'capabilities_heading' => 'An applicant tracking system inside your HRMS',
+    'capabilities_intro' => 'Recruitment shares its data with the rest of DotOne HRMS, so a new hire starts with their details already in place.',
+    'capabilities' => [
+        ['doc', 'Job openings', 'Create openings with the department, location and interview rounds, and publish them on your careers page.'],
+        ['users', 'Careers page and applications', 'A public careers page lists your openings, and candidates apply with their resume through a simple form.'],
+        ['flow', 'Visual candidate pipeline', 'Drag candidates through New, Shortlisted, Screening, Interview, Offered and Hired, or mark them Rejected or Withdrawn.'],
+        ['bell', 'Interview scheduling', 'Schedule interview rounds on a calendar and send email invites to candidates and interviewers.'],
+        ['check', 'Evaluation and offers', 'Score candidates against evaluation criteria, then generate offer letters as PDFs.'],
+        ['id', 'One-click hire', 'Hire a candidate and DotOne creates the employee record, ready for attendance, leave and payroll.'],
+    ],
+    'workflow_intro' => 'Every candidate follows the same path, so hiring managers and HR always know where things stand.',
+    'workflow' => [
+        ['Open', 'HR creates the opening with its interview rounds and publishes it on the careers page.'],
+        ['Apply', 'Candidates apply online, or HR imports them from a CSV with their resumes.'],
+        ['Screen', 'HR shortlists and screens candidates on the pipeline board.'],
+        ['Interview', 'Interview rounds are scheduled and each interviewer records their evaluation.'],
+        ['Hire', 'The chosen candidate gets an offer letter and, once they accept, becomes an employee.'],
+    ],
+    'reports' => [
+        'Open positions by department',
+        'Candidates by pipeline stage',
+        'Interviews scheduled this week',
+        'Offers sent and accepted',
+        'Interview calendar by interviewer',
+    ],
+    'connected_intro' => 'Recruitment hands over to HRMS and payroll, so nobody types a new joiner\'s details twice.',
+    'connected' => ['hrms', 'payroll', 'leave-management', 'mobile-erp'],
+    'agent' => 'hr',
+    'agent_questions' => [
+        'Which candidates are waiting for an interview this week?',
+        'How many offers are pending a reply?',
+        'Show open positions by department.',
+    ],
+    'faq' => [
+        ['What is recruitment software?', 'Software that manages hiring from job opening to offer: it collects applications, tracks each candidate through the stages of your process, schedules interviews and records the decision. It is also called an applicant tracking system (ATS).'],
+        ['Does DotOne include a careers page?', 'Yes. Openings you publish appear on a public careers page with a job description and an apply form.'],
+        ['Can we import candidates we already have?', 'Yes. Candidates can be imported from a CSV file, along with their resumes.'],
+        ['What happens when a candidate is hired?', 'DotOne creates the employee record from the candidate\'s details, so attendance, leave and [payroll](/payroll) can start straight away.'],
+    ],
+    'cta_heading' => 'See hiring in DotOne',
+    'cta_text' => 'In a 30-minute demo we publish an opening, move a candidate through interviews and hire them into HRMS.',
+];
+include __DIR__ . '/includes/templates/module.php';

@@ -1,0 +1,53 @@
+<?php
+$page = [
+    'path' => '/leave-management',
+    'title' => 'Leave Management System for Indian Companies | DotOne',
+    'description' => 'Leave management system with leave policies, monthly accrual, carry-forward, approvals, branch holiday calendars and leave requests from the mobile app.',
+    'breadcrumbs' => [['Modules', '/modules'], ['HRMS', '/hrms'], ['Leave Management', '/leave-management']],
+    'eyebrow' => 'HRMS Module',
+    'h1' => 'Leave Management System',
+    'intro' => 'Set leave policies once and let DotOne keep every balance right. Employees apply from their phone, managers approve in one place, and approved leave flows straight into attendance and payroll.',
+    'highlights' => ['Leave policies', 'Monthly accrual', 'Mobile apply', 'Holiday calendars'],
+    'capabilities_heading' => 'Leave rules that run themselves',
+    'capabilities_intro' => 'Leave sits inside DotOne HRMS, so balances, attendance and payroll always agree.',
+    'capabilities' => [
+        ['doc', 'Leave types and policies', 'Define casual, sick, earned and other leave types, with the policy that applies to each team.'],
+        ['trend', 'Accrual and carry-forward', 'Balances accrue monthly, new joiners get a pro-rated quota, and carry-forward can expire on the date you set.'],
+        ['phone', 'Apply from the phone', 'Employees apply for leave and check their balance in the mobile app.'],
+        ['check', 'Approvals and notifications', 'Requests go to the right approver, who can approve or reject them, and everyone is notified.'],
+        ['pin', 'Holiday calendars by branch', 'Keep a holiday calendar for each branch or territory, and import it in one go.'],
+        ['flow', 'Straight into payroll', 'Approved leave updates attendance, so the month\'s payable days are right when payroll runs.'],
+    ],
+    'workflow_intro' => 'From request to payslip, leave follows one path, with the balance updated at every step.',
+    'workflow' => [
+        ['Set up', 'HR sets leave types, policies, accrual rules and branch holiday calendars.'],
+        ['Accrue', 'Balances build up each month, with pro-rated quotas for new joiners.'],
+        ['Apply', 'The employee applies from the mobile app or the web and sees the balance left.'],
+        ['Approve', 'The approver approves or rejects the request, and the employee is notified.'],
+        ['Pay', 'Approved leave updates attendance and feeds the payroll run.'],
+    ],
+    'reports' => [
+        'Leave balances by employee',
+        'Pending leave requests',
+        'Team leave calendar, exportable as PDF',
+        'Holiday calendar by branch',
+    ],
+    'connected_intro' => 'Leave is part of HRMS and feeds attendance and payroll directly.',
+    'connected' => ['hrms', 'payroll', 'recruitment', 'mobile-erp'],
+    'agent' => 'hr',
+    'agent_questions' => [
+        'Which leave requests are waiting for approval?',
+        'Who is on leave in the production team next week?',
+        'Show leave balances for the stores team.',
+    ],
+    'faq' => [
+        ['What is a leave management system?', 'Software that applies your leave policies, keeps each employee\'s leave balance up to date, and handles requests and approvals, so HR no longer tracks leave in registers or spreadsheets.'],
+        ['Can leave accrue every month?', 'Yes. Balances can accrue monthly, with pro-rated quotas for employees who join mid-year, and carry-forward that expires on a date you choose.'],
+        ['Can employees apply for leave on their phone?', 'Yes. Employees apply and check their balances in the DotOne mobile app.'],
+        ['Can different branches have different holidays?', 'Yes. Holiday calendars are kept per branch or territory and can be imported.'],
+        ['Does approved leave reach payroll?', 'Yes. Approved leave updates attendance, which [payroll](/payroll) uses for payable days.'],
+    ],
+    'cta_heading' => 'See leave handled end to end',
+    'cta_text' => 'In a 30-minute demo we set a leave policy, apply from the mobile app, approve it and show it in payroll.',
+];
+include __DIR__ . '/includes/templates/module.php';

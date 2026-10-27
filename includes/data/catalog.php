@@ -44,6 +44,10 @@ const MODULES = [
     'business-analytics'    => ['name' => 'Business Analytics',    'icon' => 'trend',  'agent' => 'reporting', 'summary' => 'Trends, comparisons and drill-downs across every department.'],
     'workflow-automation'   => ['name' => 'Workflow Automation',   'icon' => 'flow',   'agent' => 'operations','summary' => 'Approvals, alerts and hand-offs that move work between teams.'],
     'mobile-erp'            => ['name' => 'Mobile ERP',            'icon' => 'phone',  'agent' => null,        'summary' => 'Attendance, field sales, approvals and dashboards on the phone.'],
+    'recruitment'           => ['name' => 'Recruitment',           'icon' => 'users',  'agent' => 'hr',        'summary' => 'Careers page, candidate pipeline, interviews and offer letters.'],
+    'leave-management'      => ['name' => 'Leave Management',      'icon' => 'bell',   'agent' => 'hr',        'summary' => 'Leave policies, accrual, approvals and branch holiday calendars.'],
+    'fleet-management'      => ['name' => 'Fleet Management',      'icon' => 'truck',  'agent' => 'operations','summary' => 'Vehicles, drivers, fuel, maintenance and running costs.'],
+    'maintenance-management'=> ['name' => 'Maintenance Management','icon' => 'cog',    'agent' => 'production','summary' => 'Preventive maintenance, work orders, asset register and depreciation.'],
 ];
 
 // AI Agents pillar. 'module' is the ERP module whose data the agent reads.

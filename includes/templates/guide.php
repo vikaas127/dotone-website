@@ -47,9 +47,10 @@ render_head($page);
         <h2 class="text-2xl md:text-3xl font-display font-semibold text-center mb-10">Related reading</h2>
         <div class="grid md:grid-cols-3 gap-6">
 <?php foreach ($page['related'] as [$name, $url, $summary]): ?>
-            <a href="<?= e($url) ?>" class="card p-6 block">
-                <h3 class="font-semibold mb-2"><?= e($name) ?></h3>
-                <p class="text-sm text-text-secondary"><?= e($summary) ?></p>
+            <a href="<?= e($url) ?>" class="card p-6 hover-lift flex flex-col">
+                <h3 class="text-lg font-display font-semibold text-text-primary leading-snug mb-2"><?= e($name) ?></h3>
+                <p class="text-sm text-text-secondary leading-relaxed mb-3"><?= e($summary) ?></p>
+                <span class="card-more text-sm font-medium text-primary-600">Read more &rarr;</span>
             </a>
 <?php endforeach; ?>
         </div>

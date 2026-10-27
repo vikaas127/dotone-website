@@ -3,9 +3,16 @@
 // Usage: $page = [...]; render_head($page); ...content...; render_foot($page);
 
 const SITE_URL = 'https://dotone.in';
-const ASSET_VERSION = '20261109';
+const ASSET_VERSION = '20261027';
 
 require_once __DIR__ . '/data/catalog.php';
+
+// Cache-busting version for one asset: its last-modified time, so browsers fetch it again whenever it changes
+function asset_v($path)
+{
+    $file = dirname(__DIR__) . '/' . ltrim(strtok($path, '?'), '/');
+    return is_file($file) ? (string) filemtime($file) : ASSET_VERSION;
+}
 
 function e($value)
 {
@@ -50,7 +57,7 @@ function render_head(array $page)
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
     <link rel="stylesheet" href="/css/main.css?v=<?= $v ?>">
 <?php foreach ($page['css'] ?? [] as $css): ?>
-    <link rel="stylesheet" href="<?= e($css) ?>?v=<?= $v ?>">
+    <link rel="stylesheet" href="<?= e($css) ?>?v=<?= asset_v($css) ?>">
 <?php endforeach; ?>
     <script src="/js/header-nav.js?v=<?= $v ?>" defer></script>
 <?php render_breadcrumb_schema($page); ?>

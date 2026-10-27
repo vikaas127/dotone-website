@@ -9,7 +9,7 @@ $page = [
     'intro' => 'See who owes you, who you owe and how much money you will have next week, without waiting for the books to close. DotOne builds the finance view from the sales and purchase records your teams already save.',
     'highlights' => ['Receivables ageing', 'Payables tracking', 'Cash flow view', 'GST summary'],
     'capabilities_heading' => 'A clear view of money, from daily operations',
-    'capabilities_intro' => 'Finance management in DotOne works on live operational data. Your books stay in Tally through the Accounting and Tally Sync module; this one is for tracking and planning.',
+    'capabilities_intro' => 'Finance management in DotOne works on live operational data. The books themselves live in the Accounting module, or in Tally if you sync to it; this one is for tracking and planning.',
     'capabilities' => [
         ['trend', 'Receivables', 'Outstanding amounts by customer and invoice, with ageing buckets built from your sales invoices and receipts.'],
         ['cart', 'Payables', 'What you owe each vendor and when it falls due, from purchase bills and payments.'],
@@ -43,7 +43,7 @@ $page = [
         'How much cash do we expect to collect this month?',
     ],
     'faq' => [
-        ['Does finance management replace Tally?', 'No. Your books, GST returns and final accounts stay in Tally. DotOne gives you the operational finance view and posts vouchers to Tally through [Accounting and Tally Sync](/accounting).'],
+        ['Does finance management replace Tally?', 'Finance management is the tracking and planning view. The books are kept in DotOne [Accounting](/accounting), which has its own ledger and financial reports, or in Tally if you prefer, synced both ways.'],
         ['Where does the cash flow view come from?', 'It is built from open sales invoices, purchase bills and committed purchase orders already in DotOne, so it reflects current operations.'],
         ['Can we track budgets?', 'Yes. You can set budgets by department or expense head and compare them with actual spend. We will set this up around how you plan today.'],
         ['Can overdue customers get reminders?', 'Yes. The Finance AI Agent flags overdue customers and drafts payment reminders for your team to review and send.'],

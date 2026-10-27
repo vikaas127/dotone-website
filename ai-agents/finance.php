@@ -58,7 +58,7 @@ $page = [
     'faq' => [
         ['What does the Finance AI Agent do in DotOne?', 'It works on your receivables, payables and cash data. You ask who is overdue, what is due or where cash stands, and the agent reads live invoices, bills and payments, picks out what needs attention and prepares the report or reminder.'],
         ['Can the agent send reminders or record payments on its own?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data or goes out to a customer can be set to need a person\'s approval.'],
-        ['Does it replace Tally or our accountant?', 'No. Your books stay in Tally, and the sync is handled by DotOne\'s Accounting and Tally Sync module. The Finance AI Agent works on the tracking side: who owes what, what is due and where cash stands. GST summaries are ready to hand to your accountant.'],
+        ['Does it replace Tally or our accountant?', 'No. Your books are kept in DotOne Accounting, or in Tally if your accountant prefers, synced both ways. The Finance AI Agent works on the tracking side: who owes what, what is due and where cash stands. GST summaries are ready to hand to your accountant.'],
         ['How current are its numbers?', 'It reads the same live sales and purchase data your team enters in DotOne, so its answers are as current as those entries.'],
     ],
 ];

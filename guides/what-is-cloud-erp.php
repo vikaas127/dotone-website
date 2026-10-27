@@ -14,7 +14,7 @@ $page = [
 <p>A <strong>cloud ERP</strong> is enterprise resource planning software delivered over the internet. The vendor hosts the application and database, handles updates, backups and security, and you pay a subscription. Your team logs in from the office, the plant, a warehouse or a phone.</p>
 <p>It covers the same ground as any ERP: sales, purchase, inventory, production, quality, HR, payroll and accounts on one set of data. See <a href="/guides/what-is-erp">what is ERP</a> for the basics.</p>
 '],
-        ['vs-on-premise', 'Cloud ERP vs on-premise ERP', '
+        ['vs-on-premise', 'ERP vs cloud ERP: cloud vs on-premise compared', '
 <div class="guide-table-wrap"><table>
     <thead><tr><th></th><th>Cloud ERP</th><th>On-premise ERP</th></tr></thead>
     <tbody>
@@ -27,6 +27,10 @@ $page = [
         <tr><td>Customisation</td><td>Configuration within the product</td><td>Deeper code changes possible, but harder to upgrade</td></tr>
     </tbody>
 </table></div>
+'],
+        ['saas-erp', 'What is SaaS ERP?', '
+<p><strong>SaaS ERP</strong> (software as a service) is the most common form of cloud ERP. One version of the software runs for every customer, each with their own secure data, and you pay a subscription instead of buying a licence. The vendor updates it for everyone, so you always have the latest version, including statutory changes such as GST and payroll rules.</p>
+<p>Some vendors also offer <strong>hosted ERP</strong>, where a traditional on-premise product runs on a server in a data centre. It is in the cloud, but you still deal with upgrades and maintenance yourself, so it behaves more like on-premise ERP.</p>
 '],
         ['benefits', 'Benefits of cloud ERP for growing businesses', '
 <ul>
@@ -61,6 +65,7 @@ $page = [
     ],
     'faq' => [
         ['What is cloud ERP?', 'ERP software hosted by the vendor and used through a browser or mobile app, paid for as a subscription, instead of being installed on your own server.'],
+        ['What is SaaS ERP?', 'ERP delivered as a subscription service: the vendor runs one up-to-date version for all customers, each with their own secure data, and handles hosting, backups and upgrades.'],
         ['What is the difference between cloud ERP and on-premise ERP?', 'Cloud ERP runs on the vendor\'s servers, with updates, backups and security handled for you. On-premise ERP runs on your own server, which you buy, maintain and update.'],
         ['Is cloud ERP safe for business data?', 'A good cloud ERP encrypts data, controls access by role, keeps an audit trail and backs up regularly. Ask the vendor about each of these before choosing.'],
         ['Is cloud ERP suitable for small manufacturers?', 'Yes. It removes the cost of servers and IT staff, and lets plants, stores and field teams work on one live system from day one.'],

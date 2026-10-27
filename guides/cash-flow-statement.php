@@ -73,7 +73,7 @@ $page = [
     <li><strong>Plan purchases with production.</strong> Buy against the production plan, not on habit, and negotiate payment terms with key vendors.</li>
     <li><strong>Bill the moment you dispatch.</strong> Every day between dispatch and invoice is a day added to your collection cycle.</li>
 </ol>
-<p>DotOne gives you a <a href="/accounting">funds and cash flow view</a> built from live sales and purchase data, with receivables by customer and payables by due date, while your books stay in Tally.</p>
+<p>DotOne gives you a <a href="/accounting">funds and cash flow view</a> built from live sales and purchase data, with receivables by customer and payables by due date. Its financial reports include a cash flow statement, alongside P&amp;L and balance sheet, and the books can also sync to Tally.</p>
 '],
     ],
     'faq' => [
@@ -84,7 +84,7 @@ $page = [
         ['Which method is used more in India, direct or indirect?', 'The indirect method, because it can be prepared from the profit and loss statement and the opening and closing balance sheets.'],
     ],
     'related' => [
-        ['Cloud Accounting Software', '/accounting', 'Receivables, payables and a funds view from live data, synced to Tally.'],
+        ['Cloud Accounting Software', '/accounting', 'Ledgers, cash flow, P&L and balance sheet from live data.'],
         ['Inventory Management', '/inventory-management', 'Reorder levels and stock visibility so less cash sits in the warehouse.'],
         ['Finance Management', '/finance-management', 'Budgets, expenses and financial control in one place.'],
     ],

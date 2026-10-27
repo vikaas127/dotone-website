@@ -58,7 +58,7 @@ $page = [
 </ul>
 '],
         ['in-dotone', 'Watching working capital in DotOne', '
-<p>DotOne puts the three working capital levers in one place: stock value by item and warehouse in <a href="/inventory-management">inventory</a>, customer outstanding and receivables ageing, and vendor payables by due date in <a href="/accounting">accounting</a>, built from live sales, purchase and stock data while your books stay in Tally. For how working capital shows up in your accounts, see <a href="/guides/cash-flow-statement">what is a cash flow statement</a>.</p>
+<p>DotOne puts the three working capital levers in one place: stock value by item and warehouse in <a href="/inventory-management">inventory</a>, customer outstanding and receivables ageing, and vendor payables by due date in <a href="/accounting">accounting</a>, built from live sales, purchase and stock data, with the books in DotOne or synced to Tally. For how working capital shows up in your accounts, see <a href="/guides/cash-flow-statement">what is a cash flow statement</a>.</p>
 '],
     ],
     'faq' => [
@@ -70,7 +70,7 @@ $page = [
     ],
     'related' => [
         ['What Is a Cash Flow Statement?', '/guides/cash-flow-statement', 'Why profit and cash are not the same.'],
-        ['Cloud Accounting Software', '/accounting', 'Receivables, payables and a funds view, synced to Tally.'],
+        ['Cloud Accounting Software', '/accounting', 'Ledgers, receivables, payables and bank reconciliation.'],
         ['Inventory Management', '/inventory-management', 'Reorder levels and stock valuation by warehouse.'],
     ],
     'cta_heading' => 'See where your working capital is tied up',

@@ -44,6 +44,9 @@ $page = [
     ],
     'faq' => [
         ['What is manufacturing ERP?', 'A central system that helps a factory plan, run and monitor production. Planning, inventory, quality, purchase, sales and finance all work from the same records. Read our guide: [What is ERP?](/guides/what-is-erp)'],
+        ['Does DotOne do production scheduling?', 'Yes. Sales orders become the production plan, material is checked and reserved against the BOM for each work order, and the material issue queue is ordered by how urgent each job is. Job cards then show progress on the floor. See [Production Management](/production-management).'],
+        ['Is DotOne an MES as well as an ERP?', 'It covers the MES functions most growing plants need: job cards and work in progress, machine status, downtime reasons, output by shift and operator, and OEE. Read [what is MES](/guides/what-is-mes) for how MES and ERP differ.'],
+        ['Does it suit discrete and process manufacturing?', 'Yes. Discrete manufacturers use multi-level BOMs and job cards for assembled products; process manufacturers use batches and formulas for products such as chemicals, food and adhesives. See [what is MRP](/guides/what-is-mrp) for material planning in both.'],
         ['Can DotOne connect to machines and cameras?', 'Yes. DotOne can take in machine data and connect to CCTV cameras and IoT systems, so output, downtime and quality checks are recorded from the floor. See [Vision AI](/vision-ai).'],
         ['How is manufacturing ERP rolled out?', 'In four stages: we map your workflows and reporting needs, configure BOM, production, inventory and user roles, migrate master data and connect shop-floor systems, then go live with training and ongoing support.'],
         ['How is our factory data protected?', 'Data is encrypted in transit and at rest, access is role-based with audit logs, and backups are automated. See our [security practices](/security).'],

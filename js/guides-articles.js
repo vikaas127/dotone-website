@@ -8,6 +8,22 @@
  */
 window.GUIDES_ARTICLES = [
   {
+    title: 'Inventory Formulas Every Manufacturer Should Know',
+    excerpt: 'Safety stock, reorder point, EOQ, carrying cost, turnover, backorders and FIFO vs weighted average, with worked examples.',
+    url: '/guides/inventory-formulas',
+    category: 'inventory',
+    date: '2026-10-27',
+    readTime: '10 min'
+  },
+  {
+    title: 'What Is CTC? Salary Structure in India Explained',
+    excerpt: 'Basic, HRA, special allowance, PF, ESI and gratuity explained, with a full ₹6 lakh CTC breakup and in-hand pay.',
+    url: '/guides/ctc-salary-structure',
+    category: 'hrms',
+    date: '2026-10-27',
+    readTime: '8 min'
+  },
+  {
     title: 'What Is a Warehouse Management System (WMS)?',
     excerpt: 'How a WMS works, core features, WMS vs inventory management vs ERP, and how to choose one.',
     url: '/guides/what-is-a-warehouse-management-system',

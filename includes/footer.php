@@ -43,6 +43,7 @@
                     <li><a href="/inventory-management" class="site-footer-light-link">Inventory Management</a></li>
                     <li><a href="/production-management" class="site-footer-light-link">Production Management</a></li>
                     <li><a href="/guides" class="site-footer-light-link">Guides &amp; Articles</a></li>
+                    <li><a href="/tools" class="site-footer-light-link">Free Tools</a></li>
                     <li><a href="/guides/what-is-erp" class="site-footer-light-link">What Is ERP?</a></li>
                     <li><a href="/integrations/tally" class="site-footer-light-link">Tally Integration</a></li>
                     <li><a href="/case-studies" class="site-footer-light-link">Case Studies</a></li>

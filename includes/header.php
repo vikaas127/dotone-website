@@ -92,6 +92,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                                     </div>
                                     <ul class="mega-menu-sublinks">
                                         <li><a href="/guides">All Guides &amp; Articles</a></li>
+                                        <li><a href="/tools">Free Tools</a></li>
                                         <li><a href="/guides/what-is-erp">ERP &amp; Operations</a></li>
                                         <li><a href="/vision-ai">AI for Shopfloor</a></li>
                                         <li><a href="/guides/bom-setup">BOM Setup Guide</a></li>
@@ -174,6 +175,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                 </button>
                 <div id="resourcesMobileLinks" class="hidden pl-4 pb-2 space-y-1 border-l ml-4 mb-2">
                     <a href="/guides" class="block px-3 py-2 text-xs rounded-lg transition-colors">Guides &amp; Articles</a>
+                    <a href="/tools" class="block px-3 py-2 text-xs rounded-lg transition-colors">Free Tools</a>
                     <a href="/demo" class="block px-3 py-2 text-xs rounded-lg transition-colors">Demo Centre</a>
                     <a href="/webinar" class="block px-3 py-2 text-xs rounded-lg transition-colors">Webinars</a>
                     <a href="/case-studies" class="block px-3 py-2 text-xs rounded-lg transition-colors">Case Studies</a>

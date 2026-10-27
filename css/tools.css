@@ -1,0 +1,56 @@
+/* Free tools (includes/templates/tool.php) */
+.tool-card { background: #fff; border: 1px solid #E4E7EC; border-radius: 1.25rem; padding: 1.5rem; box-shadow: 0 20px 40px -28px rgba(16, 24, 40, 0.35); }
+@media (min-width: 768px) { .tool-card { padding: 2rem; } }
+.tool-note { text-align: center; font-size: 0.85rem; color: #667085; margin-top: 0.85rem; }
+.tool-grid { display: grid; gap: 1.5rem; }
+@media (min-width: 900px) { .tool-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+.tool-fields { display: grid; gap: 1rem; align-content: start; }
+.tool-row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+.tool-field { display: grid; gap: 0.35rem; min-width: 0; }
+.tool-field label, .tool-label { font-size: 0.85rem; font-weight: 600; color: #344054; }
+.tool-field input, .tool-field select, .tool-field textarea { width: 100%; border: 1px solid #D0D5DD; border-radius: 0.6rem; padding: 0.65rem 0.8rem; font-size: 1rem; color: #101828; background: #fff; }
+.tool-field input:focus, .tool-field select:focus, .tool-field textarea:focus { outline: 2px solid #80D1FA; border-color: #0096EE; }
+.tool-hint { font-size: 0.8rem; color: #667085; }
+.tool-seg { display: inline-flex; border: 1px solid #D0D5DD; border-radius: 0.6rem; overflow: hidden; }
+.tool-seg button { padding: 0.55rem 0.9rem; font-size: 0.9rem; font-weight: 600; color: #475467; background: #fff; }
+.tool-seg button + button { border-left: 1px solid #D0D5DD; }
+.tool-seg button.is-active { background: #0096EE; color: #fff; }
+.tool-result { background: #F6F9FC; border: 1px solid #E4E7EC; border-radius: 1rem; padding: 1.25rem 1.5rem; align-self: start; }
+.tool-result-main { font-family: Poppins, sans-serif; font-size: 2rem; font-weight: 700; color: #101828; line-height: 1.2; }
+.tool-result-label { font-size: 0.85rem; color: #667085; margin-bottom: 0.25rem; }
+.tool-lines { margin-top: 1rem; display: grid; gap: 0.5rem; }
+.tool-line { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.95rem; color: #475467; border-bottom: 1px dashed #E4E7EC; padding-bottom: 0.45rem; }
+.tool-line b { color: #101828; font-weight: 600; white-space: nowrap; }
+.tool-line.is-total { border-bottom: 0; font-weight: 600; color: #101828; }
+.tool-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.65rem 1.1rem; border-radius: 0.6rem; font-weight: 600; font-size: 0.95rem; background: #0096EE; color: #fff; }
+.tool-btn:hover { background: #0078BE; }
+.tool-btn--ghost { background: #fff; color: #0078BE; border: 1px solid #B3E3FC; }
+.tool-btn--ghost:hover { background: #E6F5FE; }
+.tool-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+
+/* Invoice generator */
+.inv-items { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.inv-items th { text-align: left; font-size: 0.8rem; color: #475467; font-weight: 600; padding: 0.4rem; border-bottom: 1px solid #E4E7EC; }
+.inv-items td { padding: 0.35rem; vertical-align: top; }
+.inv-items input, .inv-items select { width: 100%; border: 1px solid #D0D5DD; border-radius: 0.5rem; padding: 0.45rem 0.5rem; font-size: 0.9rem; }
+.inv-items .inv-del { color: #B42318; font-weight: 700; padding: 0.45rem; }
+.inv-scroll { overflow-x: auto; }
+.inv-preview { margin-top: 2rem; border: 1px solid #E4E7EC; border-radius: 0.75rem; padding: 1.5rem; background: #fff; color: #101828; font-size: 0.9rem; }
+.inv-preview h3 { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.02em; }
+.inv-head { display: flex; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.inv-parties { display: grid; gap: 1rem; margin-bottom: 1.25rem; }
+@media (min-width: 640px) { .inv-parties { grid-template-columns: 1fr 1fr; } }
+.inv-box { border: 1px solid #E4E7EC; border-radius: 0.5rem; padding: 0.75rem; white-space: pre-line; }
+.inv-box b { display: block; font-size: 0.75rem; text-transform: uppercase; color: #667085; margin-bottom: 0.25rem; }
+.inv-table { width: 100%; border-collapse: collapse; }
+.inv-table th, .inv-table td { border: 1px solid #E4E7EC; padding: 0.45rem 0.5rem; text-align: left; }
+.inv-table th { background: #F6F9FC; font-size: 0.8rem; }
+.inv-table .num { text-align: right; white-space: nowrap; }
+.inv-totals { margin-left: auto; margin-top: 1rem; max-width: 22rem; display: grid; gap: 0.3rem; }
+.inv-totals div { display: flex; justify-content: space-between; gap: 1rem; }
+.inv-totals .is-total { font-weight: 700; border-top: 1px solid #101828; padding-top: 0.4rem; }
+.inv-words { margin-top: 0.75rem; font-style: italic; }
+
+/* The invoice prints from a separate frame with a copy of the .inv-* rules (js/tools/gst-invoice-generator.js) */
+.tool-check { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.92rem; color: #344054; }
+.tool-check input { margin-top: 0.2rem; width: 1rem; height: 1rem; flex: none; }

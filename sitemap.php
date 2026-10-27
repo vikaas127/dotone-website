@@ -4,7 +4,7 @@ header("Content-Type: application/xml; charset=UTF-8");
 $base = "https://dotone.in/";
 
 // Public pages live in the root and in these section folders
-$sections = ['', 'ai-agents/', 'industries/', 'solutions/', 'integrations/', 'guides/', 'vision-ai/', 'compare/'];
+$sections = ['', 'ai-agents/', 'industries/', 'solutions/', 'integrations/', 'guides/', 'vision-ai/', 'compare/', 'tools/'];
 $skip = ['sitemap.php', 'contact-submit.php', 'webinar-count.php', 'webinar-register.php', 'config.php', 'db.php', 'thank-you.php', 'apply.php', 'sales-documentation.php', 'factory-demo.php'];
 
 $files = [];

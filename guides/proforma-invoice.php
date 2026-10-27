@@ -14,6 +14,22 @@ $page = [
 <p>A <strong>proforma invoice (PI)</strong> is a document you send a buyer before the sale: the items, quantities, rates, taxes and terms you are offering. It works like a firm quotation. The buyer uses it to approve the purchase, arrange funds, open a letter of credit or pay an advance.</p>
 <p>A proforma invoice is <strong>not a tax invoice</strong>. It does not record a sale in your books and it does not create a GST liability by itself. The sale happens when you raise the final tax invoice, normally at the time of dispatch.</p>
 '],
+        ['format', 'Proforma invoice format', '
+<p>There is no single prescribed format for a proforma invoice, but a clear one looks like a tax invoice and is plainly marked as a proforma. Include:</p>
+<div class="guide-table-wrap"><table>
+    <thead><tr><th>Section</th><th>What to show</th></tr></thead>
+    <tbody>
+        <tr><td>Heading</td><td>"Proforma Invoice", so nobody mistakes it for a tax invoice</td></tr>
+        <tr><td>Numbers and dates</td><td>PI number from its own series, PI date and validity date</td></tr>
+        <tr><td>Seller</td><td>Name, address, GSTIN, contact details</td></tr>
+        <tr><td>Buyer</td><td>Name, billing and shipping address, GSTIN if registered, place of supply</td></tr>
+        <tr><td>Items</td><td>Description, HSN or SAC code, quantity, unit, rate, discount, taxable value</td></tr>
+        <tr><td>Tax</td><td>GST rate and the expected CGST and SGST, or IGST</td></tr>
+        <tr><td>Terms</td><td>Delivery schedule, payment terms and advance required, bank details, freight and packing</td></tr>
+    </tbody>
+</table></div>
+<p>To lay out the final tax invoice once goods are dispatched, you can use our free <a href="/tools/gst-invoice-generator">GST invoice generator</a>.</p>
+'],
         ['why-split', 'Why one proforma invoice becomes several final invoices', '
 <p>One PI turning into several tax invoices is normal, not an exception. Common reasons:</p>
 <ul>
@@ -73,6 +89,7 @@ $page = [
     ],
     'faq' => [
         ['Can one proforma invoice have more than one final invoice?', 'Yes. A proforma invoice is an offer, not a sale. You can raise as many tax invoices against it as you have dispatches, as long as the total billed does not go beyond what the PI covers.'],
+        ['What is the format of a proforma invoice?', 'It looks like a tax invoice but is headed "Proforma Invoice": PI number and validity date, seller and buyer details with GSTIN, items with HSN codes, quantities, rates and expected GST, and delivery and payment terms.'],
         ['Should the final invoice use the proforma invoice number?', 'No. Each final invoice takes the next number in your tax invoice series. Quote the PI number on the invoice as a reference so the customer can match it.'],
         ['Is GST charged on a proforma invoice?', 'A proforma invoice does not create a GST liability. GST is charged on the tax invoices you raise against it. For services, GST may already be due on any advance you received. Check the treatment with your CA.'],
         ['What happens to the balance if the customer cancels the rest of the order?', 'Agree the closure with the customer, then close or revise the PI so the remaining quantity no longer shows as open. Do not leave it open, or it will keep appearing in your pending reports.'],

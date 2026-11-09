@@ -112,8 +112,10 @@ function render_article_schema(array $page, $url)
 {
     $data = ['@context' => 'https://schema.org', '@type' => 'Article', 'headline' => $page['h1'], 'description' => $page['description'],
         'mainEntityOfPage' => $url, 'datePublished' => $page['article']['published'], 'inLanguage' => 'en-IN',
-        'author' => ['@id' => SITE_URL . '/#organization'], 'publisher' => ['@id' => SITE_URL . '/#organization'],
+        'author' => !empty($page['author']) ? array_filter(['@type' => 'Person', 'name' => $page['author'][0], 'jobTitle' => $page['author'][1] ?? '', 'url' => $page['author'][2] ?? '', 'worksFor' => ['@id' => SITE_URL . '/#organization']]) : ['@id' => SITE_URL . '/#organization'],
+        'publisher' => ['@id' => SITE_URL . '/#organization'],
         'image' => SITE_URL . '/assets/og-image.jpg'];
+    if (!empty($page['article']['modified'])) $data['dateModified'] = $page['article']['modified'];
     echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
 

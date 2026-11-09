@@ -4,7 +4,7 @@ require_once __DIR__ . '/includes/site.php';
 
 $page = [
     'path' => '/ai-powered-erp',
-    'title' => 'AI-Powered ERP Software | ERP + AI Agents | DotOne',
+    'title' => 'AI-Powered ERP with Built-In AI Agents | DotOne',
     'description' => 'ERP data, AI agents and analytics in one system. Ask questions in plain language, get exceptions flagged and reports generated from live ERP data.',
     'breadcrumbs' => [['AI-Powered ERP', '/ai-powered-erp']],
     'css' => ['/css/hrms.css', '/css/vision.css', '/css/aierp.css', '/css/aierp2.css'],
@@ -37,7 +37,7 @@ render_head($page);
         <div class="ai2-hero-copy">
             <?php render_breadcrumbs($page); ?>
             <span class="ai2-pill"><?= icon('spark', 'w-4 h-4') ?>ERP + AI agents</span>
-            <h1>AI-Powered ERP Software <span>for Modern Businesses</span></h1>
+            <h1>AI-Powered ERP <span>with Built-In AI Agents</span></h1>
             <p>Adding a chatbot to an ERP does not make it intelligent. In DotOne, AI agents work directly on your ERP data: they find exceptions, build the report and prepare the next step, within the permissions you set.</p>
             <div class="ai2-ctas">
                 <a href="/demo" class="hr-btn hr-btn--primary">Book a Demo</a>

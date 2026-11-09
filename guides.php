@@ -1,16 +1,34 @@
+<?php
+// Server-rendered list of every guide, so search engines and no-JS visitors see crawlable links.
+// js/guides-page.js re-renders this grid with search and category filters once it loads.
+$guideCards = [];
+foreach (glob(__DIR__ . '/guides/*.php') as $file) {
+    $src = file_get_contents($file);
+    if (stripos($src, 'noindex') !== false) continue;
+    // Template guides set $page['title']; static ones use <title> and a meta description
+    if (!preg_match("/'title'\s*=>\s*'((?:[^'\\\\]|\\\\.)*)'/", $src, $t) && !preg_match('#<title>([^<]+)</title>#', $src, $t)) continue;
+    preg_match("/'description'\s*=>\s*'((?:[^'\\\\]|\\\\.)*)'/", $src, $d) || preg_match('#<meta name="description" content="([^"]*)"#', $src, $d);
+    $guideCards[] = [
+        'url' => '/guides/' . basename($file, '.php'),
+        'title' => preg_replace('/\s*\|\s*DotOne$/', '', stripslashes($t[1])),
+        'excerpt' => isset($d[1]) ? stripslashes($d[1]) : '',
+    ];
+}
+usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title']); });
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
+    <meta name="description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
     <title>ERP, Inventory, HR and Finance Guides | DotOne</title>
     <link rel="canonical" href="https://dotone.in/guides">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
-    <meta property="og:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
+    <meta property="og:description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
     <meta property="og:url" content="https://dotone.in/guides">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -19,7 +37,7 @@
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
-    <meta name="twitter:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
+    <meta name="twitter:description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +75,15 @@
 
 <section class="section">
     <div class="container-custom max-w-6xl mx-auto">
-        <div id="guides-grid" class="guides-grid"></div>
+        <div id="guides-grid" class="guides-grid">
+<?php foreach ($guideCards as $g): ?>
+            <a href="<?= htmlspecialchars($g['url']) ?>" class="guides-card card p-6 md:p-7 flex flex-col h-full hover:border-primary-500/30 transition-colors">
+                <h2 class="text-lg font-display font-semibold text-text-primary mb-3 leading-snug"><?= htmlspecialchars($g['title']) ?></h2>
+                <p class="text-sm text-text-secondary leading-relaxed flex-grow mb-4"><?= htmlspecialchars($g['excerpt']) ?></p>
+                <span class="guides-card-footer"><span class="guides-card-read">Read article →</span></span>
+            </a>
+<?php endforeach; ?>
+        </div>
         <div id="guides-empty" class="guides-empty card p-10 text-center" hidden>
             <h2 class="text-xl font-display font-semibold mb-2">No articles found</h2>
             <p class="text-text-secondary text-sm">Try a different search term or category filter.</p>
@@ -70,7 +96,7 @@
         <h2 class="text-2xl font-display font-bold">Need hands-on help?</h2>
         <p class="text-text-secondary">Our support team and documentation cover setup, integrations, and rollout for every DotOne module.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="btn-primary">Email Support</a>
+            <a href="/support" class="btn-primary">Support Centre</a>
             <a href="/documentation" class="btn-secondary">Technical Documentation</a>
         </div>
     </div>

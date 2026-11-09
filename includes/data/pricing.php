@@ -88,6 +88,8 @@ return [
         'price' => 35000,
         'modules' => ['crm', 'support', 'sales', 'field', 'hrms', 'payroll', 'inventory', 'purchase', 'production', 'quality', 'integrations', 'agents'],
         'cta' => ['Talk to Sales', '/contact'],
-        'limits' => ['staff' => 50, 'customers' => 200, 'contacts' => U, 'contracts' => U, 'invoices' => 200, 'proforma' => 200, 'creditnotes' => U, 'quotations' => U, 'projects' => 200, 'tasks' => 1000, 'tickets' => U, 'leads' => U, 'items' => 1000, 'storage' => '20 GB'],
+        // Matches Business ("Everything in Business"); the earlier 200/1,000 caps undercut the cheaper plan.
+        // TODO(owner): confirm the Enterprise AI plan in the admin plan settings has the same limits.
+        'limits' => ['staff' => 50, 'customers' => U, 'contacts' => U, 'contracts' => U, 'invoices' => U, 'proforma' => U, 'creditnotes' => U, 'quotations' => U, 'projects' => U, 'tasks' => U, 'tickets' => U, 'leads' => U, 'items' => U, 'storage' => '20 GB'],
     ],
 ];

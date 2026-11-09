@@ -64,7 +64,7 @@ echo '<script type="application/ld+json">' . json_encode(['@context' => 'https:/
     <div class="absolute inset-0 hero-tint" aria-hidden="true"></div>
     <div class="container-custom relative z-10 text-center max-w-3xl mx-auto">
         <span class="section-label">Pricing</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-5">Simple plans that <span class="text-primary-500">grow with you</span></h1>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-text-primary leading-tight mb-5">ERP pricing: simple plans that <span class="text-primary-500">grow with you</span></h1>
         <p class="text-lg md:text-xl text-text-secondary leading-relaxed">Start free, then pick the plan that fits. Priced monthly in INR, and you can move up as your business grows.</p>
     </div>
 </section>

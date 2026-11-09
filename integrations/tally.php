@@ -2,8 +2,8 @@
 require_once dirname(__DIR__) . '/includes/site.php';
 $page = [
     'path' => '/integrations/tally',
-    'title' => 'Tally Prime Integration: Two-Way Sync | DotOne',
-    'description' => 'Sync masters, vouchers and stock between DotOne and Tally Prime or ERP 9. Setup steps, mapping, error handling and FAQs.',
+    'title' => 'ERP with Tally Integration: TallyPrime Sync | DotOne',
+    'description' => 'ERP with Tally integration: sync masters, vouchers and stock between DotOne and Tally Prime or ERP 9. Setup steps, mapping, error handling and FAQs.',
     'eyebrow' => 'Integration',
     'h1' => 'Tally Integration for DotOne',
     'intro' => 'Run production, inventory and sales in DotOne, and push vouchers to Tally Prime automatically. Your accountant gets clean vouchers, and nobody re-keys invoices at month-end.',

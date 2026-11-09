@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/production-management',
-    'title' => 'Production Management Software | DotOne',
-    'description' => 'Plan production, manage multi-level BOMs and job cards, track WIP and monitor line output and OEE in real time.',
+    'title' => 'Production Software: Multi-Level BOM and OEE | DotOne',
+    'description' => 'Production management with multi-level BOM software, job cards, WIP tracking and OEE machine monitoring in real time, inside DotOne ERP.',
     'breadcrumbs' => [['Modules', '/modules'], ['Production Management', '/production-management']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Production Management Software',

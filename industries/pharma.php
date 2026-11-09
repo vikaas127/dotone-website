@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/industries/pharma',
-    'title' => 'Pharma ERP Software for Manufacturers | DotOne',
-    'description' => 'Pharma ERP for Indian formulation and API makers: batch-wise stock with expiry, QC before release, batch production records, traceability and Tally sync.',
+    'title' => 'Pharma ERP with Batch Tracking and Expiry | DotOne',
+    'description' => 'Pharma ERP and batch tracking software: batch-wise stock with expiry dates, QC before release, batch records, traceability and Tally sync.',
     'breadcrumbs' => [['Industries', '/industries'], ['Pharma & Life Sciences', '/industries/pharma']],
     'name' => 'Pharma & Life Sciences',
     'icon' => 'shield',

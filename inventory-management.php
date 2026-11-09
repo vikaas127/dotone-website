@@ -2,7 +2,7 @@
 $page = [
     'path' => '/inventory-management',
     'title' => 'Inventory Management System for Indian Businesses | DotOne',
-    'description' => 'Inventory management system for manufacturers and distributors: multi-warehouse stock, batches, serial numbers, reorder levels and live valuation.',
+    'description' => 'Inventory system for manufacturers and distributors: multi-warehouse stock, batch and expiry date tracking, serials, reorder levels and valuation.',
     'breadcrumbs' => [['Modules', '/modules'], ['Inventory Management', '/inventory-management']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Inventory Management System',

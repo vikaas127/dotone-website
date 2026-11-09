@@ -2,8 +2,8 @@
 $page = [
     'path' => '/ai-agents/inventory',
     'slug' => 'inventory',
-    'title' => 'Inventory AI Agent for AI Inventory Management | DotOne',
-    'description' => 'AI inventory management in DotOne ERP. Ask the inventory agent what is below reorder level, what is slow-moving and where to move stock across warehouses.',
+    'title' => 'Inventory AI Agent: AI Inventory Forecasting | DotOne',
+    'description' => 'Automated inventory forecasting with AI: the agent projects when stock runs out from consumption, flags slow movers and drafts indents for approval.',
     'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Inventory AI Agent', '/ai-agents/inventory']],
     'h1' => 'Inventory AI Agent',
     'intro' => 'AI inventory management for manufacturers who cannot afford a stock-out on the shop floor. Ask the agent about stock in plain language. It reads live stock, orders and consumption across every warehouse, points out what needs attention and prepares the next step, such as a purchase indent, for your team to approve.',

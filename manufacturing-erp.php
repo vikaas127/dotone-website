@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/manufacturing-erp',
-    'title' => 'Manufacturing ERP Software for Indian Manufacturers | DotOne',
-    'description' => 'Manufacturing ERP for Indian factories: BOM, production planning, job cards, inventory, quality and dispatch, with AI agents that flag delays.',
+    'title' => 'Manufacturing ERP: Low-Cost Software for India | DotOne',
+    'description' => 'Low-cost manufacturing software for Indian MSMEs: BOM, planning, job cards, inventory, quality and dispatch. Paid plans from ₹15,000 a month.',
     'breadcrumbs' => [['Modules', '/modules'], ['Manufacturing ERP', '/manufacturing-erp']],
     'eyebrow' => 'ERP for Factories',
     'h1' => 'Manufacturing ERP Software',

@@ -2,8 +2,8 @@
 $page = [
     'path' => '/ai-agents/sales',
     'slug' => 'sales',
-    'title' => 'AI Sales Agent for Manufacturers | DotOne',
-    'description' => 'An AI sales agent inside DotOne ERP that tracks quotations, orders and dispatch, forecasts demand and tells your team which orders need attention today.',
+    'title' => 'AI Sales Agent: Sales Pipeline Automation | DotOne',
+    'description' => 'AI-driven sales pipeline automation in DotOne ERP: the agent tracks quotations and orders, forecasts demand and flags what needs attention today.',
     'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Sales AI Agent', '/ai-agents/sales']],
     'h1' => 'Sales AI Agent',
     'intro' => 'An AI sales agent that works on your quotations, sales orders, invoices and dispatch in DotOne. Ask which quotations are about to go cold, which orders are late or what next month is likely to look like. The agent reads the data, picks out what needs action and prepares the follow-up or report for your team.',

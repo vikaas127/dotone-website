@@ -2,11 +2,11 @@
 $page = [
     'path' => '/ai-agents/purchase',
     'slug' => 'purchase',
-    'title' => 'Purchase AI Agent for Procurement | DotOne',
+    'title' => 'AI Procurement Tool: Purchase AI Agent | DotOne',
     'description' => 'A purchase AI agent in DotOne ERP that compares vendor quotes, flags price changes and late deliveries, and drafts purchase orders from approved indents.',
     'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Purchase AI Agent', '/ai-agents/purchase']],
     'h1' => 'Purchase AI Agent',
-    'intro' => 'A procurement assistant that works on your indents, vendor quotes, purchase orders and goods receipts in DotOne. Ask which vendor gives the best overall deal, which rates have gone up or which deliveries are late. The agent reads the data, points out what needs a decision and drafts the purchase order for your team to approve.',
+    'intro' => 'An AI procurement tool that works on your indents, vendor quotes, purchase orders and goods receipts in DotOne. Ask which vendor gives the best overall deal, which rates have gone up or which deliveries are late. The agent reads the data, points out what needs a decision and drafts the purchase order for your team to approve.',
     'demo' => [
         'question' => 'Which vendor should we buy PVC Resin from for the approved indent this week?',
         'steps' => [

@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/warehouse-management',
-    'title' => 'Warehouse Management Software | DotOne',
-    'description' => 'Warehouse management software for manufacturers. Inward with GRN, storage locations, picking, packing, dispatch and transfers across every warehouse.',
+    'title' => 'Warehouse Management System with QR Scanning | DotOne',
+    'description' => 'QR code warehouse inventory system for manufacturers: inward with GRN, storage locations, picking, packing, dispatch and transfers across every warehouse.',
     'breadcrumbs' => [['Modules', '/modules'], ['Warehouse Management', '/warehouse-management']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Warehouse Management Software',

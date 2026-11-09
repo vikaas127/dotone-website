@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
-    <title>DotOne | Cloud ERP and AI Agents for Indian Businesses</title>
+    <meta name="description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
+    <title>DotOne | Cloud ERP Platform and AI ERP Software for SMEs</title>
     <link rel="canonical" href="https://dotone.in/">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
-    <meta property="og:title" content="DotOne | Cloud ERP and AI Agents for Indian Businesses">
-    <meta property="og:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
+    <meta property="og:title" content="DotOne | Cloud ERP Platform and AI ERP Software for SMEs">
+    <meta property="og:description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
     <meta property="og:url" content="https://dotone.in/">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -19,8 +19,8 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne | Cloud ERP and AI Agents for Indian Businesses">
-    <meta name="twitter:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
+    <meta name="twitter:title" content="DotOne | Cloud ERP Platform and AI ERP Software for SMEs">
+    <meta name="twitter:description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[<?= json_encode(org_schema(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>,{"@type":"WebSite","@id":"https://dotone.in/#website","url":"https://dotone.in/","name":"DotOne","publisher":{"@id":"https://dotone.in/#organization"},"inLanguage":"en-IN"},{"@type":"SoftwareApplication","@id":"https://dotone.in/#software","name":"DotOne","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android, iOS","description":"AI-powered business management platform: ERP modules for sales, CRM, purchase, inventory, production, quality, HR, payroll and finance, with AI agents that work on your live data.","url":"https://dotone.in/","publisher":{"@id":"https://dotone.in/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"0","highPrice":"35000","offerCount":"5","url":"https://dotone.in/pricing"}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,10 +39,10 @@
                 <div class="hero-split-copy">
                     <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        <span class="text-gradient-shimmer">AI-Powered</span> 360° Business Management Platform
+                        <span class="text-gradient-shimmer">AI-Powered</span> Cloud ERP Platform for Growing Businesses
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
-                        One connected system for your entire business: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.
+                        Integrated business automation software for Indian SMEs: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.
                     </p>
                     <div class="hero-light-ctas hero-anim" style="--d: 360ms">
                         <a href="/demo" class="btn-hero-glow-lg group">
@@ -1232,6 +1232,56 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                 </li>
 <?php endforeach; ?>
             </ol>
+        </div>
+    </section>
+
+    <!-- 12b Explore: keyword-led links to the page for each buying question -->
+    <section class="section bg-surface">
+        <div class="container-custom">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="section-label">Explore DotOne</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-primary mb-4">One cloud ERP platform. <span class="text-primary-500">Built for Indian SMEs.</span></h2>
+                <p class="text-lg text-text-secondary">DotOne is enterprise resource planning for small and mid-sized businesses: one integrated system for sales, stock, production, people and accounts, with AI agents on every module. Find the page for what you need.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">ERP software</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/ai-powered-erp" class="text-text-secondary hover:text-primary-600 transition-colors">AI ERP software</a></li>
+                        <li><a href="/erp-software" class="text-text-secondary hover:text-primary-600 transition-colors">Enterprise resource planning systems</a></li>
+                        <li><a href="/erp-for-small-business" class="text-text-secondary hover:text-primary-600 transition-colors">ERP software for SMEs</a></li>
+                        <li><a href="/manufacturing-erp" class="text-text-secondary hover:text-primary-600 transition-colors">Low-cost manufacturing ERP for India</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">Buying and switching</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/pricing" class="text-text-secondary hover:text-primary-600 transition-colors">Cloud ERP pricing</a></li>
+                        <li><a href="/integrations/tally" class="text-text-secondary hover:text-primary-600 transition-colors">ERP with Tally integration</a></li>
+                        <li><a href="/compare/sap-alternative" class="text-text-secondary hover:text-primary-600 transition-colors">SAP alternative for manufacturing</a></li>
+                        <li><a href="/guides/best-erp-software-india" class="text-text-secondary hover:text-primary-600 transition-colors">Best ERP software for small business: how to compare</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">Features buyers ask about</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/industries/pharma" class="text-text-secondary hover:text-primary-600 transition-colors">Batch tracking software for pharma</a></li>
+                        <li><a href="/production-management" class="text-text-secondary hover:text-primary-600 transition-colors">Multi-level BOM and OEE machine monitoring</a></li>
+                        <li><a href="/inventory-management" class="text-text-secondary hover:text-primary-600 transition-colors">Expiry date inventory tracking</a></li>
+                        <li><a href="/warehouse-management" class="text-text-secondary hover:text-primary-600 transition-colors">QR code warehouse inventory system</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">AI that does the work</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/ai-agents/inventory" class="text-text-secondary hover:text-primary-600 transition-colors">Automated inventory forecasting with AI</a></li>
+                        <li><a href="/ai-agents/purchase" class="text-text-secondary hover:text-primary-600 transition-colors">AI procurement tools</a></li>
+                        <li><a href="/workflow-automation" class="text-text-secondary hover:text-primary-600 transition-colors">Automated purchase order approvals</a></li>
+                        <li><a href="/ai-agents/sales" class="text-text-secondary hover:text-primary-600 transition-colors">AI-driven sales pipeline automation</a></li>
+                        <li><a href="/solutions/inventory-automation" class="text-text-secondary hover:text-primary-600 transition-colors">Predictive supply chain planning</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -2,7 +2,7 @@
 $page = [
     'path' => '/workflow-automation',
     'title' => 'Workflow Automation and Approval Software | DotOne',
-    'description' => 'Workflow automation for manufacturers. Approval chains, alerts, automatic indents, hand-offs between departments and escalations inside DotOne ERP.',
+    'description' => 'Workflow automation for manufacturers: automated purchase order approvals, alerts, automatic indents and hand-offs between departments.',
     'breadcrumbs' => [['Modules', '/modules'], ['Workflow Automation', '/workflow-automation']],
     'eyebrow' => 'ERP Module',
     'h1' => 'Workflow Automation Software',

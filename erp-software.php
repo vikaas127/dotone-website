@@ -7,12 +7,12 @@ foreach (['inventory-management', 'sales-management', 'crm', 'purchase-managemen
 }
 $page = [
     'path' => '/erp-software',
-    'title' => 'ERP Software and ERP System for Indian Businesses | DotOne',
-    'description' => 'Cloud ERP system for inventory, sales, purchase, production, HR and accounts, with GST billing and Tally integration. See DotOne ERP in action.',
+    'title' => 'Enterprise Resource Planning (ERP) Software | DotOne',
+    'description' => 'Enterprise resource planning system for Indian businesses: inventory, sales, purchase, production, HR and accounts, with GST billing and Tally sync.',
     'hero' => 'panorama',
     'eyebrow' => 'Cloud ERP · Made for India',
     'h1' => 'ERP Software That Runs Your Whole Business',
-    'intro' => 'DotOne is a cloud ERP system built for Indian manufacturers and distributors: inventory, sales, purchase, production, quality, HR and payroll in one system, with GST invoicing and two-way Tally sync.',
+    'intro' => 'Enterprise resource planning (ERP) systems put every department on one database. DotOne is a cloud ERP system built for Indian manufacturers and distributors: inventory, sales, purchase, production, quality, HR and payroll in one system, with GST invoicing and two-way Tally sync.',
     'blocks' => [
         ['heading' => 'The core modules', 'text' => 'Every module shares one database, so information entered once is available everywhere.', 'cards' => $cards],
         ['heading' => 'Built for how Indian businesses work', 'text' => 'Not a global ERP translated for India. DotOne was designed around Indian tax, payroll and accounting practice from day one.', 'list' => [

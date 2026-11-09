@@ -2,8 +2,8 @@
 $page = [
     'path' => '/ai-agents/sales',
     'slug' => 'sales',
-    'title' => 'AI Sales Agent: Sales Pipeline Automation | DotOne',
-    'description' => 'AI-driven sales pipeline automation in DotOne ERP: the agent tracks quotations and orders, forecasts demand and flags what needs attention today.',
+    'title' => 'AI Sales Agent for Manufacturers | DotOne',
+    'description' => 'An AI sales agent inside DotOne ERP that tracks quotations, orders and dispatch, forecasts demand and tells your team which orders need attention today.',
     'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Sales AI Agent', '/ai-agents/sales']],
     'h1' => 'Sales AI Agent',
     'intro' => 'An AI sales agent that works on your quotations, sales orders, invoices and dispatch in DotOne. Ask which quotations are about to go cold, which orders are late or what next month is likely to look like. The agent reads the data, picks out what needs action and prepares the follow-up or report for your team.',
@@ -57,6 +57,7 @@ $page = [
         'Prepares draft quotations and orders for review, within your approval rules',
     ],
     'faq' => [
+        ['Can DotOne automate the sales pipeline?', 'Yes. The CRM and Sales AI Agents follow up leads and quotations, flag late orders and route tasks. See [sales pipeline automation](/sales-pipeline-automation).'],
         ['What does the Sales AI Agent do?', 'It works on the sales side of DotOne: quotations, sales orders, invoices and dispatch. You ask it questions in plain language, and it finds stale quotations, late orders and changes in demand, then prepares a report, a forecast or a follow-up for your team. Think of it as an AI sales assistant that already knows your ERP data.'],
         ['How is it different from the CRM AI Agent?', 'The CRM AI Agent looks after leads, the pipeline and customer conversations before a deal is won. The Sales AI Agent picks up from the quotation onward: orders, dispatch, invoices and the sales forecast.'],
         ['Can the agent send quotations to customers by itself?', 'Only if you allow it. The agent acts within the roles, permissions and approval rules you set in DotOne. It can prepare a draft for a salesperson to check, and anything that changes data can be set to need a person\'s approval.'],

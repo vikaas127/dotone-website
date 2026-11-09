@@ -62,7 +62,8 @@ RewriteRule ^(db|config)(\.php)?$ - [R=404,L]
 # 3. MOVED PAGES (new site structure) -> NEW URL (301)
 # ------------------------------------------------
 # Login and sign-up live on the TechDotBit app (302 so the target can change later)
-RewriteRule ^(login|log-in|signin|sign-in|register|signup|sign-up)(\.html|\.php)?/?$ https://techdotbit.in/authentication/register [R=302,L]
+RewriteRule ^(login|log-in|signin|sign-in)(\.html|\.php)?/?$ https://techdotbit.in/authentication/login [R=302,L]
+RewriteRule ^(register|signup|sign-up)(\.html|\.php)?/?$ https://techdotbit.in/authentication/register [R=302,L]
 RewriteRule ^aitools(\.html|\.php)?/?$ /ai [R=301,L]
 RewriteRule ^manufacturing_solutions(\.html|\.php)?/?$ /industries [R=301,L]
 RewriteRule ^demo_center(\.html|\.php)?/?$ /demo [R=301,L]

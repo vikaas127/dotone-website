@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/industries/pharma',
-    'title' => 'Pharma ERP with Batch Tracking and Expiry | DotOne',
-    'description' => 'Pharma ERP and batch tracking software: batch-wise stock with expiry dates, QC before release, batch records, traceability and Tally sync.',
+    'title' => 'Pharma ERP Software for Manufacturers | DotOne',
+    'description' => 'Pharma ERP for Indian formulation and API makers: batch-wise stock with expiry, QC before release, batch production records, traceability and Tally sync.',
     'breadcrumbs' => [['Industries', '/industries'], ['Pharma & Life Sciences', '/industries/pharma']],
     'name' => 'Pharma & Life Sciences',
     'icon' => 'shield',
@@ -29,6 +29,7 @@ $page = [
         ['Records for audits', 'Inspection results, rejections and approvals are kept with the user and date, as records you keep for audits.'],
     ],
     'faq' => [
+        ['How does batch tracking work for pharma?', 'Every receipt, issue, stage, test and dispatch is tied to a batch and its expiry. See [batch tracking software](/batch-tracking-software) and [expiry date tracking](/expiry-date-tracking-software).'],
         ['Can DotOne block a batch until QC approves it?', 'Yes. Received material and finished goods can be held until the inspection is recorded as passed. Rejected material does not enter usable stock. See [quality management](/quality-management).'],
         ['Does DotOne track expiry dates?', 'Yes. Batches carry manufacturing and expiry dates, and stock reports show what is close to expiry so it can be used or sold first.'],
         ['Is DotOne certified for GMP or 21 CFR Part 11?', 'DotOne does not hold such certifications. It keeps dated, user-wise records of receipts, inspections, approvals and batch movement that your quality team can use for audits. Your validation needs should be discussed with us before you start.'],

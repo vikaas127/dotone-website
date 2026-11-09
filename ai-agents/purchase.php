@@ -2,11 +2,11 @@
 $page = [
     'path' => '/ai-agents/purchase',
     'slug' => 'purchase',
-    'title' => 'AI Procurement Tool: Purchase AI Agent | DotOne',
+    'title' => 'Purchase AI Agent for Procurement | DotOne',
     'description' => 'A purchase AI agent in DotOne ERP that compares vendor quotes, flags price changes and late deliveries, and drafts purchase orders from approved indents.',
     'breadcrumbs' => [['AI Agents', '/ai-agents'], ['Purchase AI Agent', '/ai-agents/purchase']],
     'h1' => 'Purchase AI Agent',
-    'intro' => 'An AI procurement tool that works on your indents, vendor quotes, purchase orders and goods receipts in DotOne. Ask which vendor gives the best overall deal, which rates have gone up or which deliveries are late. The agent reads the data, points out what needs a decision and drafts the purchase order for your team to approve.',
+    'intro' => 'A procurement assistant that works on your indents, vendor quotes, purchase orders and goods receipts in DotOne. Ask which vendor gives the best overall deal, which rates have gone up or which deliveries are late. The agent reads the data, points out what needs a decision and drafts the purchase order for your team to approve.',
     'demo' => [
         'question' => 'Which vendor should we buy PVC Resin from for the approved indent this week?',
         'steps' => [
@@ -57,6 +57,7 @@ $page = [
         'Builds purchase reports on request: spend by vendor, item or period',
     ],
     'faq' => [
+        ['Is this AI procurement software?', 'Yes. The Purchase AI Agent is DotOne\'s AI procurement tool. See [AI procurement software](/ai-procurement-software) for how it fits your buying process.'],
         ['What does the Purchase AI Agent do in DotOne?', 'It works on your purchase data: indents, quotes, purchase orders and goods receipts. You ask a question, such as which vendor to buy from or which deliveries are late, and the agent reads the records, picks out what needs a decision and prepares the comparison, reminder or draft PO.'],
         ['Can the agent send purchase orders to vendors on its own?', 'Only if you allow it. The agent reads DotOne data and prepares things. It works within the roles, permissions and approval rules you set, and anything that changes data, such as creating or sending a PO, can be set to need a person\'s approval.'],
         ['How does it judge which vendor is best?', 'It puts price, payment terms and delivery date side by side, along with how each vendor has delivered on past orders. It then suggests a vendor and shows why, so your buyer can agree or choose differently.'],

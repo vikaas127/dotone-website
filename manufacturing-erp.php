@@ -1,8 +1,8 @@
 <?php
 $page = [
     'path' => '/manufacturing-erp',
-    'title' => 'Manufacturing ERP: Low-Cost Software for India | DotOne',
-    'description' => 'Low-cost manufacturing software for Indian MSMEs: BOM, planning, job cards, inventory, quality and dispatch. Paid plans from ₹15,000 a month.',
+    'title' => 'Manufacturing ERP Software for Indian Manufacturers | DotOne',
+    'description' => 'Manufacturing ERP for Indian factories: BOM, production planning, job cards, inventory, quality and dispatch, with AI agents that flag delays.',
     'breadcrumbs' => [['Modules', '/modules'], ['Manufacturing ERP', '/manufacturing-erp']],
     'eyebrow' => 'ERP for Factories',
     'h1' => 'Manufacturing ERP Software',
@@ -43,6 +43,7 @@ $page = [
         'What was OEE on each machine yesterday?',
     ],
     'faq' => [
+        ['Is there a low-cost option for small factories?', 'Yes. DotOne is priced monthly in INR with no server costs. See [low-cost manufacturing software](/low-cost-manufacturing-software).'],
         ['What is manufacturing ERP?', 'A central system that helps a factory plan, run and monitor production. Planning, inventory, quality, purchase, sales and finance all work from the same records. Read our guide: [What is ERP?](/guides/what-is-erp)'],
         ['Does DotOne do production scheduling?', 'Yes. Sales orders become the production plan, material is checked and reserved against the BOM for each work order, and the material issue queue is ordered by how urgent each job is. Job cards then show progress on the floor. See [Production Management](/production-management).'],
         ['Is DotOne an MES as well as an ERP?', 'It covers the MES functions most growing plants need: job cards and work in progress, machine status, downtime reasons, output by shift and operator, and OEE. Read [what is MES](/guides/what-is-mes) for how MES and ERP differ.'],

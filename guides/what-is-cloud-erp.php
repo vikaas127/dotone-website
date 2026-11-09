@@ -64,6 +64,7 @@ $page = [
 '],
     ],
     'faq' => [
+        ['Is DotOne a cloud ERP?', 'Yes. DotOne is a cloud ERP platform for Indian businesses. See [cloud ERP platform](/cloud-erp).'],
         ['What is cloud ERP?', 'ERP software hosted by the vendor and used through a browser or mobile app, paid for as a subscription, instead of being installed on your own server.'],
         ['What is SaaS ERP?', 'ERP delivered as a subscription service: the vendor runs one up-to-date version for all customers, each with their own secure data, and handles hosting, backups and upgrades.'],
         ['What is the difference between cloud ERP and on-premise ERP?', 'Cloud ERP runs on the vendor\'s servers, with updates, backups and security handled for you. On-premise ERP runs on your own server, which you buy, maintain and update.'],

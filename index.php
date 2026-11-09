@@ -1248,9 +1248,10 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                     <h3 class="text-lg font-display font-semibold text-text-primary mb-4">ERP software</h3>
                     <ul class="space-y-2.5 text-sm">
                         <li><a href="/ai-powered-erp" class="text-text-secondary hover:text-primary-600 transition-colors">AI ERP software</a></li>
+                        <li><a href="/cloud-erp" class="text-text-secondary hover:text-primary-600 transition-colors">Cloud ERP platform</a></li>
                         <li><a href="/erp-software" class="text-text-secondary hover:text-primary-600 transition-colors">Enterprise resource planning systems</a></li>
                         <li><a href="/erp-for-small-business" class="text-text-secondary hover:text-primary-600 transition-colors">ERP software for SMEs</a></li>
-                        <li><a href="/manufacturing-erp" class="text-text-secondary hover:text-primary-600 transition-colors">Low-cost manufacturing ERP for India</a></li>
+                        <li><a href="/business-automation-software" class="text-text-secondary hover:text-primary-600 transition-colors">Integrated business automation software</a></li>
                     </ul>
                 </div>
                 <div class="card p-6">
@@ -1259,26 +1260,28 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                         <li><a href="/pricing" class="text-text-secondary hover:text-primary-600 transition-colors">Cloud ERP pricing</a></li>
                         <li><a href="/integrations/tally" class="text-text-secondary hover:text-primary-600 transition-colors">ERP with Tally integration</a></li>
                         <li><a href="/compare/sap-alternative" class="text-text-secondary hover:text-primary-600 transition-colors">SAP alternative for manufacturing</a></li>
+                        <li><a href="/low-cost-manufacturing-software" class="text-text-secondary hover:text-primary-600 transition-colors">Low-cost manufacturing software for India</a></li>
                         <li><a href="/guides/best-erp-software-india" class="text-text-secondary hover:text-primary-600 transition-colors">Best ERP software for small business: how to compare</a></li>
                     </ul>
                 </div>
                 <div class="card p-6">
                     <h3 class="text-lg font-display font-semibold text-text-primary mb-4">Features buyers ask about</h3>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="/industries/pharma" class="text-text-secondary hover:text-primary-600 transition-colors">Batch tracking software for pharma</a></li>
-                        <li><a href="/production-management" class="text-text-secondary hover:text-primary-600 transition-colors">Multi-level BOM and OEE machine monitoring</a></li>
-                        <li><a href="/inventory-management" class="text-text-secondary hover:text-primary-600 transition-colors">Expiry date inventory tracking</a></li>
-                        <li><a href="/warehouse-management" class="text-text-secondary hover:text-primary-600 transition-colors">QR code warehouse inventory system</a></li>
+                        <li><a href="/batch-tracking-software" class="text-text-secondary hover:text-primary-600 transition-colors">Batch tracking software</a></li>
+                        <li><a href="/multi-level-bom-software" class="text-text-secondary hover:text-primary-600 transition-colors">Multi-level BOM software</a></li>
+                        <li><a href="/oee-software" class="text-text-secondary hover:text-primary-600 transition-colors">OEE machine monitoring software</a></li>
+                        <li><a href="/expiry-date-tracking-software" class="text-text-secondary hover:text-primary-600 transition-colors">Expiry date inventory tracking</a></li>
+                        <li><a href="/qr-code-inventory-system" class="text-text-secondary hover:text-primary-600 transition-colors">QR code warehouse inventory system</a></li>
                     </ul>
                 </div>
                 <div class="card p-6">
                     <h3 class="text-lg font-display font-semibold text-text-primary mb-4">AI that does the work</h3>
                     <ul class="space-y-2.5 text-sm">
-                        <li><a href="/ai-agents/inventory" class="text-text-secondary hover:text-primary-600 transition-colors">Automated inventory forecasting with AI</a></li>
-                        <li><a href="/ai-agents/purchase" class="text-text-secondary hover:text-primary-600 transition-colors">AI procurement tools</a></li>
-                        <li><a href="/workflow-automation" class="text-text-secondary hover:text-primary-600 transition-colors">Automated purchase order approvals</a></li>
-                        <li><a href="/ai-agents/sales" class="text-text-secondary hover:text-primary-600 transition-colors">AI-driven sales pipeline automation</a></li>
-                        <li><a href="/solutions/inventory-automation" class="text-text-secondary hover:text-primary-600 transition-colors">Predictive supply chain planning</a></li>
+                        <li><a href="/ai-inventory-forecasting" class="text-text-secondary hover:text-primary-600 transition-colors">Automated inventory forecasting with AI</a></li>
+                        <li><a href="/ai-procurement-software" class="text-text-secondary hover:text-primary-600 transition-colors">AI procurement software</a></li>
+                        <li><a href="/purchase-order-approval-software" class="text-text-secondary hover:text-primary-600 transition-colors">Automated purchase order approvals</a></li>
+                        <li><a href="/sales-pipeline-automation" class="text-text-secondary hover:text-primary-600 transition-colors">AI-driven sales pipeline automation</a></li>
+                        <li><a href="/predictive-supply-chain-software" class="text-text-secondary hover:text-primary-600 transition-colors">Predictive supply chain software</a></li>
                     </ul>
                 </div>
             </div>

@@ -9,8 +9,8 @@ $cards[] = ['/ai-agents/inventory', AGENTS['inventory']['name'], AGENTS['invento
 $cards[] = ['/manufacturing-erp', 'Manufacturing ERP', 'factory', 'Production, inventory, quality, purchase and sales for the whole plant.'];
 $page = [
     'path' => '/solutions/inventory-automation',
-    'title' => 'Inventory Automation and Predictive Supply Chain | DotOne',
-    'description' => 'Predictive supply chain software: demand forecasts and stock run-out dates feed purchasing, while rules and approvals remove manual inventory steps.',
+    'title' => 'Inventory automation software | DotOne',
+    'description' => 'Automate inventory work in DotOne: rules, approvals and AI agents remove the manual steps between your ERP modules.',
     'eyebrow' => 'Solutions',
     'h1' => 'Inventory automation software',
     'intro' => 'Automate inventory tracking across raw material, WIP and finished goods. Stock, consumption and reorders update from the work itself, without manual entries or spreadsheets, and you still approve what gets bought.',
@@ -32,6 +32,7 @@ $page = [
         ]],
     ],
     'faq' => [
+        ['Can DotOne predict supply problems?', 'Yes. Demand forecasts, stock run-out dates and supplier lead times are combined to flag shortages early. See [predictive supply chain software](/predictive-supply-chain-software).'],
         ['What is inventory automation?', 'Using software, scanning and ERP links to track material movement, stock levels, consumption and replenishment automatically, instead of through manual entries and spreadsheets.'],
         ['Will DotOne buy stock without our approval?', 'No. When an item falls below its reorder level, an indent is drafted and sent to the right person. Only approved indents become RFQs and purchase orders.'],
         ['Is material consumption recorded automatically?', 'Yes. Consumption is posted from production, and finished goods stock updates from production and dispatch.'],

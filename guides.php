@@ -1,34 +1,21 @@
 <?php
-// Server-rendered list of every guide, so search engines and no-JS visitors see crawlable links.
-// js/guides-page.js re-renders this grid with search and category filters once it loads.
-$guideCards = [];
-foreach (glob(__DIR__ . '/guides/*.php') as $file) {
-    $src = file_get_contents($file);
-    if (stripos($src, 'noindex') !== false) continue;
-    // Template guides set $page['title']; static ones use <title> and a meta description
-    if (!preg_match("/'title'\s*=>\s*'((?:[^'\\\\]|\\\\.)*)'/", $src, $t) && !preg_match('#<title>([^<]+)</title>#', $src, $t)) continue;
-    preg_match("/'description'\s*=>\s*'((?:[^'\\\\]|\\\\.)*)'/", $src, $d) || preg_match('#<meta name="description" content="([^"]*)"#', $src, $d);
-    $guideCards[] = [
-        'url' => '/guides/' . basename($file, '.php'),
-        'title' => preg_replace('/\s*\|\s*DotOne$/', '', stripslashes($t[1])),
-        'excerpt' => isset($d[1]) ? stripslashes($d[1]) : '',
-    ];
-}
-usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title']); });
+require_once __DIR__ . '/includes/data/guides.php';
+$guideCategories = array_column(GUIDES_CATEGORIES, 'label', 'id');
+$h = fn($v) => htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
+    <meta name="description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <title>ERP, Inventory, HR and Finance Guides | DotOne</title>
     <link rel="canonical" href="https://dotone.in/guides">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
     <meta property="og:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
-    <meta property="og:description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
+    <meta property="og:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta property="og:url" content="https://dotone.in/guides">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -37,11 +24,11 @@ usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title'
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
-    <meta name="twitter:description" content="ERP, inventory, HR and finance guides for Indian businesses: choosing ERP, implementation, BOM setup, payroll, GST-ready accounting and more.">
+    <meta name="twitter:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"></noscript>
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
@@ -67,7 +54,7 @@ usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title'
                 <svg class="guides-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 <input type="search" id="guides-search" class="guides-search-input" placeholder="Search articles…" autocomplete="off">
             </label>
-            <p id="guides-count" class="guides-count" aria-live="polite"></p>
+            <p id="guides-count" class="guides-count" aria-live="polite"><?= count(GUIDES_ARTICLES) ?> articles</p>
         </div>
         <div id="guides-filters" class="guides-filters" role="tablist" aria-label="Filter by category"></div>
     </div>
@@ -75,12 +62,20 @@ usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title'
 
 <section class="section">
     <div class="container-custom max-w-6xl mx-auto">
+        <?php // Rendered on the server so every guide is linked in the page HTML; js/guides-page.js re-renders the same cards for search and filters ?>
         <div id="guides-grid" class="guides-grid">
-<?php foreach ($guideCards as $g): ?>
-            <a href="<?= htmlspecialchars($g['url']) ?>" class="guides-card card p-6 md:p-7 flex flex-col h-full hover:border-primary-500/30 transition-colors">
-                <h2 class="text-lg font-display font-semibold text-text-primary mb-3 leading-snug"><?= htmlspecialchars($g['title']) ?></h2>
-                <p class="text-sm text-text-secondary leading-relaxed flex-grow mb-4"><?= htmlspecialchars($g['excerpt']) ?></p>
-                <span class="guides-card-footer"><span class="guides-card-read">Read article →</span></span>
+<?php foreach (GUIDES_ARTICLES as $a): ?>
+            <a href="<?= $h($a['url']) ?>" class="guides-card card p-6 md:p-7 flex flex-col h-full hover:border-primary-500/30 transition-colors">
+                <div class="flex items-center justify-between gap-3 mb-4">
+                    <span class="guides-card-category"><?= $h($guideCategories[$a['category']] ?? $a['category']) ?></span>
+                    <span class="guides-card-meta"><?= $h($a['readTime']) ?></span>
+                </div>
+                <h2 class="text-lg font-display font-semibold text-text-primary mb-3 leading-snug"><?= $h($a['title']) ?></h2>
+                <p class="text-sm text-text-secondary leading-relaxed flex-grow mb-4"><?= $h($a['excerpt']) ?></p>
+                <span class="guides-card-footer">
+                    <time datetime="<?= $h($a['date']) ?>"><?= $h(date('j M Y', strtotime($a['date']))) ?></time>
+                    <span class="guides-card-read">Read article →</span>
+                </span>
             </a>
 <?php endforeach; ?>
         </div>
@@ -96,7 +91,7 @@ usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title'
         <h2 class="text-2xl font-display font-bold">Need hands-on help?</h2>
         <p class="text-text-secondary">Our support team and documentation cover setup, integrations, and rollout for every DotOne module.</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/support" class="btn-primary">Support Centre</a>
+            <a href="mailto:support@techdotbit.com?subject=DotOne%20support" class="btn-primary">Email Support</a>
             <a href="/documentation" class="btn-secondary">Technical Documentation</a>
         </div>
     </div>
@@ -104,7 +99,10 @@ usort($guideCards, function ($a, $b) { return strcasecmp($a['title'], $b['title'
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/guides-articles.js?v=20261019" defer></script>
+<script>
+window.GUIDES_ARTICLES = <?= json_encode(GUIDES_ARTICLES, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+window.GUIDES_CATEGORIES = <?= json_encode(GUIDES_CATEGORIES, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+</script>
 <script src="/js/guides-page.js?v=20261019" defer></script>
 </body>
 </html>

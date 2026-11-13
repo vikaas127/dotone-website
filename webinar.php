@@ -23,9 +23,9 @@
     <meta name="twitter:title" content="DotOne Webinar: Automate Your Factory with ERP">
     <meta name="twitter:description" content="Join a free live DotOne webinar on running production, inventory and dispatch on one ERP, with AI agents and a live Q&amp;A for manufacturers.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"></noscript>
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
 

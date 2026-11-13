@@ -54,7 +54,7 @@ return [
         'tagline' => 'For small teams starting with leads, customers and support.', 'base' => null,
         'price' => 0,
         'modules' => ['crm', 'support'],
-        'cta' => ['Start Free', 'https://techdotbit.in/authentication/register'],
+        'cta' => ['Start Free', 'https://techdotbit.in/register'],
         'limits' => ['staff' => null, 'customers' => U, 'contacts' => null, 'contracts' => null, 'invoices' => null, 'proforma' => null, 'creditnotes' => null, 'quotations' => null, 'projects' => null, 'tasks' => null, 'tickets' => U, 'leads' => U, 'items' => null, 'storage' => '2 GB'],
     ],
     [

@@ -66,32 +66,94 @@ function form_env($key, $default = '')
 // Optional .env lines: LEADS_EMAIL (who receives enquiries), SMTP_HOST (default smtp.hostinger.com), SMTP_PORT (default 465).
 function form_notify($subject, array $fields, $replyTo = '')
 {
+    $fields = array_filter($fields, function ($v) { return $v !== '' && $v !== null; });
     $lines = [];
-    foreach ($fields as $label => $value) {
-        if ($value === '' || $value === null) continue;
-        $lines[] = $label . ': ' . $value;
-    }
+    foreach ($fields as $label => $value) $lines[] = $label . ': ' . $value;
     $body = implode("\n", $lines) . "\n";
     $to = form_env('LEADS_EMAIL', 'sales@techdotbit.com');
     $subject = trim(preg_replace('/[\r\n]+/', ' ', (string) $subject));
     if ($replyTo !== '' && !filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $replyTo = '';
+    $html = form_email_html($subject, $fields, $replyTo);
 
     $user = form_env('SMTP_USER');
     $pass = form_env('SMTP_PASS');
     if ($user !== '' && $pass !== '') {
-        $error = form_smtp_send($user, $pass, $to, $subject, $body, $replyTo);
+        $error = form_smtp_send($user, $pass, $to, $subject, $body, $replyTo, $html);
         if ($error === '') return true;
         error_log('Form email: SMTP failed: ' . $error);
     }
 
     $from = $user !== '' ? $user : 'no-reply@dotone.in';
-    $headers = ['From: DotOne website <' . $from . '>', 'Content-Type: text/plain; charset=UTF-8'];
+    [$contentType, $content] = form_email_mime($body, $html);
+    $headers = ['From: DotOne website <' . $from . '>', 'MIME-Version: 1.0', 'Content-Type: ' . $contentType];
     if ($replyTo !== '') $headers[] = 'Reply-To: ' . $replyTo;
-    return @mail($to, $subject, $body, implode("\r\n", $headers), '-f' . $from);
+    return @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $content, implode("\r\n", $headers), '-f' . $from);
+}
+
+// The enquiry as an HTML email: a header, the contact details with reply and call buttons, then the rest as a table.
+// Built with tables and inline styles, which is what mail apps render reliably.
+function form_email_html($title, array $fields, $replyTo = '')
+{
+    $h = function ($v) { return htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8'); };
+    $name = $fields['Name'] ?? '';
+    $company = $fields['Company'] ?? '';
+    $phone = $fields['Phone'] ?? '';
+    $tel = preg_replace('/[^0-9+]/', '', (string) $phone);
+
+    $rows = '';
+    foreach ($fields as $label => $value) {
+        if ($label === 'Name' || $label === 'Company') continue;
+        if ($label === 'Email') $cell = '<a href="mailto:' . $h($value) . '" style="color:#0077c2;text-decoration:none;">' . $h($value) . '</a>';
+        elseif ($label === 'Phone' && $tel !== '') $cell = '<a href="tel:' . $h($tel) . '" style="color:#0077c2;text-decoration:none;">' . $h($value) . '</a>';
+        else $cell = nl2br($h($value));
+        $rows .= '<tr>'
+            . '<td style="padding:10px 16px 10px 0;border-top:1px solid #e8edf3;font-size:13px;color:#64748b;vertical-align:top;white-space:nowrap;">' . $h($label) . '</td>'
+            . '<td style="padding:10px 0;border-top:1px solid #e8edf3;font-size:14px;color:#0f172a;line-height:1.5;">' . $cell . '</td>'
+            . '</tr>';
+    }
+
+    $button = function ($href, $text, $primary) use ($h) {
+        $style = $primary ? 'background:#0096ee;color:#ffffff;border:1px solid #0096ee;' : 'background:#ffffff;color:#0077c2;border:1px solid #b9dcf5;';
+        return '<a href="' . $h($href) . '" style="display:inline-block;padding:10px 18px;margin:0 8px 8px 0;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;' . $style . '">' . $h($text) . '</a>';
+    };
+    $buttons = '';
+    if ($replyTo !== '') $buttons .= $button('mailto:' . $replyTo . '?subject=' . rawurlencode('Your DotOne enquiry'), 'Reply by email', true);
+    if ($tel !== '') $buttons .= $button('tel:' . $tel, 'Call ' . $phone, false);
+
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>' . $h($title) . '</title></head>'
+        . '<body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Arial,sans-serif;">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;"><tr><td align="center" style="padding:24px 12px;">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;">'
+        . '<tr><td style="background:#0096ee;padding:20px 28px;color:#ffffff;">'
+        . '<div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;opacity:.9;">DotOne website</div>'
+        . '<div style="font-size:20px;font-weight:700;margin-top:4px;line-height:1.3;">' . $h($title) . '</div>'
+        . '</td></tr>'
+        . '<tr><td style="padding:24px 28px 8px;">'
+        . ($name !== '' ? '<div style="font-size:18px;font-weight:700;color:#0f172a;">' . $h($name) . '</div>' : '')
+        . ($company !== '' ? '<div style="font-size:14px;color:#64748b;margin-top:2px;">' . $h($company) . '</div>' : '')
+        . ($buttons !== '' ? '<div style="margin-top:16px;">' . $buttons . '</div>' : '')
+        . '</td></tr>'
+        . '<tr><td style="padding:8px 28px 24px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">' . $rows . '</table></td></tr>'
+        . '<tr><td style="padding:16px 28px;background:#f8fafc;border-top:1px solid #e8edf3;font-size:12px;color:#64748b;line-height:1.5;">'
+        . 'Sent from a form on dotone.in on ' . $h((new DateTime('now', new DateTimeZone('Asia/Kolkata')))->format('j M Y, g:i a')) . ' IST. Replying to this email goes straight to the person who filled in the form.'
+        . '</td></tr>'
+        . '</table></td></tr></table></body></html>';
+}
+
+// Body and Content-Type for a message with a plain-text part and, when given, an HTML part
+function form_email_mime($text, $html = '')
+{
+    $encode = function ($part) { return chunk_split(base64_encode($part), 76, "\r\n"); };
+    if ($html === '') return ['text/plain; charset=UTF-8' . "\r\n" . 'Content-Transfer-Encoding: base64', $encode($text)];
+    $boundary = 'dotone-' . bin2hex(random_bytes(12));
+    $content = '--' . $boundary . "\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n" . $encode($text)
+        . '--' . $boundary . "\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n" . $encode($html)
+        . '--' . $boundary . "--\r\n";
+    return ['multipart/alternative; boundary="' . $boundary . '"', $content];
 }
 
 // Minimal SMTP client (implicit TLS on 465, STARTTLS otherwise). Returns '' on success or a short error.
-function form_smtp_send($user, $pass, $to, $subject, $body, $replyTo = '')
+function form_smtp_send($user, $pass, $to, $subject, $body, $replyTo = '', $html = '')
 {
     $host = form_env('SMTP_HOST', 'smtp.hostinger.com');
     $port = (int) form_env('SMTP_PORT', '465');
@@ -131,6 +193,7 @@ function form_smtp_send($user, $pass, $to, $subject, $body, $replyTo = '')
     if ($e = $cmd('RCPT TO:<' . $to . '>', 250)) return $fail('RCPT TO', $e);
     if ($e = $cmd('DATA', 354)) return $fail('DATA', $e);
 
+    [$contentType, $content] = form_email_mime($body, $html);
     $headers = [
         'Date: ' . date('r'),
         'From: DotOne website <' . $user . '>',
@@ -138,11 +201,10 @@ function form_smtp_send($user, $pass, $to, $subject, $body, $replyTo = '')
         'Subject: =?UTF-8?B?' . base64_encode($subject) . '?=',
         'Message-ID: <' . bin2hex(random_bytes(12)) . '@dotone.in>',
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
-        'Content-Transfer-Encoding: base64',
+        'Content-Type: ' . $contentType,
     ];
     if ($replyTo !== '') $headers[] = 'Reply-To: <' . $replyTo . '>';
-    $message = implode("\r\n", $headers) . "\r\n\r\n" . chunk_split(base64_encode($body), 76, "\r\n");
+    $message = implode("\r\n", $headers) . "\r\n\r\n" . $content;
     if ($e = $cmd(rtrim($message, "\r\n") . "\r\n.", 250)) return $fail('message', $e);
     $cmd('QUIT', 221);
     fclose($fp);

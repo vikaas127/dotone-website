@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/data/catalog.php'; ?>
+<?php require_once __DIR__ . '/data/catalog.php'; require_once __DIR__ . '/data/org.php'; ?>
 <?php
 // Structured data for search engines on every page: organisation, website and a breadcrumb trail from the URL.
 (function () {
@@ -6,9 +6,7 @@
     $base = 'https://dotone.in';
     $graph = [];
     if ($path !== '/') {
-        $graph[] = ['@type' => 'Organization', '@id' => $base . '/#organization', 'name' => 'DotOne', 'url' => $base . '/', 'logo' => $base . '/assets/dotone-logo-blue.png',
-            'parentOrganization' => ['@type' => 'Organization', 'name' => 'TechDotBit Pvt Ltd', 'url' => 'https://techdotbit.com'],
-            'sameAs' => ['https://www.linkedin.com/products/techdotbit-dotone-business-suite/']];
+        $graph[] = org_schema();
         $graph[] = ['@type' => 'WebSite', '@id' => $base . '/#website', 'url' => $base . '/', 'name' => 'DotOne', 'publisher' => ['@id' => $base . '/#organization'], 'inLanguage' => 'en-IN'];
         if (empty($GLOBALS['dotone_breadcrumbs_done'])) {
             $special = ['ai' => 'AI', 'crm' => 'CRM', 'hrms' => 'HRMS', 'erp' => 'ERP', 'api' => 'API', 'hr' => 'HR', 'oil-gas' => 'Oil and Gas', 'what-is-erp' => 'What Is ERP', 'bom-setup' => 'BOM Setup', 'vision-ai' => 'Vision AI', 'ai-agents' => 'AI Agents', 'ai-powered-erp' => 'AI-Powered ERP', 'manufacturing-erp' => 'Manufacturing ERP', 'erp-software' => 'ERP Software', 'generative-ai' => 'Generative AI', 'ai-automation' => 'AI Automation', 'mobile-erp' => 'Mobile ERP'];
@@ -106,10 +104,10 @@ foreach ($menuCols as $colTitle => $links): ?>
                                     </div>
                                     <ul class="mega-menu-sublinks">
                                         <li><a href="/demo">Demo Centre</a></li>
-                                        <li><a href="mailto:support@techdotbit.com?subject=DotOne%20support">Support Centre</a></li>
+                                        <li><a href="/support">Support Centre</a></li>
                                         <li><a href="/api-reference">API Reference</a></li>
-                                        <li><a href="/guides/bom-setup">BOM Setup Guide</a></li>
-                                        <li><a href="/integrations/tally">Tally Connector Guide</a></li>
+                                        <li><a href="/documentation">Documentation</a></li>
+                                        <li><a href="/webinar">Webinars</a></li>
                                     </ul>
                                 </div>
                                 <div class="mega-menu-col mega-menu-col--stack">
@@ -123,9 +121,9 @@ foreach ($menuCols as $colTitle => $links): ?>
                                     </a>
                                 </div>
                                 <div class="mega-menu-col mega-menu-col--stack">
-                                    <a href="/demo" class="mega-menu-feature-link">
+                                    <a href="/walkthrough" class="mega-menu-feature-link">
                                         <span class="mega-menu-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></span>
-                                        <span class="mega-menu-feature-title">&lsquo;How to&rsquo; Videos</span>
+                                        <span class="mega-menu-feature-title">Product Walkthrough</span>
                                     </a>
                                     <a href="/case-studies" class="mega-menu-feature-link">
                                         <span class="mega-menu-icon"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></span>
@@ -180,6 +178,7 @@ foreach ($menuCols as $colTitle => $links): ?>
                     <a href="/webinar" class="block px-3 py-2 text-xs rounded-lg transition-colors">Webinars</a>
                     <a href="/case-studies" class="block px-3 py-2 text-xs rounded-lg transition-colors">Case Studies</a>
                     <a href="/api-reference" class="block px-3 py-2 text-xs rounded-lg transition-colors">API Reference</a>
+                    <a href="/support" class="block px-3 py-2 text-xs rounded-lg transition-colors">Support Centre</a>
                 </div>
                 <a href="/security" class="px-4 py-3 text-sm font-medium rounded-lg transition-colors">Security</a>
                 <a href="https://techdotbit.in/login" class="px-4 py-3 text-sm font-medium rounded-lg transition-colors" rel="noopener">Login</a>

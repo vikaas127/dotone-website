@@ -32,6 +32,7 @@ $page = [
         ]],
     ],
     'faq' => [
+        ['Can DotOne predict supply problems?', 'Yes. Demand forecasts, stock run-out dates and supplier lead times are combined to flag shortages early. See [predictive supply chain software](/predictive-supply-chain-software).'],
         ['What is inventory automation?', 'Using software, scanning and ERP links to track material movement, stock levels, consumption and replenishment automatically, instead of through manual entries and spreadsheets.'],
         ['Will DotOne buy stock without our approval?', 'No. When an item falls below its reorder level, an indent is drafted and sent to the right person. Only approved indents become RFQs and purchase orders.'],
         ['Is material consumption recorded automatically?', 'Yes. Consumption is posted from production, and finished goods stock updates from production and dispatch.'],

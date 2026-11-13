@@ -85,7 +85,7 @@ $pnRail = [['home', 'Home'], ['trend', 'Sales'], ['cart', 'Purchase'], ['box', '
 
         <!-- Right glass cards -->
         <div class="pn-side pn-side--r1" aria-hidden="true">
-            <span class="pn-side-title">Stock adjustments</span>
+            <span class="pn-side-title">Top stock adjustment reasons</span>
 <?php foreach ([['Damaged in store', '25.5%'], ['Count variance', '19.4%'], ['Internal use', '15.2%'], ['Revaluation', '14.5%']] as $i => [$l, $v]): ?>
             <div class="pn-side-row" style="--i: <?= $i ?>"><span><i></i><?= $l ?></span><b><?= $v ?></b></div>
 <?php endforeach; ?>

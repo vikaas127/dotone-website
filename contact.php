@@ -1,13 +1,14 @@
+<?php require_once __DIR__ . '/includes/data/org.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
+    <meta name="description" content="Talk to DotOne sales, support or partnerships. Email us or send your requirements and our team will respond within one business day.">
     <title>Contact DotOne | Sales, Support and Partnerships</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"></noscript>
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
       <link rel="canonical" href="https://dotone.in/contact">
@@ -15,7 +16,7 @@
       <meta property="og:type" content="website">
       <meta property="og:site_name" content="DotOne">
       <meta property="og:title" content="Contact DotOne | Sales, Support and Partnerships">
-      <meta property="og:description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
+      <meta property="og:description" content="Talk to DotOne sales, support or partnerships. Email us or send your requirements and our team will respond within one business day.">
       <meta property="og:url" content="https://dotone.in/contact">
       <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
       <meta property="og:image:width" content="1200">
@@ -24,7 +25,7 @@
       <meta property="og:locale" content="en_IN">
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:title" content="Contact DotOne | Sales, Support and Partnerships">
-      <meta name="twitter:description" content="Talk to DotOne sales, support or partnerships. Call, email or send your requirements and our team will respond within one business day.">
+      <meta name="twitter:description" content="Talk to DotOne sales, support or partnerships. Email us or send your requirements and our team will respond within one business day.">
       <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
   </head>
 <body class="bg-background">
@@ -295,7 +296,7 @@
                     <div id="successMessage" class="hidden text-center space-y-6">
                         <h2 class="text-2xl md:text-3xl font-display font-semibold">Thank you for reaching out</h2>
                         <p class="text-lg text-text-secondary max-w-xl mx-auto">
-                            We've received your enquiry and will be in touch within 24 hours to schedule your consultation.
+                            We've received your enquiry and will be in touch within one business day to schedule your consultation.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3 justify-center">
                             <a href="/" class="btn-ghost-lg">Return to homepage</a>
@@ -326,6 +327,17 @@
                     <span class="text-sm font-medium text-primary-600">support@techdotbit.com</span>
                 </a>
             </div>
+<?php if (org_address_line() !== '' || ORG['phone'] !== ''): ?>
+            <div class="card p-6 max-w-3xl mt-6">
+                <h3 class="text-lg font-display font-semibold mb-2">Office</h3>
+                <p class="text-text-secondary text-[0.95rem] leading-relaxed">
+                    <?= htmlspecialchars(ORG['legal_name']) ?><?php if (org_address_line() !== ''): ?><br><?= htmlspecialchars(org_address_line()) ?><?php endif; ?>
+<?php if (ORG['phone'] !== ''): ?>
+                    <br><a href="tel:<?= htmlspecialchars(preg_replace('/[^+0-9]/', '', ORG['phone'])) ?>" class="text-primary-600 font-medium"><?= htmlspecialchars(ORG['phone']) ?></a>
+<?php endif; ?>
+                </p>
+            </div>
+<?php endif; ?>
         </div>
     </section>
 

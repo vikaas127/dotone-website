@@ -5,6 +5,7 @@
     <title>Play Games | DotOne Break Room</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Take a quick break at the DotOne Break Room: play Memory Match, Higher or Lower, Blackjack and Tic-Tac-Toe right in your browser.">
+    <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://dotone.in/games">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
@@ -19,7 +20,7 @@
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"></noscript>
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
     <style>

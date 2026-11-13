@@ -43,6 +43,8 @@ $page = [
         'Which job cards are running behind plan?',
     ],
     'faq' => [
+        ['Does DotOne support multi-level BOMs?', 'Yes. Sub-assemblies, formulas and recipes are held as layered BOMs. See [multi-level BOM software](/multi-level-bom-software).'],
+        ['Can we monitor OEE by machine?', 'Yes. Availability, performance, quality and OEE are tracked by machine, line and plant. See [OEE machine monitoring](/oee-software).'],
         ['How does DotOne calculate OEE?', 'OEE is calculated from availability, performance and quality for each machine and line, using the output and downtime recorded on the shopfloor.'],
         ['Can DotOne connect to our machines?', 'Yes. Machines, PLCs and IoT sensors can be connected so output and machine status are captured without manual entry.'],
         ['Does it work for more than one plant?', 'Yes. You can start with a single plant and extend monitoring to several factories, with reports for each site and the whole business.'],

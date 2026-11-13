@@ -43,6 +43,7 @@ $page = [
         'Who has the most pending tasks this week?',
     ],
     'faq' => [
+        ['Can purchase order approvals be automated?', 'Yes. POs are routed to the approver set for their amount, with escalations. See [automated purchase order approvals](/purchase-order-approval-software) and [business automation software](/business-automation-software).'],
         ['What is an approval workflow?', 'The route a document takes before it is final: who must approve a purchase order, a leave request or a payroll run, and in what order. In DotOne, approvers are set per module and every pending approval lands in one inbox, where stuck approvals can be reassigned.'],
         ['What kind of workflows can we automate?', 'Common ones are purchase and quotation approvals, low-stock indents, alerts on late orders or failed checks, and hand-offs from sales to stores, production and accounts.'],
         ['Do we need to write code?', 'No. Workflows are set up as rules on documents and roles. Our onboarding team helps you set up the first ones.'],

@@ -43,6 +43,7 @@ $page = [
         'Which warehouse has excess stock of this item?',
     ],
     'faq' => [
+        ['Can we track expiry dates?', 'Yes. Batches carry expiry or best-before dates, stock is issued first-expiry-first-out, and near-expiry stock is reported. See [expiry date tracking](/expiry-date-tracking-software) and [batch tracking](/batch-tracking-software).'],
         ['Can DotOne manage stock across more than one warehouse?', 'Yes. Stock is tracked separately for each store and warehouse, with transfers between them recorded on both sides.'],
         ['How do low-stock alerts work?', 'You set a reorder level for each item. When available stock falls below it, DotOne alerts the right people and can raise a purchase indent automatically.'],
         ['Does inventory sync with Tally?', 'Yes. Stock and vouchers can sync with Tally Prime or Tally ERP 9 through the DotOne Tally connector.'],

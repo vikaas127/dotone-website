@@ -21,32 +21,6 @@ if (form_rate_limited('contact', 5, 600)) {
     exit;
 }
 
-require_once __DIR__ . '/db.php';
-
-$conn->query("
-CREATE TABLE IF NOT EXISTS contact_submissions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    phone VARCHAR(50),
-    job_title VARCHAR(100),
-    inquiry_type VARCHAR(100),
-    company_name VARCHAR(255),
-    industry VARCHAR(100),
-    company_size VARCHAR(50),
-    number_of_plants INT NULL,
-    number_of_workers INT NULL,
-    current_systems TEXT,
-    solutions TEXT,
-    implementation_timeline VARCHAR(100),
-    budget VARCHAR(100),
-    message TEXT,
-    newsletter TINYINT(1) DEFAULT 0,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
-");
-
 $firstName = form_field('firstName', 100);
 $lastName = form_field('lastName', 100);
 $email = form_field('email', 255);
@@ -83,42 +57,90 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-$stmt = $conn->prepare("
-    INSERT INTO contact_submissions (
-        first_name, last_name, email, phone, job_title, inquiry_type,
-        company_name, industry, company_size, number_of_plants, number_of_workers,
-        current_systems, solutions, implementation_timeline, budget, message, newsletter
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-");
+// The sales team gets every request by email too, so nothing is lost if the database is unavailable
+$mailed = form_notify('New enquiry from ' . $companyName, [
+    'Name' => trim($firstName . ' ' . $lastName), 'Email' => $email, 'Phone' => $phone, 'Company' => $companyName,
+    'Job title' => $jobTitle, 'Enquiry type' => $inquiryType, 'Industry' => $industry, 'Company size' => $companySize,
+    'Interested in' => $solutionsStr, 'Timeline' => $implementationTimeline, 'Budget' => $budget,
+    'Current systems' => $currentSystems, 'Message' => $message,
+], $email);
 
-$stmt->bind_param(
-    'sssssssssiiissssi',
-    $firstName,
-    $lastName,
-    $email,
-    $phone,
-    $jobTitle,
-    $inquiryType,
-    $companyName,
-    $industry,
-    $companySize,
-    $numberOfPlants,
-    $numberOfWorkers,
-    $currentSystems,
-    $solutionsStr,
-    $implementationTimeline,
-    $budget,
-    $message,
-    $newsletter
-);
+$dbFailed = function () use ($mailed) {
+    error_log('Contact form: database unavailable, enquiry ' . ($mailed ? 'sent by email only' : 'NOT saved'));
+    if (!headers_sent()) {
+        header('Content-Type: application/json');
+        http_response_code($mailed ? 200 : 500);
+    }
+    echo json_encode($mailed ? ['success' => true] : ['success' => false, 'error' => 'We could not save your request. Please email sales@techdotbit.com and we will get back to you.']);
+};
+form_db_guard($dbFailed);
 
-if (!$stmt->execute()) {
-    error_log('Contact form insert failed: ' . $stmt->error);
-    http_response_code(500);
-    echo json_encode(['success' => false, 'error' => 'Unable to save your request. Please try again or email sales@techdotbit.com.']);
+try {
+    require_once __DIR__ . '/db.php';
+
+    $conn->query("
+    CREATE TABLE IF NOT EXISTS contact_submissions (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        first_name VARCHAR(100) NOT NULL,
+        last_name VARCHAR(100) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        phone VARCHAR(50),
+        job_title VARCHAR(100),
+        inquiry_type VARCHAR(100),
+        company_name VARCHAR(255),
+        industry VARCHAR(100),
+        company_size VARCHAR(50),
+        number_of_plants INT NULL,
+        number_of_workers INT NULL,
+        current_systems TEXT,
+        solutions TEXT,
+        implementation_timeline VARCHAR(100),
+        budget VARCHAR(100),
+        message TEXT,
+        newsletter TINYINT(1) DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+    ");
+
+    $stmt = $conn->prepare("
+        INSERT INTO contact_submissions (
+            first_name, last_name, email, phone, job_title, inquiry_type,
+            company_name, industry, company_size, number_of_plants, number_of_workers,
+            current_systems, solutions, implementation_timeline, budget, message, newsletter
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ");
+
+    $stmt->bind_param(
+        'sssssssssiiissssi',
+        $firstName,
+        $lastName,
+        $email,
+        $phone,
+        $jobTitle,
+        $inquiryType,
+        $companyName,
+        $industry,
+        $companySize,
+        $numberOfPlants,
+        $numberOfWorkers,
+        $currentSystems,
+        $solutionsStr,
+        $implementationTimeline,
+        $budget,
+        $message,
+        $newsletter
+    );
+
+    if (!$stmt->execute()) {
+        throw new RuntimeException('insert failed: ' . $stmt->error);
+    }
     $stmt->close();
+} catch (Throwable $e) {
+    error_log('Contact form: ' . $e->getMessage());
+    form_db_done();
+    $dbFailed();
     exit;
 }
 
-$stmt->close();
+form_db_done();
 echo json_encode(['success' => true]);

@@ -133,10 +133,7 @@ function form_confirm_visitor($email, $firstName, $kind = 'enquiry')
         . '<a href="' . $h($link[0]) . '" style="display:inline-block;padding:11px 20px;border-radius:8px;background:#0096ee;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;">' . $h($link[1]) . '</a>'
         . '</td></tr>'
         . '<tr><td style="padding:22px 28px 26px;font-size:14px;line-height:1.6;color:#0f172a;">Regards,<br><strong>The DotOne team</strong></td></tr>'
-        . '<tr><td style="padding:16px 28px;background:#f8fafc;border-top:1px solid #e8edf3;font-size:12px;color:#64748b;line-height:1.5;">'
-        . 'DotOne is built by TechDotBit Pvt Ltd &middot; <a href="https://dotone.in" style="color:#64748b;">dotone.in</a><br>'
-        . 'You are receiving this because this address was entered in a form on dotone.in. If that was not you, please ignore this email.'
-        . '</td></tr>'
+        . form_email_footer('DotOne is built by TechDotBit Pvt Ltd. You are receiving this because this address was entered in a form on dotone.in. If that was not you, please ignore this email.')
         . '</table></td></tr></table></body></html>';
 
     return form_send_email($email, $subject, $text, $html, $sales);
@@ -183,9 +180,7 @@ function form_email_html($title, array $fields, $replyTo = '')
         . ($buttons !== '' ? '<div style="margin-top:16px;">' . $buttons . '</div>' : '')
         . '</td></tr>'
         . '<tr><td style="padding:8px 28px 24px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0">' . $rows . '</table></td></tr>'
-        . '<tr><td style="padding:16px 28px;background:#f8fafc;border-top:1px solid #e8edf3;font-size:12px;color:#64748b;line-height:1.5;">'
-        . 'Sent from a form on dotone.in on ' . $h((new DateTime('now', new DateTimeZone('Asia/Kolkata')))->format('j M Y, g:i a')) . ' IST. Replying to this email goes straight to the person who filled in the form.'
-        . '</td></tr>'
+        . form_email_footer('Sent from a form on dotone.in on ' . $h((new DateTime('now', new DateTimeZone('Asia/Kolkata')))->format('j M Y, g:i a')) . ' IST. Replying to this email goes straight to the person who filled in the form.')
         . '</table></td></tr></table></body></html>';
 }
 
@@ -201,6 +196,21 @@ function form_email_header($label, $title)
         . '<tr><td style="padding:22px 28px 0;">'
         . ($label !== '' ? '<div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#0096ee;font-weight:700;">' . $h($label) . '</div>' : '')
         . '<div style="font-size:20px;font-weight:700;margin-top:4px;line-height:1.3;color:#0f172a;">' . $h($title) . '</div>'
+        . '</td></tr>';
+}
+
+// Bottom of both emails, matching the footer on documents downloaded from the site:
+// the DotOne logo on the left, the "Endless clarity" tagline on the right, then a short note.
+function form_email_footer($note)
+{
+    $h = function ($v) { return htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8'); };
+    return '<tr><td style="padding:18px 28px;background:#f8fafc;border-top:1px solid #e8edf3;">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>'
+        . '<td style="vertical-align:middle;"><a href="https://dotone.in" style="text-decoration:none;"><img src="https://dotone.in/assets/dotone-wm-blue-tight.png" width="104" height="24" alt="DotOne" style="display:block;border:0;width:104px;height:24px;"></a></td>'
+        . '<td align="right" style="vertical-align:middle;font-size:13px;color:#0f172a;white-space:nowrap;">'
+        . '<span style="font-weight:600;">Endless clarity</span><span style="color:#94a3b8;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="https://dotone.in" style="color:#0096ee;text-decoration:none;font-weight:600;">dotone.in</a>'
+        . '</td></tr></table>'
+        . '<div style="margin-top:12px;padding-top:12px;border-top:1px solid #e8edf3;font-size:12px;color:#64748b;line-height:1.5;">' . $h($note) . '</div>'
         . '</td></tr>';
 }
 

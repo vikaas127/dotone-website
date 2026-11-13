@@ -102,7 +102,7 @@
             <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">Enterprise customers can request our security questionnaire, DPA and architecture overview.</p>
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href="/contact" class="btn-hero-glow-lg">Contact the security team</a>
-                <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="btn-ghost-lg">Privacy policy</a>
+                <a href="/privacy-policy" class="btn-ghost-lg">Privacy policy</a>
             </div>
             <p class="text-xs text-text-secondary mt-8">DotOne is a product of <a href="https://techdotbit.com" class="text-primary-600 hover:underline" target="_blank" rel="noopener noreferrer">TechDotBit Pvt Ltd.</a></p>
         </div>

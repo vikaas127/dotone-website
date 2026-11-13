@@ -125,7 +125,7 @@
                 </div>
                 <div class="hs-card hero-anim" style="--d: 600ms">
                     <span class="hs-icon"><?= icon('factory', 'w-5 h-5') ?></span>
-                    <div class="hs-value"><span data-count="18">18</span> industries</div>
+                    <div class="hs-value"><span data-count="40" data-suffix="+">40+</span> industries</div>
                     <div class="hs-label">Each with its own workflow</div>
                     <div class="hs-marquee" aria-hidden="true"><div>
 <?php for ($k = 0; $k < 2; $k++): foreach (['Manufacturing', 'Retail', 'Pharma', 'Dairy', 'Packaging', 'Chemical', 'Electronics', 'Construction', 'Distribution'] as $n): ?>

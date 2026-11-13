@@ -31,6 +31,18 @@ $industries = [
     ['textile', 'Textile & Garments', 'flow', 'Styles by size and colour, with job work.'],
     ['furniture', 'Furniture', 'box', 'Made-to-order BOMs, job cards and delivery.'],
     ['footwear', 'Footwear', 'trend', 'Articles by size, job work and dealer orders.'],
+    ['healthcare', 'Healthcare', 'shield', 'Medical stores, rosters, payroll and equipment upkeep.'],
+    ['hospitality', 'Hospitality', 'users', 'Stores, recipes, staff and upkeep for hotels and restaurants.'],
+    ['real-estate', 'Real Estate', 'factory', 'Leads to bookings, site material and project cost.'],
+    ['agriculture', 'Agriculture', 'trend', 'Batches, depots, dealers and seasonal demand.'],
+    ['logistics', 'Logistics & Transport', 'truck', 'Vehicles, trips, fuel and running cost.'],
+    ['paper', 'Paper', 'doc', 'Reels and sheets by GSM, size and grade.'],
+    ['building-materials', 'Building Materials', 'factory', 'Dealer orders, batches, depots and dispatch.'],
+    ['cables-wires', 'Cables & Wires', 'flow', 'Metal by weight, cable by metre, scrap by stage.'],
+    ['solar-energy', 'Solar & Renewable Energy', 'spark', 'Project-wise material and serial-tracked modules.'],
+    ['cosmetics', 'Cosmetics & Personal Care', 'spark', 'Formulations, batches, expiry and pack sizes.'],
+    ['paints-coatings', 'Paints & Coatings', 'flow', 'Formulas by shade, batches and dealer sales.'],
+    ['mining', 'Mining & Minerals', 'pin', 'Site stores, machine upkeep and dispatch by weight.'],
 ];
 $cards = [];
 foreach ($industries as [$slug, $name, $ico, $summary]) $cards[] = ['/industries/' . $slug, $name, $ico, $summary];

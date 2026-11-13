@@ -11,6 +11,11 @@ $page = [
     'intro' => 'Every module shares one database. A sales order reserves stock, a job card consumes it and a purchase receipt brings it back, without exports, re-entry or month-end reconciliation.',
     'blocks' => [
         ['heading' => 'Pick what you need today', 'text' => 'Start with one or two modules and switch on the rest as your business grows. Your data, users and settings carry over.', 'cards' => $cards],
+        ['heading' => 'Features inside the modules', 'text' => 'Some jobs cut across modules. These pages show how DotOne handles them.', 'cards' => [
+            ['/bom-software', 'BOM Software', 'flow', 'Multi-level bills of materials that drive planning and costing.'],
+            ['/mrp-software', 'MRP Software', 'cart', 'Material needs from orders and BOMs, with indents for the shortfall.'],
+            ['/gst-billing-software', 'GST Billing', 'doc', 'GST invoices, credit notes and e-way bills from the sales order.'],
+        ]],
         ['heading' => 'Why one connected ERP beats separate tools', 'text' => 'Separate apps for stock, sales and HR each hold part of the truth. DotOne keeps one version of it.', 'list' => [
             ['One record, every team', 'Sales, stores, production and accounts see the same order, item and customer.'],
             ['No double entry', 'A transaction is entered once and flows to every module that needs it.'],

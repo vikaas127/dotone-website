@@ -58,7 +58,8 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // The sales team gets every request by email too, so nothing is lost if the database is unavailable
-$mailed = form_notify('New enquiry from ' . $companyName, [
+$isDemo = stripos($inquiryType, 'demo') !== false;
+$mailed = form_notify(($isDemo ? 'New demo request: ' : 'New enquiry: ') . trim($firstName . ' ' . $lastName) . ', ' . $companyName, [
     'Name' => trim($firstName . ' ' . $lastName), 'Email' => $email, 'Phone' => $phone, 'Company' => $companyName,
     'Job title' => $jobTitle, 'Enquiry type' => $inquiryType, 'Industry' => $industry, 'Company size' => $companySize,
     'Interested in' => $solutionsStr, 'Timeline' => $implementationTimeline, 'Budget' => $budget,

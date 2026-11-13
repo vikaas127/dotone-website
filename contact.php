@@ -446,10 +446,10 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => response.json().catch(() => ({ success: false })))
             .then(data => {
                 if (!data.success) {
-                    throw new Error(data.error || 'Submission failed');
+                    throw new Error(data.error || 'We could not send your request. Please try again or email sales@techdotbit.com.');
                 }
 
                 document.getElementById('contactForm').classList.add('hidden');

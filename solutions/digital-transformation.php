@@ -2,7 +2,7 @@
 require_once dirname(__DIR__) . '/includes/site.php';
 $page = [
     'path' => '/solutions/digital-transformation',
-    'title' => 'Digital transformation for manufacturing | DotOne',
+    'title' => 'Digital Transformation for Manufacturing | DotOne',
     'description' => 'Automate digital transformation work in DotOne: rules, approvals and AI agents remove the manual steps between your ERP modules.',
     'eyebrow' => 'Solutions',
     'h1' => 'Digital transformation for manufacturing',

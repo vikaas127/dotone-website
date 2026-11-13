@@ -78,7 +78,7 @@ render_head($page);
         <div class="vz2-hero-copy">
             <?php render_breadcrumbs($page); ?>
             <span class="vz2-tag"><span class="vz-rec"></span>Vision AI · live on your CCTV</span>
-            <h1>Vision AI for <span>Business Operations</span></h1>
+            <h1>Vision AI for <span>Manufacturing</span></h1>
             <p>Your cameras already watch the floor. Vision AI reads the CCTV you have, spots safety lapses, idle stations and defects, and records each one in DotOne against the right shift and line.</p>
             <div class="vz2-ctas">
                 <a href="/demo" class="hr-btn hr-btn--primary">Book a Technical Consultation</a>

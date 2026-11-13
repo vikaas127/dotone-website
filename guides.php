@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/includes/data/guides.php';
+$guideCategories = array_column(GUIDES_CATEGORIES, 'label', 'id');
+$h = fn($v) => htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +26,9 @@
     <meta name="twitter:title" content="ERP, Inventory, HR and Finance Guides | DotOne">
     <meta name="twitter:description" content="ERP and AI guides from the DotOne team: practical, India-specific advice on choosing ERP, BOM setup and going live, with examples and checklists.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
 </head>
@@ -49,7 +54,7 @@
                 <svg class="guides-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                 <input type="search" id="guides-search" class="guides-search-input" placeholder="Search articles…" autocomplete="off">
             </label>
-            <p id="guides-count" class="guides-count" aria-live="polite"></p>
+            <p id="guides-count" class="guides-count" aria-live="polite"><?= count(GUIDES_ARTICLES) ?> articles</p>
         </div>
         <div id="guides-filters" class="guides-filters" role="tablist" aria-label="Filter by category"></div>
     </div>
@@ -57,7 +62,23 @@
 
 <section class="section">
     <div class="container-custom max-w-6xl mx-auto">
-        <div id="guides-grid" class="guides-grid"></div>
+        <?php // Rendered on the server so every guide is linked in the page HTML; js/guides-page.js re-renders the same cards for search and filters ?>
+        <div id="guides-grid" class="guides-grid">
+<?php foreach (GUIDES_ARTICLES as $a): ?>
+            <a href="<?= $h($a['url']) ?>" class="guides-card card p-6 md:p-7 flex flex-col h-full hover:border-primary-500/30 transition-colors">
+                <div class="flex items-center justify-between gap-3 mb-4">
+                    <span class="guides-card-category"><?= $h($guideCategories[$a['category']] ?? $a['category']) ?></span>
+                    <span class="guides-card-meta"><?= $h($a['readTime']) ?></span>
+                </div>
+                <h2 class="text-lg font-display font-semibold text-text-primary mb-3 leading-snug"><?= $h($a['title']) ?></h2>
+                <p class="text-sm text-text-secondary leading-relaxed flex-grow mb-4"><?= $h($a['excerpt']) ?></p>
+                <span class="guides-card-footer">
+                    <time datetime="<?= $h($a['date']) ?>"><?= $h(date('j M Y', strtotime($a['date']))) ?></time>
+                    <span class="guides-card-read">Read article →</span>
+                </span>
+            </a>
+<?php endforeach; ?>
+        </div>
         <div id="guides-empty" class="guides-empty card p-10 text-center" hidden>
             <h2 class="text-xl font-display font-semibold mb-2">No articles found</h2>
             <p class="text-text-secondary text-sm">Try a different search term or category filter.</p>
@@ -78,7 +99,10 @@
 
 <div id="footer"><?php include __DIR__ . '/includes/footer.php'; ?></div>
 
-<script src="/js/guides-articles.js?v=20261019" defer></script>
+<script>
+window.GUIDES_ARTICLES = <?= json_encode(GUIDES_ARTICLES, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+window.GUIDES_CATEGORIES = <?= json_encode(GUIDES_CATEGORIES, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP) ?>;
+</script>
 <script src="/js/guides-page.js?v=20261019" defer></script>
 </body>
 </html>

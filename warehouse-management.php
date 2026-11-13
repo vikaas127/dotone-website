@@ -43,6 +43,7 @@ $page = [
         'Which warehouse has excess stock of HDPE granules?',
     ],
     'faq' => [
+        ['Can warehouse staff scan QR codes?', 'Yes. Items are scanned on receipt, put-away, picking and dispatch. See our [QR code inventory system](/qr-code-inventory-system).'],
         ['What is the difference between inventory and warehouse management in DotOne?', '[Inventory management](/inventory-management) tracks how much stock you have, its value and reorder levels. Warehouse management covers the physical work: receiving, storing, picking, packing and dispatch.'],
         ['Can we manage more than one warehouse?', 'Yes. Each warehouse and plant has its own stock, and transfers between them are recorded on both sides.'],
         ['Can we track where items are stored?', 'Yes. You can record the storage location for received goods, so the team knows where to find each item when it is needed.'],

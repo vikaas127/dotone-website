@@ -25,6 +25,12 @@ $industries = [
     ['sports-goods', 'Sports', 'trend', 'Production, stock and dealer orders.'],
     ['oil-gas', 'Oil & Gas', 'pin', 'Spares, site issues and field teams.'],
     ['warehousing', 'Warehouse', 'truck', 'Inward, storage and outward with live stock.'],
+    ['engineering', 'Engineering', 'factory', 'Order-wise BOMs, job cards and job costing.'],
+    ['auto-components', 'Auto Components', 'cog', 'Schedules, batches and inspection records.'],
+    ['plastic', 'Plastic & Rubber', 'cog', 'Machine-wise output, rejection and regrind.'],
+    ['textile', 'Textile & Garments', 'flow', 'Styles by size and colour, with job work.'],
+    ['furniture', 'Furniture', 'box', 'Made-to-order BOMs, job cards and delivery.'],
+    ['footwear', 'Footwear', 'trend', 'Articles by size, job work and dealer orders.'],
 ];
 $cards = [];
 foreach ($industries as [$slug, $name, $ico, $summary]) $cards[] = ['/industries/' . $slug, $name, $ico, $summary];

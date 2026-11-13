@@ -9,14 +9,14 @@
 .cs-wall { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 .cs-tile { display: flex; align-items: center; justify-content: center; height: 84px; padding: 0 1.4rem; min-width: 120px; flex: 1 1 140px; max-width: 220px; border-radius: 1rem; background: #fff; border: 1px solid #E4EEF6; box-shadow: 0 10px 24px -18px rgba(0, 60, 110, 0.45); opacity: 0; transform: translateY(10px); animation: cs-in 0.5s ease forwards; animation-delay: calc(0.1s + var(--i) * 0.06s); transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .cs-tile:hover { transform: translateY(-3px); box-shadow: 0 18px 30px -18px rgba(0, 60, 110, 0.55); }
-.cs-tile img { max-height: 44px; max-width: 100%; object-fit: contain; }
+.cs-tile img { width: auto; height: auto; max-height: 44px; max-width: 100%; object-fit: contain; }
 .cs-tile.is-dark, .cs-card-logo-box.is-dark, .cs-ask-logos .is-dark { background: #101828; border-color: #101828; }
 @keyframes cs-in { to { opacity: 1; transform: none; } }
 
 .cs-slider { position: relative; }
 .cs-slide { display: none; margin: 0; padding: 2.8rem 2.5rem; border-radius: 1.6rem; background: #fff; box-shadow: 0 40px 80px -40px rgba(0, 60, 120, 0.45), 0 0 0 1px #E4EEF6; text-align: center; }
 .cs-slide.is-active { display: block; animation: cs-in 0.45s ease both; }
-.cs-slide-logo { max-height: 64px; margin: 0 auto 1.4rem; }
+.cs-slide-logo { width: auto; height: auto; max-height: 64px; margin: 0 auto 1.4rem; }
 .cs-slide blockquote { font-size: clamp(1.3rem, 2.2vw, 1.75rem); line-height: 1.4; color: #101828; margin: 0 0 1.6rem; font-weight: 500; }
 .cs-slide figcaption { display: grid; justify-items: center; gap: 0.2rem; }
 .cs-face { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; margin-bottom: 0.6rem; }
@@ -32,7 +32,7 @@
 .cs-ask-logos { overflow: hidden; margin: 0 -2.5rem 1.6rem; padding: 0.4rem 0; -webkit-mask: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
 .cs-ask-logos > div { display: flex; gap: 0.7rem; width: max-content; animation: cs-marq 30s linear infinite; }
 .cs-ask-logos span { display: flex; align-items: center; justify-content: center; height: 56px; padding: 0 1rem; border-radius: 0.8rem; border: 1px solid #EEF2F6; background: #fff; }
-.cs-ask-logos img { max-height: 30px; max-width: 110px; object-fit: contain; }
+.cs-ask-logos img { width: auto; height: auto; max-height: 30px; max-width: 110px; object-fit: contain; }
 @keyframes cs-marq { to { transform: translateX(-50%); } }
 
 .cs-bar { position: sticky; top: 4.2rem; z-index: 20; background: #fff; border-bottom: 1px solid #EEF2F6; box-shadow: 0 8px 20px -18px rgba(0, 40, 80, 0.5); }
@@ -49,7 +49,7 @@
 .cs-grid { columns: 3; column-gap: 1.6rem; }
 .cs-card { break-inside: avoid; margin-bottom: 1.6rem; padding: 2rem 2.1rem; border-radius: 1.2rem; background: #fff; display: grid; gap: 0.8rem; justify-items: start; opacity: 0; transform: translateY(14px); animation: cs-in 0.5s ease forwards; animation-delay: calc(var(--i) * 0.05s); }
 .cs-card[hidden] { display: none; }
-.cs-card-logo { max-height: 48px; max-width: 180px; object-fit: contain; }
+.cs-card-logo { width: auto; height: auto; max-height: 48px; max-width: 180px; object-fit: contain; }
 .cs-card h2 { font-size: 1.3rem; line-height: 1.4; font-weight: 500; color: #101828; }
 .cs-card p { color: #475467; font-size: 0.95rem; line-height: 1.55; }
 .cs-results { display: flex; flex-wrap: wrap; gap: 0.6rem; }
@@ -61,7 +61,7 @@
 .cs-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .cs-tags span { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 99px; background: #F2F4F7; color: #475467; }
 .cs-card-logo-box { display: flex; align-items: center; justify-content: center; height: 76px; padding: 0 1.2rem; border-radius: 0.8rem; border: 1px solid #EEF2F6; }
-.cs-card-logo-box img { max-height: 40px; max-width: 170px; object-fit: contain; }
+.cs-card-logo-box img { width: auto; height: auto; max-height: 40px; max-width: 170px; object-fit: contain; }
 .cs-card--logo:nth-child(3n+2) .cs-card-logo-box { height: 110px; }
 .cs-card--you { background: #EAF6FE; }
 .cs-empty { text-align: center; color: #fff; font-size: 1.05rem; }

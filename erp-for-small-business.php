@@ -1,11 +1,11 @@
 <?php
 $page = [
     'path' => '/erp-for-small-business',
-    'title' => 'ERP for Small Business in India: Cloud ERP | DotOne',
-    'description' => 'Cloud ERP for small Indian businesses: sales, stock, purchase, GST billing, HR and payroll in one system. Free plan; paid plans from ₹15,000 a month.',
+    'title' => 'ERP Software for SMEs and Small Businesses in India | DotOne',
+    'description' => 'ERP software for SMEs in India: sales, stock, purchase, GST billing, HR and payroll in one system. Free plan; paid plans from ₹15,000 a month.',
     'breadcrumbs' => [['ERP Software', '/erp-software'], ['ERP for Small Business', '/erp-for-small-business']],
     'eyebrow' => 'ERP for SMEs',
-    'h1' => 'ERP for Small Business',
+    'h1' => 'ERP Software for SMEs and Small Businesses',
     'intro' => 'Outgrown Excel, WhatsApp and a billing app? DotOne is a cloud ERP sized for small and growing Indian businesses: start with the modules you need, go live in weeks, and add more as you grow.',
     'highlights' => ['Free Starter plan', 'Live in 4 to 6 weeks', 'GST billing', 'Mobile app'],
     'capabilities_heading' => 'Everything a small business runs on, in one system',

@@ -1,17 +1,17 @@
-<?php require_once __DIR__ . "/includes/site.php"; ?>
+<?php require_once __DIR__ . "/includes/site.php"; require_once __DIR__ . "/includes/data/org.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
-    <title>DotOne | One Connected AI Platform for Business Management</title>
+    <meta name="description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
+    <title>DotOne | Cloud ERP Platform and AI ERP Software for SMEs</title>
     <link rel="canonical" href="https://dotone.in/">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
-    <meta property="og:title" content="DotOne | One Connected AI Platform for Business Management">
-    <meta property="og:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
+    <meta property="og:title" content="DotOne | Cloud ERP Platform and AI ERP Software for SMEs">
+    <meta property="og:description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
     <meta property="og:url" content="https://dotone.in/">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <meta property="og:image:width" content="1200">
@@ -19,13 +19,13 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne | One Connected AI Platform for Business Management">
-    <meta name="twitter:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
+    <meta name="twitter:title" content="DotOne | Cloud ERP Platform and AI ERP Software for SMEs">
+    <meta name="twitter:description" content="AI ERP software and cloud ERP platform for Indian SMEs: 45+ modules from CRM to payroll, Tally integration, and AI agents that work on live data.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.in/#organization","name":"DotOne","url":"https://dotone.in/","logo":"https://dotone.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.in/#website","url":"https://dotone.in/","name":"DotOne","publisher":{"@id":"https://dotone.in/#organization"},"inLanguage":"en-IN"},{"@type":"SoftwareApplication","@id":"https://dotone.in/#software","name":"DotOne","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android","description":"AI-powered business management platform: ERP modules for sales, CRM, purchase, inventory, production, quality, HR, payroll and finance, with AI agents that work on your live data.","url":"https://dotone.in/","publisher":{"@id":"https://dotone.in/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"0","highPrice":"35000","offerCount":"5","url":"https://dotone.in/pricing"}}]}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[<?= json_encode(org_schema(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>,{"@type":"WebSite","@id":"https://dotone.in/#website","url":"https://dotone.in/","name":"DotOne","publisher":{"@id":"https://dotone.in/#organization"},"inLanguage":"en-IN"},{"@type":"SoftwareApplication","@id":"https://dotone.in/#software","name":"DotOne","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android, iOS","description":"AI-powered business management platform: ERP modules for sales, CRM, purchase, inventory, production, quality, HR, payroll and finance, with AI agents that work on your live data.","url":"https://dotone.in/","publisher":{"@id":"https://dotone.in/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"0","highPrice":"35000","offerCount":"5","url":"https://dotone.in/pricing"}}]}</script>
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=<?= ASSET_VERSION ?>">
 </head>
 <body class="bg-background">
@@ -39,10 +39,10 @@
                 <div class="hero-split-copy">
                     <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        <span class="text-gradient-shimmer">AI-Powered</span> 360° Business Management Platform
+                        <span class="text-gradient-shimmer">AI-Powered</span> Cloud ERP Platform for Growing Businesses
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
-                        One connected system for your entire business: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.
+                        Integrated business automation software for Indian SMEs: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.
                     </p>
                     <div class="hero-light-ctas hero-anim" style="--d: 360ms">
                         <a href="/demo" class="btn-hero-glow-lg group">
@@ -162,38 +162,38 @@
                 <!-- SET 1 -->
                 <div class="brand-carousel-group">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy" width="180" height="65">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy" width="83" height="62">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy" width="246" height="70">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy" width="1000" height="371">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy" width="290" height="164">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy" width="795" height="247">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy" width="313" height="55">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy" width="1278" height="477">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy" width="200" height="90">
                     </div>
                     <div class="brand-carousel-item">
                         <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
 <?php if ($e3Logo): ?>
                     <div class="brand-carousel-item">
-                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async">
+                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>>
                     </div>
 <?php endif; ?>
                 </div>
@@ -201,38 +201,38 @@
                 <!-- SET 2 - DUPLICATE FOR SEAMLESS CONTINUOUS LOOP -->
                 <div class="brand-carousel-group" aria-hidden="true">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="" class="logo-dark-bg" loading="lazy" width="180" height="65">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="" loading="lazy" width="83" height="62">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="" loading="lazy" width="246" height="70">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="" loading="lazy" width="1000" height="371">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="" loading="lazy" width="290" height="164">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="" loading="lazy" width="795" height="247">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="" loading="lazy" width="313" height="55">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="" loading="lazy" width="1278" height="477">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="" loading="lazy" width="200" height="90">
                     </div>
                     <div class="brand-carousel-item">
-                        <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
+                        <img src="/images/clients/anondita.webp" alt="" width="480" height="73" loading="lazy" decoding="async">
                     </div>
 <?php if ($e3Logo): ?>
                     <div class="brand-carousel-item">
-                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async">
+                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>>
                     </div>
 <?php endif; ?>
                 </div>
@@ -1007,7 +1007,7 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                     <div class="shots-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.dotone.in</span></div>
                     <div class="shots-view">
 <?php foreach ($productShots as $i => [$k, $label, $src]): ?>
-                        <img src="<?= e($src) ?>" alt="DotOne <?= e(strtolower($label)) ?> screen" loading="lazy" decoding="async" class="<?= $i === 0 ? 'is-active' : '' ?>" data-shot="<?= $i ?>">
+                        <img src="<?= e($src) ?>" alt="DotOne <?= e(strtolower($label)) ?> screen" loading="lazy" decoding="async" class="<?= $i === 0 ? 'is-active' : '' ?>" data-shot="<?= $i ?>"<?= img_size($src) ?>>
 <?php endforeach; ?>
                     </div>
                 </div>
@@ -1118,7 +1118,7 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                 <article class="case-card" style="--i: <?= $i ?>">
                     <div class="case-head">
 <?php if (!empty($st['logo'])): ?>
-                        <img src="<?= e($st['logo']) ?>" alt="<?= e($st['company']) ?>" loading="lazy" decoding="async">
+                        <img src="<?= e($st['logo']) ?>" alt="<?= e($st['company']) ?>" loading="lazy" decoding="async"<?= img_size($st['logo']) ?>>
 <?php endif; ?>
                         <span class="case-industry"><?= e($st['industry']) ?></span>
                     </div>
@@ -1140,10 +1140,10 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
 <?php else: ?>
             <div class="case-logos">
 <?php foreach ([['/images/clients/metalpatti.webp', 'Metal Patti', true], ['/images/clients/newpack.png', 'Newpack Plastics', false], ['/images/clients/mekr.png', 'Mekr Technologies', false], ['/images/clients/agile.webp', 'Agile Nuvo', false], ['/images/clients/virgo.webp', 'Virgo Group', false], ['/images/clients/splice.png', 'Splice', false], ['/images/clients/bhutan-tuff.png', 'Bhutan Tuff', false], ['/images/clients/twintech.webp', 'Twin Tech', false], ['/images/clients/savit.png', 'Savit Group', false], ['/images/clients/anondita.webp', 'Anondita Medicare', false]] as $i => [$src, $alt, $dark]): ?>
-                <div class="case-logo" style="--i: <?= $i ?>"><img src="<?= $src ?>" alt="<?= $alt ?>"<?= $dark ? ' class="logo-dark-bg"' : '' ?> loading="lazy" decoding="async"></div>
+                <div class="case-logo" style="--i: <?= $i ?>"><img src="<?= $src ?>" alt="<?= $alt ?>"<?= $dark ? ' class="logo-dark-bg"' : '' ?> loading="lazy" decoding="async"<?= img_size($src) ?>></div>
 <?php endforeach; ?>
 <?php if (!empty($e3Logo)): ?>
-                <div class="case-logo" style="--i: 10"><img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"></div>
+                <div class="case-logo" style="--i: 10"><img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>></div>
 <?php endif; ?>
             </div>
             <div class="text-center mt-8">
@@ -1235,6 +1235,59 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
         </div>
     </section>
 
+    <!-- 12b Explore: keyword-led links to the page for each buying question -->
+    <section class="section bg-surface">
+        <div class="container-custom">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="section-label">Explore DotOne</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-text-primary mb-4">One cloud ERP platform. <span class="text-primary-500">Built for Indian SMEs.</span></h2>
+                <p class="text-lg text-text-secondary">DotOne is enterprise resource planning for small and mid-sized businesses: one integrated system for sales, stock, production, people and accounts, with AI agents on every module. Find the page for what you need.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">ERP software</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/ai-powered-erp" class="text-text-secondary hover:text-primary-600 transition-colors">AI ERP software</a></li>
+                        <li><a href="/cloud-erp" class="text-text-secondary hover:text-primary-600 transition-colors">Cloud ERP platform</a></li>
+                        <li><a href="/erp-software" class="text-text-secondary hover:text-primary-600 transition-colors">Enterprise resource planning systems</a></li>
+                        <li><a href="/erp-for-small-business" class="text-text-secondary hover:text-primary-600 transition-colors">ERP software for SMEs</a></li>
+                        <li><a href="/business-automation-software" class="text-text-secondary hover:text-primary-600 transition-colors">Integrated business automation software</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">Buying and switching</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/pricing" class="text-text-secondary hover:text-primary-600 transition-colors">Cloud ERP pricing</a></li>
+                        <li><a href="/integrations/tally" class="text-text-secondary hover:text-primary-600 transition-colors">ERP with Tally integration</a></li>
+                        <li><a href="/compare/sap-alternative" class="text-text-secondary hover:text-primary-600 transition-colors">SAP alternative for manufacturing</a></li>
+                        <li><a href="/low-cost-manufacturing-software" class="text-text-secondary hover:text-primary-600 transition-colors">Low-cost manufacturing software for India</a></li>
+                        <li><a href="/guides/best-erp-software-india" class="text-text-secondary hover:text-primary-600 transition-colors">Best ERP software for small business: how to compare</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">Features buyers ask about</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/batch-tracking-software" class="text-text-secondary hover:text-primary-600 transition-colors">Batch tracking software</a></li>
+                        <li><a href="/multi-level-bom-software" class="text-text-secondary hover:text-primary-600 transition-colors">Multi-level BOM software</a></li>
+                        <li><a href="/oee-software" class="text-text-secondary hover:text-primary-600 transition-colors">OEE machine monitoring software</a></li>
+                        <li><a href="/expiry-date-tracking-software" class="text-text-secondary hover:text-primary-600 transition-colors">Expiry date inventory tracking</a></li>
+                        <li><a href="/qr-code-inventory-system" class="text-text-secondary hover:text-primary-600 transition-colors">QR code warehouse inventory system</a></li>
+                    </ul>
+                </div>
+                <div class="card p-6">
+                    <h3 class="text-lg font-display font-semibold text-text-primary mb-4">AI that does the work</h3>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/ai-inventory-forecasting" class="text-text-secondary hover:text-primary-600 transition-colors">Automated inventory forecasting with AI</a></li>
+                        <li><a href="/ai-procurement-software" class="text-text-secondary hover:text-primary-600 transition-colors">AI procurement software</a></li>
+                        <li><a href="/purchase-order-approval-software" class="text-text-secondary hover:text-primary-600 transition-colors">Automated purchase order approvals</a></li>
+                        <li><a href="/sales-pipeline-automation" class="text-text-secondary hover:text-primary-600 transition-colors">AI-driven sales pipeline automation</a></li>
+                        <li><a href="/predictive-supply-chain-software" class="text-text-secondary hover:text-primary-600 transition-colors">Predictive supply chain software</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 13 Security -->
     <section class="section bg-white">
         <div class="container-custom">
@@ -1266,9 +1319,9 @@ require_once __DIR__ . '/includes/stories/engine.php';
 stories_cta('home', 'Ready to connect your business?', 'See DotOne running your own workflow in a 30-minute demo.');
 ?>
 
-    <!-- Floating Ask Factory AI -->
-    <a href="/demo" class="factory-ai-fab" aria-label="Ask Factory AI">
-        <span class="text-sm font-semibold text-text-primary">Ask Factory AI</span>
+    <!-- Floating Ask DotOne AI -->
+    <a href="/demo" class="factory-ai-fab" aria-label="Ask DotOne AI">
+        <span class="text-sm font-semibold text-text-primary">Ask DotOne AI</span>
         <span class="w-10 h-10 rounded-full bg-gradient-brand flex items-center justify-center flex-shrink-0">
             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>

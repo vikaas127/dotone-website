@@ -57,6 +57,7 @@ $page = [
         'Suggests transfers from warehouses holding excess stock to those running short',
     ],
     'faq' => [
+        ['Can the agent forecast stock-outs?', 'Yes. It projects when each item runs out from consumption and compares that with supplier lead times. See [automated inventory forecasting](/ai-inventory-forecasting).'],
         ['What is AI inventory management in DotOne?', 'It is the Inventory AI Agent working on your live DotOne inventory data. Instead of opening stock reports and filtering them, you ask a question and the agent reads stock, orders and consumption, finds the items that need attention and prepares a report or a next step. In short, it is an AI inventory agent that does the checking your stores team does by hand today.'],
         ['Can the inventory agent place purchase orders on its own?', 'Only if you allow it. The agent works within the roles, permissions and approval rules you set in DotOne. You can keep it to recommendations and draft purchase indents, and anything that changes data can be set to need a person\'s approval.'],
         ['Does it work across more than one warehouse?', 'Yes. DotOne tracks stock separately for each store and warehouse, so the agent can compare them, find where stock is short or in excess, and suggest transfers between sites. This works alongside DotOne low-stock alerts and automatic indents, which together make up AI inventory automation in DotOne.'],

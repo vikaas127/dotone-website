@@ -32,6 +32,7 @@ $page = [
         ['heading' => 'The agents behind it', 'text' => 'Each agent works on one area of the business and uses the same workflows and permissions as your team.', 'cards' => $cards],
     ],
     'faq' => [
+        ['Is DotOne integrated business automation software?', 'Yes. Workflow rules and AI agents run across every module on one database. See [integrated business automation software](/business-automation-software).'],
         ['What is AI automation in DotOne?', 'It is AI agents working together with [workflow automation](/workflow-automation). Workflows run fixed steps; agents read the data, spot what needs action and prepare it.'],
         ['Will agents change our data on their own?', 'Only if you allow it. You set, task by task, whether an agent informs, recommends or acts, and any change can be set to need a person\'s approval.'],
         ['What should we automate first?', 'Start with work that repeats every day, such as reorder indents, follow-up reminders and the weekly MIS. See [inventory automation](/solutions/inventory-automation) for a common starting point.'],

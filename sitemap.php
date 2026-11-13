@@ -23,9 +23,15 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 foreach ($files as [$slug, $path]) {
     $loc = $slug === 'index' ? $base : $base . $slug;
 
+    // lastmod only when the page states a real content date. File times change on every
+    // deploy, which makes every page look freshly edited and teaches Google to ignore lastmod.
+    $src = file_get_contents($path);
+    $lastmod = null;
+    if (preg_match("/'modified'\\s*=>\\s*'(\\d{4}-\\d{2}-\\d{2})'/", $src, $m) || preg_match("/'published'\\s*=>\\s*'(\\d{4}-\\d{2}-\\d{2})'/", $src, $m)) $lastmod = $m[1];
+
     echo '<url>';
     echo '<loc>' . htmlspecialchars($loc) . '</loc>';
-    echo '<lastmod>' . date('Y-m-d', filemtime($path)) . '</lastmod>';
+    if ($lastmod) echo '<lastmod>' . $lastmod . '</lastmod>';
     echo '</url>';
 }
 

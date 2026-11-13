@@ -48,7 +48,7 @@ return [
             'size' => 'sm',
             'title' => 'Stock valuation',
             'text' => 'Live inventory value by item, category and warehouse, ready for month-end.',
-            'mock' => ['type' => 'table', 'cols' => ['Warehouse', 'Items', 'Value'], 'rows' => [['Main store', '4,820', '₹1.9 Cr'], ['Plant 2 store', '1,960', '₹0.9 Cr'], ['Dispatch yard', '320', '₹0.3 Cr']]],
+            'mock' => ['type' => 'table', 'cols' => ['Warehouse', 'Items', 'Value'], 'rows' => [['Main store', '4,820', '₹49.9 L'], ['Plant 2 store', '1,960', '₹24.4 L'], ['Dispatch yard', '320', '₹10.3 L']]],
         ],
     ],
     'split' => [
@@ -75,7 +75,7 @@ return [
     'cta_chart' => [
         'title' => 'Stock value',
         'sub' => 'Inventory value by warehouse, last 9 months',
-        'kpis' => [['Stock value', '₹3.1 Cr', '4%'], ['Transfers on time', '97%', '2 pts'], ['Transfers', '148', '9%']],
+        'kpis' => [['Stock value', '₹84.6 L', '4%'], ['Transfers on time', '97%', '2 pts'], ['Transfers', '148', '9%']],
         'legend' => ['Main store', 'Plant 2 store', 'Dispatch yard'],
         'bars' => [['Jan', 40, 20, 8], ['Feb', 42, 20, 8], ['Mar', 44, 22, 9], ['Apr', 41, 21, 8], ['May', 45, 22, 9], ['Jun', 46, 23, 9], ['Jul', 47, 23, 10], ['Aug', 48, 24, 10], ['Sep', 49, 24, 10]],
     ],

@@ -12,7 +12,7 @@ $page = [
     'blocks' => [
         ['heading' => 'Pick what you need today', 'text' => 'Start with one or two modules and switch on the rest as your business grows. Your data, users and settings carry over.', 'cards' => $cards],
         ['heading' => 'Features inside the modules', 'text' => 'Some jobs cut across modules. These pages show how DotOne handles them.', 'cards' => [
-            ['/bom-software', 'BOM Software', 'flow', 'Multi-level bills of materials that drive planning and costing.'],
+            ['/multi-level-bom-software', 'Multi-level BOM Software', 'flow', 'Multi-level bills of materials that drive planning and costing.'],
             ['/mrp-software', 'MRP Software', 'cart', 'Material needs from orders and BOMs, with indents for the shortfall.'],
             ['/gst-billing-software', 'GST Billing', 'doc', 'GST invoices, credit notes and e-way bills from the sales order.'],
         ]],

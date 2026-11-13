@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/plastic',
     'title' => 'Plastic and Rubber Manufacturing ERP Software | DotOne',
-    'description' => 'ERP for plastic moulding, extrusion and rubber products in India: granules in kg, machine and mould-wise job cards, regrind and rejection tracking, QC and GST billing.',
+    'description' => 'ERP for plastic moulding, extrusion and rubber products in India: granules in kg, machine-wise job cards, rejection and regrind tracking, QC and GST billing.',
     'breadcrumbs' => [['Industries', '/industries'], ['Plastic & Rubber', '/industries/plastic']],
     'name' => 'Plastic & Rubber',
     'icon' => 'cog',

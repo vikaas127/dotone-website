@@ -46,7 +46,7 @@ $page = [
         ['What is MRP?', 'Material requirements planning works out what material is needed, how much and when, from the production plan, the BOM and current stock. See our [guide to MRP](/guides/what-is-mrp).'],
         ['Does DotOne place purchase orders automatically?', 'No. DotOne drafts indents and purchase orders, and a person approves them. You decide who approves and up to what value.'],
         ['What do we need in place before MRP works?', 'Accurate BOMs, accurate stock and realistic lead times. If stock records are wrong, the plan will be too. Our [stocktaking guide](/guides/stocktaking) covers how to fix that.'],
-        ['Is MRP a separate module?', 'No. Material planning uses [BOMs](/bom-software), [inventory](/inventory-management) and [purchase](/purchase-management) together in DotOne.'],
+        ['Is MRP a separate module?', 'No. Material planning uses [BOMs](/multi-level-bom-software), [inventory](/inventory-management) and [purchase](/purchase-management) together in DotOne.'],
     ],
     'cta_heading' => 'See material planning on your own order',
     'cta_text' => 'In a 30-minute demo we take one of your orders, work out the material needed and raise indents for the shortfall.',

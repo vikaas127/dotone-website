@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/auto-components',
     'title' => 'ERP for Auto Component Manufacturers | DotOne',
-    'description' => 'ERP for auto parts and component manufacturers in India: customer schedules, multi-level BOMs, machine-wise job cards, batch traceability, inspection records and GST billing.',
+    'description' => 'ERP for auto component manufacturers in India: customer schedules, multi-level BOMs, machine-wise job cards, batch traceability and inspection records.',
     'breadcrumbs' => [['Industries', '/industries'], ['Auto Components', '/industries/auto-components']],
     'name' => 'Auto Components',
     'icon' => 'cog',

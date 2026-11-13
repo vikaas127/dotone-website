@@ -14,6 +14,18 @@ function asset_v($path)
     return is_file($file) ? (string) filemtime($file) : ASSET_VERSION;
 }
 
+// width/height attributes for a local image, read from the file, so the browser reserves its space before it loads
+function img_size($src)
+{
+    static $cache = [];
+    if (!isset($cache[$src])) {
+        $file = dirname(__DIR__) . '/' . ltrim(strtok((string) $src, '?'), '/');
+        $size = is_file($file) ? @getimagesize($file) : false;
+        $cache[$src] = $size ? ' width="' . $size[0] . '" height="' . $size[1] . '"' : '';
+    }
+    return $cache[$src];
+}
+
 function e($value)
 {
     return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
@@ -52,9 +64,9 @@ function render_head(array $page)
     <meta name="twitter:title" content="<?= e($title) ?>">
     <meta name="twitter:description" content="<?= e($desc) ?>">
     <meta name="twitter:image" content="<?= SITE_URL ?>/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap"></noscript>
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=<?= $v ?>">
 <?php foreach ($page['css'] ?? [] as $css): ?>
     <link rel="stylesheet" href="<?= e($css) ?>?v=<?= asset_v($css) ?>">

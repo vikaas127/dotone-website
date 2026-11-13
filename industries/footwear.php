@@ -2,7 +2,7 @@
 $page = [
     'path' => '/industries/footwear',
     'title' => 'Footwear Manufacturing ERP Software | DotOne',
-    'description' => 'ERP for footwear manufacturers in India: articles by size and colour, size-set orders, BOMs for uppers and soles, job work, carton packing, dealer orders and GST billing.',
+    'description' => 'ERP for footwear manufacturers in India: articles by size and colour, BOMs for uppers and soles, job work, carton packing, dealer orders and GST billing.',
     'breadcrumbs' => [['Industries', '/industries'], ['Footwear', '/industries/footwear']],
     'name' => 'Footwear',
     'icon' => 'trend',

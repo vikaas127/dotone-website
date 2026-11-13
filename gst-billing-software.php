@@ -2,7 +2,7 @@
 $page = [
     'path' => '/gst-billing-software',
     'title' => 'GST Billing Software with E-Way Bills | DotOne',
-    'description' => 'GST billing software for Indian businesses: GST invoices and credit notes from sales orders, HSN-based tax, proforma invoices, delivery challans, e-way bills and Tally sync.',
+    'description' => 'GST billing software for Indian businesses: GST invoices and credit notes from sales orders, HSN-based tax, delivery challans, e-way bills and Tally sync.',
     'breadcrumbs' => [['Modules', '/modules'], ['GST Billing Software', '/gst-billing-software']],
     'eyebrow' => 'ERP Feature',
     'h1' => 'GST Billing Software for Indian Businesses',

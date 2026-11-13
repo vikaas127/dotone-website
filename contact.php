@@ -283,7 +283,7 @@
                                 <span class="text-sm text-text-secondary">Send me product updates and resources from DotOne.</span>
                             </label>
 
-                            <p class="text-sm text-text-secondary">By submitting this form, you agree to our <a href="https://techdotbit.com/privacy-policy/" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Privacy Policy</a> and consent to be contacted by our team.</p>
+                            <p class="text-sm text-text-secondary">By submitting this form, you agree to our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">Privacy Policy</a> and consent to be contacted by our team.</p>
 
                             <div class="flex justify-between">
                                 <button type="button" onclick="previousStep(2)" class="btn-secondary">Back</button>

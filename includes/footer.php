@@ -79,9 +79,9 @@
 <?php endif; ?>
             </p>
             <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
-                <a href="https://techdotbit.com/privacy-policy/" class="site-footer-light-link">Privacy Policy</a>
-                <a href="https://techdotbit.com/terms-and-conditions/" class="site-footer-light-link">Terms of Service</a>
-                <a href="https://techdotbit.com/cancellation-and-refund-policy/" class="site-footer-light-link">Refund Policy</a>
+                <a href="/privacy-policy" class="site-footer-light-link">Privacy Policy</a>
+                <a href="/terms" class="site-footer-light-link">Terms of Service</a>
+                <a href="/refund-policy" class="site-footer-light-link">Refund Policy</a>
             </div>
         </div>
     </div>

@@ -30,6 +30,9 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // The sales team gets every registration by email too, so nothing is lost if the database is unavailable
 $mailed = form_notify('New webinar registration: ' . $name, ['Name' => $name, 'Email' => $email, 'Phone' => $phone, 'Company' => $company], $email);
 
+$inCrm = form_push_to_crm(['name' => $name, 'email' => $email, 'phonenumber' => $phone, 'company' => $company, 'description' => 'Webinar registration from dotone.in']);
+$mailed = $mailed || $inCrm;
+
 $dbFailed = function () use ($mailed) {
     error_log('Webinar registration: database unavailable, registration ' . ($mailed ? 'sent by email only' : 'NOT saved'));
     if ($mailed) {

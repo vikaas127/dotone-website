@@ -73,3 +73,36 @@ function form_db_done()
     $GLOBALS['form_db_done'] = true;
     if (ob_get_level() > 0) ob_end_flush();
 }
+
+// Send a submission to DotOne CRM as a lead, through the CRM's web-to-lead form.
+// The form address lives in config.php on the server (not in Git):
+//     <?php return ['crm_lead_url' => 'https://YOUR-CRM/forms/wtl/FORM_KEY'];
+// Returns true when the CRM accepted the lead, false when it did not or nothing is configured.
+function form_push_to_crm(array $lead)
+{
+    $file = dirname(__DIR__) . '/config.php';
+    $config = is_file($file) ? include $file : [];
+    $url = is_array($config) ? trim((string) ($config['crm_lead_url'] ?? '')) : '';
+    if ($url === '' || !preg_match('#^https://#i', $url) || !function_exists('curl_init')) return false;
+
+    // The form key is the last part of the address; the CRM also expects it as a field
+    $lead['key'] = basename(parse_url($url, PHP_URL_PATH));
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $lead,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 4,
+        CURLOPT_TIMEOUT => 8,
+        CURLOPT_HTTPHEADER => ['X-Requested-With: XMLHttpRequest', 'Accept: application/json'],
+    ]);
+    $body = curl_exec($ch);
+    $code = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $error = curl_error($ch);
+    curl_close($ch);
+
+    $json = is_string($body) ? json_decode($body, true) : null;
+    $ok = $code >= 200 && $code < 300 && is_array($json) && !empty($json['success']);
+    if (!$ok) error_log('CRM lead push failed: HTTP ' . $code . ' ' . $error . ' ' . substr((string) $body, 0, 200));
+    return $ok;
+}

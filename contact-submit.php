@@ -65,6 +65,19 @@ $mailed = form_notify('New enquiry from ' . $companyName, [
     'Current systems' => $currentSystems, 'Message' => $message,
 ], $email);
 
+// ... and it goes to DotOne CRM as a lead when the CRM form address is set in config.php
+$details = array_filter([
+    'Enquiry type' => $inquiryType, 'Industry' => $industry, 'Company size' => $companySize,
+    'Interested in' => $solutionsStr, 'Timeline' => $implementationTimeline, 'Budget' => $budget,
+    'Current systems' => $currentSystems, 'Message' => $message,
+], 'strlen');
+$inCrm = form_push_to_crm([
+    'name' => trim($firstName . ' ' . $lastName), 'email' => $email, 'phonenumber' => $phone,
+    'company' => $companyName, 'title' => $jobTitle,
+    'description' => "Website enquiry\n" . implode("\n", array_map(function ($k, $v) { return $k . ': ' . $v; }, array_keys($details), $details)),
+]);
+$mailed = $mailed || $inCrm;
+
 $dbFailed = function () use ($mailed) {
     error_log('Contact form: database unavailable, enquiry ' . ($mailed ? 'sent by email only' : 'NOT saved'));
     if (!headers_sent()) {

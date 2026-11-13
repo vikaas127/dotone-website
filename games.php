@@ -5,6 +5,7 @@
     <title>Play Games | DotOne Break Room</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Take a quick break at the DotOne Break Room: play Memory Match, Higher or Lower, Blackjack and Tic-Tac-Toe right in your browser.">
+    <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://dotone.in/games">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">

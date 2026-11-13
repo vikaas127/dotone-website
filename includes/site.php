@@ -107,11 +107,12 @@ function render_software_schema(array $page, $url)
     echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";
 }
 
-// Article for long-form guides (/guides/...); $page['article'] = ['published' => 'Y-m-d']
+// Article for long-form guides (/guides/...); $page['article'] = ['published' => 'Y-m-d', 'updated' => 'Y-m-d' (optional)]
 function render_article_schema(array $page, $url)
 {
     $data = ['@context' => 'https://schema.org', '@type' => 'Article', 'headline' => $page['h1'], 'description' => $page['description'],
-        'mainEntityOfPage' => $url, 'datePublished' => $page['article']['published'], 'inLanguage' => 'en-IN',
+        'mainEntityOfPage' => $url, 'datePublished' => $page['article']['published'],
+        'dateModified' => $page['article']['updated'] ?? $page['article']['published'], 'inLanguage' => 'en-IN',
         'author' => ['@id' => SITE_URL . '/#organization'], 'publisher' => ['@id' => SITE_URL . '/#organization'],
         'image' => SITE_URL . '/assets/og-image.jpg'];
     echo '    <script type="application/ld+json">' . json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "</script>\n";

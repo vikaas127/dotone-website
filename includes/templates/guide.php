@@ -7,7 +7,7 @@ require_once __DIR__ . '/longform.php';
 $page['css'] = array_merge($page['css'] ?? [], ['/css/guide-article.css']);
 render_head($page);
 
-$published = $page['article']['published'] ?? null;
+$published = $page['article']['updated'] ?? $page['article']['published'] ?? null;
 $meta = [
     '<span class="ga-author"><img src="/public/icon-192.png" alt="" width="28" height="28">DotOne team</span>',
 ];

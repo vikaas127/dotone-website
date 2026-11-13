@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
-    <title>DotOne | One Connected AI Platform for Business Management</title>
+    <title>DotOne: AI-Powered ERP Software for Indian Businesses</title>
     <link rel="canonical" href="https://dotone.in/">
     <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32.png"><link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16.png"><link rel="apple-touch-icon" href="/public/apple-touch-icon.png"><link rel="manifest" href="/public/manifest.json"><meta name="theme-color" content="#0096EE">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="DotOne">
-    <meta property="og:title" content="DotOne | One Connected AI Platform for Business Management">
+    <meta property="og:title" content="DotOne: AI-Powered ERP Software for Indian Businesses">
     <meta property="og:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta property="og:url" content="https://dotone.in/">
     <meta property="og:image" content="https://dotone.in/assets/og-image.jpg?v=2">
@@ -19,7 +19,7 @@
     <meta property="og:image:alt" content="DotOne: ERP, AI agents and automation in one platform">
     <meta property="og:locale" content="en_IN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DotOne | One Connected AI Platform for Business Management">
+    <meta name="twitter:title" content="DotOne: AI-Powered ERP Software for Indian Businesses">
     <meta name="twitter:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.in/#organization","name":"DotOne","url":"https://dotone.in/","logo":"https://dotone.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.in/#website","url":"https://dotone.in/","name":"DotOne","publisher":{"@id":"https://dotone.in/#organization"},"inLanguage":"en-IN"},{"@type":"SoftwareApplication","@id":"https://dotone.in/#software","name":"DotOne","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android","description":"AI-powered business management platform: ERP modules for sales, CRM, purchase, inventory, production, quality, HR, payroll and finance, with AI agents that work on your live data.","url":"https://dotone.in/","publisher":{"@id":"https://dotone.in/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"0","highPrice":"35000","offerCount":"5","url":"https://dotone.in/pricing"}}]}</script>

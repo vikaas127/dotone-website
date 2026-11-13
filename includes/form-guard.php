@@ -75,14 +75,19 @@ function form_db_done()
 }
 
 // Send a submission to DotOne CRM as a lead, through the CRM's web-to-lead form.
-// The form address lives in config.php on the server (not in Git):
-//     <?php return ['crm_lead_url' => 'https://YOUR-CRM/forms/wtl/FORM_KEY'];
+// The form address is one line in the server's .env file (not in Git), next to the database settings:
+//     CRM_LEAD_URL=https://dotone.techdotbit.in/api/v1/forms/wtl/FORM_KEY
 // Returns true when the CRM accepted the lead, false when it did not or nothing is configured.
 function form_push_to_crm(array $lead)
 {
-    $file = dirname(__DIR__) . '/config.php';
-    $config = is_file($file) ? include $file : [];
-    $url = is_array($config) ? trim((string) ($config['crm_lead_url'] ?? '')) : '';
+    // config.php loads .env into $_ENV; a missing or broken .env must not stop the form
+    try {
+        $file = dirname(__DIR__) . '/config.php';
+        if (is_file($file)) require_once $file;
+    } catch (Throwable $e) {
+        error_log('CRM lead push: config not loaded: ' . $e->getMessage());
+    }
+    $url = trim((string) ($_ENV['CRM_LEAD_URL'] ?? ''), " \t\"'");
     if ($url === '' || !preg_match('#^https://#i', $url) || !function_exists('curl_init')) return false;
 
     // The form key is the last part of the address; the CRM also expects it as a field

@@ -27,18 +27,39 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit('Please go back and enter your name and a valid email address.');
 }
 
-require_once __DIR__ . '/db.php';
+// The sales team gets every registration by email too, so nothing is lost if the database is unavailable
+$mailed = form_notify('New webinar registration: ' . $name, ['Name' => $name, 'Email' => $email, 'Phone' => $phone, 'Company' => $company], $email);
 
-$stmt = $conn->prepare("
-    INSERT INTO webinar_registrations (name, email, phone, company)
-    VALUES (?, ?, ?, ?)
-");
+$dbFailed = function () use ($mailed) {
+    error_log('Webinar registration: database unavailable, registration ' . ($mailed ? 'sent by email only' : 'NOT saved'));
+    if ($mailed) {
+        if (!headers_sent()) header('Location: /thank-you', true, 302);
+    } else {
+        if (!headers_sent()) http_response_code(500);
+        echo 'We could not save your registration. Please email sales@techdotbit.com and we will add you.';
+    }
+};
+form_db_guard($dbFailed);
 
-$stmt->bind_param("ssss", $name, $email, $phone, $company);
-if (!$stmt->execute()) {
-    error_log('Webinar registration insert failed: ' . $stmt->error);
+try {
+    require_once __DIR__ . '/db.php';
+
+    $stmt = $conn->prepare("
+        INSERT INTO webinar_registrations (name, email, phone, company)
+        VALUES (?, ?, ?, ?)
+    ");
+    $stmt->bind_param("ssss", $name, $email, $phone, $company);
+    if (!$stmt->execute()) {
+        throw new RuntimeException('insert failed: ' . $stmt->error);
+    }
+    $stmt->close();
+} catch (Throwable $e) {
+    error_log('Webinar registration: ' . $e->getMessage());
+    form_db_done();
+    $dbFailed();
+    exit;
 }
-$stmt->close();
 
+form_db_done();
 header("Location: /thank-you");
 exit;

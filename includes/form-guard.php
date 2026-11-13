@@ -40,3 +40,36 @@ function form_field($name, $max = 255)
     $v = preg_replace('/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/u', '', trim((string) $v));
     return mb_substr($v, 0, $max);
 }
+
+// Email a submission to the sales inbox, so a lead still arrives if the database is down.
+// Visitor input goes in the body only; the reply-to is used only when it is a valid address.
+function form_notify($subject, array $fields, $replyTo = '')
+{
+    $lines = [];
+    foreach ($fields as $label => $value) {
+        if ($value === '' || $value === null) continue;
+        $lines[] = $label . ': ' . $value;
+    }
+    $headers = ['From: DotOne website <no-reply@dotone.in>', 'Content-Type: text/plain; charset=UTF-8'];
+    if ($replyTo !== '' && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $headers[] = 'Reply-To: ' . $replyTo;
+    return @mail('sales@techdotbit.com', $subject, implode("\n", $lines) . "\n", implode("\r\n", $headers));
+}
+
+// db.php stops the script when the database cannot be reached. Call this before requiring it:
+// if the script ends before form_db_done(), $onFail runs with whatever was printed thrown away.
+function form_db_guard(callable $onFail)
+{
+    $GLOBALS['form_db_done'] = false;
+    ob_start();
+    register_shutdown_function(function () use ($onFail) {
+        if (!empty($GLOBALS['form_db_done'])) return;
+        while (ob_get_level() > 0) ob_end_clean();
+        $onFail();
+    });
+}
+
+function form_db_done()
+{
+    $GLOBALS['form_db_done'] = true;
+    if (ob_get_level() > 0) ob_end_flush();
+}

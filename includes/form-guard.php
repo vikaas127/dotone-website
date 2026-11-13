@@ -74,7 +74,12 @@ function form_notify($subject, array $fields, $replyTo = '')
     $subject = trim(preg_replace('/[\r\n]+/', ' ', (string) $subject));
     if ($replyTo !== '' && !filter_var($replyTo, FILTER_VALIDATE_EMAIL)) $replyTo = '';
     $html = form_email_html($subject, $fields, $replyTo);
+    return form_send_email($to, $subject, $body, $html, $replyTo);
+}
 
+// Send one email: through the SMTP mailbox in .env when set, otherwise PHP mail()
+function form_send_email($to, $subject, $body, $html = '', $replyTo = '')
+{
     $user = form_env('SMTP_USER');
     $pass = form_env('SMTP_PASS');
     if ($user !== '' && $pass !== '') {
@@ -85,9 +90,56 @@ function form_notify($subject, array $fields, $replyTo = '')
 
     $from = $user !== '' ? $user : 'no-reply@dotone.in';
     [$contentType, $content] = form_email_mime($body, $html);
-    $headers = ['From: DotOne website <' . $from . '>', 'MIME-Version: 1.0', 'Content-Type: ' . $contentType];
+    $headers = ['From: DotOne <' . $from . '>', 'MIME-Version: 1.0', 'Content-Type: ' . $contentType];
     if ($replyTo !== '') $headers[] = 'Reply-To: ' . $replyTo;
     return @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $content, implode("\r\n", $headers), '-f' . $from);
+}
+
+// Thank-you email to the person who filled in a form. $kind is 'demo', 'webinar' or 'enquiry'.
+// Nothing the visitor typed is repeated in it except a plain first name, so the form
+// cannot be used to send someone else's text to an address of the sender's choosing.
+function form_confirm_visitor($email, $firstName, $kind = 'enquiry')
+{
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) return false;
+    $firstName = trim((string) $firstName);
+    $hello = preg_match('/^[\p{L}][\p{L} .\'-]{0,39}$/u', $firstName) ? 'Dear ' . $firstName . ',' : 'Hello,';
+    $sales = form_env('LEADS_EMAIL', 'sales@techdotbit.com');
+
+    $copy = [
+        'demo' => ['We have received your demo request', 'Thank you for requesting a demo of DotOne.',
+            'A DotOne specialist will contact you within one working day to confirm a time. The demo is a free 30-minute walkthrough built around one real process from your business.'],
+        'webinar' => ['You are registered for the DotOne webinar', 'Thank you for registering for the DotOne webinar.',
+            'Your seat is reserved. Details of the session are on the webinar page, and our team will be in touch if anything changes.'],
+        'enquiry' => ['We have received your enquiry', 'Thank you for contacting DotOne.',
+            'Our team has your message and will get back to you within one working day.'],
+    ];
+    [$subject, $thanks, $next] = $copy[$kind] ?? $copy['enquiry'];
+    $link = $kind === 'webinar' ? ['https://dotone.in/webinar', 'Webinar details'] : ['https://dotone.in/walkthrough', 'See how an order flows through DotOne'];
+
+    $text = $hello . "\n\n" . $thanks . ' ' . $next . "\n\n"
+        . 'If you need anything sooner, reply to this email or write to ' . $sales . ".\n\n"
+        . $link[1] . ': ' . $link[0] . "\n\nRegards,\nThe DotOne team\nTechDotBit Pvt Ltd\nhttps://dotone.in\n";
+
+    $h = function ($v) { return htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8'); };
+    $html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>' . $h($subject) . '</title></head>'
+        . '<body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Arial,sans-serif;">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;"><tr><td align="center" style="padding:24px 12px;">'
+        . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;">'
+        . form_email_header('', $subject)
+        . '<tr><td style="padding:18px 28px 8px;font-size:15px;line-height:1.65;color:#0f172a;">'
+        . '<p style="margin:0 0 14px;">' . $h($hello) . '</p>'
+        . '<p style="margin:0 0 14px;">' . $h($thanks) . ' ' . $h($next) . '</p>'
+        . '<p style="margin:0 0 20px;">If you need anything sooner, reply to this email or write to <a href="mailto:' . $h($sales) . '" style="color:#0077c2;text-decoration:none;">' . $h($sales) . '</a>.</p>'
+        . '<a href="' . $h($link[0]) . '" style="display:inline-block;padding:11px 20px;border-radius:8px;background:#0096ee;color:#ffffff;font-size:14px;font-weight:600;text-decoration:none;">' . $h($link[1]) . '</a>'
+        . '</td></tr>'
+        . '<tr><td style="padding:22px 28px 26px;font-size:14px;line-height:1.6;color:#0f172a;">Regards,<br><strong>The DotOne team</strong></td></tr>'
+        . '<tr><td style="padding:16px 28px;background:#f8fafc;border-top:1px solid #e8edf3;font-size:12px;color:#64748b;line-height:1.5;">'
+        . 'DotOne is built by TechDotBit Pvt Ltd &middot; <a href="https://dotone.in" style="color:#64748b;">dotone.in</a><br>'
+        . 'You are receiving this because this address was entered in a form on dotone.in. If that was not you, please ignore this email.'
+        . '</td></tr>'
+        . '</table></td></tr></table></body></html>';
+
+    return form_send_email($email, $subject, $text, $html, $sales);
 }
 
 // The enquiry as an HTML email: a header, the contact details with reply and call buttons, then the rest as a table.
@@ -124,11 +176,8 @@ function form_email_html($title, array $fields, $replyTo = '')
         . '<body style="margin:0;padding:0;background:#f1f5f9;font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Arial,sans-serif;">'
         . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f5f9;"><tr><td align="center" style="padding:24px 12px;">'
         . '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;">'
-        . '<tr><td style="background:#0096ee;padding:20px 28px;color:#ffffff;">'
-        . '<div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;opacity:.9;">DotOne website</div>'
-        . '<div style="font-size:20px;font-weight:700;margin-top:4px;line-height:1.3;">' . $h($title) . '</div>'
-        . '</td></tr>'
-        . '<tr><td style="padding:24px 28px 8px;">'
+        . form_email_header('Website enquiry', $title)
+        . '<tr><td style="padding:18px 28px 8px;">'
         . ($name !== '' ? '<div style="font-size:18px;font-weight:700;color:#0f172a;">' . $h($name) . '</div>' : '')
         . ($company !== '' ? '<div style="font-size:14px;color:#64748b;margin-top:2px;">' . $h($company) . '</div>' : '')
         . ($buttons !== '' ? '<div style="margin-top:16px;">' . $buttons . '</div>' : '')
@@ -138,6 +187,21 @@ function form_email_html($title, array $fields, $replyTo = '')
         . 'Sent from a form on dotone.in on ' . $h((new DateTime('now', new DateTimeZone('Asia/Kolkata')))->format('j M Y, g:i a')) . ' IST. Replying to this email goes straight to the person who filled in the form.'
         . '</td></tr>'
         . '</table></td></tr></table></body></html>';
+}
+
+// Top of both emails: the DotOne logo on white, a blue rule, then the title.
+// The logo is the PNG on the site, because mail apps do not show SVG images.
+function form_email_header($label, $title)
+{
+    $h = function ($v) { return htmlspecialchars((string) $v, ENT_QUOTES, 'UTF-8'); };
+    return '<tr><td style="padding:22px 28px 18px;background:#ffffff;">'
+        . '<a href="https://dotone.in" style="text-decoration:none;"><img src="https://dotone.in/assets/dotone-wm-blue-tight.png" width="156" height="36" alt="DotOne" style="display:block;border:0;width:156px;height:36px;"></a>'
+        . '</td></tr>'
+        . '<tr><td style="height:3px;line-height:3px;font-size:0;background:#0096ee;">&nbsp;</td></tr>'
+        . '<tr><td style="padding:22px 28px 0;">'
+        . ($label !== '' ? '<div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#0096ee;font-weight:700;">' . $h($label) . '</div>' : '')
+        . '<div style="font-size:20px;font-weight:700;margin-top:4px;line-height:1.3;color:#0f172a;">' . $h($title) . '</div>'
+        . '</td></tr>';
 }
 
 // Body and Content-Type for a message with a plain-text part and, when given, an HTML part
@@ -196,7 +260,7 @@ function form_smtp_send($user, $pass, $to, $subject, $body, $replyTo = '', $html
     [$contentType, $content] = form_email_mime($body, $html);
     $headers = [
         'Date: ' . date('r'),
-        'From: DotOne website <' . $user . '>',
+        'From: ' . ($to === form_env('LEADS_EMAIL', 'sales@techdotbit.com') ? 'DotOne website' : 'DotOne') . ' <' . $user . '>',
         'To: <' . $to . '>',
         'Subject: =?UTF-8?B?' . base64_encode($subject) . '?=',
         'Message-ID: <' . bin2hex(random_bytes(12)) . '@dotone.in>',

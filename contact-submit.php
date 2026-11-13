@@ -66,6 +66,9 @@ $mailed = form_notify(($isDemo ? 'New demo request: ' : 'New enquiry: ') . trim(
     'Current systems' => $currentSystems, 'Message' => $message,
 ], $email);
 
+// The person who filled in the form gets a thank-you email
+form_confirm_visitor($email, $firstName, $isDemo ? 'demo' : 'enquiry');
+
 // ... and it goes to DotOne CRM as a lead when the CRM form address is set in config.php
 $details = array_filter([
     'Enquiry type' => $inquiryType, 'Industry' => $industry, 'Company size' => $companySize,

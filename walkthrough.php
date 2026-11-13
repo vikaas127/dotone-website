@@ -240,9 +240,9 @@ $v = ASSET_VERSION;
     <meta property="og:url" content="<?= SITE_URL ?>/walkthrough">
     <meta property="og:image" content="<?= SITE_URL ?>/assets/og-image.jpg?v=2">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=<?= $v ?>">
     <link rel="stylesheet" href="/css/walkthrough.css?v=<?= $v ?>">
     <script type="application/ld+json"><?= json_encode([

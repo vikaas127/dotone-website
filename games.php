@@ -18,9 +18,9 @@
     <meta name="twitter:title" content="Play Games | DotOne Break Room">
     <meta name="twitter:description" content="Quick browser games: Memory Match, Higher or Lower, Blackjack and Tic-Tac-Toe.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=20261019">
     <script src="/js/header-nav.js?v=20261019" defer></script>
     <style>

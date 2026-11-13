@@ -23,9 +23,9 @@
     <meta name="twitter:description" content="Run your entire business on one connected AI platform: 45+ ERP modules from CRM to payroll, with AI agents that work on your live business data.">
     <meta name="twitter:image" content="https://dotone.in/assets/og-image.jpg?v=2">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dotone.in/#organization","name":"DotOne","url":"https://dotone.in/","logo":"https://dotone.in/assets/dotone-logo-blue.png","parentOrganization":{"@type":"Organization","name":"TechDotBit Pvt Ltd","url":"https://techdotbit.com"},"sameAs":["https://www.linkedin.com/products/techdotbit-dotone-business-suite/"]},{"@type":"WebSite","@id":"https://dotone.in/#website","url":"https://dotone.in/","name":"DotOne","publisher":{"@id":"https://dotone.in/#organization"},"inLanguage":"en-IN"},{"@type":"SoftwareApplication","@id":"https://dotone.in/#software","name":"DotOne","applicationCategory":"BusinessApplication","operatingSystem":"Web, Android","description":"AI-powered business management platform: ERP modules for sales, CRM, purchase, inventory, production, quality, HR, payroll and finance, with AI agents that work on your live data.","url":"https://dotone.in/","publisher":{"@id":"https://dotone.in/#organization"},"offers":{"@type":"AggregateOffer","priceCurrency":"INR","lowPrice":"0","highPrice":"35000","offerCount":"5","url":"https://dotone.in/pricing"}}]}</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+    <link rel="preload" href="/assets/fonts/poppins-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/poppins-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/fonts.css?v=1">
     <link rel="stylesheet" href="/css/main.css?v=<?= ASSET_VERSION ?>">
 </head>
 <body class="bg-background">
@@ -39,7 +39,7 @@
                 <div class="hero-split-copy">
                     <span class="hero-badge hero-anim" style="--d: 0ms"><span class="hero-badge-dot"></span>ERP &middot; AI Agents &middot; Automation</span>
                     <h1 class="hero-light-title hero-anim" style="--d: 120ms">
-                        <span class="text-gradient-shimmer">AI-Powered</span> 360° Business Management Platform
+                        <span class="text-gradient-shimmer">AI-Powered ERP</span> for 360° Business Management
                     </h1>
                     <p class="hero-light-sub hero-anim" style="--d: 240ms">
                         One connected system for your entire business: sales, CRM, purchase, inventory, production, HR, finance and AI agents that work on your live data.
@@ -162,38 +162,38 @@
                 <!-- SET 1 -->
                 <div class="brand-carousel-group">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy" width="180" height="65">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy" width="83" height="62">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy" width="246" height="70">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy" width="1000" height="371">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy" width="290" height="164">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy" width="795" height="247">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy" width="313" height="55">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy" width="1278" height="477">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy" width="200" height="90">
                     </div>
                     <div class="brand-carousel-item">
                         <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
 <?php if ($e3Logo): ?>
                     <div class="brand-carousel-item">
-                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async">
+                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>>
                     </div>
 <?php endif; ?>
                 </div>
@@ -201,38 +201,38 @@
                 <!-- SET 2 - DUPLICATE FOR SEAMLESS CONTINUOUS LOOP -->
                 <div class="brand-carousel-group" aria-hidden="true">
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy">
+                        <img decoding="async" src="/images/clients/metalpatti.webp" alt="Metal Patti" class="logo-dark-bg" loading="lazy" width="180" height="65">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy">
+                        <img decoding="async" src="/images/clients/newpack.png" alt="Newpack Plastics" loading="lazy" width="83" height="62">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy">
+                        <img decoding="async" src="/images/clients/mekr.png" alt="Mekr Technologies" loading="lazy" width="246" height="70">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy">
+                        <img decoding="async" src="/images/clients/agile.webp" alt="Agile Nuvo" loading="lazy" width="1000" height="371">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/virgo.webp" alt="Virgo Group" loading="lazy" width="290" height="164">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy">
+                        <img decoding="async" src="/images/clients/splice.png" alt="Splice" loading="lazy" width="795" height="247">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy">
+                        <img decoding="async" src="/images/clients/bhutan-tuff.png" alt="Bhutan Tuff" loading="lazy" width="313" height="55">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy">
+                        <img decoding="async" src="/images/clients/twintech.webp" alt="Twin Tech" loading="lazy" width="1278" height="477">
                     </div>
                     <div class="brand-carousel-item">
-                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy">
+                        <img decoding="async" src="/images/clients/savit.png" alt="Savit Group" loading="lazy" width="200" height="90">
                     </div>
                     <div class="brand-carousel-item">
                         <img src="/images/clients/anondita.webp" alt="Anondita Medicare" width="480" height="73" loading="lazy" decoding="async">
                     </div>
 <?php if ($e3Logo): ?>
                     <div class="brand-carousel-item">
-                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async">
+                        <img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>>
                     </div>
 <?php endif; ?>
                 </div>
@@ -1007,7 +1007,7 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                     <div class="shots-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.dotone.in</span></div>
                     <div class="shots-view">
 <?php foreach ($productShots as $i => [$k, $label, $src]): ?>
-                        <img src="<?= e($src) ?>" alt="DotOne <?= e(strtolower($label)) ?> screen" loading="lazy" decoding="async" class="<?= $i === 0 ? 'is-active' : '' ?>" data-shot="<?= $i ?>">
+                        <img src="<?= e($src) ?>" alt="DotOne <?= e(strtolower($label)) ?> screen" loading="lazy" decoding="async" class="<?= $i === 0 ? 'is-active' : '' ?>" data-shot="<?= $i ?>"<?= img_size($src) ?>>
 <?php endforeach; ?>
                     </div>
                 </div>
@@ -1118,7 +1118,7 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
                 <article class="case-card" style="--i: <?= $i ?>">
                     <div class="case-head">
 <?php if (!empty($st['logo'])): ?>
-                        <img src="<?= e($st['logo']) ?>" alt="<?= e($st['company']) ?>" loading="lazy" decoding="async">
+                        <img src="<?= e($st['logo']) ?>" alt="<?= e($st['company']) ?>" loading="lazy" decoding="async"<?= img_size($st['logo']) ?>>
 <?php endif; ?>
                         <span class="case-industry"><?= e($st['industry']) ?></span>
                     </div>
@@ -1140,10 +1140,10 @@ foreach ([['dashboard', 'Dashboard'], ['sales', 'Sales orders'], ['inventory', '
 <?php else: ?>
             <div class="case-logos">
 <?php foreach ([['/images/clients/metalpatti.webp', 'Metal Patti', true], ['/images/clients/newpack.png', 'Newpack Plastics', false], ['/images/clients/mekr.png', 'Mekr Technologies', false], ['/images/clients/agile.webp', 'Agile Nuvo', false], ['/images/clients/virgo.webp', 'Virgo Group', false], ['/images/clients/splice.png', 'Splice', false], ['/images/clients/bhutan-tuff.png', 'Bhutan Tuff', false], ['/images/clients/twintech.webp', 'Twin Tech', false], ['/images/clients/savit.png', 'Savit Group', false], ['/images/clients/anondita.webp', 'Anondita Medicare', false]] as $i => [$src, $alt, $dark]): ?>
-                <div class="case-logo" style="--i: <?= $i ?>"><img src="<?= $src ?>" alt="<?= $alt ?>"<?= $dark ? ' class="logo-dark-bg"' : '' ?> loading="lazy" decoding="async"></div>
+                <div class="case-logo" style="--i: <?= $i ?>"><img src="<?= $src ?>" alt="<?= $alt ?>"<?= $dark ? ' class="logo-dark-bg"' : '' ?> loading="lazy" decoding="async"<?= img_size($src) ?>></div>
 <?php endforeach; ?>
 <?php if (!empty($e3Logo)): ?>
-                <div class="case-logo" style="--i: 10"><img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"></div>
+                <div class="case-logo" style="--i: 10"><img src="<?= $e3Logo ?>" alt="E3 Group" loading="lazy" decoding="async"<?= img_size($e3Logo) ?>></div>
 <?php endif; ?>
             </div>
             <div class="text-center mt-8">
